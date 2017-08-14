@@ -1,0 +1,18 @@
+id: 26
+name: imageBasicLink
+description: ''
+category: m_content
+properties: 'a:0:{}'
+
+-----
+
+<a href="[[+link]]">
+    [[$imageOuter?
+        &url=`[[+url]]`
+        &size=`[[+size]]`
+        &width=`[[+width]]`
+        &height=`[[+height]]`
+        &extension=`[[+extension]]`
+        &alt=`[[+alt]]`
+    ]]
+</a>
