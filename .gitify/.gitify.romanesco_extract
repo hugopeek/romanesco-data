@@ -6,6 +6,7 @@
 # Romanesco data is saved in a different folder than the project data.
 # Use .gitify.romanesco_build to merge this data into your project.
 data_directory: _romanesco/
+backup_directory: _backup/
 
 data:
     # Contexts
@@ -380,8 +381,7 @@ packages:
 
     modmore.com:
         service_url: https://rest.modmore.com/
-        username: YOUR_USERNAME_HERE
-        api_key: .modmore.com.key
+        credential_file: '.modmore.com.key'
         packages:
             - blockdown
             - clientconfig
@@ -391,8 +391,7 @@ packages:
 
     #extras.io:
     #    service_url: https://rest.extras.io/v1/
-    #    username: YOUR_USERNAME_HERE
-    #    api_key: .extras.io.key
+    #    credential_file: '.extras.io.key'
     #    packages:
     #        - romanesco-0.10.0-pl
     #        - romanescobackyard-0.1.1-pl

@@ -2,6 +2,8 @@
 # NB! Replace .gitify with this version after cloning Romanesco
 
 data_directory: _data/
+backup_directory: _backup/
+
 data:
 
     # Contexts
@@ -338,8 +340,8 @@ data:
             - id
             - name
         exclude_keys:
-          - editedby
-          - editedon
+            - editedby
+            - editedon
 
     # SetInputOptions
     #setinputoptions_groups:
@@ -380,8 +382,7 @@ packages:
 
     modmore.com:
         service_url: https://rest.modmore.com/
-        username: YOUR_USERNAME_HERE
-        api_key: .modmore.com.key
+        credential_file: '.modmore.com.key'
         packages:
             - blockdown
             - clientconfig
@@ -391,8 +392,7 @@ packages:
 
     #extras.io:
     #    service_url: https://rest.extras.io/v1/
-    #    username: YOUR_USERNAME_HERE
-    #    api_key: .extras.io.key
+    #    credential_file: '.extras.io.key'
     #    packages:
     #        - romanesco-0.10.0-pl
     #        - romanescobackyard-0.1.1-pl
