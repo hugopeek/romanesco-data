@@ -1,0 +1,13 @@
+id: 93
+parent: 76
+parent_properties: '{"key":"heading_icon","width":"100"}'
+input: image
+name: Icon
+description: ''
+sortorder: 2
+icon: heading
+template: '[[+url]]'
+properties: '{"source":"5","directory":"\/","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0"}'
+availability: '[]'
+layouts: null
+settings: '[]'
