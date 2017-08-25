@@ -2,13 +2,18 @@ id: 218
 name: tabsNavItem
 description: ''
 category: a_nav_tabs
+snippet: "<a class=\"item [[+idx:eq=`1`:then=`active`]]\"\n   data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n   role=\"tab\"\n   aria-selected=\"false\">\n    [[+heading]]\n</a>"
 properties: 'a:0:{}'
+content: "<a class=\"item [[+idx:eq=`1`:then=`active`]]\"\n   data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n   role=\"tab\"\n   aria-selected=\"false\">\n    [[+heading]]\n</a>"
 
 -----
 
-<a class="item [[+idx:eq=`1`:then=`active`]]"
+<div class="item [[+idx:eq=`1`:then=`active`]] [[+tab_type:contains=`pointing segments`:then=`ui [[+segment_pointer]] segment`]]"
    data-tab="segment-[[+unique_idx]]-[[+idx]]"
    role="tab"
    aria-selected="false">
-    [[+heading]]
-</a>
+    <[[+level]] class="ui [[+level:is=`span`:then=`tiny`]] header">
+        [[+heading]]
+        [[+subtitle:notempty=`<span class="sub header">[[+subtitle]]</span>`]]
+    </[[+level]]>
+</div>

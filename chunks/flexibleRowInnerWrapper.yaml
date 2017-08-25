@@ -1,0 +1,11 @@
+id: 368
+name: flexibleRowInnerWrapper
+description: 'The content inside a flexible Accordion or Tab CB is entered as a nested layout, meaning it''s wrapped in columns. To properly display these columns in a grid, an additional wrapper is needed.'
+category: m_presentation
+properties: 'a:0:{}'
+
+-----
+
+<div class="ui stackable doubling [[+alignment]] [[+divider]] equal width grid">
+    [[+content]]
+</div>

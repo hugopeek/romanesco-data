@@ -1,0 +1,12 @@
+id: 369
+name: cbSettingPosition
+description: ''
+category: a_cb_settings
+properties: 'a:0:{}'
+
+-----
+
+Top=top
+Right=right
+Bottom=bottom
+Left=left

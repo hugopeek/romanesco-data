@@ -2,18 +2,32 @@ id: 229
 name: tabsRowBasic
 description: ''
 category: m_presentation
+snippet: "[[+tab_type:is=`basic`:then=`basic vertical`:else=`bottom attached`:toPlaceholder=`tab_segment`]]\n\n<div class=\"ui [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment\"\n     data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n     data-heading=\"[[+heading]]\"\n     role=\"tabpanel\"\n     aria-hidden=\"false\">\n    <div class=\"ui nested stackable doubling [[+alignment]] [[+divider]] equal width grid\">\n        [[+content]]\n    </div>\n</div>"
 properties: 'a:0:{}'
+content: "[[+tab_type:is=`basic`:then=`basic vertical`:else=`bottom attached`:toPlaceholder=`tab_segment`]]\n\n<div class=\"ui [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment\"\n     data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n     data-heading=\"[[+heading]]\"\n     role=\"tabpanel\"\n     aria-hidden=\"false\">\n    <div class=\"ui nested stackable doubling [[+alignment]] [[+divider]] equal width grid\">\n        [[+content]]\n    </div>\n</div>"
 
 -----
 
-[[+tab_type:is=`basic`:then=`basic vertical`:else=`bottom attached`:toPlaceholder=`tab_segment`]]
+[[Switch:toPlaceholder=`menu_attachment_[[+unique_idx]]`?
+    &get=`[[+menu_position]]`
+    &c1=`top` &do1=`bottom attached`
+    &c2=`right` &do2=``
+    &c3=`bottom` &do3=`top attached`
+    &c4=`left` &do4=``
+    &default=`bottom attached`
+]]
 
-<div class="ui [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment"
+[[+tab_type:contains=`basic`:then=`basic vertical`:else=`[[+menu_attachment_[[+unique_idx]]]]`:toPlaceholder=`tab_segment`]]
+[[+tab_type:contains=`pointing regular`:or:contains=`pointing segments`:then=``:else=`[[+tab_segment]]`:toPlaceholder=`tab_segment`]]
+
+<div class="ui reducible [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment"
      data-tab="segment-[[+unique_idx]]-[[+idx]]"
      data-heading="[[+heading]]"
+     data-heading-level="[[+heading_level:empty=`h4`]]"
+     data-heading-subtitle="[[+heading_subtitle:empty=``]]"
+     data-heading-icon="[[+heading_icon:empty=``]]"
+     data-menu-position="[[+menu_position]]"
      role="tabpanel"
      aria-hidden="false">
-    <div class="ui nested stackable doubling [[+alignment]] [[+divider]] equal width grid">
-        [[+content]]
-    </div>
+    [[+content]]
 </div>
