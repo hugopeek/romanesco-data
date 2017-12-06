@@ -104,19 +104,21 @@ data:
         #    - static_file
         where:
             - 'id:NOT LIKE': '______'
-    #plugin_events:
-    #    class: modPluginEvent
-    #    primary:
-    #        - pluginid
-    #        - event
+    plugin_events:
+        class: modPluginEvent
+        primary:
+            - pluginid
+            - event
+        where:
+            - 'pluginid:NOT LIKE': '______'
 
     # MODX config
-    #element_property_set:
-    #    class: modElementPropertySet
-    #    primary:
-    #        - element
-    #        - element_class
-    #        - property_set
+    element_property_set:
+        class: modElementPropertySet
+        primary:
+            - element
+            - element_class
+            - property_set
     #events:
     #    class: modEvent
     #    primary: name
