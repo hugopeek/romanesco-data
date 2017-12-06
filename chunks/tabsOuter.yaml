@@ -2,9 +2,7 @@ id: 236
 name: tabsOuter
 description: ''
 category: o_presentation
-snippet: "[[+tab_type:is=`basic`:then=`pointing secondary`:else=`top attached`:toPlaceholder=`menu_type`]]\n\n<div class=\"ui [[+menu_type]] tabular menu\">\n    [[+rows:tabsGenerateNav]]\n</div>\n[[+rows]]"
 properties: 'a:0:{}'
-content: "[[+tab_type:is=`basic`:then=`pointing secondary`:else=`top attached`:toPlaceholder=`menu_type`]]\n\n<div class=\"ui [[+menu_type]] tabular menu\">\n    [[+rows:tabsGenerateNav]]\n</div>\n[[+rows]]"
 
 -----
 

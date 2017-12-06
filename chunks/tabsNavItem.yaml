@@ -2,9 +2,7 @@ id: 218
 name: tabsNavItem
 description: ''
 category: a_nav_tabs
-snippet: "<a class=\"item [[+idx:eq=`1`:then=`active`]]\"\n   data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n   role=\"tab\"\n   aria-selected=\"false\">\n    [[+heading]]\n</a>"
 properties: 'a:0:{}'
-content: "<a class=\"item [[+idx:eq=`1`:then=`active`]]\"\n   data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n   role=\"tab\"\n   aria-selected=\"false\">\n    [[+heading]]\n</a>"
 
 -----
 

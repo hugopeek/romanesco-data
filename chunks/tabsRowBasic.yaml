@@ -2,9 +2,7 @@ id: 229
 name: tabsRowBasic
 description: ''
 category: m_presentation
-snippet: "[[+tab_type:is=`basic`:then=`basic vertical`:else=`bottom attached`:toPlaceholder=`tab_segment`]]\n\n<div class=\"ui [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment\"\n     data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n     data-heading=\"[[+heading]]\"\n     role=\"tabpanel\"\n     aria-hidden=\"false\">\n    <div class=\"ui nested stackable doubling [[+alignment]] [[+divider]] equal width grid\">\n        [[+content]]\n    </div>\n</div>"
 properties: 'a:0:{}'
-content: "[[+tab_type:is=`basic`:then=`basic vertical`:else=`bottom attached`:toPlaceholder=`tab_segment`]]\n\n<div class=\"ui [[+tab_segment]] [[+padding]] [[+idx:eq=`1`:then=`active`]] tab segment\"\n     data-tab=\"segment-[[+unique_idx]]-[[+idx]]\"\n     data-heading=\"[[+heading]]\"\n     role=\"tabpanel\"\n     aria-hidden=\"false\">\n    <div class=\"ui nested stackable doubling [[+alignment]] [[+divider]] equal width grid\">\n        [[+content]]\n    </div>\n</div>"
 
 -----
 

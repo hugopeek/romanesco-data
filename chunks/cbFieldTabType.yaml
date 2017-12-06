@@ -2,9 +2,7 @@ id: 340
 name: cbFieldTabType
 description: ''
 category: a_cb_fields
-snippet: "Regular (borders around active tab and content area)=regular\nBasic (just a thin border below the menu bar)=basic"
 properties: 'a:0:{}'
-content: "Regular (borders around active tab and content area)=regular\nBasic (just a thin border below the menu bar)=basic"
 
 -----
 

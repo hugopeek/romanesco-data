@@ -6,7 +6,7 @@ properties: 'a:0:{}'
 
 -----
 
-<div class="ui vertical stripe segment [[+background]]">
+<div [[+title:notempty=`id="[[stripAsAlias? &input=`[[+title]]`]]"`]] class="ui vertical stripe segment [[+background]]">
     <div class="ui [[+container_type]] container">
         <div class="ui four column stackable doubling [[+padding]] [[+alignment]] [[+divider]] grid">
             <div class="row">
