@@ -3,7 +3,7 @@ parent_properties: ''
 input: layout
 name: 'Nested Layout'
 description: 'Add a new layout within an existing layout. This allows you to divide each column inside the parent layout separately, opening up an infinite amount of combinations.'
-sortorder: 22
+sortorder: 20
 category: 4
 icon: template_01
 template: "<div class=\"ui nested [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] equal width grid\">\n    [[+value]]\n</div>"
