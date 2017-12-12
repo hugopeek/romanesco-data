@@ -1,6 +1,6 @@
 id: 64
 parent: 36
-parent_properties: '{"key":"image","width":"50"}'
+parent_properties: '{"key":"image","width":"100"}'
 input: image
 name: Image
 description: ''

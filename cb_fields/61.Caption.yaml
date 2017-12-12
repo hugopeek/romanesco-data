@@ -1,12 +1,12 @@
 id: 61
 parent: 36
-parent_properties: '{"key":"caption","width":"50"}'
-input: richtext
+parent_properties: '{"key":"caption","width":"100"}'
+input: textarea
 name: Caption
 description: ''
 sortorder: 2
 template: '[[+value]]'
-properties: '{"available_layouts":"7,8,9,12","available_templates":""}'
+properties: '{"use_tinyrte":"1"}'
 availability: '[]'
 layouts: ''
 settings: '[]'
