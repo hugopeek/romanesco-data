@@ -165,6 +165,9 @@ data:
     access_context:
         class: modAccessContext
         primary: id
+        where:
+            'policy:NOT IN':
+                - '14'
     access_media_source:
         class: sources.modAccessMediaSource
         primary: id
