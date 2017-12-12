@@ -26,6 +26,11 @@ data:
             - 'context_key:IN':
                 - 'hub'
                 - 'global'
+            - 'key:NOT IN':
+                - 'site_url'
+                - 'base_url'
+                - 'http_host'
+                - 'site_start'
 
     # Basic elements
     categories:
