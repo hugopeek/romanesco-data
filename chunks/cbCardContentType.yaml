@@ -1,0 +1,12 @@
+id: 382
+name: cbCardContentType
+description: ''
+category: a_cb_fields
+properties: 'a:0:{}'
+
+-----
+
+Text=description
+Metadata=meta
+Extra=extra
+Other=orther

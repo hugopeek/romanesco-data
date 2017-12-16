@@ -1,0 +1,11 @@
+id: 381
+name: cardsOuter
+description: ''
+category: o_presentation
+properties: 'a:0:{}'
+
+-----
+
+<div class="ui [[+cols]] [[+responsive:replace=`,== `]] cards">
+    [[+rows]]
+</div>

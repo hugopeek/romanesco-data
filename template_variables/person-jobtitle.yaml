@@ -2,7 +2,6 @@ id: 81
 type: text
 name: person_jobtitle
 caption: 'Job title'
-description: 'The role of this person inside the team.'
 category: 'Person - Information'
 elements: ''
 rank: 5

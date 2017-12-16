@@ -1,0 +1,21 @@
+id: 380
+name: cardsRowFlexible
+description: 'A template for the slightly more advanced Cards (Flexible) repeater. Instead of a predefined template based on the available input fields, the editor can use a nested layout to add any CB field as content for the card.'
+category: m_presentation
+properties: 'a:0:{}'
+
+-----
+
+[[If?
+    &subject=`[[+box_type]][[+link:eq=``:then=`break`]]`
+    &operator=`eq`
+    &operand=`link`
+    &then=`
+    <a href="[[+link]]" class="[[+emphasize:eq=`1`:then=`ui raised`]] [[+box_type]] card">
+        [[+content]]
+    </a>`
+    &else=`
+    <div class="[[+emphasize:eq=`1`:then=`ui raised`]] card">
+        [[+content]]
+    </div>`
+]]

@@ -1,0 +1,36 @@
+id: 375
+name: fbSelectOptionRowTag
+description: 'A row template for options that let you select a tag. Initially designed to work with tags created by the Tagger extra, but could work with any tag system that outputs a [[+tag]] and an [[+alias]] placeholder.'
+category: a_fb_inputs
+properties: 'a:0:{}'
+
+-----
+
+[[!If:toPlaceholder=`checkbox_array`?
+    &subject=`[[+field_type]]`
+    &operator=`EQ`
+    &operand=`checkbox`
+    &then=`[]`
+    &else=``
+]]
+[[!If:toPlaceholder=`checkbox_variant`?
+    &subject=`[[+checkbox_type]]`
+    &operator=`notempty`
+    &then=`[[+checkbox_type]]`
+    &else=`[[+field_type]]`
+]]
+
+<div class="ui [[+checkbox_variant]] checkbox field">
+    <input type="[[+field_type]]"
+           name="[[+alias]][[+checkbox_array]]"
+           id="[[+alias]]-[[+idx]]"
+           class="hidden"
+           value="[[+alias]]"
+           tabindex="0"
+           data-group="[[+collapse_target:isnot=``:then=`[[+alias]]`:default=`no-group`]]"
+           data-target="[[+collapse_target:default=`no-target`]]"
+           data-toggle="collapse"
+           [[!+fb[[*id]].[[+alias]]:FormItIsChecked=`[[+alias]]`]]
+           [[!#get.id:stripTags:eq=`[[+id]]`:then=`checked`]]>
+    <label>[[+tag]]</label>
+</div>

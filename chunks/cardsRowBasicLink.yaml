@@ -1,0 +1,28 @@
+id: 378
+name: cardsRowBasicLink
+description: 'Similar to cardsRowBasic, but it expects the parent to decide if the card should link somewhere or not. In other words: this template contains no links itself. This can be (ab)used to create cards without any link at all.'
+category: m_presentation
+properties: 'a:0:{}'
+
+-----
+
+[[+image:notempty=`
+<div class="image">
+    <img src="[[pthumb? &input=`[[+image]]` &options=`w=[[++max_thumb_width]]&zc=1`]]" alt="[[+heading]]">
+</div>
+`]]
+<div class="content">
+    [[+heading:notempty=`
+    <div class="header">
+        <[[+heading_level]]>[[+heading]]</[[+heading_level]]>
+    </div>
+    `]]
+    [[+subtitle:notempty=`
+    <div class="meta">[[+subtitle]]</div>
+    `]]
+    [[+content:notempty=`
+    <div class="description">
+        [[+content]]
+    </div>
+    `]]
+</div>
