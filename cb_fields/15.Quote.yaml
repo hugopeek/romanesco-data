@@ -3,7 +3,7 @@ parent_properties: ''
 input: quote
 name: Quote
 description: ''
-sortorder: 16
+sortorder: 17
 category: 1
 icon: quote
 icon_type: ''

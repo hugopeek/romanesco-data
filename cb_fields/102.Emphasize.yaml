@@ -1,0 +1,13 @@
+id: 102
+parent: 94
+parent_properties: '{"key":"emphasize","width":"35"}'
+input: dropdown
+name: Emphasize
+description: ''
+sortorder: 7
+icon: paragraph
+template: '[[+value]]'
+properties: '{"options":"No=0\nYes=1","default_value":"0"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

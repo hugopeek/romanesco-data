@@ -3,7 +3,7 @@ parent_properties: ''
 input: richtext
 name: Message
 description: ''
-sortorder: 7
+sortorder: 8
 category: 1
 icon: richtext
 icon_type: ''

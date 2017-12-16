@@ -1,0 +1,12 @@
+id: 96
+parent: 94
+parent_properties: '{"key":"link","width":"100"}'
+input: link
+name: Link
+description: ''
+icon: code
+template: '[[+link]]'
+properties: '{"link_detection_pattern_override":"","limit_to_current_context":"0"}'
+availability: ''
+layouts: ''
+settings: '[]'

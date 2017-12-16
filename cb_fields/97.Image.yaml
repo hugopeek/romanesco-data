@@ -1,0 +1,13 @@
+id: 97
+parent: 94
+parent_properties: '{"key":"image","width":"100"}'
+input: image
+name: Image
+description: ''
+sortorder: 1
+icon: heading
+template: '[[+url]]'
+properties: '{"source":"0","directory":"\/[[+year]]\/","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

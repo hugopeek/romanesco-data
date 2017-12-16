@@ -1,13 +1,13 @@
 id: 94
-parent_properties: null
+parent_properties: ''
 input: repeater
 name: 'Cards (Image + Text)'
 description: ''
-sortorder: 24
+sortorder: 25
 category: 4
 icon: template_03
-template: "[[$cardsRowBasic?\n    &image=`[[+image]]`\n    &text=`[[+text]]`\n    &color=`[[+color]]`\n    &link=`[[+link]]`\n]]"
-properties: '{"wrapper_template":"[[$cardsOuter?\n    &display_type=`[[+display_type]]`\n    &rows=`[[+rows]]`\n    &cols=`[[+cols]]`\n    &padding=`[[+padding]]`\n    &lightbox=`[[+lightbox]]`\n    &caption=`1`\n    &box_type=`[[+box_type]]`\n    &center_mode=`[[+center_mode]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"3"}'
+template: "[[$cardsRowInnerWrapper?\n    &box_type=`[[+box_type]]`\n    &link=`[[+link]]`\n    &image=`[[+image]]`\n    &heading=`[[+heading]]`\n    &heading_level=`[[+heading_level]]`\n    &subtitle=`[[+subtitle]]`\n    &content=`[[+content]]`\n    &button_text=`[[+button_text]]`\n    &emphasize=`[[+emphasize]]`\n]]"
+properties: '{"wrapper_template":"[[$cardsOuter?\n    &rows=`[[+rows]]`\n    &cols=`[[+cols]]`\n    &heading_level=`[[+heading_level]]`\n    &box_type=`[[+box_type]]`\n    &responsive=`[[+responsive]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"3"}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"cols","title":"Column count","fieldtype":"select","default_value":"three","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"}]'
+settings: '[{"reference":"box_type","title":"Card type","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Regular=\nLink card (make entire card clickable)=link","field_is_exposed":"modal"},{"reference":"cols","title":"Column count","fieldtype":"select","default_value":"three","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"heading_level","title":"Heading level","fieldtype":"select","default_value":"h4","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbOverviewTitleHierarchy]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"responsive","title":"Responsive options","fieldtype":"checkbox","default_value":"stackable,doubling","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutResponsiveOptions]]","field_is_exposed":"modal","process_tags":"1"}]'

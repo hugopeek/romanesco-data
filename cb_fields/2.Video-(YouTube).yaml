@@ -3,7 +3,7 @@ parent_properties: ''
 input: video
 name: 'Video (YouTube)'
 description: ''
-sortorder: 15
+sortorder: 16
 category: 2
 icon: video
 icon_type: ''

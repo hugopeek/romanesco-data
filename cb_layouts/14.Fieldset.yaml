@@ -1,7 +1,7 @@
 id: 14
 name: Fieldset
 description: 'Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.'
-sortorder: 15
+sortorder: 18
 category: 10
 icon: form
 columns: '[{"reference":"main","width":"100"}]'

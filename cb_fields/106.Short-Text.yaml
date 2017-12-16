@@ -1,0 +1,12 @@
+id: 106
+parent_properties: ''
+name: 'Short Text'
+description: ''
+sortorder: 4
+category: 1
+icon: paragraph
+template: '<[[+element]] class="short [[+text_type]]">[[+value:stripString=`<br>`]]</[[+element]]>'
+properties: '{"use_tinyrte":"1"}'
+availability: '[]'
+layouts: '20,21,22'
+settings: '[{"reference":"text_type","title":"Text type","fieldtype":"radio","default_value":"text","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Regular=text\nHeading=header\nMetadata=meta","field_is_exposed":"modal"},{"reference":"element","title":"Text flow","fieldtype":"radio","default_value":"div","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Block=div\nInline=span","field_is_exposed":"modal"}]'

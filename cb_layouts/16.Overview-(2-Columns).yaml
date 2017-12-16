@@ -1,7 +1,7 @@
 id: 16
 name: 'Overview (2 Columns)'
 description: 'Displays subpages in full-width layout sections.'
-sortorder: 17
+sortorder: 20
 category: 10
 icon: chunk_A
 columns: '[]'

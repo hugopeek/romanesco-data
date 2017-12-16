@@ -3,7 +3,7 @@ parent_properties: ''
 input: gallery
 name: 'Gallery / Slider'
 description: ''
-sortorder: 18
+sortorder: 19
 category: 2
 icon: gallery
 icon_type: ''

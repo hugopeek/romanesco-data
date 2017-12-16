@@ -1,0 +1,12 @@
+id: 101
+parent: 94
+parent_properties: '{"key":"button_text","width":"65"}'
+name: 'Button Text'
+description: ''
+sortorder: 5
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

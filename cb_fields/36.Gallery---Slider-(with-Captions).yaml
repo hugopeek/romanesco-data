@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Gallery / Slider (with Captions)'
 description: ''
-sortorder: 19
+sortorder: 20
 category: 2
 icon: gallery
 template: "[[$galleryRowImageCaption?\n    &url=`[[+image]]`\n    &caption=`[[+caption]]`\n    &box_type=`[[+box_type]]`\n    &lightbox=`[[+lightbox]]`\n]]"

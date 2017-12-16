@@ -3,7 +3,7 @@ parent_properties: ''
 input: blockdown
 name: 'Markdown Text'
 description: ''
-sortorder: 5
+sortorder: 6
 category: 6
 icon: richtext
 template: "[[$richTextSegment?\n    &content=`[[+value]]`\n    &segment_type=`[[+segment_type]]`\n\t&padding=`[[+padding]]`\n    &alignment=`[[+alignment]]`\n]]"

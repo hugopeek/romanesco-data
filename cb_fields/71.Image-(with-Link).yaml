@@ -3,7 +3,7 @@ parent_properties: ''
 input: image
 name: 'Image (with Link)'
 description: ''
-sortorder: 13
+sortorder: 14
 category: 2
 icon: image
 icon_type: ''

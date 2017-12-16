@@ -3,7 +3,7 @@ parent_properties: ''
 input: richtext
 name: 'Rich Text'
 description: ''
-sortorder: 4
+sortorder: 5
 category: 1
 icon: richtext
 icon_type: ''
