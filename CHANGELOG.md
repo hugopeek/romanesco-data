@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.1.0
-Released on December 13, 2017
+Released on ...
 
 - [ContentBlocks] Add Cards field
 - [ContentBlocks] Disable markdown text CB
