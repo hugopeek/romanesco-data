@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Input (File)'
 description: ''
-sortorder: 50
+sortorder: 49
 category: 7
 icon: attachment
 template: '[[+tag]]'

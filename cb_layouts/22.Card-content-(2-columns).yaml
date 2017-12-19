@@ -2,7 +2,7 @@ id: 22
 name: 'Card content (2 columns)'
 description: 'An wrapper for card content, with a right floated column.'
 sortorder: 15
-category: 10
+category: 9
 icon: layout_2-1
 columns: '[{"reference":"main","width":60},{"reference":"right","width":"40"}]'
 template: '@CHUNK cbLayoutCard'

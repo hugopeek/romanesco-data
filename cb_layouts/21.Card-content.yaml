@@ -2,7 +2,7 @@ id: 21
 name: 'Card content'
 description: 'An wrapper for card content, like text and quotes.'
 sortorder: 14
-category: 10
+category: 9
 icon: layout_1
 columns: '[{"reference":"main","width":"100"}]'
 template: '@CHUNK cbLayoutCard'

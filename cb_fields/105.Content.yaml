@@ -7,7 +7,7 @@ description: ''
 sortorder: 2
 icon: richtext
 template: '[[+value]]'
-properties: '{"available_layouts":"100025,100026,100027","available_templates":"-1"}'
+properties: '{"available_layouts":"20,21,22","available_templates":"-1"}'
 availability: '[]'
 layouts: ''
 settings: '[]'

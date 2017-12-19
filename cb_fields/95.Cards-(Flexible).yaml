@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Cards (Flexible)'
 description: ''
-sortorder: 26
+sortorder: 25
 category: 4
 icon: template_03
 template: "[[$cardsRowFlexible?\n    &box_type=`[[+box_type]]`\n    &link=`[[+link]]`\n    &content=`[[+content]]`\n    &emphasize=`[[+emphasize]]`\n]]"
