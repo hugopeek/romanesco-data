@@ -8,6 +8,7 @@ Released on ...
 - [ContentBlocks] Control responsive column behavior in nested layouts
 - [ContentBlocks] Change UI of Gallery repeater
 - [ContentBlocks] Improvements to Accordion / Tabs field
+- [Gitify] Include content types in build config
 - [Gitify] Include plugin events in build config
 - [Gitify] Exclude CB access policy for context
 - [Gitify] Exclude gateway context settings

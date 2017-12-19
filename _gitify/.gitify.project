@@ -82,6 +82,8 @@ data:
         exclude_keys:
             - editedby
             - editedon
+        truncate_on_force:
+            - modTemplateVarResource
 
         # Exclude resources built by Romanesco Backyard package
         #where:
@@ -89,6 +91,10 @@ data:
         #    - 'OR:alias:IN': [assets/css/backgrounds]
 
     # MODX config
+    content_type:
+        class: modContentType
+        primary:
+            - name
     element_property_set:
         class: modElementPropertySet
         primary:

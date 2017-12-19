@@ -113,6 +113,10 @@ data:
             - 'pluginid:NOT LIKE': '______'
 
     # MODX config
+    content_type:
+        class: modContentType
+        primary:
+            - name
     element_property_set:
         class: modElementPropertySet
         primary:
