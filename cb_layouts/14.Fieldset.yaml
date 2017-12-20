@@ -9,4 +9,4 @@ template: "[[+segment_type:ne=`none`:then=`segment`:else=`fieldset`:toPlaceholde
 availability: '[{"field":"template","value":"10"},{"field":"context","value":"hub"}]'
 times_per_page: 0
 layout_only_nested: '0'
-settings: '[{"reference":"legend","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"}]'
+settings: '[{"reference":"legend","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"},{"reference":"background","title":"Background","fieldtype":"select","default_value":"transparent","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutBackgrounds]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"force_segment","title":"Always as segment","fieldtype":"radio","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"}]'

@@ -15,8 +15,20 @@ properties: 'a:0:{}'
 ]]
 
 [[!FormIt?
-    &preHooks=`[[+upload_multiple:eq=`1`:then=`Formit2AjaxUpload`]]`
-    &hooks=`spam,[[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]][[++formblocks.save_form:eq=`1`:then=`FormItSaveForm,`]]email,[[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]redirect`
+    &preHooks=`
+        [[+upload_multiple:eq=`1`:then=`Formit2AjaxUpload,`]]
+        [[*fb_prehooks:notempty=`[[*fb_prehooks]],`]]
+        fbEmptyHook
+    `
+    &hooks=`
+        spam,
+        [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
+        [[++formblocks.save_form:eq=`1`:then=`FormItSaveForm,`]]
+        [[*fb_hooks:notempty=`[[*fb_hooks]],`]]
+        email,
+        [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
+        redirect
+    `
 
     &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
     &emailTo=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`]]`
