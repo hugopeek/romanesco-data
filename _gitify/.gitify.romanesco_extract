@@ -111,10 +111,10 @@ data:
     #        - 'OR:alias:IN': [assets/css/backgrounds]
 
     # MODX config
-    content_type:
-        class: modContentType
-        primary:
-            - name
+    #content_type:
+    #    class: modContentType
+    #    primary:
+    #        - name
     element_property_set:
         class: modElementPropertySet
         primary:

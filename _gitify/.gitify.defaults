@@ -45,3 +45,9 @@ data:
         where:
             'name:IN':
                 - 'romanesco'
+
+    # Adjust content types, such as removing .html extensions of all pages
+    content_types:
+        class: modContentType
+        primary:
+            - name

@@ -1,5 +1,4 @@
-# Gitify configuration for this project
-# NB! Replace .gitify with this version after cloning Romanesco
+# Gitify configuration for building and updating Romanesco
 
 # Romanesco data is saved in a different folder than the project data.
 # This data should only be built by Gitify inside a project, never extracted!
@@ -113,10 +112,10 @@ data:
             - 'pluginid:NOT LIKE': '______'
 
     # MODX config
-    content_type:
-        class: modContentType
-        primary:
-            - name
+    #content_type:
+    #    class: modContentType
+    #    primary:
+    #        - name
     element_property_set:
         class: modElementPropertySet
         primary:
