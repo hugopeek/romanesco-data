@@ -1,0 +1,8 @@
+id: 3
+constraint_field: ultimateparent
+constraint_value: '17'
+default_template: '110'
+target_layout: 18
+target_field: 6
+target_column: main
+sortorder: 2

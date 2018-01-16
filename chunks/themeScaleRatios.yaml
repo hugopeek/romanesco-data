@@ -1,0 +1,19 @@
+id: 384
+name: themeScaleRatios
+description: ''
+category: a_global
+properties: 'a:0:{}'
+
+-----
+
+Minor Second (1.067)==1.067||
+Major Second (1.125)==1.125||
+Minor Third (1.2)==1.2||
+Major Third (1.25)==1.25||
+Diminished Fourth (1.28)==1.28||
+Perfect Fourth (1.333)==1.333||
+Major Fourth (1.364)==1.364||
+Aug Fourth (1.414)==1.414||
+Perfect Fifth (1.5)==1.5||
+Minor Sixth (1.6)==1.6||
+Golden Ratio (1.618)==1.618
