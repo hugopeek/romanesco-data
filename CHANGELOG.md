@@ -1,8 +1,9 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.1.0
-Released on ...
+Released on January 16, 2018
 
+- [Configuration] Add settings to change styling theme
 - [ContentBlocks] Add Cards field
 - [ContentBlocks] Disable markdown text CB
 - [ContentBlocks] Control responsive column behavior in nested layouts
