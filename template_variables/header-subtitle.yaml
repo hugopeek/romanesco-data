@@ -5,7 +5,7 @@ caption: Subtitle
 description: 'This will be displayed under the main title. Will also be inherited on child pages by default.'
 category: Header
 elements: ''
-rank: 2
+rank: 6
 properties: 'a:0:{}'
 input_properties: null
 output_properties: null

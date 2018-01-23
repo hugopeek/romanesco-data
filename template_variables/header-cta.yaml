@@ -2,7 +2,7 @@ id: 3
 type: listbox
 name: header_cta
 caption: 'Call to action (CTA)'
-description: 'Select a CTA for display in header. CTAs can be created under Global Content. This will replace the Title values, but Background settings still apply. Please note that possibly inherited CTAs might not be visible on page because of Inheritance setting.'
+description: 'Select a CTA for display in header. CTAs can be created under Global Content. If a CTA is selected, all Title values will be ignored but Background settings still apply. CTAs are not inherited by default.'
 category: Header
 elements: '@CHUNK tvSelectCTA'
 rank: 20

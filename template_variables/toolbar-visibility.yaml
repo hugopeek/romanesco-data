@@ -1,0 +1,15 @@
+id: 91
+type: listbox
+name: toolbar_visibility
+caption: 'Toolbar visibility'
+description: 'Do you want to display a toolbar on this page? The default toolbar contains breadcrumbs and search functionality. This setting is inherited on every child page.'
+category: Navigation
+elements: 'On==1||Off==0||System default==default'
+rank: 1
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT default

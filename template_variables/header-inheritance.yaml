@@ -2,9 +2,9 @@ id: 39
 type: checkbox
 name: header_inheritance
 caption: Inheritance
-description: 'This setting controls whether values are inherited or not on all child pages of this resource.'
+description: 'Select which elements to display on all child pages of this resource too. NB: when you turn inheritance OFF for an element, it will return to its default value from then on. This change, however, is NOT reflected under Template Variables (yet)!'
 category: Header
-elements: 'Inherit titles==inherit_titles||Inherit background==inherit_background||Inherit CTA==inherit_cta'
+elements: 'Inherit visibility==inherit_visibility||Inherit titles==inherit_titles||Inherit background==inherit_background||Inherit CTA==inherit_cta'
 rank: 99
 properties: 'a:0:{}'
 input_properties: null
@@ -12,4 +12,4 @@ output_properties: null
 
 -----
 
-@INHERIT inherit_titles||inherit_background
+@INHERIT inherit_visibility||inherit_titles||inherit_background
