@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.2.0
+Upcoming release
+
+- [Configuration] Add option to disable header
+- [Configuration] Add option to disable or override toolbar
+
 ## v1.1.0
 Released on January 16, 2018
 

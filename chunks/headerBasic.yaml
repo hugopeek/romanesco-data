@@ -6,7 +6,24 @@ properties: 'a:0:{}'
 
 -----
 
-<header id="header" class="masthead">
+[[modifiedIf?
+    &subject=`[[*header_visibility]]`
+    &operator=`EQ`
+    &operand=`default`
+    &then=`[[++header_visibility_default]]`
+    &else=`[[*header_visibility]]`
+    &toPlaceholder=`header_visibility`
+]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`header_visibility`]]`
+    &operator=`contains`
+    &operand=`@INHERIT`
+    &then=`[[#[[*parent]].header_inheritance:contains=`inherit_visibility`:then=`[[+header_visibility]]`:else=`[[++header_visibility_default]]`]]`
+    &else=`[[+header_visibility]]`
+    &toPlaceholder=`hero`
+]]
+
+<header id="header" class="masthead [[+hero:eq=`0`:then=`without hero`]] [[++navbar_sticky:eq=`0`:then=`non-stick`]]">
     [[[[If?
         &subject=`[[+masthead]]`
         &operator=`EQ`
