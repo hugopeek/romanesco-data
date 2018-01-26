@@ -31,6 +31,8 @@ data:
         class: cgGroup
         primary: label
         package: clientconfig
+        truncate_on_force:
+            - cgGroup
     cg_settings:
         class: cgSetting
         primary: key
