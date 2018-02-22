@@ -3,6 +3,11 @@
 ## v1.2.0
 Upcoming release
 
+- [Backgrounds] Use (optional) portrait image on mobile
+- [Backgrounds] Get rid of hardcoded responsive image dimensions
+- [FormBlocks] Add option to change form size
+- [FormBlocks] Add ability to insert your own submit button
+- [FormBlocks] Use alternative value in dropdown if one is defined in CB
 - [Configuration] Add option to disable header
 - [Configuration] Add option to disable or override toolbar
 
