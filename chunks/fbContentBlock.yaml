@@ -2,7 +2,9 @@ id: 32
 name: fbContentBlock
 description: ''
 category: o_formblocks
+snippet: "[[!$fbRenderFormWrapper?\n    &form_id=`[[+form_id]]`\n    &current_id=`[[*id]]`\n    &current_pagetitle=`[[*pagetitle]]`\n    &current_menutitle=`[[*menutitle]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n]]"
 properties: 'a:0:{}'
+content: "[[!$fbRenderFormWrapper?\n    &form_id=`[[+form_id]]`\n    &current_id=`[[*id]]`\n    &current_pagetitle=`[[*pagetitle]]`\n    &current_menutitle=`[[*menutitle]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n]]"
 
 -----
 
@@ -11,6 +13,7 @@ properties: 'a:0:{}'
     &current_id=`[[*id]]`
     &current_pagetitle=`[[*pagetitle]]`
     &current_menutitle=`[[*menutitle]]`
+    &form_size=`[[+form_size]]`
     &form_layout=`[[+form_layout]]`
     &segment_type=`[[+segment_type]]`
     &padding=`[[+padding]]`

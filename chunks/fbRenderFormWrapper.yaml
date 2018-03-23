@@ -2,7 +2,9 @@ id: 30
 name: fbRenderFormWrapper
 description: ''
 category: a_formblocks
+snippet: "[[!renderResources?\n    &parents=`-1`\n    &resources=`[[+form_id]]`\n    &current_id=`[[+current_id]]`\n    &current_pagetitle=`[[+current_pagetitle]]`\n    &current_menutitle=`[[+current_menutitle]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n]]"
 properties: 'a:0:{}'
+content: "[[!renderResources?\n    &parents=`-1`\n    &resources=`[[+form_id]]`\n    &current_id=`[[+current_id]]`\n    &current_pagetitle=`[[+current_pagetitle]]`\n    &current_menutitle=`[[+current_menutitle]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n]]"
 
 -----
 
@@ -12,6 +14,7 @@ properties: 'a:0:{}'
     &current_id=`[[+current_id]]`
     &current_pagetitle=`[[+current_pagetitle]]`
     &current_menutitle=`[[+current_menutitle]]`
+    &form_size=`[[+form_size]]`
     &form_layout=`[[+form_layout]]`
     &segment_type=`[[+segment_type]]`
     &padding=`[[+padding]]`
