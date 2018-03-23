@@ -3,11 +3,13 @@
 ## v1.2.0
 Upcoming release
 
+- [Overviews] Fix author images in Publication tpls
 - [Backgrounds] Use (optional) portrait image on mobile
 - [Backgrounds] Get rid of hardcoded responsive image dimensions
 - [FormBlocks] Add option to change form size
 - [FormBlocks] Add ability to insert your own submit button
 - [FormBlocks] Use alternative value in dropdown if one is defined in CB
+- [FormBlocks] Display error message under form field
 - [Configuration] Add option to disable header
 - [Configuration] Add option to disable or override toolbar
 
