@@ -48,7 +48,7 @@ properties: 'a:0:{}'
 [[++theme_color_primary_light:notempty=`@lightPrimaryColor: #[[++theme_color_primary_light]];`]]
 [[++theme_color_secondary_light:notempty=`@lightSecondaryColor: #[[++theme_color_secondary_light]];`]]
 
-[[++theme_page_background:notempty=`@pageBackground: #[[++theme_page_background]];`]]
+[[++theme_page_background_color:notempty=`@pageBackground: #[[++theme_page_background_color]];`]]
 
 
 // Logo
