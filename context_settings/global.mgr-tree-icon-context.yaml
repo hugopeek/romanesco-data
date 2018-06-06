@@ -1,0 +1,4 @@
+context_key: global
+key: mgr_tree_icon_context
+value: icon-folder-open-o
+area: manager

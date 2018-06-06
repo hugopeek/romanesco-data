@@ -1,8 +1,10 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.2.0
-Upcoming release
+Released on June 6, 2018
 
+- [Feedback] Add elements for implementing comments (based on Tickets)
+- [Information] Add elements for creating a Knowledge Base
 - [Overviews] Fix author images in Publication tpls
 - [Backgrounds] Use (optional) portrait image on mobile
 - [Backgrounds] Get rid of hardcoded responsive image dimensions

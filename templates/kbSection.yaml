@@ -1,0 +1,62 @@
+id: 17
+templatename: kbSection
+description: ''
+category: t_information
+icon: icon-book
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html id="[[*context_key]]" lang="[[++cultureKey]]">
+
+[[$head]]
+
+<body id="[[*alias]]" class="header-vertical">
+
+<div class="pusher">
+    [[$headerVertical?
+        &masthead=`0`
+        &hero=`0`
+        &search=`0`
+    ]]
+
+    <main id="main">
+        [[[[If?
+            &subject=`[[$toolbarKnowledgeBaseTheme]]`
+            &operator=`isnull`
+            &then=`$toolbarKnowledgeBase`
+            &else=`$toolbarKnowledgeBaseTheme`
+        ]]]]
+
+        <article id="content">
+            [[*content:notempty=`
+            <div class="ui vertical stripe segment white">
+                <div class="ui container">
+                    [[*content]]
+                </div>
+            </div>
+            `]]
+
+            [[!pdoPage?
+                &element=`getTickets`
+                &tpl=`kbOverviewRowBasic`
+            ]]
+
+            <div class="ui vertical stripe segment white">
+                <div class="ui container">
+                    [[!+page.nav]]
+                </div>
+            </div>
+
+        </article>
+
+        [[$footer]]
+    </main>
+</div>
+
+[[$offCanvasNav]]
+[[$script]]
+
+</body>
+</html>
