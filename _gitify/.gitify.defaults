@@ -56,5 +56,7 @@ data:
     # Adjust content types, such as removing .html extensions of all pages
     content_types:
         class: modContentType
-        primary:
-            - name
+        primary: name
+
+        where:
+            - 'id:NOT LIKE': '______'
