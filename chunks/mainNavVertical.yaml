@@ -2,7 +2,9 @@ id: 351
 name: mainNavVertical
 description: ''
 category: m_nav_primary
+snippet: "<nav id=\"menu-vertical\" class=\"ui large inverted secondary vertical accordion menu\" role=\"navigation\">\n    <div class=\"item branding\">\n        [[$logo]]\n    </div>\n\n    [[!getCache?\n        &element=`pdoMenu`\n        &cacheKey=`nav_[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`member`:else=`anonymous`]]`\n        &parents=`0`\n        &level=`3`\n        &tplOuter=`navWrapper`\n        &tpl=`navItemWrapper`\n        &tplParentRow=`navItemParent`\n        &tplParentRowActive=`navItemParentActive`\n        &tplInnerRow=`navItem`\n        &checkPermissions=`list`\n    ]]\n\n    [[$mainNavItemsTheme]]\n\n    <div class=\"item toc\">\n        <button class=\"ui right labeled inverted basic icon button\">\n            <i class=\"sidebar icon\"></i>\n            <span>Menu</span>\n        </button>\n    </div>\n</nav>"
 properties: 'a:0:{}'
+content: "<nav id=\"menu-vertical\" class=\"ui large inverted secondary vertical accordion menu\" role=\"navigation\">\n    <div class=\"item branding\">\n        [[$logo]]\n    </div>\n\n    [[!getCache?\n        &element=`pdoMenu`\n        &cacheKey=`nav_[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`member`:else=`anonymous`]]`\n        &parents=`0`\n        &level=`3`\n        &tplOuter=`navWrapper`\n        &tpl=`navItemWrapper`\n        &tplParentRow=`navItemParent`\n        &tplParentRowActive=`navItemParentActive`\n        &tplInnerRow=`navItem`\n        &checkPermissions=`list`\n    ]]\n\n    [[$mainNavItemsTheme]]\n\n    <div class=\"item toc\">\n        <button class=\"ui right labeled inverted basic icon button\">\n            <i class=\"sidebar icon\"></i>\n            <span>Menu</span>\n        </button>\n    </div>\n</nav>"
 
 -----
 
@@ -13,7 +15,10 @@ properties: 'a:0:{}'
 
     [[!getCache?
         &element=`pdoMenu`
-        &cacheKey=`nav_[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`member`:else=`anonymous`]]`
+        [[!++romanesco.member_groups:eq=`1`:then=`
+        &cacheKey=`[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`nav_member`:else=`nav_anonymous`]]`
+        `:else=``]]
+    
         &parents=`0`
         &level=`3`
         &tplOuter=`navWrapper`

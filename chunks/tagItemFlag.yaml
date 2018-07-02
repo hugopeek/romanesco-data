@@ -1,0 +1,9 @@
+id: 401
+name: tagItemFlag
+description: ''
+category: a_taxonomy
+properties: 'a:0:{}'
+
+-----
+
+<i class="[[+tag]] flag"></i>
