@@ -1,5 +1,15 @@
 # Changelog for the Romanesco Soil data files
 
+_Upcoming release_
+
+- [Users] Allow resource / member groups with exclusive access rights to be added
+- [Users] Exclude members only submenu items in vertical nav and KB overviews
+- [Users] Add setting to make project hub private (require login)
+- [Configuration] Load Google Analytics if configuration / context setting is set
+- [MODX] Fix snippet not found errors for empty fastField tags in MODX 2.6
+- [Content] Regulate MIME type of Markdown resources with plugin
+
+
 ## v1.2.0
 Released on June 6, 2018
 

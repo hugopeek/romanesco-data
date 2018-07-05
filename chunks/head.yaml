@@ -34,12 +34,17 @@ properties: 'a:0:{}'
     [[[[++romanesco.favicon_version:notempty=`$favicons`]]]]
 
     [[[[If?
-        &subject=`[[++romanesco.dev_mode]]`
+        &subject=`[[getContextSetting:default=`[[++google_analytics_ua]]`? &context=`[[*context_key]]` &setting=`google_analytics_ua`]]`
+        &operator=`notempty`
+        &then=`$googleAnalytics`
+    ]]]]
+
+    [[If?
+        &subject=`[[++romanesco.private_backyard]]`
         &operator=`EQ`
         &operand=`1`
-        &then=``
-        &else=`$googleAnalytics`
-    ]]]]
+        &then=`[[!checkPermissions? &context=`hub`]]`
+    ]]
 
     [[$structuredDataSite]]
 </head>
