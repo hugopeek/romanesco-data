@@ -28,6 +28,10 @@ switch ($modx->event->name) {
     case 'OnBeforeDocFormSave':
         $template = $modx->getObject('modTemplate', array('id'=>$resource->get('template')));
 
+        if (!is_object($template)) {
+            break;
+        }
+
         // Any template with 'Markdown' in its name qualifies
         // Note to self: you need to revert the content type manually if you assign a non-markdown template again
         if (stripos($template->get('templatename'), 'markdown') !== false) {
