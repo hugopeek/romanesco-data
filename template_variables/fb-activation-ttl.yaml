@@ -1,0 +1,15 @@
+id: 94
+type: number
+name: fb_activation_ttl
+caption: 'Activation TTL'
+description: 'Number of minutes until the activation email expires. Defaults to 3 hours.'
+category: Registration
+elements: ''
+rank: 5
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+180

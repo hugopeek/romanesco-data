@@ -2,7 +2,9 @@ id: 351
 name: mainNavVertical
 description: ''
 category: m_nav_primary
+snippet: "<nav id=\"menu-vertical\" class=\"ui large inverted secondary vertical accordion menu\" role=\"navigation\">\n    <div class=\"item branding\">\n        [[$logo]]\n    </div>\n\n    [[pdoMenu?\n        &parents=`0`\n        &level=`3`\n        &tplOuter=`navWrapper`\n        &tpl=`navItemWrapper`\n        &tplParentRow=`navItemParent`\n        &tplParentRowActive=`navItemParentActive`\n        &tplInnerRow=`navItem`\n        &checkPermissions=`list`\n        &cache=`1`\n        &cache_key=`[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`nav_member`:else=`nav_anonymous`]]`\n    ]]\n\n    [[$mainNavItemsTheme]]\n\n    <div class=\"item toc\">\n        <button class=\"ui right labeled inverted basic icon button\">\n            <i class=\"sidebar icon\"></i>\n            <span>Menu</span>\n        </button>\n    </div>\n</nav>"
 properties: 'a:0:{}'
+content: "<nav id=\"menu-vertical\" class=\"ui large inverted secondary vertical accordion menu\" role=\"navigation\">\n    <div class=\"item branding\">\n        [[$logo]]\n    </div>\n\n    [[pdoMenu?\n        &parents=`0`\n        &level=`3`\n        &tplOuter=`navWrapper`\n        &tpl=`navItemWrapper`\n        &tplParentRow=`navItemParent`\n        &tplParentRowActive=`navItemParentActive`\n        &tplInnerRow=`navItem`\n        &checkPermissions=`list`\n        &cache=`1`\n        &cache_key=`[[!+modx.user.id:memberof=`[[++romanesco.member_groups_frontend]]`:then=`nav_member`:else=`nav_anonymous`]]`\n    ]]\n\n    [[$mainNavItemsTheme]]\n\n    <div class=\"item toc\">\n        <button class=\"ui right labeled inverted basic icon button\">\n            <i class=\"sidebar icon\"></i>\n            <span>Menu</span>\n        </button>\n    </div>\n</nav>"
 
 -----
 
@@ -11,7 +13,7 @@ properties: 'a:0:{}'
         [[$logo]]
     </div>
 
-    [[pdoMenu?
+    [[!pdoMenu?
         &parents=`0`
         &level=`3`
         &tplOuter=`navWrapper`
