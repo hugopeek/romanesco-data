@@ -25,6 +25,9 @@ data:
             - 'AND:key:NOT LIKE': '%.assets_path'
             - 'AND:key:NOT LIKE': '%.assets_url'
             - 'AND:key:NOT LIKE': '%.core_path'
+            - 'AND:key:NOT LIKE': '%-container-id'
+            - 'AND:key:NOT LIKE': '%-backgrounds-id'
+            - 'AND:key:NOT LIKE': '%-dashboard-id'
 
     # ClientConfig
     cg_groups:
