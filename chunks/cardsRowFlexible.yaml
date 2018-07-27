@@ -1,6 +1,6 @@
 id: 380
 name: cardsRowFlexible
-description: 'A template for the slightly more advanced Cards (Flexible) repeater. Instead of a predefined template based on the available input fields, the editor can use a nested layout to add any CB field as content for the card.'
+description: 'Template for Cards (Flexible) repeater. Instead of a predefined template based on the available input fields, the editor can use a nested layout to add any CB field as content for the card.'
 category: m_presentation
 properties: 'a:0:{}'
 

@@ -1,6 +1,6 @@
 id: 375
 name: fbSelectOptionRowTag
-description: 'A row template for options that let you select a tag. Initially designed to work with tags created by the Tagger extra, but could work with any tag system that outputs a [[+tag]] and an [[+alias]] placeholder.'
+description: 'A row template for options that let you select a tag. Initially designed to work with the Tagger extra, but should work with any tag system that outputs [[+tag]] and [[+alias]] placeholders.'
 category: a_fb_inputs
 properties: 'a:0:{}'
 

@@ -2,7 +2,7 @@ id: 92
 type: option
 name: fb_activation_toggle
 caption: Activation
-description: 'Whether or not new users need to activate their account via email. IMPORTANT! For the activation process to know which email address to use, the Input (Email) field needs to be present in the form. And beware of bots when activating a user immediately!'
+description: 'Whether or not new users need to activate their account via email. IMPORTANT! For the activation process to know which address to use, the Input (Email) field needs to be present in the form.'
 category: Registration
 elements: 'After email confirmation==1||Immediately==0'
 rank: 1

@@ -2,7 +2,7 @@ id: 38
 type: option
 name: header_background_img
 caption: 'Background image'
-description: 'Use an Overview image of this resource as background. This will override the regular Background setting above and will NOT be inherited on child pages. If you want to use an image and inherit it too, add it as Global Background instead.'
+description: 'Use an Overview image as background. This overrides the regular Background setting above and will NOT be inherited. If you want to repeat an image on child pages, add it as Global Background.'
 category: Header
 elements: 'Use the Panorama image==background_img_pano||Use the Wide image==background_img_wide'
 rank: 11

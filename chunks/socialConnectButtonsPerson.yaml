@@ -29,4 +29,24 @@ properties: 'a:0:{}'
         &operator=`notempty`
         &then=`$buttonSocialConnectGoogleplus? &classes=`[[+button_type]]` &title=`[[%romanesco.social.connect_googleplus_person]]` &account=`[[+social_googleplus]]``
     ]]]]
+    [[[[If?
+        &subject=`[[+social_instagram]]`
+        &operator=`notempty`
+        &then=`$buttonSocialConnectInstagram? &classes=`[[+button_type]]` &title=`[[%romanesco.social.connect_instagram_person]]` &account=`[[+social_instagram]]``
+    ]]]]
+    [[[[If?
+        &subject=`[[+social_pinterest]]`
+        &operator=`notempty`
+        &then=`$buttonSocialConnectPinterest? &classes=`[[+button_type]]` &title=`[[%romanesco.social.connect_pinterest_person]]` &account=`[[+social_pinterest]]``
+    ]]]]
+    [[[[If?
+        &subject=`[[+social_youtube]]`
+        &operator=`notempty`
+        &then=`$buttonSocialConnectYoutube? &classes=`[[+button_type]]` &title=`[[%romanesco.social.connect_youtube_person]]` &account=`[[+social_youtube]]``
+    ]]]]
+    [[[[If?
+        &subject=`[[+social_github]]`
+        &operator=`notempty`
+        &then=`$buttonSocialConnectGithub? &classes=`[[+button_type]]` &title=`[[%romanesco.social.connect_github_person]]` &account=`[[+social_github]]``
+    ]]]]
 </span>

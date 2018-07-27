@@ -2,7 +2,7 @@ id: 24
 type: text
 name: header_title
 caption: 'Main title'
-description: 'This will be displayed in the header section, below navigation bar. The text will automatically be inherited on child pages. You can override this behaviour by entering a new title or by deleting the inherited value.'
+description: 'Title below the navigation bar. The text will automatically be inherited on child pages. You can override this behaviour by entering a new title or by deleting the inherited value.'
 category: Header
 elements: ''
 rank: 5

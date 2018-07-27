@@ -6,8 +6,9 @@ properties: 'a:0:{}'
 
 -----
 
-[[!$buttonSocialShareFacebook? &classes=`[[+button_type]]`]]
-[[!$buttonSocialShareTwitter? &classes=`[[+button_type]]`]]
-[[-!$buttonSocialShareGoogleplus? &classes=`[[+button_type]]`]]
-[[!$buttonSocialShareLinkedin? &classes=`[[+button_type]]`]]
-[[-!$buttonSocialSharePinterest? &classes=`[[+button_type]]`]]
+[[[[++social_sharing_channels:contains=`facebook`:then=`!$buttonSocialShareFacebook? &classes=`[[+button_type]]``]]]]
+[[[[++social_sharing_channels:contains=`twitter`:then=`!$buttonSocialShareTwitter? &classes=`[[+button_type]]``]]]]
+[[[[++social_sharing_channels:contains=`googleplus`:then=`!$buttonSocialShareGoogleplus? &classes=`[[+button_type]]``]]]]
+[[[[++social_sharing_channels:contains=`linkedin`:then=`!$buttonSocialShareLinkedin? &classes=`[[+button_type]]``]]]]
+[[[[++social_sharing_channels:contains=`pinterest`:then=`!$buttonSocialSharePinterest? &classes=`[[+button_type]]``]]]]
+[[$socialShareButtonsTheme]]

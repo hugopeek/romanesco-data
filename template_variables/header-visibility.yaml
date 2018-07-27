@@ -2,7 +2,7 @@ id: 90
 type: listbox
 name: header_visibility
 caption: 'Header visibility'
-description: 'Do you want to display the header on this page? If you turn this off, the page starts with the content area but the navigation bar will still be visible. This setting is inherited by default, but you can change this with the Inheritance setting below.'
+description: 'If you turn this off, the page starts with the content area but the navigation bar will still be visible. Inherited by default, but you can change this with the Inheritance setting below.'
 category: Header
 elements: 'On==1||Off==0||System default==default'
 rank: 1

@@ -2,7 +2,7 @@ id: 93
 type: number
 name: fb_activation_resource_id
 caption: 'Activation page'
-description: 'The page where the ConfirmRegister snippet for email activation is located. Enter the ID of the page, or drag the page from the menu tree to this input field. Defaults to the activation_resource_id system setting.'
+description: 'Page containing the ConfirmRegister snippet for email activation. Enter page ID or drag the page from the menu tree to this input field. Defaults to the activation_resource_id system setting.'
 category: Registration
 elements: ''
 rank: 2

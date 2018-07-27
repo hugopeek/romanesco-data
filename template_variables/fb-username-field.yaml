@@ -2,7 +2,7 @@ id: 96
 type: text
 name: fb_username_field
 caption: 'Username field'
-description: 'The name of the form field where the new user will enter a username. You can use the label name of the ContentBlock field here, or the name in the HTML. You can also enter the email field as username, if that suits your use case better.'
+description: 'Name of the form field that will receive the username. You can use the label name of the CB field here, or the input name in the HTML.'
 category: Registration
 elements: ''
 rank: 10
