@@ -1,5 +1,20 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.3.1
+Released on September 17, 2018
+
+- [ContentBlocks] Add option to wrap CTAs in segment
+- [ContentBlocks] Add size and layout_type settings to Quote CB
+- [ContentBlocks] Add titles to button links
+- [ContentBlocks] Change message size to generic field size setting and use for Quote
+- [ContentBlocks] Add inverted layout type to Accordions
+- [ContentBlocks] Fix empty subtitles returning as NULL in Tab headers
+- [Overviews] Fix fallback image in Publication overviews
+- [FormBlocks] Always set first value in form dropdown as empty default option
+- [FormBlocks] Better explanation for Label position setting
+- [FormBlocks] Fix caching of Select options (caching of nested tags changed in MODX 2.6)
+- [MODX] Remove hideEmptyTVCategories plugin (hidden by default in MODX 2.6)
+
 ## v1.3.0
 Released on July 27, 2018
 

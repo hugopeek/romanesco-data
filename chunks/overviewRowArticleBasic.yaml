@@ -12,7 +12,13 @@ properties: 'a:0:{}'
 
 <p class="meta">
     <a href="[[~[[+team_member_id]]]]" class="ui avatar image">
-        [[ImagePlus:empty=`[[++overview_img_fallback]]`? &tvname=`person_image` &docid=`[[+team_member_id]]` &options=`w=150&h=150&zc=1` &type=`tpl`]]
+        [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="[[++site_name]]">`?
+            &tvname=`person_image`
+            &docid=`[[+team_member_id]]`
+            &options=`w=150&h=150&zc=1`
+            &type=`tpl`
+            &tpl=`cbOverviewRowImg`
+        ]]
     </a>
     <span class="author">[[+author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]</span>
     <span class="date">
