@@ -11,7 +11,7 @@ Released on September 17, 2018
 - [ContentBlocks] Fix empty subtitles returning as NULL in Tab headers
 - [Overviews] Fix fallback image in Publication overviews
 - [FormBlocks] Always set first value in form dropdown as empty default option
-- [FormBlocks] Better explanation for Label position setting
+- [FormBlocks] Better explanations for Label position setting
 - [FormBlocks] Fix caching of Select options (caching of nested tags changed in MODX 2.6)
 - [MODX] Remove hideEmptyTVCategories plugin (hidden by default in MODX 2.6)
 
