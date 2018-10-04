@@ -1,5 +1,20 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.3.2
+Released on October 4, 2018
+
+- [Data] Add OpenGraph metadata to head
+- [Content] Add snippet for clipping characters from start or end of string
+- [Content] Add plugin for injecting inverted classes into content (requires HtmlPageDom)
+- [Content] Add options for controlling footer and bottom CTA content
+- [MODX] Include homepage in basic template list, so they also have Overview TVs
+- [Overviews] Fix author image in compact article overview template
+- [Overviews] Disable Disqus comment count in overviews (was acting buggy)
+- [Build] Prevent decimals in calculated image dimensions from breaking variables file
+- [Configuration] Allow overrides for head and footer chunks in all templates
+- [FormBlocks] Fix issues when using multiple file upload fields in form
+- [FormBlocks] Sort available forms by menuindex in Forms CB
+
 ## v1.3.1
 Released on September 18, 2018
 
