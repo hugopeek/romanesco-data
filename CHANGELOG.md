@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.3.1
-Released on September 17, 2018
+Released on September 18, 2018
 
 - [ContentBlocks] Add option to wrap CTAs in segment
 - [ContentBlocks] Add size and layout_type settings to Quote CB

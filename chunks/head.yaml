@@ -7,12 +7,16 @@ properties: 'a:0:{}'
 -----
 
 <head>
-    <meta charset="[[++modx_charset]]">
     <title>[[*longtitle:empty=`[[*pagetitle]]`]] - [[++site_name]]</title>
+
+    <meta charset="[[++modx_charset]]">
     <meta name="description" content="[[*description]]">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    [[$openGraphMeta]]
+
     <base href="[[!++site_url]]">
 
     <link href="[[!++romanesco.semantic_dist_path]]/semantic[[++minify_css_js:eq=`1`:then=`.min`]].css" rel="stylesheet">
@@ -31,6 +35,7 @@ properties: 'a:0:{}'
     ]]
 
     [[++head_additional]]
+
     [[[[++romanesco.favicon_version:notempty=`$favicons`]]]]
 
     [[[[If?

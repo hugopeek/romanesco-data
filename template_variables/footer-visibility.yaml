@@ -1,0 +1,15 @@
+id: 101
+type: listbox
+name: footer_visibility
+caption: 'Footer visibility'
+description: 'If you turn this off, the closing footer section will not be displayed. Inherited by default, but you can change this with the Inheritance setting below.'
+category: Footer
+elements: 'On==1||Off==0||System default==default'
+rank: 1
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT default

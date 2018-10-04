@@ -1,0 +1,15 @@
+id: 103
+type: listbox
+name: footer_background
+caption: Background
+description: 'Select a background for this footer. You can define these backgrounds under Global Content > Backgrounds. Will also be inherited by default.'
+category: Footer
+elements: '@CHUNK globalBackgroundImgTVOptions'
+rank: 10
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT

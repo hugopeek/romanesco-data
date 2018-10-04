@@ -6,27 +6,54 @@ properties: 'a:0:{}'
 
 -----
 
-<footer id="footer" class="ui vertical segment inverted">
-    [[#[[++footer_id:empty=`[[++romanesco.global_footer_id:empty=`0`]]`]].content]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`footer_visibility`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT default`
+    &then=`[[[[#[[*parent]].footer_inheritance:contains=`inherit_visibility`:then=`*footer_visibility:replace=`default==[[++footer_visibility_default]]``:else=`++footer_visibility_default`]]]]`
+    &else=`[[*footer_visibility]]`
+    &toPlaceholder=`footer_visibility`
+]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`footer_type`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT default`
+    &then=`[[[[#[[*parent]].footer_inheritance:contains=`inherit_type`:then=`*footer_type:replace=`default==[[++global_footer_id]]``:else=`++global_footer_id`]]]]`
+    &else=`[[*footer_type]]`
+    &toPlaceholder=`footer_type`
+]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`footer_background`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT`
+    &then=`[[[[#[[*parent]].footer_inheritance:contains=`inherit_background`:then=`*footer_background:empty=`[[++footer_background_default]]``:else=`++footer_background_default`]]]]`
+    &else=`[[*footer_background]]`
+    &toPlaceholder=`footer_background`
+]]
 
-    <div class="ui container section divider"></div>
+[[[[[[If?
+    &subject=`[[getRawTVValue? &tv=`footer_cta`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT`
+    &then=`
+        If?
+            &subject=`inherit_cta`
+            &operator=`inarray`
+            &operand=`[[#[[*parent]].footer_inheritance]]`
+            &then=`[[*footer_cta:notempty=`$ctaFooter`]]`
+        `
+    &else=`*footer_cta:notempty=`$ctaFooter``
+]]]]]]
 
-    <div class="ui equal width grid container">
-        <div class="fitted column">
-            <p>&copy; [[Time:date=`%Y`]]<span class="tablet or lower hidden"> - [[++site_name]]</span></p>
-        </div>
+[[+footer_visibility:eq=`1`:then=`
+<footer id="footer" class="ui vertical segment [[+footer_background]]">
+    [[#[[+footer_type]].content]]
 
-        <div class="right aligned column">
-            <div class="ui horizontal inverted list">
-                [[pdoMenu?
-                    &parents=`[[++common_pages_id:empty=`[[++romanesco.common_pages_id:empty=`0`]]`]]`
-                    &level=`0`
-                    &tplOuter=`navWrapper`
-                    &tpl=`navItem`
-                    &sortby=`menuindex`
-                    &sortdir=`ASC`
-                ]]
-            </div>
-        </div>
-    </div>
+    [[[[If?
+        &subject=`[[$footerCopyrightTheme]]`
+        &operator=`isnull`
+        &then=`$footerCopyright`
+        &else=`$footerCopyrightTheme`
+    ]]]]
 </footer>
+`]]

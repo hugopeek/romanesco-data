@@ -4,7 +4,7 @@ name: header_cta
 caption: 'Call to action (CTA)'
 description: 'Select a CTA for display in header. CTAs are located in Global Content. If a CTA is selected, all Title values will be ignored but Background settings still apply. Not inherited by default.'
 category: Header
-elements: '@CHUNK tvSelectCTA'
+elements: '@CHUNK tvSelectHeaderCTA'
 rank: 20
 properties: 'a:0:{}'
 input_properties: null

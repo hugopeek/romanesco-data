@@ -6,9 +6,10 @@ description: 'Select which elements to display on child pages of this resource t
 category: Header
 elements: 'Inherit visibility==inherit_visibility||Inherit titles==inherit_titles||Inherit background==inherit_background||Inherit CTA==inherit_cta'
 rank: 99
+display: delim
 properties: 'a:0:{}'
 input_properties: null
-output_properties: null
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
 
 -----
 

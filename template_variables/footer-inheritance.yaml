@@ -1,0 +1,16 @@
+id: 106
+type: checkbox
+name: footer_inheritance
+caption: Inheritance
+description: 'Select which elements to display on child pages of this resource too. NB: Turning inheritance OFF for an element returns it to its default value, but that is not reflected in the manager!'
+category: Footer
+elements: 'Inherit visibility==inherit_visibility||Inherit type==inherit_type||Inherit background==inherit_background||Inherit CTA==inherit_cta||Inherit CTA background==inherit_cta_background'
+rank: 99
+display: delim
+properties: 'a:0:{}'
+input_properties: null
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+
+-----
+
+@INHERIT inherit_visibility||inherit_type||inherit_background||inherit_cta||inherit_cta_background

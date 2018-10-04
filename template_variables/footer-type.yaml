@@ -1,0 +1,15 @@
+id: 102
+type: option
+name: footer_type
+caption: 'Footer type'
+description: 'Choose which content to display inside the footer. You can add different footers under Global Content > Footers. A default footer can be defined under Configuration, or as context setting.'
+category: Footer
+elements: '@CHUNK tvSelectFooter'
+rank: 2
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT default

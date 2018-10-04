@@ -1,0 +1,20 @@
+id: 406
+name: tvSelectHeaderCTA
+description: 'Get available CTAs for the header and turn them into input options for use in a selection TV.'
+category: a_select
+properties: 'a:0:{}'
+
+-----
+
+--- Select CTA ---==@INHERIT||
+[[getResources?
+    &parents=`[[++romanesco.cta_container_id]]`
+    &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
+    &outputSeparator=`||`
+    &showHidden=`1`
+    &showUnpublished=`1`
+    &limit=`99`
+    &sortBy=`menuindex`
+    &sortDir=`ASC`
+    &tvFilters=`cta_availability==%header%`
+]]
