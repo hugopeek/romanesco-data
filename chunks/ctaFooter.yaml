@@ -2,7 +2,9 @@ id: 409
 name: ctaFooter
 description: ''
 category: m_cta
+snippet: "[[modifiedIf?\n    &subject=`[[getRawTVValue? &tv=`footer_cta_background`]]`\n    &operator=`EQ`\n    &operand=`@INHERIT`\n    &then=`[[[[#[[*parent]].footer_inheritance:contains=`inherit_cta_background`:then=`*footer_cta_background:empty=`[[++cta_background_default]]``:else=`++cta_background_default`]]]]`\n    &else=`[[*footer_cta_background]]`\n    &toPlaceholder=`footer_cta_background`\n]]\n\n<footer id=\"final-call\" class=\"ui center aligned vertical stripe segment [[+footer_cta_background]] cta\">\n    [[#[[*footer_cta:empty=`0`]].content]]\n</footer>"
 properties: 'a:0:{}'
+content: "[[modifiedIf?\n    &subject=`[[getRawTVValue? &tv=`footer_cta_background`]]`\n    &operator=`EQ`\n    &operand=`@INHERIT`\n    &then=`[[[[#[[*parent]].footer_inheritance:contains=`inherit_cta_background`:then=`*footer_cta_background:empty=`[[++cta_background_default]]``:else=`++cta_background_default`]]]]`\n    &else=`[[*footer_cta_background]]`\n    &toPlaceholder=`footer_cta_background`\n]]\n\n<footer id=\"final-call\" class=\"ui center aligned vertical stripe segment [[+footer_cta_background]] cta\">\n    [[#[[*footer_cta:empty=`0`]].content]]\n</footer>"
 
 -----
 
@@ -16,5 +18,7 @@ properties: 'a:0:{}'
 ]]
 
 <footer id="final-call" class="ui center aligned vertical stripe segment [[+footer_cta_background]] cta">
-    [[#[[*footer_cta:empty=`0`]].content]]
+    <div class="ui container">
+        [[#[[*footer_cta:empty=`0`]].content]]
+    </div>
 </footer>
