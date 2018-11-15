@@ -1,0 +1,3 @@
+id: 7
+name: StatusImprovement
+properties: 'a:2:{s:11:"firstOption";a:7:{s:4:"name";s:11:"firstOption";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:34:"--- Select area of improvement ---";s:7:"lexicon";N;s:4:"area";s:0:"";}s:14:"inputOptionKey";a:7:{s:4:"name";s:14:"inputOptionKey";s:4:"desc";s:44:"romanesco.tvselectinputoption.inputOptionKey";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:19:"status_improvements";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

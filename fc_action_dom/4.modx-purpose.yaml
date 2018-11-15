@@ -1,10 +1,10 @@
-id: 148
+id: 147
 set: 4
 action: resource/update
-name: modx-status
+name: modx-purpose
 description: null
 container: modx-resource-tabs
 rule: tabNew
-value: Status
+value: Purpose
 constraint_class: modResource
 rank: 1
