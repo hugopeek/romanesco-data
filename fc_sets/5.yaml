@@ -1,0 +1,7 @@
+id: 5
+profile: 2
+action: resource/update
+description: 'Hide all settings except Global Backgrounds grid'
+active: 1
+template: 8
+constraint_class: modResource
