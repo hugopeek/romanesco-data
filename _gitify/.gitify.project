@@ -349,6 +349,60 @@ data:
             - editedby
             - editedon
 
+    # Romanesco
+    romanesco_timeline:
+        class: rmTimeline
+        primary:
+            - id
+            - title
+        package: romanescobackyard
+    romanesco_notes:
+        class: rmNote
+        primary:
+            - id
+            - title
+    romanesco_crosslinks:
+        class: rmCrosslink
+        primary:
+            - id
+            - title
+    romanesco_options:
+        class: rmOption
+        primary:
+            - id
+            - alias
+    romanesco_option_groups:
+        class: rmOptionGroup
+        primary:
+            - id
+            - alias
+
+    romanesco_timeline_project:
+        class: rmTimelineProject
+        primary:
+            - id
+            - title
+    romanesco_notes_improvement:
+        class: rmNoteImprovement
+        primary:
+            - id
+            - title
+    romanesco_notes_issue:
+        class: rmNoteIssue
+        primary:
+            - id
+            - title
+    romanesco_crosslinks_repurpose:
+        class: rmCrosslinkRepurpose
+        primary:
+            - id
+            - title
+    romanesco_crosslinks_related:
+        class: rmCrosslinkRelated
+        primary:
+            - id
+            - title
+
     # SetInputOptions
     #setinputoptions_groups:
     #    class: SetInputOptionsGroup
