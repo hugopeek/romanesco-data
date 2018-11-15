@@ -1,0 +1,15 @@
+id: 120
+type: option
+name: status_health
+caption: 'Health indicator'
+description: 'What is the current condition of this page?'
+category: Status
+elements: '@CHUNK tvSelectInputOption@StatusHealth'
+rank: 2
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+stable

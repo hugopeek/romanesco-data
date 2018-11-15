@@ -1,0 +1,13 @@
+id: 117
+type: migxdb
+name: content_repurpose_src
+caption: 'Re-purpose (Source)'
+description: 'On which existing sources will this content be based? If the source is already pointing to this page as destination, it will show up automatically.'
+category: Purpose
+elements: ''
+rank: 50
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:7:"configs";s:39:"content_repurpose_src:romanescobackyard";}'
+output_properties: null
+content: ''

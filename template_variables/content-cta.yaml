@@ -1,0 +1,13 @@
+id: 114
+type: text
+name: content_cta
+caption: Follow-up
+description: 'What kind of action do you want the visitor to take after viewing this content? View related content, get in touch, subscribe to your newsletter, buy your product, donate to your cause...'
+category: Purpose
+elements: ''
+rank: 11
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

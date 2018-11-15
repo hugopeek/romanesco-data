@@ -1,0 +1,14 @@
+id: 110
+type: listbox-multiple
+name: content_purpose
+caption: 'Content purpose'
+description: 'Select the primary function(s) of this content. You can focus on just 1 topic, or create a chain of topics to use as blueprint for your storyline.'
+category: Purpose
+elements: '@CHUNK tvSelectInputOption@ContentPurpose'
+rank: 1
+display: delim
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:9:"typeAhead";s:5:"false";s:14:"typeAheadDelay";s:3:"250";s:10:"stackItems";s:4:"true";}'
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+content: ''

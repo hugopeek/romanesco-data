@@ -3,8 +3,8 @@ source: 13
 type: migx
 name: global_background_img
 caption: 'Global background images'
-description: 'These backgrounds can be applied to CB layouts (under their Settings wheel) and possibly to other elements too.'
-category: 'Global - Images'
+description: 'These backgrounds can be applied to page headers, CB layouts (under their Settings wheel) and possibly to other elements too.'
+category: 'Global - Backgrounds'
 elements: ''
 rank: 1
 default_text: ''

@@ -35,11 +35,11 @@ properties: 'a:0:{}'
 
     <main id="main" role="main">
         <div class="ui relaxed grid container">
-            <article id="content" class="sixteen wide twelve wide computer column">
+            <article id="content" class="sixteen wide mobile twelve wide computer column">
                 [[*content]]
             </article>
 
-            <aside id="sidebar" class="four wide column computer only">
+            <aside id="sidebar" class="four wide computer column tablet or lower hidden">
                 [[$subNavVertical]]
             </aside>
         </div>

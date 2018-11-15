@@ -1,0 +1,15 @@
+id: 119
+type: option
+name: status_progress
+caption: 'Progress indicator'
+description: 'What is the current development stage of this page?'
+category: Status
+elements: '@CHUNK tvSelectInputOption@StatusProgress'
+rank: 1
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+to-do

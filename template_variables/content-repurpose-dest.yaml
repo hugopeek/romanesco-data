@@ -1,0 +1,13 @@
+id: 118
+type: migxdb
+name: content_repurpose_dest
+caption: 'Re-purpose (Destination)'
+description: 'Can you think of ways to reuse this content in other places or scenarios? If the destination doesn''t exist yet, just enter Title and Description as an idea.'
+category: Purpose
+elements: ''
+rank: 51
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:7:"configs";s:40:"content_repurpose_dest:romanescobackyard";}'
+output_properties: null
+content: ''

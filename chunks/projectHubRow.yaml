@@ -6,19 +6,25 @@ properties: 'a:0:{}'
 
 -----
 
-<div class="[[!If? &subject=`[[+entry_date:strtotime]]` &operator=`GTE` &operand=`[[!Time]]` &then=`muted`]] event">
+<div class="[[!If? &subject=`[[+date:strtotime]]` &operator=`GT` &operand=`[[!Time]]` &then=`future` &else=`past`]] event">
     <div class="label">
-        <i class="[[+entry_status:eq=`1`:then=`checkmark`:else=`pencil`]] icon"></i>
+        <i class="[[+icon]] icon"></i>
     </div>
     <div class="content">
+        [[+date:notempty=`
         <div class="date">
-            [[+entry_date:strtotime:date=`%e %B %Y`]]
+            [[+date:date=`[[++romanesco.date_format_long]]`]]
         </div>
+        `]]
+        [[+title:notempty=`
         <div class="summary">
-            [[+entry_title]]
+            [[+title]]
         </div>
+        `]]
+        [[+description:notempty=`
         <div class="expandable extra text">
-            [[+entry_description]]
+            [[+description]]
         </div>
+        `]]
     </div>
 </div>

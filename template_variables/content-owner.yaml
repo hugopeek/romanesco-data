@@ -1,0 +1,13 @@
+id: 122
+type: superboxselect
+name: content_owner
+caption: 'Content owner'
+description: 'Who is responsible for editing and maintaining this page?'
+category: Status
+elements: ''
+rank: 10
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:6:{s:10:"selectType";s:5:"users";s:11:"maxElements";s:1:"1";s:10:"allowBlank";s:1:"1";s:5:"depth";s:2:"10";s:19:"limitRelatedContext";s:1:"0";s:8:"pageSize";s:2:"10";}'
+output_properties: null
+content: ''

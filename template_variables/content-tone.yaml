@@ -1,0 +1,13 @@
+id: 115
+type: text
+name: content_tone
+caption: 'Tone of voice'
+description: 'Decide what writing style to adopt for this page. Formal, fun, pragmatic, provocative...'
+category: Purpose
+elements: ''
+rank: 20
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

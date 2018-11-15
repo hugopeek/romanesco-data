@@ -1,0 +1,12 @@
+id: 107
+type: migxdb
+name: links_related
+caption: 'Related content'
+category: Links
+elements: ''
+rank: 1
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:7:"configs";s:37:"content_related_src:romanescobackyard";}'
+output_properties: null
+content: ''

@@ -1,0 +1,9 @@
+id: 413
+name: tvSelectInputOptionRow
+description: 'Basic row template for rendering input options inside the TV.'
+category: a_select
+properties: 'a:0:{}'
+
+-----
+
+[[+name]][[+description:before=` --> `]]==[[+[[+linkType]]]]

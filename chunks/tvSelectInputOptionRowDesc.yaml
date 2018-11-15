@@ -1,0 +1,9 @@
+id: 414
+name: tvSelectInputOptionRowDesc
+description: 'Row template with description below the title, for rendering input options inside a listbox-multiple TV.'
+category: a_select
+properties: 'a:0:{}'
+
+-----
+
+<b>[[+name]]</b>[[+description:before=`<br>`]]==[[+[[+linkType]]]]

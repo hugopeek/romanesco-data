@@ -1,0 +1,13 @@
+id: 121
+type: migxdb
+name: status_issues
+caption: Help!
+description: 'What kind of problem(s) are you experiencing? This is aimed at the developers. Please create separate items if you have more than 1 issue and include any relevant info (like error messages).'
+category: Status
+elements: ''
+rank: 4
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:7:"configs";s:31:"status_issues:romanescobackyard";}'
+output_properties: null
+content: ''
