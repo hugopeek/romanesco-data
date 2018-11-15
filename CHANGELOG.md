@@ -1,5 +1,26 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.4.0
+Released on November 15, 2018
+
+New features:
+- Add TVs for external links, file attachments and related content
+- Add ability to create input options
+- Add ability to create crosslinks between resources
+- Add re-purpose component, for creating content "flows" inside a central topic
+- Add after save hooks for MIGXdb configs
+- Add JSON import for input options
+
+Fixes and improvements:
+- Add chunk for dynamically generating TV input options from database rows
+- Load project timeline through Backyard package and store data in db
+- Rearrange TV categories and add rank
+- Replace Grunt task for generating GPM config with PHP script
+- Make tvToJSON output suitable for use in GPM configs
+- Disable CSS background images for Tiled overviews
+- Fix sidebar not showing on largest screen on Team and Client pages
+- Fix link in Instagram social button
+
 ## v1.3.2
 Released on October 4, 2018
 
