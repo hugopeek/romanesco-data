@@ -377,8 +377,8 @@ packages:
             - renderresources
             - rowboat
             - seopro
-            - setinputoptions
             - simplesearch
+            - superboxselect
             - svgsanitizer
             - switch
             - tagger
@@ -390,16 +390,7 @@ packages:
         service_url: https://rest.modmore.com/
         credential_file: '.modmore.com.key'
         packages:
-            - blockdown
             - clientconfig
             - contentblocks
             - quickstartbuttons
             - redactor
-
-    #extras.io:
-    #    service_url: https://rest.extras.io/v1/
-    #    credential_file: '.extras.io.key'
-    #    packages:
-    #        - romanesco-0.10.0-pl
-    #        - romanescobackyard-0.1.1-pl
-    #        - cbheadingimage-0.2.1-pl
