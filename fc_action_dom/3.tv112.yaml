@@ -1,11 +1,11 @@
-id: 246
+id: 236
 set: 3
 action: resource/create
-name: tv41
+name: tv112
 description: null
 container: modx-panel-resource
 rule: tvMove
-value: modx-status
+value: modx-purpose
 constraint_class: modResource
 for_parent: 1
-rank: 41
+rank: 51
