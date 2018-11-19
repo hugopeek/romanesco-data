@@ -1,0 +1,8 @@
+id: 57
+template: 10
+label: Author
+name: tv_author_id
+hidden: 1
+width: 30
+position: 6
+sort_type: null

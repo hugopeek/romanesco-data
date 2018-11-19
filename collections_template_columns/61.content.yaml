@@ -1,0 +1,8 @@
+id: 61
+template: 10
+label: 'File path'
+name: content
+width: 80
+editor: textfield
+position: 4
+sort_type: null

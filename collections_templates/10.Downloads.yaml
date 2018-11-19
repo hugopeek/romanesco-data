@@ -1,0 +1,21 @@
+id: 10
+name: Downloads
+bulk_actions: 1
+sort_field: publishedon
+sort_dir: desc
+sort_type: null
+child_template: 0
+child_resource_type: modStaticResource
+resource_type_selection: 0
+tab_label: Downloads
+button_label: 'Add download'
+context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'
+buttons: 'view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink'
+back_to_collection_label: 'All Downloads'
+child_hide_from_menu: null
+child_published: null
+child_cacheable: null
+child_searchable: null
+child_richtext: null
+child_content_type: 8
+child_content_disposition: 1

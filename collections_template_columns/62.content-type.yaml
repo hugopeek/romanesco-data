@@ -1,0 +1,9 @@
+id: 62
+template: 10
+label: 'File type'
+name: content_type
+sortable: 1
+width: 30
+editor: textfield
+position: 5
+sort_type: null
