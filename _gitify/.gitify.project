@@ -375,7 +375,7 @@ data:
         class: rmOptionGroup
         primary:
             - id
-            - alias
+            - name
 
     romanesco_timeline_project:
         class: rmTimelineProject
