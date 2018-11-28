@@ -1,6 +1,6 @@
 id: 27
 template: 5
-label: pagetitle
+label: 'Team member'
 name: pagetitle
 sortable: 1
 width: 80

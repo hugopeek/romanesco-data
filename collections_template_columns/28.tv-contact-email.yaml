@@ -1,6 +1,6 @@
 id: 28
 template: 5
-label: Emailaddress
+label: 'Email address'
 name: tv_contact_email
 width: 50
 editor: textfield

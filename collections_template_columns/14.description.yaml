@@ -2,5 +2,6 @@ id: 14
 template: 3
 label: description
 name: description
+width: 130
 position: 2
 sort_type: null

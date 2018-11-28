@@ -3,7 +3,7 @@ template: 4
 label: Rating
 name: tv_rating_value
 sortable: 1
-width: 5
+width: 10
 editor: numberfield
 position: 3
 sort_type: null

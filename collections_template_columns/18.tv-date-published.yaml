@@ -3,7 +3,7 @@ template: 4
 label: Date
 name: tv_date_published
 sortable: 1
-width: 40
+width: 50
 editor: datefield
 renderer: Collections.renderer.datetime
 position: 2

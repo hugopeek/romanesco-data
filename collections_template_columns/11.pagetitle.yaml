@@ -1,8 +1,8 @@
 id: 11
 template: 2
-label: pagetitle
+label: Form
 name: pagetitle
-width: 60
+width: 50
 editor: textfield
 renderer: Collections.renderer.pagetitleWithButtons
 position: 1

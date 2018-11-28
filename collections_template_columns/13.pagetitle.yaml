@@ -1,7 +1,8 @@
 id: 13
 template: 3
-label: pagetitle
+label: CTA
 name: pagetitle
+width: 80
 renderer: Collections.renderer.pagetitleWithButtons
 position: 1
 sort_type: null

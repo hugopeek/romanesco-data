@@ -1,6 +1,6 @@
 id: 45
 template: 8
-label: pagetitle
+label: Project
 name: pagetitle
 width: 80
 editor: textfield

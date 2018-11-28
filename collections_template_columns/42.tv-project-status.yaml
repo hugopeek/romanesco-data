@@ -1,6 +1,6 @@
 id: 42
 template: 8
-label: 'Project status'
+label: Status
 name: tv_project_status
 width: 50
 position: 4

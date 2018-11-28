@@ -1,6 +1,6 @@
 id: 5
 template: 1
-label: pagetitle
+label: Title
 name: pagetitle
 width: 80
 editor: textfield

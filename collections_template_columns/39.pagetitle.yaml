@@ -1,8 +1,8 @@
 id: 39
 template: 7
-label: pagetitle
+label: Pattern
 name: pagetitle
-width: 60
+width: 80
 renderer: Collections.renderer.pagetitleWithButtons
-position: 100
+position: 99
 sort_type: null
