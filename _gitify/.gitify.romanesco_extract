@@ -43,7 +43,7 @@ data:
         # Installation of extras will be handled by the project itself, meaning
         #  they will receive their own category in the > 100.000 range.
         where:
-            - 'id:NOT IN': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,112,121,153,155,201,202,203,213,215]
+            - 'id:NOT IN': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,112,121,153,155,201,202,203,213,215,231,234]
 
         truncate_on_force:
             - modCategoryClosure
@@ -111,7 +111,7 @@ data:
     #        - 'OR:alias:IN': [assets/css/backgrounds]
 
     # MODX config
-    #content_type:
+    #content_types:
     #    class: modContentType
     #    primary:
     #        - name
@@ -354,6 +354,60 @@ data:
           - editedby
           - editedon
 
+    # Romanesco
+    #romanesco_timeline:
+    #    class: rmTimeline
+    #    primary:
+    #        - id
+    #        - title
+    #    package: romanescobackyard
+    #romanesco_notes:
+    #    class: rmNote
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_crosslinks:
+    #    class: rmCrosslink
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_options:
+    #    class: rmOption
+    #    primary:
+    #        - id
+    #        - alias
+    #romanesco_option_groups:
+    #    class: rmOptionGroup
+    #    primary:
+    #        - id
+    #        - alias
+
+    #romanesco_timeline_project:
+    #    class: rmTimelineProject
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_notes_improvement:
+    #    class: rmNoteImprovement
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_notes_issue:
+    #    class: rmNoteIssue
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_crosslinks_repurpose:
+    #    class: rmCrosslinkRepurpose
+    #    primary:
+    #        - id
+    #        - title
+    #romanesco_crosslinks_related:
+    #    class: rmCrosslinkRelated
+    #    primary:
+    #        - id
+    #        - title
+
     # SetInputOptions
     #setinputoptions_groups:
     #    class: SetInputOptionsGroup
@@ -382,8 +436,8 @@ packages:
             - renderresources
             - rowboat
             - seopro
-            - setinputoptions
             - simplesearch
+            - superboxselect
             - svgsanitizer
             - switch
             - tagger
@@ -395,7 +449,6 @@ packages:
         service_url: https://rest.modmore.com/
         credential_file: '.modmore.com.key'
         packages:
-            - blockdown
             - clientconfig
             - contentblocks
             - quickstartbuttons

@@ -362,41 +362,41 @@ data:
             - 'set:NOT LIKE': '______'
 
     # MIGX
-    migx_formtab:
-        class: migxFormtab
-        primary:
-            - id
-            - caption
-        package: migx
-        where:
-            - 'id:NOT LIKE': '______'
-    migx_formtab_field:
-        class: migxFormtabField
-        primary:
-            - id
-            - field
-        where:
-            - 'id:NOT LIKE': '______'
-    migx_config_element:
-        class: migxConfigElement
-        primary: id
-        where:
-            - 'id:NOT LIKE': '______'
-    migx_element:
-        class: migxElement
-        primary: id
-        where:
-            - 'id:NOT LIKE': '______'
-    migx_config:
-        class: migxConfig
-        primary:
-            - id
-            - name
-        exclude_keys:
-            - editedby
-            - editedon
-        where:
-            - 'id:NOT LIKE': '______'
+    #migx_formtab:
+    #    class: migxFormtab
+    #    primary:
+    #        - id
+    #        - caption
+    #    package: migx
+    #    where:
+    #        - 'id:NOT LIKE': '______'
+    #migx_formtab_field:
+    #    class: migxFormtabField
+    #    primary:
+    #        - id
+    #        - field
+    #    where:
+    #        - 'id:NOT LIKE': '______'
+    #migx_config_element:
+    #    class: migxConfigElement
+    #    primary: id
+    #    where:
+    #        - 'id:NOT LIKE': '______'
+    #migx_element:
+    #    class: migxElement
+    #    primary: id
+    #    where:
+    #        - 'id:NOT LIKE': '______'
+    #migx_config:
+    #    class: migxConfig
+    #    primary:
+    #        - id
+    #        - name
+    #    exclude_keys:
+    #        - editedby
+    #        - editedon
+    #    where:
+    #        - 'id:NOT LIKE': '______'
 
 packages:
     modx.com:
@@ -417,8 +417,8 @@ packages:
             - renderresources
             - rowboat
             - seopro
-            - setinputoptions
             - simplesearch
+            - superboxselect
             - svgsanitizer
             - switch
             - tagger
@@ -430,7 +430,6 @@ packages:
         service_url: https://rest.modmore.com/
         credential_file: '.modmore.com.key'
         packages:
-            - blockdown
             - clientconfig
             - contentblocks
             - quickstartbuttons
