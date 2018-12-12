@@ -1,0 +1,11 @@
+id: 419
+name: tocNavItem
+description: ''
+category: a_nav_toc
+properties: 'a:0:{}'
+
+-----
+
+<a class="item [[+classnames]]" href="[[+link]]" [[+attributes]]>
+    [[+menutitle]]
+</a>

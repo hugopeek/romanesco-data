@@ -1,0 +1,15 @@
+id: 124
+type: listbox
+name: auto_anchors
+caption: 'Automatic anchors'
+description: 'Give all headings on this page (H1-H6) an ID (if they don''t have one already). This allows you (or the ToC menu) to link directly to that heading. This setting is inherited on child pages.'
+category: Navigation
+elements: On==1||Off==0
+rank: 1
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT 0
