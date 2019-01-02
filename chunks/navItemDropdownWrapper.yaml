@@ -1,0 +1,11 @@
+id: 422
+name: navItemDropdownWrapper
+description: ''
+category: a_nav_primary
+properties: 'a:0:{}'
+
+-----
+
+<ul class="ui link list">
+    [[+wrapper]]
+</ul>
