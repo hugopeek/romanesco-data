@@ -2,12 +2,14 @@ id: 193
 name: richTextSegment
 description: ''
 category: a_content
+snippet: "[[+segment_type:notempty=`\n<div class=\"ui [[+padding]] [[+alignment]] [[+segment_type]] segment\">\n    [[+content:replace=`<table>==<table class=\"ui table\">`]]\n</div>\n`:empty=`[[+content:replace=`<table>==<table class=\"ui table\">`]]`]]"
 properties: 'a:0:{}'
+content: "[[+segment_type:notempty=`\n<div class=\"ui [[+padding]] [[+alignment]] [[+segment_type]] segment\">\n    [[+content:replace=`<table>==<table class=\"ui table\">`]]\n</div>\n`:empty=`[[+content:replace=`<table>==<table class=\"ui table\">`]]`]]"
 
 -----
 
 [[+segment_type:notempty=`
-<div class="ui [[+padding]] [[+alignment]] [[+segment_type]] segment">
+<div class="ui [[+padding]] [[+alignment]] [[+segment_type]] [[+background]] segment">
     [[+content:replace=`<table>==<table class="ui table">`]]
 </div>
 `:empty=`[[+content:replace=`<table>==<table class="ui table">`]]`]]
