@@ -2,9 +2,7 @@ id: 110
 name: headerBasic
 description: ''
 category: o_headers
-snippet: "[[modifiedIf?\n    &subject=`[[*header_visibility]]`\n    &operator=`EQ`\n    &operand=`default`\n    &then=`[[++header_visibility_default]]`\n    &else=`[[*header_visibility]]`\n    &toPlaceholder=`header_visibility`\n]]\n[[modifiedIf?\n    &subject=`[[getRawTVValue? &tv=`header_visibility`]]`\n    &operator=`contains`\n    &operand=`@INHERIT`\n    &then=`[[#[[*parent]].header_inheritance:contains=`inherit_visibility`:then=`[[+header_visibility]]`:else=`[[++header_visibility_default]]`]]`\n    &else=`[[+header_visibility]]`\n    &toPlaceholder=`hero`\n]]\n\n<header id=\"header\" class=\"masthead [[+hero:eq=`0`:then=`without hero`]] [[++navbar_sticky:eq=`0`:then=`non-stick`]]\">\n    [[[[If?\n        &subject=`[[+masthead]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$masthead`\n    ]]]]\n\n    [[[[If? &subject=`[[$mainNavTheme]]` &operator=`isnull` &then=`$mainNav` &else=`$mainNavTheme`]]]]\n\n    [[[[If?\n        &subject=`[[+hero]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$hero`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[++search.add_to_menu]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$searchForm`\n    ]]]]\n</header>"
 properties: 'a:0:{}'
-content: "[[modifiedIf?\n    &subject=`[[*header_visibility]]`\n    &operator=`EQ`\n    &operand=`default`\n    &then=`[[++header_visibility_default]]`\n    &else=`[[*header_visibility]]`\n    &toPlaceholder=`header_visibility`\n]]\n[[modifiedIf?\n    &subject=`[[getRawTVValue? &tv=`header_visibility`]]`\n    &operator=`contains`\n    &operand=`@INHERIT`\n    &then=`[[#[[*parent]].header_inheritance:contains=`inherit_visibility`:then=`[[+header_visibility]]`:else=`[[++header_visibility_default]]`]]`\n    &else=`[[+header_visibility]]`\n    &toPlaceholder=`hero`\n]]\n\n<header id=\"header\" class=\"masthead [[+hero:eq=`0`:then=`without hero`]] [[++navbar_sticky:eq=`0`:then=`non-stick`]]\">\n    [[[[If?\n        &subject=`[[+masthead]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$masthead`\n    ]]]]\n\n    [[[[If? &subject=`[[$mainNavTheme]]` &operator=`isnull` &then=`$mainNav` &else=`$mainNavTheme`]]]]\n\n    [[[[If?\n        &subject=`[[+hero]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$hero`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[++search.add_to_menu]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$searchForm`\n    ]]]]\n</header>"
 
 -----
 
@@ -33,7 +31,12 @@ content: "[[modifiedIf?\n    &subject=`[[*header_visibility]]`\n    &operator=`E
         &then=`$masthead`
     ]]]]
 
-    [[[[If? &subject=`[[$mainNavTheme]]` &operator=`isnull` &then=`$mainNavDropdown` &else=`$mainNavTheme`]]]]
+    [[[[If?
+        &subject=`[[$mainNavTheme]]`
+        &operator=`isnull`
+        &then=`$mainNav[[++navbar_level:gte=`2`:then=`Dropdown`]]`
+        &else=`$mainNavTheme`
+    ]]]]
 
     [[[[If?
         &subject=`[[+hero]]`
