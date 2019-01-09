@@ -1,0 +1,14 @@
+id: 424
+name: navItemDropdownCategory
+description: ''
+category: a_nav_primary
+properties: 'a:0:{}'
+
+-----
+
+<li class="item column">
+    <a class="title">[[+menutitle]]</a>
+    <ul class="menu content">
+        [[+wrapper]]
+    </ul>
+</li>

@@ -2,12 +2,13 @@ id: 21
 templatename: BasicDetailToC
 description: ''
 category: t_basic
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n[[[[If?\n    &subject=`[[$headTheme]]`\n    &operator=`isnull`\n    &then=`$head`\n    &else=`$headTheme`\n]]]]\n\n<body id=\"[[*alias]]\" class=\"detail toc\">\n\n<div class=\"pusher\">\n    [[$headerBasic?\n        &masthead=`0`\n        &hero=`1`\n        &search=`0`\n    ]]\n\n    [[[[If?\n        &subject=`[[$toolbarBasicTheme]]`\n        &operator=`isnull`\n        &then=`$toolbarBasic`\n        &else=`$toolbarBasicTheme`\n    ]]]]\n\n    <main id=\"main\" role=\"main\">\n        <div class=\"ui relaxed grid container\">\n            <article id=\"content\" class=\"sixteen wide mobile twelve wide computer column\">\n                [[*content]]\n            </article>\n\n            <aside id=\"sidebar\" class=\"four wide computer column tablet or lower hidden\">\n                [[$tocNavVertical?\n                    &sticky=`1`\n                ]]\n            </aside>\n        </div>\n    </main>\n\n    [[[[If?\n        &subject=`[[$footerTheme]]`\n        &operator=`isnull`\n        &then=`$footer`\n        &else=`$footerTheme`\n    ]]]]\n</div>\n\n[[$offCanvasNav]]\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:0:{}'
 
 -----
 
 <!DOCTYPE html>
-<html id="[[*context_key]]" lang="[[++cultureKey]]">
+<html id="[[*context_key]]" class="no-js" lang="[[++cultureKey]]">
 
 [[[[If?
     &subject=`[[$headTheme]]`
@@ -54,7 +55,8 @@ properties: 'a:0:{}'
     ]]]]
 </div>
 
-[[$offCanvasNav]]
+<nav id="off-canvas" class="ui right inverted vertical accordion menu sidebar"></nav>
+[[-$offCanvasNav]]
 [[$script]]
 
 </body>
