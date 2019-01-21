@@ -37,6 +37,7 @@ data:
                 - 'base_url'
                 - 'http_host'
                 - 'site_start'
+                - 'unauthorized_page'
 
     # Basic elements
     categories:
