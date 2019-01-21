@@ -1,0 +1,11 @@
+id: 429
+name: kanbanGridStepsWrapper
+description: ''
+category: m_hub
+properties: 'a:0:{}'
+
+-----
+
+<div class="ui [[+total:textToNumber]] unstackable top attached kanban steps">
+    [[+output]]
+</div>

@@ -1,5 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.5.0
+Released on January 21, 2019
+
+New features:
+- Add main navigation with dropdown submenus
+- Add template with Table of Contents menu (instead of submenu)
+- Add template for Downloads
+- Add Kanban layout for Content Purpose elements
+
+Fixes and improvements:
+- Update status grid to incorporate new / altered TV values
+- Add optional anti-spam hook to forms
+- Add option to select background for rich text segments too
+
 ## v1.4.0
 Released on November 15, 2018
 

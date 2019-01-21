@@ -1,0 +1,13 @@
+id: 426
+name: statusIndicatorSVGSymbol
+description: ''
+category: a_hub
+properties: 'a:0:{}'
+
+-----
+
+[[svgSanitize?
+    &file=`assets/components/romanescobackyard/icons/status/[[+alias]].svg`
+    &title=`[[+name]]`
+    &toSymbol=`1`
+]]

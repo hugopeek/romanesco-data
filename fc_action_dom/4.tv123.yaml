@@ -1,4 +1,4 @@
-id: 163
+id: 309
 set: 4
 action: resource/update
 name: tv123
@@ -7,4 +7,4 @@ container: modx-panel-resource
 rule: tvMove
 value: modx-status
 constraint_class: modResource
-rank: 60
+rank: 70

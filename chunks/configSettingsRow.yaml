@@ -1,0 +1,29 @@
+id: 433
+name: configSettingsRow
+description: 'Display a group of settings, as defined in the Configurations extra.'
+category: m_hub
+properties: 'a:0:{}'
+
+-----
+
+<h3 id="[[+label]]" class="ui header">
+    [[+label]]
+</h3>
+
+<table class="ui very compact celled table">
+    <thead>
+    <tr>
+        <th class="four wide">Key</th>
+        <th class="five wide">Label</th>
+        <th class="seven wide">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    [[migxLoopCollection?
+        &packageName=`clientconfig`
+        &classname=`cgSetting`
+        &where=`{"group":"[[+id]]"}`
+        &tpl=`configSettingsRowTR`
+    ]]
+    </tbody>
+</table>

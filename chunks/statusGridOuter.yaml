@@ -7,99 +7,55 @@ properties: 'a:0:{}'
 -----
 
 <svg class="hidden">
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/to-do.svg` &title=`[[%romanesco.status.not_done]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/in-progress.svg` &title=`[[%romanesco.status.in_progress]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/review.svg` &title=`[[%romanesco.status.almost_done]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/done.svg` &title=`[[%romanesco.status.done]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/successful.svg` &title=`[[%romanesco.status.successful]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/problematic.svg` &title=`[[%romanesco.status.problematic]]` &toSymbol=`1`]]
-    [[svgSanitize? &file=`assets/components/romanescobackyard/icons/status/expired.svg` &title=`[[%romanesco.status.expired]]` &toSymbol=`1`]]
+    [[migxLoopCollection?
+        &packageName=`romanescobackyard`
+        &classname=`rmOption`
+        &where=`{"key":"status_progress"}`
+        &tpl=`statusIndicatorSVGSymbol`
+    ]]
+    [[migxLoopCollection?
+        &packageName=`romanescobackyard`
+        &classname=`rmOption`
+        &where=`{"key":"status_health"}`
+        &tpl=`statusIndicatorSVGSymbol`
+    ]]
 </svg>
 
 <div class="ui grid">
-    <div class="eight wide column"></div>
-    <div class="eight wide column">
-        <h4>Status</h4>
-        <table class="ui small center aligned very compact fixed basic legend table">
-            <thead>
-            <tr>
-                <th>To do</th>
-                <th>In progress</th>
-                <th>Review</th>
-                <th>Done</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-to-do"></use>
-                    </svg>
-                </td>
-                <td>
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-in-progress"></use>
-                    </svg>
-                </td>
-                <td>
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-review"></use>
-                    </svg>
-                </td>
-                <td>
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-done"></use>
-                    </svg>
-                </td>
-            </tr>
-            </tbody>
-            <thead>
-            <tr></tr>
-                <th>Healthy</th>
-                <th>Fruiting</th>
-                <th>Buggy</th>
-                <th>Expired</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="positive">
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-done"></use>
-                    </svg>
-                </td>
-                <td class="positive">
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-successful"></use>
-                    </svg>
-                </td>
-                <td class="negative">
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-problematic"></use>
-                    </svg>
-                </td>
-                <td class="warning">
-                    <svg class="icon" viewBox="0 0 100 100">
-                        <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-expired"></use>
-                    </svg>
-                </td>
-
-            </tr>
-            </tbody>
-        </table>
+    <div class="nine wide column">
+        <h1 class="ui header">
+            [[*pagetitle]]
+            <span class="sub header">[[*longtitle]]</span>
+        </h1>
+    </div>
+    <div class="seven wide right aligned bottom aligned column">
+        <a class="ui legend icon button" title="Show legend">
+            <i class="info icon"></i>
+        </a>
+        <div class="ui basic icon buttons">
+            <a href="[[~[[*id]]]]/kanban/" class="ui button" title="Kanban view">
+                <i class="trello icon"></i>
+            </a>
+            <a href="[[~[[*id]]]]/backstop/" class="ui button" title="Visual regression tests">
+                <i class="eye icon"></i>
+            </a>
+        </div>
     </div>
 </div>
 
 <table class="ui very compact sortable celled status table">
     <thead>
     <tr>
-        <th>[[%romanesco.status.table_status_indicator]]</th>
+        <th>[[%romanesco.status.table_indicator]]</th>
         <th>[[%romanesco.status.table_id]]</th>
-        <th>[[-%romanesco.status.table_resource]]Page</th>
-        <th>[[-%romanesco.status.table_improvements]]Improvements</th>
-        <th>[[-%romanesco.status.table_help]]Issues</th>
-        <th>[[-%romanesco.status.table_assigned_user]]Owner</th>
-        <th>[[-%romanesco.status.table_notes]]Due date</th>
+        <th>[[%romanesco.status.table_resource]]</th>
+        <th>[[%romanesco.status.table_improvements]]</th>
+        <th>[[%romanesco.status.table_issues]]</th>
+        [[*id:SeoTabIndexation:isnot=`[[*id]]`:then=`
+        <th>[[%romanesco.status.table_indexation]]</th>
+        `]]
+        <th>[[%romanesco.status.table_owner]]</th>
+        <th>[[%romanesco.status.table_date_due]]</th>
     </tr>
     </thead>
     <tbody>
@@ -117,4 +73,41 @@ properties: 'a:0:{}'
     </tbody>
 </table>
 
-[[-statusGridLoadAssets]]
+<div class="ui small legend modal">
+    <div class="header">
+        [[%romanesco.status.legend]]
+    </div>
+
+    <div class="content">
+        <div class="ui two column grid">
+            <div class="ui column">
+                <div class="ui small header">[[%romanesco.status.legend_progress]]</div>
+                <table class="ui small very compact basic table">
+                    <tbody>
+                    [[migxLoopCollection?
+                        &packageName=`romanescobackyard`
+                        &classname=`rmOption`
+                        &where=`{"key":"status_progress"}`
+                        &sortConfig=`[{"sortby":"position","sortdir":"ASC"}]`
+                        &tpl=`statusIndicatorLegendTR`
+                    ]]
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui column">
+                <div class="ui small header">[[%romanesco.status.legend_health]]</div>
+                <table class="ui small very compact basic table">
+                    <tbody>
+                    [[migxLoopCollection?
+                        &packageName=`romanescobackyard`
+                        &classname=`rmOption`
+                        &where=`{"key":"status_health"}`
+                        &sortConfig=`[{"sortby":"position","sortdir":"ASC"}]`
+                        &tpl=`statusIndicatorLegendTR`
+                    ]]
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

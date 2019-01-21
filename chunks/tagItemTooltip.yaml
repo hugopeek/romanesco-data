@@ -1,0 +1,14 @@
+id: 428
+name: tagItemTooltip
+description: ''
+category: a_taxonomy
+properties: 'a:0:{}'
+
+-----
+
+<a class="ui label with tooltip onclick"
+   data-title="[[+title:htmlent]]"
+   data-content="[[+content:stripTags:htmlent]]"
+   data-variation="">
+    [[+tag:empty=`[[+tags:renderInputOption]]`]]
+</a>

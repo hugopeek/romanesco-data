@@ -7,23 +7,11 @@ properties: 'a:0:{}'
 -----
 
 <div class="column [[+alias]]">
-    [[If?
-        &subject=`[[+alias]]`
-        &operator=`is`
-        &operand=`[[*status_progress]]`
-        &then=`
-            [[!pdoResources?
-                &parents=`17`
-                &tvFilters=`content_priority==[[+priority]]`
-                &tvPrefix=``
-                &tpl=`kanbanGridCard`
-            ]]`
-        &else=`
-            [[!pdoResources?
-                &parents=`17`
-                &tvFilters=`status_progress==[[+alias]],content_priority==[[+priority]]`
-                &tvPrefix=``
-                &tpl=`kanbanGridCard`
-            ]]`
+    [[getResources?
+        &parents=`0`
+        &tvFilters=`status_progress==[[+alias]],content_priority==[[+priority]]`
+        &includeTVs=`1`
+        &tvPrefix=``
+        &tpl=`kanbanGridCard`
     ]]
 </div>

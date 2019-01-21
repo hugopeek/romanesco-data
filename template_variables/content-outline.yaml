@@ -5,7 +5,7 @@ caption: Outline
 description: 'Give an overview of the main page structure. Like a table of contents, but feel free to add ideas in between.'
 category: Purpose
 elements: ''
-rank: 3
+rank: 6
 default_text: ''
 properties: 'a:0:{}'
 input_properties: 'a:4:{s:9:"advAttrib";s:1:"1";s:16:"buttonFullScreen";s:1:"1";s:7:"buttons";s:101:"formatting,|,bold,italic,deleted,|,unorderedlist,orderedlist,|,link,image,file,|,table,horizontalrule";s:9:"minHeight";i:210;}'

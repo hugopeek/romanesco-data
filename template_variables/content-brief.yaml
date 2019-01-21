@@ -5,7 +5,7 @@ caption: Brief
 description: 'Try to turn the content purpose into a short summary. What are the main take-aways? Why are they important? And why should people listen to you? Add links to examples if you want.'
 category: Purpose
 elements: ''
-rank: 2
+rank: 5
 default_text: ''
 properties: 'a:0:{}'
 input_properties: 'a:4:{s:9:"advAttrib";s:1:"1";s:16:"buttonFullScreen";s:1:"1";s:7:"buttons";s:101:"formatting,|,bold,italic,deleted,|,unorderedlist,orderedlist,|,link,image,file,|,table,horizontalrule";s:9:"minHeight";i:130;}'

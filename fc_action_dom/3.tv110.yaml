@@ -1,4 +1,4 @@
-id: 234
+id: 312
 set: 3
 action: resource/create
 name: tv110
@@ -8,4 +8,4 @@ rule: tvMove
 value: modx-purpose
 constraint_class: modResource
 for_parent: 1
-rank: 41
+rank: 51

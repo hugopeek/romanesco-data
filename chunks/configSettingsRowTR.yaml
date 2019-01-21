@@ -1,0 +1,16 @@
+id: 432
+name: configSettingsRowTR
+description: 'Table row for configuration settings table.'
+category: a_hub
+properties: 'a:0:{}'
+
+-----
+
+<tr class="top aligned">
+    <td>
+        <div class="key">[[+key]]</div>
+        <div class="meta"><em>[[+value:replace=`,==, `]]</em></div>
+    </td>
+    <td>[[+label]]</td>
+    <td>[[+description]]</td>
+</tr>

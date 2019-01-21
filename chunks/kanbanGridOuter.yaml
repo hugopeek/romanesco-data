@@ -7,30 +7,49 @@ properties: 'a:0:{}'
 -----
 
 <svg class="hidden">
-    [[!svgSanitize? &file=`assets/img/icons/status/not-done.svg` &title=`[[%romanesco.status.not_done]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/in-progress.svg` &title=`[[%romanesco.status.in_progress]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/almost-done.svg` &title=`[[%romanesco.status.almost_done]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/done.svg` &title=`[[%romanesco.status.done]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/successful.svg` &title=`[[%romanesco.status.successful]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/problematic.svg` &title=`[[%romanesco.status.problematic]]` &toSymbol=`1`]]
-    [[!svgSanitize? &file=`assets/img/icons/status/expired.svg` &title=`[[%romanesco.status.expired]]` &toSymbol=`1`]]
-</svg>
-
-<div class="ui top attached steps">
     [[migxLoopCollection?
         &packageName=`romanescobackyard`
         &classname=`rmOption`
         &where=`{"key":"status_progress"}`
-        &tpl=`@CODE:
-        <div class="step">
-            <div class="content">
-                <div class="title">[[+name]]</div>
-                <div class="description">[[+description]]</div>
-            </div>
-        </div>`
+        &tpl=`statusIndicatorSVGSymbol`
     ]]
+    [[migxLoopCollection?
+        &packageName=`romanescobackyard`
+        &classname=`rmOption`
+        &where=`{"key":"status_health"}`
+        &tpl=`statusIndicatorSVGSymbol`
+    ]]
+</svg>
+
+<div class="ui grid">
+    <div class="nine wide column">
+        <h1 class="ui header">
+            [[*pagetitle]]
+            <span class="sub header">[[*longtitle]]</span>
+        </h1>
+    </div>
+    <div class="seven wide right aligned bottom aligned column">
+        <div class="ui basic icon buttons">
+            <a href="[[~[[++site_start]]]]status/" class="ui button" title="Status grid">
+                <i class="list icon"></i>
+            </a>
+            <a href="[[~[[++site_start]]]]backstop/" class="ui button" title="Visual regression tests">
+                <i class="eye icon"></i>
+            </a>
+        </div>
+    </div>
 </div>
-<div class="ui stackable equal width celled grid">
+
+<div class="ui hidden divider"></div>
+
+[[migxLoopCollection?
+    &packageName=`romanescobackyard`
+    &classname=`rmOption`
+    &where=`{"key":"status_progress"}`
+    &wrapperTpl=`kanbanGridStepsWrapper`
+    &tpl=`kanbanGridStepsRow`
+]]
+<div class="ui stackable equal width celled kanban grid">
     [[migxLoopCollection?
         &packageName=`romanescobackyard`
         &classname=`rmOption`

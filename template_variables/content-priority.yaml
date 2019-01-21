@@ -5,7 +5,7 @@ caption: Priority
 description: 'Zoom out a little and ask yourself: do we really need this page? And do we need it now? If it turns out to be neither urgent nor important, consider deleting it again.'
 category: Purpose
 elements: '@CHUNK tvSelectInputOption@ContentPriority'
-rank: 30
+rank: 2
 display: delim
 default_text: ''
 properties: 'a:0:{}'

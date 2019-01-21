@@ -1,4 +1,4 @@
-id: 104
+id: 292
 set: 5
 action: resource/update
 name: tv22
@@ -7,4 +7,4 @@ container: modx-panel-resource
 rule: tvMove
 value: modx-backgrounds
 constraint_class: modResource
-rank: 20
+rank: 30
