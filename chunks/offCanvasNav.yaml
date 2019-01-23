@@ -6,7 +6,7 @@ properties: 'a:0:{}'
 
 -----
 
-<nav id="off-canvas" class="ui right inverted vertical accordion menu sidebar">
+<nav id="off-canvas" class="ui right inverted vertical accordion wide sidebar menu">
     <div class="item home">
         <a href="[[~[[++site_start]]]]" class="ui image brand badge">
             [[%romanesco.menu.brand]]
