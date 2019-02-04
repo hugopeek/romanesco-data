@@ -13,6 +13,9 @@ properties: 'a:0:{}'
     &field=`[[++formblocks.cb_input_file_id:empty=`-1`]]`
     &fieldSettingFilter=`upload_limit!=1`
 ]]
+[[cbGetFieldContent:notempty=`1`:default=`0`:toPlaceholder=`math_question`?
+    &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
+]]
 
 [[!FormIt?
     &preHooks=`
@@ -24,6 +27,7 @@ properties: 'a:0:{}'
         spam,
         [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
         [[++formblocks.antispam:notempty=`[[++formblocks.antispam]],`]]
+        [[+math_question:isnot=`0`:then=`math,`]]
         [[++formblocks.save_form:eq=`1`:then=`FormItSaveForm,`]]
         [[*fb_hooks:notempty=`[[*fb_hooks]],`]]
         email,
@@ -45,6 +49,10 @@ properties: 'a:0:{}'
         &fieldSettingFilter=`upload_limit!=1`
         &tpl=`fbFileUploadProperties`
     ]]
+    [[cbGetFieldContent?
+        &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
+        &tpl=`fbMathQuestionProperties`
+    ]]
 
     [[*fb_autoresponder_toggle:eq=`1`:then=`
     &fiarTpl=`fbAutoresponder`
@@ -55,12 +63,13 @@ properties: 'a:0:{}'
     &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
     `]]
 
-    [[-&customValidators=`requiredIf,requiredIfNot`]]
+    &customValidators=`[[$fbCustomValidators]]`
     &validate=`
         [[!fbValidateProcessJSON? &json=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`]]
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
-        [[$fbValidateCustomFields:notempty=`[[$fbValidateCustomFields]]`]]
+        [[+math_question:isnot=`0`:then=`fb[[*id]]-math:required,`]]
+        [[$fbValidateCustomFields]],
         workemail:blank`
     &errTpl=`<span class="help error">[[+error]]</span>`
     &placeholderPrefix=`fb[[*id]].`
@@ -79,6 +88,7 @@ properties: 'a:0:{}'
 `]]
 
 <form id="form-[[+title]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id]]]]" method="post" enctype="multipart/form-data">
+    <label for="workemail" class="hidden">If you're human, keep this field blank!</label>
     <input type="text" name="workemail" class="hidden" value="">
 
     <div class="ui [[+segment_type]]">

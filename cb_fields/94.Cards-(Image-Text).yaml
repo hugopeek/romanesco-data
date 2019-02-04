@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Cards (Image + Text)'
 description: ''
-sortorder: 24
+sortorder: 23
 category: 4
 icon: template_03
 template: "[[$cardsRowInnerWrapper?\n    &box_type=`[[+box_type]]`\n    &link=`[[+link]]`\n    &image=`[[+image]]`\n    &heading=`[[+heading]]`\n    &heading_level=`[[+heading_level]]`\n    &subtitle=`[[+subtitle]]`\n    &content=`[[+content]]`\n    &button_text=`[[+button_text]]`\n    &emphasize=`[[+emphasize]]`\n]]"

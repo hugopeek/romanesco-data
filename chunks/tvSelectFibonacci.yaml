@@ -1,0 +1,13 @@
+id: 442
+name: tvSelectFibonacci
+description: 'Pick a number from the Fibonacci sequence. Useful for example when implementing an Agile / Scrum kind of point system.'
+category: a_select
+properties: 'a:0:{}'
+
+-----
+
+[[FibonacciSequence?
+    &limit=`12`
+    &start=`0`
+    &delimiter=`||`
+]]

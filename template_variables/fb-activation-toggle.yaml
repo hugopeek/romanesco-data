@@ -4,7 +4,7 @@ name: fb_activation_toggle
 caption: Activation
 description: 'Whether or not new users need to activate their account via email. IMPORTANT! For the activation process to know which address to use, the Input (Email) field needs to be present in the form.'
 category: Registration
-elements: 'After email confirmation==1||Immediately==0'
+elements: 'After email confirmation==1||Immediately (Beware of spam!)==0'
 rank: 1
 properties: 'a:0:{}'
 input_properties: null

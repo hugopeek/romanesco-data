@@ -3,11 +3,11 @@ parent_properties: ''
 input: chunk
 name: Form
 description: 'Add a form here. You can build your own forms with FormBlocks, under Content > Global Content > FormBlocks.'
-sortorder: 29
+sortorder: 28
 category: 3
 icon: form
 template: '[[+value]]'
 properties: '{"chunk":"32","custom_preview":"<p><em>Add a form here. You can build your own forms with FormBlocks, under Global Content.<\/em><\/p>"}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"--- Select a form ---=\n[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"},{"reference":"form_layout","title":"Label position","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFormLabelPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"segment_type","title":"Segment type","fieldtype":"select","default_value":"segments","fieldoptions":"[[$cbFormSegmentType]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"padding","title":"Extra padding","fieldtype":"select","default_value":"padded","fieldoptions":"[[$cbFieldPadding]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""}]'
+settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"--- Select a form ---=\n[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"},{"reference":"form_size","title":"Field size","fieldtype":"select","default_value":"large","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"form_layout","title":"Label position","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFormLabelPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"segment_type","title":"Segment type","fieldtype":"select","default_value":"segments","fieldoptions":"[[$cbFormSegmentType]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"padding","title":"Extra padding","fieldtype":"select","default_value":"padded","fieldoptions":"[[$cbFieldPadding]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""}]'

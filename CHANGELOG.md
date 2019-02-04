@@ -1,5 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.5.1
+Released on ...
+
+New features:
+- Add TV input option for selecting Fibonacci numbers
+- Add math question anti-spam option to forms
+
+Fixes and improvements:
+- Rearrange snippet folders and import a few new ones from projects
+- Fix Overview headings displayed as regular links being too large
+- Fix Registration template not validating password correctly
+- Fix Registration template not containing FormBlocks CBs
+- Exclude resources with unchecked "Use alias in URI" from breadcrumbs
+
 ## v1.5.0
 Released on January 21, 2019
 

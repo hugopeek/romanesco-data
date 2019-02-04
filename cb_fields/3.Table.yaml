@@ -3,7 +3,7 @@ parent_properties: ''
 input: table
 name: Table
 description: ''
-sortorder: 18
+sortorder: 17
 category: 4
 icon: table
 icon_type: ''
