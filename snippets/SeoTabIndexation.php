@@ -22,14 +22,16 @@ content: "/**\n * SeoTabIndexation\n *\n * If SeoTab (StercSEO) is installed, th
 
 $resourceID = $modx->getOption('resource', $scriptProperties, $input);
 $resource = $modx->getObject('modResource', $resourceID);
+$seoTab = $modx->getObject('modPlugin', array('name'=>'StercSEO','disabled'=>0));
 //$resource =& $modx->event->params['resource'];
+
+// First, check if SEOTab plugin is installed, and active
+if (!is_object($seoTab)) {
+    return '';
+}
 
 if (is_object($resource)) {
     $properties = $resource->getProperties('stercseo');
-}
-
-if (!$properties) {
-    return '';
 }
 
 if ($properties['index'] == 1) {

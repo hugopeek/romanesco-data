@@ -14,6 +14,7 @@ switch ($modx->event->name) {
     // Load custom CSS styles
     case 'OnDocFormRender':
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/contentblocks.css');
+        $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/semantic.css'); # for CB chunk previews
         break;
 
     // Load CSS for manager on different event
