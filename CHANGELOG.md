@@ -1,11 +1,12 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.5.1
-Released on ...
+Released on February 11, 2019
 
 New features:
 - Add TV input option for selecting Fibonacci numbers
 - Add math question anti-spam option to forms
+- Load Semantic UI styles inside CB preview containers
 
 Fixes and improvements:
 - Rearrange snippet folders and import a few new ones from projects
@@ -13,6 +14,8 @@ Fixes and improvements:
 - Fix Registration template not validating password correctly
 - Fix Registration template not containing FormBlocks CBs
 - Exclude resources with unchecked "Use alias in URI" from breadcrumbs
+- Make icons work inside CB chunk previews
+- Make check for detecting SeoTab plugin watertight
 
 ## v1.5.0
 Released on January 21, 2019
