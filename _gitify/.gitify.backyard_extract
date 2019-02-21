@@ -1,0 +1,30 @@
+# Gitify configuration for content inside the Backyard area.
+# This content is extracted from the Nursery installation (without ID!!).
+
+data_directory: _backyard/
+backup_directory: _backup/_backyard/
+
+data:
+    content:
+        type: content
+        exclude_keys:
+            - id
+            - editedby
+            - editedon
+        truncate_on_force:
+            - modTemplateVarResource
+
+        # Only include resources built by Romanesco Backyard package
+        where:
+            - 'context_key:IN':
+                - 'hub'
+            - 'OR:alias:IN':
+                - 'assets/css/theme'
+                - 'assets/css/backgrounds'
+                - 'contact*'
+                - 'registration*'
+            - 'OR:uri:IN':
+                - 'footers'
+                - 'forms'
+                - 'call-to-actions'
+                - 'backgrounds.css'
