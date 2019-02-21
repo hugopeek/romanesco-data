@@ -8,6 +8,7 @@ data:
     content:
         type: content
         exclude_keys:
+            - id
             - editedby
             - editedon
         truncate_on_force:
