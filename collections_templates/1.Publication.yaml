@@ -9,6 +9,7 @@ child_template: 5
 resource_type_selection: 0
 tab_label: collections.publication.children
 button_label: collections.publication.children.create
+context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'
 back_to_collection_label: collections.publication.children.back_to_collection_label
 child_hide_from_menu: null
 child_published: null
