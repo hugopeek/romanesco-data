@@ -9,6 +9,6 @@ elements: ''
 rank: 1
 default_text: ''
 properties: 'a:0:{}'
-input_properties: 'a:1:{s:7:"configs";s:24:"global_background_images";}'
+input_properties: 'a:1:{s:7:"configs";s:42:"global_background_images:romanescobackyard";}'
 output_properties: null
 content: ''
