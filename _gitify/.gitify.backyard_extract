@@ -1,5 +1,5 @@
 # Gitify configuration for content inside the Backyard area.
-# This content is extracted from the Nursery installation (without ID!!).
+# This content is extracted from the Nursery installation.
 
 data_directory: _backyard/
 backup_directory: _backup/_backyard/
@@ -8,7 +8,6 @@ data:
     content:
         type: content
         exclude_keys:
-            - id
             - editedby
             - editedon
         truncate_on_force:
