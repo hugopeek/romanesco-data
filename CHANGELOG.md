@@ -1,5 +1,16 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.0
+Released on ...
+
+New features:
+- Backyard resources are now part of this repository
+
+Fixes and improvements:
+- Prevent MIGXdb fields with default value of NULL from being set to 0
+- Fix binary download types (such as PDFs) not having content
+- Fix Global Backgrounds TV not loading its MIGX config from file
+
 ## v1.5.1
 Released on February 11, 2019
 
