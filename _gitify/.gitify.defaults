@@ -1,4 +1,4 @@
-## Gitify configuration for data that needs to be set only once on installation.
+# Gitify configuration for data that needs to be set only once on installation.
 
 data_directory: _defaults/
 

@@ -1,7 +1,11 @@
-# Gitify configuration for creating new Backyard resources.
-# NB! These resources have a fixed ID, for proper nesting in fresh installs.
+# Gitify configuration for updating Backyard resources.
+#
+# NB! These resources have an ID of 1 and no parents. This triggers the build
+#  process to create new objects with correctly auto-incremented IDs.
+#
+# Only build this config using the --no-cleanup flag.
 
-data_directory: _romanesco/_backyard/build/
+data_directory: _romanesco/_backyard/update/
 backup_directory: _backup/_backyard/
 
 data:

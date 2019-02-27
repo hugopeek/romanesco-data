@@ -1,0 +1,51 @@
+id: 1
+pagetitle: 'Project Dashboard'
+alias: dashboard
+published: 1
+introtext: ''
+template: 11
+menuindex: 1
+createdby: 1
+createdon: 1547636581
+publishedon: 1547636581
+publishedby: 1
+menutitle: Dashboard
+context_key: hub
+uri: dashboard
+properties: '{"contentblocks":{"content":"[{\"layout\":6,\"content\":{\"col_1\":[{\"value\":\"Project timeline<br>\",\"level\":\"h3\",\"field\":1,\"settings\":{}},{\"value\":\"[[$projectHubOuter]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}],\"col_2\":[{\"value\":\"Latest pattern library additions<br>\",\"level\":\"h3\",\"field\":1,\"settings\":[]},{\"value\":\"<p>\\n[[filterLine?\\n    &file=`[[++core_path]]components\/romanescobackyard\/docs\/changelog.txt`\\n    &searchString=`Add `\\n]]\\n<\/p>\\n<p><a href=\\\"https:\/\/github.com\/hugopeek\/romanesco-patterns\/blob\/master\/core\/components\/romanesco\/docs\/changelog.txt\\\" target=\\\"_blank\\\">See full changelog<\/a><\/p>\\n\",\"lang\":\"html\",\"field\":14,\"settings\":{\"render_tag\":\"ignore\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"Project timeline<br>","level":"h3","field":1,"settings":[]},{"value":"[[$projectHubOuter]]","lang":"html","field":14,"settings":[]},{"value":"Latest pattern library additions<br>","level":"h3","field":1,"settings":[]},{"value":"<p>\n[[filterLine?\n    &file=`[[++core_path]]components\/romanescobackyard\/docs\/changelog.txt`\n    &searchString=`Add `\n]]\n<\/p>\n<p><a href=\"https:\/\/github.com\/hugopeek\/romanesco-patterns\/blob\/master\/core\/components\/romanesco\/docs\/changelog.txt\" target=\"_blank\">See full changelog<\/a><\/p>\n","lang":"html","field":14,"settings":{"render_tag":"ignore"}}],"fieldcounts":{"1":2,"14":2},"_isContentBlocks":true}}'
+tvs:
+    project_hub_timeline: ''
+
+-----
+
+<div  class="ui vertical stripe segment white">
+    <div class="ui  container">
+        <div class="ui two column stackable doubling relaxed   grid">
+            <div class="row">
+                <div class="column">[[$headingBasic?
+    &value=`Project timeline<br>`
+    &level=`h3`
+    &alignment=``
+    &unique_idx=`21`
+]]
+
+[[$projectHubOuter]]</div>
+                <div class="column">[[$headingBasic?
+    &value=`Latest pattern library additions<br>`
+    &level=`h3`
+    &alignment=``
+    &unique_idx=`23`
+]]
+
+<p>
+[[filterLine?
+    &file=`[[++core_path]]components/romanescobackyard/docs/changelog.txt`
+    &searchString=`Add `
+]]
+</p>
+<p><a href="https://github.com/hugopeek/romanesco-patterns/blob/master/core/components/romanesco/docs/changelog.txt" target="_blank">See full changelog</a></p>
+</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-## Gitify configuration for exporting ContentBlocks edits only.
+# Gitify configuration for exporting ContentBlocks edits only.
 
 data_directory: _romanesco/
 
