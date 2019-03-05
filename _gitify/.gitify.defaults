@@ -21,6 +21,7 @@ data:
                 - 'error_page'
                 - 'formit.form_encryptkey'
             - 'AND:key:NOT LIKE': 'mail_%'
+            - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
             - 'AND:key:NOT LIKE': '%.assets_path'
             - 'AND:key:NOT LIKE': '%.assets_url'
