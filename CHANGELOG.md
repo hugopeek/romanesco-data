@@ -8,8 +8,20 @@ New features:
 
 Fixes and improvements:
 - Prevent MIGXdb fields with default value of NULL from being set to 0
+- Allow otherwise duplicate TV category names to be prefixed with _ in projects
+- Hide some CB elements that should only be used by admins
+- Add option to embed Google Analytics with gtag.js
+- Add option to embed Matomo Analytics
+- Fix not being able to set image type in Publication and Portfolio overviews
 - Fix binary download types (such as PDFs) not having content
 - Fix Global Backgrounds TV not loading its MIGX config from file
+- Use nvm-exec to run Gulp from PHP (prevents gulp not found errors)
+- Add fullname parameter to Registration template
+- Point to correct math validator in Registration template
+- Add empty error message div to forms (for SUI front-end validation)
+- Allow recipient email TV to be empty in forms (i.e. when using a custom hook)
+- Fix inheritance of form label layout settings
+- Add label to honeypot fields
 
 ## v1.5.1
 Released on February 11, 2019
