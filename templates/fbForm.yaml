@@ -30,13 +30,13 @@ properties: 'a:0:{}'
         [[+math_question:isnot=`0`:then=`math,`]]
         [[++formblocks.save_form:eq=`1`:then=`FormItSaveForm,`]]
         [[*fb_hooks:notempty=`[[*fb_hooks]],`]]
-        email,
+        [[*fb_email_to:notempty=`email,`]]
         [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
         redirect
     `
 
     &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
-    &emailTo=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`]]`
+    &emailTo=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]`
     &emailCC=`[[*fb_email_cc]]`
     &emailBCC=`[[*fb_email_bcc]]`
     &emailFrom=`[[*fb_email_from:empty=`[[++emailsender]]`]]`
@@ -88,16 +88,20 @@ properties: 'a:0:{}'
 `]]
 
 <form id="form-[[+title]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id]]]]" method="post" enctype="multipart/form-data">
-    <label for="workemail" class="hidden">If you're human, keep this field blank!</label>
-    <input type="text" name="workemail" class="hidden" value="">
-
     <div class="ui [[+segment_type]]">
+
         [[*content]]
+
+        <div class="ui hidden field segment">
+            <label for="workemail">[[%formblocks.form.honeypot_field]]</label>
+            <input type="text" name="workemail" value="">
+        </div>
 
         [[*content:containsnot=`type="submit"`:then=`
         <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]]">
             [[[[++formblocks.antispam:contains=`recaptchav2`:then=`!recaptchav2_render`]]]]
             [[!+fb[[*id]].error.recaptchav2_error:replace=`span==div`]]
+            <div class="ui error message"></div>
             <input class="[[+form_size]] primary ui button" type="submit" name="submit-[[+title]]" value="[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]">
         </div>
         `]]
