@@ -8,6 +8,6 @@ category: 6
 icon: code
 template: '[[jsonToHTML? &json=`[[+value]]`]]'
 properties: '{"available_languages":"json=JSON","default_language":"json","entities":"0"}'
-availability: '[]'
+availability: '[{"field":"usergroup","value":"Administrator"}]'
 layouts: ''
 settings: '[]'
