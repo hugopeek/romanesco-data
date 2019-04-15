@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.6.0
-Released on ...
+Released on April 15, 2019
 
 New features:
 - Backyard resources are now part of this repository
@@ -22,6 +22,7 @@ Fixes and improvements:
 - Allow recipient email TV to be empty in forms (i.e. when using a custom hook)
 - Fix inheritance of form label layout settings
 - Add label to honeypot fields
+- Only load Youtube videos after play button is clicked
 
 ## v1.5.1
 Released on February 11, 2019
