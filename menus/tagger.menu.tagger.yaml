@@ -1,0 +1,5 @@
+text: tagger.menu.tagger
+parent: components
+action: '6'
+description: tagger.menu.tagger_desc
+menuindex: 3

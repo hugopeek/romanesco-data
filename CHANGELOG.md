@@ -23,6 +23,7 @@ Fixes and improvements:
 - Fix inheritance of form label layout settings
 - Add label to honeypot fields
 - Only load Youtube videos after play button is clicked
+- Include all manager top menu items in extract
 
 ## v1.5.1
 Released on February 11, 2019

@@ -1,0 +1,7 @@
+text: 'Tool Shed'
+parent: Manage
+action: index
+description: 'Settings and information to help you manager your project'
+menuindex: 2
+params: '&configs=global_input_option_groups:romanescobackyard||status_issues:romanescobackyard||status_improvements:romanescobackyard||content_related:romanescobackyard||content_repurpose:romanescobackyard'
+namespace: migx

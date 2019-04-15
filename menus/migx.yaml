@@ -1,0 +1,6 @@
+text: migx
+parent: components
+action: index
+menuindex: 6
+params: '&configs=packagemanager||migxconfigs||setup'
+namespace: migx

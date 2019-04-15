@@ -1,0 +1,7 @@
+text: formit
+parent: manage
+action: home
+description: formit.desc
+menuindex: 5
+permissions: formit
+namespace: formit
