@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.1
+Released on ...
+
+Fixes and improvements:
+- Include custom lexicon entries in extract
+
 ## v1.6.0
 Released on April 15, 2019
 

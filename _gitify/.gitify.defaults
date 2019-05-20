@@ -39,7 +39,6 @@ data:
     cg_settings:
         class: cgSetting
         primary: key
-
         where:
             - 'id:NOT LIKE': '______'
 
@@ -54,10 +53,20 @@ data:
             'name:IN':
                 - 'romanesco'
 
+    # Include Lexicons, so default keys can be adjusted and centrally managed
+    lexicon_entries:
+        class: modLexiconEntry
+        primary:
+            - id
+            - name
+        exclude_keys:
+            - editedon
+        where:
+            - 'id:NOT LIKE': '______'
+
     # Adjust content types, such as removing .html extensions of all pages
     content_types:
         class: modContentType
         primary: name
-
         where:
             - 'id:NOT LIKE': '______'

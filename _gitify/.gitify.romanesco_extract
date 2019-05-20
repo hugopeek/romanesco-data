@@ -130,6 +130,13 @@ data:
         exclude_keys:
             - created_at
             - updated_at
+    lexicon_entries:
+        class: modLexiconEntry
+        primary:
+            - id
+            - name
+        exclude_keys:
+            - editedon
     media_sources:
         class: modMediaSource
         primary: name
