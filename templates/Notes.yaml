@@ -1,7 +1,8 @@
-id: 22
-templatename: HeaderVerticalToC
+id: 23
+templatename: Notes
 description: ''
-category: t_basic
+category: t_information
+icon: icon-sticky-note
 properties: 'a:0:{}'
 
 -----
@@ -16,7 +17,7 @@ properties: 'a:0:{}'
     &else=`$headTheme`
 ]]]]
 
-<body id="[[*alias]]" class="header-vertical toc">
+<body id="[[*alias]]" class="header-vertical notes">
 
 <div class="pusher">
     [[$headerVertical?
@@ -27,23 +28,15 @@ properties: 'a:0:{}'
 
     <main id="main">
         [[[[If?
-            &subject=`[[$toolbarBasicTheme]]`
+            &subject=`[[$toolbarKnowledgeBaseTheme]]`
             &operator=`isnull`
-            &then=`$toolbarBasic`
-            &else=`$toolbarBasicTheme`
+            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``
+            &else=`$toolbarKnowledgeBaseTheme`
         ]]]]
 
-        <div id="content" class="ui relaxed grid container">
-            <article class="sixteen wide mobile twelve wide computer column">
-                [[*content]]
-            </article>
-
-            <aside id="sidebar" class="four wide computer column tablet or lower hidden">
-                [[$tocNavVertical?
-                    &sticky=`1`
-                ]]
-            </aside>
-        </div>
+        <article id="content">
+            [[*content]]
+        </article>
 
         [[[[If?
             &subject=`[[$footerTheme]]`

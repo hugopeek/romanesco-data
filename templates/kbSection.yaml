@@ -1,7 +1,7 @@
 id: 17
 templatename: kbSection
-description: ''
-category: t_information
+description: 'DEPRECATED. Knowledge base is implemented now as Notes (without Tickets integration).'
+category: t_disabled
 icon: icon-book
 properties: 'a:0:{}'
 

@@ -1,0 +1,9 @@
+id: 446
+name: commentScriptCommento
+description: ''
+category: m_feedback
+properties: 'a:0:{}'
+
+-----
+
+<script defer src="[[++romanesco.commento_url]]/js/commento.js"></script>

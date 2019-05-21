@@ -1,7 +1,8 @@
-id: 22
-templatename: HeaderVerticalToC
+id: 24
+templatename: NoteContentBlocks
 description: ''
-category: t_basic
+category: t_information
+icon: icon-th-large
 properties: 'a:0:{}'
 
 -----
@@ -16,7 +17,7 @@ properties: 'a:0:{}'
     &else=`$headTheme`
 ]]]]
 
-<body id="[[*alias]]" class="header-vertical toc">
+<body id="[[*alias]]" class="header-vertical note toc">
 
 <div class="pusher">
     [[$headerVertical?
@@ -27,10 +28,10 @@ properties: 'a:0:{}'
 
     <main id="main">
         [[[[If?
-            &subject=`[[$toolbarBasicTheme]]`
+            &subject=`[[$toolbarKnowledgeBaseTheme]]`
             &operator=`isnull`
-            &then=`$toolbarBasic`
-            &else=`$toolbarBasicTheme`
+            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``
+            &else=`$toolbarKnowledgeBaseTheme`
         ]]]]
 
         <div id="content" class="ui relaxed grid container">
@@ -44,6 +45,17 @@ properties: 'a:0:{}'
                 ]]
             </aside>
         </div>
+
+        [[*comments_toggle:eq=`1`:then=`
+        <section id="comments" class="ui vertical stripe segment secondary">
+            <h2 class="ui big header">[[%romanesco.article.comments]]</h2>
+            <div class="ui relaxed grid container">
+                <div class="sixteen wide mobile twelve wide computer column">
+                    <div id="[[++romanesco.[[++comment_platform:lcase]]_div_id]]"></div>
+                </div>
+            </div>
+        </section>
+        `]]
 
         [[[[If?
             &subject=`[[$footerTheme]]`

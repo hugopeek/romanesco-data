@@ -1,6 +1,6 @@
 id: 389
 name: commentForm
-description: ''
+description: 'DEPRECATED. Part of Tickets commenting extra.'
 category: m_feedback
 properties: 'a:0:{}'
 

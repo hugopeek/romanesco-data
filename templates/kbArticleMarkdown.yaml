@@ -1,7 +1,7 @@
 id: 18
 templatename: kbArticleMarkdown
-description: ''
-category: t_information
+description: 'DEPRECATED. Knowledge base is implemented now as Notes (without Tickets integration).'
+category: t_disabled
 icon: icon-bookmark-o
 properties: 'a:0:{}'
 

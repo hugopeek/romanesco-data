@@ -1,6 +1,6 @@
 id: 388
 name: commentRowGuest
-description: ''
+description: 'DEPRECATED. Part of Tickets commenting extra.'
 category: m_feedback
 properties: 'a:0:{}'
 

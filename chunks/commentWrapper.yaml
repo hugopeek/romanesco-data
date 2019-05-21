@@ -1,6 +1,6 @@
 id: 386
 name: commentWrapper
-description: ''
+description: 'DEPRECATED. Part of Tickets commenting extra.'
 category: m_feedback
 properties: 'a:0:{}'
 

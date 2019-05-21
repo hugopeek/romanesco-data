@@ -59,9 +59,12 @@ properties: 'a:0:{}'
 
         </article>
 
-        <aside class="ui text container">
-            [[[[*comments_toggle:isnot=`0`:then=`$commentsDisqus`]]]]
-        </aside>
+        [[*comments_toggle:eq=`1`:then=`
+        <section id="comments" class="ui text container">
+            <h2 class="ui big header">[[%romanesco.article.comments]]</h2>
+            <div id="[[++romanesco.[[++comment_platform:lcase]]_div_id]]"></div>
+        </section>
+        `]]
 
         <div class="ui vertical stripe segment white">
             <div class="ui text container">

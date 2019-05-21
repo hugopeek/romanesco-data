@@ -8,6 +8,21 @@ properties: 'a:0:{}'
 
 [[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+layout_column]]`]]
 
+[[Switch:toPlaceholder=`sortdir_[[+layout_id]]_[[+unique_idx]]`?
+    &get=`[[+sortby]]_[[+sortdir]]`
+    &c1=`menuindex_0`     &do1=`ASC`
+    &c2=`publishedon_0`   &do2=`DESC`
+    &c3=`createdon_0`     &do3=`DESC`
+    &c4=`pagetitle_0`     &do4=`ASC`
+
+    &c5=`menuindex_1`     &do5=`DESC`
+    &c6=`publishedon_1`   &do6=`ASC`
+    &c7=`createdon_1`     &do7=`ASC`
+    &c8=`pagetitle_1`     &do8=`DESC`
+
+    &default=`DESC`
+]]
+
 <div class="ui [[+cols]] [[+[[+prefix]].grid_settings]] [[+padding]] nested overview [[+[[+prefix]].box_type]]">
     [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`getPage@SemanticUI` &else=`getCache`]]?
         &element=`getResources`
@@ -24,7 +39,7 @@ properties: 'a:0:{}'
         &tvPrefix=``
         &showHidden=`1`
         &sortby=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`FIELD(modResource.id, [[+resources]])` &else=`[[+sortby]]`]]`
-        &sortdir=`[[+sortby:is=`menuindex`:then=`ASC`:else=`DESC`]]`
+        &sortdir=`[[+sortdir_[[+layout_id]]_[[+unique_idx]]]]`
         &where=`[[!TaggerGetResourcesWhere]]`
 
         &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`
@@ -42,7 +57,3 @@ properties: 'a:0:{}'
 </div>
 
 [[[[+pagination:eq=`1`:then=`$paginationFluid`]]]]
-
-[[++disqus_shortname:notempty=`
-<script id="dsq-count-scr" src="//[[++disqus_shortname]].disqus.com/count.js" async></script>
-`]]
