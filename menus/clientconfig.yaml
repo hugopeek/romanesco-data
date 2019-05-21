@@ -2,5 +2,5 @@ text: clientconfig
 parent: manage
 action: home
 description: clientconfig.desc
-menuindex: 3
+menuindex: 4
 namespace: clientconfig

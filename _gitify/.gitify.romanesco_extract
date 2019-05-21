@@ -150,11 +150,11 @@ data:
     menus:
         class: modMenu
         primary: text
+        exclude_keys:
+            - action
         where:
-            'namespace:IN':
-                - 'patternlab'
-                - 'romanesco'
-                - 'romanescobackyard'
+            'text:NOT IN':
+                - 'gitpackagemanagement'
     namespaces:
         class: modNamespace
         primary: name
