@@ -1,7 +1,7 @@
 text: formit
-parent: manage
+parent: components
 action: home
 description: formit.desc
-menuindex: 5
+menuindex: 1
 permissions: formit
 namespace: formit
