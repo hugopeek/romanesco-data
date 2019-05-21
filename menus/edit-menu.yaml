@@ -1,6 +1,5 @@
 text: edit_menu
 parent: admin
-action: system/action
 description: edit_menu_desc
 menuindex: 4
 permissions: actions

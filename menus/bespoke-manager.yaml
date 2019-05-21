@@ -1,6 +1,5 @@
 text: bespoke_manager
 parent: admin
-action: security/forms
 description: bespoke_manager_desc
 menuindex: 1
 permissions: customize_forms

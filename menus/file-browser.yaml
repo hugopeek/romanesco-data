@@ -1,5 +1,4 @@
 text: file_browser
 parent: media
-action: media/browser
 description: file_browser_desc
 permissions: file_manager

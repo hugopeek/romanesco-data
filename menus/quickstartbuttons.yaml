@@ -1,6 +1,5 @@
 text: quickstartbuttons
 parent: components
-action: '9'
 description: quickstartbuttons.menu_desc
 icon: images/icons/plugin.gif
 menuindex: 4

@@ -1,6 +1,5 @@
 text: formit
 parent: components
-action: home
 description: formit.desc
 menuindex: 1
 permissions: formit

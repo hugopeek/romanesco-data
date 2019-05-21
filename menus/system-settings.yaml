@@ -1,5 +1,4 @@
 text: system_settings
 parent: admin
-action: system/settings
 description: system_settings_desc
 permissions: settings
