@@ -5,6 +5,7 @@ Released on ...
 
 Fixes and improvements:
 - Include custom lexicon entries in extract
+- [Gitify] Replace wildcard filter for project IDs with regex search
 
 ## v1.6.0
 Released on April 15, 2019
