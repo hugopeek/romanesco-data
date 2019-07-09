@@ -5,7 +5,7 @@ category: 8
 icon: layout_1
 icon_type: ''
 columns: '[{"reference":"main","width":"100"}]'
-template: "<div [[stripAsAlias:prepend=`id=\"`:append=`\"`? &input=`[[+title]]`]]\" class=\"ui vertical stripe segment [[+background]]\">\n    <div class=\"ui [[+container_type]] [[+alignment]] container\">\n        [[+main]]\n    </div>\n</div>\n"
+template: "<div [[stripAsAlias:prepend=`id=\"`:append=`\"`? &input=`[[+title]]`]] class=\"ui vertical stripe segment [[+background]]\">\n    <div class=\"ui [[+container_type]] [[+alignment]] container\">\n        [[+main]]\n    </div>\n</div>\n"
 availability: '[]'
 times_per_page: 0
 layout_only_nested: '0'
