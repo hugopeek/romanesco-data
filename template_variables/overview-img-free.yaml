@@ -1,0 +1,13 @@
+id: 126
+type: imageplus
+name: overview_img_free
+caption: 'Image (Free)'
+description: 'This image doesn''t have a fixed aspect ratio or any minimum dimensions. Use it as you see fit. Cropping is optional. NB! Be aware that images will probably have different sizes in overviews!'
+category: 'Overview - Image'
+elements: ''
+rank: 99
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:11:"allowAltTag";s:4:"true";}'
+output_properties: 'a:2:{s:14:"phpThumbParams";s:0:"";s:11:"outputChunk";s:0:"";}'
+content: ''

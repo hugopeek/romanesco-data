@@ -20,7 +20,7 @@ properties: 'a:0:{}'
         [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="[[++site_name]]">`?
             &tvname=`person_image`
             &docid=`[[+team_member_id]]`
-            &options=`w=150&h=150&zc=1`
+            &options=`w=150&h=150&q=[[++img_quality]]&zc=1`
             &type=`tpl`
             &tpl=`cbOverviewRowImg`
         ]]

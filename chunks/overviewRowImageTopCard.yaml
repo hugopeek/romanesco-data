@@ -10,31 +10,31 @@ properties: 'a:0:{}'
     [[ImagePlus:empty=`[[$cbOverviewRowImgFallback]]`?
         &tvname=`overview_img_[[+img_type:empty=`wide`]]`
         &docid=`[[+id]]`
-        &options=`w=[[++max_thumb_width:empty=`960`]]&zc=1`
+        &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`
         &type=`tpl`
         &tpl=`cbOverviewRowImg`
     ]]
 </figure>
 
 <div class="content">
-    [[If?
+    [[[[If?
         &subject=`[[+show_subtitle]]`
         &operator=`EQ`
         &operand=`1`
-        &then=`[[!$headingHierarchySubtitleLink]]`
-        &else=`[[!$headingHierarchyLink]]`
-    ]]
-    [[If?
+        &then=`!$headingHierarchySubtitleLink`
+        &else=`!$headingHierarchyLink`
+    ]]]]
+    [[[[If?
         &subject=`[[+show_introtext]]`
         &operator=`EQ`
         &operand=`1`
-        &then=`[[!$introtextDescription]]`
-    ]]
+        &then=`!$introtextDescription`
+    ]]]]
 </div>
 
-[[If?
+[[[[If?
     &subject=`[[+link_text]]`
     &operator=`isnot`
     &operand=`0`
-    &then=`[[!$buttonHrefOverview? &classes=`bottom attached`]]`
-]]
+    &then=`!$buttonHrefOverview? &classes=`bottom attached``
+]]]]

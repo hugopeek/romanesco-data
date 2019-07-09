@@ -7,5 +7,5 @@ properties: 'a:0:{}'
 -----
 
 <figure class="ui [[+classes]] image">
-    <img src="[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&zc=1`]]" alt="[[+alt:htmlent]]">
+    <img src="[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`]]" alt="[[+alt:htmlent]]">
 </figure>
