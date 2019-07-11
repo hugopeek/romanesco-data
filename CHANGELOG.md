@@ -4,8 +4,9 @@
 Released on ...
 
 Fixes and improvements:
+- Add access policy for developers
 - Include custom lexicon entries in extract
-- [Gitify] Replace wildcard filter for project IDs with regex search
+- Replace wildcard filter for project IDs with regex search in Gitify configs
 
 ## v1.6.0
 Released on April 15, 2019
