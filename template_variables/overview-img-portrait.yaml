@@ -9,6 +9,6 @@ elements: ''
 rank: 2
 default_text: ''
 properties: 'a:0:{}'
-input_properties: 'a:3:{s:11:"targetWidth";s:3:"200";s:11:"targetRatio";s:4:"0.75";s:11:"allowAltTag";s:4:"true";}'
+input_properties: 'a:4:{s:11:"targetWidth";s:3:"200";s:11:"targetRatio";s:4:"0.75";s:11:"allowAltTag";s:4:"true";s:12:"allowCredits";s:4:"true";}'
 output_properties: 'a:2:{s:14:"phpThumbParams";s:0:"";s:11:"outputChunk";s:0:"";}'
 content: ''

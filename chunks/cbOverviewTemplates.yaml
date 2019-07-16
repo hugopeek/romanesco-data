@@ -12,6 +12,7 @@ Title only (Link card)=overviewRowBasicLinkCard
 Title compact=overviewRowBasicCompact
 
 Image only=overviewRowImageBasic
+Image only (Overlay)=overviewRowImageBasicOverlay
 Image top=overviewRowImageTop
 Image top (Card)=overviewRowImageTopCard
 Image top (Link card)=overviewRowImageTopLinkCard

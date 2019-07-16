@@ -14,12 +14,22 @@ properties: 'a:0:{}'
         ]]
         <div class="ui small header">
             [[!$infoNamePerson]]
-            [[!$infoNameOrganization? &classes=`sub header`]]
-            [[!$infoRatingStars]]
+            [[[[If?
+                &subject=`[[+show_subtitle]]`
+                &operator=`EQ`
+                &operand=`1`
+                &then=`!$infoNameOrganization? &classes=`sub header``
+            ]]]]
+            [[[[If?
+                &subject=`[[+show_rating]]`
+                &operator=`EQ`
+                &operand=`1`
+                &then=`!$infoRatingStars`
+            ]]]]
         </div>
     </div>
 
-    <div class="twelve wide tablet ten wide computer eleven wide large screen eleven wide widescreen column">
+    <div class="twelve wide tablet ten wide computer eleven wide large screen eleven wide widescreen [[+alignment]] column">
         [[!$infoReviewSegment? &pointer=`left`]]
     </div>
 </div>

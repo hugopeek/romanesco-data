@@ -6,7 +6,7 @@ caption: 'Icon (SVG)'
 description: 'This can be pretty much anything, but please make sure the SVG has a square aspect ratio.'
 category: 'Overview - Icon'
 elements: ''
-rank: 10
+rank: 20
 default_text: ''
 properties: 'a:0:{}'
 input_properties: null
