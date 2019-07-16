@@ -1,9 +1,35 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.6.1
-Released on ...
+Released on July 16, 2019
+
+New features:
+- Allow credits to be added to an image or icon
+- Add Free variant to Overview images (no fixed aspect ratio)
+- Add Commento as commenting option
 
 Fixes and improvements:
+- Isolate content images and increase the distance from element below
+- Show top level parent in vertical sub navigation
+- Add alignment option to all Overview CBs
+- Add text_size, show_subtitle and show_rating options to Testimonial overviews
+- Make overviewRowImageBasic template more basic
+- Improve sorting in Overviews (reverse sort direction, alphabetic sort order)
+- Add basic icon chunk
+- Add tertiary button style (Fomantic UI feature)
+- Add option to place button on new line
+- Fix issue with rogue 0 output from getImageDimensions breaking SUI build
+- Fix quirk where TVs couldn't be rendered in layouts anymore
+- Prevent leaking of data from srcset placeholder in overview images
+- Allow theme additions to global backgrounds
+- Return after a setBoxType override was found
+- Lower minimum width for all image TVs
+- Apply img_quality configuration setting to all images
+- Only load certain assets (CSS/JS) when they are needed
+- Small caching optimizations in Overview templates
+- Rename and refactor Knowledge Base into Notes
+- Tickets integration is now deprecated
+- Change base_url for Icon media source, so they work in manager previews
 - Add access policy for developers
 - Include custom lexicon entries in extract
 - Replace wildcard filter for project IDs with regex search in Gitify configs
