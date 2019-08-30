@@ -2,7 +2,9 @@ id: 199
 name: videoYoutube
 description: ''
 category: a_content
+snippet: "<div class=\"ui embed\"\n     data-source=\"youtube\"\n     data-id=\"[[+video]]\"\n     data-icon=\"video play\"\n     data-placeholder=\"http://img.youtube.com/vi/[[+video]]/0.jpg\">\n</div>"
 properties: 'a:0:{}'
+content: "<div class=\"ui embed\"\n     data-source=\"youtube\"\n     data-id=\"[[+video]]\"\n     data-icon=\"video play\"\n     data-placeholder=\"http://img.youtube.com/vi/[[+video]]/0.jpg\">\n</div>"
 
 -----
 
@@ -10,5 +12,5 @@ properties: 'a:0:{}'
      data-source="youtube"
      data-id="[[+video]]"
      data-icon="video play"
-     data-placeholder="http://img.youtube.com/vi/[[+video]]/0.jpg">
+     data-placeholder="//img.youtube.com/vi/[[+video]]/0.jpg">
 </div>

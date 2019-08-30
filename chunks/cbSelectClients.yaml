@@ -2,12 +2,14 @@ id: 286
 name: cbSelectClients
 description: ''
 category: a_cb_select
+snippet: "[[getResources?\n    &parents=`[[++romanesco.client_container_id]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 properties: 'a:0:{}'
+content: "[[getResources?\n    &parents=`[[++romanesco.client_container_id]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 
 -----
 
 [[getResources?
-    &parents=`[[++romanesco.client_container_id]]`
+    &parents=`[[getContextSetting:empty=`[[++romanesco.client_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.client_container_id`]]`
     &tpl=`@INLINE [[+pagetitle]]=[[+id]]`
     &limit=`99`
     &showHidden=`1`
