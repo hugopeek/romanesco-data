@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.2
+Released on ...
+
+New features:
+- Add responsive options to main layouts and overviews
+
 ## v1.6.1
 Released on July 16, 2019
 
