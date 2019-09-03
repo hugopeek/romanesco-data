@@ -1,5 +1,4 @@
 text: clientconfig
-parent: manage
+parent: components
 description: clientconfig.desc
-menuindex: 4
 namespace: clientconfig

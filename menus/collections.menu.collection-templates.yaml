@@ -1,4 +1,4 @@
 text: collections.menu.collection_templates
 parent: components
 description: collections.menu.collection_templates_desc
-menuindex: 3
+namespace: collections

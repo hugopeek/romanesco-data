@@ -2,9 +2,7 @@ id: 286
 name: cbSelectClients
 description: ''
 category: a_cb_select
-snippet: "[[getResources?\n    &parents=`[[++romanesco.client_container_id]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 properties: 'a:0:{}'
-content: "[[getResources?\n    &parents=`[[++romanesco.client_container_id]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 
 -----
 

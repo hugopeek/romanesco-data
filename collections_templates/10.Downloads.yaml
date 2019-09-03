@@ -10,7 +10,7 @@ resource_type_selection: 0
 tab_label: Downloads
 button_label: 'Add download'
 context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'
-buttons: 'view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink'
+buttons: 'view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink,changeparent'
 back_to_collection_label: 'All Downloads'
 child_hide_from_menu: null
 child_published: null
