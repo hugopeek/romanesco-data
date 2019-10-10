@@ -1,10 +1,26 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.6.2
-Released on ...
+Released on October 10, 2019
 
 New features:
+- Integrate visual regression tests (with BackstopJS)
+- Add snippet for creating static HTML file of resource
 - Add responsive options to main layouts and overviews
+
+Fixes and improvements:
+- Fix incorrect syntax in Google webfont requests
+- Define exact aspect ratio for Overview images
+- Add inverted class to logo in vertical menu
+- Fix image URLs and display size in Markdown output
+- Mute rogue path output in manager for Redactor too
+- Remove http:// in Youtube embed placeholder URL
+- Update resourceTVInputOptions to respect possible context settings
+- Fix broken avatar image in compact article overviews
+- Fix incorrect path in CSS to global backgrounds SVG
+- Correctly retrieve (possible) context setting for FormBlocks container ID
+- Correctly retrieve (possible) context setting for CB and TV options
+- Load full off-canvas navigation if main menu is not a dropdown menu
 
 ## v1.6.1
 Released on July 16, 2019
