@@ -22,13 +22,13 @@ properties: 'a:0:{}'
 
 [[++theme_font_page:notempty=`
 @pageFont: '[[+font_page.1]]', @fontFallback;
-@pageFontRequest: [[+font_page.1]]:[[+font_page.2:empty=`700`]]&subset=[[+font_page.3:empty=`latin`]];
+@pageFontRequest: '[[+font_page.1]]:[[+font_page.2:empty=`300`]]';
 `]]
 
 [[++theme_font_header:notempty=`
 @headerFont: '[[+font_header.1]]', @fontFallback;
-@headerFontRequest: [[+font_header.1]]:[[+font_header.2:empty=`300,700,300italic,700italic`]]&subset=[[+font_header.3:empty=`latin`]];
-@googleFontRequest: '@{headerFontRequest}[[+font_page.1:notempty=`|@{pageFontRequest}`]]';
+@headerFontRequest: '[[+font_header.1]]:[[+font_header.2:empty=`300,700,300italic,700italic`]]';
+@googleFontRequest: '@{headerFontRequest}[[+font_page.1:notempty=`|@{pageFontRequest}`]]&display=swap&subset=[[+font_header.3:empty=`latin`]]';
 `]]
 
 
