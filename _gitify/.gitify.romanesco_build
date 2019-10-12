@@ -124,6 +124,9 @@ data:
             - element
             - element_class
             - property_set
+        where:
+            - 'element:NOT RLIKE': '[[:digit:]]{6,}'
+            - 'property_set:NOT RLIKE': '[[:digit:]]{6,}'
     #events:
     #    class: modEvent
     #    primary: name
