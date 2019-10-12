@@ -64,6 +64,7 @@ $modx->toPlaceholder('prefix', $prefix);
 // Check if there's a theme override present and evaluate these cases first
 $themeOverride = $modx->runSnippet('setBoxTypeTheme', (array(
     'input' => $input,
+    'prefix' => $prefix,
 )));
 
 // themeOverride only returns an array when there is a match
