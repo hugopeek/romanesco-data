@@ -1,5 +1,10 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.3
+Released on October 12, 2019
+
+Hotfix: Forward prefix to setBoxTypeTheme snippet
+
 ## v1.6.2
 Released on October 10, 2019
 
