@@ -2,13 +2,11 @@ id: 314
 name: displayRawTemplate
 description: ''
 category: a_hub
+snippet: "[[If?\n    &subject=`[[+content]]`\n    &operator=`notempty`\n    &then=`[[+content:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`\n    &else=`[[+template:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`\n]]"
 properties: 'a:0:{}'
+content: "[[If?\n    &subject=`[[+content]]`\n    &operator=`notempty`\n    &then=`[[+content:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`\n    &else=`[[+template:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`\n]]"
 
 -----
 
-[[If?
-    &subject=`[[+content]]`
-    &operator=`notempty`
-    &then=`[[+content:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`
-    &else=`[[+template:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]`
-]]
+[[+content:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]
+[[+template:htmlent:replace=`[==&#91;`:replace=`]==&#93;`:replace=``==&#96;`]]
