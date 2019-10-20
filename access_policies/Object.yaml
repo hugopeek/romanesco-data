@@ -2,4 +2,4 @@ id: 5
 name: Object
 description: 'An Object policy with all permissions.'
 template: 3
-data: '{"load":true,"list":true,"view":true,"save":true,"remove":true,"formit":true,"formit_encryptions":false}'
+data: '{"load":true,"list":true,"view":true,"save":true,"remove":true}'
