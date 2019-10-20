@@ -16,5 +16,5 @@ properties: 'a:0:{}'
 
     &url=`[[+url]]`
     &alt=`[[+alt]]`
-    &classes=`rounded`
+    &classes=`rounded [[+classes:replace=`,== `]]`
 ]]

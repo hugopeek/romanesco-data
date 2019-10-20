@@ -7,8 +7,8 @@ sortorder: 12
 category: 2
 icon: image
 icon_type: ''
-template: "[[$imageOuter?\n    &url=`[[+url]]`\n    &size=`[[+size]]`\n    &width=`[[+width]]`\n    &height=`[[+height]]`\n    &extension=`[[+extension]]`\n    &alt=`[[+alt]]`\n]]"
-properties: '{"source":"0","directory":"\/[[+year]]\/","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0"}'
+template: "[[$imageOuter?\n    &url=`[[+url]]`\n    &size=`[[+size]]`\n    &width=`[[+width]]`\n    &height=`[[+height]]`\n    &extension=`[[+extension]]`\n    &alt=`[[+alt]]`\n    &credits=`[[+credits]]`\n    &classes=`[[+classes]]`\n]]"
+properties: '{"source":"0","directory":"\/[[+year]]\/","crop_directory":"assets\/crops\/","crops":"","open_crops_automatically":"false","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":""}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"alt","title":"ALT text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
+settings: '[{"reference":"alt","title":"ALT text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"credits","title":"Credits","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"classes","title":"Options","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Circular image=circular\nBordered image=bordered","field_is_exposed":"modal"}]'
