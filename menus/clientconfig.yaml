@@ -1,4 +1,5 @@
 text: clientconfig
 parent: components
 description: clientconfig.desc
+icon: '<i class="icon icon-wrench"></i>'
 namespace: clientconfig

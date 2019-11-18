@@ -1,0 +1,12 @@
+id: 112
+parent: 109
+parent_properties: '{"key":"size","width":"30"}'
+name: Size
+description: ''
+sortorder: 95
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

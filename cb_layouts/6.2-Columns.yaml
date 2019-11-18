@@ -6,7 +6,7 @@ category: 8
 icon: layout_1-1
 icon_type: ''
 columns: '[{"reference":"col_1","width":"50"},{"reference":"col_2","width":"50"}]'
-template: "<div [[stripAsAlias:prepend=`id=\"`:append=`\"`? &input=`[[+title]]`]] class=\"ui vertical stripe segment [[+background]]\">\n    <div class=\"ui [[+container_type]] container\">\n        <div class=\"ui two column [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] grid\">\n            <div class=\"row\">\n                <div class=\"column\">[[+col_1]]</div>\n                <div class=\"column\">[[+col_2]]</div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+template: "<div [[stripAsAlias:prepend=`id=\"`:append=`\"`? &input=`[[+title]]`]] class=\"ui vertical stripe segment [[setBackground? &background=`[[+background]]`]]\">\n    <div class=\"ui [[+container_type]] container\">\n        <div class=\"ui two column [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] grid\">\n            <div class=\"row\">\n                <div class=\"column\">[[+col_1]]</div>\n                <div class=\"column\">[[+col_2]]</div>\n            </div>\n        </div>\n    </div>\n</div>\n"
 availability: '[]'
 times_per_page: 0
 layout_only_nested: '0'

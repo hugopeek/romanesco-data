@@ -1,0 +1,35 @@
+id: 448
+name: globalBackgroundRowCSS
+description: ''
+category: a_global
+properties: 'a:3:{s:7:"imgSize";a:7:{s:4:"name";s:7:"imgSize";s:4:"desc";s:40:"romanesco.globalbackgroundrowcss.imgSize";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:7:"imgType";a:7:{s:4:"name";s:7:"imgType";s:4:"desc";s:40:"romanesco.globalbackgroundrowcss.imgType";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:8:"imgScale";a:7:{s:4:"name";s:8:"imgScale";s:4:"desc";s:41:"romanesco.globalbackgroundrowcss.imgScale";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[If:empty=`[[+gradient]]`?
+    &subject=`[[+image.extension]]`
+    &operator=`is`
+    &operand=`svg`
+    &then=`[[+image.url:prepend=`url(/`:append=`)`]]`
+    &else=`
+    [[If?
+        &subject=`[[+image.crops.[[+imgType]].url]]`
+        &operator=`notempty`
+        &then=`
+        [[pthumb:prepend=`url(`:append=`)`?
+            &input=`[[+image.url]]`
+            &options=`w=[[+imgWidth]]
+                &sx=[[+image.crops.[[+imgType]].x]]
+                &sy=[[+image.crops.[[+imgType]].y]]
+                &sw=[[+image.crops.[[+imgType]].width]]
+                &sh=[[+image.crops.[[+imgType]].height]]
+                &q=[[++img_quality]]
+                &scale=[[+imgScale:default=`1`]]
+            `
+        ]]`
+    ]]`
+]]
+[[+position:empty=`center center`]] /
+[[+size:empty=`cover`]]
+[[+repeat]]
+[[+attachment]]

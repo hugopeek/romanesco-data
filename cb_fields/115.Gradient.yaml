@@ -1,0 +1,12 @@
+id: 115
+parent: 109
+parent_properties: '{"key":"gradient","width":"70"}'
+name: Gradient
+description: ''
+sortorder: 98
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

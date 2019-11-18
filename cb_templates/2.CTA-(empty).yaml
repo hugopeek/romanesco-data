@@ -1,7 +1,7 @@
 id: 2
 name: 'CTA (empty)'
 description: ''
-sortorder: 2
+sortorder: 1
 icon: template_03
 content: '[{"layout":15,"content":{"main":[]},"settings":[],"parent":0,"title":""}]'
 availability: '[{"field":"template","value":"9"}]'

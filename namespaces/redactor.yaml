@@ -1,2 +1,3 @@
 name: redactor
 path: '{core_path}components/redactor/'
+assets_path: '{assets_path}components/redactor/'

@@ -2,9 +2,7 @@ id: 249
 name: overviewRowArticleCompact
 description: ''
 category: m_ov_article
-snippet: "[[!setUserPlaceholders? &userId=`[[+author_id]]`]]\n\n<a href=\"[[~[[+team_member_id]]]]\" class=\"ui avatar image\">\n    [[ImagePlus:empty=`[[++overview_icon_fallback]]`?\n        &tvname=`person_image`\n        &docid=`[[+team_member_id]]`\n        &type=`thumb`\n        &options=`w=150&h=150&q=[[++img_quality]]&zc=1`\n    ]]\n</a>\n\n<div class=\"content\">\n    <a href=\"[[~[[+id]]]]\" class=\"header\">\n        [[+[[+title_field]]:empty=`[[+pagetitle]]`]]\n    </a>\n    <div class=\"description\">\n        <span class=\"meta date\">\n            <i class=\"icon calendar alternate outline\"></i>\n            [[+publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]\n        </span>\n    </div>\n</div>"
 properties: 'a:0:{}'
-content: "[[!setUserPlaceholders? &userId=`[[+author_id]]`]]\n\n<a href=\"[[~[[+team_member_id]]]]\" class=\"ui avatar image\">\n    [[ImagePlus:empty=`[[++overview_icon_fallback]]`?\n        &tvname=`person_image`\n        &docid=`[[+team_member_id]]`\n        &type=`thumb`\n        &options=`w=150&h=150&q=[[++img_quality]]&zc=1`\n    ]]\n</a>\n\n<div class=\"content\">\n    <a href=\"[[~[[+id]]]]\" class=\"header\">\n        [[+[[+title_field]]:empty=`[[+pagetitle]]`]]\n    </a>\n    <div class=\"description\">\n        <span class=\"meta date\">\n            <i class=\"icon calendar alternate outline\"></i>\n            [[+publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]\n        </span>\n    </div>\n</div>"
 
 -----
 

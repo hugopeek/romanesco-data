@@ -3,7 +3,7 @@ source: 13
 type: migx
 name: global_background_img
 caption: 'Global background images'
-description: 'These backgrounds can be applied to page headers, CB layouts (under their Settings wheel) and possibly to other elements too.'
+description: 'DEPRECATED - DO NOT USE ANYMORE! Backgrounds in this grid still work, but use the new resource-based backgrounds instead to ensure proper functionality in the future.'
 category: 'Global - Backgrounds'
 elements: ''
 rank: 1

@@ -1,0 +1,13 @@
+id: 113
+parent: 109
+parent_properties: '{"key":"repeat","width":"30"}'
+input: dropdown
+name: Repeat
+description: ''
+sortorder: 96
+icon: paragraph
+template: '[[+value]]'
+properties: '{"options":"no-repeat==Don''t repeat\nrepeat-x==Repeat horizontally\nrepeat-y==Repeat vertically\nrepeat==Repeat in all directions","default_value":"no-repeat"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

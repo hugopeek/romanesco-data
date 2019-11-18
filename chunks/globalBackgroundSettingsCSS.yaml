@@ -1,0 +1,11 @@
+id: 449
+name: globalBackgroundSettingsCSS
+description: ''
+category: a_global
+properties: 'a:0:{}'
+
+-----
+
+[[+opacity:notempty=`opacity: [[+opacity:div=`100`:replace=`,==.`]];`]]
+[[+filter:notempty=`filter: [[+filter]];`]]
+[[+filter:contains=`blur`:then=`transform: scale(1.1);`]]
