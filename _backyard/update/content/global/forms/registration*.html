@@ -44,7 +44,7 @@ tvs:
 ]]
 
 
-<fieldset [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
     
     
     [[$fbInputHidden? 
@@ -52,6 +52,7 @@ tvs:
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&field_name=`Referrer`
 	&field_value=`[[+current_pagetitle]]`
 	]]
@@ -62,6 +63,7 @@ tvs:
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&field_name=`Project name`
 	&field_layout=`horizontal`
 	&helptext_position=`bottom`
@@ -168,7 +170,6 @@ tvs:
     
 </fieldset>
 
-
 [[modifiedIf?
     &subject=`[[+segment_type]]`
     &operator=`isnot`
@@ -179,7 +180,7 @@ tvs:
 ]]
 
 
-<fieldset [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
     
     
     [[$fbInputTextfield? 
@@ -187,6 +188,7 @@ tvs:
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`1`
+	&layout_title=``
 	&field_name=`Your name`
 	&field_layout=`horizontal`
 	&helptext_position=`bottom`
@@ -202,6 +204,7 @@ tvs:
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`1`
+	&layout_title=``
 	&field_name=`Email address`
 	&field_layout=`horizontal`
 	&helptext_position=`bottom`
@@ -215,6 +218,7 @@ tvs:
 	&layout_id=`14`
 	&layout_column=`main`
 	&layout_idx=`1`
+	&layout_title=``
 	&math_min_range=`5`
 	&math_max_range=`21`
 	&field_layout=`horizontal`

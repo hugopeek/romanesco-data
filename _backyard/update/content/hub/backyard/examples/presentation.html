@@ -62,24 +62,25 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]] class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$overviewOuter? 
 	&unique_idx=`2`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&row_tpl=`overviewRowImageBasic`
 	&cols=`five`
 	&parent=`2`
 	&title_field=`menutitle`
-	&title_hierarchy=`h2`
 	&depth=`0`
 	&limit=`5`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h2`
 	&show_subtitle=`0`
 	&show_introtext=`1`
 	&link_text=``
@@ -88,6 +89,7 @@ tvs:
 	&alignment=`center aligned middle aligned`
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 
     </div>
@@ -111,12 +113,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -126,7 +130,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=20" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -157,7 +161,7 @@ tvs:
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]] class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed  divided grid">
             <div class="row">
@@ -166,7 +170,8 @@ tvs:
 	&layout_id=`5`
 	&layout_column=`col_1`
 	&layout_idx=`0`
-	&resources=`20,[[*id:add=`1`]]`
+	&layout_title=``
+	&resources=`[[*id]],[[*id:add=`1`]]`
 	&row_tpl=`overviewRowIconLeft`
 	&cols=`one`
 	&title_field=`menutitle`
@@ -176,8 +181,10 @@ tvs:
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`font`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`1`
+	&responsive=`stackable,doubling`
 	]]
 </div>
                 <div class="column">[[$overviewOuterSpecific? 
@@ -185,7 +192,8 @@ tvs:
 	&layout_id=`5`
 	&layout_column=`col_2`
 	&layout_idx=`0`
-	&resources=`20`
+	&layout_title=``
+	&resources=`[[*id]]`
 	&row_tpl=`overviewRowIconTop`
 	&cols=`one`
 	&title_field=`menutitle`
@@ -195,8 +203,10 @@ tvs:
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`font`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 </div>
                 <div class="column">[[$overviewOuterSpecific? 
@@ -204,7 +214,8 @@ tvs:
 	&layout_id=`5`
 	&layout_column=`col_3`
 	&layout_idx=`0`
-	&resources=`20`
+	&layout_title=``
+	&resources=`[[*id]]`
 	&row_tpl=`overviewRowIconTopCard`
 	&cols=`one`
 	&title_field=`menutitle`
@@ -214,8 +225,10 @@ tvs:
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`font`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 </div>
             </div>
@@ -241,12 +254,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -256,7 +271,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=20" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

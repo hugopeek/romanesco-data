@@ -62,31 +62,34 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`113`
+	&unique_idx=`2`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&row_tpl=`overviewRowBasic`
 	&cols=`four`
 	&parent=`[[++romanesco.pattern_container_id]]`
 	&title_field=`menutitle`
-	&title_hierarchy=`h2`
 	&depth=`0`
 	&limit=`4`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h2`
 	&show_subtitle=`1`
 	&show_introtext=`0`
 	&link_text=`Learn more`
 	&img_type=`landscape`
 	&icon_type=`svg`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 
     </div>
@@ -110,12 +113,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -125,7 +130,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=21" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

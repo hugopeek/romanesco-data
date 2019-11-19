@@ -62,7 +62,7 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui four column stackable doubling relaxed    grid">
             <div class="row">
@@ -384,7 +384,7 @@ tvs:
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui four column stackable doubling relaxed   grid">
             <div class="row">
@@ -408,6 +408,7 @@ tvs:
 	<br>Light
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -423,6 +424,7 @@ tvs:
 	<br>Light
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -444,6 +446,7 @@ tvs:
 	<br>Light
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -459,6 +462,7 @@ tvs:
 	<br>Light
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -486,6 +490,7 @@ tvs:
 	<br>Grey
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -501,6 +506,7 @@ tvs:
 	<br>Grey
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -522,6 +528,7 @@ tvs:
 	<br>Grey
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -537,6 +544,7 @@ tvs:
 	<br>Grey
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -564,6 +572,7 @@ tvs:
 	<br>Dark
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -579,6 +588,7 @@ tvs:
 	<br>Dark
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -600,6 +610,7 @@ tvs:
 	<br>Dark
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -615,6 +626,7 @@ tvs:
 	<br>Dark
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -642,6 +654,7 @@ tvs:
 	<br>Transparent
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -657,6 +670,7 @@ tvs:
 	<br>Transparent
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -678,6 +692,7 @@ tvs:
 	<br>Transparent
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -693,6 +708,7 @@ tvs:
 	<br>Transparent
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]`
@@ -723,12 +739,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -738,7 +756,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=18" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -769,7 +787,7 @@ tvs:
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui stackable doubling very relaxed    equal width grid">
             <div class="row">
@@ -781,6 +799,7 @@ its relationships to other patterns.
 </p><h2>Heading 2<br></h2><p>The goal of the front-end pattern library is to give you an overview of all the available patterns in the system. It briefly describes the purpose of each pattern, informs you about potential caveats and shows its relationships to other patterns.
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -788,42 +807,42 @@ its relationships to other patterns.
     &value=`Heading 1`
     &level=`h1`
     &alignment=``
-    &unique_idx=`251`
+    &unique_idx=`36`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=``
-    &unique_idx=`252`
+    &unique_idx=`37`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3`
     &level=`h3`
     &alignment=``
-    &unique_idx=`253`
+    &unique_idx=`38`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=``
-    &unique_idx=`254`
+    &unique_idx=`39`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=``
-    &unique_idx=`255`
+    &unique_idx=`40`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=``
-    &unique_idx=`256`
+    &unique_idx=`41`
 ]]</div>
             </div>
         </div>
@@ -848,12 +867,14 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -863,7 +884,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=18" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -894,7 +915,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
@@ -910,7 +931,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`266`
+    &unique_idx=`51`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -922,7 +943,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`267`
+    &unique_idx=`52`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -934,7 +955,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`268`
+    &unique_idx=`53`
 ]]</div>
 </div>
 </div></div>
@@ -950,7 +971,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`271`
+    &unique_idx=`56`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -962,7 +983,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`272`
+    &unique_idx=`57`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -974,7 +995,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=`info icon`
     &icon_options=`labeled`
-    &unique_idx=`273`
+    &unique_idx=`58`
 ]]</div>
 </div>
 </div></div>
@@ -984,7 +1005,7 @@ its relationships to other patterns.
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment inverted primary-color">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`inverted primary-color`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed    grid">
             <div class="row">
@@ -1000,7 +1021,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`277`
+    &unique_idx=`62`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1012,7 +1033,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`278`
+    &unique_idx=`63`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1024,7 +1045,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`279`
+    &unique_idx=`64`
 ]]</div>
 </div>
 </div></div>
@@ -1040,7 +1061,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`282`
+    &unique_idx=`67`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1052,7 +1073,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`283`
+    &unique_idx=`68`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1064,7 +1085,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=`info icon`
     &icon_options=`labeled`
-    &unique_idx=`284`
+    &unique_idx=`69`
 ]]</div>
 </div>
 </div></div>
@@ -1074,7 +1095,7 @@ its relationships to other patterns.
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment inverted secondary-color">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`inverted secondary-color`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed    grid">
             <div class="row">
@@ -1090,7 +1111,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`288`
+    &unique_idx=`73`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1102,7 +1123,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`289`
+    &unique_idx=`74`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1114,7 +1135,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`290`
+    &unique_idx=`75`
 ]]</div>
 </div>
 </div></div>
@@ -1130,7 +1151,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`293`
+    &unique_idx=`78`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1142,7 +1163,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`294`
+    &unique_idx=`79`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1154,7 +1175,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=`info icon`
     &icon_options=`labeled`
-    &unique_idx=`295`
+    &unique_idx=`80`
 ]]</div>
 </div>
 </div></div>
@@ -1164,7 +1185,7 @@ its relationships to other patterns.
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment inverted">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`inverted`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed    grid">
             <div class="row">
@@ -1180,7 +1201,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`299`
+    &unique_idx=`84`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1192,7 +1213,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`300`
+    &unique_idx=`85`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1204,7 +1225,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`301`
+    &unique_idx=`86`
 ]]</div>
 </div>
 </div></div>
@@ -1220,7 +1241,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`304`
+    &unique_idx=`89`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1232,7 +1253,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=``
     &icon_options=``
-    &unique_idx=`305`
+    &unique_idx=`90`
 ]]</div>
     <div class="column">[[$buttonOuter?
     &link=``
@@ -1244,7 +1265,7 @@ its relationships to other patterns.
     &new_window=`0`
     &icon_class=`info icon`
     &icon_options=`labeled`
-    &unique_idx=`306`
+    &unique_idx=`91`
 ]]</div>
 </div>
 </div></div>
@@ -1271,12 +1292,14 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -1286,7 +1309,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=18" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -1317,7 +1340,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui stackable doubling very relaxed  divided equal width grid">
             <div class="row">
@@ -1328,6 +1351,8 @@ its relationships to other patterns.
     &height=``
     &extension=``
     &alt=`Logo`
+    &credits=``
+    &classes=``
 ]]</div>
                 <div class="four wide column">[[$imageOuter?
     &url=``
@@ -1336,6 +1361,8 @@ its relationships to other patterns.
     &height=``
     &extension=``
     &alt=`Badge`
+    &credits=``
+    &classes=``
 ]]</div>
             </div>
         </div>
@@ -1360,12 +1387,14 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -1375,7 +1404,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=18" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

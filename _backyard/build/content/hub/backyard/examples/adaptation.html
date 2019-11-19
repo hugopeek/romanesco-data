@@ -63,7 +63,7 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
@@ -74,6 +74,8 @@ tvs:
     &height=`1200`
     &extension=`jpg`
     &alt=``
+    &credits=``
+    &classes=``
 ]]</div>
                 <div class="column">[[$imageBasicLink?
     &url=`uploads/img/content/2017/romanesco-farmer-03.jpg`
@@ -107,12 +109,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -122,7 +126,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -153,14 +157,15 @@ tvs:
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$overviewOuterSpecific? 
-	&unique_idx=`73`
+	&unique_idx=`12`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
-	&resources=`28,10,146`
+	&layout_title=``
+	&resources=`[[*id]],10,146`
 	&row_tpl=`overviewRowImageTop`
 	&cols=`three`
 	&title_field=`menutitle`
@@ -170,8 +175,10 @@ tvs:
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`svg`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 
     </div>
@@ -195,12 +202,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -210,7 +219,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -241,15 +250,15 @@ tvs:
     </div>
 </div>
 
-[[![[If? &subject=`0` &operator=`EQ` &operand=`1` &then=`getPage@SemanticUI` &else=`getCache`]]?
+[[!getCache?
     &element=`getResources`
     &cacheKey=`overviews`
-    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
+    
 
     &parents=`15`
     &depth=`0`
     &limit=`2`
-    &tpl=`[[If? &subject=`[[$overviewRowFluidTheme]]` &operator=`isnull` &then=`overviewRowFluid` &else=`overviewRowFluidTheme`]]`
+    &tpl=`overviewRowFluid`
     &includeTVs=`1`
     &processTVs=`1`
     &tvPrefix=``
@@ -257,7 +266,7 @@ tvs:
     &sortby=`publishedon`
     &sortdir=`DESC`
 
-    &row_tpl=`[[If? &subject=`[[$overviewRowImageFluidTheme]]` &operator=`isnull` &then=`overviewRowImageFluid` &else=`overviewRowImageFluidTheme`]]`
+    &row_tpl=`overviewRowImageFluid`
     &background_even=`white`
     &background_odd=`primary-color`
     &cols=`eight`
@@ -288,12 +297,14 @@ tvs:
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -303,7 +314,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

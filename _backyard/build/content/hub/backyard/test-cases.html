@@ -62,31 +62,34 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`52`
+	&unique_idx=`1`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&row_tpl=`overviewRowBasic`
 	&cols=`three`
 	&parent=`[[*id]]`
 	&title_field=`menutitle`
-	&title_hierarchy=`h2`
 	&depth=`0`
 	&limit=`99`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h2`
 	&show_subtitle=`0`
 	&show_introtext=`1`
 	&link_text=`Try it out`
 	&img_type=`landscape`
 	&icon_type=`svg`
+	&alignment=``
 	&padding=``
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 
     </div>

@@ -62,44 +62,47 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`325`
+	&unique_idx=`1`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
+	&layout_title=``
 	&row_tpl=`overviewRowBasicCard`
 	&cols=`four`
 	&parent=`[[*id]]`
 	&title_field=`menutitle`
-	&title_hierarchy=`h3`
 	&depth=`0`
 	&limit=`99`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h3`
 	&show_subtitle=`1`
 	&show_introtext=`0`
 	&link_text=`View patterns`
 	&img_type=`landscape`
 	&icon_type=`svg`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 
     </div>
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]]" class="ui vertical stripe segment secondary">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`secondary`]]">
     <div class="ui   container">
         [[$headingBasic?
     &value=`About Electrons`
     &level=`h1`
     &alignment=``
-    &unique_idx=`327`
+    &unique_idx=`3`
 ]]
 
 <div class="ui nested stackable doubling relaxed   equal width grid">
@@ -113,6 +116,7 @@ mechanism for atomic systems.<br>
 </p><p>Translated to MODX, things like TV's, Context Settings and System Settings can be interpreted as electrons. These elements contain small bits of information, that flow through the system (like electricity) to keep things in line with certain values. So essentially, they too bind things together.
 </p><p>Although not present in Brad Frosts' original Atomic Design principles, Electrons play a vital role in Romanesco as distributors of information. And like the rest of the Atomic elements, they are structured to be reusable.</p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>

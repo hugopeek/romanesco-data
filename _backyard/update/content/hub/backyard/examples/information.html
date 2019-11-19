@@ -62,7 +62,7 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed  divided grid">
             <div class="row">
@@ -70,124 +70,124 @@ tvs:
     &value=`Heading 1<br>`
     &level=`h1`
     &alignment=``
-    &unique_idx=`124`
+    &unique_idx=`2`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=``
-    &unique_idx=`125`
+    &unique_idx=`3`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3`
     &level=`h3`
     &alignment=``
-    &unique_idx=`126`
+    &unique_idx=`4`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=``
-    &unique_idx=`127`
+    &unique_idx=`5`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=``
-    &unique_idx=`128`
+    &unique_idx=`6`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=``
-    &unique_idx=`129`
+    &unique_idx=`7`
 ]]</div>
                 <div class="column">[[$headingBasic?
     &value=`Heading 1`
     &level=`h1`
     &alignment=`center aligned`
-    &unique_idx=`130`
+    &unique_idx=`8`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=`center aligned`
-    &unique_idx=`131`
+    &unique_idx=`9`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3`
     &level=`h3`
     &alignment=`center aligned`
-    &unique_idx=`132`
+    &unique_idx=`10`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=`center aligned`
-    &unique_idx=`133`
+    &unique_idx=`11`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=`center aligned`
-    &unique_idx=`134`
+    &unique_idx=`12`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=`center aligned`
-    &unique_idx=`135`
+    &unique_idx=`13`
 ]]</div>
                 <div class="column">[[$headingBasic?
     &value=`Heading 1<br>`
     &level=`h1`
     &alignment=`right aligned`
-    &unique_idx=`136`
+    &unique_idx=`14`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=`right aligned`
-    &unique_idx=`137`
+    &unique_idx=`15`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3<br>`
     &level=`h3`
     &alignment=`right aligned`
-    &unique_idx=`138`
+    &unique_idx=`16`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=`right aligned`
-    &unique_idx=`139`
+    &unique_idx=`17`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=`right aligned`
-    &unique_idx=`140`
+    &unique_idx=`18`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=`right aligned`
-    &unique_idx=`141`
+    &unique_idx=`19`
 ]]</div>
             </div>
         </div>
@@ -195,7 +195,7 @@ tvs:
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling very relaxed  divided grid">
             <div class="row">
@@ -204,7 +204,7 @@ tvs:
     &level=`h1`
     &subtitle=`Sometimes you need one or two extra lines to clarify what the heading is about.`
     &alignment=``
-    &unique_idx=`143`
+    &unique_idx=`21`
 ]]
 
 [[$headingBasicSubtitle?
@@ -212,7 +212,7 @@ tvs:
     &level=`h2`
     &subtitle=`Don't place entire paragraphs in here though...`
     &alignment=``
-    &unique_idx=`144`
+    &unique_idx=`22`
 ]]
 
 [[$dividerBasic?
@@ -227,21 +227,21 @@ tvs:
     &level=`h3`
     &subtitle=`Also possible`
     &alignment=``
-    &unique_idx=`147`
+    &unique_idx=`25`
 ]]</div>
     <div class="column">[[$headingBasicSubtitle?
     &value=`Center aligned<br>`
     &level=`h4`
     &subtitle=`with headings`
     &alignment=`center aligned`
-    &unique_idx=`148`
+    &unique_idx=`26`
 ]]</div>
     <div class="column">[[$headingBasicSubtitle?
     &value=`Right aligned<br>`
     &level=`h5`
     &subtitle=`containing a subtitle`
     &alignment=`right aligned`
-    &unique_idx=`149`
+    &unique_idx=`27`
 ]]</div>
 </div></div>
                 <div class="column">[[$richTextSegment?
@@ -252,6 +252,7 @@ its relationships to other patterns.
 </p><h2>Heading 2 followed by a paragraph</h2><p>The goal of the front-end pattern library is to give you an overview of all the available patterns in the system. It briefly describes the purpose of each pattern, informs you about potential caveats and shows its relationships to other patterns.
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -261,7 +262,7 @@ its relationships to other patterns.
 </div>
 
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed  divided grid">
             <div class="row">
@@ -269,70 +270,76 @@ its relationships to other patterns.
     &value=`Heading with <a href="[[~15]]">link</a><br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`153`
+    &unique_idx=`31`
 ]]
 
 [[$headingBasic?
     &value=`<a href="[[~15]]">Heading as full link</a><br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`154`
+    &unique_idx=`32`
 ]]
 
 [[$headingBasicAnchor?
     &value=`Heading with anchor link<br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`155`
+    &unique_idx=`33`
 ]]</div>
                 <div class="column">[[$overviewOuter? 
-	&unique_idx=`156`
+	&unique_idx=`34`
 	&layout_id=`5`
 	&layout_column=`col_2`
 	&layout_idx=`2`
+	&layout_title=``
 	&row_tpl=`overviewRowBasic`
 	&cols=`one`
 	&parent=`[[++romanesco.pattern_container_id]]`
 	&title_field=`pagetitle`
-	&title_hierarchy=`h3`
 	&depth=`0`
 	&limit=`3`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h3`
 	&show_subtitle=`0`
 	&show_introtext=`0`
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`font`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 </div>
                 <div class="column">[[$overviewOuter? 
-	&unique_idx=`157`
+	&unique_idx=`35`
 	&layout_id=`5`
 	&layout_column=`col_3`
 	&layout_idx=`2`
+	&layout_title=``
 	&row_tpl=`overviewRowBasic`
 	&cols=`two`
 	&parent=`[[++romanesco.pattern_container_id]]`
 	&title_field=`menutitle`
-	&title_hierarchy=`h3`
 	&depth=`0`
 	&limit=`6`
 	&show_hidden=`0`
 	&sortby=`menuindex`
 	&sortdir=`0`
 	&pagination=`0`
+	&title_hierarchy=`h3`
 	&show_subtitle=`0`
 	&show_introtext=`0`
 	&link_text=``
 	&img_type=`landscape`
 	&icon_type=`svg`
+	&alignment=``
 	&padding=`regular`
 	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
 	]]
 </div>
             </div>
@@ -358,6 +365,7 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=`<p>Address issues with multiple includedBosons calls on 1 page Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">.<br></span></span></p><p>Address issues with multiple includedBosons calls on 1 pageAddress issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space"> Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">.</span></span></span><br><span class="redactor-invisible-space"><span class="redactor-invisible-space"></span></span></p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -365,6 +373,7 @@ its relationships to other patterns.
     &content=`<p>Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space"> Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">.<br></span></span></span>
 </p>Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space">Address issues with multiple includedBosons calls on 1 page<span class="redactor-invisible-space"> Address issues with multiple </span></span>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -374,7 +383,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -405,14 +414,14 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui   container">
         [[$headingBasicSubtitle?
     &value=`Full width heading<br>`
     &level=`h1`
     &subtitle=`This puppy automatically gets a little more weight than usual if it's H1, for extra impact.`
     &alignment=`center aligned`
-    &unique_idx=`166`
+    &unique_idx=`44`
 ]]
     </div>
 </div>
@@ -435,12 +444,14 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -450,7 +461,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -481,7 +492,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed   grid">
             <div class="row">
@@ -492,6 +503,7 @@ purpose of each pattern, informs you about potential caveats and shows
 its relationships to other patterns.
 </p>`
     &segment_type=`basic`
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -502,6 +514,7 @@ purpose of each pattern, informs you about potential caveats and shows
 its relationships to other patterns.
 </p>`
     &segment_type=`regular`
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -512,6 +525,7 @@ purpose of each pattern, informs you about potential caveats and shows
 its relationships to other patterns.
 </p>`
     &segment_type=`raised`
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -538,12 +552,14 @@ its relationships to other patterns.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -553,7 +569,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -584,7 +600,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui text  container">
         [[$richTextSegment?
     &content=`<h1>One Morning, When Gregor Samsa Woke</h1><p class="lead">From troubled dreams, he found himself transformed in his
@@ -610,6 +626,7 @@ walls.
 </p><p class="meta"><em>— Excerpt from The Metamorphosis, by Franz Kafka.</em><br>
 </p>`
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]
@@ -634,12 +651,14 @@ walls.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -649,7 +668,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -680,7 +699,7 @@ walls.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui four column stackable doubling very relaxed  divided grid">
             <div class="row">
@@ -839,12 +858,14 @@ walls.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -854,7 +875,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -885,7 +906,7 @@ walls.
     </div>
 </div>
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
@@ -924,12 +945,14 @@ walls.
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
     <div class="column">[[$richTextSegment?
     &content=``
     &segment_type=``
+    &background=``
 	&padding=`regular`
     &alignment=``
 ]]</div>
@@ -939,7 +962,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
