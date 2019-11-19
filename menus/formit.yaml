@@ -1,6 +1,6 @@
 text: formit
 parent: components
 description: formit.desc
-menuindex: 1
+menuindex: 5
 permissions: formit
 namespace: formit

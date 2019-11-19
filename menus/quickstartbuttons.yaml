@@ -2,5 +2,5 @@ text: quickstartbuttons
 parent: components
 description: quickstartbuttons.menu_desc
 icon: images/icons/plugin.gif
-menuindex: 4
+menuindex: 6
 permissions: dashboards

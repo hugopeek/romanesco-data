@@ -1,5 +1,29 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.4
+Released on November 19, 2019
+
+New features:
+- Add jsonGetObject snippet for templating JSON output with chunks
+- Add ability to center content when stacked on mobile or tablet
+- Add circular button option
+- Add circular and bordered image options
+
+Fixes and improvements:
+- Refactor Global Backgrounds component
+- Prevent custom media source elements from being removed on update
+- Add ability to search for multiple instances of key in jsonGetValue
+- Fix fallback icon in avatar when an article has no author
+- Fix memory exhausted issues when rebuilding content with ContentBlocks
+- Fix visibility toggles in front-end pattern library
+- Limit reverse column order setting to mobile only
+- Rename InjectInvertedClasses plugin to ManipulateDOM
+- Rename MarkdownMimeType plugin to ProcessMarkdown
+- Remove rows from grids that have a reversed column order on mobile
+- Remove .md extension from Markdown links and turn them into button if desired
+- Add language class to Markdown code blocks that do not specify a language
+- Turn Markdown tables into Semantic UI tables
+
 ## v1.6.3
 Released on October 12, 2019
 

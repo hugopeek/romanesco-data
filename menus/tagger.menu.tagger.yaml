@@ -1,4 +1,4 @@
 text: tagger.menu.tagger
-parent: manage
+parent: components
 description: tagger.menu.tagger_desc
-menuindex: 5
+menuindex: 1
