@@ -157,6 +157,10 @@ data:
             - context_key
         where:
             - 'object:NOT RLIKE': '[[:digit:]]{6,}'
+            - 'context_key:IN':
+                - 'web'
+                - 'global'
+                - 'hub'
     menus:
         class: modMenu
         primary: text
