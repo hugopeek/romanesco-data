@@ -44,6 +44,8 @@ tvs:
     links_related: ''
     overview_icon_font: 'expand arrows alternate icon'
     overview_icon_svg: romanesco/adaptation.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
     overview_img_landscape: ''
     overview_img_pano: ''
     overview_img_portrait: ''
@@ -60,7 +62,7 @@ tvs:
 
 -----
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
@@ -85,6 +87,7 @@ tvs:
         </div>
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -118,7 +121,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=145" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -149,14 +152,14 @@ tvs:
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$overviewOuterSpecific? 
-	&unique_idx=`6528`
+	&unique_idx=`73`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
-	&resources=`145,10,146`
+	&resources=`28,10,146`
 	&row_tpl=`overviewRowImageTop`
 	&cols=`three`
 	&title_field=`menutitle`
@@ -172,6 +175,7 @@ tvs:
 
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -205,7 +209,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=145" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -239,9 +243,9 @@ tvs:
 [[![[If? &subject=`0` &operator=`EQ` &operand=`1` &then=`getPage@SemanticUI` &else=`getCache`]]?
     &element=`getResources`
     &cacheKey=`overviews`
-    
+    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
 
-    &parents=`151`
+    &parents=`15`
     &depth=`0`
     &limit=`2`
     &tpl=`[[If? &subject=`[[$overviewRowFluidTheme]]` &operator=`isnull` &then=`overviewRowFluid` &else=`overviewRowFluidTheme`]]`
@@ -298,7 +302,7 @@ tvs:
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=145" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=28" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

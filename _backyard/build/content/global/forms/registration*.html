@@ -21,11 +21,14 @@ tvs:
     fb_activation_ttl: '180'
     fb_email_subject: ''
     fb_extended_toggle: '0'
+    fb_form_layout: horizontal
+    fb_fullname_field: ''
     fb_hooks: ''
     fb_password_field: ''
     fb_prehooks: ''
     fb_redirect_dynamic: ''
     fb_redirect_id: ''
+    fb_submit_button: ''
     fb_usergroups: ''
     fb_usergroups_field: ''
     fb_username_field: 'Your name'
@@ -42,7 +45,7 @@ tvs:
 ]]
 
 
-<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui [[+padding]] [[+segment_parent]] transparent">
     
     
     [[$fbInputHidden? 
@@ -166,6 +169,7 @@ tvs:
     
 </fieldset>
 
+
 [[modifiedIf?
     &subject=`[[+segment_type]]`
     &operator=`isnot`
@@ -176,7 +180,7 @@ tvs:
 ]]
 
 
-<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui [[+padding]] [[+segment_parent]] transparent">
     
     
     [[$fbInputTextfield? 

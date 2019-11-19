@@ -9,13 +9,13 @@ template: 1
 menuindex: 1
 createdby: 1
 createdon: 1547636480
-publishedon: 1547636480
+publishedon: 1547636460
 publishedby: 1
 context_key: hub
 uri: backyard/examples
-properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":19,\"settings\":{\"cols\":\"three\",\"row_tpl\":\"overviewRowIconLeft\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"\",\"parent\":\"[[*id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h3\",\"depth\":\"0\",\"limit\":\"99\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"font\",\"padding\":\"regular\",\"de_emphasize\":\"0\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":[],"field":19,"settings":{"cols":"three","row_tpl":"overviewRowIconLeft","show_subtitle":"1","show_introtext":"0","link_text":"","parent":"[[*id]]","title_field":"menutitle","title_hierarchy":"h3","depth":"0","limit":"99","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"font","padding":"regular","de_emphasize":"0"}}],"fieldcounts":{"19":1},"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":19,\"settings\":{\"cols\":\"three\",\"row_tpl\":\"overviewRowIconLeft\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"\",\"parent\":\"[[*id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h3\",\"depth\":\"0\",\"limit\":\"99\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"font\",\"padding\":\"regular\",\"de_emphasize\":\"0\",\"sortdir\":\"0\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":[],"field":19,"settings":{"cols":"three","row_tpl":"overviewRowIconLeft","show_subtitle":"1","show_introtext":"0","link_text":"","parent":"[[*id]]","title_field":"menutitle","title_hierarchy":"h3","depth":"0","limit":"99","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"font","padding":"regular","de_emphasize":"0","sortdir":"0"}}],"fieldcounts":{"19":1},"_isContentBlocks":true}}'
 tvs:
-    auto_anchors: '@INHERIT 0'
+    auto_anchors: '0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
@@ -44,6 +44,8 @@ tvs:
     links_related: ''
     overview_icon_font: 'lab icon'
     overview_icon_svg: romanesco/examples.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
     overview_img_landscape: ''
     overview_img_pano: ''
     overview_img_portrait: ''
@@ -60,10 +62,10 @@ tvs:
 
 -----
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]]" class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`6670`
+	&unique_idx=`50`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -76,6 +78,7 @@ tvs:
 	&limit=`99`
 	&show_hidden=`0`
 	&sortby=`menuindex`
+	&sortdir=`0`
 	&pagination=`0`
 	&show_subtitle=`1`
 	&show_introtext=`0`

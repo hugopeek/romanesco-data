@@ -44,6 +44,8 @@ tvs:
     links_related: ''
     overview_icon_font: 'info circle icon'
     overview_icon_svg: romanesco/information.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
     overview_img_landscape: ''
     overview_img_pano: ''
     overview_img_portrait: ''
@@ -60,7 +62,7 @@ tvs:
 
 -----
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed  divided grid">
             <div class="row">
@@ -68,131 +70,132 @@ tvs:
     &value=`Heading 1<br>`
     &level=`h1`
     &alignment=``
-    &unique_idx=`2`
+    &unique_idx=`124`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=``
-    &unique_idx=`3`
+    &unique_idx=`125`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3`
     &level=`h3`
     &alignment=``
-    &unique_idx=`4`
+    &unique_idx=`126`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=``
-    &unique_idx=`5`
+    &unique_idx=`127`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=``
-    &unique_idx=`6`
+    &unique_idx=`128`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=``
-    &unique_idx=`7`
+    &unique_idx=`129`
 ]]</div>
                 <div class="column">[[$headingBasic?
     &value=`Heading 1`
     &level=`h1`
     &alignment=`center aligned`
-    &unique_idx=`8`
+    &unique_idx=`130`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=`center aligned`
-    &unique_idx=`9`
+    &unique_idx=`131`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3`
     &level=`h3`
     &alignment=`center aligned`
-    &unique_idx=`10`
+    &unique_idx=`132`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=`center aligned`
-    &unique_idx=`11`
+    &unique_idx=`133`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=`center aligned`
-    &unique_idx=`12`
+    &unique_idx=`134`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=`center aligned`
-    &unique_idx=`13`
+    &unique_idx=`135`
 ]]</div>
                 <div class="column">[[$headingBasic?
     &value=`Heading 1<br>`
     &level=`h1`
     &alignment=`right aligned`
-    &unique_idx=`14`
+    &unique_idx=`136`
 ]]
 
 [[$headingBasic?
     &value=`Heading 2`
     &level=`h2`
     &alignment=`right aligned`
-    &unique_idx=`15`
+    &unique_idx=`137`
 ]]
 
 [[$headingBasic?
     &value=`Heading 3<br>`
     &level=`h3`
     &alignment=`right aligned`
-    &unique_idx=`16`
+    &unique_idx=`138`
 ]]
 
 [[$headingBasic?
     &value=`Heading 4`
     &level=`h4`
     &alignment=`right aligned`
-    &unique_idx=`17`
+    &unique_idx=`139`
 ]]
 
 [[$headingBasic?
     &value=`Heading 5`
     &level=`h5`
     &alignment=`right aligned`
-    &unique_idx=`18`
+    &unique_idx=`140`
 ]]
 
 [[$headingBasic?
     &value=`Heading 6`
     &level=`h6`
     &alignment=`right aligned`
-    &unique_idx=`19`
+    &unique_idx=`141`
 ]]</div>
             </div>
         </div>
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui two column stackable doubling very relaxed  divided grid">
             <div class="row">
@@ -201,7 +204,7 @@ tvs:
     &level=`h1`
     &subtitle=`Sometimes you need one or two extra lines to clarify what the heading is about.`
     &alignment=``
-    &unique_idx=`21`
+    &unique_idx=`143`
 ]]
 
 [[$headingBasicSubtitle?
@@ -209,7 +212,7 @@ tvs:
     &level=`h2`
     &subtitle=`Don't place entire paragraphs in here though...`
     &alignment=``
-    &unique_idx=`22`
+    &unique_idx=`144`
 ]]
 
 [[$dividerBasic?
@@ -224,21 +227,21 @@ tvs:
     &level=`h3`
     &subtitle=`Also possible`
     &alignment=``
-    &unique_idx=`25`
+    &unique_idx=`147`
 ]]</div>
     <div class="column">[[$headingBasicSubtitle?
     &value=`Center aligned<br>`
     &level=`h4`
     &subtitle=`with headings`
     &alignment=`center aligned`
-    &unique_idx=`26`
+    &unique_idx=`148`
 ]]</div>
     <div class="column">[[$headingBasicSubtitle?
     &value=`Right aligned<br>`
     &level=`h5`
     &subtitle=`containing a subtitle`
     &alignment=`right aligned`
-    &unique_idx=`27`
+    &unique_idx=`149`
 ]]</div>
 </div></div>
                 <div class="column">[[$richTextSegment?
@@ -257,7 +260,8 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed  divided grid">
             <div class="row">
@@ -265,24 +269,24 @@ its relationships to other patterns.
     &value=`Heading with <a href="[[~15]]">link</a><br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`31`
+    &unique_idx=`153`
 ]]
 
 [[$headingBasic?
     &value=`<a href="[[~15]]">Heading as full link</a><br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`32`
+    &unique_idx=`154`
 ]]
 
 [[$headingBasicAnchor?
     &value=`Heading with anchor link<br>`
     &level=`h3`
     &alignment=``
-    &unique_idx=`33`
+    &unique_idx=`155`
 ]]</div>
                 <div class="column">[[$overviewOuter? 
-	&unique_idx=`34`
+	&unique_idx=`156`
 	&layout_id=`5`
 	&layout_column=`col_2`
 	&layout_idx=`2`
@@ -295,6 +299,7 @@ its relationships to other patterns.
 	&limit=`3`
 	&show_hidden=`0`
 	&sortby=`menuindex`
+	&sortdir=`0`
 	&pagination=`0`
 	&show_subtitle=`0`
 	&show_introtext=`0`
@@ -306,7 +311,7 @@ its relationships to other patterns.
 	]]
 </div>
                 <div class="column">[[$overviewOuter? 
-	&unique_idx=`35`
+	&unique_idx=`157`
 	&layout_id=`5`
 	&layout_column=`col_3`
 	&layout_idx=`2`
@@ -319,6 +324,7 @@ its relationships to other patterns.
 	&limit=`6`
 	&show_hidden=`0`
 	&sortby=`menuindex`
+	&sortdir=`0`
 	&pagination=`0`
 	&show_subtitle=`0`
 	&show_introtext=`0`
@@ -333,6 +339,7 @@ its relationships to other patterns.
         </div>
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -367,7 +374,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -398,17 +405,18 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$headingBasicSubtitle?
     &value=`Full width heading<br>`
     &level=`h1`
     &subtitle=`This puppy automatically gets a little more weight than usual if it's H1, for extra impact.`
     &alignment=`center aligned`
-    &unique_idx=`44`
+    &unique_idx=`166`
 ]]
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -442,7 +450,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -473,7 +481,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui three column stackable doubling relaxed   grid">
             <div class="row">
@@ -512,6 +520,7 @@ its relationships to other patterns.
     </div>
 </div>
 
+
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
         <div class="ui accordion">
@@ -544,7 +553,7 @@ its relationships to other patterns.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -575,7 +584,7 @@ its relationships to other patterns.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui text  container">
         [[$richTextSegment?
     &content=`<h1>One Morning, When Gregor Samsa Woke</h1><p class="lead">From troubled dreams, he found himself transformed in his
@@ -606,6 +615,7 @@ walls.
 ]]
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -639,7 +649,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -670,7 +680,7 @@ walls.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui four column stackable doubling very relaxed  divided grid">
             <div class="row">
@@ -811,6 +821,7 @@ walls.
     </div>
 </div>
 
+
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
         <div class="ui accordion">
@@ -843,7 +854,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>
@@ -874,7 +885,7 @@ walls.
     </div>
 </div>
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]]" class="ui vertical stripe segment white">
     <div class="ui  container">
         <div class="ui two column stackable doubling relaxed   grid">
             <div class="row">
@@ -894,6 +905,7 @@ walls.
         </div>
     </div>
 </div>
+
 
 <div class="ui vertical backyard segment secondary">
     <div class="ui container">
@@ -927,7 +939,7 @@ walls.
                     <aside class="four wide column">
                         <div class="ui nested middle aligned equal width toolbar grid">
                             <div class="nine wide column">
-                                <a href="[[++site_url]]manager/?a=resource/update&id=246" class="ui tiny basic button">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=19" class="ui tiny basic button">
                                     Edit in MODX
                                 </a>
                             </div>

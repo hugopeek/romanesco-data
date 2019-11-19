@@ -9,11 +9,11 @@ template: 1
 menuindex: 7
 createdby: 1
 createdon: 1547636581
-publishedon: 1547636581
+publishedon: 1547636580
 publishedby: 1
 context_key: hub
 uri: backyard/examples/impression
-properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"\",\"field\":0,\"settings\":{}}]},\"settings\":{},\"parent\":0,\"title\":\"\"}]","linear":[{"value":"","field":0,"settings":[]}],"fieldcounts":[1],"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"\",\"field\":0,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"","field":0,"settings":[]}],"fieldcounts":[1],"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '@INHERIT 0'
     content_brief: ''
@@ -44,6 +44,8 @@ tvs:
     links_related: ''
     overview_icon_font: 'camera icon'
     overview_icon_svg: romanesco/impression.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
     overview_img_landscape: ''
     overview_img_pano: ''
     overview_img_portrait: ''
@@ -60,7 +62,7 @@ tvs:
 
 -----
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment white">
     <div class="ui   container">
         
     </div>

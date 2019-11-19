@@ -44,6 +44,8 @@ tvs:
     links_related: ''
     overview_icon_font: ''
     overview_icon_svg: romanesco/computations.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
     overview_img_landscape: ''
     overview_img_pano: ''
     overview_img_portrait: ''
@@ -60,10 +62,10 @@ tvs:
 
 -----
 
-<div  class="ui vertical stripe segment white">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]]" class="ui vertical stripe segment white">
     <div class="ui   container">
         [[$overviewOuter? 
-	&unique_idx=`1`
+	&unique_idx=`7555`
 	&layout_id=`1`
 	&layout_column=`main`
 	&layout_idx=`0`
@@ -76,6 +78,7 @@ tvs:
 	&limit=`99`
 	&show_hidden=`0`
 	&sortby=`menuindex`
+	&sortdir=`0`
 	&pagination=`0`
 	&show_subtitle=`1`
 	&show_introtext=`0`
