@@ -12,7 +12,7 @@ createdon: 1513752586
 context_key: global
 uri: 'forms/contact*'
 show_in_tree: 0
-properties: '{"contentblocks":{"content":"[{\"layout\":14,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":27,\"settings\":{\"field_name\":\"Your question\",\"field_required\":\"1\",\"field_layout\":\"horizontal\",\"helptext_position\":\"bottom\",\"field_rows\":\"7\",\"field_placeholder\":\"\",\"field_helptext\":\"\"}},{\"chunk_properties\":{},\"field\":26,\"settings\":{\"field_name\":\"Your name\",\"field_required\":\"1\"}},{\"chunk_properties\":{},\"field\":41,\"settings\":{\"field_name\":\"Email address\"}},{\"chunk_properties\":{},\"field\":26,\"settings\":{\"field_name\":\"Phone number\"}}]},\"settings\":{\"legend\":\"Contact\"},\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":[],"field":27,"settings":{"field_name":"Your question","field_required":"1","field_layout":"horizontal","helptext_position":"bottom","field_rows":"7","field_placeholder":"","field_helptext":""}},{"chunk_properties":[],"field":26,"settings":{"field_name":"Your name","field_required":"1"}},{"chunk_properties":[],"field":41,"settings":{"field_name":"Email address"}},{"chunk_properties":[],"field":26,"settings":{"field_name":"Phone number"}}],"fieldcounts":{"27":1,"26":2,"41":1},"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":14,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":27,\"settings\":{\"field_name\":\"Your question\",\"field_required\":\"1\",\"field_layout\":\"vertical\",\"helptext_position\":\"bottom\",\"field_rows\":\"7\",\"field_placeholder\":\"\",\"field_helptext\":\"\"}},{\"chunk_properties\":{},\"field\":26,\"settings\":{\"field_name\":\"Your name\",\"field_required\":\"1\",\"field_layout\":\"inherit\",\"helptext_position\":\"bottom\",\"field_type\":\"text\",\"field_placeholder\":\"\",\"field_helptext\":\"\"}},{\"chunk_properties\":{},\"field\":41,\"settings\":{\"field_name\":\"Email address\",\"field_layout\":\"inherit\",\"helptext_position\":\"bottom\",\"field_helptext\":\"\",\"field_placeholder\":\"\"}},{\"chunk_properties\":{},\"field\":26,\"settings\":{\"field_name\":\"Phone number\",\"field_required\":\"0\",\"field_layout\":\"inherit\",\"helptext_position\":\"bottom\",\"field_type\":\"text\",\"field_placeholder\":\"\",\"field_helptext\":\"\"}}]},\"settings\":{\"legend\":\"Contact\"},\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":[],"field":27,"settings":{"field_name":"Your question","field_required":"1","field_layout":"vertical","helptext_position":"bottom","field_rows":"7","field_placeholder":"","field_helptext":""}},{"chunk_properties":[],"field":26,"settings":{"field_name":"Your name","field_required":"1","field_layout":"inherit","helptext_position":"bottom","field_type":"text","field_placeholder":"","field_helptext":""}},{"chunk_properties":[],"field":41,"settings":{"field_name":"Email address","field_layout":"inherit","helptext_position":"bottom","field_helptext":"","field_placeholder":""}},{"chunk_properties":[],"field":26,"settings":{"field_name":"Phone number","field_required":"0","field_layout":"inherit","helptext_position":"bottom","field_type":"text","field_placeholder":"","field_helptext":""}}],"fieldcounts":{"27":1,"26":2,"41":1},"_isContentBlocks":true}}'
 tvs:
     fb_autoresponder_from: ''
     fb_autoresponder_from_name: ''
@@ -29,7 +29,6 @@ tvs:
     fb_email_template_rows: ''
     fb_email_to: ''
     fb_email_to_dynamic: ''
-    fb_form_layout: horizontal
     fb_hooks: ''
     fb_prehooks: ''
     fb_redirect_dynamic: ''
@@ -58,7 +57,7 @@ tvs:
 	&layout_idx=`0`
 	&layout_title=``
 	&field_name=`Your question`
-	&field_layout=`horizontal`
+	&field_layout=`vertical`
 	&helptext_position=`bottom`
 	&field_rows=`7`
 	&field_placeholder=``
@@ -74,7 +73,7 @@ tvs:
 	&layout_idx=`0`
 	&layout_title=``
 	&field_name=`Your name`
-	&field_layout=`[[*fb_form_layout]]`
+	&field_layout=`inherit`
 	&helptext_position=`bottom`
 	&field_type=`text`
 	&field_placeholder=``
@@ -90,7 +89,7 @@ tvs:
 	&layout_idx=`0`
 	&layout_title=``
 	&field_name=`Email address`
-	&field_layout=`[[*fb_form_layout]]`
+	&field_layout=`inherit`
 	&helptext_position=`bottom`
 	&field_helptext=``
 	&field_placeholder=``
@@ -104,7 +103,7 @@ tvs:
 	&layout_idx=`0`
 	&layout_title=``
 	&field_name=`Phone number`
-	&field_layout=`[[*fb_form_layout]]`
+	&field_layout=`inherit`
 	&helptext_position=`bottom`
 	&field_type=`text`
 	&field_placeholder=``
