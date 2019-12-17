@@ -1,5 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.6.5
+Released on ...
+
+New features:
+- Add Date and Date Range fields to FormBlocks
+
+Fixes and improvements:
+- Optimize FormBlocks validation processing
+- Improve inheritance of FormBlocks label position settings
+- Load home breadcrumb with tpl chunk
+- Fix structured data errors in breadcrumbs
+- Fix field size setting in Message CB
+- Fix illegal regex sequences generating warnings in PHP > 7.1
+
 ## v1.6.4
 Released on November 19, 2019
 
