@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Background elements'
 description: 'Add images, SVGs and gradients here. You can stack them and change their default CSS parameters.'
-sortorder: 92
+sortorder: 59
 category: 4
 icon: image
 template: ''

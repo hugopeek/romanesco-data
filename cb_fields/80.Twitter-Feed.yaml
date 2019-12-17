@@ -5,7 +5,8 @@ name: 'Twitter Feed'
 description: ''
 sortorder: 29
 category: 3
-icon: chunk_B
+icon: twitter
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"237","custom_preview":""}'
 availability: '[]'

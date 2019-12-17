@@ -3,9 +3,10 @@ parent_properties: ''
 input: chunk
 name: 'Input (Hidden)'
 description: ''
-sortorder: 54
+sortorder: 56
 category: 7
-icon: snippet_B
+icon: hidden
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"43","custom_preview":"<p><\/p>"}'
 availability: '[{"field":"template","value":"10,19"}]'

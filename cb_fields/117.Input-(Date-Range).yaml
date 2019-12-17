@@ -1,0 +1,14 @@
+id: 117
+parent_properties: ''
+input: chunk
+name: 'Input (Date Range)'
+description: ''
+sortorder: 55
+category: 7
+icon: calendar
+icon_type: custom
+template: '[[+tag]]'
+properties: '{"chunk":"100241","custom_preview":"<p><em>You can select a different input type or add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+availability: '[{"field":"template","value":"10,19"}]'
+layouts: ''
+settings: '[{"reference":"field_name","title":"Field name","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"label_start","title":"Label start","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"label_end","title":"Label end","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_cols","title":"Display type","fieldtype":"select","default_value":"two","fieldoptions":"Side by side=two\nStacked=stacked","field_is_exposed":"asField","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","process_tags":"1"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"inherit","fieldoptions":"[[$cbFormLabelPosition]]\nInline (all fields in 1 row)=inline","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"helptext_position","title":"Help position","fieldtype":"select","default_value":"bottom","fieldoptions":"[[$cbFormHelpPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"placeholder_start","title":"Placeholder start","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"placeholder_end","title":"Placeholder end","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'
