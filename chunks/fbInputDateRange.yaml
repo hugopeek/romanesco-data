@@ -8,7 +8,10 @@ properties: 'a:0:{}'
 
 [[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 
-<div id="[[+name]]" class="[[+field_cols]] [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] equal width date range fields">
+<div id="[[+name]]" class="[[+field_cols]] [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] equal width [[++cultureKey]] date range fields">
+    <input type="hidden" name="field_name" value="[[+field_name]]">
+    <input type="hidden" name="label_start" value="[[+label_start]]">
+    <input type="hidden" name="label_end" value="[[+label_end]]">
     <div class="field [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]-start]]` &operator=`notempty` &then=`error`]]">
         <label for="[[+name]]-start">[[+label_start]]</label>
         <div class="ui calendar date range start">
