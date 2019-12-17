@@ -13,6 +13,7 @@ properties: 'a:0:{}'
         <strong>[[!+fb[[*id]].fb[[*id]]-op1]]</strong>
         <i class="small fitted [[!+fb[[*id]].fb[[*id]]-operator:is=`-`:then=`minus`:else=`plus`]] icon"></i>
         <strong>[[!+fb[[*id]].fb[[*id]]-op2]]</strong>
+        <i class="small fitted equals icon"></i>
     </label>
     <input type="text" name="fb[[*id]]-math" value="[[!+fb[[*id]].fb[[*id]]-math]]" />
     <input type="hidden" name="fb[[*id]]-op1" value="[[!+fb[[*id]].fb[[*id]]-op1]]" />

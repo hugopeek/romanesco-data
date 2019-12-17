@@ -7,9 +7,9 @@ properties: 'a:0:{}'
 -----
 
 <span property="itemListElement" typeof="ListItem">
-    <a class="section" href="[[+link]]" property="item" typeof="WebPage">
+    <a class="section" property="item" typeof="WebPage" href="[[++site_url]][[+link]]">
         <span property="name">[[+menutitle:empty=`[[+pagetitle]]`]]</span>
-        <meta property="position" content="">
     </a>
+    <meta property="position" content="[[+idx]]">
 </span>
 <i class="right angle icon divider"></i>
