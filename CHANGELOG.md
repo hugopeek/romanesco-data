@@ -1,12 +1,14 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.6.5
-Released on ...
+Released on December 17, 2019
 
 New features:
 - Add Date and Date Range fields to FormBlocks
 
 Fixes and improvements:
+- Add test form with all elements to Backyard
+- Fix special characters breaking FB option labels
 - Optimize FormBlocks validation processing
 - Improve inheritance of FormBlocks label position settings
 - Load home breadcrumb with tpl chunk
