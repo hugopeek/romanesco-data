@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Map (with Marker)'
 description: ''
-sortorder: 45
+sortorder: 46
 category: 3
 icon: marker
 icon_type: custom

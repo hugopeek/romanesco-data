@@ -1,0 +1,12 @@
+id: 24
+name: Slider
+description: 'This layout creates a slider with child elements. Can also process Overview items as slides.'
+sortorder: 21
+category: 10
+icon: layout_img_left
+columns: '[{"reference":"main","width":"100"}]'
+template: "<div class=\"slider-[[+slider_type]] [[+fullscreen:eq=`1`:then=`fullscreen`]]\"\n     data-slick='{\n         \"infinite\": [[+behaviour:contains=`infinite`:then=`true`:else=`false`]],\n         \"arrows\": [[+behaviour:contains=`arrows`:then=`true`:else=`false`]],\n         \"dots\": [[+behaviour:contains=`dots`:then=`true`:else=`false`]],\n         \"fade\": [[+behaviour:contains=`fade`:then=`true`:else=`false`]],\n         \"centerMode\": [[+behaviour:contains=`center`:then=`true`:else=`false`]],\n         \"slidesToShow\": [[textToNumber? &input=`[[+slides_to_show]]`]],\n         \"slidesToScroll\": [[+slides_to_scroll]]\n     }'>\n    [[+main]]\n</div>\n\n[[sliderLoadAssets]]"
+availability: '[]'
+times_per_page: 0
+layout_only_nested: '0'
+settings: '[{"reference":"slider_type","title":"Slider type","fieldtype":"select","default_value":"basic","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutSliderType]]","field_is_exposed":"asSetting","process_tags":"1"},{"reference":"slides_to_show","title":"Column count","fieldtype":"select","default_value":"one","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"asSetting","process_tags":"1"},{"reference":"behaviour","title":"Behaviour","fieldtype":"checkbox","default_value":"infinite,arrows","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutSliderBehaviour]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"fullscreen","title":"Full screen","fieldtype":"radio","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"},{"reference":"slides_to_scroll","title":"Slides to scroll","fieldtype":"textfield","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'

@@ -1,0 +1,13 @@
+id: 118
+parent_properties: ''
+input: layout
+name: Slider
+description: 'Turn child elements into a slider. Can also process Overview items as slides.'
+sortorder: 27
+category: 4
+icon: layout_img_right
+template: "<div class=\"nested\">\n    [[+value]]\n</div>"
+properties: '{"available_layouts":"24","available_templates":"-1"}'
+availability: '[]'
+layouts: ''
+settings: '[]'
