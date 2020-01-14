@@ -1,6 +1,6 @@
-id: 336
+id: 442
 set: 5
-action: resource/update
+action: 'resource/*'
 name: modx-panel-resource-tv
 description: null
 container: modx-resource-tabs

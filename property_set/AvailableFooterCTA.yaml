@@ -1,0 +1,3 @@
+id: 19
+name: AvailableFooterCTA
+properties: 'a:1:{s:12:"availability";a:7:{s:4:"name";s:12:"availability";s:4:"desc";s:47:"romanesco.tvselectglobalbackground.availability";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:10:"footer-cta";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

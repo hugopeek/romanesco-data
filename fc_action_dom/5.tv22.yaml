@@ -1,6 +1,6 @@
-id: 341
+id: 447
 set: 5
-action: resource/update
+action: 'resource/*'
 name: tv22
 description: null
 container: modx-panel-resource

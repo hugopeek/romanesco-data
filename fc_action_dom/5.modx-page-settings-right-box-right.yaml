@@ -1,6 +1,6 @@
-id: 335
+id: 441
 set: 5
-action: resource/update
+action: 'resource/*'
 name: modx-page-settings-right-box-right
 description: null
 container: modx-resource-tabs

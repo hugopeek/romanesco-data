@@ -1,6 +1,6 @@
-id: 28
+id: 387
 set: 2
-action: resource/update
+action: 'resource/*'
 name: modx-resource-access-permissions
 description: null
 container: modx-resource-tabs

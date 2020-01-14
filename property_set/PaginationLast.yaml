@@ -1,0 +1,3 @@
+id: 21
+name: PaginationLast
+properties: 'a:2:{s:10:"icon_class";a:7:{s:4:"name";s:10:"icon_class";s:4:"desc";s:36:"romanesco.pagenavitemicon.icon_class";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:18:"double angle right";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:6:"target";a:7:{s:4:"name";s:6:"target";s:4:"desc";s:32:"romanesco.pagenavitemicon.target";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:4:"last";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

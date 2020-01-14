@@ -1,6 +1,6 @@
-id: 23
+id: 381
 set: 2
-action: resource/update
+action: 'resource/*'
 name: modx-page-settings
 description: null
 container: modx-resource-tabs

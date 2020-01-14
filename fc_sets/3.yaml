@@ -1,5 +1,6 @@
 id: 3
 profile: 2
-action: resource/create
+action: 'resource/*'
+description: 'Add Purpose and Status tabs with related TVs.'
 active: 1
 constraint_class: modResource

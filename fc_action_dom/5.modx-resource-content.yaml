@@ -1,6 +1,6 @@
-id: 327
+id: 433
 set: 5
-action: resource/update
+action: 'resource/*'
 name: modx-resource-content
 description: null
 container: modx-panel-resource

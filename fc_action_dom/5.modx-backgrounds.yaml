@@ -1,6 +1,6 @@
-id: 338
+id: 444
 set: 5
-action: resource/update
+action: 'resource/*'
 name: modx-backgrounds
 description: null
 container: modx-resource-tabs

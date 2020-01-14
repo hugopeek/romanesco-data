@@ -1,5 +1,7 @@
 id: 4
 profile: 2
-action: resource/update
+action: 'resource/*'
+description: 'Bundle required info in Document tab, hide the rest.'
 active: 1
+template: 27
 constraint_class: modResource

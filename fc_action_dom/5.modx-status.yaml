@@ -1,6 +1,6 @@
-id: 339
+id: 446
 set: 5
-action: resource/update
+action: 'resource/*'
 name: modx-status
 description: null
 container: modx-resource-tabs

@@ -1,6 +1,6 @@
-id: 22
+id: 380
 set: 2
-action: resource/update
+action: 'resource/*'
 name: link_attributes
 description: null
 container: modx-panel-resource

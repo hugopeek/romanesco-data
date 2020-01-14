@@ -1,5 +1,29 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.7.0
+Released on January 14, 2020
+
+New features:
+- Add layout for creating sliders with content elements
+- Add template for creating presentations
+- Add pagination with AJAX support
+- Add lazy loading to Image CB and image overviews
+
+Fixes and improvements:
+- Rename slider classes to avoid collisions with new FUI slider module
+- Convert new lines to line breaks in Quotes
+- Add suffix with version number to main CSS and JS assets
+- Optimize caching of chunks in Overview templates
+- Generate responsive content images with srcset and sizes
+- Tweak form customizations for Backgrounds and CTAs
+- Add round and removeDuplicateLines snippets
+- Use alias to specify ID in form template
+- Use system setting to specify title format in head
+- Manage background availability inside selectors
+- Generate static CSS file with Global Backgrounds (per context if needed)
+- Reference Global Backgrounds by template ID when loading custom CSS
+- Add system settings for Mapbox username and style_id
+
 ## v1.6.5
 Released on December 17, 2019
 

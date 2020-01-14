@@ -1,10 +1,10 @@
-id: 309
-set: 4
-action: resource/update
-name: tv123
+id: 629
+set: 6
+action: 'resource/*'
+name: tv4
 description: null
 container: modx-panel-resource
 rule: tvMove
-value: modx-status
+value: modx-resource-main-left
 constraint_class: modResource
-rank: 70
+rank: 20

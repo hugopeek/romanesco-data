@@ -1,10 +1,10 @@
-id: 293
+id: 657
 set: 4
-action: resource/update
+action: 'resource/*'
 name: modx-purpose
 description: null
 container: modx-resource-tabs
-rule: tabNew
-value: Purpose
+rule: tabVisible
+value: '0'
 constraint_class: modResource
-rank: 1
+rank: 2
