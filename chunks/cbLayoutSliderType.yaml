@@ -1,0 +1,11 @@
+id: 461
+name: cbLayoutSliderType
+description: ''
+category: a_cb_layouts
+properties: 'a:0:{}'
+
+-----
+
+Child items (like Layouts or Images)=basic
+Overview items=overview
+Overview on desktop, Slider on mobile=overview-combo

@@ -18,4 +18,4 @@ properties: 'a:0:{}'
     </a>
 </figure>
 
-[[!$overviewRowBasic]]
+[[$overviewRowBasic? &uid=`[[+unique_idx]]`]]

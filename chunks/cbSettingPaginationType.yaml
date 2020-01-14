@@ -1,0 +1,11 @@
+id: 463
+name: cbSettingPaginationType
+description: ''
+category: a_cb_settings
+properties: 'a:0:{}'
+
+-----
+
+Default=default
+Button (Load more)=button
+Scroll (Infinite lazy loading)=scroll

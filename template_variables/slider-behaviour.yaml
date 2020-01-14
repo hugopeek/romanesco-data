@@ -1,0 +1,14 @@
+id: 129
+type: checkbox
+name: slider_behaviour
+caption: Behaviour
+category: 'Slider - Settings'
+elements: 'Infinite loop sliding==infinite||Show previous / next arrows==arrows||Show dot indicators==dots||Fade instead of slide==fade||Autoplay==autoplay'
+rank: 30
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+arrows,dots

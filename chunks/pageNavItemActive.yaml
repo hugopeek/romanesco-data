@@ -1,0 +1,9 @@
+id: 466
+name: pageNavItemActive
+description: ''
+category: a_nav_pagination
+properties: 'a:0:{}'
+
+-----
+
+<span class="active item">[[+pageNo]]</span>

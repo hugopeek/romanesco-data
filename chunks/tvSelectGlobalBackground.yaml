@@ -1,0 +1,44 @@
+id: 458
+name: tvSelectGlobalBackground
+description: 'Get available backgrounds and turn them into input options for use in a selection TV.'
+category: a_select
+properties: 'a:1:{s:12:"availability";a:7:{s:4:"name";s:12:"availability";s:4:"desc";s:47:"romanesco.tvselectglobalbackground.availability";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+System default==@INHERIT||
+White==white||
+Light==secondary||
+Grey==inverted secondary||
+Dark==inverted||
+Primary color (Light)==primary-color||
+Primary color (Dark)==inverted primary-color||
+Secondary color (Light)==secondary-color||
+Secondary color (Dark)==inverted secondary-color||
+Transparent==transparent||
+-----==0||
+[[getResources:append=`||`?
+    &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
+    &limit=`0`
+    &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
+    &outputSeparator=`||`
+    &showHidden=`1`
+    &showUnpublished=`1`
+    &where=`[{"template:=":"27"},{"uri:LIKE":"%/[[*context_key]]/%"}]`
+    &tvFilters=`background_availability==%[[+availability]]%`
+    &sortBy=`menuindex`
+    &sortDir=`ASC`
+]]
+[[getResources?
+    &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
+    &limit=`0`
+    &depth=`0`
+    &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
+    &outputSeparator=`||`
+    &showHidden=`1`
+    &showUnpublished=`1`
+    &where=`{"template:=":"27"}`
+    &tvFilters=`background_availability==%[[+availability]]%`
+    &sortBy=`menuindex`
+    &sortDir=`ASC`
+]]

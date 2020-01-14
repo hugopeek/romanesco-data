@@ -1,0 +1,22 @@
+id: 460
+name: cbLayoutSlider
+description: ''
+category: o_layouts
+properties: 'a:0:{}'
+
+-----
+
+<div class="slider-[[+slider_type]] [[+fullscreen:eq=`1`:then=`fullscreen`]]"
+     data-slick='{
+         "infinite": [[+behaviour:contains=`infinite`:then=`true`:else=`false`]],
+         "arrows": [[+behaviour:contains=`arrows`:then=`true`:else=`false`]],
+         "dots": [[+behaviour:contains=`dots`:then=`true`:else=`false`]],
+         "fade": [[+behaviour:contains=`fade`:then=`true`:else=`false`]],
+         "centerMode": [[+behaviour:contains=`center`:then=`true`:else=`false`]],
+         "slidesToShow": [[textToNumber? &input=`[[+slides_to_show]]`]],
+         "slidesToScroll": [[+slides_to_scroll]]
+     }'>
+    [[+main]]
+</div>
+
+[[sliderLoadAssets]]

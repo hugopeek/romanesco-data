@@ -1,15 +1,15 @@
 id: 60
 name: paginationFluid
 description: ''
-category: a_nav_pagination
+category: m_nav_pagination
 properties: 'a:0:{}'
 
 -----
 
 <div class="ui grid container">
     <div class="center aligned column">
-        <div class="ui pagination menu">
-            [[!+page.nav]]
-        </div>
+        <nav class="ui pagination menu" role="navigation">
+            [[!+[[+prefix]].page.nav]]
+        </nav>
     </div>
 </div>

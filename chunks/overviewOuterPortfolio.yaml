@@ -32,7 +32,7 @@ properties: 'a:0:{}'
         &parents=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`-1` &else=`[[++romanesco.portfolio_container_id]]`]]`
         &resources=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`[[+resources]]` &else=`null`]]`
         &depth=`99`
-        &limit=`[[+limit]]`
+        &limit=`[[+limit:default=`0`]]`
         &tpl=`overviewRowProject[[+[[+prefix]].row_type]]`
         &includeTVs=`1`
         &processTVs=`1`
@@ -43,7 +43,11 @@ properties: 'a:0:{}'
 
         &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`
         &cols=`[[+cols:textToNumber]]`
+        &box_type=`[[+[[+prefix]].box_type]]`
+        &row_type=`[[+[[+prefix]].row_type]]`
         &column_type=`[[+[[+prefix]].column_type]]`
+        &prefix=`[[+prefix]]`
+        &unique_idx=`[[+unique_idx]]`
         &title_field=`[[+title_field]]`
         &title_hierarchy=`[[+title_hierarchy]]`
         &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`
@@ -52,6 +56,7 @@ properties: 'a:0:{}'
         &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`
         &img_type=`[[+img_type]]`
         &de_emphasize=`[[+de_emphasize]]`
+        &lazy_load=`[[+lazy_load]]`
     ]]
 </div>
 

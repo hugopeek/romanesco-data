@@ -4,7 +4,7 @@ name: footer_cta
 caption: 'Call to action (CTA)'
 description: 'This CTA will be displayed above the footer itself. It will have a different background than the rest of the footer, which you can select below. Inherited by default.'
 category: Footer
-elements: '@CHUNK tvSelectFooterCTA'
+elements: '@CHUNK tvSelectCTA@AvailableFooter'
 rank: 20
 properties: 'a:0:{}'
 input_properties: null

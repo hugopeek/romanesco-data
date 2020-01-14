@@ -4,7 +4,7 @@ name: footer_cta_background
 caption: 'CTA background'
 description: 'Select a background for the CTA. To make it stand out, select a background that contrasts nicely with the footer background. Also inherited by default.'
 category: Footer
-elements: '@CHUNK globalBackgroundImgTVOptions'
+elements: '@CHUNK tvSelectGlobalBackground@AvailableFooterCTA'
 rank: 21
 properties: 'a:0:{}'
 input_properties: null

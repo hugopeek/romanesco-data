@@ -1,0 +1,9 @@
+id: 465
+name: pageNavItem
+description: ''
+category: a_nav_pagination
+properties: 'a:0:{}'
+
+-----
+
+<a class="item" href="[[+href]]">[[+pageNo]]</a>

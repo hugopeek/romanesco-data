@@ -1,0 +1,20 @@
+id: 457
+name: tvSelectCTA
+description: 'Get available CTAs and turn them into input options for use in a selection TV.'
+category: a_select
+properties: 'a:1:{s:12:"availability";a:7:{s:4:"name";s:12:"availability";s:4:"desc";s:34:"romanesco.tvselectcta.availability";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+--- Select CTA ---==@INHERIT||
+[[getResources?
+    &parents=`[[getContextSetting:empty=`[[++romanesco.cta_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.cta_container_id`]]`
+    &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
+    &outputSeparator=`||`
+    &showHidden=`1`
+    &showUnpublished=`1`
+    &limit=`99`
+    &sortBy=`menuindex`
+    &sortDir=`ASC`
+    &tvFilters=`cta_availability==%[[+availability]]%`
+]]

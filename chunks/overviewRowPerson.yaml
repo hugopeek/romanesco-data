@@ -7,5 +7,5 @@ properties: 'a:0:{}'
 -----
 
 <section class="[[+column_type]] person">
-    [[!$[[+row_tpl]]]]
+    [[$[[+row_tpl]]? &unique_idx=`[[+idx]][[+page]][[+unique_idx]]`]]
 </section>

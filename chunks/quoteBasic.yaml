@@ -7,6 +7,6 @@ properties: 'a:0:{}'
 -----
 
 <blockquote class="ui [[+size]] [[+layout_type]] quote">
-    <p>[[+quote]]</p>
+    <p>[[+quote:nl2br]]</p>
     [[+cite:notempty=`<footer>[[+cite]]</footer>`]]
 </blockquote>

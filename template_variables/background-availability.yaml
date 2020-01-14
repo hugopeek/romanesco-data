@@ -1,0 +1,15 @@
+id: 128
+type: checkbox
+name: background_availability
+caption: Availability
+description: 'Where would you like to use this background?'
+category: Background
+elements: 'In page headers==header||In ContentBlocks layouts==content||In footer CTAs==footer-cta||In page footers==footer'
+rank: 10
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+header||content||footer-cta||footer

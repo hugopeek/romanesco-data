@@ -7,5 +7,5 @@ properties: 'a:0:{}'
 -----
 
 <div class="[[+column_type]]">
-    [[!$[[+row_tpl]]]]
+    [[$[[+row_tpl]]? &unique_idx=`[[+idx]][[+page]][[+unique_idx]]`]]
 </div>

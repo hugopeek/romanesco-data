@@ -7,5 +7,5 @@ properties: 'a:0:{}'
 -----
 
 <article class="[[+column_type]] publication">
-    [[!$[[+row_tpl]]]]
+    [[$[[+row_tpl]]? &unique_idx=`[[+idx]][[+page]][[+unique_idx]]`]]
 </article>

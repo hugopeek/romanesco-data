@@ -1,0 +1,9 @@
+id: 464
+name: pageNavWrapper
+description: ''
+category: a_nav_pagination
+properties: 'a:0:{}'
+
+-----
+
+[[+first]][[+prev]][[+pages]][[+next]][[+last]]

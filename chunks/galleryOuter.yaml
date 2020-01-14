@@ -7,12 +7,17 @@ properties: 'a:0:{}'
 -----
 
 [[+display_type:eq=`slider`:then=`
-<div class="[[+box_type:contains=`card`:then=`cards`]] slider [[+lightbox:eq=`1`:then=`with lightbox`]] [[+caption:eq=`1`:then=`with caption`]]"
+<div class="[[+box_type:contains=`card`:then=`cards`]] slider-basic [[+lightbox:eq=`1`:then=`with lightbox`]] [[+caption:eq=`1`:then=`with caption`]]"
      data-slick='{
-        "slidesToShow": [[+cols:textToNumber]],
-        "centerMode": [[+center_mode:eq=`1`:then=`true`:else=`false`]],
-        "focusOnSelect": [[+lightbox:eq=`0`:then=`true`:else=`false`]]
-    }'>
+         "infinite": [[+behaviour:contains=`infinite`:then=`true`:else=`false`]],
+         "arrows": [[+behaviour:contains=`arrows`:then=`true`:else=`false`]],
+         "dots": [[+behaviour:contains=`dots`:then=`true`:else=`false`]],
+         "fade": [[+behaviour:contains=`fade`:then=`true`:else=`false`]],
+         "centerMode": [[+behaviour:contains=`center`:then=`true`:else=`false`]],
+         "slidesToShow": [[+cols:textToNumber]],
+         "slidesToScroll": [[+slides_to_scroll]],
+         "focusOnSelect": [[+lightbox:eq=`0`:then=`true`:else=`false`]]
+     }'>
     [[+rows]]
 </div>
 `]]

@@ -1,0 +1,9 @@
+id: 467
+name: pageNavItemDisabled
+description: ''
+category: a_nav_pagination
+properties: 'a:0:{}'
+
+-----
+
+<span class="disabled item">...</span>

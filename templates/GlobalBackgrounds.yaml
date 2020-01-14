@@ -1,6 +1,6 @@
 id: 8
 templatename: GlobalBackgrounds
-description: ''
+description: 'These backgrounds can be applied to page headers, CB layouts (under their Settings wheel) and possibly to other elements too.'
 category: t_global
 icon: icon-image
 properties: 'a:0:{}'

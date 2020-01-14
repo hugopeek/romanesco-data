@@ -1,0 +1,12 @@
+id: 470
+name: pageNavItemLoadMore
+description: ''
+category: a_nav_pagination
+properties: 'a:0:{}'
+
+-----
+
+<button class="ui right labeled icon button more">
+    [[%romanesco.pagination.load_more]]
+    <i class="plus icon"></i>
+</button>

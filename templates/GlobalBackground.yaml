@@ -1,6 +1,6 @@
 id: 27
 templatename: GlobalBackground
-description: ''
+description: 'Each background is a separate resource, in which you can add multiple layers with the Background Elements CB. Output of this template is for preview only. The CSS is generated separately.'
 category: t_global
 icon: icon-file-image-o
 properties: 'a:0:{}'
