@@ -2,7 +2,9 @@ id: 83
 name: offCanvasNav
 description: ''
 category: m_nav_primary
+snippet: "<nav id=\"off-canvas\" class=\"ui right inverted vertical accordion wide sidebar menu\">\n    <div class=\"item home\">\n        <a href=\"[[~[[++site_start]]]]\" class=\"ui image brand badge\">\n            [[%romanesco.menu.brand]]\n        </a>\n        <button class=\"ui tiny compact circular basic inverted right floated close icon button\" title=\"[[%romanesco.menu.close_title]]\">\n            <i class=\"close icon\"></i>\n        </button>\n    </div>\n\n    [[[[++navbar_level:lte=`1`:then=`\n        pdoMenu?\n            &parents=`0`\n            &level=`3`\n            &tplOuter=`navWrapper`\n            &tpl=`navItemWrapper`\n            &tplParentRow=`navItemParent`\n            &tplParentRowActive=`navItemParentActive`\n            &tplInnerRow=`navItem`\n        `\n    ]]]]\n\n    [[$offCanvasNavItemsTheme]]\n</nav>"
 properties: 'a:0:{}'
+content: "<nav id=\"off-canvas\" class=\"ui right inverted vertical accordion wide sidebar menu\">\n    <div class=\"item home\">\n        <a href=\"[[~[[++site_start]]]]\" class=\"ui image brand badge\">\n            [[%romanesco.menu.brand]]\n        </a>\n        <button class=\"ui tiny compact circular basic inverted right floated close icon button\" title=\"[[%romanesco.menu.close_title]]\">\n            <i class=\"close icon\"></i>\n        </button>\n    </div>\n\n    [[[[++navbar_level:lte=`1`:then=`\n        pdoMenu?\n            &parents=`0`\n            &level=`3`\n            &tplOuter=`navWrapper`\n            &tpl=`navItemWrapper`\n            &tplParentRow=`navItemParent`\n            &tplParentRowActive=`navItemParentActive`\n            &tplInnerRow=`navItem`\n        `\n    ]]]]\n\n    [[$offCanvasNavItemsTheme]]\n</nav>"
 
 -----
 
@@ -11,8 +13,8 @@ properties: 'a:0:{}'
         <a href="[[~[[++site_start]]]]" class="ui image brand badge">
             [[%romanesco.menu.brand]]
         </a>
-        <button class="ui tiny compact circular basic inverted right floated close icon button" title="[[%romanesco.menu.close_title]]">
-            <i class="close icon"></i>
+        <button class="ui basic inverted close icon button" title="[[%romanesco.menu.close_title]]">
+            <i class="large close icon"></i>
         </button>
     </div>
 

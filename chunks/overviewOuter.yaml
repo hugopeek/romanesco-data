@@ -2,13 +2,15 @@ id: 117
 name: overviewOuter
 description: ''
 category: o_overviews
+snippet: "[[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]\n\n[[Switch:toPlaceholder=`sortdir_[[+layout_id]]_[[+unique_idx]]`?\n    &get=`[[+sortby]]_[[+sortdir]]`\n    &c1=`menuindex_0`     &do1=`ASC`\n    &c2=`publishedon_0`   &do2=`DESC`\n    &c3=`createdon_0`     &do3=`DESC`\n    &c4=`pagetitle_0`     &do4=`ASC`\n\n    &c5=`menuindex_1`     &do5=`DESC`\n    &c6=`publishedon_1`   &do6=`ASC`\n    &c7=`createdon_1`     &do7=`ASC`\n    &c8=`pagetitle_1`     &do8=`DESC`\n\n    &default=`DESC`\n]]\n<div id=\"[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`ov_[[Time]]` &else=`[[+prefix]]`]]\">\n    <div class=\"ui [[+cols]] [[+[[+prefix]].grid_settings]] [[+responsive:replace=`,== `]] [[+alignment]] [[+padding]] nested overview [[+[[+prefix]].box_type]]\">\n        [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?\n            &element=`getResources`\n            &cacheKey=`overviews`\n            [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]\n\n            &parents=`[[+parent]]`\n            &depth=`[[+depth:default=`0`]]`\n            &limit=`[[+limit:default=`0`]]`\n            &offset=`[[+offset:default=`0`]]`\n            &tpl=`overviewRow[[+[[+prefix]].row_type]]`\n            &includeTVs=`1`\n            &processTVs=`1`\n            &tvPrefix=``\n            &showHidden=`[[+show_hidden:default=`0`]]`\n            &sortby=`[[+sortby]]`\n            &sortdir=`[[+sortdir_[[+layout_id]]_[[+unique_idx]]]]`\n\n            &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`\n            &box_type=`[[+[[+prefix]].box_type]]`\n            &row_type=`[[+[[+prefix]].row_type]]`\n            &column_type=`[[+[[+prefix]].column_type]]`\n            &prefix=`[[+prefix]]`\n            &unique_idx=`[[+unique_idx]]`\n            &title_field=`[[+title_field]]`\n            &title_hierarchy=`[[+title_hierarchy]]`\n            &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`\n            &show_subtitle=`[[+show_subtitle]]`\n            &show_introtext=`[[+show_introtext]]`\n            &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`\n            &de_emphasize=`[[+de_emphasize]]`\n            &img_type=`[[+img_type]]`\n            &icon_type=`[[+icon_type]]`\n            &lazy_load=`[[+lazy_load]]`\n\n            [[+pagination:eq=`1`:then=`\n            &ajaxMode=`[[+pagination_type]]`\n            &ajaxElemWrapper=`#[[+prefix]]`\n            &ajaxElemRows=`#[[+prefix]] .overview`\n            &ajaxElemPagination=`#[[+prefix]] .pagination`\n            &ajaxElemLink=`#[[+prefix]] .pagination a`\n            &ajaxElemMore=`#[[+prefix]] .more`\n            &scrollTop=`0`\n\n            &tplPageWrapper=`pageNavWrapper`\n            &tplPage=`pageNavItem`\n            &tplPageActive=`pageNavItemActive`\n            &tplPageFirst=`pageNavItemIcon@PaginationFirst`\n            &tplPageLast=`pageNavItemIcon@PaginationLast`\n            &tplPagePrev=`pageNavItemIcon@PaginationPrev`\n            &tplPageNext=`pageNavItemIcon@PaginationNext`\n            &tplPageSkip=`pageNavItemDisabled`\n            &tplPageFirstEmpty=`pageNavItemIconDisabled@PaginationFirst`\n            &tplPageLastEmpty=`pageNavItemIconDisabled@PaginationLast`\n            &tplPagePrevEmpty=`pageNavItemIconDisabled@PaginationPrev`\n            &tplPageNextEmpty=`pageNavItemIconDisabled@PaginationNext`\n            &ajaxTplMore=`pageNavItemLoadMore`\n\n            &pageVarKey=`[[+prefix]]-page`\n            &pageNavVar=`[[+prefix]].page.nav`\n            `]]\n        ]]\n    </div>\n\n    [[[[+pagination:eq=`1`:then=`$paginationFluid? &prefix=`[[+prefix]]``]]]]\n</div>"
 properties: 'a:0:{}'
+content: "[[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]\n\n[[Switch:toPlaceholder=`sortdir_[[+layout_id]]_[[+unique_idx]]`?\n    &get=`[[+sortby]]_[[+sortdir]]`\n    &c1=`menuindex_0`     &do1=`ASC`\n    &c2=`publishedon_0`   &do2=`DESC`\n    &c3=`createdon_0`     &do3=`DESC`\n    &c4=`pagetitle_0`     &do4=`ASC`\n\n    &c5=`menuindex_1`     &do5=`DESC`\n    &c6=`publishedon_1`   &do6=`ASC`\n    &c7=`createdon_1`     &do7=`ASC`\n    &c8=`pagetitle_1`     &do8=`DESC`\n\n    &default=`DESC`\n]]\n<div id=\"[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`ov_[[Time]]` &else=`[[+prefix]]`]]\">\n    <div class=\"ui [[+cols]] [[+[[+prefix]].grid_settings]] [[+responsive:replace=`,== `]] [[+alignment]] [[+padding]] nested overview [[+[[+prefix]].box_type]]\">\n        [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?\n            &element=`getResources`\n            &cacheKey=`overviews`\n            [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]\n\n            &parents=`[[+parent]]`\n            &depth=`[[+depth:default=`0`]]`\n            &limit=`[[+limit:default=`0`]]`\n            &offset=`[[+offset:default=`0`]]`\n            &tpl=`overviewRow[[+[[+prefix]].row_type]]`\n            &includeTVs=`1`\n            &processTVs=`1`\n            &tvPrefix=``\n            &showHidden=`[[+show_hidden:default=`0`]]`\n            &sortby=`[[+sortby]]`\n            &sortdir=`[[+sortdir_[[+layout_id]]_[[+unique_idx]]]]`\n\n            &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`\n            &box_type=`[[+[[+prefix]].box_type]]`\n            &row_type=`[[+[[+prefix]].row_type]]`\n            &column_type=`[[+[[+prefix]].column_type]]`\n            &prefix=`[[+prefix]]`\n            &unique_idx=`[[+unique_idx]]`\n            &title_field=`[[+title_field]]`\n            &title_hierarchy=`[[+title_hierarchy]]`\n            &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`\n            &show_subtitle=`[[+show_subtitle]]`\n            &show_introtext=`[[+show_introtext]]`\n            &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`\n            &de_emphasize=`[[+de_emphasize]]`\n            &img_type=`[[+img_type]]`\n            &icon_type=`[[+icon_type]]`\n            &lazy_load=`[[+lazy_load]]`\n\n            [[+pagination:eq=`1`:then=`\n            &ajaxMode=`[[+pagination_type]]`\n            &ajaxElemWrapper=`#[[+prefix]]`\n            &ajaxElemRows=`#[[+prefix]] .overview`\n            &ajaxElemPagination=`#[[+prefix]] .pagination`\n            &ajaxElemLink=`#[[+prefix]] .pagination a`\n            &ajaxElemMore=`#[[+prefix]] .more`\n            &scrollTop=`0`\n\n            &tplPageWrapper=`pageNavWrapper`\n            &tplPage=`pageNavItem`\n            &tplPageActive=`pageNavItemActive`\n            &tplPageFirst=`pageNavItemIcon@PaginationFirst`\n            &tplPageLast=`pageNavItemIcon@PaginationLast`\n            &tplPagePrev=`pageNavItemIcon@PaginationPrev`\n            &tplPageNext=`pageNavItemIcon@PaginationNext`\n            &tplPageSkip=`pageNavItemDisabled`\n            &tplPageFirstEmpty=`pageNavItemIconDisabled@PaginationFirst`\n            &tplPageLastEmpty=`pageNavItemIconDisabled@PaginationLast`\n            &tplPagePrevEmpty=`pageNavItemIconDisabled@PaginationPrev`\n            &tplPageNextEmpty=`pageNavItemIconDisabled@PaginationNext`\n            &ajaxTplMore=`pageNavItemLoadMore`\n\n            &pageVarKey=`[[+prefix]]-page`\n            &pageNavVar=`[[+prefix]].page.nav`\n            `]]\n        ]]\n    </div>\n\n    [[[[+pagination:eq=`1`:then=`$paginationFluid? &prefix=`[[+prefix]]``]]]]\n</div>"
 
 -----
 
 [[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]
 
-[[Switch:toPlaceholder=`sortdir_[[+layout_id]]_[[+unique_idx]]`?
+[[Switch:toPlaceholder=`[[+prefix]].sortdir`?
     &get=`[[+sortby]]_[[+sortdir]]`
     &c1=`menuindex_0`     &do1=`ASC`
     &c2=`publishedon_0`   &do2=`DESC`
@@ -22,70 +24,71 @@ properties: 'a:0:{}'
 
     &default=`DESC`
 ]]
-<div id="[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`ov_[[Time]]` &else=`[[+prefix]]`]]">
-    <div class="ui [[+cols]] [[+[[+prefix]].grid_settings]] [[+responsive:replace=`,== `]] [[+alignment]] [[+padding]] nested overview [[+[[+prefix]].box_type]]">
-        [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
-            &element=`getResources`
-            &cacheKey=`overviews`
-            [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
 
-            &parents=`[[+parent]]`
-            &depth=`[[+depth:default=`0`]]`
-            &limit=`[[+limit:default=`0`]]`
-            &offset=`[[+offset:default=`0`]]`
-            &tpl=`overviewRow[[+[[+prefix]].row_type]]`
-            &includeTVs=`1`
-            &processTVs=`1`
-            &tvPrefix=``
-            &showHidden=`[[+show_hidden:default=`0`]]`
-            &sortby=`[[+sortby]]`
-            &sortdir=`[[+sortdir_[[+layout_id]]_[[+unique_idx]]]]`
+[[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
+    &element=`getResources`
+    &cacheKey=`overviews`
+    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
 
-            &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`
-            &box_type=`[[+[[+prefix]].box_type]]`
-            &row_type=`[[+[[+prefix]].row_type]]`
-            &column_type=`[[+[[+prefix]].column_type]]`
-            &prefix=`[[+prefix]]`
-            &unique_idx=`[[+unique_idx]]`
-            &title_field=`[[+title_field]]`
-            &title_hierarchy=`[[+title_hierarchy]]`
-            &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`
-            &show_subtitle=`[[+show_subtitle]]`
-            &show_introtext=`[[+show_introtext]]`
-            &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`
-            &de_emphasize=`[[+de_emphasize]]`
-            &img_type=`[[+img_type]]`
-            &icon_type=`[[+icon_type]]`
-            &lazy_load=`[[+lazy_load]]`
+    &parents=`[[+parent]]`
+    &depth=`[[+depth:default=`0`]]`
+    &limit=`[[+limit:default=`0`]]`
+    &offset=`[[+offset:default=`0`]]`
+    &tpl=`overviewRow[[+[[+prefix]].row_type]]`
+    &tplWrapper=`overviewWrapper[[+pagination:eq=`1`:then=`Pagination`]]`
+    &includeTVs=`1`
+    &processTVs=`1`
+    &tvPrefix=``
+    &showHidden=`[[+show_hidden:default=`0`]]`
+    &sortby=`[[+sortby]]`
+    &sortdir=`[[+[[+prefix]].sortdir]]`
 
-            [[+pagination:eq=`1`:then=`
-            &ajaxMode=`[[+pagination_type]]`
-            &ajaxElemWrapper=`#[[+prefix]]`
-            &ajaxElemRows=`#[[+prefix]] .overview`
-            &ajaxElemPagination=`#[[+prefix]] .pagination`
-            &ajaxElemLink=`#[[+prefix]] .pagination a`
-            &ajaxElemMore=`#[[+prefix]] .more`
-            &scrollTop=`0`
+    &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`
+    &box_type=`[[+[[+prefix]].box_type]]`
+    &row_type=`[[+[[+prefix]].row_type]]`
+    &column_type=`[[+[[+prefix]].column_type]]`
+    &grid_settings=`[[+[[+prefix]].grid_settings]]`
+    &cols=`[[+cols]]`
+    &padding=`[[+padding]]`
+    &alignment=`[[+alignment]]`
+    &responsive=`[[+responsive]]`
+    &prefix=`[[+prefix]]`
+    &unique_idx=`[[+unique_idx]]`
+    &title_field=`[[+title_field]]`
+    &title_hierarchy=`[[+title_hierarchy]]`
+    &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`
+    &show_subtitle=`[[+show_subtitle]]`
+    &show_introtext=`[[+show_introtext]]`
+    &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`
+    &de_emphasize=`[[+de_emphasize]]`
+    &img_type=`[[+img_type]]`
+    &icon_type=`[[+icon_type]]`
+    &lazy_load=`[[+lazy_load]]`
 
-            &tplPageWrapper=`pageNavWrapper`
-            &tplPage=`pageNavItem`
-            &tplPageActive=`pageNavItemActive`
-            &tplPageFirst=`pageNavItemIcon@PaginationFirst`
-            &tplPageLast=`pageNavItemIcon@PaginationLast`
-            &tplPagePrev=`pageNavItemIcon@PaginationPrev`
-            &tplPageNext=`pageNavItemIcon@PaginationNext`
-            &tplPageSkip=`pageNavItemDisabled`
-            &tplPageFirstEmpty=`pageNavItemIconDisabled@PaginationFirst`
-            &tplPageLastEmpty=`pageNavItemIconDisabled@PaginationLast`
-            &tplPagePrevEmpty=`pageNavItemIconDisabled@PaginationPrev`
-            &tplPageNextEmpty=`pageNavItemIconDisabled@PaginationNext`
-            &ajaxTplMore=`pageNavItemLoadMore`
+    [[+pagination:eq=`1`:then=`
+    &ajaxMode=`[[+pagination_type]]`
+    &ajaxElemWrapper=`#[[+prefix]]`
+    &ajaxElemRows=`#[[+prefix]] .overview`
+    &ajaxElemPagination=`#[[+prefix]] .pagination`
+    &ajaxElemLink=`#[[+prefix]] .pagination a`
+    &ajaxElemMore=`#[[+prefix]] .more`
+    &scrollTop=`0`
 
-            &pageVarKey=`[[+prefix]]-page`
-            &pageNavVar=`[[+prefix]].page.nav`
-            `]]
-        ]]
-    </div>
+    &tplPageWrapper=`pageNavWrapper`
+    &tplPage=`pageNavItem`
+    &tplPageActive=`pageNavItemActive`
+    &tplPageFirst=`pageNavItemIcon@PaginationFirst`
+    &tplPageLast=`pageNavItemIcon@PaginationLast`
+    &tplPagePrev=`pageNavItemIcon@PaginationPrev`
+    &tplPageNext=`pageNavItemIcon@PaginationNext`
+    &tplPageSkip=`pageNavItemDisabled`
+    &tplPageFirstEmpty=`pageNavItemIconDisabled@PaginationFirst`
+    &tplPageLastEmpty=`pageNavItemIconDisabled@PaginationLast`
+    &tplPagePrevEmpty=`pageNavItemIconDisabled@PaginationPrev`
+    &tplPageNextEmpty=`pageNavItemIconDisabled@PaginationNext`
+    &ajaxTplMore=`pageNavItemLoadMore`
 
-    [[[[+pagination:eq=`1`:then=`$paginationFluid? &prefix=`[[+prefix]]``]]]]
-</div>
+    &pageVarKey=`[[+prefix]]-page`
+    &pageNavVar=`[[+prefix]].page.nav`
+    `]]
+]]

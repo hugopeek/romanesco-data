@@ -1,6 +1,6 @@
 id: 303
 name: cbGalleryDisplayType
-description: ''
+description: DEPRECATED.
 category: a_cb_fields
 properties: 'a:0:{}'
 

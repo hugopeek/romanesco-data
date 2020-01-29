@@ -30,6 +30,7 @@ switch ($modx->event->name) {
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/manager.css?v=' . $versionCSS);
 
         // Load JS and additional dependencies
+        $controller->addHtml('<script src="/assets/components/romanescobackyard/js/jquery.min.js"></script>');
         $controller->addHtml('<script src="/assets/semantic/dist/themes/romanesco/assets/vendor/arrive/arrive.min.js"></script>');
         $controller->addHtml('<script src="/assets/components/romanescobackyard/js/manager.js?v=' . $versionJS . '"></script>');
         break;

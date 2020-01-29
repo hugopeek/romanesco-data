@@ -1,0 +1,11 @@
+id: 473
+name: overviewWrapper
+description: ''
+category: m_overviews
+properties: 'a:0:{}'
+
+-----
+
+<div class="ui [[+cols]] [[+grid_settings]] [[+responsive:replace=`,== `]] [[+alignment]] [[+padding]] nested overview [[+box_type]]">
+    [[+output]]
+</div>

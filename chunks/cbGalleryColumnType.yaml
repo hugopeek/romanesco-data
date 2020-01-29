@@ -1,0 +1,13 @@
+id: 476
+name: cbGalleryColumnType
+description: 'Defines the class names for individual gallery items. In ContentBlocks, this is presented to the user as Caption type because this setting mostly affects how captions are being displayed'
+category: a_cb_fields
+properties: 'a:0:{}'
+
+-----
+
+Text only (transparent background)=air pocket
+Polaroid (solid white background)=fluid card
+Light overlay (white transparent background, on top of image)=fluid overlay card
+Dark overlay (black transparent background)=fluid inverted overlay card
+Lightbox only (visible after clicking on image)=minimal
