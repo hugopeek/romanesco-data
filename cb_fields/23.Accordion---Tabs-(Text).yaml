@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Accordion / Tabs (Text)'
 description: ''
-sortorder: 22
+sortorder: 21
 category: 4
 icon: tabs
 template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &heading_level=`[[+heading_level]]`\n    &content=`[[+content]]`\n    &padding=`[[+padding]]`\n    &tab_type=`[[+tab_type]]`\n    &idx=`[[+idx]]`\n]]"

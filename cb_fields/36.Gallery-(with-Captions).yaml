@@ -1,0 +1,13 @@
+id: 36
+parent_properties: ''
+input: repeater
+name: 'Gallery (with Captions)'
+description: ''
+sortorder: 15
+category: 2
+icon: gallery
+template: "[[$galleryRowImageCaption?\n    &url=`[[+image]]`\n    &caption=`[[+caption]]`\n    &column_type=`[[+column_type]]`\n    &lightbox=`[[+lightbox]]`\n    &unique_idx=`[[+unique_idx]]`\n    &idx=`[[+idx]]`\n]]"
+properties: '{"wrapper_template":"[[$galleryOuter?\n    &rows=`[[+rows]]`\n    &cols=`[[+cols]]`\n    &padding=`[[+padding]]`\n    &caption=`1`\n    &lightbox=`[[+lightbox]]`\n    &responsive=`[[+responsive]]`\n    &unique_idx=`[[+unique_idx]]`\n    &layout_id=`[[+layout_id]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"2","layout_style":"default"}'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"column_type","title":"Caption type","fieldtype":"select","default_value":"fluid card","fieldoptions":"[[$cbGalleryColumnType]]","field_is_exposed":"modal","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","process_tags":"1"},{"reference":"cols","title":"Column count","fieldtype":"select","default_value":"one","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"padding","title":"Extra padding","fieldtype":"select","default_value":"","fieldoptions":"[[$cbSettingPadding]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"responsive","title":"Responsive options","fieldtype":"checkbox","default_value":"stackable,doubling","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutResponsiveOptions]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"lightbox","title":"Lightbox","fieldtype":"radio","default_value":"0","fieldoptions":"Disabled=0\nEnabled=1","field_is_exposed":"modal"}]'

@@ -3,7 +3,7 @@ parent_properties: ''
 input: layout
 name: 'Basic Layout (Nested)'
 description: 'Only available in Backyard and Slider layouts. Allows you to add basic (root level) layouts as nested layout.'
-sortorder: 21
+sortorder: 17
 category: 4
 icon: template_02
 template: '[[+value]]'

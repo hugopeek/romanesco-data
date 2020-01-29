@@ -3,7 +3,7 @@ parent_properties: ''
 input: layout
 name: Segments
 description: 'A segment is used to create a grouping of related content. In other words: you can create a visible border around a collection of ContentBlocks by putting them inside a segment. You can also define a group of segments. They appear together as 1 segment, but with a subtle divider.'
-sortorder: 26
+sortorder: 25
 category: 4
 icon: segments
 icon_type: custom

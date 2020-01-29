@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Twitter Feed'
 description: ''
-sortorder: 31
+sortorder: 32
 category: 3
 icon: twitter
 icon_type: custom

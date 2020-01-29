@@ -3,7 +3,7 @@ parent_properties: ''
 input: image
 name: 'Icon (SVG)'
 description: ''
-sortorder: 14
+sortorder: 12
 category: 2
 icon: image
 icon_type: ''
