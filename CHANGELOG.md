@@ -1,5 +1,16 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.7.1
+Released on January 29, 2020
+
+New features:
+- Add license (GPL-v3)
+
+Fixes and improvements:
+- Improve styling of off-canvas mobile menu
+- Replace Slick slider with Swiper
+- Move Overview pagination wrapper to chunk tpl
+
 ## v1.7.0
 Released on January 14, 2020
 
