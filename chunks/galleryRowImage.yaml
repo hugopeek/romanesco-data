@@ -2,9 +2,7 @@ id: 301
 name: galleryRowImage
 description: 'Basic image pattern, for use in gallery or slider. It can contain a lightbox link, which opens an enlargement of the image in a full-screen overlay window.'
 category: m_presentation
-snippet: "<figure class=\"[[+classes]]\">\n    [[+lightbox:eq=`1`:then=`\n    <a class=\"ui image\" href=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width:mpy=`1.5`]]&q=[[++img_quality]]&zc=1`]]\">\n        <img src=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`]]\" alt=\"[[+title]]\">\n    </a>\n    `:else=`\n    <img class=\"ui image\" src=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`]]\" alt=\"[[+title]]\">\n    `]]\n</figure>"
 properties: 'a:0:{}'
-content: "<figure class=\"[[+classes]]\">\n    [[+lightbox:eq=`1`:then=`\n    <a class=\"ui image\" href=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width:mpy=`1.5`]]&q=[[++img_quality]]&zc=1`]]\">\n        <img src=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`]]\" alt=\"[[+title]]\">\n    </a>\n    `:else=`\n    <img class=\"ui image\" src=\"[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`]]\" alt=\"[[+title]]\">\n    `]]\n</figure>"
 
 -----
 
