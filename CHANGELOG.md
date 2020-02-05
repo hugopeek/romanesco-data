@@ -1,5 +1,12 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.7.2
+Released on ...
+
+Fixes and improvements:
+- Add system default setting for CB layout backgrounds
+- Add non-white class to body if custom background is set
+
 ## v1.7.1
 Released on January 29, 2020
 
