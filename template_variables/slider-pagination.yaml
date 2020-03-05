@@ -1,0 +1,14 @@
+id: 131
+type: listbox
+name: slider_pagination
+caption: Pagination
+category: 'Slider - Settings'
+elements: 'None==none||Bullets==bullets||Fraction==fraction||Progress bar==progressbar'
+rank: 32
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+bullets

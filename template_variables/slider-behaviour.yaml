@@ -3,12 +3,13 @@ type: checkbox
 name: slider_behaviour
 caption: Behaviour
 category: 'Slider - Settings'
-elements: 'Infinite loop sliding==infinite||Show previous / next arrows==arrows||Show dot indicators==dots||Fade instead of slide==fade||Autoplay==autoplay'
+elements: 'Infinite loop==loop||Show previous / next arrows==arrows||Keyboard control==keyboard||Free scrolling==free||Autoplay==autoplay'
 rank: 30
+display: delim
 properties: 'a:0:{}'
 input_properties: null
-output_properties: null
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
 
 -----
 
-arrows,dots
+arrows,keyboard

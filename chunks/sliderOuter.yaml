@@ -1,11 +1,12 @@
 id: 124
 name: sliderOuter
-description: ''
+description: 'DEPRECATED. Slider now uses Swiper.js and this chunk doesn''t seem to be used anywhere..'
 category: o_presentation
 properties: 'a:0:{}'
 
 -----
 
+[[- DEPRECATED. Slider now uses Swiper.js and this chunk doesn't seem to be used anywhere..]]
 <div class="[[+display_type:empty=`slider-basic`]] [[+lightbox:eq=`1`:then=`lightbox`]]"
      data-slick='{
          "infinite": [[+behaviour:contains=`infinite`:then=`true`:else=`false`]],
