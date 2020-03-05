@@ -137,16 +137,16 @@ data:
             - name
         exclude_keys:
             - editedon
-    media_sources:
-        class: modMediaSource
-        primary: name
-    media_sources_elements:
-        class: sources.modMediaSourceElement
-        primary:
-            - source
-            - object
-            - object_class
-            - context_key
+    #media_sources:
+    #    class: modMediaSource
+    #    primary: name
+    #media_sources_elements:
+    #    class: sources.modMediaSourceElement
+    #    primary:
+    #        - source
+    #        - object
+    #        - object_class
+    #        - context_key
     menus:
         class: modMenu
         primary: text

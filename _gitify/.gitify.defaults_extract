@@ -27,6 +27,25 @@ data:
             - 'AND:key:NOT LIKE': '%.assets_url'
             - 'AND:key:NOT LIKE': '%.core_path'
 
+    media_sources:
+        class: modMediaSource
+        primary: name
+        where:
+            - 'id:NOT LIKE': '______'
+    media_sources_elements:
+        class: sources.modMediaSourceElement
+        primary:
+            - source
+            - object
+            - object_class
+            - context_key
+        where:
+            - 'object:NOT LIKE': '______'
+            - 'context_key:IN':
+                - 'web'
+                - 'global'
+                - 'hub'
+
     # ClientConfig
     cg_groups:
         class: cgGroup

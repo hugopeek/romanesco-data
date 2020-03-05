@@ -57,20 +57,6 @@ data:
             - editedon
         where:
             - 'id:NOT RLIKE': '[[:digit:]]{6,}'
-    media_sources:
-        class: modMediaSource
-        primary: name
-        where:
-            - 'id:NOT RLIKE': '[[:digit:]]{6,}'
-    media_sources_elements:
-        class: sources.modMediaSourceElement
-        primary:
-            - source
-            - object
-            - object_class
-            - context_key
-        where:
-            - 'object:NOT RLIKE': '[[:digit:]]{6,}'
     menus:
         class: modMenu
         primary: text
