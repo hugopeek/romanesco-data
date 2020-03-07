@@ -225,9 +225,9 @@ data:
         primary:
             - set
             - name
-    member_groups:
-        class: modUserGroupMember
-        primary: id
+    #member_groups:
+    #    class: modUserGroupMember
+    #    primary: id
     membergroup_names:
         class: modUserGroup
         primary: name
@@ -387,7 +387,7 @@ data:
     #    class: rmOptionGroup
     #    primary:
     #        - id
-    #        - alias
+    #        - name
 
     #romanesco_timeline_project:
     #    class: rmTimelineProject
