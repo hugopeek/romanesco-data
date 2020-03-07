@@ -1,14 +1,26 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.7.2
-Released on ...
+Released on March 7, 2020
+
+> Patterns: 0.15.2-pl
 
 Fixes and improvements:
+- Move media sources to defaults (in romanesco-soil)
+- Add keyboard control to slider
+- Switch to Swiper in Presentation template
+- Use medium class instead of empty value for field sizes
+- Don't initialize slider if there aren't enough slides
+- Fix calculation of max thumb height in lazy load placeholders
+- Fix lazy loading of images in slider
 - Add system default setting for CB layout backgrounds
 - Add non-white class to body if custom background is set
+- Fix property sets in pagination icon chunks
 
 ## v1.7.1
 Released on January 29, 2020
+
+> Patterns: 0.15.1-pl
 
 New features:
 - Add license (GPL-v3)
@@ -20,6 +32,8 @@ Fixes and improvements:
 
 ## v1.7.0
 Released on January 14, 2020
+
+> Patterns: 0.15.0-pl
 
 New features:
 - Add layout for creating sliders with content elements
@@ -45,6 +59,8 @@ Fixes and improvements:
 ## v1.6.5
 Released on December 17, 2019
 
+> Patterns: 0.14.6-pl
+
 New features:
 - Add Date and Date Range fields to FormBlocks
 
@@ -60,6 +76,8 @@ Fixes and improvements:
 
 ## v1.6.4
 Released on November 19, 2019
+
+> Patterns: 0.14.6-pl
 
 New features:
 - Add jsonGetObject snippet for templating JSON output with chunks
@@ -223,73 +241,73 @@ Fixes and improvements:
 ## v1.3.2
 Released on October 4, 2018
 
-- [Data] Add OpenGraph metadata to head
-- [Content] Add snippet for clipping characters from start or end of string
-- [Content] Add plugin for injecting inverted classes into content (requires HtmlPageDom)
-- [Content] Add options for controlling footer and bottom CTA content
-- [MODX] Include homepage in basic template list, so they also have Overview TVs
-- [Overviews] Fix author image in compact article overview template
-- [Overviews] Disable Disqus comment count in overviews (was acting buggy)
-- [Build] Prevent decimals in calculated image dimensions from breaking variables file
-- [Configuration] Allow overrides for head and footer chunks in all templates
-- [FormBlocks] Fix issues when using multiple file upload fields in form
-- [FormBlocks] Sort available forms by menuindex in Forms CB
+- Add OpenGraph metadata to head
+- Add snippet for clipping characters from start or end of string
+- Add plugin for injecting inverted classes into content (requires HtmlPageDom)
+- Add options for controlling footer and bottom CTA content
+- Include homepage in basic template list, so they also have Overview TVs
+- Fix author image in compact article overview template
+- Disable Disqus comment count in overviews (was acting buggy)
+- Prevent decimals in calculated image dimensions from breaking variables file
+- Allow overrides for head and footer chunks in all templates
+- Fix issues when using multiple file upload fields in form
+- Sort available forms by menuindex in Forms CB
 
 ## v1.3.1
 Released on September 18, 2018
 
-- [ContentBlocks] Add option to wrap CTAs in segment
-- [ContentBlocks] Add size and layout_type settings to Quote CB
-- [ContentBlocks] Add titles to button links
-- [ContentBlocks] Change message size to generic field size setting and use for Quote
-- [ContentBlocks] Add inverted layout type to Accordions
-- [ContentBlocks] Fix empty subtitles returning as NULL in Tab headers
-- [Overviews] Fix fallback image in Publication overviews
-- [FormBlocks] Always set first value in form dropdown as empty default option
-- [FormBlocks] Better explanations for Label position setting
-- [FormBlocks] Fix caching of Select options (caching of nested tags changed in MODX 2.6)
-- [MODX] Remove hideEmptyTVCategories plugin (hidden by default in MODX 2.6)
+- Add option to wrap CTAs in segment
+- Add size and layout_type settings to Quote CB
+- Add titles to button links
+- Change message size to generic field size setting and use for Quote
+- Add inverted layout type to Accordions
+- Fix empty subtitles returning as NULL in Tab headers
+- Fix fallback image in Publication overviews
+- Always set first value in form dropdown as empty default option
+- Better explanations for Label position setting
+- Fix caching of Select options (caching of nested tags changed in MODX 2.6)
+- Remove hideEmptyTVCategories plugin (hidden by default in MODX 2.6)
 
 ## v1.3.0
 Released on July 27, 2018
 
-- [MODX] Shorten element descriptions to 191 characters (for MODX 2.6)
-- [Social] Add Github to social buttons (and some other small tweaks)
-- [Data] Load Google Analytics if configuration / context setting is set
-- [Backyard] Disable raw code view in pattern examples (this broke in MODX 2.6)
-- [Backyard] Add setting to make project hub private (requires Login)
+- Shorten element descriptions to 191 characters (for MODX 2.6)
+- Add Github to social buttons (and some other small tweaks)
+- Load Google Analytics if configuration / context setting is set
+- Disable raw code view in pattern examples (this broke in MODX 2.6)
+- Add setting to make project hub private (requires Login)
 
 ## v1.2.0
 Released on June 6, 2018
 
-- [Feedback] Add elements for implementing comments (based on Tickets)
-- [Information] Add elements for creating a Knowledge Base
-- [Overviews] Fix author images in Publication tpls
-- [Backgrounds] Use (optional) portrait image on mobile
-- [Backgrounds] Get rid of hardcoded responsive image dimensions
-- [FormBlocks] Add option to change form size
-- [FormBlocks] Add ability to insert your own submit button
-- [FormBlocks] Use alternative value in dropdown if one is defined in CB
-- [FormBlocks] Display error message under form field
-- [Configuration] Add option to disable header
-- [Configuration] Add option to disable or override toolbar
+- Add elements for implementing comments (based on Tickets)
+- Add elements for creating a Knowledge Base
+- Fix author images in Publication tpls
+- Use (optional) portrait image on mobile
+- Get rid of hardcoded responsive image dimensions
+- Add option to change form size
+- Add ability to insert your own submit button
+- Use alternative value in dropdown if one is defined in CB
+- Display error message under form field
+- Add option to disable header
+- Add option to disable or override toolbar
 
 ## v1.1.0
 Released on January 16, 2018
 
-- [Configuration] Add settings to change styling theme
-- [ContentBlocks] Add Cards field
-- [ContentBlocks] Disable markdown text CB
-- [ContentBlocks] Control responsive column behavior in nested layouts
-- [ContentBlocks] Change UI of Gallery repeater
-- [ContentBlocks] Improvements to Accordion / Tabs field
-- [Gitify] Include content types in build config
-- [Gitify] Include plugin events in build config
-- [Gitify] Exclude CB access policy for context
-- [Gitify] Exclude gateway context settings
-- [Gitify] Add .gitify for extracting CB edits only
-- [Gitify] Add .gitify for installs that load patterns with GPM
-- [Gitify] Include Gitify configuration files
+- Add settings to change styling theme
+- Add Cards field
+- Disable markdown text CB
+- Control responsive column behavior in nested layouts
+- Change UI of Gallery repeater
+- Improvements to Accordion / Tabs field
+- Include content types in build config
+- Include plugin events in build config
+- Exclude CB access policy for context
+- Exclude gateway context settings
+- Add .gitify for extracting CB edits only
+- Add .gitify for installs that load patterns with GPM
+- Include Gitify configuration files
 
 
 ## v1.0.0
