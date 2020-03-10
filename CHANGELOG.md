@@ -1,5 +1,13 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.7.4
+Released on ...
+
+> Patterns: ...
+
+Fixes and improvements:
+- Fix position of availability TVs in Background and CTA form customizations
+
 ## v1.7.3
 Released on March 10, 2020
 
