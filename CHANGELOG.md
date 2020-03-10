@@ -1,5 +1,15 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.7.3
+Released on March 10, 2020
+
+> Patterns: 0.15.3-pl
+
+Fixes and improvements:
+- Allow using a Global Background image without defining any crops
+- Set higher event priority for generateStaticCSS plugin
+- Prevent fatal error in jsonGetObject when JSON input is not present or invalid
+
 ## v1.7.2
 Released on March 7, 2020
 
