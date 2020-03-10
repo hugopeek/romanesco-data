@@ -31,13 +31,44 @@ $outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, '');
 $jsonArray = json_decode($json, true);
 $output = array();
 
+//$modx->log(modX::LOG_LEVEL_ERROR, print_r($jsonArray,1));
+
+// Return directly if JSON input is not present or valid
+if (!$jsonArray) {
+    $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] No valid JSON input provided.');
+    switch (json_last_error()) {
+        case JSON_ERROR_NONE:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] No errors');
+            break;
+        case JSON_ERROR_DEPTH:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Maximum stack depth exceeded');
+            break;
+        case JSON_ERROR_STATE_MISMATCH:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Underflow or the modes mismatch');
+            break;
+        case JSON_ERROR_CTRL_CHAR:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Unexpected control character found');
+            break;
+        case JSON_ERROR_SYNTAX:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Syntax error, malformed JSON');
+            break;
+        case JSON_ERROR_UTF8:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Malformed UTF-8 characters, possibly incorrectly encoded');
+            break;
+        default:
+            $modx->log(modX::LOG_LEVEL_INFO, '[jsonGetObject] Unknown error');
+            break;
+    }
+    return '';
+}
+
 // Search array for given object
 $result = $romanesco->recursiveArraySearch($jsonArray,$object);
 
 // Flatten first level, since that's always the full JSON object itself
 $result = $result[0];
 
-// Return result directly if it's no longer an array
+// Return result if it's no longer an array
 if (!is_array($result)) {
     return $result;
 }

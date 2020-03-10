@@ -21,6 +21,9 @@ content: "/**\n * generateStaticCSS\n *\n * Creates static CSS files for each co
  * backgrounds at root level of the Global Backgrounds container.
  *
  * CSS files are regenerated each time a GlobalBackgrounds resource is saved.
+ *
+ * NB! The plugin priority should be set to something higher than 0. Otherwise,
+ * users will need to save the resource twice to see their changes reflected.
  */
 
 switch ($modx->event->name) {
@@ -50,7 +53,7 @@ switch ($modx->event->name) {
             $context = $container->get('alias');
 
             // Generate CSS for each context
-            $css = $modx->getChunk('css', array(
+            $css = $modx->getChunk($cssChunk, array(
                 'context' => $context,
             ));
 
@@ -65,7 +68,7 @@ switch ($modx->event->name) {
 
         // Also generate a default CSS file
         $staticFile = $modx->getOption('base_path') . 'assets/css/site.css';
-        $css = $modx->getChunk('css');
+        $css = $modx->getChunk($cssChunk);
 
         if (!$modx->cacheManager->writeFile($staticFile, $css)) {
             $modx->log(modX::LOG_LEVEL_ERROR, "Error caching output from Resource {$modx->resource->get('id')} to static file {$staticFile}", '', __FUNCTION__, __FILE__, __LINE__);
