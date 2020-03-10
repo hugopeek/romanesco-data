@@ -5,6 +5,6 @@ name: tv128
 description: null
 container: modx-panel-resource
 rule: tvMove
-value: modx-resource-main-left
+value: modx-resource-main-right
 constraint_class: modResource
 rank: 20
