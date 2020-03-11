@@ -28,12 +28,21 @@ content: "/**\n * generateStaticCSS\n *\n * Creates static CSS files for each co
 
 switch ($modx->event->name) {
     case 'OnDocFormSave':
+        $exit = '';
 
-        // Abort if resource template is not GlobalBackground(s)
+        // Exit if resource template is not GlobalBackground(s)
         $templateID = $resource->get('template');
         if ($templateID != 27 && $templateID != 8) {
-            return true;
+            $exit = 1;
         }
+
+        // But continue if a header background is being set
+        if ($resource->getTVValue('header_background_img')) {
+            $exit = 0;
+        }
+
+        // Leave the EU?
+        if ($exit) return true;
 
         // Get all background containers
         $bgContainers = $modx->getCollection('modResource', array(
