@@ -9,6 +9,7 @@ New features:
 - Add pagination type setting to Overviews
 
 Fixes and improvements:
+- Remove orphaned files from extract
 - Fix timeline in project hub by referencing the correct classname
 - Fix position of availability TVs in Background and CTA form customizations
 
