@@ -3,6 +3,7 @@ templatename: ArticleReadability
 description: ''
 category: t_publication
 icon: icon-pencil
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n[[!setUserPlaceholders? &userId=`[[*author_id]]`]]\n[[!Hits? &punch=`[[*id]]`]]\n\n[[[[If?\n    &subject=`[[$headTheme]]`\n    &operator=`isnull`\n    &then=`$head`\n    &else=`$headTheme`\n]]]]\n\n<body id=\"[[*alias]]\" class=\"narrow publication\">\n\n<div class=\"pusher\">\n    [[$headerBasic?\n        &masthead=`0`\n        &hero=`1`\n        &search=`0`\n    ]]\n\n    [[[[If?\n        &subject=`[[$toolbarBasicTheme]]`\n        &operator=`isnull`\n        &then=`$toolbarBasic`\n        &else=`$toolbarBasicTheme`\n    ]]]]\n\n    <main id=\"main\" role=\"main\">\n        <article id=\"content\">\n\n            <div class=\"ui text container\">\n                <div class=\"ui two column grid\">\n                    <div class=\"column\">\n                        <a href=\"[[~[[*parent]]]]\" class=\"basic ui button\"><i class=\"icon left arrow\"></i>[[%romanesco.article.back_to_overview]]</a>\n                    </div>\n                    <div class=\"right aligned column\">\n                        [[!$socialShareButtons? &button_type=`basic`]]\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"ui introduction text container\">\n                <h1 class=\"ui huge header\">[[*pagetitle]]</h1>\n                <p class=\"meta date\"><em>[[*publishedon:strtotime:date=`%e %B %Y`]]</em></p>\n            </div>\n\n            [[*content]]\n\n        </article>\n\n        [[*comments_toggle:eq=`1`:then=`\n        <section id=\"comments\" class=\"ui text container\">\n            <h2 class=\"ui big header\">[[%romanesco.article.comments]]</h2>\n            <div id=\"[[++romanesco.[[++comment_platform:lcase]]_div_id]]\"></div>\n        </section>\n        `]]\n\n        <div class=\"ui vertical stripe segment white\">\n            <div class=\"ui text container\">\n                <div class=\"ui two column grid\">\n                    <div class=\"column\">\n                        <a href=\"[[~[[*parent]]]]\" class=\"primary ui button\"><i class=\"icon left arrow\"></i>[[%romanesco.article.back_to_overview]]</a>\n                    </div>\n                    <div class=\"right aligned column\">\n                        [[!$socialShareButtons]]\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"ui container\">\n                <aside class=\"column\">\n                    \n                </aside>\n            </div>\n        </div>\n    </main>\n\n    [[[[If?\n        &subject=`[[$footerTheme]]`\n        &operator=`isnull`\n        &then=`$footer`\n        &else=`$footerTheme`\n    ]]]]\n</div>\n\n[[$offCanvasNav]]\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:0:{}'
 
 -----
@@ -10,7 +11,7 @@ properties: 'a:0:{}'
 <!DOCTYPE html>
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
-[[!setUserPlaceholders? &userId=`[[*author_id]]`]]
+[[setUserPlaceholders? &userId=`[[*author_id]]`]]
 [[!Hits? &punch=`[[*id]]`]]
 
 [[[[If?

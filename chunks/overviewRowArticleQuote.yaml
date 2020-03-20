@@ -2,11 +2,13 @@ id: 251
 name: overviewRowArticleQuote
 description: ''
 category: m_ov_article
+snippet: "[[!setUserPlaceholders? &userId=`[[+author_id]]`]]\n\n<div class=\"ui padded down pointing segment secondary\">\n    <[[+title_hierarchy]]>\n        <a href=\"[[~[[+id]]]]\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n    </[[+title_hierarchy]]>\n    <p class=\"quote\">[[+introtext:stripString=`<p>`:stripString=`</p>`]]</p>\n</div>\n\n<div class=\"ui basic segment\">\n    <a href=\"[[~[[+team_member_id]]]]\" class=\"ui avatar image\">\n        [[ImagePlus:empty=`<img src=\"[[++overview_icon_fallback]]\" alt=\"[[++site_name]]\">`?\n            &tvname=`person_image`\n            &docid=`[[+team_member_id]]`\n            &options=`w=150&h=150&q=[[++img_quality]]&zc=1`\n            &type=`tpl`\n            &tpl=`cbOverviewRowImg`\n        ]]\n    </a>\n    <span class=\"meta\">\n        <em>[[%romanesco.article.written_by]] <a href=\"[[~[[+team_member_id]]]]\">[[+author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]</a> [[%romanesco.article.written_on]] [[+publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]</em>\n    </span>\n    [[If?\n        &subject=`[[+link_text]]`\n        &operator=`isnot`\n        &operand=`0`\n        &then=`[[$buttonHrefOverview? &classes=`right floated` &uid=`[[+unique_idx]]`]]`\n    ]]\n</div>"
 properties: 'a:0:{}'
+content: "[[!setUserPlaceholders? &userId=`[[+author_id]]`]]\n\n<div class=\"ui padded down pointing segment secondary\">\n    <[[+title_hierarchy]]>\n        <a href=\"[[~[[+id]]]]\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n    </[[+title_hierarchy]]>\n    <p class=\"quote\">[[+introtext:stripString=`<p>`:stripString=`</p>`]]</p>\n</div>\n\n<div class=\"ui basic segment\">\n    <a href=\"[[~[[+team_member_id]]]]\" class=\"ui avatar image\">\n        [[ImagePlus:empty=`<img src=\"[[++overview_icon_fallback]]\" alt=\"[[++site_name]]\">`?\n            &tvname=`person_image`\n            &docid=`[[+team_member_id]]`\n            &options=`w=150&h=150&q=[[++img_quality]]&zc=1`\n            &type=`tpl`\n            &tpl=`cbOverviewRowImg`\n        ]]\n    </a>\n    <span class=\"meta\">\n        <em>[[%romanesco.article.written_by]] <a href=\"[[~[[+team_member_id]]]]\">[[+author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]</a> [[%romanesco.article.written_on]] [[+publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]</em>\n    </span>\n    [[If?\n        &subject=`[[+link_text]]`\n        &operator=`isnot`\n        &operand=`0`\n        &then=`[[$buttonHrefOverview? &classes=`right floated` &uid=`[[+unique_idx]]`]]`\n    ]]\n</div>"
 
 -----
 
-[[!setUserPlaceholders? &userId=`[[+author_id]]`]]
+[[setUserPlaceholders? &userId=`[[+author_id]]` &uid=`[[+unique_idx]]`]]
 
 <div class="ui padded down pointing segment secondary">
     <[[+title_hierarchy]]>

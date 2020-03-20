@@ -12,7 +12,7 @@ button_label: collections.publication.children.create
 context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'
 buttons: 'open,view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink,changeparent'
 back_to_collection_label: collections.publication.children.back_to_collection_label
-child_hide_from_menu: null
+child_hide_from_menu: 1
 child_published: null
 child_cacheable: null
 child_searchable: null

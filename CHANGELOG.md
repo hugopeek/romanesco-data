@@ -10,6 +10,11 @@ New features:
 
 Fixes and improvements:
 - Add multiple select option to form dropdowns
+- Add option to center align buttons individually
+- Call setUserPlaceholders cached in article overviews
+- Improve layout and visibility of sharing widget in articleTraditional sidebar
+- Make header backgrounds context sensitive in generated CSS
+- Regenerate static CSS when changing a header background
 - Remove orphaned files from extract
 - Fix timeline in project hub by referencing the correct classname
 - Fix position of availability TVs in Background and CTA form customizations
