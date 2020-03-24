@@ -1,7 +1,7 @@
 id: 413
 name: tvSelectInputOptionRow
 description: 'Basic row template for rendering input options inside the TV.'
-category: a_select
+category: a_sel_rows
 properties: 'a:0:{}'
 
 -----

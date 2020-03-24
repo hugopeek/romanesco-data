@@ -2,7 +2,9 @@ id: 354
 name: fbSelectOptionRowResource
 description: 'A row template for options that link to a resource. These options are almost always generated dynamically, instead of being added through the form builder by the editor.'
 category: a_fb_inputs
+snippet: "[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name_updated`? &input=`[[+field_name]]`]]\n[[!If:toPlaceholder=`checkbox_array`?\n    &subject=`[[+field_type]]`\n    &operator=`EQ`\n    &operand=`checkbox`\n    &then=`[]`\n    &else=``\n]]\n[[!If:toPlaceholder=`checkbox_variant`?\n    &subject=`[[+checkbox_type]]`\n    &operator=`notempty`\n    &then=`[[+checkbox_type]]`\n    &else=`[[+field_type]]`\n]]\n\n<div class=\"ui [[+checkbox_variant]] checkbox field\">\n    <input type=\"[[+field_type]]\"\n           name=\"[[+name_updated]][[+checkbox_array]]\"\n           id=\"[[+name_updated]]-[[+idx]]\"\n           value=\"[[+pagetitle:fbStripNonAlpha]]\"\n           tabindex=\"0\"\n           data-group=\"[[+collapse_target:isnot=``:then=`[[+name_updated]]`:default=`no-group`]]\"\n           data-target=\"[[+collapse_target:default=`no-target`]]\"\n           data-toggle=\"collapse\"\n           [[!+fb[[*id]].[[+name_updated]]:FormItIsChecked=`[[+pagetitle:fbStripNonAlpha]]`]]\n           [[!#get.id:stripTags:eq=`[[+id]]`:then=`checked`]]>\n    <label>[[+pagetitle]]</label>\n</div>"
 properties: 'a:0:{}'
+content: "[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name_updated`? &input=`[[+field_name]]`]]\n[[!If:toPlaceholder=`checkbox_array`?\n    &subject=`[[+field_type]]`\n    &operator=`EQ`\n    &operand=`checkbox`\n    &then=`[]`\n    &else=``\n]]\n[[!If:toPlaceholder=`checkbox_variant`?\n    &subject=`[[+checkbox_type]]`\n    &operator=`notempty`\n    &then=`[[+checkbox_type]]`\n    &else=`[[+field_type]]`\n]]\n\n<div class=\"ui [[+checkbox_variant]] checkbox field\">\n    <input type=\"[[+field_type]]\"\n           name=\"[[+name_updated]][[+checkbox_array]]\"\n           id=\"[[+name_updated]]-[[+idx]]\"\n           value=\"[[+pagetitle:fbStripNonAlpha]]\"\n           tabindex=\"0\"\n           data-group=\"[[+collapse_target:isnot=``:then=`[[+name_updated]]`:default=`no-group`]]\"\n           data-target=\"[[+collapse_target:default=`no-target`]]\"\n           data-toggle=\"collapse\"\n           [[!+fb[[*id]].[[+name_updated]]:FormItIsChecked=`[[+pagetitle:fbStripNonAlpha]]`]]\n           [[!#get.id:stripTags:eq=`[[+id]]`:then=`checked`]]>\n    <label>[[+pagetitle]]</label>\n</div>"
 
 -----
 
@@ -26,10 +28,10 @@ properties: 'a:0:{}'
            name="[[+name_updated]][[+checkbox_array]]"
            id="[[+name_updated]]-[[+idx]]"
            value="[[+pagetitle:fbStripNonAlpha]]"
-           tabindex="0"
+           tabindex="[[+idx]]"
            data-group="[[+collapse_target:isnot=``:then=`[[+name_updated]]`:default=`no-group`]]"
            data-target="[[+collapse_target:default=`no-target`]]"
-           data-toggle="collapse"
+           data-state="[[+collapse_default]]"
            [[!+fb[[*id]].[[+name_updated]]:FormItIsChecked=`[[+pagetitle:fbStripNonAlpha]]`]]
            [[!#get.id:stripTags:eq=`[[+id]]`:then=`checked`]]>
     <label>[[+pagetitle]]</label>

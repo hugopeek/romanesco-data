@@ -190,6 +190,25 @@ switch ($modx->event->name) {
             ->append(implode($lightbox))
         ;
 
+        // Disable steps following an active step
+        $dom->filter('.ui.consecutive.steps .active.step')
+            ->each(function (HtmlPageCrawler $step) {
+                $step
+                    ->nextAll()
+                    ->addClass('disabled')
+                ;
+            })
+        ;
+        // Mark previous steps as completed
+        $dom->filter('.ui.completable.steps .active.step')
+            ->each(function (HtmlPageCrawler $step) {
+                $step
+                    ->previousAll()
+                    ->addClass('completed')
+                ;
+            })
+        ;
+
         // Save manipulated DOM
         $output = $dom->saveHTML();
 

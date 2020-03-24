@@ -2,17 +2,18 @@ id: 38
 name: fbSelectDropdown
 description: ''
 category: m_fb_inputs
-snippet: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n\n<div class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">[[+field_name]]</label>\n    <select name=\"[[+name]]\" class=\"ui [[+field_type:empty=`dropdown`]]\">\n        <option value=\"\">[[+option_placeholder]]</option>\n        [[+rows]]\n    </select>\n    [[+fb[[*id]].error.[[+name]]]]\n    [[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`]]\n</div>"
+snippet: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n\n<div class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">[[+field_name]]</label>\n    <select name=\"[[+name]]\" class=\"ui [[+field_type:empty=`dropdown`]]\" [[+field_type:contains=`multiple`:then=`multiple`]]>\n        <option value=\"\">[[+option_placeholder]]</option>\n        [[+rows]]\n    </select>\n    [[+fb[[*id]].error.[[+name]]]]\n    [[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`]]\n</div>"
 properties: 'a:0:{}'
-content: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n\n<div class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">[[+field_name]]</label>\n    <select name=\"[[+name]]\" class=\"ui [[+field_type:empty=`dropdown`]]\">\n        <option value=\"\">[[+option_placeholder]]</option>\n        [[+rows]]\n    </select>\n    [[+fb[[*id]].error.[[+name]]]]\n    [[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`]]\n</div>"
+content: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n\n<div class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">[[+field_name]]</label>\n    <select name=\"[[+name]]\" class=\"ui [[+field_type:empty=`dropdown`]]\" [[+field_type:contains=`multiple`:then=`multiple`]]>\n        <option value=\"\">[[+option_placeholder]]</option>\n        [[+rows]]\n    </select>\n    [[+fb[[*id]].error.[[+name]]]]\n    [[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`]]\n</div>"
 
 -----
 
 [[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
+[[+field_type:contains=`multiple`:then=`multiple`:toPlaceholder=`multiple`]]
 
 <div class="[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
     <label for="[[+name]]">[[+field_name]]</label>
-    <select name="[[+name]]" class="ui [[+field_type:empty=`dropdown`]]" [[+field_type:contains=`multiple`:then=`multiple`]]>
+    <select name="[[+name]][[+multiple:notempty=`[]`]]" class="ui [[+field_type:empty=`dropdown`]]" [[+multiple]]>
         <option value="">[[+option_placeholder]]</option>
         [[+rows]]
     </select>

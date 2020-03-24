@@ -1,0 +1,9 @@
+id: 481
+name: tvSelectCountryRow
+description: 'Basic row template to display country names inside the dropdown.'
+category: a_sel_rows
+properties: 'a:0:{}'
+
+-----
+
+[[+text]]==[[+value]]

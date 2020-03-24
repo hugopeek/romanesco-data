@@ -1,0 +1,9 @@
+id: 480
+name: tvSelectCountryOptGroup
+description: 'Display prioritized countries in a separate group at the top of the dropdown.'
+category: a_sel_rows
+properties: 'a:0:{}'
+
+-----
+
+<optgroup label="[[+text]]">||[[+options]]||</optgroup>

@@ -3,6 +3,7 @@ templatename: fbRegister
 description: ''
 category: t_global
 icon: icon-user-plus
+content: "[[*pagetitle:fbStripAsAlias:toPlaceholder=`title`]]\n\n[[cbGetFieldContent:notempty=`1`:default=`0`:toPlaceholder=`math_question`?\n    &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`\n]]\n\n[[!FormIt?\n    &preHooks=`[[*fb_prehooks:notempty=`[[*fb_prehooks]]`]]`\n    &placeholderPrefix=`fb[[*id]].`\n]]\n[[!Register?\n    &preHooks=`[[*fb_hooks:notempty=`[[*fb_hooks]],`]][[+math_question:isnot=`0`:then=`math,`]]fbEmptyHook`\n    &postHooks=`[[*fb_posthooks:notempty=`[[*fb_posthooks]]`]]`\n\n    &activation=`[[*fb_activation_toggle:default=`1`]]`\n    &activationttl=`[[*fb_activation_ttl:default=`180`]]`\n    &activationEmailTpl=`[[*fb_activation_email:empty=`[[%formblocks.registration.email_content]]`]]`\n    &activationEmailTplType=`inline`\n    &activationEmailSubject=`[[*fb_email_subject:empty=`[[%formblocks.registration.email_subject]]`]]`\n\n    &emailField=`fb[[*id]]-email`\n    &usernameField=`fb[[*id]]-[[*fb_username_field:default=`username`:fbStripAsAlias:stripString=`fb[[*id]]-`]]`\n    &fullnameField=`fb[[*id]]-[[*fb_fullname_field:default=`your-name`:fbStripAsAlias:stripString=`fb[[*id]]-`]]`\n    &usergroups=`[[*fb_usergroups]]`\n    [[*fb_usergroups_field:isnot=``:then=`&usergroupsField=`fb[[*id]]-[[*fb_usergroups_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``]]\n    [[*fb_password_field:isnot=``:then=`&passwordField=`fb[[*id]]-[[*fb_password_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``:else=`&generatePassword=`1``]]\n    &useExtended=`[[*fb_extended_toggle:default=`0`]]`\n\n    [[!cbGetFieldContent?\n        &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`\n        &tpl=`fbMathQuestionProperties`\n    ]]\n\n    &customValidators=`[[$fbCustomValidators]]`\n    &validate=`\n        [[!fbValidateProcessJSON? &json=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`]]\n        [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]\n        [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]\n        [[+math_question:isnot=`0`:then=`fb[[*id]]-math:math,`]]\n        [[$fbValidateCustomFields]],\n        siteurl:blank`\n    &validatePassword=`[[*fb_password_field:isnot=``:then=`1`:else=`0`]]`\n\n    &errTpl=`<span class=\"help error\">[[+error]]</span>`\n    &placeholderPrefix=`fb[[*id]].`\n    &submitVar=`submit-[[+title]]`\n    &successMsg=`[[%formblocks.registration.success_message]]`\n\n    &activationResourceId=`[[*fb_activation_resource_id:empty=`[[++formblocks.activation_resource_id]]`]]`\n    &submittedResourceId=`[[*fb_redirect_dynamic:empty=`[[*fb_redirect_id]]`]]`\n]]\n\n[[!+fb[[*id]].validation_error_message:notempty=`\n<div class=\"ui error message\">\n    <i class=\"close icon\"></i>\n    <div class=\"header\">\n        [[%formblocks.registration.validation_error_heading]]\n    </div>\n    <p>[[%formblocks.registration.validation_error_message]]</p>\n    <p>[[!+fb[[*id]].validation_error_message]]</p>\n</div>\n`]]\n\n<form id=\"form-[[+title]]\" class=\"ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] registration form\" name=\"fb[[*id]]\" action=\"[[~[[+current_id]]]]\" method=\"post\" enctype=\"multipart/form-data\">\n    <div class=\"ui [[+segment_type]]\">\n\n        [[*content]]\n\n        <div class=\"ui hidden field segment\">\n            <label for=\"siteurl\">[[%formblocks.form.honeypot_field]]</label>\n            <input type=\"text\" name=\"siteurl\" value=\"\">\n        </div>\n\n        [[*content:containsnot=`type=\"submit\"`:then=`\n        <div class=\"ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]]\">\n            <input class=\"[[+form_size]] primary ui button\" type=\"submit\" name=\"submit-[[+title]]\" value=\"[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]\">\n        </div>\n        `]]\n    </div>\n</form>"
 properties: 'a:0:{}'
 
 -----
@@ -42,7 +43,7 @@ properties: 'a:0:{}'
 
     &customValidators=`[[$fbCustomValidators]]`
     &validate=`
-        [[!fbValidateProcessJSON? &json=`[[!fbEmailGetJSON? &formID=`[[*id]]`]]`]]
+        [[!fbValidateProcessJSON? &formID=`[[*id]]`]]
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
         [[+math_question:isnot=`0`:then=`fb[[*id]]-math:math,`]]
@@ -77,7 +78,7 @@ properties: 'a:0:{}'
 
         <div class="ui hidden field segment">
             <label for="siteurl">[[%formblocks.form.honeypot_field]]</label>
-            <input type="text" name="siteurl" value="">
+            <input type="text" name="siteurl" value="[[!+fb[[*id]].siteurl]]">
         </div>
 
         [[*content:containsnot=`type="submit"`:then=`
