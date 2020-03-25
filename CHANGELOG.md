@@ -6,7 +6,7 @@ Released on March 25, 2020
 > Patterns: 0.16.0-pl
 
 New features:
-- Add FormBlocks row templates to store field values in multi page forms
+- Add ability to create multi page forms
 - Add social connect button for WhatsApp
 - Add social share button for sharing URLs via email
 - Add steps navigation to show the completion status of an activity
