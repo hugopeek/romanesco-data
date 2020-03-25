@@ -21,6 +21,7 @@ Fixes and improvements:
 - Add field template for input options to form dropdowns and options
 - Add multiple select option to form dropdowns
 - Add option to center align buttons individually
+- Fix duplicated Backyard pages after updating Romanesco due to different URI
 - Call setUserPlaceholders cached in article overviews
 - Improve layout and visibility of sharing widget in articleTraditional sidebar
 - Make header backgrounds context sensitive in generated CSS
