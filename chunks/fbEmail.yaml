@@ -8,7 +8,7 @@ properties: 'a:0:{}'
 
 [[%formblocks.email.introtext]]<br/><br/>
 
-[[!fbFormReport? &id=`[[*id]]`]]
+[[!fbFormReport? &id=`[[*id]]` &tplPrefix=`[[*fb_email_tpl_prefix]]`]]
 
 <br/><br/><br/>
 

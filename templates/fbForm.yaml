@@ -73,6 +73,8 @@ properties: 'a:0:{}'
     &placeholderPrefix=`fb[[*id]].`
     &submitVar=`submit-[[*alias]]`
     &redirectTo=`[[*fb_redirect_dynamic:empty=`[[*fb_redirect_id]]`]]`
+    &store=`[[*fb_store_data:default=`0`]]`
+    &storeLocation=`session`
 ]]
 
 [[!+fb[[*id]].validation_error_message:notempty=`
