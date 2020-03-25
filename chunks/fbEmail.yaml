@@ -2,9 +2,7 @@ id: 33
 name: fbEmail
 description: ''
 category: o_formblocks
-snippet: "[[%formblocks.email.introtext]]<br/><br/>\n\n[[!fbEmailGetJSON:toPlaceholder=`data`? &formID=`[[*id]]`]]\n[[!fbSimplxWidgeteer?\n    &dataSet=`[[+data]]`\n    &useChunkMatching=`true`\n    &chunkMatchRoot=`true`\n    &chunkPrefix=`fbEmailRow_`\n    &chunkMatchingSelector=`field`\n]]\n\n<br/><br/><br/>\n\n--- End of message ---"
 properties: 'a:0:{}'
-content: "[[%formblocks.email.introtext]]<br/><br/>\n\n[[!fbEmailGetJSON:toPlaceholder=`data`? &formID=`[[*id]]`]]\n[[!fbSimplxWidgeteer?\n    &dataSet=`[[+data]]`\n    &useChunkMatching=`true`\n    &chunkMatchRoot=`true`\n    &chunkPrefix=`fbEmailRow_`\n    &chunkMatchingSelector=`field`\n]]\n\n<br/><br/><br/>\n\n--- End of message ---"
 
 -----
 
@@ -14,4 +12,4 @@ content: "[[%formblocks.email.introtext]]<br/><br/>\n\n[[!fbEmailGetJSON:toPlace
 
 <br/><br/><br/>
 
---- End of message ---
+[[%formblocks.email.footer]]

@@ -1,0 +1,10 @@
+id: 48
+name: fbEmailRowEmail
+description: 'Specific email row for Email field.'
+category: m_fb_email
+properties: 'a:0:{}'
+
+-----
+
+<strong>Email:</strong><br>
+[[+fb[[*id]]-email:empty=``]]<br><br>

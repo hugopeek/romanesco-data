@@ -1,0 +1,13 @@
+id: 133
+type: textarea
+name: social_whatsapp_text
+caption: 'WhatsApp message'
+description: 'Predefined text for the message that the visitor can send. You can use placeholders here to include some information about the referring page.'
+category: Social
+elements: ''
+rank: 12
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

@@ -1,12 +1,12 @@
 id: 34
 name: fbEmailRow
-description: ''
+description: 'Default template for displaying the submitted value of a form field in an email message.'
 category: m_fb_email
 properties: 'a:0:{}'
 
 -----
 
-[[+field_name:stripString=`?`:toPlaceholder=`label`]]
+[[+field_name:stripString=`?`:stripWords=`[[$fbStripWordsLabel]]`:toPlaceholder=`label`]]
 [[+fb[[*id]]-[[+field_name:fbStripAsAlias]]:nl2br:empty=``:toPlaceholder=`value`]]
 
 <strong>[[+label]]:</strong><br/>

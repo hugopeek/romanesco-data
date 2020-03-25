@@ -1,0 +1,7 @@
+id: 47
+name: fbEmailRowTerms
+description: 'Specific email row for Terms and Conditions checkbox. It is currently empty, as the form cannot be submitted without agreeing to the terms.'
+category: m_fb_email
+snippet: ''
+properties: 'a:0:{}'
+content: ''

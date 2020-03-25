@@ -1,9 +1,9 @@
 id: 46
 name: fbEmailRow_xx
-description: ''
+description: 'Default email row, to be copied for each available ContentBlocks form field. The xx should be replaced with the ID of the CB field. Some fields require a different format (see below)'
 category: m_fb_email
 properties: 'a:0:{}'
 
 -----
 
-[[+settings]]
+[[!$fbEmailRow]]

@@ -1,9 +1,9 @@
 id: 187
 name: fbEmailRow_30
 description: ''
-category: Theme
+category: fbEmail
 properties: 'a:0:{}'
 
 -----
 
-[[+settings]]
+[[!$fbEmailRow]]
