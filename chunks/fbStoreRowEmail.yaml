@@ -1,0 +1,10 @@
+id: 500
+name: fbStoreRowEmail
+description: 'Specific data row for Email field.'
+category: m_fb_store
+properties: 'a:0:{}'
+
+-----
+
+<input id="fb[[+id]]-email" type="hidden" name="fb[[+id]]-email" value="[[!+fb[[+id]].fb[[+id]]-email]]">
+

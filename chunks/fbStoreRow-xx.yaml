@@ -1,7 +1,7 @@
-id: 46
-name: fbEmailRow_xx
+id: 498
+name: fbStoreRow_xx
 description: 'Example row, to be copied for each available ContentBlocks form field. The xx should be replaced with the ID of the CB field. Some fields require a different format (see below)'
-category: m_fb_email
+category: m_fb_store
 properties: 'a:0:{}'
 
 -----

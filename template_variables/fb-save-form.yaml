@@ -1,0 +1,15 @@
+id: 135
+type: listbox
+name: fb_save_form
+caption: 'Save form data'
+description: 'Save submitted data in the database. You can view this data under Top menu > Extras > FormIt.'
+category: 'Settings - General'
+elements: 'System default==default||Yes==1||No==0'
+rank: 91
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+default

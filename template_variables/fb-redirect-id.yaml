@@ -5,7 +5,7 @@ caption: 'Redirect page'
 description: 'Enter the ID of the page, or drag the page from the menu tree to this input field.'
 category: 'Settings - General'
 elements: ''
-rank: 90
+rank: 92
 default_text: ''
 properties: 'a:0:{}'
 input_properties: null

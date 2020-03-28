@@ -1,0 +1,11 @@
+id: 497
+name: fbStoreRow
+description: 'Default template for displaying the submitted value of a form field through FormItRetriever.'
+category: m_fb_store
+properties: 'a:0:{}'
+
+-----
+
+[[+field_name:fbStripAsAlias:fbPrefixOutput=`fb[[+id]]-`:toPlaceholder=`name`]]
+
+<input id="[[+name]]" type="hidden" name="[[+name]]" value="[[!+fb[[+id]].[[+name]]]]">

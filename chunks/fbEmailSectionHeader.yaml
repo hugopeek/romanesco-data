@@ -1,0 +1,9 @@
+id: 496
+name: fbEmailSectionHeader
+description: 'Display pagetitle above each section in multi-page form emails.'
+category: m_fb_email
+properties: 'a:0:{}'
+
+-----
+
+<h3>[[+title]]</h3><br/><br/>

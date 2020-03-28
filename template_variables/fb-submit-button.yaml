@@ -1,11 +1,11 @@
 id: 12
 type: text
 name: fb_submit_button
-caption: 'Text in submit button'
+caption: 'Submit button text'
 description: 'Defaults to Send.'
 category: 'Settings - General'
 elements: ''
-rank: 92
+rank: 90
 default_text: ''
 properties: 'a:0:{}'
 input_properties: null
