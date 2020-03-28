@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.8.0
-Released on March 25, 2020
+Released on March 28, 2020
 
 > Patterns: 0.16.0-pl
 
@@ -14,6 +14,8 @@ New features:
 - Add pagination type setting to Overviews
 
 Fixes and improvements:
+- Change CB link detection pattern to accept internal links starting with `[[~`
+- Add TV to control save form option per form
 - Remove Google+ elements
 - Make sure spam submissions will also fail on 2nd attempt in forms
 - Switch to fbFormReport for generating email messages
