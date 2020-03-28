@@ -27,7 +27,7 @@ data:
                 - 'contact*'
                 - 'registration*'
             - 'OR:uri:IN':
-                - 'footers'
-                - 'forms'
-                - 'call-to-actions'
+                - 'footers/'
+                - 'forms/'
+                - 'call-to-actions/'
                 - 'backgrounds.css'
