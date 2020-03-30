@@ -1,0 +1,11 @@
+id: 503
+name: stepsNavWrapper
+description: ''
+category: m_nav_steps
+properties: 'a:0:{}'
+
+-----
+
+<div class="ui [[+total:textToNumber]] [[+step_type:replace=`,== `]] steps">
+    [[+wrapper]]
+</div>
