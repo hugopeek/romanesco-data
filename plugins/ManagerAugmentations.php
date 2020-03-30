@@ -18,6 +18,7 @@ switch ($modx->event->name) {
         // Load custom CSS styles
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/contentblocks.css?v=' . $versionCSS);
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/semantic.css?v=' . $versionCSS); # for CB chunk previews
+        $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/step.css?v=' . $versionCSS); # for CB chunk previews
 
         // Load custom CSS for Global Backgrounds
         if ($resource->get('template') == 27) {

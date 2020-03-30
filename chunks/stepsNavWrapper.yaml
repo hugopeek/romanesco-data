@@ -2,10 +2,12 @@ id: 503
 name: stepsNavWrapper
 description: ''
 category: m_nav_steps
+snippet: "<div class=\"ui [[+step_options:containsnot=`vertical`:then=`[[+total:textToNumber]]`]] [[+step_options:replace=`,== `]] [[+step_attachment]] [[+icon_type]] steps\">\n    [[+wrapper]]\n</div>\n\n"
 properties: 'a:0:{}'
+content: "<div class=\"ui [[+step_options:containsnot=`vertical`:then=`[[+total:textToNumber]]`]] [[+step_options:replace=`,== `]] [[+step_attachment]] [[+icon_type]] steps\">\n    [[+wrapper]]\n</div>\n\n"
 
 -----
 
-<div class="ui [[+total:textToNumber]] [[+step_type:replace=`,== `]] steps">
+<div class="ui [[+step_options:containsnot=`vertical`:then=`[[+total:textToNumber]]`]] [[+step_options:replace=`,== `]] [[+step_attachment]] [[+icon_type]] steps">
     [[+wrapper]]
 </div>
