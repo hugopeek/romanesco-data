@@ -1,0 +1,13 @@
+id: 119
+parent_properties: null
+input: chunk
+name: Steps
+description: 'A menu to show the completion status of an activity in a series of activities. Useful in combination with multi-page forms.'
+sortorder: 31
+category: 3
+icon: tabs
+template: '[[+value]]'
+properties: '{"chunk":"502","custom_preview":""}'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"parents","title":"Parent ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"resources","title":"Resource IDs (comma-separated)","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"row_tpl","title":"Template","fieldtype":"select","default_value":"stepsNavItem","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Regular=stepsNavItem\nLink=stepsNavItemLink\n","field_is_exposed":"asField"},{"reference":"step_options","title":"Options","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Disable next steps=consecutive\nShow completed steps as checked (needs icon)=completable\nVertical steps=vertical fluid\nPrevent stacking on mobile=unstackable","field_is_exposed":"modal"},{"reference":"show_subtitle","title":"Show subtitle","fieldtype":"select","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"},{"reference":"icon_type","title":"Icon type","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No icon=\n[[$cbSettingIconType]]\nNumber=ordered","field_is_exposed":"modal","process_tags":"1"},{"reference":"step_attachment","title":"Attachment","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No attachment=\nTop attached=top attached\nBottom attached=bottom attached","field_is_exposed":"modal"},{"reference":"step_size","title":"Size","fieldtype":"select","default_value":"medium","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1"}]'
