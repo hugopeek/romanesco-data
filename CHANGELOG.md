@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.8.0
-Released on March 28, 2020
+Released on March 30, 2020
 
 > Patterns: 0.16.0-pl
 
@@ -14,6 +14,8 @@ New features:
 - Add pagination type setting to Overviews
 
 Fixes and improvements:
+- Load CSS/JS assets for modal, step and form components only if used on page
+- Add ability to identify the last placeholder of splitString output
 - Fix duplicated Backyard pages after updating Romanesco due to different URI
 - Change CB link detection pattern to accept internal links starting with `[[~`
 - Add TV to control save form option per form
