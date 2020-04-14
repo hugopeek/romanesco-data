@@ -1,5 +1,24 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.8.1
+Released on April 14, 2020
+
+> Romanesco Patterns 0.16.1-pl
+
+Fixes and improvements:
+- Inherit comment toggle and article author TV values
+- Prevent background from appearing if responsive crop is not defined
+- Improve layout of publication templates
+- Add button templates for creating neighbor menu
+- Add class to content headers without class name
+- Conditionally load assets for registration forms
+- Remove form class from search field
+- Implement multi-page form functionality into FormBlocks
+- Add options to adjust type, size and alignment of form buttons
+- Fix finding value in multidimensional array with jsonGetValue
+- Add first and last placeholders to splitString snippet
+- Add class to video embed, to initialize them separately from other embeds
+
 ## v1.8.0
 Released on March 30, 2020
 
