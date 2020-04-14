@@ -1,6 +1,6 @@
 text: romanesco.menu.tool_shed_title
 parent: manage
 description: romanesco.menu.tool_shed_description
-menuindex: 2
+menuindex: 3
 params: '&configs=global_input_option_groups:romanescobackyard||status_issues:romanescobackyard||status_improvements:romanescobackyard||content_related:romanescobackyard||content_repurpose:romanescobackyard'
 namespace: migx
