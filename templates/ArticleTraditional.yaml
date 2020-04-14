@@ -20,7 +20,7 @@ properties: 'a:0:{}'
     &else=`$headTheme`
 ]]]]
 
-<body id="[[*alias]]" class="detail publication">
+<body id="[[*alias]]" class="publication detail">
 
 <div class="pusher">
     [[$headerBasic?
@@ -40,32 +40,32 @@ properties: 'a:0:{}'
         <div class="ui very relaxed grid container">
             <article id="content" class="sixteen wide mobile eleven wide computer publication column">
 
-                <header class="ui vertical stripe segment white">
+                <header class="ui vertical stripe segment [[++layout_background_default]] introduction">
                     <div class="ui container">
-                        <h1 class="ui huge header">[[*pagetitle]]</h1>
-                        <p class="meta">
+                        <h1 class="ui header">[[*pagetitle]]</h1>
 
-                        <span class="author">
-                            <a href="[[~[[+team_member_id]]]]" class="ui avatar image">
-                                [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="Author: [[++site_name]]">`? &tvname=`person_image` &docid=`[[+team_member_id]]` &options=`w=150&h=150&zc=1` &type=`tpl`]]
-                            </a>
-                            [[*author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]
-                        </span>
-                        <span class="date">
-                            <i class="calendar icon"></i>
-                            [[*publishedon:strtotime:date=`%e %B %Y`]]
-                        </span>
-                        <span class="views">
-                            <i class="eye icon"></i>
-                            [[!Rowboat?
-                                &table=`modx_hits`
-                                &tpl=`hitCount`
-                                &limit=`1`
-                                &columns=`hit_count`
-                                &where=`{"hit_key":"[[*id]]"}`
-                                &cacheResults=`0`
-                            ]]
-                        </span>
+                        <p class="meta">
+                            <span class="author">
+                                <a href="[[~[[+team_member_id]]]]" class="ui avatar image">
+                                    [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="Author: [[++site_name]]">`? &tvname=`person_image` &docid=`[[+team_member_id]]` &options=`w=150&h=150&zc=1` &type=`tpl`]]
+                                </a>
+                                [[*author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]
+                            </span>
+                            <span class="date">
+                                <i class="calendar icon"></i>
+                                [[*publishedon:strtotime:date=`%e %B %Y`]]
+                            </span>
+                            <span class="views">
+                                <i class="eye icon"></i>
+                                [[!Rowboat?
+                                    &table=`modx_hits`
+                                    &tpl=`hitCount`
+                                    &limit=`1`
+                                    &columns=`hit_count`
+                                    &where=`{"hit_key":"[[*id]]"}`
+                                    &cacheResults=`0`
+                                ]]
+                            </span>
                         </p>
                     </div>
                 </header>
@@ -73,7 +73,7 @@ properties: 'a:0:{}'
                 [[*content]]
 
                 [[+team_member_id:notempty=`
-                <aside id="author-about" class="ui vertical stripe segment white">
+                <aside id="author-about" class="ui vertical stripe segment [[++layout_background_default]]">
                     <div class="ui container">
                         <div class="ui segment">
                             <div class="ui two column equal width grid">
@@ -96,7 +96,7 @@ properties: 'a:0:{}'
                 `]]
 
                 [[*comments_toggle:eq=`1`:then=`
-                <section id="comments" class="ui vertical stripe segment white">
+                <section id="comments" class="ui vertical stripe segment [[++layout_background_default]]">
                     <div class="ui container">
                         <h2 class="ui big header">[[%romanesco.article.comments]]</h2>
                         <div id="[[++romanesco.[[++comment_platform:lcase]]_div_id]]"></div>
@@ -104,14 +104,14 @@ properties: 'a:0:{}'
                 </section>
                 `]]
 
-                <footer class="ui vertical stripe segment white">
+                <footer class="ui vertical stripe segment [[++layout_background_default]]">
                     <div class="ui container">
                         <div class="ui two column grid">
                             <div class="column">
                                 <a href="[[~[[*parent]]]]" class="primary ui button"><i class="icon left arrow"></i>[[%romanesco.article.back_to_overview]]</a>
                             </div>
                             <div class="right aligned column">
-                                [[!$socialShareButtons]]
+                                [[$socialShareButtons]]
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ properties: 'a:0:{}'
             </article>
 
             <aside id="sidebar" class="sixteen wide mobile five wide computer column">
-                <section class="ui vertical stripe segment white tablet or lower hidden">
+                <section class="ui vertical stripe segment [[++layout_background_default]] tablet or lower hidden">
                     <div class="ui container">
                         <div class="ui equal width middle aligned grid">
                             <div class="compact column">
@@ -135,7 +135,7 @@ properties: 'a:0:{}'
                     </div>
                 </section>
 
-                <section class="ui vertical stripe segment white">
+                <section class="ui vertical stripe segment [[++layout_background_default]]">
                     <div class="ui container">
                         [[$dividerHeading?
                             &divider_section=`section`
@@ -152,7 +152,7 @@ properties: 'a:0:{}'
                     </div>
                 </section>
 
-                <section class="ui vertical stripe segment white">
+                <section class="ui vertical stripe segment [[++layout_background_default]]">
                     <div class="ui container">
                         <h3>[[%romanesco.article.read_another]]</h3>
 

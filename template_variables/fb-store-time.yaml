@@ -1,0 +1,15 @@
+id: 136
+type: number
+name: fb_store_time
+caption: 'Store time'
+description: 'If ''store data'' is switched on, this specifies the number of seconds to store the submitted form data. Defaults to five minutes.'
+category: 'Settings - Advanced'
+elements: ''
+rank: 16
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+300

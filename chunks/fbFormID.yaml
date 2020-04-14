@@ -1,0 +1,9 @@
+id: 505
+name: fbFormID
+description: 'Return raw value of form_id placeholder from a CB form. Used as tpl by cbGetFieldContent in fbGetFormID.'
+category: a_formblocks
+properties: 'a:0:{}'
+
+-----
+
+[[+form_id]]

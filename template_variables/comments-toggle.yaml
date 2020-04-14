@@ -2,12 +2,14 @@ id: 54
 type: option
 name: comments_toggle
 caption: Comments
-description: 'Enable or disable comments.'
+description: 'Enable or disable comments. This value is inherited on child pages.'
 category: Comments
 elements: Active==1||Disabled==0
 rank: 1
-default_text: ''
 properties: 'a:0:{}'
 input_properties: null
 output_properties: null
-content: ''
+
+-----
+
+@INHERIT

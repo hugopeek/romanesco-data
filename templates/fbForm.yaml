@@ -23,6 +23,21 @@ properties: 'a:0:{}'
     &toPlaceholder=`save_form`
 ]]
 
+[[[[+multiple_steps:notempty=`
+    !FormItRetriever?
+        &placeholderPrefix=``
+        &storeLocation=`session`
+        &redirectToOnNotFound=`[[+first_step:isnot=`[[+current_id]]`:then=`[[+first_step]]`:else=``]]`
+    `
+]]]]
+[[[[+multiple_steps:notempty=`
+    !FormItRetriever?
+        &placeholderPrefix=`fb[[*id]].`
+        &storeLocation=`session`
+        &redirectToOnNotFound=``
+    `
+]]]]
+
 [[!FormIt?
     &preHooks=`
         [[+upload_multiple:eq=`1`:then=`Formit2AjaxUpload,`]]
@@ -80,8 +95,10 @@ properties: 'a:0:{}'
     &errTpl=`<span class="help error">[[+error]]</span>`
     &placeholderPrefix=`fb[[*id]].`
     &submitVar=`submit-[[*alias]]`
-    &redirectTo=`[[*fb_redirect_dynamic:empty=`[[*fb_redirect_id]]`]]`
+    &redirectTo=`[[+redirect_id:empty=`[[+next_step:empty=`[[*fb_redirect_dynamic:empty=`[[*fb_redirect_id]]`]]`]]`]]`
+
     &store=`[[*fb_store_data:default=`0`]]`
+    &storeTime=`[[*fb_store_time:default=`300`]]`
     &storeLocation=`session`
 ]]
 
@@ -95,7 +112,10 @@ properties: 'a:0:{}'
 </div>
 `]]
 
-<form id="form-[[*alias]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id]]]]" method="post" enctype="multipart/form-data">
+<form id="form-[[*alias]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id:empty=`0`]]]]" method="post" enctype="multipart/form-data">
+
+    [[[[+multiple_steps:notempty=`!fbFormReport? &formID=`[[*id]][[+prev_forms:prepend=`,`]][[+next_forms:prepend=`,`]]` &tplPrefix=`fbStoreRow_``]]]]
+
     <div class="ui [[+segment_type]]">
 
         [[*content]]
@@ -106,11 +126,12 @@ properties: 'a:0:{}'
         </div>
 
         [[*content:containsnot=`type="submit"`:then=`
-        <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]]">
+        <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]] submit">
             [[[[++formblocks.antispam:contains=`recaptchav2`:then=`!recaptchav2_render`]]]]
             [[!+fb[[*id]].error.recaptchav2_error:replace=`span==div`]]
             <div class="ui error message"></div>
-            <input class="[[+form_size]] primary ui button" type="submit" name="submit-[[*alias]]" value="[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]">
+
+            [[$fbSubmitButton[[+multiple_steps:notempty=`s`]]]]
         </div>
         `]]
     </div>

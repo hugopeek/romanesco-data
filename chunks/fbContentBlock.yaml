@@ -6,6 +6,12 @@ properties: 'a:0:{}'
 
 -----
 
+[[[[If?
+    &subject=`[[+previous_steps]][[+next_step]]`
+    &operator=`notempty`
+    &then=`$fbPrepareSteps`
+]]]]
+
 [[!$fbRenderFormWrapper?
     &form_id=`[[+form_id]]`
     &current_id=`[[*id]]`
@@ -15,5 +21,19 @@ properties: 'a:0:{}'
     &form_layout=`[[+form_layout]]`
     &segment_type=`[[+segment_type]]`
     &padding=`[[+padding]]`
-    &previous_steps=`[[+previous_steps]]`
+
+    &button_type=`[[+button_type]]`
+    &button_size=`[[+button_size]]`
+    &button_alignment=`[[+button_alignment]]`
+
+    &multiple_steps=`[[+multiple_steps:empty=``]]`
+    &prev_steps=`[[+section.1:empty=``]]`
+    &next_steps=`[[+section.2:empty=``]]`
+    &prev_forms=`[[+prev_forms:empty=``]]`
+    &next_forms=`[[+next_forms:empty=``]]`
+    &prev_step=`[[+prev_steps.last:empty=``]]`
+    &next_step=`[[+next_steps.first:empty=``]]`
+    &first_step=`[[+step.first:empty=``]]`
+    &last_step=`[[+step.last:empty=``]]`
+    &redirect_id=`[[+redirect_id:empty=``]]`
 ]]

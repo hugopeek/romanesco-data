@@ -6,6 +6,19 @@ properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:
 
 -----
 
+[[If:toPlaceholder=`img_uncropped`?
+    &subject=`[[+image.crops.mobile.url:empty=``]][[+image.crops.tablet.url:empty=``]][[+image.crops.desktop.url:empty=``]]`
+    &operand=`empty`
+    &then=`
+    [[pthumb:prepend=`url(`:append=`)`?
+        &input=`[[+image.url]]`
+        &options=`w=[[+imgWidth]]
+            &q=[[++img_quality]]
+            &scale=[[+imgScale:default=`1`]]
+        `
+    ]]`
+    &else=``
+]]
 [[If:empty=`[[+gradient]]`?
     &subject=`[[+image.extension]]`
     &operator=`is`
@@ -27,14 +40,7 @@ properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:
                 &scale=[[+imgScale:default=`1`]]
             `
         ]]`
-        &else=`
-        [[pthumb:prepend=`url(`:append=`)`?
-            &input=`[[+image.url]]`
-            &options=`w=[[+imgWidth]]
-                &q=[[++img_quality]]
-                &scale=[[+imgScale:default=`1`]]
-            `
-        ]]`
+        &else=`[[+img_uncropped]]`
     ]]`
 ]]
 [[+position:empty=`center center`]] /

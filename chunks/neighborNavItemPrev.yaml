@@ -1,0 +1,12 @@
+id: 509
+name: neighborNavItemPrev
+description: ''
+category: a_nav_neighbors
+properties: 'a:0:{}'
+
+-----
+
+<a class="left item" href="[[+uri]]" title="[[%romanesco.article.previous]]">
+    <i class="muted left arrow icon"></i>
+    [[+menutitle]]
+</a>

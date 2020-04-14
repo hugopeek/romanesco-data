@@ -1,0 +1,13 @@
+id: 504
+name: fbGetFormID
+description: 'Run the cbGetFieldContent snippet to find out which form is selected on a specific resource.'
+category: a_formblocks
+properties: 'a:0:{}'
+
+-----
+
+[[cbGetFieldContent?
+    &resource=`[[+id]]`
+    &field=`22`
+    &tpl=`fbFormID`
+]]

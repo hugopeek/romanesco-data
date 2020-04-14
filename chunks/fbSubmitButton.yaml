@@ -1,0 +1,12 @@
+id: 506
+name: fbSubmitButton
+description: ''
+category: a_formblocks
+properties: 'a:0:{}'
+
+-----
+
+<input class="[[+button_size:empty=`[[+form_size]]`]] [[+button_type]] [[+button_alignment]] ui button"
+       type="submit"
+       name="submit-[[*alias]]"
+       value="[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]">

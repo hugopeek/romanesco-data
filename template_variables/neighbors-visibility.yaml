@@ -1,0 +1,15 @@
+id: 137
+type: listbox
+name: neighbors_visibility
+caption: 'Neighbors menu'
+description: 'Do you want to display a set of buttons below the content that link to the previous and next article? This setting is inherited on child pages.'
+category: Navigation
+elements: On==1||Off==0
+rank: 20
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT 1
