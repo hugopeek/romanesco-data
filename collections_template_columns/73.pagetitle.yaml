@@ -1,8 +1,7 @@
-id: 5
-template: 1
+id: 73
+template: 12
 label: Title
 name: pagetitle
-sortable: 1
 width: 80
 editor: textfield
 renderer: Collections.renderer.pagetitleWithButtons

@@ -1,11 +1,11 @@
-id: 1
-name: Publication
+id: 12
+name: 'Publication (Readability)'
 global_template: 1
 bulk_actions: 1
 sort_field: publishedon
 sort_dir: desc
 sort_type: null
-child_template: 5
+child_template: 6
 resource_type_selection: 0
 tab_label: collections.publication.children
 button_label: collections.publication.children.create

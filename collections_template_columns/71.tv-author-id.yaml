@@ -1,8 +1,7 @@
-id: 3
-template: 1
+id: 71
+template: 12
 label: Author
 name: tv_author_id
-sortable: 1
 width: 50
 php_renderer: renderUserName
 position: 4
