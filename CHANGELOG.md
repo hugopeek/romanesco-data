@@ -1,5 +1,25 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.8.2
+Released on April 20, 2020
+
+> Romanesco Patterns 0.16.2-pl
+
+New features:
+- Add CB for displaying FAQs with structured markup
+
+Fixes and improvements:
+- Add option to embed Youtube video directly
+- Add option to manually correct aspect ratio of Youtube embed
+- Ensure highest resolution thumbnail is fetched for Youtube embed placeholder
+- Switch to JSON-LD for structured breadcrumbs data
+- Improve structured data JSON-LD snippet in head
+- Reorganize data elements folder structure
+- Use uniform placeholders in Accordions, Cards and Tabs
+- Add heading level to accordions
+- Don't let ToC menu include headings outside of content area
+- Add Collections view with ArticleReadability template as default
+
 ## v1.8.1
 Released on April 14, 2020
 
