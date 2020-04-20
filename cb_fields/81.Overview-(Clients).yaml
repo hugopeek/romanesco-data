@@ -5,7 +5,8 @@ name: 'Overview (Clients)'
 description: ''
 sortorder: 46
 category: 5
-icon: chunk_A
+icon: building-o
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"280","custom_preview":""}'
 availability: '[]'

@@ -5,7 +5,8 @@ name: 'Overview (Testimonials)'
 description: ''
 sortorder: 47
 category: 5
-icon: chunk_A
+icon: comments
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"121","custom_preview":""}'
 availability: '[]'

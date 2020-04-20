@@ -5,7 +5,7 @@ name: 'Input (Hidden)'
 description: ''
 sortorder: 59
 category: 7
-icon: hidden
+icon: eye-slash
 icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"43","custom_preview":"<p><\/p>"}'

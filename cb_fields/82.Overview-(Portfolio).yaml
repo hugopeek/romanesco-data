@@ -5,7 +5,8 @@ name: 'Overview (Portfolio)'
 description: ''
 sortorder: 48
 category: 5
-icon: chunk_A
+icon: briefcase
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"281","custom_preview":""}'
 availability: '[]'

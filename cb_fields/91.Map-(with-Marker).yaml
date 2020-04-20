@@ -5,7 +5,7 @@ name: 'Map (with Marker)'
 description: ''
 sortorder: 34
 category: 3
-icon: marker
+icon: map-marker
 icon_type: custom
 template: '[[+value]]'
 properties: '{"chunk":"364","custom_preview":"<p><em>Add a map here, with a single marker on a location of choice. You can enter the lat\/long coordinates of the location (separated by a ,) or write down the actual address. This address will then be geocoded to the correct coordinates for the marker.<\/em><\/p>\n<p><em>Please note that you need a Mapbox API key for the map to be displayed, and the GeoCoder extra installed if you want to enter an address as location. This also requires an API key, for an external geocoding service of choice.<\/em><\/p>"}'

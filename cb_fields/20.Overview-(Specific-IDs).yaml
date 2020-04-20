@@ -5,7 +5,8 @@ name: 'Overview (Specific IDs)'
 description: ''
 sortorder: 43
 category: 5
-icon: chunk_A
+icon: overview-specific
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"122","custom_preview":""}'
 availability: '[]'

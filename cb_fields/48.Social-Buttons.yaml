@@ -5,9 +5,10 @@ name: 'Social Buttons'
 description: ''
 sortorder: 32
 category: 3
-icon: chunk_B
+icon: share-alt
+icon_type: custom
 template: '[[+value]]'
 properties: '{"available_chunks":"socialConnectButtons,socialShareButtons","available_categories":""}'
-availability: ''
+availability: '[]'
 layouts: ''
 settings: '[{"reference":"button_type","title":"Button type","fieldtype":"select","default_value":"","fieldoptions":"Brand colors=\nBasic=basic","field_is_exposed":"modal"}]'

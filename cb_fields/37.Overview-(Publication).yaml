@@ -5,7 +5,8 @@ name: 'Overview (Publication)'
 description: ''
 sortorder: 44
 category: 5
-icon: chunk_A
+icon: newspaper-o
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"235","custom_preview":""}'
 availability: '[]'

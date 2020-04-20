@@ -5,7 +5,8 @@ name: 'Overview (Team)'
 description: ''
 sortorder: 45
 category: 5
-icon: chunk_A
+icon: group
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"120","custom_preview":""}'
 availability: '[]'

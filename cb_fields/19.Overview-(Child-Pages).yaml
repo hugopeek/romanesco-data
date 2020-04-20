@@ -5,7 +5,8 @@ name: 'Overview (Child Pages)'
 description: ''
 sortorder: 42
 category: 5
-icon: chunk_A
+icon: child-multi
+icon_type: custom
 template: '[[+tag]]'
 properties: '{"chunk":"117","custom_preview":""}'
 availability: '[]'
