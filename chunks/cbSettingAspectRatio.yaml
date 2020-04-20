@@ -1,0 +1,12 @@
+id: 516
+name: cbSettingAspectRatio
+description: ''
+category: a_cb_settings
+properties: 'a:0:{}'
+
+-----
+
+1:1
+4:3
+16:9
+21:9

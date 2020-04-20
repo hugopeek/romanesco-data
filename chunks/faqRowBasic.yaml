@@ -1,0 +1,13 @@
+id: 514
+name: faqRowBasic
+description: ''
+category: m_information
+properties: 'a:0:{}'
+
+-----
+
+<[[+level:replace=`span==div`]] class="ui [[+level:is=`span`:then=`tiny`]] [[+alignment]] header">
+    [[+heading]]
+</[[+level:replace=`span==div`]]>
+
+[[+content]]

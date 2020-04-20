@@ -1,0 +1,16 @@
+id: 520
+name: faqDataRow
+description: ''
+category: a_dat_rows
+properties: 'a:0:{}'
+
+-----
+
+{
+    "@type": "Question",
+    "name": "[[+heading]]",
+    "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[[+content]]"
+    }
+},

@@ -1,0 +1,14 @@
+id: 512
+name: breadcrumbDataWrapper
+description: ''
+category: a_data
+properties: 'a:0:{}'
+
+-----
+
+{
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        [[+crumbs]]
+    ]
+},

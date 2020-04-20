@@ -1,0 +1,14 @@
+id: 518
+name: breadcrumbDataRow
+description: ''
+category: a_dat_rows
+properties: 'a:0:{}'
+
+-----
+
+{
+    "@type": "ListItem",
+    "position": [[+idx]],
+    "name": "[[+menutitle:empty=`[[+pagetitle]]`]]",
+    "item": "[[++site_url]][[+link]]"
+}
