@@ -174,9 +174,9 @@ data:
         primary:
             - id
             - name
-        package: contentblocks
         where:
             - 'id:<': '100000'
+        package: contentblocks
     cb_layouts:
         class: cbLayout
         primary:
@@ -210,9 +210,9 @@ data:
         primary:
             - id
             - collection
-        package: collections
         where:
             - 'id:<': '100000'
+        package: collections
     collections_templates:
         class: CollectionTemplate
         primary:
@@ -242,9 +242,9 @@ data:
     qsb_buttons:
         class: qsbButton
         primary: set
-        package: quickstartbuttons
         where:
             - 'id:<': '100000'
+        package: quickstartbuttons
     #qsb_icons:
     #    class: qsbIcon
     #    primary: name
@@ -267,9 +267,9 @@ data:
         primary:
             - id
             - caption
-        package: migx
         where:
             - 'id:<': '100000'
+        package: migx
     migx_formtab_field:
         class: migxFormtabField
         primary:

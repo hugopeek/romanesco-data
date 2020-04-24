@@ -10,9 +10,9 @@ data:
         primary:
             - id
             - name
+        where:
+            - 'id:<': '100000'
         package: contentblocks
-        #where:
-        #    - 'id:<': '100000'
     cb_layouts:
         class: cbLayout
         primary:

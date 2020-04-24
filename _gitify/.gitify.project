@@ -257,6 +257,14 @@ data:
         class: cbDefault
         primary: id
 
+    # Redactor
+    redactor_set:
+        class: redConfigurationSet
+        primary:
+            - id
+            - name
+        package: redactor
+
     # ClientConfig
     cg_groups:
         class: cgGroup
