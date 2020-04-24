@@ -60,6 +60,11 @@ data:
         primary: key
         where:
             - 'id:<': '100000'
+            - 'key:NOT IN':
+                - 'google_analytics_ua'
+                - 'matomo_analytics_url'
+                - 'custom_cache'
+                - 'minify_css_js'
 
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:

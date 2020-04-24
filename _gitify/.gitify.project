@@ -265,6 +265,12 @@ data:
     cg_settings:
         class: cgSetting
         primary: key
+        where:
+            - 'key:NOT IN':
+                - 'google_analytics_ua'
+                - 'matomo_analytics_url'
+                - 'custom_cache'
+                - 'minify_css_js'
 
     # Collections
     collections_settings:
