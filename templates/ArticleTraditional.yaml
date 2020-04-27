@@ -123,10 +123,10 @@ properties: 'a:0:{}'
                     <div class="ui container">
                         <div class="ui equal width middle aligned grid">
                             <div class="compact column">
-                                <h3 class="ui tiny header">
+                                <h4 class="ui disabled mini header">
                                     <span class="large screen and widescreen only">[[%romanesco.article.share_this]]</span>
                                     <span class="computer only">[[%romanesco.article.share_this_short]]</span>
-                                </h3>
+                                </h4>
                             </div>
                             <div class="right aligned column">
                                 [[$socialShareButtons? &button_type=`basic`]]
