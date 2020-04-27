@@ -6,7 +6,7 @@ description: ''
 sortorder: 21
 category: 4
 icon: tabs
-template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &heading_level=`[[+heading_level]]`\n    &content=`[[+content]]`\n    &padding=`[[+padding]]`\n    &tab_type=`[[+tab_type]]`\n    &idx=`[[+idx]]`\n]]"
+template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &content=`[[+content]]`\n    &padding=`[[+padding]]`\n    &tab_type=`[[+tab_type]]`\n    &idx=`[[+idx]]`\n]]"
 properties: '{"wrapper_template":"[[$[[+layout_type]]Outer?\n    &rows=`[[+rows]]`\n    &total=`[[+total]]`\n    &padding=`[[+padding]]`\n    &accordion_type=`[[+accordion_type]]`\n    &tab_type=`[[+tab_type]]`\n    &justify_tabs=`[[+justify_tabs]]`\n    &unique_idx=`[[+unique_idx]]`\n    &layout_idx=`[[+layout_idx]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
 availability: '[]'
 layouts: ''

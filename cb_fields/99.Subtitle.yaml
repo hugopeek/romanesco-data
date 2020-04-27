@@ -3,7 +3,7 @@ parent: 94
 parent_properties: '{"key":"subtitle","width":"100"}'
 name: Subtitle
 description: ''
-sortorder: 3
+sortorder: 2
 icon: paragraph
 template: '[[+value]]'
 properties: '{"use_tinyrte":"0"}'

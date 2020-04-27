@@ -1,12 +1,12 @@
 id: 66
 parent: 23
 parent_properties: '{"key":"content","width":"100"}'
-input: richtext
+input: redactor
 name: Content
 description: ''
 sortorder: 2
 template: '[[+value]]'
-properties: '[]'
-availability: ''
+properties: '{"configuration_set":"2"}'
+availability: '[]'
 layouts: ''
 settings: '[]'
