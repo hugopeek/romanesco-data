@@ -1,5 +1,15 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.8.3
+Released on ...
+
+Fixes and improvements:
+- Add rawAlias placeholder chunk
+- Fix heading level placeholder in Accordion
+- Add Redactor v3 configuration sets to Gitify
+- Exclude analytics keys and dev configuration settings from project .gitify
+- Load custom form assets through fbLoadAssets (if present)
+
 ## v1.8.2
 Released on April 20, 2020
 

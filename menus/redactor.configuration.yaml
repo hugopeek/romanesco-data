@@ -1,0 +1,6 @@
+text: redactor.configuration
+parent: components
+description: redactor.configuration.menu_desc
+menuindex: 5
+permissions: redactor_configurator
+namespace: redactor

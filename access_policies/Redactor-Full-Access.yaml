@@ -1,0 +1,6 @@
+id: 16
+name: 'Redactor Full Access'
+description: 'Access Policy for Redactor that gives full access to the configurator. Overwritten on upgrade.'
+template: 9
+data: '{"redactor_configurator":true,"redactor_sets_view":true,"redactor_sets_create":true,"redactor_sets_save":true,"redactor_sets_export":true,"redactor_sets_import":true,"redactor_sets_delete":true}'
+lexicon: 'redactor:permissions'

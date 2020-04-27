@@ -50,21 +50,14 @@ data:
     cg_groups:
         class: cgGroup
         primary: label
-        package: clientconfig
-
-        # Exclude everything above the 100K autoincrement threshold
         where:
             - 'id:<': '100000'
+        package: clientconfig
     cg_settings:
         class: cgSetting
         primary: key
         where:
             - 'id:<': '100000'
-            - 'key:NOT IN':
-                - 'google_analytics_ua'
-                - 'matomo_analytics_url'
-                - 'custom_cache'
-                - 'minify_css_js'
 
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:
