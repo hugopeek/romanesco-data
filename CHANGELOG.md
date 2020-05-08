@@ -4,6 +4,8 @@
 Released on ...
 
 Fixes and improvements:
+- Disable TinyMCE in CB headings to prevent unwanted <br> tags
+- Add context-aware Configuration settings to project .gitify
 - Add rawAlias placeholder chunk
 - Fix heading level placeholder in Accordion
 - Add Redactor v3 configuration sets to Gitify

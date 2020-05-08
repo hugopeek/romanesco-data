@@ -279,6 +279,11 @@ data:
                 - 'matomo_analytics_url'
                 - 'custom_cache'
                 - 'minify_css_js'
+    cg_context_values:
+        class: cgContextValue
+        primary:
+            - setting
+            - context
 
     # Collections
     collections_settings:
