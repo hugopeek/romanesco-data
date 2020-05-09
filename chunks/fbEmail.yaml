@@ -2,9 +2,7 @@ id: 33
 name: fbEmail
 description: ''
 category: o_formblocks
-snippet: "[[%formblocks.email.introtext]]<br/><br/>\n\n[[!fbFormReport?\n    &formID=`[[*id]][[+prev_forms:prepend=`,`]]`\n    &tplPrefix=`[[*fb_email_tpl_prefix]]`\n    &tplSectionHeader=`fbEmailSectionHeader`\n]]\n\n<br/><br/><br/>\n\n[[%formblocks.email.footer]]"
 properties: 'a:0:{}'
-content: "[[%formblocks.email.introtext]]<br/><br/>\n\n[[!fbFormReport?\n    &formID=`[[*id]][[+prev_forms:prepend=`,`]]`\n    &tplPrefix=`[[*fb_email_tpl_prefix]]`\n    &tplSectionHeader=`fbEmailSectionHeader`\n]]\n\n<br/><br/><br/>\n\n[[%formblocks.email.footer]]"
 
 -----
 

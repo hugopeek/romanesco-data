@@ -37,6 +37,13 @@ properties: 'a:0:{}'
         &redirectToOnNotFound=``
     `
 ]]]]
+[[returnFirstHit:toPlaceholder=`redirect_to`?
+    &1=`[[+redirect_id]]`
+    &2=`[[+next_step]]`
+    &3=`[[*fb_redirect_dynamic]]`
+    &4=`[[*fb_redirect_id]]`
+    &5=`[[++site_start]]`
+]]
 
 [[!FormIt?
     &preHooks=`
@@ -95,7 +102,7 @@ properties: 'a:0:{}'
     &errTpl=`<span class="help error">[[+error]]</span>`
     &placeholderPrefix=`fb[[*id]].`
     &submitVar=`submit-[[*alias]]`
-    &redirectTo=`[[+redirect_id:empty=`[[+next_step:empty=`[[*fb_redirect_dynamic:empty=`[[*fb_redirect_id]]`]]`]]`]]`
+    &redirectTo=`[[+redirect_to]]`
 
     &store=`[[*fb_store_data:default=`0`]]`
     &storeTime=`[[*fb_store_time:default=`300`]]`

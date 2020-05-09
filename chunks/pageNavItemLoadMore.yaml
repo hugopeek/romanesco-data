@@ -2,9 +2,7 @@ id: 470
 name: pageNavItemLoadMore
 description: ''
 category: a_nav_pagination
-snippet: "<button class=\"ui right labeled icon button more\">\n    [[%romanesco.pagination.load_more]]\n    <i class=\"plus icon\"></i>\n</button>"
 properties: 'a:0:{}'
-content: "<button class=\"ui right labeled icon button more\">\n    [[%romanesco.pagination.load_more]]\n    <i class=\"plus icon\"></i>\n</button>"
 
 -----
 
