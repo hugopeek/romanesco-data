@@ -1,0 +1,17 @@
+id: 523
+name: fbSelectDropdownRowInputOption
+description: 'A row template for using the input options found under Manage > Tool shed.'
+category: a_fb_inputs
+properties: 'a:0:{}'
+
+-----
+
+[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`field_alias`? &input=`[[+field_name]]`]]
+[[!fbStripNonAlpha:toPlaceholder=`value_[[+idx]]`? &input=`[[+name]]`]]
+
+<option value="[[+value_[[+idx]]]]"
+        [[!+fb[[*id]].[[+field_alias]]:FormItIsSelected=`[[+value_[[+idx]]]]`]]
+        [[!+fb[[*id]].[[+field_alias]]:contains=`[[+value_[[+idx]]]]`:then=`selected`]]
+    >
+    [[+name]]
+</option>

@@ -62,7 +62,8 @@ foreach ($forms as $formID) {
 
     // Only add header if there are multiple forms and a tpl chunk present
     if ($forms[1] && $tplSectionHeader) {
-        $result .= $modx->getChunk($tplSectionHeader, array("title" => $resource->get('pagetitle')));
+        $title = $resource->get('menutitle') ? $resource->get('menutitle') : $resource->get('pagetitle');
+        $result .= $modx->getChunk($tplSectionHeader, array("title" => $title));
     }
 
     $result .= getFields($modx, $cbData, $tplPrefix, $formID);
@@ -70,4 +71,4 @@ foreach ($forms as $formID) {
     $output[] = $result;
 }
 
-return implode(array_reverse($output));
+return implode($output);

@@ -2,12 +2,14 @@ id: 32
 name: fbContentBlock
 description: ''
 category: o_formblocks
+snippet: "[[[[If?\n    &subject=`[[+previous_steps]][[+next_step]]`\n    &operator=`notempty`\n    &then=`$fbPrepareSteps`\n]]]]\n\n[[!$fbRenderFormWrapper?\n    &form_id=`[[+form_id]]`\n    &current_id=`[[*id]]`\n    &current_pagetitle=`[[*pagetitle]]`\n    &current_menutitle=`[[*menutitle]]`\n    &form_size=`[[+form_size]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n\n    &button_type=`[[+button_type]]`\n    &button_size=`[[+button_size]]`\n    &button_alignment=`[[+button_alignment]]`\n\n    &multiple_steps=`[[+multiple_steps:empty=``]]`\n    &prev_steps=`[[+section.1:empty=``]]`\n    &next_steps=`[[+section.2:empty=``]]`\n    &prev_forms=`[[+prev_forms:empty=``]]`\n    &next_forms=`[[+next_forms:empty=``]]`\n    &prev_step=`[[+prev_steps.last:empty=``]]`\n    &next_step=`[[+next_steps.first:empty=``]]`\n    &first_step=`[[+step.first:empty=``]]`\n    &last_step=`[[+step.last:empty=``]]`\n    &redirect_id=`[[+redirect_id:empty=``]]`\n]]"
 properties: 'a:0:{}'
+content: "[[[[If?\n    &subject=`[[+previous_steps]][[+next_step]]`\n    &operator=`notempty`\n    &then=`$fbPrepareSteps`\n]]]]\n\n[[!$fbRenderFormWrapper?\n    &form_id=`[[+form_id]]`\n    &current_id=`[[*id]]`\n    &current_pagetitle=`[[*pagetitle]]`\n    &current_menutitle=`[[*menutitle]]`\n    &form_size=`[[+form_size]]`\n    &form_layout=`[[+form_layout]]`\n    &segment_type=`[[+segment_type]]`\n    &padding=`[[+padding]]`\n\n    &button_type=`[[+button_type]]`\n    &button_size=`[[+button_size]]`\n    &button_alignment=`[[+button_alignment]]`\n\n    &multiple_steps=`[[+multiple_steps:empty=``]]`\n    &prev_steps=`[[+section.1:empty=``]]`\n    &next_steps=`[[+section.2:empty=``]]`\n    &prev_forms=`[[+prev_forms:empty=``]]`\n    &next_forms=`[[+next_forms:empty=``]]`\n    &prev_step=`[[+prev_steps.last:empty=``]]`\n    &next_step=`[[+next_steps.first:empty=``]]`\n    &first_step=`[[+step.first:empty=``]]`\n    &last_step=`[[+step.last:empty=``]]`\n    &redirect_id=`[[+redirect_id:empty=``]]`\n]]"
 
 -----
 
 [[[[If?
-    &subject=`[[+previous_steps]][[+next_step]]`
+    &subject=`[[+multiple_steps]]`
     &operator=`notempty`
     &then=`$fbPrepareSteps`
 ]]]]
