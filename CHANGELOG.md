@@ -4,6 +4,7 @@
 Released on ...
 
 Fixes and improvements:
+- Fix form redirectTo placeholder not always returning correct value
 - Break comma separated lists into rows in form emails
 - Fix submission of 'other' values in all forms
 - Look for menu title first when adding multi-step form headings
