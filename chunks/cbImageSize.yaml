@@ -1,0 +1,11 @@
+id: 525
+name: cbImageSize
+description: ''
+category: a_cb_fields
+properties: 'a:0:{}'
+
+-----
+
+Original=
+[[$cbFieldSize]]
+Fluid (full width)=fluid
