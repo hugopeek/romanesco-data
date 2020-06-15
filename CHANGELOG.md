@@ -1,9 +1,21 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.8.3
-Released on ...
+Released on June 15, 2020
+
+> Romanesco Patterns 0.16.3-pl
 
 Fixes and improvements:
+- Add scrolldir.js for displaying menu on mobile when scrolling up
+- Add ability to override headerTitles chunk
+- Load CB image settings with chunks
+- Add caption and credits to Image CB
+- Add positioning and sizing options to Image CB
+- Point to separate gulpfile when generating CSS per context
+- Update Jquery to v3.5.1
+- Fix static downloads not having any content
+- Write theme.variables output directly to file
+- Make UpdateStyling plugin work with context-aware Configuration settings
 - Fix form redirectTo placeholder not always returning correct value
 - Break comma separated lists into rows in form emails
 - Fix submission of 'other' values in all forms
