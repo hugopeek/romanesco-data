@@ -1,7 +1,0 @@
-id: 406
-name: tvSelectHeaderCTA
-description: 'Get available CTAs for the header and turn them into input options for use in a selection TV.'
-category: a_select
-snippet: ''
-properties: 'a:0:{}'
-content: ''

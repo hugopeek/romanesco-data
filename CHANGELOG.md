@@ -6,6 +6,7 @@ Released on ...
 > Romanesco Patterns 0.16.4-pl
 
 Fixes and improvements:
+- Remove deleted patterns from extract
 - Add option to change main menu size
 - Refactor main accordion menu
 - Add ability to change custom CSS path (per context, if needed)
