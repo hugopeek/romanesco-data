@@ -1,5 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.8.4
+Released on ...
+
+> Romanesco Patterns 0.16.4-pl
+
+Fixes and improvements:
+- Add option to change main menu size
+- Refactor main accordion menu
+- Add ability to change custom CSS path (per context, if needed)
+- Create absolute path for CSS backgrounds that won't be thumbnailed
+- Fix CSS background not being thumbnailed due to negative crop margins
+- Rename Semantic assets paths in system settings
+- Correctly escape double quote and backslash characters in JSON-LD output
+
 ## v1.8.3
 Released on June 15, 2020
 
