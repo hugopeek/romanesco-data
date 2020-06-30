@@ -6,21 +6,19 @@ properties: 'a:0:{}'
 
 -----
 
-<nav id="menu" class="ui large secondary [[++navbar_sticky:is=`1`:then=`sticky`]] menu">
+<nav id="menu" class="ui [[++navbar_size:default=`large`]] secondary [[++navbar_sticky:is=`1`:then=`sticky`]] menu">
     <div class="ui container">
         <div class="item branding">
             [[[[If? &subject=`[[$logoTheme]]` &operator=`isnull` &then=`$logo` &else=`$logoTheme`]]]]
         </div>
-        
-        <div class="right menu">
-            [[pdoMenu?
-                &startId=`0`
-                &level=`1`
-                &resources=`[[++navbar_resources]]`
-                &tplOuter=`navWrapper`
-                &tpl=`navItem`
-            ]]
-        </div>
+
+        [[[[If?
+            &subject=`[[++navbar_level]]`
+            &operator=`lte`
+            &operand=`1`
+            &then=`$mainNavItems? &classes=`right menu``
+            &else=`$mainNavItemsDropdown`
+        ]]]]
 
         [[$mainNavItemsTheme]]
 

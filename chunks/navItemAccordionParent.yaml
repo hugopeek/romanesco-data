@@ -1,0 +1,29 @@
+id: 528
+name: navItemAccordionParent
+description: ''
+category: a_nav_primary
+properties: 'a:1:{s:6:"active";a:7:{s:4:"name";s:6:"active";s:4:"desc";s:39:"romanesco.navitemaccordionparent.active";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+wrapper:isnot=``:then=`
+<li class="link item [[+classnames]]">
+    <div class="title [[+active]]">
+        <a href="[[+link]]" [[+attributes]]>
+            [[+menutitle]]
+        </a>
+        <button class="ui tiny icon button"><i class="dropdown icon"></i></button>
+    </div>
+    <ul class="content [[+active]]">
+        [[+wrapper]]
+    </ul>
+</li>
+`:else=`
+<li class="link item [[+classnames]]">
+    <div class="title">
+        <a href="[[+link]]" [[+attributes]]>
+            [[+menutitle]]
+        </a>
+    </div>
+</li>
+`]]

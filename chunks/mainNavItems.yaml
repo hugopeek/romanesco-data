@@ -1,0 +1,18 @@
+id: 529
+name: mainNavItems
+description: ''
+category: m_nav_primary
+properties: 'a:0:{}'
+
+-----
+
+<div class="[[+classes]]">
+    [[pdoMenu?
+        &startId=`0`
+        &level=`1`
+        &levelClass=`level-`
+        &resources=`[[++navbar_resources]]`
+        &tplOuter=`navWrapper`
+        &tpl=`navItem`
+    ]]
+</div>

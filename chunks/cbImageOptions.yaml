@@ -2,9 +2,7 @@ id: 526
 name: cbImageOptions
 description: ''
 category: a_cb_fields
-snippet: "Circular image=circular\nBordered image=bordered"
 properties: 'a:0:{}'
-content: "Circular image=circular\nBordered image=bordered"
 
 -----
 

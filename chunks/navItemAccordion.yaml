@@ -1,0 +1,15 @@
+id: 527
+name: navItemAccordion
+description: ''
+category: a_nav_primary
+properties: 'a:0:{}'
+
+-----
+
+<li class="link item [[+classnames]]">
+    <div class="title">
+        <a href="[[+link]]" [[+attributes]]>
+            [[+menutitle]]
+        </a>
+    </div>
+</li>
