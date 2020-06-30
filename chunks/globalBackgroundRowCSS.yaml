@@ -26,8 +26,8 @@ properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:
     [[pthumb:prepend=`url(`:append=`)`?
         &input=`[[+image.url:prepend=`/`]]`
         &options=`w=[[+imgWidth]]
-            &sx=[[+image.crops.[[+imgType]].x:lt=`0`:then=`0`]]
-            &sy=[[+image.crops.[[+imgType]].y:lt=`0`:then=`0`]]
+            &sx=[[+image.crops.[[+imgType]].x]]
+            &sy=[[+image.crops.[[+imgType]].y]]
             &sw=[[+image.crops.[[+imgType]].width]]
             &sh=[[+image.crops.[[+imgType]].height]]
             &q=[[++img_quality]]

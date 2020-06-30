@@ -60,6 +60,7 @@ properties: 'a:0:{}'
         [[*fb_hooks:notempty=`[[*fb_hooks]],`]]
         [[*fb_email_to:notempty=`email,`]]
         [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
+        [[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
         redirect
     `
 
@@ -122,6 +123,7 @@ properties: 'a:0:{}'
 <form id="form-[[*alias]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id:empty=`0`]]]]" method="post" enctype="multipart/form-data">
 
     [[[[+multiple_steps:notempty=`!fbFormReport? &formID=`[[*id]][[+prev_forms:prepend=`,`]][[+next_forms:prepend=`,`]]` &tplPrefix=`fbStoreRow_``]]]]
+    [[[[++formblocks.formsource:eq=`1`:then=`!formsource`]]]]
 
     <div class="ui [[+segment_type]]">
 
