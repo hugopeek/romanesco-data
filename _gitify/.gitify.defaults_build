@@ -20,6 +20,7 @@ data:
                 - 'email_sender'
                 - 'error_page'
                 - 'formit.form_encryptkey'
+                - 'formblocks.formsource'
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
