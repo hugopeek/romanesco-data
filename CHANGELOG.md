@@ -6,9 +6,12 @@ Released on ...
 > Romanesco Patterns 0.16.4-pl
 
 Fixes and improvements:
+- Refactor main accordion menu
 - Remove deleted patterns from extract
 - Add option to change main menu size
-- Refactor main accordion menu
+- Fix broken favicon file names and colors
+- Add setting for custom favicon path
+- Add option to activate FormSource in FormBlocks reports
 - Add ability to change custom CSS path (per context, if needed)
 - Create absolute path for CSS backgrounds that won't be thumbnailed
 - Fix CSS background not being thumbnailed due to negative crop margins
