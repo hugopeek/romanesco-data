@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.8.4
-Released on ...
+Released on July 1, 2020
 
 > Romanesco Patterns 0.16.4-pl
 
