@@ -1,5 +1,18 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.8.5
+Released on ...
+
+> Romanesco Patterns 0.16.5-pl
+
+Fixes and improvements:
+- Add ability to place slider controls outside of container
+- Turn lightbox into fullscreen modal and lazy load images
+- Make Gallery images sizes responsive
+- Add option to lazy load Gallery images
+- Add link rel options to Button and Image CBs
+- Fix path to custom context CSS in GenerateStaticCSS
+
 ## v1.8.4
 Released on July 1, 2020
 
