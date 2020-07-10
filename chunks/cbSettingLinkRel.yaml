@@ -1,0 +1,11 @@
+id: 534
+name: cbSettingLinkRel
+description: ''
+category: a_cb_settings
+properties: 'a:0:{}'
+
+-----
+
+Add 'nofollow' to link tag=nofollow
+Add 'noopener' to link tag=noopener
+Add 'noreferrer' to link tag=noreferrer

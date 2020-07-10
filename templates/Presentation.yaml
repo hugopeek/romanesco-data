@@ -26,13 +26,13 @@ properties: 'a:0:{}'
                 [[*content]]
             </div>
 
-            [[*slider_pagination:isnot=`false`:then=`
-            <div class="swiper-pagination"></div>
+            [[*slider_pagination:isnot=`none`:then=`
+            <div class="swiper-pagination swiper-[[*id]]"></div>
             `]]
 
             [[*slider_behaviour:contains=`arrows`:then=`
-            <button class="swiper-button-next"></button>
-            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next swiper-[[*id]]"></button>
+            <button class="swiper-button-prev swiper-[[*id]]"></button>
             `]]
         </article>
     </main>
