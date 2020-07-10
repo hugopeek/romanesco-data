@@ -1,12 +1,12 @@
 id: 61
 parent: 36
 parent_properties: '{"key":"caption","width":"100"}'
-input: textarea
+input: redactor
 name: Caption
 description: ''
 sortorder: 2
 template: '[[+value]]'
-properties: '{"use_tinyrte":"1"}'
+properties: '{"configuration_set":"2"}'
 availability: '[]'
 layouts: ''
 settings: '[]'

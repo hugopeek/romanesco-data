@@ -6,7 +6,7 @@ description: 'Turn child elements into a slider. Can also process Overview items
 sortorder: 30
 category: 3
 icon: layout_img_right
-template: "<div class=\"nested\">\n    [[+value]]\n</div>"
+template: "<div class=\"nested slider\">\n    [[+value]]\n</div>"
 properties: '{"available_layouts":"24","available_templates":"-1"}'
 availability: '[]'
 layouts: ''

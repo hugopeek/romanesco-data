@@ -4,8 +4,8 @@ parent_properties: '{"key":"image","width":"100"}'
 input: image
 name: Image
 description: ''
-template: '[[+url]]'
-properties: '{"source":"8","directory":"\/","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0"}'
+template: '@CHUNK imageGallery'
+properties: '{"source":"8","directory":"[[+resource]]\/","crop_directory":"[[+resource]]\/crops\/","crops":"default","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"default"}'
 availability: '[]'
 layouts: ''
 settings: '[]'
