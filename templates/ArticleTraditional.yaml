@@ -40,7 +40,8 @@ properties: 'a:0:{}'
         <div class="ui very relaxed grid container">
             <article id="content" class="sixteen wide mobile eleven wide computer publication column">
 
-                <header class="ui vertical stripe segment [[++layout_background_default]] introduction">
+                <header class="ui vertical stripe segment [[setBackground? &background=`[[*header_background:empty=`[[++layout_background_default]]`]]`]] introduction">
+
                     <div class="ui container">
                         <h1 class="ui header">[[*pagetitle]]</h1>
 

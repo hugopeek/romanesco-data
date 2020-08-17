@@ -39,7 +39,7 @@ properties: 'a:0:{}'
     <main id="main" role="main">
         <article id="content">
 
-            <header class="ui vertical stripe segment [[++layout_background_default]] introduction">
+            <header class="ui vertical stripe segment [[setBackground? &background=`[[*header_background:empty=`[[++layout_background_default]]`]]`]] introduction">
                 <div class="ui text container">
                     <h1 class="ui header">[[*pagetitle]]</h1>
                     <p class="meta date"><em>[[*publishedon:strtotime:date=`%e %B %Y`]]</em></p>

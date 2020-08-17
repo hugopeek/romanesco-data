@@ -17,7 +17,7 @@ properties: 'a:0:{}'
             &operator=`lte`
             &operand=`1`
             &then=`$mainNavItems? &classes=`right menu``
-            &else=`$mainNavItemsDropdown`
+            &else=`$mainNavItemsDropdown? &classes=`right menu``
         ]]]]
 
         [[$mainNavItemsTheme]]
@@ -25,7 +25,7 @@ properties: 'a:0:{}'
         <div class="item toc">
             <button class="ui right labeled icon button">
                 <i class="sidebar icon"></i>
-                <span>Menu</span>
+                <span>[[%romanesco.menu.toc]]</span>
             </button>
         </div>
     </div>

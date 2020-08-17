@@ -6,4 +6,4 @@ properties: 'a:0:{}'
 
 -----
 
-<img src="[[pthumb? &input=`[[++overview_img_fallback]]` &options=`w=[[++max_thumb_width]]&h=[[++max_thumb_width:mpy=`[[+mpy]]`]]&zc=1`]]">
+<img src="[[++overview_img_[[+img_type]]_fallback]]" alt="[[%romanesco.overview.img_fallback]]">
