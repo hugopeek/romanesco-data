@@ -1,9 +1,9 @@
 id: 17
 name: fbLexiconMgr
 category: c_formblocks
-plugincode: '$modx->controller->addLexiconTopic(''romanescobackyard:formblocks'');'
+plugincode: "/**\n * fbLexiconManager\n *\n * Load FormBlocks lexicon in MODX manager.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->controller->addLexiconTopic('romanescobackyard:formblocks');"
 properties: 'a:0:{}'
-content: '$modx->controller->addLexiconTopic(''romanescobackyard:formblocks'');'
+content: "/**\n * fbLexiconManager\n *\n * Load FormBlocks lexicon in MODX manager.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->controller->addLexiconTopic('romanescobackyard:formblocks');"
 
 -----
 

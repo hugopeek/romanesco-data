@@ -1,9 +1,9 @@
 id: 30
 name: LexiconWeb
 category: c_global
-plugincode: '$modx->lexicon->load(''romanescobackyard:default'');'
+plugincode: "/**\n * LexiconWeb\n *\n * Load default lexicon in web context.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->lexicon->load('romanescobackyard:default');"
 properties: 'a:0:{}'
-content: '$modx->lexicon->load(''romanescobackyard:default'');'
+content: "/**\n * LexiconWeb\n *\n * Load default lexicon in web context.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->lexicon->load('romanescobackyard:default');"
 
 -----
 

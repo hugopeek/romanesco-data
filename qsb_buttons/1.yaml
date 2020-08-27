@@ -1,6 +1,6 @@
 id: 1
 set: 1
-icon: 370
+icon: 606
 icon_file: null
 text: 'Open the Quickstart Buttons documentation'
 description: 'Click here to review the documentation of modmores'' Quickstart Buttons'
@@ -8,5 +8,5 @@ action_props: null
 handler: null
 link: 'http://www.modmore.com/extras/quickstartbuttons/documentation/'
 newwindow: 1
-iconcls: fa-moon-o
+iconcls: icon-modmore
 iconpath: ''

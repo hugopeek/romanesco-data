@@ -1,9 +1,9 @@
 id: 18
 name: fbLexiconWeb
 category: c_formblocks
-plugincode: '$modx->lexicon->load(''romanescobackyard:formblocks'');'
+plugincode: "/**\n * fbLexiconWeb\n *\n * Load FormBlocks lexicon in web context.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->lexicon->load('romanescobackyard:formblocks');"
 properties: 'a:0:{}'
-content: '$modx->lexicon->load(''romanescobackyard:formblocks'');'
+content: "/**\n * fbLexiconWeb\n *\n * Load FormBlocks lexicon in web context.\n *\n * @var modX $modx\n * @package romanesco\n */\n\n$modx->lexicon->load('romanescobackyard:formblocks');"
 
 -----
 
