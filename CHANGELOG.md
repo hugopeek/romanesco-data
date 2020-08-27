@@ -1,11 +1,23 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.8.5
-Released on ...
+## v1.9.0
+Released on August 27, 2020
 
-> Romanesco Patterns 0.16.5-pl
+> Romanesco Patterns 1.0.0-beta1
+
+New features:
+- Add ability to generate critical CSS for each resource
 
 Fixes and improvements:
+- Prevent empty logo path in Configuration from triggering a CSS rebuild
+- Fix placeholder for due date in status grid
+- Accept overview fallback images for each image type
+- Don't transform input to lowercase in removeDuplicateLines snippet
+- Don't add header class to content headers if they already have one
+- Replace hardcoded Menu text in main nav with lexicon key
+- Add classes with placeholder in main accordion navigation
+- Fix background in article template introduction segment
+- Fix path to default context CSS in GenerateStaticCSS
 - Add ability to place slider controls outside of container
 - Turn lightbox into fullscreen modal and lazy load images
 - Make Gallery images sizes responsive
