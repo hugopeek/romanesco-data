@@ -2,7 +2,9 @@ id: 418
 name: kanbanGridCard
 description: ''
 category: m_hub
+snippet: "<div class=\"ui fluid card\">\n    <div class=\"content\">\n        <a class=\"header\" href=\"[[~[[+id]]]]\" target=\"_blank\">\n            [[+menutitle:empty=`[[+pagetitle]]`]]\n        </a>\n        <div class=\"meta\">\n            [[+planning_date_completed:notempty=`\n            <span class=\"date\">\n                <i class=\"small calendar alternate outline icon\"></i>\n                [[+planning_date_completed:strtotime:date=`[[++romanesco.date_format_short]]`]]\n            </span>\n            `]]\n        </div>\n        <div class=\"description\">\n            [[+longtitle]]\n        </div>\n    </div>\n    <div class=\"extra content\">\n        [[+content_owner:notempty=`\n        <span class=\"left floated author\">\n            <i class=\"small user icon\"></i>\n            [[+content_owner:userinfo=`username`]]\n        </span>\n        `]]\n        <span class=\"right floated actions\">\n            <a class=\"small button\" href=\"[[~[[+id]]]]\" target=\"_blank\">\n                Visit\n            </a>\n            &bull;\n            <a class=\"small button\" href=\"[[getContextSetting? &context=`web` &setting=`site_url`]]manager/?a=resource/update&id=[[+id]]\" target=\"_blank\">\n                Edit\n            </a>\n        </span>\n    </div>\n</div>"
 properties: 'a:0:{}'
+content: "<div class=\"ui fluid card\">\n    <div class=\"content\">\n        <a class=\"header\" href=\"[[~[[+id]]]]\" target=\"_blank\">\n            [[+menutitle:empty=`[[+pagetitle]]`]]\n        </a>\n        <div class=\"meta\">\n            [[+planning_date_completed:notempty=`\n            <span class=\"date\">\n                <i class=\"small calendar alternate outline icon\"></i>\n                [[+planning_date_completed:strtotime:date=`[[++romanesco.date_format_short]]`]]\n            </span>\n            `]]\n        </div>\n        <div class=\"description\">\n            [[+longtitle]]\n        </div>\n    </div>\n    <div class=\"extra content\">\n        [[+content_owner:notempty=`\n        <span class=\"left floated author\">\n            <i class=\"small user icon\"></i>\n            [[+content_owner:userinfo=`username`]]\n        </span>\n        `]]\n        <span class=\"right floated actions\">\n            <a class=\"small button\" href=\"[[~[[+id]]]]\" target=\"_blank\">\n                Visit\n            </a>\n            &bull;\n            <a class=\"small button\" href=\"[[getContextSetting? &context=`web` &setting=`site_url`]]manager/?a=resource/update&id=[[+id]]\" target=\"_blank\">\n                Edit\n            </a>\n        </span>\n    </div>\n</div>"
 
 -----
 
@@ -12,10 +14,10 @@ properties: 'a:0:{}'
             [[+menutitle:empty=`[[+pagetitle]]`]]
         </a>
         <div class="meta">
-            [[+planning_date_completed:notempty=`
+            [[+planning_date_due:notempty=`
             <span class="date">
                 <i class="small calendar alternate outline icon"></i>
-                [[+planning_date_completed:strtotime:date=`[[++romanesco.date_format_short]]`]]
+                [[+planning_date_due:strtotime:date=`[[++romanesco.date_format_short]]`]]
             </span>
             `]]
         </div>

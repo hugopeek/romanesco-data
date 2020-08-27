@@ -12,6 +12,10 @@ content: "/**\n * TableOfContents plugin\n *\n * Generate a menu with internal l
  * TableOfContents plugin
  *
  * Generate a menu with internal links to all headings in the content.
+ *
+ * @var modX $modx
+ * @var array $scriptProperties
+ * @package romanesco
  */
 
 $corePath = $modx->getOption('htmlpagedom.core_path', null, $modx->getOption('core_path') . 'components/htmlpagedom/');

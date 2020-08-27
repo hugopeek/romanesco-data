@@ -15,11 +15,13 @@ $json = $modx->getOption('json', $scriptProperties, '');
 //$filterKeys = $modx->getOption('filterKeys', $scriptProperties, 'template,process_tags,field_is_exposed');
 //$filterKeys = $modx->getOption('filterKeys', $scriptProperties, '"template","process_tags","field_is_exposed"');
 
+if (!$json) return '';
+
 $jsonArray = json_decode($json, true);
 //$filterArray = explode(',', $filterKeys);
 
 if (!function_exists('jsonToHTML')) {
-    function jsonToHTML($array) {
+    function jsonToHTML($array = array()) {
         $output = '<table class="ui compact very basic table"><tbody>';
 
         // @todo: For some strange reason, the function won't accept filterArray to be anything other that what's below

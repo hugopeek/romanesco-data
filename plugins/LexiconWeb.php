@@ -8,4 +8,13 @@ content: '$modx->lexicon->load(''romanescobackyard:default'');'
 -----
 
 
+/**
+ * LexiconWeb
+ *
+ * Load default lexicon in web context.
+ *
+ * @var modX $modx
+ * @package romanesco
+ */
+
 $modx->lexicon->load('romanescobackyard:default');

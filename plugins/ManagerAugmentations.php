@@ -8,6 +8,17 @@ content: "$modx->controller->addLexiconTopic('romanescobackyard:manager');\n\n$v
 -----
 
 
+/**
+ * ManagerAugmentations
+ *
+ * Small tweaks to the MODX backend, to enhance the Romanesco experience.
+ *
+ * @var modX $modx
+ * @var modManagerController $controller
+ *
+ * @package romanesco
+ */
+
 $modx->controller->addLexiconTopic('romanescobackyard:manager');
 
 $versionCSS = $modx->getOption('romanesco.assets_version_css');
@@ -15,6 +26,10 @@ $versionJS = $modx->getOption('romanesco.assets_version_js');
 
 switch ($modx->event->name) {
     case 'OnDocFormRender':
+        /**
+         * @var modResource $resource
+         */
+
         // Load custom CSS styles
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/contentblocks.css?v=' . $versionCSS);
         $modx->regClientCss($modx->getOption('base_url') . 'assets/components/romanescobackyard/css/semantic.css?v=' . $versionCSS); # for CB chunk previews

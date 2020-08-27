@@ -12,9 +12,11 @@ content: "/**\n * ManipulateDOM plugin\n *\n * This plugin utilizes HtmlPageDom,
  * ManipulateDOM plugin
  *
  * This plugin utilizes HtmlPageDom, a page crawler that can manipulate DOM
- * elements for us. Yes, that is exactly what jQuery does. But now we can do
- * this server side, before the page is rendered out. Much faster and much more
- * reliable.
+ * elements for us. Yes, that is exactly what jQuery does... But now we can do
+ * it server side, before the page is rendered. Much faster and more reliable.
+ *
+ * @var modX $modx
+ * @package romanesco
  */
 
 $corePath = $modx->getOption('htmlpagedom.core_path', null, $modx->getOption('core_path') . 'components/htmlpagedom/');

@@ -24,12 +24,17 @@ content: "/**\n * ProcessMarkdown\n *\n * Retain original Markdown markup by set
  * Process markdown in your template like this:
  *
  * [[*content:Markdown]]
+ *
+ * @var modX $modx
+ * @var array $scriptProperties
+ *
+ * @package romanesco
  */
 
-$corePath = $modx->getOption('htmlpagedom.core_path', null, $modx->getOption('core_path') . 'components/htmlpagedom/');
+$pdCorePath = $modx->getOption('htmlpagedom.core_path', null, $modx->getOption('core_path') . 'components/htmlpagedom/');
 
 if (!class_exists('\Wa72\HtmlPageDom\HtmlPageCrawler')) {
-    require $corePath . 'vendor/autoload.php';
+    require $pdCorePath . 'vendor/autoload.php';
 }
 
 use \Wa72\HtmlPageDom\HtmlPageCrawler;
@@ -37,7 +42,11 @@ use \Wa72\HtmlPageDom\HtmlPageCrawler;
 switch ($modx->event->name) {
     // Set content type to Markdown when resource has a markdown template
     case 'OnBeforeDocFormSave':
-        $template = $modx->getObject('modTemplate', array('id'=>$resource->get('template')));
+        /**
+         * @var modResource $resource
+         */
+
+        $template = $modx->getObject('modTemplate', array('id' => $resource->get('template')));
 
         if (!is_object($template)) {
             break;
@@ -56,7 +65,7 @@ switch ($modx->event->name) {
         break;
 
     // Use HTML mime type when viewed as a web page
-    // Inspired by: https://github.com/GoldCoastMedia/modx-xhtml-mime-switch
+    // Based on: https://github.com/GoldCoastMedia/modx-xhtml-mime-switch
     case 'OnWebPagePrerender':
         $resource = &$modx->resource;
 
@@ -71,7 +80,7 @@ switch ($modx->event->name) {
         );
 
         // Get the document type
-        $markdown = ($resource->get('contentType') === $header->markdown) ? true : false;
+        $markdown = $resource->get('contentType') === $header->markdown;
 
         // Switch back to HTML
         if ($markdown) {
@@ -106,7 +115,7 @@ switch ($modx->event->name) {
             })
         ;
 
-        // Turn the tables... into ui tables
+        // Turn tables into Semantic tables
         $dom->filter('table')->addClass('ui compact table');
 
         // Add language class to code blocks that do not specify a language

@@ -24,6 +24,11 @@ content: "/**\n * generateStaticCSS\n *\n * Creates static CSS files for each co
  *
  * NB! The plugin priority should be set to something higher than 0. Otherwise,
  * users will need to save the resource twice to see their changes reflected.
+ *
+ * @var modX $modx
+ * @var array $scriptProperties
+ *
+ * @package romanesco
  */
 
 switch ($modx->event->name) {

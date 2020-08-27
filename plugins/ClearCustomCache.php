@@ -9,8 +9,17 @@ content: "/*\n * Clear custom cache partitions.\n */\n\nswitch ($modx->event->na
 -----
 
 
-/*
- * Clear custom cache partitions.
+/**
+ * ClearCustomCache
+ *
+ * Currently this only clears cache partitions of navigation groups, to make
+ * sure save actions are immediately reflected on frontend.
+ *
+ * In the future, other partitions can be cleared on certain triggers to lessen
+ * the need of clearing the custom cache manually (in MODX manager).
+ *
+ * @var modX $modx
+ * @package romanesco
  */
 
 switch ($modx->event->name) {

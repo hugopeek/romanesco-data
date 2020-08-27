@@ -60,6 +60,14 @@ if ($sourceID != false) {
     $sourceName = $modx->getValue($query->prepare());
 }
 
+// Check if TV has input / output properties
+if ($tv->get('input_properties')) {
+    $inputProperties = array_diff($tv->get('input_properties'),array(null));
+}
+if ($tv->get('output_properties')) {
+    $outputProperties = array_diff($tv->get('output_properties'),array(null));
+}
+
 // Control output delimiter of input options
 $inputOptions = $tv->get('elements');
 if ($optionsDelimiter) {
@@ -77,10 +85,10 @@ $tvAltered = array(
     'sortOrder' => $tv->get('rank'),
     'inputOptionValues' => $inputOptions,
     'defaultValue' => $tv->get('default_text'),
-    'inputProperties' => array_diff($tv->get('input_properties'),array(null)),
-    'outputProperties' => array_diff($tv->get('output_properties'),array(null)),
+    'inputProperties' => $inputProperties ?? '',
+    'outputProperties' => $outputProperties ?? '',
     'display' => $tv->get('display'),
-    'mediaSource' => $sourceName // Not a GPM property, but good to know anyway
+    'mediaSource' => $sourceName ?? '', // Not a GPM property, but good to know anyway
 );
 
 // Remove undesired keys

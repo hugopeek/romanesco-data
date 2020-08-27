@@ -35,6 +35,9 @@ content: "/**\n * UpdateStyling\n *\n * This plugin is activated when certain th
  * Update May 20, 2020:
  * The plugin no longer relies on an assets/css/theme.variables resource to be
  * present in MODX. The settings are directly written to a static file now.
+ *
+ * @var modX $modx
+ * @package romanesco
  */
 
 // Check if exec function is available on the server
@@ -91,14 +94,16 @@ switch($eventName) {
 
         // Remove leading '/' slash from path values
         // This somehow gets added by MODX, resulting in these keys being incorrectly flagged as changed
-        if ($currentSettingsTheme['logo_path'][0] === '/' || $currentSettingsTheme['logo_badge_path'][0] === '/') {
-            $currentSettingsTheme['logo_path'] = substr($currentSettingsTheme['logo_path'], 1);
-            $currentSettingsTheme['logo_badge_path'] = substr($currentSettingsTheme['logo_badge_path'], 1);
-        }
+        $currentSettingsTheme['logo_path'] = ltrim($currentSettingsTheme['logo_path'],'/');
+        $currentSettingsTheme['logo_badge_path'] = ltrim($currentSettingsTheme['logo_badge_path'],'/');
 
         // Add media source to saved paths
-        $savedSettingsTheme['logo_path'] = $imgMediaSource->prepareOutputUrl($savedSettingsTheme['logo_path']);
-        $savedSettingsTheme['logo_badge_path'] = $imgMediaSource->prepareOutputUrl($savedSettingsTheme['logo_badge_path']);
+        if ($savedSettingsTheme['logo_path']) {
+            $savedSettingsTheme['logo_path'] = $imgMediaSource->prepareOutputUrl($savedSettingsTheme['logo_path']);
+        }
+        if ($savedSettingsTheme['logo_badge_path']) {
+            $savedSettingsTheme['logo_badge_path'] = $imgMediaSource->prepareOutputUrl($savedSettingsTheme['logo_badge_path']);
+        }
 
         // Compare saved settings to current settings
         $updatedSettings = array_diff($savedSettingsTheme, $currentSettingsTheme);
@@ -146,7 +151,7 @@ switch($eventName) {
                 $return_kill
             );
 
-            // Run gulp process to generate new CSS
+            // Construct build command
             if ($currentContext) {
                 $distPath = $modx->getObject('modContextSetting', array(
                     'context_key' => $currentContext,
@@ -157,6 +162,8 @@ switch($eventName) {
             else {
                 $buildCommand = 'gulp build-css';
             }
+
+            // Run gulp process to generate new CSS
             exec(
                 '"$HOME/.nvm/nvm-exec" ' . $buildCommand .
                 ' --gulpfile ' . escapeshellcmd($modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/generate-multicontext-css.js' .
@@ -220,6 +227,7 @@ switch($eventName) {
 
         // Report any validation errors in log
         if (array_filter($output)) {
+            $errorMsg = '';
             foreach ($output as $line) {
                 $errorMsg .= "\n" . $line;
             }
