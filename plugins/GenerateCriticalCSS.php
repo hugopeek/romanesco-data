@@ -22,22 +22,21 @@ content: "/**\n * GenerateCriticalCSS\n *\n * Determine which CSS styles are use
  * @package romanesco
  */
 
-// Abort if critical CSS generation is not enabled under Configuration settings
-if ($modx->getObject('cgSetting', array('key' => 'generate_critical_css'))->get('value') != 1) {
-    return true;
-}
-
 $rmCorePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
 $romanesco = $modx->getService('romanesco','Romanesco',$rmCorePath . 'model/romanescobackyard/',array('core_path' => $rmCorePath));
 
 if (!($romanesco instanceof Romanesco)) {
-    $modx->log(modX::LOG_LEVEL_ERROR, 'Class not found!');
-    return true;
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
+    return;
 }
 
 $basePath = $modx->getOption('base_path');
-$cssPath = $romanesco->getCssPath($modx->resource->get('context_key'));
+$cssPath = $modx->getOption('romanesco.custom_css_path');
 $distPath = $modx->getOption('romanesco.semantic_dist_path');
+$context = $modx->resource->get('context_key');
+
+// Abort if critical is not enabled for current context
+if (!$romanesco->getConfigSetting('generate_critical_css', $context)) return;
 
 switch ($modx->event->name) {
     case 'OnDocFormSave':
@@ -46,7 +45,12 @@ switch ($modx->event->name) {
          * @var int $id
          */
 
-        $romanesco->generateCriticalCSS($id, $resource->get('uri'), $cssPath);
+        $romanesco->generateCriticalCSS(array(
+            'id' => $id,
+            'uri' => $resource->get('uri'),
+            'cssPath' => $cssPath,
+            'distPath' => $distPath,
+        ));
 
         break;
 
@@ -55,15 +59,15 @@ switch ($modx->event->name) {
             $uri = ltrim($modx->resource->get('uri'),'/');
             $uri = rtrim($modx->resource->get('uri'),'/');
             $cssFile = rtrim($cssPath,'/') . "/critical/$uri.css";
-            $logo = $modx->getObject('cgSetting', array('key' => 'logo_path'));
+            $logo = $romanesco->getConfigSetting('logo_path', $context);
 
-            // Create array with objects for the header
+            // Create array of objects for the header
             $linkObjects = array();
             if (file_exists("$basePath$cssFile")) {
                 $linkObjects[] = "</$cssFile>; as=style; rel=preload;";
             }
             if ($logo) {
-                $linkObjects[] = "</assets/img/{$logo->get('value')}>; as=image; rel=preload; nopush";
+                $linkObjects[] = "</assets/img/{$logo}>; as=image; rel=preload; nopush";
             }
             $linkObjects[] = "</$distPath/themes/default/assets/fonts/icons.woff2>; as=font; rel=preload; crossorigin; nopush";
 
