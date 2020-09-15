@@ -1,5 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.9.1
+Released on ...
+
+> Romanesco Patterns 1.0.0-beta2
+
+Fixes and improvements:
+- Prevent build from erasing custom lexicon entries
+- Limit overview grids to 2 rows in manager previews
+- Accept additional responsive image scales
+- Allow templates to override the critical CSS file of the page
+- Add option to generate critical CSS in sequence instead of parallel
+- Handle context aware configuration settings in critical CSS plugin
+- Disable deprecated global backgrounds using MIGX TV
+
 ## v1.9.0
 Released on August 27, 2020
 
