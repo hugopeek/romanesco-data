@@ -143,6 +143,8 @@ data:
             - name
         exclude_keys:
             - editedon
+        where:
+            - 'id:<': '100000'
     #media_sources:
     #    class: modMediaSource
     #    primary: name
