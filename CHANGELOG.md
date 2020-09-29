@@ -6,6 +6,7 @@ Released on ...
 > Romanesco Patterns 1.0.0-beta2
 
 Fixes and improvements:
+- Update Gitify system settings exclusions
 - Prevent build from erasing custom lexicon entries
 - Limit overview grids to 2 rows in manager previews
 - Accept additional responsive image scales
