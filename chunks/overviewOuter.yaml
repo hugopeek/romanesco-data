@@ -23,7 +23,7 @@ properties: 'a:0:{}'
     &default=`DESC`
 ]]
 
-[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`[[%romanesco.cb_preview.overview_note]]`]]
+[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`<div class="ui info message">[[%romanesco.cb_preview.overview_note? &topic=`manager` &namespace=`romanescobackyard`]]</div>`]]
 
 [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
     &element=`getResources`
@@ -48,7 +48,7 @@ properties: 'a:0:{}'
     &row_type=`[[+[[+prefix]].row_type]]`
     &column_type=`[[+[[+prefix]].column_type]]`
     &grid_settings=`[[+[[+prefix]].grid_settings]]`
-    &cols=`[[+cols]]`
+    &cols=`[[+cols:textToNumber]]`
     &padding=`[[+padding]]`
     &alignment=`[[+alignment]]`
     &responsive=`[[+responsive]]`

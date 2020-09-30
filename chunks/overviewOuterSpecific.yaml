@@ -2,11 +2,15 @@ id: 122
 name: overviewOuterSpecific
 description: ''
 category: o_overviews
+snippet: "[[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]\n\n[[!getCache?\n    &element=`getResources`\n    &cacheKey=`overviews`\n    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]\n\n    &parents=`-1`\n    &resources=`[[+resources]]`\n    &limit=`[[+limit:default=`0`]]`\n    &tpl=`overviewRow[[+[[+prefix]].row_type]]`\n    &tplWrapper=`overviewWrapper`\n    &includeTVs=`1`\n    &processTVs=`1`\n    &tvPrefix=``\n    &showHidden=`1`\n    &sortby=`FIELD(modResource.id, [[+resources]])`\n    &sortdir=`ASC`\n\n    &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`\n    &box_type=`[[+[[+prefix]].box_type]]`\n    &row_type=`[[+[[+prefix]].row_type]]`\n    &column_type=`[[+[[+prefix]].column_type]]`\n    &grid_settings=`[[+[[+prefix]].grid_settings]]`\n    &cols=`[[+cols:textToNumber]]`\n    &padding=`[[+padding]]`\n    &alignment=`[[+alignment]]`\n    &responsive=`[[+responsive]]`\n    &prefix=`[[+prefix]]`\n    &unique_idx=`[[+unique_idx]]`\n    &title_field=`[[+title_field]]`\n    &title_hierarchy=`[[+title_hierarchy]]`\n    &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`\n    &show_subtitle=`[[+show_subtitle]]`\n    &show_introtext=`[[+show_introtext]]`\n    &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`\n    &de_emphasize=`[[+de_emphasize]]`\n    &img_type=`[[+img_type]]`\n    &icon_type=`[[+icon_type]]`\n    &lazy_load=`[[+lazy_load]]`\n]]\n"
 properties: 'a:0:{}'
+content: "[[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]\n\n[[!getCache?\n    &element=`getResources`\n    &cacheKey=`overviews`\n    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]\n\n    &parents=`-1`\n    &resources=`[[+resources]]`\n    &limit=`[[+limit:default=`0`]]`\n    &tpl=`overviewRow[[+[[+prefix]].row_type]]`\n    &tplWrapper=`overviewWrapper`\n    &includeTVs=`1`\n    &processTVs=`1`\n    &tvPrefix=``\n    &showHidden=`1`\n    &sortby=`FIELD(modResource.id, [[+resources]])`\n    &sortdir=`ASC`\n\n    &row_tpl=`[[If? &subject=`[[$[[+row_tpl]]Theme]]` &operator=`isnull` &then=`[[+row_tpl]]` &else=`[[+row_tpl]]Theme`]]`\n    &box_type=`[[+[[+prefix]].box_type]]`\n    &row_type=`[[+[[+prefix]].row_type]]`\n    &column_type=`[[+[[+prefix]].column_type]]`\n    &grid_settings=`[[+[[+prefix]].grid_settings]]`\n    &cols=`[[+cols:textToNumber]]`\n    &padding=`[[+padding]]`\n    &alignment=`[[+alignment]]`\n    &responsive=`[[+responsive]]`\n    &prefix=`[[+prefix]]`\n    &unique_idx=`[[+unique_idx]]`\n    &title_field=`[[+title_field]]`\n    &title_hierarchy=`[[+title_hierarchy]]`\n    &classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`\n    &show_subtitle=`[[+show_subtitle]]`\n    &show_introtext=`[[+show_introtext]]`\n    &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`\n    &de_emphasize=`[[+de_emphasize]]`\n    &img_type=`[[+img_type]]`\n    &icon_type=`[[+icon_type]]`\n    &lazy_load=`[[+lazy_load]]`\n]]\n"
 
 -----
 
 [[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]
+
+[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`<div class="ui info message">[[%romanesco.cb_preview.overview_note? &topic=`manager` &namespace=`romanescobackyard`]]</div>`]]
 
 [[!getCache?
     &element=`getResources`
@@ -15,7 +19,7 @@ properties: 'a:0:{}'
 
     &parents=`-1`
     &resources=`[[+resources]]`
-    &limit=`[[+limit:default=`0`]]`
+    &limit=`[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`[[+cols:textToNumber:mpy=`2`]]` &else=`[[+limit:default=`0`]]`]]`
     &tpl=`overviewRow[[+[[+prefix]].row_type]]`
     &tplWrapper=`overviewWrapper`
     &includeTVs=`1`
@@ -30,7 +34,7 @@ properties: 'a:0:{}'
     &row_type=`[[+[[+prefix]].row_type]]`
     &column_type=`[[+[[+prefix]].column_type]]`
     &grid_settings=`[[+[[+prefix]].grid_settings]]`
-    &cols=`[[+cols]]`
+    &cols=`[[+cols:textToNumber]]`
     &padding=`[[+padding]]`
     &alignment=`[[+alignment]]`
     &responsive=`[[+responsive]]`
