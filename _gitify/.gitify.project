@@ -164,6 +164,7 @@ data:
                 - 'formit.form_encryptkey'
                 - 'romanesco.assets_version_css'
                 - 'romanesco.assets_version_js'
+                - 'romanesco.dev_mode'
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
