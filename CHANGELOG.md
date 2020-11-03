@@ -1,11 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.9.1
-Released on ...
+Released on November 3, 2020
 
 > Romanesco Patterns 1.0.0-beta2
 
 Fixes and improvements:
+- Remove head tag from head chunk [BREAKING CHANGE]
+- Use Matomo by inserting full tracking code directly
+- Make background in note templates transparent
+- Fix leaking placeholders in global backgrounds CSS
+- Fall back gracefully when critical CSS file not found
+- Store full path to critical CSS file in a hidden TV
+- Don't use minified SUI / project assets if Configuration setting is off
+- Fix cols placeholder in overviews
 - Update Gitify system settings exclusions
 - Prevent build from erasing custom lexicon entries
 - Limit overview grids to 2 rows in manager previews
