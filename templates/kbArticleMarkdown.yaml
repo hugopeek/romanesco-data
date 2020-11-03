@@ -3,6 +3,7 @@ templatename: kbArticleMarkdown
 description: 'DEPRECATED. Knowledge base is implemented now as Notes (without Tickets integration).'
 category: t_disabled
 icon: icon-bookmark-o
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n[[[[If?\n    &subject=`[[$headTheme]]`\n    &operator=`isnull`\n    &then=`$head`\n    &else=`$headTheme`\n]]]]\n\n<body id=\"[[*alias]]\" class=\"header-vertical\">\n\n<div class=\"pusher\">\n    [[$headerVertical?\n        &masthead=`0`\n        &hero=`0`\n        &search=`0`\n    ]]\n\n    <main id=\"main\">\n        [[[[If?\n            &subject=`[[$toolbarKnowledgeBaseTheme]]`\n            &operator=`isnull`\n            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``\n            &else=`$toolbarKnowledgeBaseTheme`\n        ]]]]\n\n        <article id=\"content\">\n            <div class=\"ui vertical stripe segment white markdown-body\">\n                <div class=\"ui container\">\n                    [[Markdown? &input=`[[*content:replace=``==&#96;`]]`]]\n                </div>\n            </div>\n\n            <div class=\"ui vertical stripe segment secondary\">\n                <div class=\"ui container\">\n                    [[!TicketComments?\n                        &tplComments=`commentWrapper`\n                        &tplCommentAuth=`commentRowBasic`\n                        &tplCommentGuest=`commentRowGuest`\n                        &tplCommentForm=`commentForm`\n                        &gravatarSize=`150`\n                    ]]\n                </div>\n            </div>\n        </article>\n\n        [[[[If?\n            &subject=`[[$footerTheme]]`\n            &operator=`isnull`\n            &then=`$footer`\n            &else=`$footerTheme`\n        ]]]]\n    </main>\n</div>\n\n[[$offCanvasNav]]\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:0:{}'
 
 -----
@@ -10,12 +11,14 @@ properties: 'a:0:{}'
 <!DOCTYPE html>
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
-[[[[If?
-    &subject=`[[$headTheme]]`
-    &operator=`isnull`
-    &then=`$head`
-    &else=`$headTheme`
-]]]]
+<head>
+    [[[[If?
+        &subject=`[[$headTheme]]`
+        &operator=`isnull`
+        &then=`$head`
+        &else=`$headTheme`
+    ]]]]
+</head>
 
 <body id="[[*alias]]" class="header-vertical">
 

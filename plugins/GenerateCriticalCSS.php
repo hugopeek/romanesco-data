@@ -22,8 +22,8 @@ content: "/**\n * GenerateCriticalCSS\n *\n * Determine which CSS styles are use
  * @package romanesco
  */
 
-$rmCorePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
-$romanesco = $modx->getService('romanesco','Romanesco',$rmCorePath . 'model/romanescobackyard/',array('core_path' => $rmCorePath));
+$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
+$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
 
 if (!($romanesco instanceof Romanesco)) {
     $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
@@ -36,7 +36,7 @@ $distPath = $modx->getOption('romanesco.semantic_dist_path');
 $context = $modx->resource->get('context_key');
 
 // Abort if critical is not enabled for current context
-//if (!$romanesco->getConfigSetting('critical_css', $context)) return;
+if (!$romanesco->getConfigSetting('critical_css', $context)) return;
 
 switch ($modx->event->name) {
     case 'OnDocFormSave':

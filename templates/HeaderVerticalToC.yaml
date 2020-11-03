@@ -2,6 +2,7 @@ id: 22
 templatename: HeaderVerticalToC
 description: ''
 category: t_basic
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n[[[[If?\n    &subject=`[[$headTheme]]`\n    &operator=`isnull`\n    &then=`$head`\n    &else=`$headTheme`\n]]]]\n\n<body id=\"[[*alias]]\" class=\"header-vertical toc\">\n\n<div class=\"pusher\">\n    [[$headerVertical?\n        &masthead=`0`\n        &hero=`0`\n        &search=`0`\n    ]]\n\n    <main id=\"main\">\n        [[[[If?\n            &subject=`[[$toolbarBasicTheme]]`\n            &operator=`isnull`\n            &then=`$toolbarBasic`\n            &else=`$toolbarBasicTheme`\n        ]]]]\n\n        <div id=\"content\" class=\"ui relaxed grid container\">\n            <article class=\"sixteen wide mobile twelve wide computer column\">\n                [[*content]]\n            </article>\n\n            <aside id=\"sidebar\" class=\"four wide computer column tablet or lower hidden\">\n                [[$tocNavVertical?\n                    &sticky=`1`\n                ]]\n            </aside>\n        </div>\n\n        [[[[If?\n            &subject=`[[$footerTheme]]`\n            &operator=`isnull`\n            &then=`$footer`\n            &else=`$footerTheme`\n        ]]]]\n    </main>\n</div>\n\n[[$offCanvasNav]]\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:0:{}'
 
 -----
@@ -9,12 +10,14 @@ properties: 'a:0:{}'
 <!DOCTYPE html>
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
-[[[[If?
-    &subject=`[[$headTheme]]`
-    &operator=`isnull`
-    &then=`$head`
-    &else=`$headTheme`
-]]]]
+<head>
+    [[[[If?
+        &subject=`[[$headTheme]]`
+        &operator=`isnull`
+        &then=`$head`
+        &else=`$headTheme`
+    ]]]]
+</head>
 
 <body id="[[*alias]]" class="header-vertical toc">
 

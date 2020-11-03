@@ -2,11 +2,13 @@ id: 448
 name: globalBackgroundRowCSS
 description: ''
 category: a_global
+snippet: "[[If:toPlaceholder=`img_uncropped`?\n    &subject=`[[+image.crops.mobile.url:empty=``]][[+image.crops.tablet.url:empty=``]][[+image.crops.desktop.url:empty=``]]`\n    &operand=`empty`\n    &then=`\n    [[pthumb:prepend=`url(`:append=`)`?\n        &input=`[[+image.url:prepend=`/`]]`\n        &options=`w=[[+imgWidth]]\n            &q=[[++img_quality]]\n            &scale=[[+imgScale:default=`1`]]\n        `\n    ]]`\n    &else=``\n]]\n[[If:toPlaceholder=`img_src`?\n    &subject=`[[+image.crops.[[+imgType]].url]]`\n    &operator=`notempty`\n    &then=`\n    [[pthumb:prepend=`url(`:append=`)`?\n        &input=`[[+image.url:prepend=`/`]]`\n        &options=`w=[[+imgWidth]]\n            &sx=[[+image.crops.[[+imgType]].x]]\n            &sy=[[+image.crops.[[+imgType]].y]]\n            &sw=[[+image.crops.[[+imgType]].width]]\n            &sh=[[+image.crops.[[+imgType]].height]]\n            &q=[[++img_quality]]\n            &scale=[[+imgScale:default=`1`]]\n        `\n    ]]`\n    &else=`[[+img_uncropped]]`\n]]\n[[If:empty=`[[+gradient]]`?\n    &subject=`[[+image.extension]]`\n    &operator=`is`\n    &operand=`svg`\n    &then=`[[+image.url:prepend=`url(/`:append=`)`]]`\n    &else=`[[+img_src]]`\n]]\n[[+position:empty=`center center`]] /\n[[+size:empty=`cover`]]\n[[+repeat]]\n[[+attachment]]"
 properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:"romanesco.globalbackgroundrowcss.imgWidth";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:7:"imgType";a:7:{s:4:"name";s:7:"imgType";s:4:"desc";s:40:"romanesco.globalbackgroundrowcss.imgType";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:8:"imgScale";a:7:{s:4:"name";s:8:"imgScale";s:4:"desc";s:41:"romanesco.globalbackgroundrowcss.imgScale";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "[[If:toPlaceholder=`img_uncropped`?\n    &subject=`[[+image.crops.mobile.url:empty=``]][[+image.crops.tablet.url:empty=``]][[+image.crops.desktop.url:empty=``]]`\n    &operand=`empty`\n    &then=`\n    [[pthumb:prepend=`url(`:append=`)`?\n        &input=`[[+image.url:prepend=`/`]]`\n        &options=`w=[[+imgWidth]]\n            &q=[[++img_quality]]\n            &scale=[[+imgScale:default=`1`]]\n        `\n    ]]`\n    &else=``\n]]\n[[If:toPlaceholder=`img_src`?\n    &subject=`[[+image.crops.[[+imgType]].url]]`\n    &operator=`notempty`\n    &then=`\n    [[pthumb:prepend=`url(`:append=`)`?\n        &input=`[[+image.url:prepend=`/`]]`\n        &options=`w=[[+imgWidth]]\n            &sx=[[+image.crops.[[+imgType]].x]]\n            &sy=[[+image.crops.[[+imgType]].y]]\n            &sw=[[+image.crops.[[+imgType]].width]]\n            &sh=[[+image.crops.[[+imgType]].height]]\n            &q=[[++img_quality]]\n            &scale=[[+imgScale:default=`1`]]\n        `\n    ]]`\n    &else=`[[+img_uncropped]]`\n]]\n[[If:empty=`[[+gradient]]`?\n    &subject=`[[+image.extension]]`\n    &operator=`is`\n    &operand=`svg`\n    &then=`[[+image.url:prepend=`url(/`:append=`)`]]`\n    &else=`[[+img_src]]`\n]]\n[[+position:empty=`center center`]] /\n[[+size:empty=`cover`]]\n[[+repeat]]\n[[+attachment]]"
 
 -----
 
-[[If:toPlaceholder=`img_uncropped`?
+[[If:toPlaceholder=`bg[[+id]].img_uncropped`?
     &subject=`[[+image.crops.mobile.url:empty=``]][[+image.crops.tablet.url:empty=``]][[+image.crops.desktop.url:empty=``]]`
     &operand=`empty`
     &then=`
@@ -19,7 +21,7 @@ properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:
     ]]`
     &else=``
 ]]
-[[If:toPlaceholder=`img_src`?
+[[If:toPlaceholder=`bg[[+id]].img_src`?
     &subject=`[[+image.crops.[[+imgType]].url]]`
     &operator=`notempty`
     &then=`
@@ -34,14 +36,14 @@ properties: 'a:3:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:
             &scale=[[+imgScale:default=`1`]]
         `
     ]]`
-    &else=`[[+img_uncropped]]`
+&else=`[[+bg[[+id]].img_uncropped]]`
 ]]
 [[If:empty=`[[+gradient]]`?
     &subject=`[[+image.extension]]`
     &operator=`is`
     &operand=`svg`
     &then=`[[+image.url:prepend=`url(/`:append=`)`]]`
-    &else=`[[+img_src]]`
+    &else=`[[+bg[[+id]].img_src]]`
 ]]
 [[+position:empty=`center center`]] /
 [[+size:empty=`cover`]]
