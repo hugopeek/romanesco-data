@@ -334,14 +334,7 @@ data:
     # These settings where moved to a default / run once config instead
 
     # Collections
-    collections_settings:
-        class: CollectionSetting
-        primary:
-            - id
-            - collection
-        where:
-            - 'id:<': '100000'
-        package: collections
+    # The collections_settings table moved to defaults
     collections_templates:
         class: CollectionTemplate
         primary:
@@ -349,6 +342,7 @@ data:
             - name
         where:
             - 'id:<': '100000'
+        class: CollectionSetting
     collections_template_columns:
         class: CollectionTemplateColumn
         primary:

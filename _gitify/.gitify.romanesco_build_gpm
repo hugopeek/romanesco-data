@@ -205,14 +205,6 @@ data:
             - 'id:<': '100000'
 
     # Collections
-    collections_settings:
-        class: CollectionSetting
-        primary:
-            - id
-            - collection
-        where:
-            - 'id:<': '100000'
-        package: collections
     collections_templates:
         class: CollectionTemplate
         primary:
@@ -220,6 +212,7 @@ data:
             - name
         where:
             - 'id:<': '100000'
+        package: collections
     collections_template_columns:
         class: CollectionTemplateColumn
         primary:

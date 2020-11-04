@@ -64,6 +64,16 @@ data:
         where:
             - 'id:<': '100000'
 
+    # Collections
+    collections_settings:
+        class: CollectionSetting
+        primary:
+            - id
+            - collection
+        where:
+            - 'id:<': '100000'
+        package: collections
+
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:
         class: modNamespace

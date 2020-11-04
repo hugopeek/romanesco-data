@@ -280,32 +280,34 @@ data:
     # These settings where moved to a default / run once config instead
 
     # Collections
-    collections_settings:
-        class: CollectionSetting
+    # The collections_settings table moved to defaults
+    collections_templates:
+        class: CollectionTemplate
         primary:
             - id
-            - collection
+            - name
         package: collections
     collections_templates:
         class: CollectionTemplate
         primary:
             - id
             - name
+        package: collections
     collections_template_columns:
         class: CollectionTemplateColumn
         primary:
             - id
             - name
-    collections_resource_template:
-        class: CollectionResourceTemplate
-        primary:
-            - collection_template
-            - resource_template
-    collections_selections:
-        class: CollectionSelection
-        primary:
-            - collection
-            - resource
+    #collections_resource_template:
+    #    class: CollectionResourceTemplate
+    #    primary:
+    #        - collection_template
+    #        - resource_template
+    #collections_selections:
+    #    class: CollectionSelection
+    #    primary:
+    #        - collection
+    #        - resource
 
     # QuickStartButtons
     qsb_buttons:
