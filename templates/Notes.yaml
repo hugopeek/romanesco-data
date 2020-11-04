@@ -3,7 +3,6 @@ templatename: Notes
 description: ''
 category: t_information
 icon: icon-sticky-note
-content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n[[[[If?\n    &subject=`[[$headTheme]]`\n    &operator=`isnull`\n    &then=`$head`\n    &else=`$headTheme`\n]]]]\n\n<body id=\"[[*alias]]\" class=\"header-vertical notes\">\n\n<div class=\"pusher\">\n    [[$headerVertical?\n        &masthead=`0`\n        &hero=`0`\n        &search=`0`\n    ]]\n\n    <main id=\"main\">\n        [[[[If?\n            &subject=`[[$toolbarKnowledgeBaseTheme]]`\n            &operator=`isnull`\n            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``\n            &else=`$toolbarKnowledgeBaseTheme`\n        ]]]]\n\n        <article id=\"content\">\n            [[*content]]\n        </article>\n\n        [[[[If?\n            &subject=`[[$footerTheme]]`\n            &operator=`isnull`\n            &then=`$footer`\n            &else=`$footerTheme`\n        ]]]]\n    </main>\n</div>\n\n[[$offCanvasNav]]\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:0:{}'
 
 -----

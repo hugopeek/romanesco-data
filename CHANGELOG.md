@@ -1,5 +1,13 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.9.2
+Released on ...
+
+> Romanesco Patterns 1.0.0-beta2
+
+Fixes and improvements:
+- Correct depth and offset placeholders in overviews
+
 ## v1.9.1
 Released on November 3, 2020
 
