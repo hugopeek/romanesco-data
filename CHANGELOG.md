@@ -6,6 +6,7 @@ Released on ...
 > Romanesco Patterns 1.0.0-beta2
 
 Fixes and improvements:
+- Generate critical CSS with correct multi-context Configuration settings
 - Move collections_settings table to defaults in Gitify configs
 - Correct depth and offset placeholders in overviews
 
