@@ -3,9 +3,13 @@
 ## v1.9.2
 Released on ...
 
-> Romanesco Patterns 1.0.0-beta2
+> Romanesco Patterns 1.0.0-beta3
 
 Fixes and improvements:
+- Change HTML tag of footer CTA from footer to aside
+- Load SUI form component asynchronous if critical CSS is enabled
+- Fix issue where processor sometimes used stale alias in critical CSS snippet
+- Save resource in critical CSS snippet, to generate TV value with file path
 - Generate critical CSS with correct multi-context Configuration settings
 - Move collections_settings table to defaults in Gitify configs
 - Correct depth and offset placeholders in overviews
