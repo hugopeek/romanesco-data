@@ -2,7 +2,9 @@ id: 103
 name: socialShareButtons
 description: ''
 category: m_social
+snippet: "[[[[++social_sharing_channels:contains=`facebook`:then=`$buttonSocialShareFacebook? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`twitter`:then=`$buttonSocialShareTwitter? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`linkedin`:then=`$buttonSocialShareLinkedin? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`pinterest`:then=`$buttonSocialSharePinterest? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`email`:then=`$buttonSocialShareEmail? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[$socialShareButtonsTheme? &uid=`[[+unique_idx]]`]]"
 properties: 'a:0:{}'
+content: "[[[[++social_sharing_channels:contains=`facebook`:then=`$buttonSocialShareFacebook? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`twitter`:then=`$buttonSocialShareTwitter? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`linkedin`:then=`$buttonSocialShareLinkedin? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`pinterest`:then=`$buttonSocialSharePinterest? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[[[++social_sharing_channels:contains=`email`:then=`$buttonSocialShareEmail? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]\n[[$socialShareButtonsTheme? &uid=`[[+unique_idx]]`]]"
 
 -----
 
@@ -11,4 +13,4 @@ properties: 'a:0:{}'
 [[[[++social_sharing_channels:contains=`linkedin`:then=`$buttonSocialShareLinkedin? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]
 [[[[++social_sharing_channels:contains=`pinterest`:then=`$buttonSocialSharePinterest? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]
 [[[[++social_sharing_channels:contains=`email`:then=`$buttonSocialShareEmail? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]``]]]]
-[[$socialShareButtonsTheme? &uid=`[[+unique_idx]]`]]
+[[$socialShareButtonsTheme? &classes=`[[+button_type]]` &uid=`[[+unique_idx]]`]]

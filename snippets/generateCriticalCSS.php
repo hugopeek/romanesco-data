@@ -37,12 +37,31 @@ $resource = $modx->getObject('modResource',$resourceID);
 
 if (!($resource instanceof modResource)) return;
 
-$romanesco->generateCriticalCSS(array(
+// Run update processor to generate the critical_css_uri TV value
+// NB: processor won't run without pagetitle and context_key!
+// NB: sometimes an old alias is retrieved when alias is not forwarded!!
+$resourceFields = array(
     'id' => $resourceID,
-    'uri' => $resource->get('uri'),
-    'cssPath' => $romanesco->getContextSetting('romanesco.custom_css_path', $resource->get('context_key')),
-    'distPath' => $romanesco->getContextSetting('romanesco.semantic_dist_path', $resource->get('context_key')),
-    'parallel' => $parallel,
-));
+    'pagetitle' => $resource->get('pagetitle'),
+    'alias' => $resource->get('alias'),
+    'context_key' => $resource->get('context_key')
+);
+
+$response = $modx->runProcessor('resource/update', $resourceFields);
+
+if ($response->isError()) {
+    $error = 'Failed to update resource: ' . $resource->get('pagetitle') . '. Errors: ' . implode(', ', $response->getAllErrors());
+    $modx->log(MODX::LOG_LEVEL_ERROR, $error, __METHOD__, __LINE__);
+    return $error;
+}
+
+// Processor triggers the GenerateCriticalCSS plugin already
+// $romanesco->generateCriticalCSS(array(
+//     'id' => $resourceID,
+//     'uri' => $resource->get('uri'),
+//     'cssPath' => $romanesco->getContextSetting('romanesco.custom_css_path', $resource->get('context_key')),
+//     'distPath' => $romanesco->getContextSetting('romanesco.semantic_dist_path', $resource->get('context_key')),
+//     'parallel' => $parallel,
+// ));
 
 return "Critical CSS generated for <strong>{$resource->get('uri')}</strong> ($resourceID)";
