@@ -18,8 +18,6 @@ data:
             - 'context_key:IN':
                 - 'hub'
             - 'OR:alias:IN':
-                - 'assets/css/theme'
-                - 'assets/css/backgrounds'
                 - 'contact*'
                 - 'registration*'
             - 'OR:uri:IN':
