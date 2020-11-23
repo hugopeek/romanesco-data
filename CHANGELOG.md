@@ -6,6 +6,7 @@ Released on ...
 > Romanesco Patterns 1.0.0-beta3
 
 Fixes and improvements:
+- Add option to customize the list of CB layout backgrounds
 - Remove resource-based theme and background CSS from Backyard
 - Add raw placeholder chunks for tag and label
 - Change HTML tag of footer CTA from footer to aside
