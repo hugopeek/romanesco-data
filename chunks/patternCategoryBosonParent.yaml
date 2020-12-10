@@ -1,0 +1,36 @@
+id: 540
+name: patternCategoryBosonParent
+description: 'Display all ContentBlocks elements inside a given category.'
+category: m_hub
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:50:"romanesco.patterncategorybosonparent.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:51:"romanesco.patterncategorybosonparent.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[Switch:toPlaceholder=`element_class`?
+    &get=`[[+type]]`
+    &c1=`BosonField`       &do1=`cbField`
+    &c2=`BosonLayout`      &do2=`cbLayout`
+    &c3=`BosonTemplate`    &do3=`cbTemplate`
+    &default=`0`
+]]
+[[pdoResources?
+    &class=`[[+element_class]]`
+    &sortby=`sortorder`
+    &sortdir=`ASC`
+    &limit=`0`
+    &where=`{"category:=":"[[+id]]"}`
+    &tpl=`patternCategoryBosonRow`
+    &elementType=`[[+type]]`
+    &includeContent=`1`
+    &toPlaceholder=`cb_cat_[[+id]]`
+]]
+
+[[+cb_cat_[[+id]]:notempty=`
+<[[+level]] [[+level:eq=`h2`:then=`id="[[+name]]"`]] class="ui primary header">
+    [[+name]]
+</[[+level]]>
+
+[[+description:prepend=`<p class="lead">`:append=`</p>`]]
+
+[[+cb_cat_[[+id]]]]
+`]]

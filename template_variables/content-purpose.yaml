@@ -8,7 +8,7 @@ elements: '@CHUNK tvSelectInputOption@ContentPurpose'
 rank: 1
 display: delim
 default_text: ''
-properties: 'a:0:{}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.content_purpose.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:3:{s:9:"typeAhead";s:5:"false";s:14:"typeAheadDelay";s:3:"250";s:10:"stackItems";s:4:"true";}'
 output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
 content: ''

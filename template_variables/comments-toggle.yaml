@@ -6,7 +6,7 @@ description: 'Enable or disable comments. This value is inherited on child pages
 category: Comments
 elements: Active==1||Disabled==0
 rank: 1
-properties: 'a:0:{}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.comments_toggle.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: null
 output_properties: null
 

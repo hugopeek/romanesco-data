@@ -6,7 +6,7 @@ description: 'Select the author of this article. He or she must be a MODX user. 
 category: About
 elements: '@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` ORDER BY username )'
 rank: 1
-properties: 'a:0:{}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:33:"romanesco.author_id.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: null
 output_properties: null
 

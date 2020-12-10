@@ -5,7 +5,7 @@ caption: Transition
 category: 'Slider - Settings'
 elements: 'Slide==slide||Fade==fade||3D cube==cube||3D coverflow==coverflow||3D flip==flip'
 rank: 31
-properties: 'a:0:{}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:41:"romanesco.slider_transition.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: null
 output_properties: null
 

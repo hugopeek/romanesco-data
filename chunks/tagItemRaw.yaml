@@ -2,8 +2,6 @@ id: 223
 name: tagItemRaw
 description: ''
 category: a_taxonomy
+snippet: '[[+tag]]'
 properties: 'a:0:{}'
-
------
-
-[[+tag]]
+content: '[[+tag]]'
