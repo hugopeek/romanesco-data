@@ -1,0 +1,3 @@
+id: 24
+name: Active
+properties: 'a:1:{s:6:"active";a:7:{s:4:"name";s:6:"active";s:4:"desc";s:39:"romanesco.navitemaccordionparent.active";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:6:"active";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
