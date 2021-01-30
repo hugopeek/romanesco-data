@@ -5,5 +5,6 @@ name: content_type
 sortable: 1
 width: 30
 editor: textfield
+php_renderer: renderContentType
 position: 5
 sort_type: null

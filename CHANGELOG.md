@@ -6,6 +6,8 @@ Released on ...
 > Romanesco Patterns 1.0.0-beta3
 
 Fixes and improvements:
+- Add column for hidemenu value in FormBlocks collection view
+- Fix issue with special characters in FormBlocks select option help texts
 - Add option to customize the list of CB layout backgrounds
 - Remove resource-based theme and background CSS from Backyard
 - Add raw placeholder chunks for tag and label
