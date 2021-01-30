@@ -45,7 +45,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &toPlaceholder=`load_syntax_highlighting`
 ]]
 
-[[+load_assets_map:eq=`1`:then=`<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>`]]
+[[[[+load_assets_map:eq=`1`:then=`$mapLoadAssets`]]]]
 [[+load_assets_hub:eq=`1`:then=`<link href="[[++romanesco.semantic_dist_path]]/components/modal.css" rel="stylesheet">`]]
 [[+load_syntax_highlighting:eq=`1`:then=`<link href="[[++romanesco.semantic_vendor_path]]/prism/prism.min.css" rel="stylesheet">`]]
 

@@ -2,7 +2,9 @@ id: 40
 name: fbSelectOption
 description: ''
 category: m_fb_inputs
+snippet: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n[[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`:toPlaceholder=`help`]]\n[[!+fb[[*id]].[[+name]]:contains=`[[+option_other_value]]`:then=`checked`:toPlaceholder=`check_other`]]\n\n<div id=\"[[+name]]\" class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+option_layout:empty=`grouped`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[+field_type]] fields [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">\n        [[+field_name]]\n        [[+helptext_position:eq=`top`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]\n    </label>\n\n    [[+rows]]\n\n    [[+option_other:is=`1`:then=`\n    <div class=\"ui collapsible [[+checkbox_type:empty=`[[+field_type]]`]] checkbox field\">\n        <input type=\"[[+field_type]]\"\n               name=\"[[+name]][[+field_type:is=`checkbox`:then=`[]`]]\"\n               id=\"[[+name]]-last\"\n               class=\"hidden\"\n               value=\"[[+option_other_value]]\"\n               tabindex=\"[[+total:add=`1`]]\"\n               data-group=\"no-group\"\n               data-target=\"[[+name]]-other\"\n               [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]\n               [[+check_other]]>\n        <label>[[+option_other_value]]</label>\n    </div>\n    <div id=\"[[+name]]-other\" class=\"field [[+check_other:is=``:then=`hidden`]]\">\n        <input type=\"text\" name=\"[[+name]]-other\" value=\"[[!+fb[[*id]].[[+name]]-other]]\" placeholder=\"[[+option_placeholder]]\">\n    </div>\n    `]]\n\n    [[+helptext_position:eq=`bottom`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]\n</div>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.fbselectoption.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.fbselectoption.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]\n[[+field_helptext:notempty=`<span class=\"help\">[[+field_helptext]]</span>`:toPlaceholder=`help`]]\n[[!+fb[[*id]].[[+name]]:contains=`[[+option_other_value]]`:then=`checked`:toPlaceholder=`check_other`]]\n\n<div id=\"[[+name]]\" class=\"[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+option_layout:empty=`grouped`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[+field_type]] fields [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]\">\n    <label for=\"[[+name]]\">\n        [[+field_name]]\n        [[+helptext_position:eq=`top`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]\n    </label>\n\n    [[+rows]]\n\n    [[+option_other:is=`1`:then=`\n    <div class=\"ui collapsible [[+checkbox_type:empty=`[[+field_type]]`]] checkbox field\">\n        <input type=\"[[+field_type]]\"\n               name=\"[[+name]][[+field_type:is=`checkbox`:then=`[]`]]\"\n               id=\"[[+name]]-last\"\n               class=\"hidden\"\n               value=\"[[+option_other_value]]\"\n               tabindex=\"[[+total:add=`1`]]\"\n               data-group=\"no-group\"\n               data-target=\"[[+name]]-other\"\n               [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]\n               [[+check_other]]>\n        <label>[[+option_other_value]]</label>\n    </div>\n    <div id=\"[[+name]]-other\" class=\"field [[+check_other:is=``:then=`hidden`]]\">\n        <input type=\"text\" name=\"[[+name]]-other\" value=\"[[!+fb[[*id]].[[+name]]-other]]\" placeholder=\"[[+option_placeholder]]\">\n    </div>\n    `]]\n\n    [[+helptext_position:eq=`bottom`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]\n</div>"
 
 -----
 
@@ -13,29 +15,34 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <div id="[[+name]]" class="[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+option_layout:empty=`grouped`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[+field_type]] fields [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
     <label for="[[+name]]">
         [[+field_name]]
-        [[+helptext_position:eq=`top`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]
     </label>
+
+    [[+helptext_position:eq=`top`:then=`[[+help]]`]]
 
     [[+rows]]
 
     [[+option_other:is=`1`:then=`
-    <div class="ui collapsible [[+checkbox_type:empty=`[[+field_type]]`]] checkbox field">
-        <input type="[[+field_type]]"
-               name="[[+name]][[+field_type:is=`checkbox`:then=`[]`]]"
-               id="[[+name]]-last"
-               class="hidden"
-               value="[[+option_other_value]]"
-               tabindex="[[+total:add=`1`]]"
-               data-group="no-group"
-               data-target="[[+name]]-other"
-               [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]
-               [[+check_other]]>
-        <label>[[+option_other_value]]</label>
+    <div class="field">
+        <div class="ui collapsible [[+checkbox_type:empty=`[[+field_type]]`]] checkbox">
+            <input type="[[+field_type]]"
+                   name="[[+name]][[+field_type:is=`checkbox`:then=`[]`]]"
+                   id="[[+name]]-last"
+                   class="hidden"
+                   value="[[+option_other_value]]"
+                   tabindex="[[+total:add=`1`]]"
+                   data-group="no-group"
+                   data-target="[[+name]]-other"
+                   [[!+fb[[*id]].[[+name]]:FormItIsChecked=`[[+option_other_value]]`]]
+                   [[+check_other]]>
+            <label>[[+option_other_value]]</label>
+        </div>
     </div>
+
     <div id="[[+name]]-other" class="field [[+check_other:is=``:then=`hidden`]]">
         <input type="text" name="[[+name]]-other" value="[[!+fb[[*id]].[[+name]]-other]]" placeholder="[[+option_placeholder]]">
     </div>
     `]]
 
-    [[+helptext_position:eq=`bottom`:then=`[[+fb[[*id]].error.[[+name]]]] [[+help]]`]]
+    [[+fb[[*id]].error.[[+name]]]]
+    [[+helptext_position:eq=`bottom`:then=`[[+help]]`]]
 </div>
