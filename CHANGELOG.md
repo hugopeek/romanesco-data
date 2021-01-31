@@ -1,11 +1,24 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.9.2
+## v1.10.0
 Released on ...
 
 > Romanesco Patterns 1.0.0-beta3
 
+New features:
+- Load patterns dynamically in front-end library
+- Add preview and status properties to all elements
+
 Fixes and improvements:
+- Don't show hidden forms in FormBlocks form selector
+- Fix behaviour and styling glitches in FormBlocks checkbox / radio fields
+- Fix footer CTA backgrounds referenced by ID
+- Make sure unique_idx placeholder in overviews is really unique
+- Add system setting for defining templates with ToC [WIP]
+- Load Leaflet map assets via chunk
+- Add ability to turn Cards CB into a slider
+- Fix quality placeholder not being forwarded to responsive images srcsets
+- Modify getElementDescription snippet to get other fields or property values
 - Add column for hidemenu value in FormBlocks collection view
 - Fix issue with special characters in FormBlocks select option help texts
 - Add option to customize the list of CB layout backgrounds
