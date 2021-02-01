@@ -11,16 +11,19 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[$headingHierarchyLink? &uid=`[[+unique_idx]]`]]
 
 <p class="meta">
-    <a href="[[~[[+team_member_id]]]]" class="ui avatar image">
-        [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="[[++site_name]]">`?
-            &tvname=`person_image`
-            &docid=`[[+team_member_id]]`
-            &options=`w=150&h=150&q=[[++img_quality]]&zc=1`
-            &type=`tpl`
-            &tpl=`cbOverviewRowImg`
+    <span class="author">
+        [[[[If?
+            &subject=`[[+team_member_id]]`
+            &operator=`notempty`
+            &then=`$imgOverviewPersonAvatarLink? &id=`[[+team_member_id]]``
+        ]]]]
+        [[If?
+            &subject=`[[+author_id]]`
+            &operator=`notempty`
+            &then=`[[+author_id:userinfo=`fullname`]]`
+            &else=`<i class="user icon"></i> [[+createdby:userinfo=`fullname`:empty=`[[++site_name]]`]]`
         ]]
-    </a>
-    <span class="author">[[+author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]</span>
+    </span>
     <span class="date">
         <i class="calendar icon"></i>
         [[+publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]

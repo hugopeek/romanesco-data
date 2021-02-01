@@ -42,17 +42,24 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <div class="ui very relaxed grid container">
             <article id="content" class="sixteen wide mobile eleven wide computer publication column">
 
-                <header class="ui vertical stripe segment [[setBackground? &background=`[[*header_background:empty=`[[++layout_background_default]]`]]`]] introduction">
+                <header class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]] introduction">
 
                     <div class="ui container">
                         <h1 class="ui header">[[*pagetitle]]</h1>
 
                         <p class="meta">
                             <span class="author">
-                                <a href="[[~[[+team_member_id]]]]" class="ui avatar image">
-                                    [[ImagePlus:empty=`<img src="[[++overview_icon_fallback]]" alt="Author: [[++site_name]]">`? &tvname=`person_image` &docid=`[[+team_member_id]]` &options=`w=150&h=150&zc=1` &type=`tpl`]]
-                                </a>
-                                [[*author_id:userinfo=`fullname`:empty=`[[++site_name]]`]]
+                                [[[[If?
+                                    &subject=`[[+team_member_id]]`
+                                    &operator=`notempty`
+                                    &then=`$imgOverviewPersonAvatarLink? &id=`[[+team_member_id]]``
+                                ]]]]
+                                [[If?
+                                    &subject=`[[*author_id]]`
+                                    &operator=`notempty`
+                                    &then=`[[*author_id:userinfo=`fullname`]]`
+                                    &else=`<i class="user icon"></i> [[*createdby:userinfo=`fullname`:empty=`[[++site_name]]`]]`
+                                ]]
                             </span>
                             <span class="date">
                                 <i class="calendar icon"></i>
@@ -75,31 +82,19 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
                 [[*content]]
 
-                [[+team_member_id:notempty=`
-                <aside id="author-about" class="ui vertical stripe segment [[++layout_background_default]]">
-                    <div class="ui container">
-                        <div class="ui segment">
-                            <div class="ui two column equal width grid">
-                                <div class="four wide column">
-                                    <a href="[[~[[+team_member_id]]]]" class="ui image">
-                                        [[ImagePlus:empty=`[[++overview_img_fallback]]`? &tvname=`person_image` &docid=`[[+team_member_id]]` &options=`w=400&h=400&zc=1` &type=`tpl`]]
-                                    </a>
-                                </div>
-                                <div class="column">
-                                    [[getResources?
-                                        &resources=`[[+team_member_id]]`
-                                        &tpl=`articleAuthorBio`
-                                        &includeTVs=`1`
-                                    ]]
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                `]]
+                [[[[If?
+                    &subject=`[[+team_member_id:empty=`440`]]`
+                    &operator=`notempty`
+                    &then=`getResources?
+                        &resources=`[[+team_member_id:empty=`440`]]`
+                        &tpl=`[[If? &subject=`[[$articleAuthorBioTheme]]` &operator=`isnull` &then=`articleAuthorBio` &else=`articleAuthorBioTheme`]]`
+                        &includeTVs=`1`
+                        &tvPrefix=``
+                    `
+                ]]]]
 
                 [[*comments_toggle:eq=`1`:then=`
-                <section id="comments" class="ui vertical stripe segment [[++layout_background_default]]">
+                <section id="comments" class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
                     <div class="ui container">
                         <h2 class="ui big header">[[%romanesco.article.comments]]</h2>
                         <div id="[[++romanesco.[[++comment_platform:lcase]]_div_id]]"></div>
@@ -107,11 +102,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 </section>
                 `]]
 
-                <footer class="ui vertical stripe segment [[++layout_background_default]]">
+                <footer class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
                     <div class="ui container">
-                        <div class="ui two column grid">
-                            <div class="column">
-                                <a href="[[~[[*parent]]]]" class="primary ui button"><i class="icon left arrow"></i>[[%romanesco.article.back_to_overview]]</a>
+                        <div class="ui two column equal width bottom aligned grid">
+                            <div class="compact column">
+                                <a href="[[~[[*parent]]]]" class="primary ui back button">
+                                    <i class="icon left arrow"></i>
+                                    <span class="mobile hidden">[[%romanesco.article.back_to_overview]]</span>
+                                </a>
                             </div>
                             <div class="right aligned column">
                                 [[$socialShareButtons]]
@@ -122,7 +120,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             </article>
 
             <aside id="sidebar" class="sixteen wide mobile five wide computer column">
-                <section class="ui vertical stripe segment [[++layout_background_default]] tablet or lower hidden">
+                <section class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]] tablet or lower hidden">
                     <div class="ui container">
                         <div class="ui equal width middle aligned grid">
                             <div class="compact column">

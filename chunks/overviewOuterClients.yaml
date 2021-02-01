@@ -72,7 +72,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &ajaxElemPagination=`#[[+prefix]] .pagination`
     &ajaxElemLink=`#[[+prefix]] .pagination a`
     &ajaxElemMore=`#[[+prefix]] .more`
-    &scrollTop=`0`
+    &scrollTop=`[[*pagination_scroll_top]]`
 
     &tplPageWrapper=`pageNavWrapper`
     &tplPage=`pageNavItem`

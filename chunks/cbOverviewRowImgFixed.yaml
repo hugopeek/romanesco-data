@@ -1,0 +1,18 @@
+id: 543
+name: cbOverviewRowImgFixed
+description: 'Alternative ImagePlus tpl for overview images, with fixed height and width. Sometimes you don''t want to generate responsive images, for example when it''s only a small avatar image.'
+category: a_cb_overviews
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:45:"romanesco.cboverviewrowimgfixed.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:46:"romanesco.cboverviewrowimgfixed.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+lazy_load:eq=`1`:then=`data-`:else=``:toPlaceholder=`lazy`]]
+<img [[+lazy]]src="[[+url]]"
+     [[+lazy:notempty=`
+     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 [[+width]] [[+height]]'%3E%3C/svg%3E"
+     class="lazy"
+     `]]
+     width="[[+width]]"
+     height="[[+height]]"
+     alt="[[+alt:htmlent]]"
+/>
