@@ -3,6 +3,6 @@ template: 11
 label: Background
 name: pagetitle
 width: 80
-renderer: Collections.renderer.pagetitleWithButtons
+renderer: collections.renderer.pagetitleWithButtons
 position: 1
 sort_type: null

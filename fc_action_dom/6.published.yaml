@@ -1,10 +1,10 @@
-id: 627
+id: 753
 set: 6
 action: 'resource/*'
-name: modx-purpose
+name: published
 description: null
-container: modx-resource-tabs
-rule: tabVisible
+container: modx-panel-resource
+rule: fieldVisible
 value: '0'
 constraint_class: modResource
-rank: 2
+rank: 5

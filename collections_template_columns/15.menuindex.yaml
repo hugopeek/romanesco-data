@@ -6,5 +6,5 @@ hidden: 1
 sortable: 1
 width: 10
 editor: '{"xtype":"numberfield","allowNegative":false,"allowDecimal":false}'
-position: 4
+position: 5
 sort_type: 'SIGNED INTEGER'

@@ -1,10 +1,10 @@
 id: 75
 template: 2
-label: Hidden
+label: Visibility
 name: hidemenu
 sortable: 1
 width: 20
-editor: modx-combo-boolean
-renderer: Collections.renderer.boolean
-position: 5
+editor: rm-visibility-boolean
+renderer: booleanRendererVisibility
+position: 6
 sort_type: 'SIGNED INTEGER'

@@ -3,5 +3,5 @@ template: 10
 label: Tags
 name: tagger_topic
 width: 50
-position: 7
+position: 6
 sort_type: null

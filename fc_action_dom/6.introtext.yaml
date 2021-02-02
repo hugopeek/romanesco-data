@@ -1,10 +1,10 @@
-id: 616
+id: 750
 set: 6
 action: 'resource/*'
 name: introtext
 description: null
 container: modx-panel-resource
-rule: fieldVisible
-value: '0'
+rule: fieldTitle
+value: 'Help text'
 constraint_class: modResource
-rank: 5
+rank: 4
