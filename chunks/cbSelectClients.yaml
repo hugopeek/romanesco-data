@@ -2,14 +2,16 @@ id: 286
 name: cbSelectClients
 description: ''
 category: a_cb_select
+snippet: "[[getResources?\n    &parents=`[[getContextSetting:empty=`[[++romanesco.client_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.client_container_id`]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.cbselectclients.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:40:"romanesco.cbselectclients.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "[[getResources?\n    &parents=`[[getContextSetting:empty=`[[++romanesco.client_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.client_container_id`]]`\n    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`\n    &limit=`99`\n    &showHidden=`1`\n    &showUnpublished=`1`\n    &sortBy=`menuindex`\n    &sortDir=`ASC`\n]]"
 
 -----
 
 [[getResources?
     &parents=`[[getContextSetting:empty=`[[++romanesco.client_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.client_container_id`]]`
     &tpl=`@INLINE [[+pagetitle]]=[[+id]]`
-    &limit=`99`
+    &limit=`0`
     &showHidden=`1`
     &showUnpublished=`1`
     &sortBy=`menuindex`
