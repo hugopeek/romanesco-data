@@ -1,7 +1,7 @@
 id: 68
 template: 11
 label: Availability
-name: tv_cta_availability
+name: tv_background_availability
 sortable: 1
 width: 50
 position: 3
