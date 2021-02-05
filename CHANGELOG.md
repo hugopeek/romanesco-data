@@ -10,6 +10,10 @@ New features:
 - Add preview and status properties to all elements
 
 Fixes and improvements:
+- Center copyright footer content on mobile
+- Add small credits badge with information popup to copyright footer
+- Skip own element properties in returnFirstHit snippet
+- Add option to adjust column size to content width in CB settings
 - Scroll back to top after using pagination in overviews (can be disabled)
 - Only display avatar image in publication elements if author page exists
 - Add overview image template for ImagePlus with fixed dimensions
