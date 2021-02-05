@@ -46,7 +46,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 ]]]]]]
 
 [[+footer_visibility:eq=`1`:then=`
-<footer id="footer" class="ui vertical segment [[+footer_background]]">
+<footer id="footer" class="ui vertical segment [[setBackground? &background=`[[+footer_background]]`]]">
     [[#[[+footer_type]].content]]
 
     [[[[If?
