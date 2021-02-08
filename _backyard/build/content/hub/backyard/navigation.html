@@ -1,0 +1,165 @@
+id: 21
+pagetitle: Navigation
+longtitle: 'Make finding the right content fast and effortless'
+description: 'Focus on: solving navigational challenges, button usage, call to actions, using overviews, etc.'
+alias: navigation
+published: 1
+parent: 3
+introtext: ''
+template: 1
+menuindex: 7
+createdby: 1
+createdon: 1547636581
+publishedon: 1547636581
+publishedby: 1
+context_key: hub
+uri: backyard/navigation
+properties: '{"contentblocks":{"content":"[{\"layout\":18,\"content\":{\"main\":[{\"child_layouts\":[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":19,\"settings\":{\"cols\":\"four\",\"row_tpl\":\"overviewRowBasic\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"Learn more\",\"parent\":\"[[++romanesco.pattern_container_id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h2\",\"depth\":\"0\",\"limit\":\"4\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"svg\",\"padding\":\"regular\",\"de_emphasize\":\"0\"}}]},\"settings\":[],\"parent\":87}],\"field\":87,\"settings\":[]}],\"info\":[{\"child_layouts\":[{\"layout\":12,\"content\":{\"col_1\":[{\"value\":\"\",\"field\":6,\"settings\":[]}],\"col_2\":[{\"value\":\"\",\"field\":6,\"settings\":[]}]},\"settings\":{\"padding\":\"relaxed\",\"alignment\":\"\",\"divider\":\"celled\"},\"parent\":17}],\"field\":17,\"settings\":[]}],\"meta\":[{\"value\":\"[[includedBosons?\\n    &layout=`[[+layout_idx]]`\\n    &filterFields=`6,14,17,87`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":{\"sidebar_width\":\"four\",\"layout_title\":\"Creating overviews of child pages\"},\"parent\":0,\"title\":\"\"}]","linear":[{"child_layouts":[{"layout":1,"content":{"main":[{"chunk_properties":[],"field":19,"settings":{"cols":"four","row_tpl":"overviewRowBasic","show_subtitle":"1","show_introtext":"0","link_text":"Learn more","parent":"[[++romanesco.pattern_container_id]]","title_field":"menutitle","title_hierarchy":"h2","depth":"0","limit":"4","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"svg","padding":"regular","de_emphasize":"0"}}]},"settings":[],"parent":87}],"field":87,"settings":[]},{"chunk_properties":[],"field":19,"settings":{"cols":"four","row_tpl":"overviewRowBasic","show_subtitle":"1","show_introtext":"0","link_text":"Learn more","parent":"[[++romanesco.pattern_container_id]]","title_field":"menutitle","title_hierarchy":"h2","depth":"0","limit":"4","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"svg","padding":"regular","de_emphasize":"0"}},{"child_layouts":[{"layout":12,"content":{"col_1":[{"value":"","field":6,"settings":[]}],"col_2":[{"value":"","field":6,"settings":[]}]},"settings":{"padding":"relaxed","alignment":"","divider":"celled"},"parent":17}],"field":17,"settings":[]},{"value":"","field":6,"settings":[]},{"value":"","field":6,"settings":[]},{"value":"[[includedBosons?\n    &layout=`[[+layout_idx]]`\n    &filterFields=`6,14,17,87`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"87":1,"19":1,"17":1,"6":2,"14":1},"_isContentBlocks":true}}'
+tvs:
+    auto_anchors: '@INHERIT 0'
+    content_brief: ''
+    content_cta: ''
+    content_outline: ''
+    content_owner: ''
+    content_priority: ''
+    content_purpose: ''
+    content_repurpose_dest: ''
+    content_repurpose_src: ''
+    content_result: ''
+    content_tone: ''
+    critical_css_uri: ''
+    footer_background: '@INHERIT'
+    footer_cta: '@INHERIT'
+    footer_cta_background: '@INHERIT'
+    footer_inheritance: '@INHERIT inherit_visibility||inherit_type||inherit_background||inherit_cta||inherit_cta_background'
+    footer_type: '@INHERIT default'
+    footer_visibility: '@INHERIT default'
+    header_background: '@INHERIT'
+    header_background_img: ''
+    header_cta: '@INHERIT'
+    header_inheritance: '@INHERIT inherit_visibility||inherit_titles||inherit_background'
+    header_subtitle: '@INHERIT'
+    header_title: '@INHERIT'
+    header_visibility: '@INHERIT default'
+    links_attachment: ''
+    links_external: ''
+    links_related: ''
+    overview_icon_font: 'map signs icon'
+    overview_icon_svg: romanesco/navigation.svg
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
+    overview_img_landscape: ''
+    overview_img_pano: ''
+    overview_img_portrait: ''
+    overview_img_priority: landscape
+    overview_img_square: ''
+    overview_img_wide: ''
+    overview_link_text: ''
+    pagination_scroll_top: '@INHERIT 1'
+    planning_date_due: ''
+    status_health: stable
+    status_improvements: ''
+    status_issues: ''
+    status_progress: to-do
+    toolbar_visibility: '@INHERIT default'
+
+-----
+
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
+    <div class="ui   container">
+        [[$overviewOuter? 
+	&unique_idx=`2`
+	&layout_id=`1`
+	&layout_column=`main`
+	&layout_idx=`0`
+	&layout_title=``
+	&row_tpl=`overviewRowBasic`
+	&cols=`four`
+	&parent=`[[++romanesco.pattern_container_id]]`
+	&title_field=`menutitle`
+	&depth=`0`
+	&limit=`4`
+	&show_hidden=`0`
+	&sortby=`menuindex`
+	&sortdir=`0`
+	&pagination=`0`
+	&title_hierarchy=`h2`
+	&show_subtitle=`1`
+	&show_introtext=`0`
+	&link_text=`Learn more`
+	&img_type=`landscape`
+	&icon_type=`svg`
+	&alignment=``
+	&padding=`regular`
+	&de_emphasize=`0`
+	&responsive=`stackable,doubling`
+	]]
+
+    </div>
+</div>
+
+
+<div class="ui vertical backyard segment secondary">
+    <div class="ui container">
+        <div class="ui accordion">
+            <div class="title">
+                <button class="ui small primary circular icon button" tabindex="1">
+                    <i class="plus icon"></i>
+                </button>
+            </div>
+            <div class="content">
+                <div class="ui stackable relaxed equal width grid">
+                    <section class="column">
+                        <h2>Creating overviews of child pages</h2>
+                        <div class="ui nested stackable doubling relaxed   equal width grid">
+    <div class=" row">
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+    &background=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+    <div class="column">[[$richTextSegment?
+    &content=``
+    &segment_type=``
+    &background=``
+	&padding=`regular`
+    &alignment=``
+]]</div>
+</div>
+</div>
+                    </section>
+                    <aside class="four wide column">
+                        <div class="ui nested middle aligned equal width toolbar grid">
+                            <div class="nine wide column">
+                                <a href="[[++site_url]]manager/?a=resource/update&id=[[*id]]" class="ui tiny basic button">
+                                    Edit in MODX
+                                </a>
+                            </div>
+                            <div class="right aligned column">
+                                <i class="disabled heart outline link icon with popup"
+                                   data-content="[[%romanesco.patterns.comment_tooltip]]"
+                                   data-position="top center"></i>
+                                <i class="disabled comment outline link icon with popup"
+                                   data-content="[[%romanesco.patterns.comment_tooltip]]"
+                                   data-position="top center"></i>
+                            </div>
+                        </div>
+
+                        <div class="ui divider"></div>
+
+                        <h5 class="ui disabled header">ContentBlocks used</h5>
+
+                        <div class="ui list">
+                            [[includedBosons?
+    &layout=`0`
+    &filterFields=`6,14,17,87`
+]]
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

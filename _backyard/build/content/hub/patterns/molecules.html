@@ -5,7 +5,7 @@ alias: molecules
 published: 1
 parent: 2
 introtext: ''
-template: 1
+template: 21
 menuindex: 2
 createdby: 1
 createdon: 1547894298
@@ -14,7 +14,7 @@ publishedby: 1
 menutitle: Molecules
 context_key: hub
 uri: patterns/molecules
-properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{},\"field\":19,\"settings\":{\"cols\":\"four\",\"row_tpl\":\"overviewRowBasicLinkCard\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"\",\"parent\":\"[[*id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h3\",\"depth\":\"0\",\"limit\":\"99\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"svg\",\"padding\":\"regular\",\"de_emphasize\":\"1\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":[],"field":19,"settings":{"cols":"four","row_tpl":"overviewRowBasicLinkCard","show_subtitle":"1","show_introtext":"0","link_text":"","parent":"[[*id]]","title_field":"menutitle","title_hierarchy":"h3","depth":"0","limit":"99","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"svg","padding":"regular","de_emphasize":"1"}}],"fieldcounts":{"19":1},"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"[[*pagetitle]]\",\"level\":\"h1\",\"field\":1,\"settings\":[]},{\"value\":1,\"field\":5,\"settings\":[]},{\"value\":\"[[pdoResources?\\n    &class=`modCategory`\\n    &sortby=`category`\\n    &sortdir=`ASC`\\n    &limit=`0`\\n    &depth=`0`\\n    &where=`[{\\\"parent:=\\\":\\\"19\\\"}]`\\n    &tpl=`patternCategoryParent`\\n    &level=`h2`\\n    &type=`Molecule`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[*pagetitle]]","level":"h1","field":1,"settings":[]},{"value":1,"field":5,"settings":[]},{"value":"[[pdoResources?\n    &class=`modCategory`\n    &sortby=`category`\n    &sortdir=`ASC`\n    &limit=`0`\n    &depth=`0`\n    &where=`[{\"parent:=\":\"19\"}]`\n    &tpl=`patternCategoryParent`\n    &level=`h2`\n    &type=`Molecule`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"1":1,"5":1,"14":1},"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '0'
     content_brief: ''
@@ -27,6 +27,7 @@ tvs:
     content_repurpose_src: ''
     content_result: ''
     content_tone: ''
+    critical_css_uri: assets/css/critical/patterns/molecules.css
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
     footer_cta_background: '@INHERIT'
@@ -54,6 +55,7 @@ tvs:
     overview_img_square: ''
     overview_img_wide: ''
     overview_link_text: ''
+    pagination_scroll_top: '@INHERIT 1'
     planning_date_due: ''
     status_health: stable
     status_improvements: ''
@@ -63,35 +65,31 @@ tvs:
 
 -----
 
-<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`white`]]">
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`default`]]">
     <div class="ui   container">
-        [[$overviewOuter? 
-	&unique_idx=`1`
-	&layout_id=`1`
-	&layout_column=`main`
-	&layout_idx=`0`
-	&layout_title=``
-	&row_tpl=`overviewRowBasicLinkCard`
-	&cols=`four`
-	&parent=`[[*id]]`
-	&title_field=`menutitle`
-	&depth=`0`
-	&limit=`99`
-	&show_hidden=`0`
-	&sortby=`menuindex`
-	&sortdir=`0`
-	&pagination=`0`
-	&title_hierarchy=`h3`
-	&show_subtitle=`1`
-	&show_introtext=`0`
-	&link_text=``
-	&img_type=`landscape`
-	&icon_type=`svg`
-	&alignment=``
-	&padding=`regular`
-	&de_emphasize=`1`
-	&responsive=`stackable,doubling`
-	]]
+        [[$headingBasic?
+    &value=`[[*pagetitle]]`
+    &level=`h1`
+    &alignment=``
+    &unique_idx=`1`
+]]
 
+[[$dividerBasic?
+    &divider_text=``
+    &divider_section=`1`
+    &divider_hidden=`0`
+]]
+
+[[pdoResources?
+    &class=`modCategory`
+    &sortby=`category`
+    &sortdir=`ASC`
+    &limit=`0`
+    &depth=`0`
+    &where=`[{"parent:=":"19"}]`
+    &tpl=`patternCategoryParent`
+    &level=`h2`
+    &type=`Molecule`
+]]
     </div>
 </div>
