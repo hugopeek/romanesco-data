@@ -10,7 +10,7 @@ New features:
 - Add preview and status properties to all elements
 
 Fixes and improvements:
-- Simplify context policy settings
+- Simplify context policy settings and remove Redactor policies
 - Center copyright footer content on mobile
 - Add small credits badge with information popup to copyright footer
 - Skip own element properties in returnFirstHit snippet

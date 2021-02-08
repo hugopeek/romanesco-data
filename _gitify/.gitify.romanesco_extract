@@ -179,6 +179,7 @@ data:
         where:
             'policy:NOT IN':
                 - '14'
+                - '16'
     access_media_source:
         class: sources.modAccessMediaSource
         primary: id
@@ -187,6 +188,7 @@ data:
         primary: name
         where:
             - 'name:NOT LIKE': 'ContentBlocks%'
+            - 'name:NOT LIKE': 'Redactor%'
     access_resource_groups:
         class: modAccessResourceGroup
         primary: id
