@@ -2,4 +2,5 @@ id: 19
 target: global
 principal_class: modUserGroup
 principal: 3
-policy: 11
+authority: 0
+policy: 15

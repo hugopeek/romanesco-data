@@ -2,4 +2,5 @@ id: 9
 target: hub
 principal_class: modUserGroup
 principal: 1
-policy: 11
+authority: 0
+policy: 2
