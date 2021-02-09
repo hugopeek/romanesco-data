@@ -97,7 +97,7 @@ data:
             - 'id:<': '100000'
 
     # Adjust content types, such as removing .html extensions of all pages
-    content_types:
+    content_type:
         class: modContentType
         primary: name
         where:

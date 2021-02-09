@@ -10,6 +10,7 @@ New features:
 - Add preview and status properties to all elements
 
 Fixes and improvements:
+- Rename content_types data folder to content_type in Gitify config
 - Simplify context policy settings and remove Redactor policies
 - Center copyright footer content on mobile
 - Add small credits badge with information popup to copyright footer
