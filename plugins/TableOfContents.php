@@ -24,16 +24,8 @@ $enabledTemplates = explode(',', $modx->getOption('romanesco.toc_enabled_templat
 $template = $modx->resource->get('template');
 $tpl = $modx->getOption('tpl', $scriptProperties, 'tocNavItem');
 
-// Get template name
-$query = $modx->newQuery('modTemplate');
-$query->where(array(
-    'id' => $template
-));
-$query->select('templatename');
-$templateName = $modx->getValue($query->prepare());
-
-// Abort if resource template is not a ToC or Note template
-if (strpos($templateName, 'Note') === false && strpos($templateName, 'ToC') === false) {
+// Abort if resource template is not a ToC-enabled template
+if (!in_array($template, $enabledTemplates)) {
     return true;
 }
 
