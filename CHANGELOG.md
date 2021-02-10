@@ -11,6 +11,7 @@ New features:
 - Add preview and status properties to all elements
 
 Fixes and improvements:
+- Enable lazy load by default in image and overview CBs
 - Fix a bunch of default settings in CB fields
 - Rename content_types data folder to content_type in Gitify config
 - Simplify context policy settings and remove Redactor policies
