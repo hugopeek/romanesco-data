@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Cards (Flexible)'
 description: ''
-sortorder: 24
+sortorder: 25
 category: 4
 icon: th-large
 icon_type: custom

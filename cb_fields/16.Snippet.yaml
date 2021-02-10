@@ -3,7 +3,7 @@ parent_properties: ''
 input: snippet
 name: Snippet
 description: ''
-sortorder: 38
+sortorder: 39
 category: 6
 icon: snippet_A
 icon_type: ''

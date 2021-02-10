@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Input (Email)'
 description: ''
-sortorder: 51
+sortorder: 52
 category: 7
 icon: email
 icon_type: custom

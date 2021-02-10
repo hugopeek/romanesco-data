@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: FAQ
 description: ''
-sortorder: 95
+sortorder: 63
 category: 1
 icon: question-circle-o
 icon_type: custom

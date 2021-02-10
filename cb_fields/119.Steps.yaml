@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: Steps
 description: 'A menu to show the completion status of an activity in a series of activities. Useful in combination with multi-page forms.'
-sortorder: 31
+sortorder: 32
 category: 3
 icon: tabs
 template: '[[+value]]'

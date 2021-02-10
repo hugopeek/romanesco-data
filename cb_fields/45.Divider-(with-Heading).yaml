@@ -3,7 +3,7 @@ parent_properties: ''
 input: hr
 name: 'Divider (with Heading)'
 description: ''
-sortorder: 19
+sortorder: 20
 category: 4
 icon: horizontalrule
 icon_type: ''

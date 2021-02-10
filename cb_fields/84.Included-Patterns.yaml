@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Included Patterns'
 description: 'List the smaller atomic particles included in this pattern.'
-sortorder: 40
+sortorder: 41
 category: 6
 icon: chunk_C
 template: '[[+value]]'
