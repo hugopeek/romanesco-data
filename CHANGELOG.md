@@ -7,6 +7,7 @@ Released on ...
 
 New features:
 - Load patterns dynamically in front-end library
+- Add ContentBlock for displaying Vimeo video
 - Add preview and status properties to all elements
 
 Fixes and improvements:
