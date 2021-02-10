@@ -1,6 +1,5 @@
 text: contentblocks.menu
 parent: components
 description: contentblocks.menu_desc
-menuindex: 1
 permissions: contentblocks_component
 namespace: contentblocks
