@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.10.0
-Released on ...
+Released on February 20, 2021
 
 > Romanesco Patterns 1.0.0-beta3
 
@@ -27,7 +27,7 @@ Fixes and improvements:
 - Fix behaviour and styling glitches in FormBlocks checkbox / radio fields
 - Fix footer CTA backgrounds referenced by ID
 - Make sure unique_idx placeholder in overviews is actually unique
-- Add system setting for defining templates with ToC [WIP]
+- Add system setting for defining templates with ToC
 - Load Leaflet map assets via chunk
 - Add ability to turn Cards CB into a slider
 - Fix quality placeholder not being forwarded to responsive images srcsets
