@@ -1,5 +1,12 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.10.1
+Released on ...
+
+Fixes and improvements:
+- Don't display globally excluded resources in Overviews either
+- Prevent bad link tag errors from CTAs that don't have a link
+
 ## v1.10.0
 Released on February 20, 2021
 
