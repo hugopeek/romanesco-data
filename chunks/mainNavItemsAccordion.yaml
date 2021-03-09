@@ -12,7 +12,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &level=`[[+level:empty=`[[++navbar_level]]`]]`
         &levelClass=`level-`
         &selfClass=`current`
-        &resources=`[[++navbar_resources]]`
+        &resources=`[[+excluded_resources]]`
 
         &tplOuter=`navWrapper`
         &tpl=`navItemAccordionParent`

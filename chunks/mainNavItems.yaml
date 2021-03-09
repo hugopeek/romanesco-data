@@ -11,7 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &startId=`0`
         &level=`1`
         &levelClass=`level-`
-        &resources=`[[++navbar_resources]]`
+        &resources=`[[+excluded_resources]]`
         &tplOuter=`navWrapper`
         &tpl=`navItem`
     ]]

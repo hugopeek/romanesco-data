@@ -56,6 +56,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[++head_additional]]
 
+[[- SET PLACEHOLDER WITH GLOBALLY EXCLUDED RESOURCES ]]
+[[beforeEach?
+    &input=`[[++nav_exclude_resources]]`
+    &before=`-`
+    &toPlaceholder=`excluded_resources`
+]]
+
 [[[[++romanesco.favicon_version:notempty=`$favicons`]]]]
 
 [[[[If?

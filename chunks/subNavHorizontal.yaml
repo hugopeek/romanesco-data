@@ -10,6 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <div class="ui container">
         [[pdoMenu?
             &parents=`[[UltimateParent]]`
+            &resources=`[[+excluded_resources]]`
             &level=`1`
             &tplOuter=`navWrapper`
             &tpl=`navItem`
