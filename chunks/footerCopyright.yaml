@@ -16,6 +16,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             <nav id="menu-footer" class="ui horizontal list">
                 [[pdoMenu?
                     &parents=`[[++common_pages_id:empty=`[[++romanesco.common_pages_id:empty=`0`]]`]]`
+                    &resources=`[[+excluded_resources]]`
                     &level=`1`
                     &tplOuter=`navWrapper`
                     &tpl=`navItem`
