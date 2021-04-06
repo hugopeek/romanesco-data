@@ -21,6 +21,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <body id="[[*alias]]" class="header-vertical">
 
+[[$offCanvasNav]]
+
 <div class="pusher">
     [[$headerVertical?
         &masthead=`0`
@@ -68,7 +70,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </main>
 </div>
 
-[[$offCanvasNav]]
 [[$script]]
 
 </body>
