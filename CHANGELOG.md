@@ -4,6 +4,9 @@
 Released on ...
 
 Fixes and improvements:
+- Implement cache buster for static assets
+- Move off-canvas navigation above content wrapper to prevent redraw in JS
+- Add warning not to edit site.css directly
 - Don't display globally excluded resources in Overviews either
 - Prevent bad link tag errors from CTAs that don't have a link
 
