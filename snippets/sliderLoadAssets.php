@@ -13,7 +13,19 @@ content: "/**\n * sliderLoadAssets\n *\n * Loads dependencies for the Swiper car
  * sliderLoadAssets
  *
  * Loads dependencies for the Swiper carousel (https://swiperjs.com/).
+ *
+ * @var modX $modx
+ * @var array $scriptProperties
+ *
+ * @package romanesco
  */
+
+$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
+$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
+if (!($romanesco instanceof Romanesco)) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
+    return;
+}
 
 $uid = $modx->getOption('uid', $scriptProperties, 0);
 $init = $modx->getOption('init', $scriptProperties, 'true');
@@ -157,12 +169,16 @@ $assetsPathJS = $modx->getOption('romanesco.semantic_js_path', $scriptProperties
 $assetsPathVendor = $modx->getOption('romanesco.semantic_vendor_path', $scriptProperties, '');
 $assetsPathDist = $modx->getOption('romanesco.semantic_dist_path', $scriptProperties, '');
 
+// Load strings to insert in asset paths when cache busting is enabled
+$cacheBusterCSS = $romanesco->getCacheBustingString('CSS');
+$cacheBusterJS = $romanesco->getCacheBustingString('JS');
+
 // Head
-$modx->regClientCSS($assetsPathCSS . '/swiper' . $minify . '.css');
+$modx->regClientCSS($assetsPathCSS . '/swiper' . $minify . $cacheBusterCSS . '.css');
 
 // Footer
-$modx->regClientScript('/' . $assetsPathVendor . '/swiper/swiper.min.js');
-$modx->regClientScript('/' . $assetsPathJS . '/swiper' . $minify . '.js');
+$modx->regClientScript('/' . $assetsPathVendor . '/swiper/swiper.min' . $cacheBusterJS . '.js');
+$modx->regClientScript('/' . $assetsPathJS . '/swiper' . $minify . $cacheBusterJS . '.js');
 $modx->regClientHTMLBlock($modx->getChunk($tpl, array(
     'var' => $var,
     'id' => $id,
@@ -188,8 +204,8 @@ $modx->regClientHTMLBlock($modx->getChunk($tpl, array(
 
 // Load modal assets if lightbox is active
 if ($lightbox == 1) {
-    $modx->regClientCSS($assetsPathDist . '/components/modal.min.css');
-    $modx->regClientScript('/' . $assetsPathDist . '/components/modal.min.js');
+    $modx->regClientCSS($assetsPathDist . '/components/modal.min' . $cacheBusterCSS . '.css');
+    $modx->regClientScript('/' . $assetsPathDist . '/components/modal.min' . $cacheBusterJS . '.js');
 }
 
 return '';

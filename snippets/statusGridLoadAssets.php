@@ -12,31 +12,34 @@ content: "/**\n * statusGridLoadAssets\n *\n */\n\n$assetsPathCSS = $modx->getOp
 /**
  * statusGridLoadAssets
  *
+ * @var modX $modx
+ * @var array $scriptProperties
+ *
+ * @package romanesco
  */
+
+$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
+$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
+if (!($romanesco instanceof Romanesco)) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
+    return;
+}
 
 $assetsPathCSS = $modx->getOption('romanesco.semantic_css_path', $scriptProperties, '');
 $assetsPathJS = $modx->getOption('romanesco.semantic_js_path', $scriptProperties, '');
 $assetsPathVendor = $modx->getOption('romanesco.semantic_vendor_path', $scriptProperties, '');
 $assetsPathDist = $modx->getOption('romanesco.semantic_dist_path', $scriptProperties, '');
 
-//$cacheBuster = $modx->getObject('cgSetting', array('key' => 'cache_buster'));
-//
-//if (is_object($cacheBuster) && $cacheBuster->get('value') == 1) {
-//    $versionCSS = $modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_css'));
-//    $versionJS = $modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_js'));
-//
-//    if ($versionCSS && $versionJS) {
-//        $cacheBusterCSS = '.' . str_replace('.','', $versionCSS->get('value'));
-//        $cacheBusterJS = '.' . str_replace('.','', $versionJS->get('value'));
-//    }
-//}
+// Load strings to insert in asset paths when cache busting is enabled
+$cacheBusterCSS = $romanesco->getCacheBustingString('CSS');
+$cacheBusterJS = $romanesco->getCacheBustingString('JS');
 
 // Header
-$modx->regClientCSS($assetsPathDist . '/components/step.min.css');
-$modx->regClientCSS($assetsPathDist . '/components/modal.min.css');
+$modx->regClientCSS($assetsPathDist . '/components/step.min' . $cacheBusterCSS . '.css');
+$modx->regClientCSS($assetsPathDist . '/components/modal.min' . $cacheBusterCSS . '.css');
 
 // Footer
-$modx->regClientScript($assetsPathDist . '/components/modal.min.js');
-$modx->regClientScript($assetsPathVendor . '/tablesort/tablesort.js');
+$modx->regClientScript($assetsPathDist . '/components/modal.min' . $cacheBusterJS . '.js');
+$modx->regClientScript($assetsPathVendor . '/tablesort/tablesort' . $cacheBusterJS . '.js');
 
 return '';

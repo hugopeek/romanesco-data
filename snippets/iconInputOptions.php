@@ -21,7 +21,7 @@ content: "/**\n * iconInputOptions\n * Based on fontAwesomeInputOptions, but mod
  */
 
 // source file
-$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 // scan options
 $regexPrefix = $modx->getOption('regexPrefix', $scriptProperties, 'fa-');
 // label text output options

@@ -176,7 +176,12 @@ switch($eventName) {
             // Bump CSS version number to force refresh
             $versionCSS = $modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_css'));
             if ($versionCSS) {
-                $versionCSS->set('value', $versionCSS->get('value') + 0.01);
+                // Only update minor version number (1.0.1<--)
+                $versionArray = explode('.', $versionCSS->get('value'));
+                $versionMinor = array_pop($versionArray);
+                $versionArray[] = $versionMinor + 1;
+
+                $versionCSS->set('value', implode('.', $versionArray));
                 $versionCSS->save();
             } else {
                 $modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
