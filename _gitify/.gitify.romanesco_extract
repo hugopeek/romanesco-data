@@ -285,12 +285,6 @@ data:
             - id
             - name
         package: collections
-    collections_templates:
-        class: CollectionTemplate
-        primary:
-            - id
-            - name
-        package: collections
     collections_template_columns:
         class: CollectionTemplateColumn
         primary:

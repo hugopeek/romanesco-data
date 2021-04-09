@@ -342,7 +342,7 @@ data:
             - name
         where:
             - 'id:<': '100000'
-        class: CollectionSetting
+        package: collections
     collections_template_columns:
         class: CollectionTemplateColumn
         primary:

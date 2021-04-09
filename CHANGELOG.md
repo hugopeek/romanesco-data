@@ -4,6 +4,7 @@
 Released on ...
 
 Fixes and improvements:
+- Fix broken Gitify configuration for Collections tables
 - Implement cache buster for static assets
 - Move off-canvas navigation above content wrapper to prevent redraw in JS
 - Add warning not to edit site.css directly
