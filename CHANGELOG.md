@@ -3,9 +3,15 @@
 ## v1.10.1
 Released on ...
 
-Fixes and improvements:
-- Fix broken Gitify configuration for Collections tables
+New features:
 - Implement cache buster for static assets
+- Add output modifier for replacing regex pattern
+
+Fixes and improvements:
+- Rename all headingHierarchy chunks to headingOverview [BREAKING CHANGE]
+- Remove YAML front matter from Markdown notes
+- Accept semantic version numbers for generated styling assets
+- Fix broken Gitify configuration for Collections tables
 - Move off-canvas navigation above content wrapper to prevent redraw in JS
 - Add warning not to edit site.css directly
 - Don't display globally excluded resources in Overviews either
