@@ -42,7 +42,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             <article class="sixteen wide mobile twelve wide computer column">
                 <div class="ui vertical stripe segment transparent">
                     <div class="container">
-                        [[*content:Markdown]]
+                        [[*content:replaceRegex=`^---[\s\S]+?---[\s]+`:Markdown]]
                     </div>
                 </div>
             </article>

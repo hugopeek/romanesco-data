@@ -13,8 +13,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 &subject=`[[+show_subtitle]]`
                 &operator=`EQ`
                 &operand=`1`
-                &then=`[[$headingHierarchySubtitle? &classes=`inverted` &uid=`[[+unique_idx]]`]]`
-                &else=`[[$headingHierarchy? &classes=`inverted` &uid=`[[+unique_idx]]`]]`
+                &then=`[[$headingOverviewSubtitle? &classes=`inverted` &uid=`[[+unique_idx]]`]]`
+                &else=`[[$headingOverview? &classes=`inverted` &uid=`[[+unique_idx]]`]]`
             ]]
             [[If?
                 &subject=`[[+link_text]]`

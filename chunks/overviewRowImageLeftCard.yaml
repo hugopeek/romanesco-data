@@ -24,8 +24,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &subject=`[[+show_subtitle]]`
             &operator=`EQ`
             &operand=`1`
-            &then=`$headingHierarchySubtitleLink? &uid=`[[+unique_idx]]``
-            &else=`$headingHierarchyLink? &uid=`[[+unique_idx]]``
+            &then=`$headingOverviewSubtitleLink? &uid=`[[+unique_idx]]``
+            &else=`$headingOverviewLink? &uid=`[[+unique_idx]]``
         ]]]]
         [[[[If?
             &subject=`[[+show_introtext]]`
