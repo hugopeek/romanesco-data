@@ -2,11 +2,15 @@ id: 18
 name: headingBasicSubtitle
 description: ''
 category: m_content
+snippet: "<[[+level]] class=\"ui [[+alignment]] header\">\n    [[+value]]\n    <div class=\"sub header\">[[+subtitle]]</div>\n</[[+level]]>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:44:"romanesco.headingbasicsubtitle.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:45:"romanesco.headingbasicsubtitle.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "<[[+level]] class=\"ui [[+alignment]] header\">\n    [[+value]]\n    <div class=\"sub header\">[[+subtitle]]</div>\n</[[+level]]>"
 
 -----
 
 <[[+level]] class="ui [[+alignment]] header">
     [[+value]]
-    <div class="sub header">[[+subtitle]]</div>
 </[[+level]]>
+<p class="subtitle">
+    [[+subtitle]]
+</p>

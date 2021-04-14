@@ -2,7 +2,9 @@ id: 171
 name: overviewRowImageCompact
 description: ''
 category: m_ov_image
+snippet: "<a class=\"ui avatar image\" href=\"[[~[[+id]]]]\">\n    [[ImagePlus:empty=`[[$cbOverviewRowImgFallback? &mpy=`1`]]`?\n        &tvname=`overview_img_[[+img_type:empty=`square`]]`\n        &docid=`[[+id]]`\n        &options=`w=150&q=[[++img_quality]]&zc=1`\n        &type=`tpl`\n        &tpl=`cbOverviewRowImg`\n    ]]\n</a>\n\n<div class=\"content\">\n    <a href=\"[[~[[+id]]]]\" class=\"header\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n    [[If?\n        &subject=`[[+show_subtitle]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`<div class=\"description\">[[+longtitle:empty=`[[+pagetitle]]`]]</div>`\n    ]]\n</div>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:47:"romanesco.overviewrowimagecompact.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:48:"romanesco.overviewrowimagecompact.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "<a class=\"ui avatar image\" href=\"[[~[[+id]]]]\">\n    [[ImagePlus:empty=`[[$cbOverviewRowImgFallback? &mpy=`1`]]`?\n        &tvname=`overview_img_[[+img_type:empty=`square`]]`\n        &docid=`[[+id]]`\n        &options=`w=150&q=[[++img_quality]]&zc=1`\n        &type=`tpl`\n        &tpl=`cbOverviewRowImg`\n    ]]\n</a>\n\n<div class=\"content\">\n    <a href=\"[[~[[+id]]]]\" class=\"header\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n    [[If?\n        &subject=`[[+show_subtitle]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`<div class=\"description\">[[+longtitle:empty=`[[+pagetitle]]`]]</div>`\n    ]]\n</div>"
 
 -----
 
@@ -22,6 +24,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &subject=`[[+show_subtitle]]`
         &operator=`EQ`
         &operand=`1`
-        &then=`<div class="description">[[+longtitle:empty=`[[+pagetitle]]`]]</div>`
+        &then=`<div class="description">[[+overview_subtitle:empty=`[[+longtitle:empty=`[[+pagetitle]]`]]`]]</div>`
     ]]
 </div>
