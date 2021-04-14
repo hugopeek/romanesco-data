@@ -2,9 +2,7 @@ id: 304
 name: overviewRowPersonTile
 description: ''
 category: m_ov_person
-snippet: "[[-$imgOverviewPersonLink? &uid=`[[+unique_idx]]`]]\n\n<div class=\"ui overlay\">\n    <[[+title_hierarchy]] class=\"ui inverted header\">\n        [[+[[+title_field]]:empty=`[[+pagetitle]]`]]\n        [[If?\n            &subject=`[[+show_subtitle]]`\n            &operator=`EQ`\n            &operand=`1`\n            &then=`<p class=\"sub header\">[[+person_jobtitle:empty=`[[+longtitle]]`]]</p>`\n        ]]\n    </[[+title_hierarchy]]>\n\n    [[If?\n        &subject=`[[+link_text]]`\n        &operator=`isnot`\n        &operand=`0`\n        &then=`<p>[[$buttonHrefOverview? &classes=`basic` &uid=`[[+unique_idx]]`]]</p>`\n    ]]\n</div>\n"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:45:"romanesco.overviewrowpersontile.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:46:"romanesco.overviewrowpersontile.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-content: "[[-$imgOverviewPersonLink? &uid=`[[+unique_idx]]`]]\n\n<div class=\"ui overlay\">\n    <[[+title_hierarchy]] class=\"ui inverted header\">\n        [[+[[+title_field]]:empty=`[[+pagetitle]]`]]\n        [[If?\n            &subject=`[[+show_subtitle]]`\n            &operator=`EQ`\n            &operand=`1`\n            &then=`<p class=\"sub header\">[[+person_jobtitle:empty=`[[+longtitle]]`]]</p>`\n        ]]\n    </[[+title_hierarchy]]>\n\n    [[If?\n        &subject=`[[+link_text]]`\n        &operator=`isnot`\n        &operand=`0`\n        &then=`<p>[[$buttonHrefOverview? &classes=`basic` &uid=`[[+unique_idx]]`]]</p>`\n    ]]\n</div>\n"
 
 -----
 
