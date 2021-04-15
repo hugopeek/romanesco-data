@@ -3,6 +3,7 @@ templatename: kbSection
 description: 'DEPRECATED. Knowledge base is implemented now as Notes (without Tickets integration).'
 category: t_disabled
 icon: icon-book
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n<head>\n    [[[[If?\n        &subject=`[[$headTheme]]`\n        &operator=`isnull`\n        &then=`$head`\n        &else=`$headTheme`\n    ]]]]\n</head>\n\n<body id=\"[[*alias]]\" class=\"header-vertical\">\n\n[[$offCanvasNav]]\n\n<div class=\"pusher\">\n    [[$headerVertical?\n        &masthead=`0`\n        &hero=`0`\n        &search=`0`\n    ]]\n\n    <main id=\"main\">\n        [[[[If?\n            &subject=`[[$toolbarKnowledgeBaseTheme]]`\n            &operator=`isnull`\n            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``\n            &else=`$toolbarKnowledgeBaseTheme`\n        ]]]]\n\n        <article id=\"content\">\n            [[*content:notempty=`\n            <div class=\"ui vertical stripe segment white\">\n                <div class=\"ui container\">\n                    [[*content]]\n                </div>\n            </div>\n            `]]\n\n            [[!pdoPage?\n                &element=`getTickets`\n                &tpl=`kbOverviewRowBasic`\n                &checkPermissions=`list`\n            ]]\n\n            <div class=\"ui vertical stripe segment white\">\n                <div class=\"ui container\">\n                    [[!+page.nav]]\n                </div>\n            </div>\n\n        </article>\n\n        [[[[If?\n            &subject=`[[$footerTheme]]`\n            &operator=`isnull`\n            &then=`$footer`\n            &else=`$footerTheme`\n        ]]]]\n    </main>\n</div>\n\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:33:"romanesco.kbsection.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:10:"deprecated";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:34:"romanesco.kbsection.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -11,11 +12,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
 <head>
-    [[[[If?
-        &subject=`[[$headTheme]]`
-        &operator=`isnull`
-        &then=`$head`
-        &else=`$headTheme`
+    [[[[modifiedIf?
+        &subject=`headTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$headTheme`
+        &else=`$head`
     ]]]]
 </head>
 
@@ -61,11 +63,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
         </article>
 
-        [[[[If?
-            &subject=`[[$footerTheme]]`
-            &operator=`isnull`
-            &then=`$footer`
-            &else=`$footerTheme`
+        [[[[modifiedIf?
+            &subject=`footerTheme`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$footerTheme`
+            &else=`$footer`
         ]]]]
     </main>
 </div>

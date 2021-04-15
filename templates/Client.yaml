@@ -3,6 +3,7 @@ templatename: Client
 description: ''
 category: t_people
 icon: icon-building
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n<head>\n    [[[[If?\n        &subject=`[[$headTheme]]`\n        &operator=`isnull`\n        &then=`$head`\n        &else=`$headTheme`\n    ]]]]\n</head>\n\n<body id=\"[[*alias]]\" class=\"detail organization\">\n\n[[$offCanvasNav]]\n\n<div class=\"pusher\">\n    [[$headerBasic?\n        &masthead=`0`\n        &hero=`1`\n        &search=`0`\n    ]]\n\n    [[[[If?\n        &subject=`[[$toolbarBasicTheme]]`\n        &operator=`isnull`\n        &then=`$toolbarBasic`\n        &else=`$toolbarBasicTheme`\n    ]]]]\n\n    <main id=\"main\" role=\"main\">\n        <div class=\"ui relaxed grid container\">\n            <article id=\"content\" class=\"sixteen wide mobile twelve wide computer column\">\n                [[*content]]\n            </article>\n\n            <aside id=\"sidebar\" class=\"four wide computer column tablet or lower hidden\">\n                [[$subNavVertical]]\n            </aside>\n        </div>\n    </main>\n\n    [[[[If?\n        &subject=`[[$footerTheme]]`\n        &operator=`isnull`\n        &then=`$footer`\n        &else=`$footerTheme`\n    ]]]]\n</div>\n\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:30:"romanesco.client.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:31:"romanesco.client.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -11,11 +12,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
 <head>
-    [[[[If?
-        &subject=`[[$headTheme]]`
-        &operator=`isnull`
-        &then=`$head`
-        &else=`$headTheme`
+    [[[[modifiedIf?
+        &subject=`headTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$headTheme`
+        &else=`$head`
     ]]]]
 </head>
 
@@ -30,11 +32,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &search=`0`
     ]]
 
-    [[[[If?
-        &subject=`[[$toolbarBasicTheme]]`
-        &operator=`isnull`
-        &then=`$toolbarBasic`
-        &else=`$toolbarBasicTheme`
+    [[[[modifiedIf?
+        &subject=`toolbarBasicTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$toolbarBasicTheme`
+        &else=`$toolbarBasic`
     ]]]]
 
     <main id="main" role="main">
@@ -49,11 +52,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </div>
     </main>
 
-    [[[[If?
-        &subject=`[[$footerTheme]]`
-        &operator=`isnull`
-        &then=`$footer`
-        &else=`$footerTheme`
+    [[[[modifiedIf?
+        &subject=`footerTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$footerTheme`
+        &else=`$footer`
     ]]]]
 </div>
 

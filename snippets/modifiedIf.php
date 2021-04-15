@@ -93,6 +93,16 @@ if (isset($subject)) {
             case 'null':
                 $output = $subject == null || strtolower($subject) == 'null' ? $then : (isset($else) ? $else : '');
                 break;
+            case 'iselement':
+            case 'element':
+                if (empty($operand) && $operand == '') break;
+                $operand = str_replace('mod','',$operand);
+                $query = $modx->newQuery('mod'.ucfirst($operand), array(
+                    $operand == 'template' ? 'templatename' : 'name' => $subject
+                ));
+                $query->select('id');
+                $output = $modx->getValue($query->prepare()) ? $then : (isset($else) ? $else : '');
+                break;
             case 'inarray':
             case 'in_array':
             case 'ia':

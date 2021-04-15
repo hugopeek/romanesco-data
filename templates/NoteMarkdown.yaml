@@ -3,6 +3,7 @@ templatename: NoteMarkdown
 description: ''
 category: t_information
 icon: icon-file-code-o
+content: "<!DOCTYPE html>\n<html id=\"[[*context_key]]\" lang=\"[[++cultureKey]]\">\n\n<head>\n    [[[[If?\n        &subject=`[[$headTheme]]`\n        &operator=`isnull`\n        &then=`$head`\n        &else=`$headTheme`\n    ]]]]\n</head>\n\n<body id=\"[[*alias]]\" class=\"header-vertical note toc\">\n\n[[$offCanvasNav]]\n\n<div class=\"pusher\">\n    [[$headerVertical?\n        &masthead=`0`\n        &hero=`0`\n        &search=`0`\n    ]]\n\n    <main id=\"main\">\n        [[[[If?\n            &subject=`[[$toolbarKnowledgeBaseTheme]]`\n            &operator=`isnull`\n            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``\n            &else=`$toolbarKnowledgeBaseTheme`\n        ]]]]\n\n        <div class=\"ui relaxed grid container\">\n            <article id=\"content\" class=\"sixteen wide mobile twelve wide computer column\">\n                <div class=\"ui vertical stripe segment transparent\">\n                    <div class=\"container\">\n                        [[*content:replaceRegex=`^---[\\s\\S]+?---[\\s]+`:Markdown]]\n                    </div>\n                </div>\n            </article>\n\n            <aside id=\"sidebar\" class=\"four wide computer column tablet or lower hidden\">\n                [[$tocNavVertical?\n                    &sticky=`1`\n                ]]\n            </aside>\n        </div>\n\n        [[*comments_toggle:eq=`1`:then=`\n        <section id=\"comments\" class=\"ui vertical stripe segment secondary\">\n            <h2 class=\"ui big header\">[[%romanesco.article.comments]]</h2>\n            <div class=\"ui relaxed grid container\">\n                <div class=\"sixteen wide mobile twelve wide computer column\">\n                    <div id=\"[[++romanesco.[[++comment_platform:lcase]]_div_id]]\"></div>\n                </div>\n            </div>\n        </section>\n        `]]\n\n        [[[[If?\n            &subject=`[[$footerTheme]]`\n            &operator=`isnull`\n            &then=`$footer`\n            &else=`$footerTheme`\n        ]]]]\n    </main>\n</div>\n\n[[$script]]\n\n</body>\n</html>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.notemarkdown.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:37:"romanesco.notemarkdown.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -11,11 +12,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
 <head>
-    [[[[If?
-        &subject=`[[$headTheme]]`
-        &operator=`isnull`
-        &then=`$head`
-        &else=`$headTheme`
+    [[[[modifiedIf?
+        &subject=`headTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$headTheme`
+        &else=`$head`
     ]]]]
 </head>
 
@@ -65,11 +67,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </section>
         `]]
 
-        [[[[If?
-            &subject=`[[$footerTheme]]`
-            &operator=`isnull`
-            &then=`$footer`
-            &else=`$footerTheme`
+        [[[[modifiedIf?
+            &subject=`footerTheme`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$footerTheme`
+            &else=`$footer`
         ]]]]
     </main>
 </div>
