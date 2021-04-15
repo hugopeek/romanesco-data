@@ -2,11 +2,13 @@ id: 163
 name: overviewRowIconLeft
 description: ''
 category: m_ov_icon
+snippet: "<[[+title_hierarchy]] class=\"ui header\">\n    [[If?\n        &subject=`[[+icon_type]]`\n        &operator=`EQ`\n        &operand=`svg`\n        &then=`<img class=\"ui faded image\" src=\"[[+overview_icon_svg:empty=`[[++overview_icon_fallback]]`]]\" alt=\"[[+pagetitle]]\">`\n        &else=`<i class=\"circular [[+overview_icon_font:empty=`question`]]\"></i>`\n    ]]\n    <span class=\"content\">\n        <a href=\"[[~[[+id]]]]\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n        [[If?\n            &subject=`[[+show_subtitle]]`\n            &operator=`EQ`\n            &operand=`1`\n            &then=`<span class=\"sub header\">[[+overview_subtitle:empty=`[[+longtitle:empty=`[[+pagetitle]]`]]`]]</span>`\n        ]]\n    </span>\n</[[+title_hierarchy]]>\n\n[[[[If?\n    &subject=`[[+show_introtext]]`\n    &operator=`EQ`\n    &operand=`1`\n    &then=`$introtextSingleParagraph? &uid=`[[+unique_idx]]``\n]]]]\n[[[[If?\n    &subject=`[[+link_text]]`\n    &operator=`isnot`\n    &operand=`0`\n    &then=`$buttonHrefOverview? &uid=`[[+unique_idx]]``\n]]]]"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.overviewrowiconleft.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.overviewrowiconleft.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "<[[+title_hierarchy]] class=\"ui header\">\n    [[If?\n        &subject=`[[+icon_type]]`\n        &operator=`EQ`\n        &operand=`svg`\n        &then=`<img class=\"ui faded image\" src=\"[[+overview_icon_svg:empty=`[[++overview_icon_fallback]]`]]\" alt=\"[[+pagetitle]]\">`\n        &else=`<i class=\"circular [[+overview_icon_font:empty=`question`]]\"></i>`\n    ]]\n    <span class=\"content\">\n        <a href=\"[[~[[+id]]]]\">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>\n        [[If?\n            &subject=`[[+show_subtitle]]`\n            &operator=`EQ`\n            &operand=`1`\n            &then=`<span class=\"sub header\">[[+overview_subtitle:empty=`[[+longtitle:empty=`[[+pagetitle]]`]]`]]</span>`\n        ]]\n    </span>\n</[[+title_hierarchy]]>\n\n[[[[If?\n    &subject=`[[+show_introtext]]`\n    &operator=`EQ`\n    &operand=`1`\n    &then=`$introtextSingleParagraph? &uid=`[[+unique_idx]]``\n]]]]\n[[[[If?\n    &subject=`[[+link_text]]`\n    &operator=`isnot`\n    &operand=`0`\n    &then=`$buttonHrefOverview? &uid=`[[+unique_idx]]``\n]]]]"
 
 -----
 
-<[[+title_hierarchy]] class="ui header">
+<[[+title_hierarchy]] class="ui horizontal header">
     [[If?
         &subject=`[[+icon_type]]`
         &operator=`EQ`
