@@ -283,9 +283,10 @@ data:
         where:
             - 'key:NOT IN':
                 - 'google_analytics_ua'
-                - 'matomo_analytics_url'
+                - 'matomo_tracking_code'
                 - 'custom_cache'
                 - 'minify_css_js'
+                - 'cache_buster'
     cg_context_values:
         class: cgContextValue
         primary:
