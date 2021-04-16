@@ -2,23 +2,26 @@ id: 352
 name: headerVertical
 description: ''
 category: o_headers
+snippet: "<header id=\"header\" class=\"masthead inverted primary-color\">\n    [[[[If?\n        &subject=`[[+masthead]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$masthead`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[$mainNavVerticalTheme]]`\n        &operator=`isnull`\n        &then=`$mainNavVertical`\n        &else=`$mainNavVerticalTheme`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[+hero]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$heroVertical`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[++search.add_to_menu]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$searchForm`\n    ]]]]\n</header>"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.headervertical.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.headervertical.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+content: "<header id=\"header\" class=\"masthead inverted primary-color\">\n    [[[[If?\n        &subject=`[[+masthead]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$masthead`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[$mainNavVerticalTheme]]`\n        &operator=`isnull`\n        &then=`$mainNavVertical`\n        &else=`$mainNavVerticalTheme`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[+hero]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$heroVertical`\n    ]]]]\n\n    [[[[If?\n        &subject=`[[++search.add_to_menu]]`\n        &operator=`EQ`\n        &operand=`1`\n        &then=`$searchForm`\n    ]]]]\n</header>"
 
 -----
 
 <header id="header" class="masthead inverted primary-color">
-    [[[[If?
-        &subject=`[[+masthead]]`
-        &operator=`EQ`
-        &operand=`1`
+    [[[[modifiedIf?
+        &subject=`masthead`
+        &operator=`iselement`
+        &operand=`chunk`
         &then=`$masthead`
     ]]]]
 
-    [[[[If?
-        &subject=`[[$mainNavVerticalTheme]]`
-        &operator=`isnull`
-        &then=`$mainNavVertical`
-        &else=`$mainNavVerticalTheme`
+    [[[[modifiedIf?
+        &subject=`mainNavVerticalTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$mainNavVerticalTheme`
+        &else=`$mainNavVertical`
     ]]]]
 
     [[[[If?
