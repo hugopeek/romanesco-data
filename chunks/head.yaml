@@ -6,7 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[++minify_css_js:eq=`1`:then=`.min`:toPlaceholder=`minify`]]
 <title>[[++romanesco.title_format]]</title>
 
 <meta charset="[[++modx_charset]]">
@@ -21,34 +20,36 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <script>document.documentElement.className = 'js';</script>
 
+[[++minify_css_js:eq=`1`:then=`.min`:toPlaceholder=`minify`]]
+[[modifiedIf?
+    &subject=`[[++critical_css]]_[[*critical_css_uri:notempty=`1`]]`
+    &operator=`eq`
+    &operand=`1_1`
+    &then=`1`
+    &toPlaceholder=`load_critical_css`
+]]
 [[[[If?
     &subject=`[[++cache_buster]]`
     &operator=`eq`
     &operand=`1`
     &then=`$cacheBusterPlaceholders`
 ]]]]
-
-[[[[If?
-    &subject=`[[$headPreloadLinksTheme]]`
-    &operator=`isnull`
-    &then=`$headPreloadLinks`
-    &else=`$headPreloadLinksTheme`
+[[[[modifiedIf?
+    &subject=`headPreloadLinksTheme`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`$headPreloadLinksTheme`
+    &else=`$headPreloadLinks`
 ]]]]
 
-[[If?
-    &subject=`[[++critical_css]]_[[*critical_css_uri:notempty=`1`]]`
-    &operator=`eq`
-    &operand=`1_1`
-    &then=`
-    <link href="[[*critical_css_uri]]" rel="stylesheet">
-    <link href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="[[++romanesco.custom_css_path]]/site[[+minify]][[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
-    `
-    &else=`
-    <link href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" rel="stylesheet">
-    <link href="[[++romanesco.custom_css_path]]/site[[+minify]][[+cache_buster_css]].css" rel="stylesheet">
-    `
-]]
+[[+load_critical_css:eq=`1`:then=`
+<link href="[[*critical_css_uri:replace=`.css==[[+cache_buster_css]].css`]]" rel="stylesheet">
+<link href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="[[++romanesco.custom_css_path]]/site[[+minify]][[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
+`:else=`
+<link href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" rel="stylesheet">
+<link href="[[++romanesco.custom_css_path]]/site[[+minify]][[+cache_buster_css]].css" rel="stylesheet">
+`]]
 
 [[- SET CONDITIONS FOR LOADING ADDITIONAL ASSETS ]]
 [[~[[*id]]:contains=`status`:or:contains=`hub`:then=`1`:toPlaceholder=`load_assets_hub`]]
