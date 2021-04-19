@@ -46,12 +46,12 @@ if (!$romanesco->getConfigSetting('critical_css', $modx->resource->get('context_
 // Load FormBlocks JS in footer
 $modx->regClientScript($assetsPathDist . '/components/form.min' . $cacheBusterJS . '.js');
 $modx->regClientScript($assetsPathDist . '/components/calendar.min' . $cacheBusterJS . '.js');
-$modx->regClientScript($assetsPathJS . '/formblocks' . $cacheBusterJS . '.js');
+$modx->regClientScript($assetsPathJS . '/formblocks.min' . $cacheBusterJS . '.js');
 
 // Load additional assets for file upload field, if present
 if ($uploadFile) {
     $modx->regClientScript($assetsPathVendor . '/arrive/arrive.min' . $cacheBusterJS . '.js');
-    $modx->regClientScript($assetsPathJS . '/fileupload' . $cacheBusterJS . '.js');
+    $modx->regClientScript($assetsPathJS . '/fileupload.min' . $cacheBusterJS . '.js');
 }
 
 // Load custom assets, if present
