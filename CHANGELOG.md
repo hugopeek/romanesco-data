@@ -1,13 +1,25 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.10.1
-Released on ...
+## v1.11.0
+Released on April 19, 2021
+
+> Romanesco Patterns 1.0.0-beta4
 
 New features:
+- Add ability to schedule critical CSS generation
+- Look for masthead chunk in header
+- Add TV for overriding subtitle in Overviews
 - Implement cache buster for static assets
 - Add output modifier for replacing regex pattern
 
 Fixes and improvements:
+- Preload critical CSS file from HTML (disable HTTP/2 server push)
+- Allow theme override for structured organization data
+- Don't render theme chunks before checking if they exist
+- Add iselement condition to modifiedIf
+- Also manipulate DOM of Markdown resources
+- Remove nested block level elements from heading tags
+- Move most common subtitles out of heading tags
 - Rename all headingHierarchy chunks to headingOverview [BREAKING CHANGE]
 - Remove YAML front matter from Markdown notes
 - Accept semantic version numbers for generated styling assets
