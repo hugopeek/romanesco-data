@@ -27,8 +27,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
     &element=`getResources`
-    &cacheKey=`clients`
-    [[++custom_cache:eq=`0`:then=`&cacheExpires=`1``]]
+    [[++custom_cache:eq=`1`:then=`&cacheKey=`clients``]]
 
     &parents=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`-1` &else=`[[++romanesco.client_container_id]]`]]`
     &resources=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`[[+resources]]` &else=`[[+excluded_resources:empty=`null`]]`]]`

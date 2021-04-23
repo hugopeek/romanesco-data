@@ -30,13 +30,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &redirectToOnNotFound=`[[+first_step:isnot=`[[+current_id]]`:then=`[[+first_step]]`:else=``]]`
     `
 ]]]]
-[[[[+multiple_steps:notempty=`
-    !FormItRetriever?
-        &placeholderPrefix=`fb[[*id]].`
-        &storeLocation=`session`
-        &redirectToOnNotFound=``
-    `
-]]]]
+
 [[returnFirstHit:toPlaceholder=`redirect_to`?
     &1=`[[+redirect_id]]`
     &2=`[[+next_step]]`
