@@ -465,7 +465,7 @@ packages:
             - renderresources
             - rowboat
             - seopro
-            - simplesearch
+            - simplesearch-2.1.2-pl
             - superboxselect
             - svgsanitizer
             - switch
