@@ -2,12 +2,12 @@ id: 442
 name: tvSelectFibonacci
 description: 'Pick a number from the Fibonacci sequence. Useful for example when implementing an Agile / Scrum kind of point system.'
 category: a_select
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:41:"romanesco.tvselectfibonacci.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:42:"romanesco.tvselectfibonacci.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:5:{s:5:"limit";a:7:{s:4:"name";s:5:"limit";s:4:"desc";s:33:"romanesco.tvselectfibonacci.limit";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:1:"7";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:5:"start";a:7:{s:4:"name";s:5:"start";s:4:"desc";s:33:"romanesco.tvselectfibonacci.start";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:1:"1";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:9:"delimiter";a:7:{s:4:"name";s:9:"delimiter";s:4:"desc";s:37:"romanesco.tvselectfibonacci.delimiter";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:2:"||";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:41:"romanesco.tvselectfibonacci.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:42:"romanesco.tvselectfibonacci.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
 [[FibonacciSequence?
-    &limit=`12`
-    &start=`0`
-    &delimiter=`||`
+    &limit=`[[+limit]]`
+    &start=`[[+start]]`
+    &delimiter=`[[+delimiter]]`
 ]]
