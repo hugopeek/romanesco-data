@@ -1,5 +1,23 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.11.1
+Released on ...
+
+> Romanesco Patterns 1.0.0-beta4
+
+New features:
+
+Fixes and improvements:
+- Fix required label of collapsible select option in FormBlocks
+- Add 'open in new window' option to Image with Link CB
+- Make sure placeholder prefixes are unique when generating background CSS
+- Properly display MODX outer tags from Markdown files (if they've been split)
+- Add option to generate critical CSS for pages behind htpasswd wall
+- Fix returnFirstHit snippet skipping over hits
+- Add gallery lightbox after the footer (and not inside)
+- Make Fibonacci sequence generator more flexible
+- Let MODX clear overview cache if custom cache is disabled
+
 ## v1.11.0
 Released on April 19, 2021
 
