@@ -434,7 +434,7 @@ packages:
             - hits-1.3.0-pl
             - if
             - imageplus
-            - migx-2.12.0-pl
+            - migx-2.13.0-pl
             - pdotools
             - pthumb
             - renderresources

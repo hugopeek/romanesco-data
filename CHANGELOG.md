@@ -1,13 +1,14 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.11.1
-Released on ...
+Released on June 10, 2021
 
-> Romanesco Patterns 1.0.0-beta4
-
-New features:
+> Romanesco Patterns 1.0.0-beta5
 
 Fixes and improvements:
+- Pin MIGX to 2.13.0-pl in Gitify configs
+- Set default responsive image scaling value to 51
+- Fix email not being sent when using dynamic emailTo (and empty regular field)
 - Fix required label of collapsible select option in FormBlocks
 - Add 'open in new window' option to Image with Link CB
 - Make sure placeholder prefixes are unique when generating background CSS
