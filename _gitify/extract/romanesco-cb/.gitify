@@ -1,0 +1,41 @@
+# Gitify configuration for exporting ContentBlocks edits only.
+
+data_directory: ../../../../_romanesco/
+
+data:
+
+    # ContentBlocks
+    cb_fields:
+        class: cbField
+        primary:
+            - id
+            - name
+        where:
+            - 'id:<': '100000'
+        package: contentblocks
+    cb_layouts:
+        class: cbLayout
+        primary:
+            - id
+            - name
+        where:
+            - 'id:<': '100000'
+    cb_templates:
+        class: cbTemplate
+        primary:
+            - id
+            - name
+        where:
+            - 'id:<': '100000'
+    cb_categories:
+        class: cbCategory
+        primary:
+            - id
+            - name
+        where:
+            - 'id:<': '100000'
+    cb_defaults:
+        class: cbDefault
+        primary: id
+        where:
+            - 'id:<': '100000'

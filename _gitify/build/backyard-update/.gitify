@@ -1,0 +1,31 @@
+# Gitify configuration for updating Backyard resources.
+#
+# NB! These resources have an ID of 1 and no parents. This triggers the build
+#  process to create new objects with correctly auto-incremented IDs.
+#
+# Only build this config using the --no-cleanup flag.
+
+data_directory: _romanesco/_backyard/update/
+backup_directory: _backup/_backyard/
+
+data:
+    content:
+        type: content
+        exclude_keys:
+            - editedby
+            - editedon
+        truncate_on_force:
+            - modTemplateVarResource
+
+        # Only include resources built by Romanesco Backyard package
+        where:
+            - 'context_key:IN':
+                - 'hub'
+            - 'OR:alias:IN':
+                - 'contact*'
+                - 'registration*'
+            - 'OR:uri:IN':
+                - 'footers/'
+                - 'forms/'
+                - 'call-to-actions/'
+                - 'backgrounds.css'
