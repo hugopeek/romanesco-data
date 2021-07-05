@@ -8,7 +8,7 @@ category: 'Overview - Image'
 elements: ''
 rank: 1
 default_text: ''
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:46:"romanesco.overview_img_landscape.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
 input_properties: 'a:4:{s:11:"targetWidth";s:3:"500";s:12:"targetHeight";s:3:"375";s:11:"allowAltTag";s:4:"true";s:12:"allowCredits";s:4:"true";}'
 output_properties: 'a:2:{s:14:"phpThumbParams";s:0:"";s:11:"outputChunk";s:0:"";}'
 content: ''
