@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Overview (Child Pages)'
 description: ''
-sortorder: 43
+sortorder: 45
 category: 5
 icon: child-multi
 icon_type: custom

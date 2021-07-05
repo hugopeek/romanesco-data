@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Overview (Publication)'
 description: ''
-sortorder: 45
+sortorder: 47
 category: 5
 icon: newspaper-o
 icon_type: custom

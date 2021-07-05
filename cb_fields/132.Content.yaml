@@ -1,0 +1,12 @@
+id: 132
+parent: 130
+parent_properties: '{"key":"content","width":"100"}'
+input: redactor
+name: Content
+description: ''
+sortorder: 2
+template: '[[+value]]'
+properties: '{"configuration_set":"2"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

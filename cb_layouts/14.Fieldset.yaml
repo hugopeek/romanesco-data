@@ -2,7 +2,7 @@ id: 14
 name: Fieldset
 description: 'Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.'
 sortorder: 18
-category: 10
+category: 7
 icon: form
 columns: '[{"reference":"main","width":"100"}]'
 template: "[[modifiedIf?\n    &subject=`[[+segment_type]]`\n    &operator=`isnot`\n    &operand=`none`\n    &then=`segment`\n    &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`\n    &toPlaceholder=`segment_parent`\n]]\n[[+force_segment:eq=`1`:then=`segment`:else=`[[+segment_parent]]`:toPlaceholder=`segment`]]\n\n<fieldset [[+title:notempty=`id=\"fb[[*id]]-[[stripAsAlias? &input=`[[+title]]`]]\"`]] class=\"ui [[+padding]] [[+segment]] [[+background]]\">\n    [[+legend:notempty=`<legend class=\"ui [[+form_size]] header\">[[+legend]]</legend>`]]\n    [[*fb_form_layout:is=`inline`:then=`<span class=\"equal width fields\">`]]\n    [[+main]]\n    [[*fb_form_layout:is=`inline`:then=`</span>`]]\n</fieldset>"

@@ -1,6 +1,6 @@
 id: 10
 name: '4 Columns (nested)'
-description: 'Four equally wide nested columns, ideal for product grids.'
+description: 'Four equally wide nested columns.'
 sortorder: 9
 category: 9
 icon: layout_1-1-1-1

@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk
 name: 'Overview (Testimonials)'
 description: ''
-sortorder: 48
+sortorder: 50
 category: 5
 icon: comments
 icon_type: custom

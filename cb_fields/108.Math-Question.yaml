@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Math Question'
 description: 'Render a math-based question in your form to prevent spam. It needs to be answered correctly in order to proceed.'
-sortorder: 61
+sortorder: 63
 category: 7
 icon: snippet_B
 template: '[[+tag]]'

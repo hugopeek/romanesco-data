@@ -1,14 +1,14 @@
-id: 48
-parent_properties: ''
-input: chunk_selector
-name: 'Social Buttons'
-description: 'DEPRECATED. Each option now has its own CB.'
-sortorder: 33
+id: 137
+parent_properties: null
+input: chunk
+name: 'Social Buttons (Connect)'
+description: ''
+sortorder: 35
 category: 3
 icon: share-alt
 icon_type: custom
 template: '[[+value]]'
-properties: '{"available_chunks":"socialConnectButtons,socialShareButtons","available_categories":""}'
-availability: '[{"field":"context","value":"none"}]'
+properties: '{"chunk":"101","custom_preview":""}'
+availability: '[]'
 layouts: ''
 settings: '[{"reference":"button_type","title":"Button type","fieldtype":"select","default_value":"","fieldoptions":"Brand colors=\nBasic=basic","field_is_exposed":"modal"},{"reference":"button_size","title":"Button size","fieldtype":"select","default_value":"medium","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1"}]'

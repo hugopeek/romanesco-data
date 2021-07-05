@@ -1,6 +1,6 @@
 id: 2
 name: 'Content + Sidebar'
-description: 'Combination of a main content area (65%) and a sidebar on the right (35%).'
+description: 'Combination of a main content area and a sidebar on the right.'
 sortorder: 1
 category: 8
 icon: layout_2-1
