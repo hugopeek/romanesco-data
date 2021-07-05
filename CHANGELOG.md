@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.12.0
+Released on ...
+
+New features:
+- Integrate MailBlocks (as stand-alone package)
+
 ## v1.11.1
 Released on June 10, 2021
 
