@@ -1,8 +1,8 @@
 # Gitify configuration for creating new Backyard resources.
 # NB! These resources have a fixed ID, for proper nesting in fresh installs.
 
-data_directory: _romanesco/_backyard/build/
-backup_directory: _backup/_backyard/
+data_directory: ../../../_backyard/build/
+backup_directory: ../../../../_backup/_backyard/
 
 data:
     content:

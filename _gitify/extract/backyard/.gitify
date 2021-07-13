@@ -1,7 +1,7 @@
 # Gitify configuration for extracting Backyard resources.
 # This content is extracted from the Nursery installation.
 
-data_directory: ../../../../_backyard/
+data_directory: ../../../_backyard/
 backup_directory: ../../../../_backup/_backyard/
 
 data:

@@ -5,8 +5,8 @@
 #
 # Only build this config using the --no-cleanup flag.
 
-data_directory: _romanesco/_backyard/update/
-backup_directory: _backup/_backyard/
+data_directory: ../../../_backyard/update/
+backup_directory: ../../../../_backup/_backyard/
 
 data:
     content:
