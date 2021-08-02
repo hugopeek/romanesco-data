@@ -1,0 +1,8 @@
+id: 82
+template: 13
+label: Subject
+name: pagetitle
+width: 80
+renderer: collections.renderer.pagetitleWithButtons
+position: 1
+sort_type: null
