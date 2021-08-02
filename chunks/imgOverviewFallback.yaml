@@ -1,0 +1,9 @@
+id: 567
+name: imgOverviewFallback
+description: 'In case ImagePlus is not able to generate an image, this fallback image is used. You can define your own fallback images under Configuration settings. There''s a setting for each variant.'
+category: a_images
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.imgoverviewfallback.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.imgoverviewfallback.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<img src="[[++overview_img_[[+img_type]]_fallback]]" alt="[[%romanesco.overview.img_fallback]]">

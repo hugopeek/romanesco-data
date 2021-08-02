@@ -2,34 +2,6 @@ id: 134
 name: cbOverviewRowImg
 description: 'Default ImagePlus tpl for overview images. It calculates srcset and sizes attributes, for loading the most appropriate thumbnail size in responsive scenarios. Also has lazy loading option.'
 category: a_cb_overviews
+snippet: ''
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.cboverviewrowimg.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.cboverviewrowimg.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-
------
-
-[[+img_scale:default=`100`:toPlaceholder=`scale`]]
-[[+lazy_load:eq=`1`:then=`data-`:else=``:toPlaceholder=`lazy`]]
-[[++max_thumb_width:div=`[[+crop.width]]`:replace=`,==.`:mpy=`[[+crop.height]]`:round:toPlaceholder=`max_thumb_height`]]
-[[responsiveImgSrcset?
-    &breakpoints=`[[++img_breakpoints]]`
-    &quality=`[[++img_quality]]`
-    &src=`[[+source.src]]`
-    &crop=`[[+crop.options]]`
-    &width=`[[+width]]`
-    &toPlaceholder=`[[+prefix]].srcset`
-]]
-
-<img [[+lazy]]srcset="[[+[[+prefix]].srcset]]"
-     [[+lazy]]sizes="(min-width: 1300px) calc([[+scale]]vw / [[+cols]]),
-                     (min-width: 992px) calc([[+scale]]vw / [[+cols]]),
-                     (min-width: 768px) [[+cols:gt=`2`:then=`calc(([[+scale]]vw - 2em) / 2)`:else=`[[+scale]]vw`]],
-                     (min-width: 360px) [[+scale]]vw,
-                     [[+scale]]vw"
-     [[+lazy]]src="[[+url]]"
-     [[+lazy:notempty=`
-     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 [[++max_thumb_width]] [[+max_thumb_height]]'%3E%3C/svg%3E"
-     class="lazy"
-     `]]
-     width="[[++max_thumb_width]]"
-     height="[[+max_thumb_height]]"
-     alt="[[+alt:htmlent]]"
-/>
+content: ''
