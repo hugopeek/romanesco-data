@@ -1,0 +1,8 @@
+id: 5
+constraint_field: template
+constraint_value: '29,30'
+default_template: '4'
+target_layout: 25
+target_field: 6
+target_column: main
+sortorder: 4

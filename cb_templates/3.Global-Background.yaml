@@ -1,7 +1,7 @@
 id: 3
 name: 'Global Background'
 description: ''
-sortorder: 2
-icon: template_03
+sortorder: 3
+icon: image
 content: '[{"layout":23,"content":{"main":[{"rows":[{"image":{"url":"","size":"","width":"","height":"","extension":"","crops":{},"fieldId":"contentblocks-field-2"},"position":{"value":"","fieldId":"contentblocks-field-3"},"size":{"value":"","fieldId":"contentblocks-field-4"},"repeat":{"value":"no-repeat","display":"Don''t repeat","fieldId":"contentblocks-field-5"},"attachment":{"value":"scroll","display":"Scroll","fieldId":"contentblocks-field-6"},"gradient":{"value":"","fieldId":"contentblocks-field-7"}}],"field":109,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
 availability: '[{"field":"template","value":"27"}]'

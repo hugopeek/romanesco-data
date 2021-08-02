@@ -1,0 +1,8 @@
+id: 4
+name: 'Email (empty)'
+description: ''
+sortorder: 2
+icon: envelope
+icon_type: custom
+content: '[{"layout":25,"content":{"main":[]},"settings":[],"parent":0,"title":""}]'
+availability: '[{"field":"template","value":"29,30"}]'

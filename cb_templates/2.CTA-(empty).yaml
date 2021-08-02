@@ -2,6 +2,7 @@ id: 2
 name: 'CTA (empty)'
 description: ''
 sortorder: 1
-icon: template_03
+icon: bullhorn
+icon_type: custom
 content: '[{"layout":15,"content":{"main":[]},"settings":[],"parent":0,"title":""}]'
 availability: '[{"field":"template","value":"9"}]'
