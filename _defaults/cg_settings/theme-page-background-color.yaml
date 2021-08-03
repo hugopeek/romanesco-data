@@ -1,0 +1,9 @@
+id: 47
+key: theme_page_background_color
+label: 'Page background color'
+xtype: colorpickerfield
+description: 'This color is visible on detail pages and underneath transparent segments.'
+sortorder: 20
+value: ffffff
+group: 4
+options: "Tiny==1.1||\nSmall==1.2||\nMedium==1.3||\nLarge==1.5||\nHuge==1.8"

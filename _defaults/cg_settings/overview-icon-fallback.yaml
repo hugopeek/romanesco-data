@@ -1,0 +1,8 @@
+id: 17
+key: overview_icon_fallback
+label: 'Fallback icon'
+xtype: modx-panel-tv-image
+description: ''
+sortorder: 38
+group: 8
+source: 5

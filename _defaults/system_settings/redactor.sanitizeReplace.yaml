@@ -1,0 +1,4 @@
+key: redactor.sanitizeReplace
+value: '-'
+namespace: redactor
+area: Advanced

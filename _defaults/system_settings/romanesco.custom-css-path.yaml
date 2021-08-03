@@ -1,0 +1,4 @@
+key: romanesco.custom_css_path
+value: assets/css
+namespace: romanesco
+area: Paths

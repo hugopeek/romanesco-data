@@ -4,7 +4,11 @@
 Released on ...
 
 New features:
+- Add operations script with update command
 - Integrate MailBlocks (as stand-alone package)
+
+Fixes and improvements:
+- Include defaults from Soil
 
 ## v1.11.1
 Released on June 10, 2021

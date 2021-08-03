@@ -1,0 +1,7 @@
+id: 40
+key: theme_color_primary_light
+label: 'Primary theme color (Light)'
+xtype: colorpickerfield
+description: "A light variant of the primary color, for faintly tinted backgrounds. Make sure it has enough contrast with dark (primary) elements and text.\n"
+sortorder: 15
+group: 4
