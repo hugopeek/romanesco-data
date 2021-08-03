@@ -111,8 +111,8 @@ while [[ "$1" ]]; do
       romanesco)
         updateRomanesco=1
         ;;
-      romanesco)
-        updateRomanesco=1
+      backyard)
+        updateBackyard=1
         ;;
       -n | --npm)
         npmFlag=1
@@ -178,7 +178,7 @@ fi
 # TASKS
 # ==============================================================================
 
-if [ "$updateFlag" ] &&  [ "$updateRomanesco" ]
+if [ "$updateFlag" ]
 then
   echo "Updating Romanesco..."
   source "${operationsPath}/run/10-update.sh"
