@@ -132,16 +132,13 @@ data:
         primary: text
         where:
             'namespace:IN':
-                - 'patternlab'
                 - 'romanesco'
-                - 'romanescobackyard'
     namespaces:
         class: modNamespace
         primary: name
         where:
             'name:NOT IN':
                 - 'gitpackagemanagement'
-                - 'patternlab'
     property_set:
         class: modPropertySet
         primary: name

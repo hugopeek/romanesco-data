@@ -20,7 +20,7 @@ cd "$installPath"
 
 # backup and extract current state of project
 printf "${BOLD}Extracting project data...${NORMAL}\n"
-$gitifyCmd backup "$(%Y-%m-%dT%H%M%S)"_INSTALLER
+$gitifyCmd backup "$(date +'%Y-%m-%dT%H%M%S')"_INSTALLER
 $gitifyCmd extract
 
 # commit changes, if there are any
@@ -28,7 +28,7 @@ if [[ -n $(cd ${installPath} && git status -s) ]]
 then
   printf "${BOLD}Committing latest project edits...${NORMAL}\n"
   git add -A
-  git commit -m \"INSTALLER: Extract project edits\"
+  git commit -m "INSTALLER: Extract project edits"
 fi
 
 # update MODX
@@ -54,13 +54,13 @@ then
   tmpFile="$(mktemp)"
   printf "${BOLD}Generating temporary patch file: $tmpFile${NORMAL}\n"
   cd "$installPath"
-  php \"${operationsPath}/tools/preserve_ids.php\" build _data/content ${tmpFile}
+  php "${operationsPath}/tools/preserve_ids.php" build _data/content ${tmpFile}
 
   # copy Backyard resources to data folder
   rsync -av "$installPath/_romanesco/_backyard/update/content" "$installPath/_data/"
 
   # apply old resource IDs and parent IDs to upgraded resources
-  php \"${operationsPath}/tools/preserve_ids.php\" apply _data/content ${tmpFile}
+  php "${operationsPath}/tools/preserve_ids.php" apply _data/content ${tmpFile}
 
   # build with --no-cleanup flag, to ensure no data gets erased
   $gitifyCmd build --no-cleanup content
@@ -113,11 +113,14 @@ then
 
   # import updated defaults
   rm -rf "$installPath/_defaults"
-  rsync -a "$defaultsPath"/ "$installPath/_defaults"
+  rsync -av "$defaultsPath"/ "$installPath/_defaults"
 
-  cd "$installPath"
-  git add -A
-  git commit -m \"INSTALLER: Import latest default settings\"
+  # check for changes and commit
+  if [ -n "$(cd ${installPath} && git diff --exit-code)" ] ; then
+    cd "$installPath"
+    git add -A
+    git commit -m "INSTALLER: Import latest default settings"
+  fi
 
   # check if any of the default settings were changed inside the project
   # to do this, copy the defaults to the _data folder first and list the differences with git
@@ -141,8 +144,8 @@ then
     for line in $gitDiffList
     do
       cd "$installPath"
-      sed -i '/value/d' \"${line//_data/_defaults}\" #delete existing
-      sed -n '/value/p' \"$line\" >> \"${line//_data/_defaults}\" #write new
+      sed -i '/value/d' "${line//_data/_defaults}" #delete existing
+      sed -n '/value/p' "$line" >> "${line//_data/_defaults}" #write new
       echo "$line"
     done
 
@@ -160,7 +163,7 @@ then
   $gitifyCmd build
   cd "$installPath"
   git add -A
-  git commit -m \"INSTALLER: Update Romanesco default settings\"
+  git commit -m "INSTALLER: Update Romanesco default settings"
 fi
 
 # run NPM updates
@@ -176,6 +179,6 @@ then
   gulp build
   gulp minify
   git add -A
-  git commit -m \"INSTALLER: Update Romanesco styling theme\"
+  git commit -m "INSTALLER: Update Romanesco styling theme"
   echo "Theme files successfully updated."
 fi

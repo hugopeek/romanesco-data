@@ -20,7 +20,11 @@ data:
                 - 'email_sender'
                 - 'error_page'
                 - 'session_cookie_domain'
+                - 'formblocks.formsource'
                 - 'formit.form_encryptkey'
+                - 'romanesco.assets_version_css'
+                - 'romanesco.assets_version_js'
+                - 'romanesco.dev_mode'
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
@@ -60,6 +64,12 @@ data:
         primary: key
         where:
             - 'id:<': '100000'
+            - 'key:NOT IN':
+                - 'google_analytics_ua'
+                - 'matomo_tracking_code'
+                - 'custom_cache'
+                - 'minify_css_js'
+                - 'cache_buster'
 
     # Collections
     collections_settings:
