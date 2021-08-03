@@ -1,5 +1,0 @@
-text: import_site
-parent: site
-description: import_site_desc
-menuindex: 5
-permissions: import_static

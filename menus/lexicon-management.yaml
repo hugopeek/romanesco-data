@@ -1,5 +1,0 @@
-text: lexicon_management
-parent: admin
-description: lexicon_management_desc
-menuindex: 7
-permissions: lexicons

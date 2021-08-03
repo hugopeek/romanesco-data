@@ -1,5 +1,0 @@
-text: view_sysinfo
-parent: reports
-description: view_sysinfo_desc
-menuindex: 3
-permissions: view_sysinfo

@@ -1,5 +1,0 @@
-text: eventlog_viewer
-parent: reports
-description: eventlog_viewer_desc
-menuindex: 2
-permissions: view_eventlog

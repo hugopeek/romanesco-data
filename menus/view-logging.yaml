@@ -1,5 +1,0 @@
-text: view_logging
-parent: reports
-description: view_logging_desc
-menuindex: 1
-permissions: logs

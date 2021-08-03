@@ -1,5 +1,0 @@
-text: bespoke_manager
-parent: admin
-description: bespoke_manager_desc
-menuindex: 1
-permissions: customize_forms

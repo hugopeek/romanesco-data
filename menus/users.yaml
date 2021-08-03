@@ -1,4 +1,0 @@
-text: users
-parent: manage
-description: user_management_desc
-permissions: view_user

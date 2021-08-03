@@ -1,5 +1,0 @@
-text: contexts
-parent: admin
-description: contexts_desc
-menuindex: 3
-permissions: view_context

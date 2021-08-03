@@ -149,8 +149,8 @@ data:
         exclude_keys:
             - action
         where:
-            - 'text:NOT LIKE': 'gitpackagemanagement'
-            - 'text:NOT LIKE': 'romanesco%'
+            - 'namespace:IN':
+                - 'clientconfig'
     namespaces:
         class: modNamespace
         primary: name

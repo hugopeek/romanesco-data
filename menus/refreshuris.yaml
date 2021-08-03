@@ -1,5 +1,0 @@
-text: refreshuris
-parent: refresh_site
-description: refreshuris_desc
-handler: 'MODx.refreshURIs(); return false;'
-permissions: empty_cache

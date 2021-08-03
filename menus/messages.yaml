@@ -1,5 +1,0 @@
-text: messages
-parent: user
-description: messages_desc
-menuindex: 1
-permissions: messages

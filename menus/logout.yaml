@@ -1,6 +1,0 @@
-text: logout
-parent: user
-description: logout_desc
-menuindex: 2
-handler: 'MODx.logout(); return false;'
-permissions: logout

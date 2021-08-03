@@ -8,6 +8,7 @@ New features:
 - Integrate MailBlocks (as stand-alone package)
 
 Fixes and improvements:
+- Exclude all menus from Gitify except Configuration
 - Include defaults from Soil
 
 ## v1.11.1

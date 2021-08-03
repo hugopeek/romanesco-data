@@ -1,5 +1,0 @@
-text: import_resources
-parent: site
-description: import_resources_desc
-menuindex: 6
-permissions: import_static

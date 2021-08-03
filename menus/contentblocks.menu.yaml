@@ -1,5 +1,0 @@
-text: contentblocks.menu
-parent: components
-description: contentblocks.menu_desc
-permissions: contentblocks_component
-namespace: contentblocks

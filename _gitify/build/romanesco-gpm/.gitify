@@ -63,10 +63,8 @@ data:
         exclude_keys:
             - action
         where:
-            'namespace:IN':
-                - 'patternlab'
-                - 'romanesco'
-                - 'romanescobackyard'
+            - 'namespace:IN':
+                - 'clientconfig'
     property_set:
         class: modPropertySet
         primary: name

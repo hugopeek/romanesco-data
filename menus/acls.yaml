@@ -1,5 +1,0 @@
-text: acls
-parent: admin
-description: acls_desc
-menuindex: 5
-permissions: access_permissions

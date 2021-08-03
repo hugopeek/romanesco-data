@@ -1,5 +1,0 @@
-text: reports
-parent: manage
-description: reports_desc
-menuindex: 5
-permissions: menu_reports
