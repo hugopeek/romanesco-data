@@ -33,6 +33,20 @@ data:
             - 'AND:key:NOT LIKE': '%.assets_url'
             - 'AND:key:NOT LIKE': '%.core_path'
 
+    # Some settings shouldn't have a value, to prevent accidental overrides
+    system_settings_empty:
+        class: modSystemSetting
+        primary: key
+        exclude_keys:
+            - editedon
+            - value
+        where:
+            - 'key:IN':
+                - 'formblocks.formsource'
+                - 'romanesco.assets_version_css'
+                - 'romanesco.assets_version_js'
+                - 'romanesco.dev_mode'
+
     media_sources:
         class: modMediaSource
         primary: name
@@ -65,6 +79,19 @@ data:
         where:
             - 'id:<': '100000'
             - 'key:NOT IN':
+                - 'google_analytics_ua'
+                - 'matomo_tracking_code'
+                - 'custom_cache'
+                - 'minify_css_js'
+                - 'cache_buster'
+    cg_settings_empty:
+        class: cgSetting
+        primary: key
+        exclude_keys:
+            - value
+        where:
+            - 'id:<': '100000'
+            - 'key:IN':
                 - 'google_analytics_ua'
                 - 'matomo_tracking_code'
                 - 'custom_cache'
