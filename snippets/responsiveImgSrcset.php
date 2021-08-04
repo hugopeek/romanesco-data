@@ -9,7 +9,6 @@ content: "/**\n * responsiveImgSrcset\n *\n * Generates a number of srcset prope
 -----
 
 
-
 /**
  * responsiveImgSrcset
  *
