@@ -20,27 +20,24 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     ]]]]
 </head>
 
-<body id="[[*alias]]" class="header-vertical notes">
+<body id="[[*alias]]" class="vertical notes">
 
 [[$offCanvasNav]]
 
 <div class="pusher">
-    [[$headerVertical?
-        &masthead=`0`
-        &hero=`0`
-        &search=`0`
-    ]]
+    [[$headerVertical]]
 
     <main id="main">
-        [[[[If?
-            &subject=`[[$toolbarKnowledgeBaseTheme]]`
-            &operator=`isnull`
-            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``
-            &else=`$toolbarKnowledgeBaseTheme`
+        [[[[modifiedIf?
+            &subject=`toolbarNoteTheme`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$toolbarNoteTheme`
+            &else=`$toolbarNote? &search_form_size=`large` &search_field_classes=`transparent``
         ]]]]
 
         <article id="content">
-            [[*content]]
+            [[$content]]
         </article>
 
         [[[[modifiedIf?

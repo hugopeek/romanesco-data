@@ -36,7 +36,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     <main id="main" role="main">
         <article id="content">
-            [[*content]]
+            [[$content]]
         </article>
     </main>
 

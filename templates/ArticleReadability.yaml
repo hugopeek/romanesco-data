@@ -48,7 +48,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 </div>
             </header>
 
-            [[*content]]
+            [[$content? &container_type=`text`]]
 
             <footer class="ui vertical stripe segment grey inverted">
                 <div class="ui tightened container">

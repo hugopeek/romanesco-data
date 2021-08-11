@@ -80,7 +80,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     </div>
                 </header>
 
-                [[*content]]
+                [[$content]]
 
                 [[[[If?
                     &subject=`[[+team_member_id:empty=`0`]]`

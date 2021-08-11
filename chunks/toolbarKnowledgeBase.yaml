@@ -2,38 +2,6 @@ id: 398
 name: toolbarKnowledgeBase
 description: ''
 category: o_toolbars
+snippet: ''
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:44:"romanesco.toolbarknowledgebase.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:45:"romanesco.toolbarknowledgebase.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-
------
-
-[[modifiedIf?
-    &subject=`[[*toolbar_visibility]]`
-    &operator=`EQ`
-    &operand=`default`
-    &then=`[[++toolbar_visibility_default]]`
-    &else=`[[*toolbar_visibility]]`
-    &toPlaceholder=`toolbar_visibility`
-]]
-
-[[+toolbar_visibility:eq=`1`:then=`
-<div id="toolbar" class="ui large stackable attached menu">
-    <div class="item">
-        [[$breadcrumbs]]
-    </div>
-    <div class="right menu">
-        <div class="search item">
-            [[SimpleSearchForm?
-                &tpl=`searchField`
-                &landing=`[[++romanesco.search_result_id]]`
-            ]]
-        </div>
-        [[!Login?
-            &tplType=`modChunk`
-            &loginTpl=`loginFormCompact`
-            &logoutTpl=`logoutFormCompact`
-            &form_size=`small`
-            &form_layout=`vertical`
-        ]]
-    </div>
-</div>
-`]]
+content: ''

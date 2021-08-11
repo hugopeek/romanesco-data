@@ -55,7 +55,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[~[[*id]]:contains=`status`:or:contains=`hub`:then=`1`:toPlaceholder=`load_assets_hub`]]
 [[cbHasFields:toPlaceholder=`load_assets_map`? &field=`[[++romanesco.cb_field_map_id]]` &then=`1`]]
 [[modifiedIf?
-    &subject=`[[cbHasFields? &field=`[[++romanesco.cb_field_code_id]]` &then=`1`]][[*context_key:is=`notes`:then=`1`]][[*uri:contains=`notes/`:then=`1`]]`
+    &subject=`[[cbHasFields? &field=`[[++romanesco.cb_field_code_id]]` &then=`1`]][[*context_key:is=`notes`:then=`1`]][[*uri:contains=`notes/`:then=`1`]][[*content_type:is=`11`:then=`1`]]`
     &operator=`notempty`
     &then=`1`
     &toPlaceholder=`load_syntax_highlighting`

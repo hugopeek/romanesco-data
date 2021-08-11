@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     ]]]]
 </head>
 
-<body id="[[*alias]]" class="header-vertical">
+<body id="[[*alias]]" class="vertical">
 
 [[$offCanvasNav]]
 
@@ -33,17 +33,17 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     <main id="main">
         [[[[If?
-            &subject=`[[$toolbarKnowledgeBaseTheme]]`
+            &subject=`[[$toolbarNoteTheme]]`
             &operator=`isnull`
-            &then=`$toolbarKnowledgeBase? &search_form_size=`large` &search_field_classes=`transparent``
-            &else=`$toolbarKnowledgeBaseTheme`
+            &then=`$toolbarNote? &search_form_size=`large` &search_field_classes=`transparent``
+            &else=`$toolbarNoteTheme`
         ]]]]
 
         <article id="content">
             [[*content:notempty=`
             <div class="ui vertical stripe segment white">
                 <div class="ui container">
-                    [[*content]]
+                    [[$content]]
                 </div>
             </div>
             `]]

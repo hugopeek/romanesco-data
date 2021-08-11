@@ -38,7 +38,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <main id="main" role="main">
         <div class="ui relaxed grid container">
             <article id="content" class="sixteen wide mobile twelve wide computer column">
-                [[*content]]
+                [[$content]]
             </article>
 
             <aside id="sidebar" class="four wide computer column tablet or lower hidden">
