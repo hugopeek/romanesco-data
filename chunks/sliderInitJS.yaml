@@ -9,7 +9,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <script>
     var [[+var]] = new Swiper ('#[[+id]].swiper-container', {
         init: [[+init]],
-        slidesPerView: 3,
+        resizeObserver: true,
+        slidesPerView: [[+cols]],
         slidesPerGroup: [[+slides_to_scroll]],
         spaceBetween: [[+spacing]],
         watchOverflow: [[+overflow]],

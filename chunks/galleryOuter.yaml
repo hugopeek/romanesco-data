@@ -13,11 +13,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[+rows]]
 </div>
 
-[[- Lightbox ]]
-[[sliderLoadAssets?
-    &uid=`[[+unique_idx]]`
-    &behaviour=`loop,arrows,keyboard`
-    &lazyload=`0`
-    &pagination=`bullets`
-    &lightbox=`[[+lightbox]]`
-]]
+[[[[If?
+    &subject=`[[+lightbox]]`
+    &operator=`notempty`
+    &then=`sliderLoadAssets?
+        &uid=`[[+unique_idx]]`
+        &behaviour=`loop,arrows,keyboard`
+        &lazyload=`0`
+        &pagination=`bullets`
+        &lightbox=`[[+lightbox]]`
+    `
+]]]]
