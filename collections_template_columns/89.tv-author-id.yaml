@@ -1,0 +1,8 @@
+id: 89
+template: 14
+label: Author
+name: tv_author_id
+width: 50
+php_renderer: renderUserName
+position: 4
+sort_type: null

@@ -31,7 +31,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             .addClass('swiper-slide')
         ;
 
-        let [[+var]] = new Swiper ('#[[+id]].swiper-container', {
+        return new Swiper ('#[[+id]].swiper-container', {
             init: [[+init]],
             slidesPerView: [[+cols]],
             slidesPerGroup: [[+slides_to_scroll]],
@@ -71,7 +71,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 $('#[[+id]]-clone').replaceWith(original[[+var]]);
                 
                 // Initialize Swiper
-                create[[+var]]($('#[[+id]].swiper-container-mobile'));
+                let [[+var]] = create[[+var]]($('#[[+id]].swiper-container-mobile'));
 
                 // Update lazy load with each new slide
                 [[+var]].on('slideChange', function () {

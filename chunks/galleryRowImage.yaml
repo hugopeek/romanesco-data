@@ -35,8 +35,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
              data-lightbox-img="[[pthumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width:mpy=`1.5`]]&q=[[++img_quality]]&zc=1`]]"
              data-caption="[[+title]]"
              `]]
-             width="[[+width]]"
-             height="[[+height]]"
+             [[+width:notempty=`width="[[+width]]"`]]
+             [[+height:notempty=`height="[[+height]]"`]]
              alt="[[+alt:htmlent]]"
         />
     </figure>

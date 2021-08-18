@@ -4,10 +4,22 @@
 Released on ...
 
 New features:
+- Use Markdown content with any template
 - Add operations script with update command
 - Integrate MailBlocks (as stand-alone package)
 
 Fixes and improvements:
+- Make sure width or height is not 0 in fixed overview and gallery images
+- Fix scenario where mobile-only slider would not return to original state
+- Fix issues with slides not receiving correct width when initialized
+- Add Collections template for Notes
+- Rename toolbarKnowledgeBase to toolbarNote
+- Rename HeaderVertical templates to BasicVertical
+- Merge NoteMarkdown and NoteContentBlocks templates
+- Add option to show pages with hidden alias in breadcrumbs
+- Rename cbOverviewRowImg chunks to imgOverview [BREAKING CHANGE]
+- Fix critical CSS not being shared between templates (if configured)
+- Set pagetitle as fallback for overview image ALT text
 - Exclude all menus from Gitify except Configuration
 - Include defaults from Soil
 

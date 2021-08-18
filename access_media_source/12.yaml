@@ -1,0 +1,6 @@
+id: 12
+target: '12'
+principal_class: modUserGroup
+principal: 3
+authority: 0
+policy: 8

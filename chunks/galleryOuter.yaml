@@ -7,12 +7,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <div id="gallery-[[+unique_idx]]"
-     class="ui [[+cols]] column [[+responsive:replace=`,== `]] [[+padding]] grid gallery [[+lightbox:eq=`1`:then=`with lightbox`]] [[+caption:eq=`1`:then=`with caption`]]"
+     class="ui [[+cols]] column [[+responsive:replace=`,== `]] center aligned middle aligned [[+padding]] grid gallery [[+lightbox:eq=`1`:then=`with lightbox`]] [[+caption:eq=`1`:then=`with caption`]]"
      data-uid="[[+unique_idx]]"
     >
     [[+rows]]
 </div>
 
+[[- Lightbox ]]
 [[sliderLoadAssets?
     &uid=`[[+unique_idx]]`
     &behaviour=`loop,arrows,keyboard`

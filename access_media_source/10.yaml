@@ -1,0 +1,7 @@
+id: 10
+target: '4'
+principal_class: modUserGroup
+principal: 3
+authority: 0
+policy: 8
+context_key: mgr
