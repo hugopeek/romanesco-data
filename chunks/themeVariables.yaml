@@ -20,24 +20,22 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[splitString?
     &input=`[[+theme_font_header]]`
+    &delimiter=`:`
     &prefix=`font_header`
 ]]
 [[splitString?
     &input=`[[+theme_font_page]]`
+    &delimiter=`:`
     &prefix=`font_page`
 ]]
 
 [[+theme_font_fallback:notempty=`@fontFallback: [[+theme_font_fallback]];`]]
 
-[[+theme_font_page:notempty=`
-@pageFont: '[[+font_page.1]]', @fontFallback;
-@pageFontRequest: '[[+font_page.1]]:[[+font_page.2:empty=`300`]]';
-`]]
-
 [[+theme_font_header:notempty=`
-@headerFont: '[[+font_header.1]]', @fontFallback;
-@headerFontRequest: '[[+font_header.1]]:[[+font_header.2:empty=`300,700,300italic,700italic`]]';
-@googleFontRequest: '@{headerFontRequest}[[+font_page.1:notempty=`|@{pageFontRequest}`]]&display=swap&subset=[[+font_header.3:empty=`latin`]]';
+@headerFont: '[[+font_header.1:replace=`+== `]]', @fontFallback;
+`]]
+[[+theme_font_page:notempty=`
+@pageFont: '[[+font_page.1:replace=`+== `]]', @fontFallback;
 `]]
 
 
