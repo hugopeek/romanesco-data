@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.12.0
-Released on ...
+Released on August 30, 2021
 
 New features:
 - Use Markdown content with any template
@@ -9,6 +9,13 @@ New features:
 - Integrate MailBlocks (as stand-alone package)
 
 Fixes and improvements:
+- Update Backyard
+- Rename some CB fields and layouts to be more uniform
+- Fix lists with connected patterns in front-end library
+- Add class to empty grid columns
+- Load conditional CSS assets and Google fonts asynchronously
+- Load Google fonts with direct link and v2 syntax [BREAKING CHANGE]
+- Add cbLayoutCTA chunk (not referenced directly)
 - Make sure width or height is not 0 in fixed overview and gallery images
 - Fix scenario where mobile-only slider would not return to original state
 - Fix issues with slides not receiving correct width when initialized
