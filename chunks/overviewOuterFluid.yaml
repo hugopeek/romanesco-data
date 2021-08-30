@@ -33,6 +33,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &link_text=`[[+link_text]]`
     &img_snap=`[[+img_snap]]`
     &img_inflate=`[[+img_inflate]]`
+    &lazy_load=`[[+lazy_load]]`
 ]]
 
 [[[[+pagination:eq=`1`:then=`$paginationFluid`]]]]
