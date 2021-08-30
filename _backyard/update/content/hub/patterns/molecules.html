@@ -13,9 +13,9 @@ publishedby: 1
 menutitle: Molecules
 context_key: hub
 uri: patterns/molecules
-properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"[[*pagetitle]]\",\"level\":\"h1\",\"field\":1,\"settings\":[]},{\"value\":1,\"field\":5,\"settings\":[]},{\"value\":\"[[pdoResources?\\n    &class=`modCategory`\\n    &sortby=`category`\\n    &sortdir=`ASC`\\n    &limit=`0`\\n    &depth=`0`\\n    &where=`[{\\\"parent:=\\\":\\\"19\\\"}]`\\n    &tpl=`patternCategoryParent`\\n    &level=`h2`\\n    &type=`Molecule`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[*pagetitle]]","level":"h1","field":1,"settings":[]},{"value":1,"field":5,"settings":[]},{"value":"[[pdoResources?\n    &class=`modCategory`\n    &sortby=`category`\n    &sortdir=`ASC`\n    &limit=`0`\n    &depth=`0`\n    &where=`[{\"parent:=\":\"19\"}]`\n    &tpl=`patternCategoryParent`\n    &level=`h2`\n    &type=`Molecule`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"1":1,"5":1,"14":1},"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"[[*pagetitle]]\",\"level\":\"h1\",\"field\":1,\"settings\":[]},{\"value\":1,\"field\":5,\"settings\":[]},{\"value\":\"[[!getCache?\\n    &element=`pdoResources`\\n    [[++custom_cache:eq=`1`:then=`&cacheKey=`patterns``]]\\n\\n    &class=`modCategory`\\n    &sortby=`category`\\n    &sortdir=`ASC`\\n    &limit=`0`\\n    &depth=`0`\\n    &where=`[{\\\"parent:=\\\":\\\"19\\\"}]`\\n    &tpl=`patternCategoryParent`\\n    &level=`h2`\\n    &type=`Molecule`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[*pagetitle]]","level":"h1","field":1,"settings":[]},{"value":1,"field":5,"settings":[]},{"value":"[[!getCache?\n    &element=`pdoResources`\n    [[++custom_cache:eq=`1`:then=`&cacheKey=`patterns``]]\n\n    &class=`modCategory`\n    &sortby=`category`\n    &sortdir=`ASC`\n    &limit=`0`\n    &depth=`0`\n    &where=`[{\"parent:=\":\"19\"}]`\n    &tpl=`patternCategoryParent`\n    &level=`h2`\n    &type=`Molecule`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"1":1,"5":1,"14":1},"_isContentBlocks":true}}'
 tvs:
-    auto_anchors: '0'
+    auto_anchors: '@INHERIT 0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
@@ -80,7 +80,10 @@ tvs:
     &divider_hidden=`0`
 ]]
 
-[[pdoResources?
+[[!getCache?
+    &element=`pdoResources`
+    [[++custom_cache:eq=`1`:then=`&cacheKey=`patterns``]]
+
     &class=`modCategory`
     &sortby=`category`
     &sortdir=`ASC`

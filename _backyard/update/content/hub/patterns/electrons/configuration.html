@@ -1,0 +1,109 @@
+id: 1
+pagetitle: Configuration
+longtitle: 'Settings all users can access and change in MODX'
+alias: configuration
+published: 1
+introtext: ''
+template: 21
+menuindex: 1
+createdby: 1
+createdon: 1547636662
+publishedon: 1547636640
+publishedby: 1
+menutitle: Configuration
+context_key: hub
+uri: patterns/electrons/configuration
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"[[*pagetitle]]\",\"level\":\"h1\",\"field\":1,\"settings\":[]},{\"value\":1,\"field\":5,\"settings\":[]},{\"value\":\"<p>Configuration settings are available as placeholders throughout the project. You can change them (or add new settings) under <a href=\\\"[[++site_url:stripString=`hub.`]]manager\/?a=home&namespace=clientconfig\\\">Extras &gt; Configuration<\/a> if needed.\\n<\/p>\\n<p>If you''re worried about these settings affecting too much of your project: don''t! Many settings can be overruled on page level with a Template Variable and you can attach a setting to a context too with a different value.\\n<\/p>\",\"field\":79,\"settings\":{\"message_type\":\"info\",\"heading\":\"\"}},{\"value\":\"<p>Please note that for changes made under Presentation, it takes around 10-30 seconds to be reflected on the website. This is because a background process needs a little time to rebuild the styling assets.<br><\/p>\",\"field\":79,\"settings\":{\"message_type\":\"warning\"}},{\"value\":\"[[migxLoopCollection?\\n    &packageName=`clientconfig`\\n    &classname=`cgGroup`\\n    &sortConfig=`[{\\\"sortby\\\":\\\"sortorder\\\",\\\"sortdir\\\":\\\"ASC\\\"}]`\\n    &tpl=`configSettingsRow`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[*pagetitle]]","level":"h1","field":1,"settings":[]},{"value":1,"field":5,"settings":[]},{"value":"<p>Configuration settings are available as placeholders throughout the project. You can change them (or add new settings) under <a href=\"[[++site_url:stripString=`hub.`]]manager\/?a=home&namespace=clientconfig\">Extras &gt; Configuration<\/a> if needed.\n<\/p>\n<p>If you''re worried about these settings affecting too much of your project: don''t! Many settings can be overruled on page level with a Template Variable and you can attach a setting to a context too with a different value.\n<\/p>","field":79,"settings":{"message_type":"info","heading":""}},{"value":"<p>Please note that for changes made under Presentation, it takes around 10-30 seconds to be reflected on the website. This is because a background process needs a little time to rebuild the styling assets.<br><\/p>","field":79,"settings":{"message_type":"warning"}},{"value":"[[migxLoopCollection?\n    &packageName=`clientconfig`\n    &classname=`cgGroup`\n    &sortConfig=`[{\"sortby\":\"sortorder\",\"sortdir\":\"ASC\"}]`\n    &tpl=`configSettingsRow`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"1":1,"5":1,"79":2,"14":1},"_isContentBlocks":true}}'
+tvs:
+    auto_anchors: '@INHERIT 0'
+    content_brief: ''
+    content_cta: ''
+    content_outline: ''
+    content_owner: ''
+    content_priority: ''
+    content_purpose: ''
+    content_repurpose_dest: ''
+    content_repurpose_src: ''
+    content_result: ''
+    content_tone: ''
+    critical_css_uri: assets/css/critical/how-it-works.css
+    footer_background: '@INHERIT'
+    footer_cta: '@INHERIT'
+    footer_cta_background: '@INHERIT'
+    footer_inheritance: '@INHERIT inherit_visibility||inherit_type||inherit_background||inherit_cta||inherit_cta_background'
+    footer_type: '@INHERIT default'
+    footer_visibility: '@INHERIT default'
+    header_background: 'fractal-badge inverted background'
+    header_background_img: ''
+    header_cta: '@INHERIT'
+    header_inheritance: '@INHERIT inherit_visibility||inherit_titles||inherit_background'
+    header_subtitle: 'A quick tour through some of the basic concepts.'
+    header_title: '@INHERIT'
+    header_visibility: '@INHERIT default'
+    links_attachment: ''
+    links_external: ''
+    links_related: ''
+    overview_icon_font: ''
+    overview_icon_svg: ''
+    overview_icon_svg_credit: ''
+    overview_img_free: ''
+    overview_img_landscape: ''
+    overview_img_pano: ''
+    overview_img_portrait: ''
+    overview_img_priority: landscape
+    overview_img_square: ''
+    overview_img_wide: ''
+    overview_link_text: ''
+    overview_subtitle: ''
+    pagination_scroll_top: '@INHERIT 1'
+    planning_date_due: ''
+    status_health: stable
+    status_improvements: ''
+    status_issues: ''
+    status_progress: to-do
+    toolbar_visibility: '@INHERIT default'
+
+-----
+
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`default`]]">
+    <div class="ui   container">
+        [[$headingBasic?
+    &value=`[[*pagetitle]]`
+    &level=`h1`
+    &alignment=``
+    &unique_idx=`1`
+]]
+
+[[$dividerBasic?
+    &divider_text=``
+    &divider_section=`1`
+    &divider_hidden=`0`
+]]
+
+[[$richTextMessage?
+    &heading=``
+    &content=`<p>Configuration settings are available as placeholders throughout the project. You can change them (or add new settings) under <a href="[[++site_url:stripString=`hub.`]]manager/?a=home&namespace=clientconfig">Extras &gt; Configuration</a> if needed.
+</p>
+<p>If you're worried about these settings affecting too much of your project: don't! Many settings can be overruled on page level with a Template Variable and you can attach a setting to a context too with a different value.
+</p>`
+    &message_type=`info`
+	&size=``
+	&close=`0`
+]]
+
+[[$richTextMessage?
+    &heading=``
+    &content=`<p>Please note that for changes made under Presentation, it takes around 10-30 seconds to be reflected on the website. This is because a background process needs a little time to rebuild the styling assets.<br></p>`
+    &message_type=`warning`
+	&size=``
+	&close=`0`
+]]
+
+[[migxLoopCollection?
+    &packageName=`clientconfig`
+    &classname=`cgGroup`
+    &sortConfig=`[{"sortby":"sortorder","sortdir":"ASC"}]`
+    &tpl=`configSettingsRow`
+]]
+    </div>
+</div>
