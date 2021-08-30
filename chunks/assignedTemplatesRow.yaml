@@ -8,6 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[Rowboat?
     &table=`modx_site_templates`
-    &tpl=`includedPatternsRow`
+    &tpl=`includedTemplatesRow`
     &where=`{ "id":"[[+templateid]]" }`
+    &uid=`[[+id]]_[[+idx]]`
 ]]

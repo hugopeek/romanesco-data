@@ -1,0 +1,12 @@
+id: 573
+name: includedTemplatesRow
+description: 'Templates can also use the default format inside includedPatternsRow, but referencing that directly causes issues with leaking [[+name]] and [[+templatename]] placeholders.'
+category: m_hub
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:44:"romanesco.includedtemplatesrow.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:45:"romanesco.includedtemplatesrow.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[$includedPatternsRow?
+    &name=`[[+templatename]]`
+    &uid=`[[+id]]_[[+idx]]`
+]]

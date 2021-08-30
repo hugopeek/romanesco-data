@@ -1,27 +1,25 @@
 id: 317
 name: includedPatternsRow
-description: ''
+description: 'Default template for showing a list item with a link (if it has one) to the connected pattern. It also displays the pattern type (Atom, Molecule, Organism...) in a small badge.'
 category: m_hub
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.includedpatternsrow.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.includedpatternsrow.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
-[[+templatename:empty=`[[+name]]`:toPlaceholder=`name`]]
-
-[[includedPatternsLink?
+[[includedPatternsLink:toPlaceholder=`pl_[[+id]]_[[+idx]].link`?
     &input=`[[+category]]`
-    &prefix=`pl_[[+idx]]_[[+unique_idx]]`
-    &toPlaceholder=`link`
+    &pattern=`[[+name]]`
+    &prefix=`pl_[[+id]]_[[+idx]]`
 ]]
 
 [[If?
-    &subject=`[[+[[+pl]].link]]`
+    &subject=`[[+pl_[[+id]]_[[+idx]].link]]`
     &operator=`notempty`
     &then=`
-        <a class="item" href="[[+[[+pl]].link]]#[[+name:lcase]]">
-            <span class="ui circular label">[[+[[+pl]].link:setPatternType]]</span>
+        <a class="item" href="[[+pl_[[+id]]_[[+idx]].link]]">
+            <span class="ui circular [[+label_classes]] label">[[+pl_[[+id]]_[[+idx]].link:setPatternType]]</span>
             [[+name]]
-            [[+assigned:eq=`1`:then=`<span class="ui right floated tiny blue label">Assigned</span>`]]
+            [[+assigned:eq=`1`:then=`<span class="ui right floated tiny label">[[%romanesco.patterns.assigned_chunk]]</span>`]]
         </a>
     `
     &else=`
@@ -30,4 +28,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             [[+name]]
         </div>
     `
+    &uid=`[[+id]]_[[+idx]]`
 ]]

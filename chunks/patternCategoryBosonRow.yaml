@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="ui segment">
+<div id="[[+name:stripAsAlias]]" class="ui pattern segment">
     <div class="ui middle aligned equal width grid">
         <div class="compact column">
             [[+icon_type:is=`custom`:then=`
@@ -37,7 +37,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                data-targetState="hidden"
                data-content="[[%romanesco.patterns.code_tooltip]]"
                data-position="top center"></i>
-            <i class="muted random link icon with tooltip"
+            <i class="muted random link icon with visibility toggle and tooltip"
+               data-target="#connections-[[+name:stripAsAlias]]"
+               data-targetState="hidden"
                data-content="[[%romanesco.patterns.connections_tooltip]]"
                data-position="top center"></i>
         </div>
@@ -46,7 +48,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[$dividerBasic]]
 
     <div class="meta">
-        [[+properties.custom_preview:stripTags=`<p>,<ul>,<li>,<strong>`:empty=`<p>[[+description:empty=`<em>Description not available.</em>`]]</p>`]]
+        [[+properties.custom_preview:stripTags=`<p>,<ul>,<li>,<strong>`:empty=`<p><em>Description not available.</em></p>`]]
     </div>
 
     [[$dividerBasic? &divider_hidden=`1`]]
@@ -104,4 +106,28 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </div>
     </div>
 
+    <div id="connections-[[+name:stripAsAlias]]" class="hidden connections element">
+        <div class="ui divider"></div>
+
+        <div class="ui stackable equal width divided grid">
+            <div class="row">
+                <div class="column">
+                    <h4 class="ui disabled header">[[%romanesco.patterns.included_patterns]]</h4>
+                    [[$includedPatternsOuter?
+                        &pattern_template=`patternLayout[[+elementType]]`
+                        &pattern_id=`[[+id]]`
+                        &prefix=`pl[[+id]]`
+                    ]]
+                </div>
+                <div class="column">
+                    <h4 class="ui disabled header">[[%romanesco.patterns.referring_pages]]</h4>
+                    [[$referringPatternsOuter?
+                        &pattern_template=`patternLayout[[+elementType]]`
+                        &pattern_id=`[[+id]]`
+                        &prefix=`pl[[+id]]`
+                    ]]
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

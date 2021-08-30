@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &table=`modx_site_htmlsnippets`
             &tpl=`displayRawElement`
             &where=`{"name":"[[+pattern_name]]"}`
-            &toPlaceholder=`raw_element`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -28,7 +28,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &table=`modx_site_templates`
             &tpl=`displayRawTemplate`
             &where=`{"templatename":"[[+pattern_name]]"}`
-            &toPlaceholder=`raw_element`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -41,7 +41,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &table=`modx_site_snippets`
             &tpl=`displayRawElement`
             &where=`{"name":"[[+pattern_name]]"}`
-            &toPlaceholder=`raw_element`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -54,7 +54,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &table=`modx_site_plugins`
             &tpl=`displayRawPlugin`
             &where=`{"name":"[[+pattern_name]]"}`
-            &toPlaceholder=`raw_element`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -66,8 +66,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         Rowboat?
             &table=`modx_contentblocks_field`
             &tpl=`displayRawContentBlock`
-            &where=`{"name":"[[+pattern_name]]","parent":"0"}`
-            &toPlaceholder=`raw_element`
+            &where=`{"id":"[[+pattern_id]]","parent":"0"}`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -79,8 +79,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         Rowboat?
             &table=`modx_contentblocks_layout`
             &tpl=`displayRawContentBlock`
-            &where=`{"name":"[[+pattern_name]]"}`
-            &toPlaceholder=`raw_element`
+            &where=`{"id":"[[+pattern_id]]"}`
+            &toPlaceholder=`[[+prefix]].raw_element`
         `
 ]]]]
 
@@ -89,16 +89,18 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &subject=`assignedTVs`
         &operator=`inarray`
         &operand=`[[+pattern_list]]`
-        &then=`assignedTVs:toPlaceholder=`[[+layout_column]]_tv_list`? &template=`[[+pattern_name:empty=``]]``
+        &then=`assignedTVs:toPlaceholder=`[[+prefix]].tv_list`? &template=`[[+pattern_name:empty=``]]``
     ]]]]
-    [[If?
-        &subject=`[[+[[+layout_column]]_tv_list]]`
-        &operator=`empty`
-        &then=`
-            [[includedTVs? &input=`[[+raw_element]]`]]
-            [[includedChunks? &input=`[[+raw_element]]` &name=`[[+pattern_name]]` &type=`[[+pattern_template]]`]]
-            [[includedSnippets? &input=`[[+raw_element]]`]]
+
+    [[If:empty=`<div class="muted item"><em>[[%romanesco.patterns.not_found]]</em></div>`?
+        &subject=`assignedTVs`
+        &operator=`inarray`
+        &operand=`[[+pattern_list]]`
+        &then=`[[+[[+prefix]].tv_list]]`
+        &else=`
+            [[includedTVs? &input=`[[+[[+prefix]].raw_element]]`]]
+            [[includedChunks? &input=`[[+[[+prefix]].raw_element]]` &name=`[[+pattern_name]]` &id=`[[+pattern_id]]` &type=`[[+pattern_template]]`]]
+            [[includedSnippets? &input=`[[+[[+prefix]].raw_element]]`]]
         `
-        &else=`[[+[[+layout_column]]_tv_list]]`
     ]]
 </div>
