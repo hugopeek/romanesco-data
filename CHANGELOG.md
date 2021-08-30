@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.12.1
+Released on ...
+
+Fixes and improvements:
+- Add lazy load setting to 2 Column Overview layout
+
 ## v1.12.0
 Released on August 30, 2021
 
