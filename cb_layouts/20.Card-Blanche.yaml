@@ -1,0 +1,12 @@
+id: 20
+name: 'Card Blanche'
+description: 'An empty wrapper for card elements that prefer to be at root level, like images and buttons.'
+sortorder: 13
+category: 9
+icon: layout_1
+columns: '[{"reference":"main","width":"100"}]'
+template: '[[+main]]'
+availability: '[]'
+times_per_page: 0
+layout_only_nested: '1'
+settings: '[]'
