@@ -100,6 +100,8 @@ while [[ "$1" ]]; do
   update)
     updateFlag=1
     updateRomanesco=
+    updateMODX=
+    updatePackages=
     updateBackyard=
     npmFlag=
     defaultsFlag=
@@ -110,6 +112,8 @@ while [[ "$1" ]]; do
       case $2 in
       romanesco)
         updateRomanesco=1
+        updateMODX=1
+        updatePackages=1
         ;;
       backyard)
         updateBackyard=1
@@ -131,10 +135,6 @@ while [[ "$1" ]]; do
   esac
   shift
 done
-
-# flags for additional safety / control
-updateMODX=1
-updatePackages=1
 
 # nested repositories
 installPathData="$installPath/_romanesco"
