@@ -181,7 +181,7 @@ fi
 if [ "$updateFlag" ]
 then
   echo "Updating Romanesco..."
-  source "${operationsPath}/run/10-update.sh"
+  source "${operationsPath}/run/50-update.sh"
   printf "${GREEN}Romanesco successfully updated!${NORMAL}\n"
 fi
 
