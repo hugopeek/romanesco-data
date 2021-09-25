@@ -9,5 +9,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <div class="ui [[+size]] [[+message_type]] message">
     [[+close:is=`1`:then=`<i class="close icon"></i>`:else=``]]
     [[+heading:notempty=`<div class="header">[[+heading]]</div>`]]
-    [[+content:replace=`<ul>==<ul class="list">`]]
+    [[+content]]
 </div>

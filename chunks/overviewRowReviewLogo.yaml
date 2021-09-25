@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
         &tvname=`organization_logo_img`
         &docid=`[[+organization_id:empty=`[[+id]]`]]`
-        &options=`w=600&q=[[++img_quality]]&zc=1`
+        &options=`w=600&q=[[++romanesco.img_quality]]&zc=1`
         &type=`tpl`
         &tpl=`imgOverview`
     ]]

@@ -1,0 +1,37 @@
+id: 577
+name: overviewSettingsPagination
+description: 'Pagination parameters for the pdoPage call. Only loaded when pagination is active.'
+category: m_ov_settings
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:50:"romanesco.overviewsettingspagination.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:51:"romanesco.overviewsettingspagination.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+&ajaxMode=`[[+pagination_type]]`
+&ajaxElemWrapper=`#[[+prefix]]`
+&ajaxElemRows=`#[[+prefix]] .overview`
+&ajaxElemPagination=`#[[+prefix]] .pagination`
+&ajaxElemLink=`#[[+prefix]] .pagination a`
+&ajaxElemMore=`#[[+prefix]] .more`
+&scrollTop=`[[*pagination_scroll_top]]`
+
+&tplPageWrapper=`pageNavWrapper`
+&tplPage=`pageNavItem`
+&tplPageActive=`pageNavItemActive`
+&tplPageFirst=`pageNavItemIcon@PaginationFirst`
+&tplPageLast=`pageNavItemIcon@PaginationLast`
+&tplPagePrev=`pageNavItemIcon@PaginationPrev`
+&tplPageNext=`pageNavItemIcon@PaginationNext`
+&tplPageSkip=`pageNavItemDisabled`
+&tplPageFirstEmpty=`pageNavItemIconDisabled@PaginationFirst`
+&tplPageLastEmpty=`pageNavItemIconDisabled@PaginationLast`
+&tplPagePrevEmpty=`pageNavItemIconDisabled@PaginationPrev`
+&tplPageNextEmpty=`pageNavItemIconDisabled@PaginationNext`
+&ajaxTplMore=`pageNavItemLoadMore`
+
+&frontend_startup_js=`paginationStartupJS`
+&frontend_init_js=`paginationInitJS`
+&frontend_css=``
+&frontend_js=``
+
+&pageVarKey=`[[+prefix]]-page`
+&pageNavVar=`[[+prefix]].page.nav`

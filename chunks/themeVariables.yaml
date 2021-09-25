@@ -61,20 +61,25 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 // Logo
 // ---------------------------------------------------------------------
 
-@logoPath: '[[+logo_path:isnot=`/assets/img/`:then=`[[+logo_path]]`:else=`/`]]';
-@logoBadgePath: '[[+logo_badge_path:isnot=`/assets/img/`:then=`[[+logo_badge_path]]`:else=`/`]]';
+@logoPath: '[[+logo_path]]';
+@logoInvertedPath: '[[+logo_inverted_path]]';
+@logoBadgePath: '[[+logo_badge_path]]';
+@logoBadgeInvertedPath: '[[+logo_badge_inverted_path]]';
 
-[[+logo_path:isnot=`/assets/img/`:then=`
-[[getImageDimensions?
-    &image=`[[++base_path]][[+logo_path:replace=`/assets==assets`]]`
-    &phWidth=`logo_width`
-    &phHeight=`logo_height`
-]]`
-]]
+[[[[If?
+    &subject=`logo_path`
+    &operator=`notempty`
+    &then=`
+        getImageDimensions?
+            &image=`[[++base_path]][[+logo_path:replace=`/assets==assets`]]`
+            &phWidth=`logo_width`
+            &phHeight=`logo_height`
+        `
+]]]]
 
 [[+logo_width:notempty=`@logoWidth: [[+logo_width]];`]]
 [[+logo_height:notempty=`@logoHeight: [[+logo_height]];`]]
-[[+logo_target_width:notempty=`@logoScaleRatio: [[+logo_target_width]] / @logoWidth;`]]
+[[+logo_target_width:notempty=`@logoTargetWidth: [[+logo_target_width]];`]]
 
 
 // Border Radius

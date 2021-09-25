@@ -61,24 +61,32 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <link href="https://fonts.googleapis.com/css2?family=[[+load_google_fonts:replace=` ==+`]]&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 `]]
 
-[[- SET CONDITIONS FOR LOADING ADDITIONAL ASSETS ]]
-[[~[[*id]]:contains=`status`:or:contains=`hub`:then=`1`:toPlaceholder=`load_assets_hub`]]
-[[cbHasFields:toPlaceholder=`load_assets_map`? &field=`[[++romanesco.cb_field_map_id]]` &then=`1`]]
-[[modifiedIf?
+[[- LOAD JS ASSETS WITH DEFER, SO DOWNLOADING WILL COMMENCE EARLY WITHOUT BLOCKING RENDERING ]]
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script defer src="[[++romanesco.semantic_vendor_path]]/jquery/jquery.min[[+cache_buster_js]].js"><\/script>')</script>
+<script defer src="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_js]].js"></script>
+<script defer src="[[++romanesco.semantic_js_path]]/onmediaquery[[+minify]][[+cache_buster_js]].js"></script>
+<script defer src="[[++romanesco.semantic_vendor_path]]/vanilla-lazyload/lazyload.min[[+cache_buster_js]].js"></script>
+<script defer src="[[++romanesco.semantic_vendor_path]]/scrolldir/scrolldir.auto.min[[+cache_buster_js]].js"></script>
+<script defer src="[[++romanesco.semantic_js_path]]/site[[+minify]][[+cache_buster_js]].js"></script>
+
+[[- LOAD ADDITIONAL ASSETS, BASED ON CERTAIN CONDITIONS ]]
+[[[[If?
+    &subject=`[[cbHasFields? &field=`[[++romanesco.cb_field_map_id]]` &then=`1`]]`
+    &operator=`notempty`
+    &then=`loadAssets? &component=`map``
+]]]]
+[[[[If?
     &subject=`[[cbHasFields? &field=`[[++romanesco.cb_field_code_id]]` &then=`1`]][[*context_key:is=`hub`:or:is=`notes`:then=`1`]][[*uri:contains=`notes/`:then=`1`]][[*content_type:is=`11`:then=`1`]]`
     &operator=`notempty`
-    &then=`1`
-    &toPlaceholder=`load_syntax_highlighting`
-]]
-
-[[[[+load_assets_map:eq=`1`:then=`$mapLoadAssets`]]]]
-[[+load_assets_hub:eq=`1`:then=`
-<link href="[[++romanesco.semantic_dist_path]]/components/modal[[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
-<link href="[[++romanesco.semantic_dist_path]]/components/step[[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
-`]]
-[[+load_syntax_highlighting:eq=`1`:then=`
-<link href="[[++romanesco.semantic_vendor_path]]/prism/prism.min[[+cache_buster_css]].css" rel="stylesheet" media="print" onload="this.media='all'">
-`]]
+    &then=`loadAssets? &component=`syntax-highlighting``
+]]]]
+[[[[If?
+    &subject=`[[*context_key]]`
+    &operator=`is`
+    &operand=`hub`
+    &then=`loadAssets? &component=`hub``
+]]]]
 
 [[++head_additional]]
 
@@ -95,9 +103,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &subject=`[[getContextSetting:default=`[[++google_analytics_ua]]`? &context=`[[*context_key]]` &setting=`google_analytics_ua`]]`
     &operator=`notempty`
     &then=`$googleAnalytics`
+    &else=`++alternative_tracking_code`
 ]]]]
-
-[[++matomo_tracking_code]]
 
 [[[[If?
     &subject=`[[++romanesco.private_backyard]]`

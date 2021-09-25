@@ -11,7 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
             &tvname=`overview_img_[[+img_type:empty=`wide`]]`
             &docid=`[[+id]]`
-            &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`
+            &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`
             &type=`tpl`
             &tpl=`imgOverview`
         ]]

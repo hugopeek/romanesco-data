@@ -40,7 +40,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     `]]
 </p>
 
-<p class="ui tag labels">
+<p class="ui labels">
     [[!TaggerGetTags? &resources=`[[+id]]` &rowTpl=`tagItemBasic`]]
 </p>
 

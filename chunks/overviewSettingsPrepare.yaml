@@ -1,0 +1,24 @@
+id: 578
+name: overviewSettingsPrepare
+description: 'A couple of placeholders need to be set, before the settings are evaluated in the snippet call.'
+category: m_ov_settings
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:47:"romanesco.overviewsettingsprepare.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:48:"romanesco.overviewsettingsprepare.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[setBoxType? &input=`[[+row_tpl]]` &prefix=`ov_[[+layout_id]]_[[+unique_idx]]`]]
+[[Switch:toPlaceholder=`[[+prefix]].sortdir`?
+    &get=`[[+sortby]]_[[+sortdir]]`
+    &c1=`menuindex_0`     &do1=`ASC`
+    &c2=`publishedon_0`   &do2=`DESC`
+    &c3=`createdon_0`     &do3=`DESC`
+    &c4=`pagetitle_0`     &do4=`ASC`
+
+    &c5=`menuindex_1`     &do5=`DESC`
+    &c6=`publishedon_1`   &do6=`ASC`
+    &c7=`createdon_1`     &do7=`ASC`
+    &c8=`pagetitle_1`     &do8=`DESC`
+
+    &default=`DESC`
+]]
+[[If? &subject=`[[+prefix]]` &operator=`is` &operand=`ov__` &then=`<div class="ui info message">[[%romanesco.cb_preview.overview_note? &topic=`manager` &namespace=`romanescobackyard`]]</div>`]]

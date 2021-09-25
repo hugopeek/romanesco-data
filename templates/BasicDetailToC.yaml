@@ -35,16 +35,16 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     ]]]]
 
     <main id="main" role="main">
-        <div class="ui relaxed grid container">
-            <article id="content" class="sixteen wide mobile twelve wide computer column">
-                [[$content]]
-            </article>
-
-            <aside id="sidebar" class="four wide computer column tablet or lower hidden">
+        <div class="ui relaxed computer reversed grid container">
+            <aside id="sidebar" class="sixteen wide mobile four wide computer column">
                 [[$tocNavVertical?
                     &sticky=`1`
                 ]]
             </aside>
+
+            <article id="content" class="sixteen wide mobile twelve wide computer column">
+                [[$content]]
+            </article>
         </div>
     </main>
 
