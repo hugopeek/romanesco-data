@@ -3,8 +3,28 @@
 ## v1.12.1
 Released on ...
 
+New features:
+- Add post hook for pThumb to optimize the image and generate a WebP version
+
 Fixes and improvements:
-- Add lazy load setting to 2 Column Overview layout
+- Move shared overview settings to separate molecules
+- Fix regClient scripts not being parsed in Markdown pages on first load
+- Load external JS from head with defer
+- Load all conditional assets through a single snippet
+- Don't use tag label variant anymore (excluded from semantic.css)
+- Add SUI list class to ul and ol tags in Markdown (only at first level)
+- Remove conditionals for empty logo paths (to clear media source path)
+- Add theme variables for inverted logo paths
+- Only load alternative_tracking_code if Google Analytics is empty
+- Rename matomo_tracking_code to alternative_tracking_code
+- Move Leaflet asset paths and integrity hashes to system settings
+- Move img_breakpoints to system settings
+- Add pThumb post-hook to system settings (customization in pThumb core)
+- Add img_quality as system setting too (baseline for optional post-processing)
+- Fix icon buttons in generated tab navigation
+- Only preload backgrounds.css if critical CSS is enabled
+- Add missing ID to FormBlocks dropdown select and math question fields
+- Add lazy load setting to Overview Fluid layout
 
 ## v1.12.0
 Released on August 30, 2021
