@@ -10,9 +10,8 @@ New features:
 Fixes and improvements:
 - Make sure ClientConfig menu doesn't disappear after an update
 - Exclude namespaces from data extract
-- Don't remove rows in mobile reversed grids (breaks multi-row nested layouts)
 - Fix responsive content image sizes in stackable on tablet grids
-- If grids are stackable on tablet, also hide designated mobile elements
+- If grids are stackable on tablet, also show/hide designated mobile elements
 - Use placeholder to detect ToC instead of toc_enabled_templates system setting
 - Show ToC submenu in dropdown on tablet and mobile
 - Move shared overview settings to separate molecules
