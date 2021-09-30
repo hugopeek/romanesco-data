@@ -1,6 +1,0 @@
-id: 542
-name: mapLoadAssets
-description: 'Load the necessary CSS and JS assets for displaying a Leaflet map. This is added to the HEAD of the page (if load_assets_map is set to 1), so maps can be initialized from content area.'
-snippet: ''
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:37:"romanesco.maploadassets.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:38:"romanesco.maploadassets.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-content: ''
