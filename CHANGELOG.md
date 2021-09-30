@@ -8,6 +8,7 @@ New features:
 - Add ContentBlock with Table of Contents menu
 
 Fixes and improvements:
+- Exclude namespaces from data extract
 - Don't remove rows in mobile reversed grids (breaks multi-row nested layouts)
 - Fix responsive content image sizes in stackable on tablet grids
 - If grids are stackable on tablet, also hide designated mobile elements

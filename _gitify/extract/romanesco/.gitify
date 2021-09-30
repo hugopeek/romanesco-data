@@ -151,16 +151,16 @@ data:
         where:
             - 'namespace:IN':
                 - 'clientconfig'
-    namespaces:
-        class: modNamespace
-        primary: name
-        where:
-            'name:NOT IN':
-                - 'gitpackagemanagement'
-                - 'patternlab'
-                - 'romanesco'
-                - 'romanescobackyard'
-                - 'cbheadingimage'
+    #namespaces:
+    #    class: modNamespace
+    #    primary: name
+    #    where:
+    #        'name:NOT IN':
+    #            - 'gitpackagemanagement'
+    #            - 'patternlab'
+    #            - 'romanesco'
+    #            - 'romanescobackyard'
+    #            - 'cbheadingimage'
     property_set:
         class: modPropertySet
         primary: name

@@ -135,12 +135,12 @@ data:
         where:
             - 'namespace:IN':
                 - 'clientconfig'
-    namespaces:
-        class: modNamespace
-        primary: name
-        where:
-            'name:NOT IN':
-                - 'gitpackagemanagement'
+    #namespaces:
+    #    class: modNamespace
+    #    primary: name
+    #    where:
+    #        'name:NOT IN':
+    #            - 'gitpackagemanagement'
     property_set:
         class: modPropertySet
         primary: name
