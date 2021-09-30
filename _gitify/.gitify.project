@@ -130,8 +130,6 @@ data:
     menus:
         class: modMenu
         primary: text
-        exclude_keys:
-            - action
         where:
             - 'namespace:IN':
                 - 'clientconfig'

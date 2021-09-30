@@ -8,6 +8,7 @@ New features:
 - Add ContentBlock with Table of Contents menu
 
 Fixes and improvements:
+- Make sure ClientConfig menu doesn't disappear after an update
 - Exclude namespaces from data extract
 - Don't remove rows in mobile reversed grids (breaks multi-row nested layouts)
 - Fix responsive content image sizes in stackable on tablet grids
