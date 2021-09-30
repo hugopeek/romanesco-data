@@ -3,7 +3,7 @@ parent_properties: null
 input: link
 name: 'Button (Email)'
 description: ''
-sortorder: 68
+sortorder: 69
 category: 11
 icon: link
 template: '@CHUNK mbContentButton'

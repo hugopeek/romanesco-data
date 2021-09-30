@@ -3,7 +3,7 @@ parent_properties: null
 input: hr
 name: 'Divider (Email)'
 description: ''
-sortorder: 73
+sortorder: 74
 category: 11
 icon: horizontalrule
 icon_type: ''

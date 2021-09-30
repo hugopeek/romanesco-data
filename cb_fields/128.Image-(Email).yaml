@@ -3,7 +3,7 @@ parent_properties: null
 input: image
 name: 'Image (Email)'
 description: ''
-sortorder: 69
+sortorder: 70
 category: 11
 icon: image
 icon_type: ''

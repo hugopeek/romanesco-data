@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Social Share Buttons (Email)'
 description: ''
-sortorder: 71
+sortorder: 72
 category: 11
 icon: share-alt
 icon_type: custom

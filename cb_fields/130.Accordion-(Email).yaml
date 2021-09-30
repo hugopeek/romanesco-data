@@ -3,7 +3,7 @@ parent_properties: null
 input: repeater
 name: 'Accordion (Email)'
 description: ''
-sortorder: 74
+sortorder: 75
 category: 11
 icon: tabs
 template: '@CHUNK mbContentAccordionRow'
