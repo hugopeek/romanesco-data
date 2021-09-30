@@ -5,13 +5,19 @@ Released on ...
 
 New features:
 - Add post hook for pThumb to optimize the image and generate a WebP version
+- Add ContentBlock with Table of Contents menu
 
 Fixes and improvements:
+- Don't remove rows in mobile reversed grids (breaks multi-row nested layouts)
+- Fix responsive content image sizes in stackable on tablet grids
+- If grids are stackable on tablet, also hide designated mobile elements
+- Use placeholder to detect ToC instead of toc_enabled_templates system setting
+- Show ToC submenu in dropdown on tablet and mobile
 - Move shared overview settings to separate molecules
 - Fix regClient scripts not being parsed in Markdown pages on first load
 - Load external JS from head with defer
 - Load all conditional assets through a single snippet
-- Don't use tag label variant anymore (excluded from semantic.css)
+- Don't use tag label variant anywhere (excluded from default semantic.css)
 - Add SUI list class to ul and ol tags in Markdown (only at first level)
 - Remove conditionals for empty logo paths (to clear media source path)
 - Add theme variables for inverted logo paths
