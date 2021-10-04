@@ -9,6 +9,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 Stack columns on top of each other on mobile=stackable
 Start stacking on tablet breakpoint already=on tablet
 Center content when stacked=center when stacked
-Reverse column order on mobile=mobile reversed
+Reverse column order on mobile (only works with a single nested layout!)=mobile reversed
 Double number of columns on each breakpoint=doubling
 Do nothing (check if no other option was set!)=static

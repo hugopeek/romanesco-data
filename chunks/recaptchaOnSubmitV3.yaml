@@ -1,0 +1,61 @@
+id: 583
+name: recaptchaOnSubmitV3
+description: 'Custom tpl chunk for the recaptchav2 extra, which also supports Recaptcha V3 now. This verifies the Recaptcha token with the Google API after the submit button is clicked.'
+category: m_fb_antispam
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.recaptchaonsubmitv3.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:12:"experimental";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.recaptchaonsubmitv3.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<script defer src="https://www.google.com/recaptcha/api.js?render=[[+site_key]]&hl=[[++cultureKey]]"></script>
+<div id="rc-root-[[+action_key]]-[[+form_id]]">
+    <input type="hidden" name="[[+token_key]]">
+    <input type="hidden" name="[[+action_key]]" value="[[+form_id]]">
+</div>
+
+<script>
+    (function() {
+
+        grecaptcha.ready(function() {
+            var rcr = document.getElementById('rc-root-[[+action_key]]-[[+form_id]]');
+            if (!rcr) {
+                console.error('recaptcha root not found');
+                return;
+            }
+            var form = rcr.closest('form');
+            if (!form) {
+                console.error('recaptcha root does not appear to be inside a form');
+                return;
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                grecaptcha.execute('[[+site_key]]', {action: '[[+form_id]]'}).then(function(token) {
+                    rcr.querySelector('[name="[[+token_key]]"]').value = token;
+                    form.submit();
+                });
+
+            });
+        });
+
+    }) ();
+
+    // Polyfill for closest() and matches() for IE9+
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.webkitMatchesSelector;
+    }
+
+    if (!Element.prototype.closest) {
+        Element.prototype.closest = function(s) {
+            var el = this;
+
+            do {
+                if (Element.prototype.matches.call(el, s)) return el;
+                el = el.parentElement || el.parentNode;
+            } while (el !== null && el.nodeType === 1);
+            return null;
+        };
+    }
+</script>

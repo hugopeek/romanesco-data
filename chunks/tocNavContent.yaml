@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[+toc_type:contains=`dropdown`:then=`
-<div id="dropdown-toc" class="[[+toc_type:contains=`list`:then=`hidden element`]]">
+<div id="dropdown-toc" class="[[+toc_type:contains=`list`:then=`mobile only`]]">
     [[$tocNavDropdown]]
 </div>
 `]]

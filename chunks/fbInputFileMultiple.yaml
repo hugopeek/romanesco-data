@@ -8,9 +8,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[!AjaxUpload?
     &uid=`[[+name]]`
+    &maxFiles=`[[+upload_limit]]`
+    &maxFilesizeMb=`[[+max_file_size]]`
     &allowedExtensions=`[[+allowed_file_types]]`
     &thumbX=`150`
     &thumbY=`150`
-    &addJs=`0`
     &addCss=`0`
 ]]
