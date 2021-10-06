@@ -28,7 +28,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`
         !recaptchav3_render?
             &tpl=`recaptchaOnSubmitV3`
-            &action_key=`form_[[*id]]`
+            &token_key=`token-[[*id]]`
+            &action_key=`fb[[*id]]`
         `
 ]]]]
 [[!+fb[[*id]].error.recaptchav2_error:replace=`span==div`]]
