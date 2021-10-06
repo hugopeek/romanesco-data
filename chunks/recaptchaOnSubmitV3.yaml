@@ -12,6 +12,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <input type="hidden" name="submit-[[*alias]]" value="1">
 </div>
 
+<p class="recaptcha notice">
+    <small>[[%formblocks.form.recaptchav3_legal_notice]]</small>
+</p>
+
 <script>
     window.addEventListener('DOMContentLoaded', function() {
 
