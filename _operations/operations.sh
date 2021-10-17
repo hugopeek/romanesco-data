@@ -63,7 +63,7 @@ localUser=
 phpUser=
 phpVersion=
 wwwPath=
-gitifyPath=
+gitifyCmd=
 modxVersion=
 defaultUser=
 defaultEmail=
@@ -144,11 +144,10 @@ installPathTheme="$installPath/assets/semantic/src/themes/romanesco"
 defaultsPath="$installPathData/_defaults"
 
 # Gitify command
-if ! [ "$gitifyPath" ]
+if ! [ "$gitifyCmd" ]
 then
-  gitifyPath="$operationsPath/vendor"
+  gitifyCmd="$operationsPath/vendor/bin/gitify"
 fi
-gitifyCmd="${gitifyPath%/}/bin/gitify"
 
 # GPM packages
 gpmPath="${gpmPath%/}"
