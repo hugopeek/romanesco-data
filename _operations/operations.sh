@@ -144,7 +144,11 @@ installPathTheme="$installPath/assets/semantic/src/themes/romanesco"
 defaultsPath="$installPathData/_defaults"
 
 # Gitify command
-gitifyCmd="$gitifyPath/Gitify"
+if ! [ "$gitifyPath" ]
+then
+  gitifyPath="$operationsPath/vendor"
+fi
+gitifyCmd="${gitifyPath%/}/bin/gitify"
 
 # GPM packages
 gpmPath="${gpmPath%/}"
