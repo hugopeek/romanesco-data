@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+image:notempty=`
 <div class="image">
-    <img src="[[pthumb? &input=`[[+image]]` &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`]]" alt="[[+heading]]">
+    <img src="[[pthumb:imgOptimizeThumb? &input=`[[+image]]` &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`]]" alt="[[+heading]]">
 </div>
 `]]
 <div class="content">
