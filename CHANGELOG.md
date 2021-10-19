@@ -4,12 +4,19 @@
 Released on ...
 
 New features:
-- Add post hook for pThumb to optimize the image and generate a WebP version
+- Add option to use Recaptcha v3 in forms
 - Add ContentBlock with Table of Contents menu
+- Add output modifier for pThumb to optimize image and generate WebP version
 
 Fixes and improvements:
-- Make sure ClientConfig menu doesn't disappear after an update
-- Exclude namespaces from data extract
+- Return to main Gitify repository and use v2
+- Replace non-existing default template in 2 Column Overview layout settings
+- Fix scenario where getImageDimensions would not return width and height
+- Make sure AjaxUpload scripts are run after jQuery is loaded
+- Add missing upload_limit and max_file_size CB settings in AjaxUpload snippet
+- Rename formblocks.antispam setting to formblocks.antispam_hooks
+- Wait with loading Recaptcha v2 until form becomes active
+- Move honeypot and recaptcha elements to separate (overridable) chunk
 - Fix responsive content image sizes in stackable on tablet grids
 - If grids are stackable on tablet, also show/hide designated mobile elements
 - Use placeholder to detect ToC instead of toc_enabled_templates system setting
@@ -26,7 +33,6 @@ Fixes and improvements:
 - Rename matomo_tracking_code to alternative_tracking_code
 - Move Leaflet asset paths and integrity hashes to system settings
 - Move img_breakpoints to system settings
-- Add pThumb post-hook to system settings (customization in pThumb core)
 - Add img_quality as system setting too (baseline for optional post-processing)
 - Fix icon buttons in generated tab navigation
 - Only preload backgrounds.css if critical CSS is enabled
