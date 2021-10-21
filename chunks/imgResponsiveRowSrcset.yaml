@@ -6,4 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+src:pthumb:imgOptimizeThumb=`[[+crop]]&w=[[+width:lte=`[[+breakpoint]]`:then=`[[+width]]`:else=`[[+breakpoint]]`]]&q=[[+quality]]`]] [[+breakpoint]]w
+[[pthumb:imgOptimizeThumb?
+    &input=`[[+src]]`
+    &options=`[[+crop]]&w=[[+width:lte=`[[+breakpoint]]`:then=`[[+width]]`:else=`[[+breakpoint]]`]]&q=[[+quality]]`
+]] [[+breakpoint]]w
