@@ -1,9 +1,10 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.12.1
-Released on ...
+## v1.13.0
+Released on October 21, 2021
 
 New features:
+- Add front-end validation to FormBlocks
 - Add option to use Recaptcha v3 in forms
 - Add ContentBlock with Table of Contents menu
 - Add output modifier for pThumb to optimize image and generate WebP version
@@ -11,6 +12,7 @@ New features:
 Fixes and improvements:
 - Return to main Gitify repository and use v2
 - Replace non-existing default template in 2 Column Overview layout settings
+- Make sure inverted path configuration settings don't trigger CSS rebuild
 - Fix scenario where getImageDimensions would not return width and height
 - Make sure AjaxUpload scripts are run after jQuery is loaded
 - Add missing upload_limit and max_file_size CB settings in AjaxUpload snippet
