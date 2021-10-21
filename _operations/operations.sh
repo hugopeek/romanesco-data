@@ -55,8 +55,8 @@ RED="\033[0;31m"
 GREEN="\033[1;32m"
 YELLOW="\033[0;33m"
 NC='\033[0m' #no color
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
+BOLD="\033[1m"
+NORMAL="\033[0m"
 
 # local defaults
 localUser=
