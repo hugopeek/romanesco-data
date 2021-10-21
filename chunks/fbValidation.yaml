@@ -6,20 +6,19 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[!fbFormReport?
-    &formID=`[[*id]]`
-    &tplPrefix=`fbValidationRow`
-]]
 <script>
-    $('#form-[[*alias]]')
-        .form({
-            on: 'blur',
-            fields: {
-                [[!fbFormReport?
-                    &formID=`[[*id]]`
-                    &tplPrefix=`fbValidationRow`
-                ]]
-            }
-        })
-    ;
+    window.addEventListener('DOMContentLoaded', function() {
+        $('.ui.form#form-[[*alias]]')
+            .form({
+                on: 'submit',
+                fields: {
+                    [[!fbFormReport:strip?
+                        &formID=`[[*id]]`
+                        &tplPrefix=`fbValidationRow_`
+                        &requiredOnly=`1`
+                    ]]
+                }
+            })
+        ;
+    });
 </script>

@@ -6,5 +6,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<strong>Email:</strong><br>
-[[+fb[[+id]]-email:empty=``]]<br><br>
+[[+field_name:fbStripAsAlias:replace=`-==`]]: {
+    identifier: 'fb[[*id]]-email',
+    rules: [{
+        type   : 'email',
+        prompt : '[[!$fbValidationPrompt:stripForJS? &name=`fb[[*id]]-email` &type=`email`]]'
+    }]
+},
