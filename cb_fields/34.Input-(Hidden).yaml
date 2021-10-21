@@ -1,5 +1,5 @@
 id: 34
-parent_properties: ''
+parent_properties: null
 input: chunk
 name: 'Input (Hidden)'
 description: ''

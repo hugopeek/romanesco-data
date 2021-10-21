@@ -1,5 +1,5 @@
 id: 35
-parent_properties: ''
+parent_properties: null
 input: chunk
 name: 'Accept Terms and Conditions'
 description: ''
@@ -11,4 +11,4 @@ properties: '{"chunk":"44","custom_preview":"<p><em>You can link to your terms b
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1
-settings: '[{"reference":"field_text","title":"Field text","fieldtype":"textfield","default_value":"I accept the [[+link]].","fieldoptions":"","field_is_exposed":"asField"},{"reference":"link_id","title":"Link resource ID","fieldtype":"textfield","default_value":"[[++terms_and_conditions_id]]","fieldoptions":"","field_is_exposed":"modal"},{"reference":"link_text","title":"Link text","fieldtype":"textfield","default_value":"Terms and Conditions","fieldoptions":"","field_is_exposed":"modal"}]'
+settings: '[{"reference":"field_text","title":"Field text","fieldtype":"textfield","default_value":"I accept the [[+link]].","fieldoptions":"","field_is_exposed":"asField"},{"reference":"link_id","title":"Link resource ID","fieldtype":"textfield","default_value":"[[++terms_and_conditions_id]]","fieldoptions":"","field_is_exposed":"modal"},{"reference":"link_text","title":"Link text","fieldtype":"textfield","default_value":"Terms and Conditions","fieldoptions":"","field_is_exposed":"modal"},{"reference":"required_text","title":"Validation text","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'
