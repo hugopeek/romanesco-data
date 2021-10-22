@@ -107,7 +107,7 @@ while [[ "$1" ]]; do
     defaultsFlag=
     while [[ "$2" ]]; do
       # move to next task
-      if [[ "$2" == "and" ]]; then break; fi
+      if [[ "$2" == "AND" ]]; then break; fi
       if [[ "$2" == "for" ]]; then break; fi
       case $2 in
       romanesco)
