@@ -13,4 +13,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &operand=`recaptchav3`
     &then=`<script async defer src="https://www.google.com/recaptcha/api.js?render=[[++recaptchav3.site_key]]&hl=[[++cultureKey]]"></script>`
 ]]
+[[[[modifiedIf?
+    &subject=`footerAdditional`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`$footerAdditional`
+]]]]
 [[++footer_additional]]
