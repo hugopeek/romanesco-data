@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div className="g-recaptcha" data-sitekey="[[+site_key]]"></div>
+<div class="g-recaptcha" data-sitekey="[[+site_key]]"></div>
 <script>
     window.addEventListener('DOMContentLoaded', function () {
         if (window.grcLoaderAdded) {

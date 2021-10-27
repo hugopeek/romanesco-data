@@ -78,7 +78,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[*content]]
 
         [[*content:containsnot=`type="submit"`:then=`
-        <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]] submit">
+        <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]]">
             [[[[modifiedIf?
                 &subject=`fbAntiSpamTheme`
                 &operator=`iselement`
