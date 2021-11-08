@@ -159,7 +159,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     <div class="ui container">
                         <h3>[[%romanesco.article.read_another]]</h3>
 
-                        <div class="ui top attached tabular menu">
+                        <div class="ui two item top attached tabular menu">
                             <a class="item active"
                                data-tab="segment-publication-1"
                                role="tab"
