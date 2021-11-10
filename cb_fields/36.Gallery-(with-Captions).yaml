@@ -6,7 +6,7 @@ description: ''
 sortorder: 16
 category: 2
 icon: gallery
-template: "[[$galleryRowImageCaption?\n    &image=`[[+image]]`\n    &alt=`[[+alt]]`\n    &caption=`[[+caption]]`\n    &column_type=`[[+column_type]]`\n    &lightbox=`[[+lightbox]]`\n    &unique_idx=`[[+unique_idx]]`\n    &idx=`[[+idx]]`\n]]"
+template: "[[$galleryRowImageCaption?\n    &image=`[[+image]]`\n    &alt=`[[+alt]]`\n    &caption=`[[+caption]]`\n    &column_type=`[[+column_type]]`\n    &lightbox=`[[+lightbox]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"
 properties: '{"wrapper_template":"[[$galleryOuter?\n    &rows=`[[+rows]]`\n    &cols=`[[+cols]]`\n    &padding=`[[+padding]]`\n    &caption=`1`\n    &lightbox=`[[+lightbox]]`\n    &lazy_load=`[[+lazy_load]]`\n    &responsive=`[[+responsive]]`\n    &unique_idx=`[[+unique_idx]]`\n    &layout_id=`[[+layout_id]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"2","layout_style":"default"}'
 availability: '[]'
 layouts: ''

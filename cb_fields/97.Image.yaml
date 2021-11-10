@@ -5,8 +5,8 @@ input: image
 name: Image
 description: ''
 icon: heading
-template: '[[+url]]'
-properties: '{"source":"0","directory":"\/[[+year]]\/","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0"}'
+template: '@CHUNK imageOuterGallery'
+properties: '{"source":"8","directory":"[[+resource]]\/","crop_directory":"[[+resource]]\/crops\/","crops":"default","open_crops_automatically":"0","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"default"}'
 availability: '[]'
 layouts: ''
 settings: '[]'
