@@ -6,13 +6,11 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<a href="[[+link]]" [[+link_rel:replace=`,== `:prepend=`rel="`:append=`"`]] [[+attributes]]>
-    [[$imageOuter?
-        &url=`[[+url]]`
-        &size=`[[+size]]`
-        &width=`[[+width]]`
-        &height=`[[+height]]`
-        &extension=`[[+extension]]`
-        &alt=`[[+alt]]`
+<a href="[[+link]]" class="ui [[+classes]] content image" [[+link_rel:replace=`,== `:prepend=`rel="`:append=`"`]] [[+attributes]]>
+    [[$imgResponsive? &uid=`[[+unique_idx]]`]]
+    [[If?
+        &subject=`[[+credits]][[+caption]]`
+        &operator=`notempty`
+        &then=`<div class="caption">[[+caption]][[+credits:stripTags=`<em>,<strong>`:prepend=`<span class="credits meta">&copy; `:append=`</span>`]]</div>`
     ]]
 </a>

@@ -7,14 +7,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[modifiedIf?
-    &subject=`[[+extension]]`
+    &subject=`[[+extension:lcase]]`
     &operator=`EQ`
     &operand=`svg`
     &then=`imageSVG`
-    &else=`imageBasic`
+    &else=`imageBasic[[+link:notempty=`Link`]]`
     &outputAsTpl=`1`
 
-    &url=`[[+url]]`
-    &alt=`[[+alt]]`
-    &classes=`rounded [[+classes:replace=`,== `]]`
+    &url=`[[+crops.default.url:empty=`[[+url]]`]]`
+    &width=`[[+crops.default.width:empty=`[[+width]]`]]`
+    &width=`[[+crops.default.height:empty=`[[+height]]`]]`
+    &classes=`rounded [[+classes:replace=`,== `:empty=`[[+img_size]] [[+options]] [[+position]]`]]`
 ]]

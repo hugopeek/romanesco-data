@@ -2,39 +2,6 @@ id: 532
 name: imageGallery
 description: ''
 category: a_content
+snippet: ''
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.imagegallery.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:37:"romanesco.imagegallery.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-
------
-
-[[+lazy_load:eq=`1`:then=`data-`:else=``:toPlaceholder=`lazy`]]
-[[++max_thumb_width:div=`[[+crops.default.width:empty=`[[+width]]`]]`:replace=`,==.`:mpy=`[[+crops.default.height:empty=`[[+height]]`]]`:round=`up`:toPlaceholder=`max_thumb_height`]]
-[[$imgResponsiveScale:toPlaceholder=`scale`?
-    &layout_id=`[[+layout_id]]`
-    &layout_column=`[[+layout_column]]`
-]]
-[[responsiveImgSrcset?
-    &breakpoints=`[[++romanesco.img_breakpoints]]`
-    &quality=`[[++romanesco.img_quality]]`
-    &src=`[[+crops.default.url:empty=`[[+url]]`]]`
-    &width=`[[++max_thumb_width]]`
-    &toPlaceholder=`srcset`
-]]
-<img [[+lazy]]srcset="[[+srcset]]"
-     [[+lazy]]sizes="(min-width: 1300px) [[+scale]]vw / [[+cols:textToNumber]],
-                     (min-width: 992px) [[+scale]]vw / [[+cols:textToNumber]],
-                     (min-width: 768px) 100vw,
-                     (min-width: 360px) 100vw,
-                     100vw"
-     [[+lazy]]src="[[pthumb:imgOptimizeThumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`]]"
-     [[+lazy:notempty=`
-     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 [[++max_thumb_width]] [[+max_thumb_height]]'%3E%3C/svg%3E"
-     class="lazy"
-     `]]
-     [[+lightbox:eq=`1`:then=`
-     data-lightbox-img="[[pthumb:imgOptimizeThumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width:mpy=`1.5`]]&q=[[++romanesco.img_quality]]&zc=1`]]"
-     data-caption="[[+title]]"
-     `]]
-     width="[[++max_thumb_width]]"
-     height="[[+max_thumb_height]]"
-     alt="[[+alt:htmlent]]"
->
+content: ''

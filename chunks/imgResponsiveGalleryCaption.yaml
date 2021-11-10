@@ -1,0 +1,41 @@
+id: 610
+name: imgResponsiveGalleryCaption
+description: 'A responsive image element, specialized for the Gallery with Caption block.'
+category: a_images
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:51:"romanesco.imgresponsivegallerycaption.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:52:"romanesco.imgresponsivegallerycaption.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+lazy_load:eq=`1`:then=`data-`:else=``:toPlaceholder=`lazy`]]
+[[++max_thumb_width:div=`[[+crops.default.width:empty=`[[+width]]`]]`:replace=`,==.`:mpy=`[[+crops.default.height:empty=`[[+height]]`]]`:round=`up`:toPlaceholder=`max_thumb_height`]]
+[[$imgResponsiveScale:toPlaceholder=`scale`?
+    &layout_id=`[[+layout_id]]`
+    &layout_column=`[[+layout_column]]`
+    &uid=`[[+unique_idx]]`
+]]
+[[responsiveImgSrcset?
+    &breakpoints=`[[++romanesco.img_breakpoints]]`
+    &quality=`[[++romanesco.img_quality]]`
+    &src=`[[+crops.default.url:empty=`[[+url]]`]]`
+    &width=`[[++max_thumb_width]]`
+    &toPlaceholder=`srcset`
+]]
+<img [[+lazy]]srcset="[[+srcset]]"
+     [[+lazy]]sizes="(min-width: 1300px) calc([[+scale]]vw / [[+cols:textToNumber]]),
+                     (min-width: 992px) calc([[+scale]]vw / [[+cols:textToNumber]]),
+                     (min-width: 768px) [[+cols:textToNumber:gt=`2`:then=`calc(([[+scale]]vw - 2em) / 2)`:else=`[[+scale]]vw`]],
+                     (min-width: 360px) [[+cols:textToNumber:gt=`2`:then=`calc(([[+scale]]vw - 2em) / 2)`:else=`[[+scale]]vw`]],
+                     (max-width: 359px) calc([[+scale]]vw / [[+cols:textToNumber]])"
+     [[+lazy]]src="[[pthumb:imgOptimizeThumb? &input=`[[+crops.default.url:empty=`[[+url]]`]]` &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`]]"
+     [[+lazy:notempty=`
+     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 [[++max_thumb_width]] [[+max_thumb_height]]'%3E%3C/svg%3E"
+     class="lazy"
+     `]]
+     [[+lightbox:eq=`1`:then=`
+     data-lightbox-img="[[pthumb:imgOptimizeThumb? &input=`[[+url]]` &options=`w=[[++max_thumb_width:mpy=`1.5`]]&q=[[++romanesco.img_quality]]&zc=1`]]"
+     data-caption="[[+title]]"
+     `]]
+     width="[[++max_thumb_width]]"
+     height="[[+max_thumb_height]]"
+     alt="[[+alt:htmlent]]"
+>
