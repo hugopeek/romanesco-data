@@ -9,18 +9,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <div class="column">
     <a class="ui rounded image" href="[[~[[+id]]]]">
         [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
-            &tvname=`overview_img_landscape`
+            &tvname=`overview_img_[[+img_type:empty=`landscape`]]`
             &docid=`[[+id]]`
             &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`
             &type=`tpl`
             &tpl=`imgOverview`
+            &cols=`[[+img_snap:eq=`1`:then=`1`:else=`2`]]`
         ]]
     </a>
 </div>
-<div class="[[+cols]] wide floated column">
-    <h2 class="ui header">
-        <a href="[[~[[+id]]]]">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>
-    </h2>
-    <p>[[+introtext:stripString=`<p>`:stripString=`</p>`]]</p>
-    <p><a href="[[~[[+id]]]]" class="ui primary button">[[+link_text]]</a></p>
+<div class="[[+content_width]] wide column">
+    [[$overviewRowBasic? &uid=`[[+unique_idx]]`]]
 </div>

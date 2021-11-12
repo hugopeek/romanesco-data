@@ -19,7 +19,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <div id="toolbar" class="ui vertical secondary segment">
     <div class="ui container">
         <div class="ui stackable relaxed grid">
-            <div class="ten wide tablet ten wide computer twelve wide large screen middle aligned column">
+            <div class="ten wide tablet ten wide computer twelve wide large screen stretched middle aligned column">
                 [[$breadcrumbs]]
             </div>
             <div class="six wide tablet six wide computer four wide large screen column">
