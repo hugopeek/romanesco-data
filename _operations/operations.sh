@@ -188,5 +188,5 @@ then
   printf "${GREEN}Romanesco successfully updated!${NORMAL}\n"
 fi
 
-echo "Bye"
+echo "Time to let it grow."
 exit
