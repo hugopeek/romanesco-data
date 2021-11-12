@@ -3,7 +3,7 @@ parent: 109
 parent_properties: '{"key":"position","width":"30"}'
 name: Position
 description: ''
-sortorder: 10
+sortorder: 1
 icon: paragraph
 template: '[[+value]]'
 properties: '{"use_tinyrte":"0"}'
