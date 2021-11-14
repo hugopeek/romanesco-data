@@ -41,7 +41,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     &c29=`24_main`      &do29=`100`
 
-    [[$imgResponsiveScaleTheme? &uid=`[[+unique_idx]]`]]
+    [[[[modifiedIf?
+        &subject=`imgResponsiveScaleTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$imgResponsiveScaleTheme? &uid=`[[+unique_idx]]``
+    ]]]]
 
     &default=`51`
 ]]
