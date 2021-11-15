@@ -1,5 +1,39 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.14.0
+Released on November 15, 2021
+
+New features:
+- Add ability to crop regular content images
+- Add widget to collect feedback from client browser (currently using Ybug)
+- Add isEditor snippet to check if user is logged in to manager
+
+Fixes and improvements:
+- Fix issue where slider would break if slides are separate Image CBs
+- Prevent content in Presentation template from being turned into a slider
+- Add relevant settings from regular overview CBs to 2 column fluid overview
+- Rename incorrect cols field to content_width in 2 column fluid overview [BC]
+- Add quality override setting for global background image
+- Optimize distribution of breakpoint values for responsive image srcsets
+- Apply responsive image sizing to Cards CB
+- Don't load SVG images with srcset and sizes in galleries
+- Improve accuracy of responsive image sizes for stackable and doubling grids
+- Improve structure of content and gallery image patterns
+- Always round max height pixel values up to next whole number
+- Make sure decimal separator is a '.' when rounding numbers
+- Calculate correct thumb height in Open Graph image metadata
+- Limit Open Graph metadata to 1 image
+- Remove submit class from submit button container in forms
+- Make front-end form validation compatible with Recaptcha v3
+- Load headAdditional and footerAdditional chunks directly, if present
+- Place rel element at front of external CSS links
+- Defer loading of Leaflet JS
+- Add missing rel stylesheet element to Leaflet CSS link
+- Require uppercase AND when chaining operations tasks
+- Explicitly enable front-end validation in FormBlocks forms
+- Abort optimization if image type is SVG
+- Fix image optimization in srcset rows
+
 ## v1.13.0
 Released on October 21, 2021
 
