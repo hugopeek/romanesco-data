@@ -401,6 +401,10 @@ data:
         primary:
             - id
             - title
+    romanesco_external_links:
+        class: rmExternalLink
+        primary:
+            - id
     romanesco_options:
         class: rmOption
         primary:
