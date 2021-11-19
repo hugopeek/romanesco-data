@@ -1,0 +1,31 @@
+id: 612
+name: externalNavItemList
+description: ''
+category: a_nav_external
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.externalnavitemlist.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.externalnavitemlist.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="[[+classes]] item">
+    <div class="image">
+        <a class="ui circular label" href="[[~[[*id]]]]#reference-[[+number]]">[[+number]]</a>
+    </div>
+    <div class="content">
+        [[+title:notempty=`
+        <div class="header">
+            [[+title]]
+            [[+date_accessed:notempty=`
+            <i class="small muted calendar alternate outline icon" title="[[%romanesco.external.accessed_on]] [[+date_accessed:strtotime:date=`[[++romanesco.date_format_short]]`]]"></i>
+            `]]
+        </div>
+        `]]
+        <div class="small description">
+            [[If?
+                &subject=`[[+url]]`
+                &operator=`notempty`
+                &then=`<a href="[[+url]]" target="_blank">[[+description:empty=`[[+url]]`]]</a>`
+                &else=`[[+description]]`
+            ]]
+        </div>
+    </div>
+</div>

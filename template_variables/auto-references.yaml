@@ -1,0 +1,15 @@
+id: 142
+type: listbox
+name: auto_references
+caption: 'Automatic reference links'
+description: 'Turn references to an external link (the ones you created under TVs > Links) into an actual link. Links are referenced by their number value and must be enclosed in square brackets: [12].'
+category: Navigation
+elements: On==1||Off==0
+rank: 11
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+@INHERIT 0
