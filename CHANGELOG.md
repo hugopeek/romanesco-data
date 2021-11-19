@@ -1,14 +1,19 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.14.0
-Released on November 15, 2021
+Released on November 19, 2021
 
 New features:
+- Add option to automatically link to external references in content
 - Add ability to crop regular content images
 - Add widget to collect feedback from client browser (currently using Ybug)
 - Add isEditor snippet to check if user is logged in to manager
 
 Fixes and improvements:
+- Add box shadow to Markdown images
+- Turn external links TV into MIGXdb grid [BC]
+- Don't generate critical CSS for Downloads
+- Include new external_links table in Gitify project config
 - Include category access permissions in Gitify extract
 - Fix access permissions for static elements, symlinks and weblinks
 - Fix issue where slider would break if slides are separate Image CBs
