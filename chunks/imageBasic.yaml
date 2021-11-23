@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <figure class="ui [[+classes]] content image">
-    [[$imgResponsive? &uid=`[[+unique_idx]]`]]
+    [[$imgResponsive? &uid=`[[+url]]`]]
     [[If?
         &subject=`[[+credits]][[+caption]]`
         &operator=`notempty`
