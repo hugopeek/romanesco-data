@@ -428,7 +428,7 @@ packages:
         packages:
             - ace
             - collections
-            - formit-4.2.6-pl
+            - formit-4.2.7-pl
             - getcache
             - getpage
             - getresources
