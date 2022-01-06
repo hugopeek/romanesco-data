@@ -10,8 +10,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <div class="ui [[+container_type]] container">
         <div class="ui [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] equal width grid">
             <div class="row">
-                <div class="column">[[+main]]</div>
-                <div class="[[+sidebar_width]] wide column">[[+sidebar]]</div>
+                <div class="main column">[[+main]]</div>
+                <div class="[[+sidebar_width]] wide sidebar column">[[+sidebar]]</div>
             </div>
         </div>
     </div>
