@@ -3,6 +3,7 @@ parent_properties: ''
 input: heading
 name: 'Heading (with Subtitle)'
 description: ''
+content_desc: null
 sortorder: 1
 category: 1
 icon: heading

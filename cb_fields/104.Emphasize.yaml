@@ -4,6 +4,7 @@ parent_properties: '{"key":"emphasize","width":"35"}'
 input: dropdown
 name: Emphasize
 description: ''
+content_desc: null
 sortorder: 1
 icon: paragraph
 template: '[[+value]]'

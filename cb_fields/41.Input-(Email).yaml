@@ -3,6 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Input (Email)'
 description: ''
+content_desc: null
 sortorder: 54
 category: 7
 icon: email

@@ -3,6 +3,7 @@ parent_properties: ''
 input: chunk
 name: Form
 description: 'Add a form here. You can build your own forms with FormBlocks, under Global Content > Forms.'
+content_desc: null
 sortorder: 30
 category: 3
 icon: form

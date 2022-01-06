@@ -4,6 +4,7 @@ parent_properties: '{"key":"image","width":"100"}'
 input: image
 name: Image
 description: ''
+content_desc: null
 icon: heading
 template: '@CHUNK imageOuterGallery'
 properties: '{"source":"8","directory":"[[+resource]]\/","crop_directory":"[[+resource]]\/crops\/","crops":"default","open_crops_automatically":"0","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"default"}'

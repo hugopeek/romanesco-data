@@ -3,6 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Cards (Flexible)'
 description: ''
+content_desc: null
 sortorder: 25
 category: 4
 icon: th-large

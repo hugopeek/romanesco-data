@@ -4,6 +4,7 @@ parent_properties: '{"key":"link","width":"65"}'
 input: link
 name: Link
 description: ''
+content_desc: null
 icon: code
 template: '[[+link]]'
 properties: '{"link_detection_pattern_override":"","limit_to_current_context":"0"}'

@@ -3,6 +3,7 @@ parent: 28
 parent_properties: '{"key":"field_option","width":"70"}'
 name: Option
 description: ''
+content_desc: null
 sortorder: 1
 template: '[[+value:fbStripNonAlpha]]'
 properties: '{"use_tinyrte":"0"}'

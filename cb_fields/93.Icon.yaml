@@ -4,6 +4,7 @@ parent_properties: '{"key":"heading_icon","width":"100"}'
 input: image
 name: Icon
 description: ''
+content_desc: null
 sortorder: 2
 icon: heading
 template: '[[+url]]'

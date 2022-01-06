@@ -3,6 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Social Connect Buttons (Email)'
 description: ''
+content_desc: null
 sortorder: 73
 category: 11
 icon: share-alt

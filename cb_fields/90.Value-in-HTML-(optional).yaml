@@ -3,6 +3,7 @@ parent: 28
 parent_properties: '{"key":"field_value","width":"30"}'
 name: 'Value in HTML (optional)'
 description: ''
+content_desc: null
 sortorder: 10
 icon: paragraph
 template: '[[+value:fbStripNonAlpha]]'

@@ -3,6 +3,7 @@ parent: 120
 parent_properties: '{"key":"heading","width":"100"}'
 name: Question
 description: ''
+content_desc: null
 sortorder: 1
 icon: paragraph
 template: '[[+value]]'

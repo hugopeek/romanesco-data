@@ -4,6 +4,7 @@ parent_properties: '{"key":"collapse_default","width":"20"}'
 input: dropdown
 name: 'Default state'
 description: ''
+content_desc: null
 sortorder: 3
 icon: paragraph
 template: '[[+value]]'

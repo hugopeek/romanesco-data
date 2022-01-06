@@ -4,6 +4,7 @@ parent_properties: '{"key":"caption","width":"100"}'
 input: redactor
 name: Caption
 description: ''
+content_desc: null
 sortorder: 2
 template: '[[+value]]'
 properties: '{"configuration_set":"2"}'

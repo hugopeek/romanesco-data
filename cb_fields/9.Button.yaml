@@ -3,6 +3,7 @@ parent_properties: ''
 input: link
 name: Button
 description: ''
+content_desc: null
 sortorder: 28
 category: 3
 icon: link

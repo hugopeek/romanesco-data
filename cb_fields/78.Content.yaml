@@ -4,6 +4,7 @@ parent_properties: '{"key":"content","width":"100"}'
 input: layout
 name: Content
 description: ''
+content_desc: null
 sortorder: 3
 icon: chunk_A
 template: '[[+value]]'

@@ -3,6 +3,7 @@ parent_properties: ''
 input: image
 name: 'Icon (SVG)'
 description: ''
+content_desc: null
 sortorder: 12
 category: 2
 icon: pie-chart

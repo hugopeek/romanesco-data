@@ -4,10 +4,11 @@ parent_properties: '{"key":"repeat","width":"30"}'
 input: dropdown
 name: Repeat
 description: ''
+content_desc: 'CSS background-repeat value.'
 sortorder: 3
 icon: paragraph
 template: '[[+value]]'
-properties: '{"options":"no-repeat==Don''t repeat\nrepeat-x==Repeat horizontally\nrepeat-y==Repeat vertically\nrepeat==Repeat in all directions","default_value":"no-repeat"}'
+properties: '{"options":"no-repeat==Don''t repeat\nrepeat-x==Repeat horizontally\nrepeat-y==Repeat vertically\nrepeat==Repeat in all directions","default_value":"no-repeat","type_ahead":"No"}'
 availability: '[]'
 layouts: ''
 settings: '[]'

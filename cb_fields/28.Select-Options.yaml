@@ -3,6 +3,7 @@ parent_properties: null
 input: repeater
 name: 'Select Options'
 description: ''
+content_desc: null
 sortorder: 56
 category: 7
 icon: checkbox

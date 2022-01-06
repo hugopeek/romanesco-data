@@ -3,6 +3,7 @@ parent_properties: ''
 input: headingimageinput
 name: 'Heading (with SVG icon)'
 description: ''
+content_desc: null
 sortorder: 3
 category: 1
 icon: heading

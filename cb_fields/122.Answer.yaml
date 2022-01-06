@@ -4,6 +4,7 @@ parent_properties: '{"key":"content","width":"100"}'
 input: redactor
 name: Answer
 description: ''
+content_desc: null
 sortorder: 2
 icon: richtext
 template: '[[+value]]'

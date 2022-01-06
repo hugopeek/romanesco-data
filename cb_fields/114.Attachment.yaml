@@ -4,10 +4,11 @@ parent_properties: '{"key":"attachment","width":"30"}'
 input: dropdown
 name: Attachment
 description: ''
+content_desc: 'Decide whether to scroll background when content scrolls, or scroll the content over a fixed background.'
 sortorder: 4
 icon: paragraph
 template: '[[+value]]'
-properties: '{"options":"scroll==Scroll\nfixed==Fixed","default_value":"scroll"}'
+properties: '{"options":"scroll==Scroll\nfixed==Fixed","default_value":"scroll","type_ahead":"No"}'
 availability: '[]'
 layouts: ''
 settings: '[]'

@@ -3,6 +3,7 @@ parent_properties: ''
 input: hr
 name: Divider
 description: ''
+content_desc: null
 sortorder: 19
 category: 4
 icon: horizontalrule

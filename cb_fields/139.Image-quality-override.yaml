@@ -2,7 +2,8 @@ id: 139
 parent: 109
 parent_properties: '{"key":"quality","width":"30"}'
 name: 'Image quality override'
-description: 'Here you can override the quality setting defined under Configuration. Useful for edge cases such as graphical patterns and line drawings, or when quality is not such a big deal and you really want file size to be as low as possible.'
+description: ''
+content_desc: 'Override the quality setting defined under Configuration. Useful for edge cases such as graphical patterns and line drawings, or when quality is not such a big deal and you really want file size to be as low as possible. Enter a value between 0-100.'
 sortorder: 5
 icon: paragraph
 template: '[[+value]]'

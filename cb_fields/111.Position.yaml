@@ -3,6 +3,7 @@ parent: 109
 parent_properties: '{"key":"position","width":"30"}'
 name: Position
 description: ''
+content_desc: 'CSS background-position value, for example: bottom 80%. The default is ''center center''.'
 sortorder: 1
 icon: paragraph
 template: '[[+value]]'

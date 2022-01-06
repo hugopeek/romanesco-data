@@ -3,6 +3,7 @@ parent: 31
 parent_properties: '{"key":"field_option","width":"100"}'
 name: Option
 description: ''
+content_desc: null
 sortorder: 1
 template: '[[+value:fbStripNonAlpha]]'
 properties: '[]'

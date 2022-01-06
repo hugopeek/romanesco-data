@@ -4,6 +4,7 @@ parent_properties: '{"key":"link","width":"100"}'
 input: link
 name: Link
 description: ''
+content_desc: null
 sortorder: 6
 icon: code
 template: '[[+link]]'

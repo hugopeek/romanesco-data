@@ -3,6 +3,7 @@ parent_properties: ''
 input: layout
 name: 'Nested Layout'
 description: 'Add a new layout within an existing layout. This allows you to divide each column inside the parent layout separately, opening up an infinite amount of combinations.'
+content_desc: null
 sortorder: 17
 category: 4
 icon: template_01

@@ -3,6 +3,7 @@ parent: 23
 parent_properties: '{"key":"heading","width":"100"}'
 name: Heading
 description: ''
+content_desc: null
 sortorder: 1
 template: '[[+value]]'
 properties: '[]'

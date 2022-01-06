@@ -3,6 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Video (Vimeo)'
 description: ''
+content_desc: null
 sortorder: 14
 category: 2
 icon: video

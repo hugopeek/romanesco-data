@@ -3,6 +3,7 @@ parent_properties: ''
 input: layout
 name: Slider
 description: 'Turn child elements into a slider. Can also process Overview items as slides.'
+content_desc: null
 sortorder: 31
 category: 3
 icon: layout_img_right

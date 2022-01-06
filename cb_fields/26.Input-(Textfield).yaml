@@ -3,6 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Input (Textfield)'
 description: ''
+content_desc: null
 sortorder: 52
 category: 7
 icon: paragraph

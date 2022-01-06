@@ -3,6 +3,7 @@ parent_properties: null
 input: heading
 name: 'Heading (Email)'
 description: ''
+content_desc: null
 sortorder: 67
 category: 11
 icon: heading
