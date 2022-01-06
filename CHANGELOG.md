@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.14.1
+Released on ...
+
+Fixes and improvements:
+- Add content alignment to Segment CB
+
 ## v1.14.0
 Released on November 19, 2021
 
