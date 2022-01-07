@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &subject=`[[+cta_link]]`
     &operator=`notempty`
     &then=`
-    <a class="item" href="[[~[[If? &subject=`[[+cta_link]]` &operator=`notempty` &then=`[[+cta_link]]` &else=`[[++error_page]]`]]]]">
+    <a class="item" href="[[[[If? &subject=`[[+cta_link]]` &operator=`notempty` &then=`~[[+cta_link]]`]]]]">
         <div class="content">
             [[+main]]
         </div>

@@ -11,7 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <div class="ui [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] equal width grid">
             <div class="row">
                 <div class="[[+sidebar_width]] wide sidebar column">[[+sidebar]]</div>
-                <div class="main column">[[+main]]</div>
+                <div class="[[+title_inflate]] main column">[[+main]]</div>
             </div>
         </div>
     </div>

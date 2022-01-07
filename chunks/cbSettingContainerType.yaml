@@ -6,7 +6,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Standard width=
 Full width (fluid)=fluid
+Standard width=
 Slightly narrower=tightened
-Optimal readability=text
+Improved readability (normal text)=conventional text
+Optimal readability (large text)=text
