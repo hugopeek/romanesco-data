@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Input (Hidden)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 62
 category: 7
 icon: eye-slash
@@ -12,4 +12,4 @@ template: '[[+tag]]'
 properties: '{"chunk":"43","custom_preview":"<p><\/p>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
-settings: '[{"reference":"field_name","title":"Name","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
+settings: '[{"reference":"field_name","title":"Name","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_name_html","title":"Name in HTML","description":"Optional override for the name attribute. Recommended when using this field in custom hooks / automations.","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"field_value","title":"Value","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
