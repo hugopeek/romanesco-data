@@ -6,8 +6,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
-[[+field_name:fbStripAsAlias:replace=`-==`]]: {
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:replace=`-==`]]: {
     identifier: '[[+name]]',
     rules: [
         [[+field_type:is=`email`:then=`

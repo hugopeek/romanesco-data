@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`field_alias`? &input=`[[+field_name]]`]]
+[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`field_alias`? &input=`[[+field_name_html:empty=`[[+field_name]]`]]`]]
 [[!If:toPlaceholder=`checkbox_array`?
     &subject=`[[+field_type]]`
     &operator=`EQ`

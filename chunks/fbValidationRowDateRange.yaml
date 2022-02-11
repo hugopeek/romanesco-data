@@ -6,15 +6,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
-[[+field_name:fbStripAsAlias:replace=`-==`]]start: {
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:replace=`-==`]]start: {
     identifier: '[[+name]]-start',
     rules: [{
         type   : 'empty',
         prompt : '[[!$fbValidationPrompt:stripForJS? &type=`date_start`]]'
     }]
 },
-[[+field_name:fbStripAsAlias:replace=`-==`]]end: {
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:replace=`-==`]]end: {
     identifier: '[[+name]]-end',
     rules: [{
         type   : 'empty',

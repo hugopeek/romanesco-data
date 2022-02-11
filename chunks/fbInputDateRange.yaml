@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+field_name:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 
 <div id="[[+name]]" class="[[+field_cols]] [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] equal width [[++cultureKey]] date range fields">
     <input type="hidden" name="field_name" value="[[+field_name]]">
@@ -20,6 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 <input type="text" name="[[+name]]-start" id="[[+name]]-start" value="[[!+fb[[*id]].[[+name]]-start]]" placeholder="[[+placeholder_start]]">
             </div>
         </div>
+        [[+fb[[*id]].error.[[+name]]-start]]
     </div>
     <div class="field [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]-end]]` &operator=`notempty` &then=`error`]]">
         <label for="[[+name]]-end">[[+label_end]]</label>
@@ -29,6 +30,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 <input type="text" name="[[+name]]-end" id="[[+name]]-end" value="[[!+fb[[*id]].[[+name]]-end]]" placeholder="[[+placeholder_end]]">
             </div>
         </div>
+        [[+fb[[*id]].error.[[+name]]-end]]
     </div>
 </div>
 
