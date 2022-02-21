@@ -12,10 +12,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &operand=`svg`
     &then=`imageSVG`
     &else=`imageBasic[[+link:notempty=`Link`]]`
-    &outputAsTpl=`1`
-
+    &toPlaceholder=`img_tpl`
+]]
+[[$[[+img_tpl]]?
     &url=`[[+crops.default.url:empty=`[[+url]]`]]`
     &width=`[[+crops.default.width:empty=`[[+width]]`]]`
     &height=`[[+crops.default.height:empty=`[[+height]]`]]`
     &classes=`rounded [[+classes:replace=`,== `:empty=`[[+img_size]] [[+options]] [[+position]]`]]`
+
+    &layout_id=`[[+layout_id]]`
+    &layout_column=`[[+layout_column]]`
+    &uid=`[[+unique_idx]]`
 ]]

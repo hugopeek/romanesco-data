@@ -18,6 +18,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &quality=`[[++romanesco.img_quality]]`
     &src=`[[+crops.default.url:empty=`[[+url]]`]]`
     &width=`[[++max_thumb_width]]`
+    &uid=`[[+unique_idx]]`
     &toPlaceholder=`srcset`
 ]]
 <img [[+lazy]]srcset="[[+srcset]]"

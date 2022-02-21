@@ -6,6 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
+[[+url:notempty=`
 [[[[modifiedIf?
     &subject=`[[+extension:lcase]]`
     &operator=`EQ`
@@ -13,3 +14,4 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`svgSanitize? &file=`[[+url]]` &title=`[[+alt]]``
     &else=`$imgResponsiveGalleryCaption? &uid=`[[+unique_idx]]_[[+idx]]``
 ]]]]
+`]]
