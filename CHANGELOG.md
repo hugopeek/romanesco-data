@@ -4,6 +4,18 @@
 Released on ...
 
 Fixes and improvements:
+- Add ability to define custom render hooks in FormBlocks forms
+- Add ability to choose different value type when using Input Options in forms
+- Add option to FormBlocks fields to override the name attribute in HTML
+- Add caching and optimize requests for Youtube and Vimeo thumbnails
+- Remove nested troublemakers from headings in ToC menu
+- Add error messages to date range fields
+- Add improved readability layout width (with normal text size)
+- Add controls for inflated titles in main layout columns and CTAs
+- Load jQuery from local source when offline
+- Trim whitespace from edges if using clipString without value
+- Fix Romanesco class not being loaded when creating automatic references
+- Fix uid for imgResponsive chunks inside Image CBs
 - Add content alignment to Segment CB
 
 ## v1.14.0

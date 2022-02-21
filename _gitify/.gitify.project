@@ -470,8 +470,8 @@ packages:
             - renderresources
             - rowboat
             - seopro
-            - simplesearch-2.1.2-pl
-            - superboxselect-2.4.2-pl
+            - simplesearch
+            - superboxselect
             - svgsanitizer
             - switch
             - tagger
