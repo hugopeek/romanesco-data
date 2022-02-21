@@ -48,13 +48,18 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
         [[+math_question:isnot=`0`:then=`fb[[*id]]-math:math,`]]
-        [[$fbValidateCustomFields]][[++formblocks.honeypot_field:notempty=`,
+        [[[[modifiedIf?
+            &subject=`fbValidateCustomFields`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$fbValidateCustomFields`
+        ]]]][[++formblocks.honeypot_field:notempty=`,
         fb[[*id]]-[[++formblocks.honeypot_field]]:blank`]]`
     &validatePassword=`[[*fb_password_field:isnot=``:then=`1`:else=`0`]]`
 
     &errTpl=`<span class="help error">[[+error]]</span>`
     &placeholderPrefix=`fb[[*id]].`
-    &submitVar=`submit-[[+title]]`
+    &submitVar=`fb[[*id]]-submit`
     &successMsg=`[[%formblocks.registration.success_message]]`
 
     &activationResourceId=`[[*fb_activation_resource_id:empty=`[[++formblocks.activation_resource_id]]`]]`

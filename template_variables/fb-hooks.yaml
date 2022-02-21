@@ -2,10 +2,10 @@ id: 89
 type: text
 name: fb_hooks
 caption: 'Custom hook(s)'
-description: 'A snippet name (or comma separated list of snippet names), containing the hook(s). These hooks are executed after the form is submitted, but before any emails are sent.'
+description: 'A snippet name (or comma separated list of names), containing the hook(s). They are executed after the form is submitted, but before any emails are sent. Useful for writing to the database.'
 category: 'Settings - Advanced'
 elements: ''
-rank: 2
+rank: 3
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
 input_properties: null

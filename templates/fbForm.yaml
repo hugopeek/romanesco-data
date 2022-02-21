@@ -51,6 +51,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[*fb_prehooks:notempty=`[[*fb_prehooks]],`]]
         fbEmptyHook
     `
+    &renderHooks=`[[*fb_renderhooks]]`
     &hooks=`
         spam,
         [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
@@ -103,11 +104,16 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
         [[+math_question:isnot=`0`:then=`fb[[*id]]-math:required,`]]
-        [[$fbValidateCustomFields]][[++formblocks.honeypot_field:notempty=`,
+        [[[[modifiedIf?
+            &subject=`fbValidateCustomFields`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$fbValidateCustomFields`
+        ]]]][[++formblocks.honeypot_field:notempty=`,
         fb[[*id]]-[[++formblocks.honeypot_field]]:blank`]]`
     &errTpl=`<span class="help error">[[+error]]</span>`
     &placeholderPrefix=`fb[[*id]].`
-    &submitVar=`submit-[[*alias]]`
+    &submitVar=`fb[[*id]]-submit`
     &redirectTo=`[[+redirect_to]]`
 
     &store=`[[*fb_store_data:default=`0`]]`
