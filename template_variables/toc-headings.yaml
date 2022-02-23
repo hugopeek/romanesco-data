@@ -13,4 +13,4 @@ output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
 
 -----
 
-@INHERIT H1||H2||H3
+@INHERIT H1||H2||H3||H4
