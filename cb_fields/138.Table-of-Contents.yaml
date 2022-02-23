@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Table of Contents'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 66
 category: 1
 icon: tableofcontents
@@ -12,4 +12,4 @@ properties: '{"chunk":"579","custom_preview":"<p><em>The ToC menu contains all h
 availability: '[]'
 layouts: ''
 times_per_page: 1
-settings: '[{"reference":"toc_type","title":"Type","fieldtype":"select","default_value":"dropdown list","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Dropdown=dropdown\nList=list\nDropdown on mobile, list on desktop=dropdown list","field_is_exposed":"asField"},{"reference":"size","title":"Size","fieldtype":"select","default_value":"large","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1"}]'
+settings: '[{"reference":"toc_type","title":"Type","fieldtype":"select","default_value":"dropdown list","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Dropdown=dropdown\nList=list\nDropdown on mobile, list on desktop=dropdown list","field_is_exposed":"asField"},{"reference":"toc_title","title":"Menu title","description":"Optional. If you leave this empty, the title is retrieved from lexicon. And if you fill in ''hidden'', the title is gone.","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"toc_options_list","title":"List options","description":"","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Text only=text\nButtons only=secondary\nBorderless=borderless\nFull width=fluid","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"toc_options_dropdown","title":"Dropdown options","description":"","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Full width=fluid","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"toc_size","title":"Size","fieldtype":"select","default_value":"large","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1"}]'
