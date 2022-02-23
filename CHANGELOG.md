@@ -4,6 +4,8 @@
 Released on ...
 
 Fixes and improvements:
+- Add TV to select which heading levels are included in the ToC menu
+- Add layout options for dropdown and list views in ToC CB
 - Fix empty srcset values when using the same image more than once on a page
 - Load buttons, content images and card rows with chunk (instead of outputAsTpl)
 - Don't load image tag if Gallery or Cards image is empty
