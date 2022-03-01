@@ -4,6 +4,10 @@
 Released on ...
 
 Fixes and improvements:
+- Remove Manage tab with deprecated Global Backgrounds MIGX TV
+- Update patterns and structure in specific overviewRowFluid templates
+- Prevent Overview classes placeholders from leaking their values
+- Replace remaining If isnull comparisons with iselement
 - Add TV to select which heading levels are included in the ToC menu
 - Add layout options for dropdown and list views in ToC CB
 - Fix empty srcset values when using the same image more than once on a page
