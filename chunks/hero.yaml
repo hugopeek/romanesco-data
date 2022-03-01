@@ -37,10 +37,11 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &toPlaceholder=`header_background_class`
 ]]
 [[modifiedIf?
-    &subject=`[[$heroTitlesTheme]]`
-    &operator=`isnull`
-    &then=`heroTitles`
-    &else=`heroTitlesTheme`
+    &subject=`heroTitlesTheme`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`heroTitlesTheme`
+    &else=`heroTitles`
     &toPlaceholder=`hero_tpl`
 ]]
 

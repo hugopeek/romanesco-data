@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <div class="content">
-    <[[+title_hierarchy]] class="ui centered icon header">
+    <[[+title_hierarchy]] class="ui [[+title_classes]] centered icon header">
         [[If?
             &subject=`[[+icon_type]]`
             &operator=`EQ`

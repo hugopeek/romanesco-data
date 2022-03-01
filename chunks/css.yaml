@@ -71,9 +71,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 /* Additional styles */
 
-[[[[If?
-    &subject=`[[$globalBackgroundsTheme]]`
-    &operator=`isnull`
-    &then=``
-    &else=`$globalBackgroundsTheme`
+[[[[modifiedIf?
+    &subject=`globalBackgroundsTheme`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`$globalBackgroundsTheme`
+    &else=``
 ]]]]

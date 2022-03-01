@@ -6,6 +6,6 @@ properties: "a:2:{s:13:\"elementStatus\";a:7:{s:4:\"name\";s:13:\"elementStatus\
 
 -----
 
-<[[+title_hierarchy]] class="ui [[+classes]] header">
+<[[+title_hierarchy]] class="ui [[+title_classes]] [[+classes]] header">
     [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
 </[[+title_hierarchy]]>
