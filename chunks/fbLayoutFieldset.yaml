@@ -1,15 +1,24 @@
 id: 260
 name: fbLayoutFieldset
-description: ''
+description: 'NB: not referenced directly! Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.'
 category: o_formblocks
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.fblayoutfieldset.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.fblayoutfieldset.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
-[[+segment_type:ne=`none`:then=`segment`:else=`fieldset`:toPlaceholder=`segment_parent`]]
+[[modifiedIf?
+    &subject=`[[+segment_type]]`
+    &operator=`isnot`
+    &operand=`none`
+    &then=`segment`
+    &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`
+    &toPlaceholder=`segment_parent`
+]]
 [[+force_segment:eq=`1`:then=`segment`:else=`[[+segment_parent]]`:toPlaceholder=`segment`]]
 
-<fieldset id="[[+legend:fbStripAsAlias]]" class="ui [[+padding]] [[+segment]] [[+background]]">
-    [[+legend:notempty=`<legend class="ui large header">[[+legend]]</legend>`]]
+<fieldset [[+title:notempty=`id="fb[[*id]]-[[stripAsAlias? &input=`[[+title]]`]]"`]] class="ui [[+padding]] [[+segment]] [[+background:setBackground]]">
+    [[+legend:notempty=`<legend class="ui [[+form_size]] header">[[+legend]]</legend>`]]
+    [[*fb_form_layout:is=`inline`:then=`<span class="equal width fields">`]]
     [[+main]]
+    [[*fb_form_layout:is=`inline`:then=`</span>`]]
 </fieldset>

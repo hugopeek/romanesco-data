@@ -1,0 +1,36 @@
+id: 618
+name: cbLayoutBackground
+description: 'A wrapper for the Global Background field. This layout enables you to preview the background in the browser.'
+category: o_layouts
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:42:"romanesco.cblayoutbackground.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:43:"romanesco.cblayoutbackground.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="ui vertical stripe segment [[setBackground? &background=`[[*id]]`]]">
+    <div class="ui container">
+        <h1 class="ui header">[[*pagetitle]]</h1>
+
+        [[$overviewOuter?
+            &row_tpl=`overviewRowBasic`
+            &cols=`four`
+            &parent=`[[++romanesco.pattern_container_id]]`
+            &title_field=`menutitle`
+            &title_hierarchy=`h2`
+            &depth=`0`
+            &limit=`4`
+            &show_hidden=`0`
+            &sortby=`menuindex`
+            &sortdir=`0`
+            &pagination=`0`
+            &show_subtitle=`1`
+            &show_introtext=`0`
+            &link_text=``
+            &img_type=`landscape`
+            &icon_type=`svg`
+            &alignment=``
+            &padding=`relaxed`
+            &responsive=`stackable doubling`
+            &de_emphasize=`0`
+        ]]
+    </div>
+</div>

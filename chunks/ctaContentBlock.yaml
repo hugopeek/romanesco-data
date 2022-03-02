@@ -6,6 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="[[+segment_type:notempty=`ui [[+padding]] [[+segment_type]] segment [[+background]]`]] [[+title_inflate]] cta" property="significantLink">
+<div class="[[+segment_type:notempty=`ui [[+padding]] [[+segment_type]] segment [[+background:setBackground]]`]] [[+title_inflate]] cta" property="significantLink">
     [[#[[+cta_id:empty=`0`]].content]]
 </div>
