@@ -4,6 +4,8 @@
 Released on ...
 
 Fixes and improvements:
+- Add missing setBackground modifier to rich text segment and several layouts
+- Hide obsolete CB templates for pattern library elements
 - Remove Manage tab with deprecated Global Backgrounds MIGX TV
 - Update patterns and structure in specific overviewRowFluid templates
 - Prevent Overview classes placeholders from leaking their values
