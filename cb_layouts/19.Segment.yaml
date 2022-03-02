@@ -6,7 +6,7 @@ category: 9
 icon: segments
 icon_type: custom
 columns: '[{"reference":"main","width":"100"}]'
-template: "[[If?\n    &subject=`[[+segment_type]]`\n    &operator=`notempty`\n    &then=`\n    <div class=\"ui [[+padding]] [[+alignment]] [[+segment_type]] [[+background]] segment\">\n        [[+main]]\n    </div>\n    `\n    &else=`[[+main]]`\n]]"
+template: '@CHUNK cbLayoutSegment'
 availability: '[]'
 times_per_page: 0
 layout_only_nested: '1'
