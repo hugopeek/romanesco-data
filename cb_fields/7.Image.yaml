@@ -1,8 +1,8 @@
 id: 7
-parent_properties: ''
+parent_properties: null
 input: image
 name: Image
-description: ''
+description: null
 content_desc: null
 sortorder: 10
 category: 2
@@ -11,5 +11,7 @@ icon_type: ''
 template: '@CHUNK imageOuter'
 properties: '{"source":"0","directory":"","crop_directory":"","crops":"default","open_crops_automatically":"0","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"default"}'
 availability: '[]'
-layouts: ''
-settings: '[{"reference":"alt","title":"ALT text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"options","title":"Options","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbImageOptions]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"position","title":"Position","fieldtype":"radio","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"lazy_load","title":"Lazy load","fieldtype":"radio","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"},{"reference":"img_size","title":"Image size","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbImageSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"caption","title":"Caption","fieldtype":"textarea","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"credits","title":"Credits","fieldtype":"richtext","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'
+layouts: null
+times_per_layout: null
+times_per_page: null
+settings: '[{"reference":"alt","title":"ALT text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"caption","title":"Caption","fieldtype":"richtext","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal","description":"","type_ahead":"No","separator":""},{"reference":"img_size","title":"Image size","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbImageSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"options","title":"Options","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbImageOptions]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"credits","title":"Credits","fieldtype":"richtext","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"position","title":"Position","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"lazy_load","title":"Lazy load","fieldtype":"radio","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"}]'
