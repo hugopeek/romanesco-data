@@ -23,6 +23,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &toPlaceholder=`save_form`
 ]]
 
+[[- LOAD PREVIOUSLY SUBMITTED VALUES
+    This retrieves the values for previous and next steps from session data.
+    The values are written to hidden form fields, which are added further down.
+    When no data is found (it gets invalidated after a timeout) it redirects the
+    user to the first step.
+]]
 [[[[+multiple_steps:notempty=`
     !FormItRetriever?
         &placeholderPrefix=``
@@ -30,13 +36,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &redirectToOnNotFound=`[[+first_step:isnot=`[[+current_id]]`:then=`[[+first_step]]`:else=``]]`
     `
 ]]]]
-[[[[+multiple_steps:notempty=`
-    !FormItRetriever?
-        &placeholderPrefix=`fb[[*id]].`
-        &storeLocation=`session`
-        &redirectToOnNotFound=``
-    `
-]]]]
+
 [[returnFirstHit:toPlaceholder=`redirect_to`?
     &1=`[[+redirect_id]]`
     &2=`[[+next_step]]`
@@ -48,17 +48,18 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[!FormIt?
     &preHooks=`
         [[+upload_multiple:eq=`1`:then=`Formit2AjaxUpload,`]]
-        [[*fb_prehooks:notempty=`[[*fb_prehooks]],`]]
+        [[+multiple_steps:notempty=`fbSetStoredValues,`]]
+        [[*fb_prehooks:append=`,`]]
         fbEmptyHook
     `
     &renderHooks=`[[*fb_renderhooks]]`
     &hooks=`
         spam,
         [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
-        [[++formblocks.antispam_hooks:notempty=`[[++formblocks.antispam_hooks]],`]]
+        [[++formblocks.antispam_hooks:append=`,`]]
         [[+math_question:isnot=`0`:then=`math,`]]
         [[+save_form:eq=`1`:then=`FormItSaveForm,`]]
-        [[*fb_hooks:notempty=`[[*fb_hooks]],`]]
+        [[*fb_hooks:append=`,`]]
         [[If? &subject=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]` &operator=`notempty` &then=`email,`]]
         [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
         [[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
@@ -133,7 +134,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <form id="form-[[*alias]]" class="ui [[+form_size]] [[+segment_type:eq=`none`:then=`basic`]] form" name="fb[[*id]]" action="[[~[[+current_id:empty=`0`]]]]" method="post" enctype="multipart/form-data">
 
-    [[[[+multiple_steps:notempty=`!fbFormReport? &formID=`[[*id]][[+prev_forms:prepend=`,`]][[+next_forms:prepend=`,`]]` &tplPrefix=`fbStoreRow_``]]]]
+    [[- STORE MULTI-PAGE FORM VALUES IN HIDDEN FIELDS ]]
+    [[[[+multiple_steps:notempty=`
+        !fbFormReport?
+            &formID=`[[+prev_forms]][[+next_forms:prepend=`[[+prev_forms:notempty=`,`]]`]]`
+            &allSteps=`[[+multiple_steps]]`
+            &allForms=`[[+prev_forms:append=`,`]][[*id]][[+next_forms:prepend=`,`]]`
+            &tplPrefix=`fbStoreRow_`
+        `
+    ]]]]
     [[[[++formblocks.formsource:eq=`1`:then=`!formsource`]]]]
 
     <div class="ui [[+segment_type]]">

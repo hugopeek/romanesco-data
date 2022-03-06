@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="[[+classnames]] step">
+<div class="[[+classnames]] [[!+step-[[+id]]]] step">
     [[+overview_icon_font:notempty=`<i class="[[+overview_icon_font]]"></i>`]]
     <div class="content">
         <div class="title">[[+menutitle]]</div>

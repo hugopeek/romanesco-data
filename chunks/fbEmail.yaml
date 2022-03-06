@@ -9,9 +9,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[%formblocks.email.introtext]]<br/><br/>
 
 [[!fbFormReport?
-    &formID=`[[+prev_forms:append=`,`]][[*id]]`
+    &formID=`[[*id]][[+prev_forms:prepend=`,`]]`
     &tplPrefix=`[[*fb_email_tpl_prefix]]`
     &tplSectionHeader=`fbEmailSectionHeader`
+    &outputReverse=`1`
 ]]
 
 <br/><br/><br/>
