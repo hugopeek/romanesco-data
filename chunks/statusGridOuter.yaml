@@ -88,7 +88,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                         &packageName=`romanescobackyard`
                         &classname=`rmOption`
                         &where=`{"key":"status_progress"}`
-                        &sortConfig=`[{"sortby":"position","sortdir":"ASC"}]`
+                        &sortConfig=`[{"sortby":"pos","sortdir":"ASC"}]`
                         &tpl=`statusIndicatorLegendTR`
                     ]]
                     </tbody>
@@ -102,7 +102,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                         &packageName=`romanescobackyard`
                         &classname=`rmOption`
                         &where=`{"key":"status_health"}`
-                        &sortConfig=`[{"sortby":"position","sortdir":"ASC"}]`
+                        &sortConfig=`[{"sortby":"pos","sortdir":"ASC"}]`
                         &tpl=`statusIndicatorLegendTR`
                     ]]
                     </tbody>
