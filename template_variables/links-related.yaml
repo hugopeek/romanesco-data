@@ -3,7 +3,7 @@ type: migxdb
 name: links_related
 caption: 'Related content'
 description: 'This will also create a relation on the linked page. You can (and should!) link to other pages in your content whenever relevant, but this makes it easier to generate lists of related pages.'
-category: Links
+category: _Links
 elements: ''
 rank: 1
 default_text: ''

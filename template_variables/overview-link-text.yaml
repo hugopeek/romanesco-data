@@ -3,7 +3,7 @@ type: text
 name: overview_link_text
 caption: 'Link / button text'
 description: 'When filled in, this value will override the button text defined in the Overview ContentBlock. Keep in mind that if no button text is set in Overview CB, no button will be shown!'
-category: 'Overview - Settings'
+category: '_Overview - Settings'
 elements: ''
 rank: 2
 default_text: ''

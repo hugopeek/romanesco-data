@@ -1,7 +1,7 @@
 id: 566
 name: imgOverviewFixed
 description: 'Alternative ImagePlus tpl for overview images, with fixed height and width. Sometimes you don''t want to generate all the responsive variants, for example when it''s only a small avatar image.'
-category: a_images
+category: a_image
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.imgoverviewfixed.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.imgoverviewfixed.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----

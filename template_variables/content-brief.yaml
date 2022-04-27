@@ -3,7 +3,7 @@ type: redactor
 name: content_brief
 caption: Brief
 description: 'Try to turn the content purpose into a short summary. What are the main take-aways? Why are they important? And why should people listen to you? Add links to examples if you want.'
-category: Purpose
+category: _Purpose
 elements: ''
 rank: 5
 default_text: ''

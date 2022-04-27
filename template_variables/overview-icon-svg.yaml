@@ -4,7 +4,7 @@ type: file
 name: overview_icon_svg
 caption: 'Icon (SVG)'
 description: 'This can be pretty much anything, but please make sure the SVG has a square aspect ratio.'
-category: 'Overview - Icon'
+category: '_Overview - Icon'
 elements: ''
 rank: 20
 default_text: ''

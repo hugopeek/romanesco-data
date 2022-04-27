@@ -2,7 +2,7 @@ id: 138
 type: option
 name: slider_inverted
 caption: 'Invert navigation colors'
-category: 'Slider - Settings'
+category: '_Slider - Settings'
 elements: No==0||Yes==1
 rank: 33
 default_text: '0'

@@ -3,7 +3,7 @@ type: listbox
 name: toolbar_visibility
 caption: 'Toolbar visibility'
 description: 'Do you want to display a toolbar on this page? The default toolbar contains breadcrumbs and search functionality. This setting is inherited on every child page.'
-category: Navigation
+category: _Navigation
 elements: 'On==1||Off==0||System default==default'
 rank: 1
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

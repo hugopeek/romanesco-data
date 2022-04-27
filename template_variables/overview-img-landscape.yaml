@@ -4,7 +4,7 @@ type: imageplus
 name: overview_img_landscape
 caption: 'Image (Landscape)'
 description: 'This is the default overview image, in a regular 4:3 aspect ratio.'
-category: 'Overview - Image'
+category: '_Overview - Image'
 elements: ''
 rank: 1
 default_text: ''

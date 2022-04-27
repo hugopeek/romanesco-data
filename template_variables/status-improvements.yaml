@@ -3,7 +3,7 @@ type: migxdb
 name: status_improvements
 caption: Improvements
 description: 'How can we make this page better? This is aimed at the content editors team. If you have technical issues, please enter those in ''Help!'' below.'
-category: Status
+category: _Status
 elements: ''
 rank: 3
 default_text: ''

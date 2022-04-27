@@ -3,7 +3,7 @@ type: text
 name: fb_usergroups_field
 caption: 'User groups field'
 description: 'Optional. The name of the form field that decides which user groups the new user will belong to. You can use the label name of the ContentBlock field here, or the name in the HTML.'
-category: Registration
+category: _Registration
 elements: ''
 rank: 21
 default_text: ''

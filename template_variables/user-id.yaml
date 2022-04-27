@@ -3,7 +3,7 @@ type: listbox
 name: user_id
 caption: 'MODX user'
 description: 'Connect a MODX user to this item. Only active users will be shown.'
-category: Connections
+category: _Connection
 elements: '@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` WHERE `active` = 1 ORDER BY username )'
 rank: 10
 default_text: ''

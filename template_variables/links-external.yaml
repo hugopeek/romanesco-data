@@ -3,7 +3,7 @@ type: migxdb
 name: links_external
 caption: 'External links'
 description: 'Point to external sources, to add some scientific credibility to your content. You can automatically attach these links to content references by activating the setting under Navigation.'
-category: Links
+category: _Links
 elements: ''
 rank: 10
 default_text: ''

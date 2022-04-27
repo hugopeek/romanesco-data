@@ -3,7 +3,7 @@ type: listbox-multiple
 name: organization_id
 caption: Organization
 description: 'Connect the related organization(s). If this list is empty, you need to create an Organizations container first and register its ID under System Settings.'
-category: Connections
+category: _Connection
 elements: '@CHUNK tvSelectClient'
 rank: 2
 default_text: ''

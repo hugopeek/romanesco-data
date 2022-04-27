@@ -3,7 +3,7 @@ type: text
 name: social_facebook
 caption: 'Facebook page'
 description: 'Please fill in the complete URL (including http(s)://).'
-category: Social
+category: _Social
 elements: ''
 rank: 3
 default_text: ''

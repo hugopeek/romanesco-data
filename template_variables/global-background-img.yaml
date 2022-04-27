@@ -4,7 +4,7 @@ type: migx
 name: global_background_img
 caption: 'Global background images'
 description: 'DEPRECATED - DO NOT USE ANYMORE! Backgrounds in this grid still work, but use the new resource-based backgrounds instead to ensure proper functionality in the future.'
-category: 'Global - Backgrounds'
+category: '_Global - Backgrounds'
 elements: ''
 rank: 1
 default_text: ''

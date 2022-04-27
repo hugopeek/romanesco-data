@@ -4,7 +4,7 @@ type: imageplus
 name: overview_img_wide
 caption: 'Image (Wide)'
 description: 'This is an image with widescreen proportions, in 16:9 aspect ratio.'
-category: 'Overview - Image'
+category: '_Overview - Image'
 elements: ''
 rank: 5
 default_text: ''

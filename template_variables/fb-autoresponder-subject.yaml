@@ -2,7 +2,7 @@ id: 20
 type: text
 name: fb_autoresponder_subject
 caption: 'Autoresponse subject'
-category: Autoresponder
+category: _Autoresponder
 elements: ''
 rank: 10
 default_text: ''

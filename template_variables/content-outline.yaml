@@ -3,7 +3,7 @@ type: redactor
 name: content_outline
 caption: Outline
 description: 'Give an overview of the main page structure. Like a table of contents, but feel free to add ideas in between.'
-category: Purpose
+category: _Purpose
 elements: ''
 rank: 6
 default_text: ''

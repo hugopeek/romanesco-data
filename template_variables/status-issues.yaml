@@ -3,7 +3,7 @@ type: migxdb
 name: status_issues
 caption: Help!
 description: 'What kind of problem(s) are you experiencing? This is aimed at the developers. Please create separate items if you have more than 1 issue and include any relevant info (like error messages).'
-category: Status
+category: _Status
 elements: ''
 rank: 4
 default_text: ''

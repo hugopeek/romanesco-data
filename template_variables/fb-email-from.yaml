@@ -3,7 +3,7 @@ type: email
 name: fb_email_from
 caption: 'Email FROM address'
 description: 'Optional. Defaults to emailsender system setting.'
-category: 'Settings - Email'
+category: '_Settings - Email'
 elements: ''
 rank: 5
 default_text: ''

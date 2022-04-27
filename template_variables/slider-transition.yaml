@@ -2,7 +2,7 @@ id: 130
 type: listbox
 name: slider_transition
 caption: Transition
-category: 'Slider - Settings'
+category: '_Slider - Settings'
 elements: 'Slide==slide||Fade==fade||3D cube==cube||3D coverflow==coverflow||3D flip==flip'
 rank: 31
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

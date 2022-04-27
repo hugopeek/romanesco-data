@@ -3,7 +3,7 @@ type: checkbox
 name: toc_headings
 caption: 'Included headings in ToC'
 description: 'Select which hierarchy levels are allowed in the ToC menu (if present). This setting is inherited on child pages.'
-category: Navigation
+category: _Navigation
 elements: H1||H2||H3||H4||H5||H6
 rank: 11
 display: delim

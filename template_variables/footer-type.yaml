@@ -3,7 +3,7 @@ type: option
 name: footer_type
 caption: 'Footer type'
 description: 'Choose which content to display inside the footer. You can add different footers under Global Content > Footers. A default footer can be defined under Configuration, or as context setting.'
-category: Footer
+category: _Footer
 elements: '@CHUNK tvSelectFooter'
 rank: 2
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

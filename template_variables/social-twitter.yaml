@@ -3,7 +3,7 @@ type: text
 name: social_twitter
 caption: 'Twitter account'
 description: 'Only fill in the account name (the part after https://twitter.com/). This way, this setting can be used by other Twitter functionality throughout the site.'
-category: Social
+category: _Social
 elements: ''
 rank: 1
 default_text: ''

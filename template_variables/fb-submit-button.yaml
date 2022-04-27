@@ -3,7 +3,7 @@ type: text
 name: fb_submit_button
 caption: 'Submit button text'
 description: 'Defaults to Send.'
-category: 'Settings - General'
+category: '_Settings - General'
 elements: ''
 rank: 90
 default_text: ''

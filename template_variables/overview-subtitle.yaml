@@ -3,7 +3,7 @@ type: text
 name: overview_subtitle
 caption: Subtitle
 description: 'When filled in, this value will override the default subtitle (if subtitle is enabled in the Overview CB settings).'
-category: 'Overview - Settings'
+category: '_Overview - Settings'
 elements: ''
 rank: 1
 default_text: ''

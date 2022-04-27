@@ -3,7 +3,7 @@ type: text
 name: social_linkedin
 caption: 'LinkedIn profile'
 description: 'Please fill in the complete URL (including http(s)://).'
-category: Social
+category: _Social
 elements: ''
 rank: 2
 default_text: ''

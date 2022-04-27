@@ -4,7 +4,7 @@ type: imageplus
 name: overview_img_free
 caption: 'Image (Free)'
 description: 'This image doesn''t have a fixed aspect ratio or any minimum dimensions. Use it as you see fit. Cropping is optional. NB! Be aware that images will probably have different sizes in overviews!'
-category: 'Overview - Image'
+category: '_Overview - Image'
 elements: ''
 rank: 99
 default_text: ''

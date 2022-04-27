@@ -3,7 +3,7 @@ type: listbox
 name: header_cta
 caption: 'Call to action (CTA)'
 description: 'Select a CTA for display in header. CTAs are located in Global Content. If a CTA is selected, all Title values will be ignored but Background settings still apply. Not inherited by default.'
-category: Header
+category: _Header
 elements: '@CHUNK tvSelectCTA@AvailableHeader'
 rank: 20
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

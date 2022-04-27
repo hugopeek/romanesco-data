@@ -3,7 +3,7 @@ type: text
 name: content_tone
 caption: 'Tone of voice'
 description: 'Decide what writing style to adopt for this page. Formal, fun, pragmatic, provocative...'
-category: Purpose
+category: _Purpose
 elements: ''
 rank: 20
 default_text: ''

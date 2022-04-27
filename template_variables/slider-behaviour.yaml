@@ -2,7 +2,7 @@ id: 129
 type: checkbox
 name: slider_behaviour
 caption: Behaviour
-category: 'Slider - Settings'
+category: '_Slider - Settings'
 elements: 'Infinite loop==loop||Show previous / next arrows==arrows||Keyboard control==keyboard||Free scrolling==free||Autoplay==autoplay'
 rank: 30
 display: delim

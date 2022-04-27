@@ -3,7 +3,7 @@ type: textarea
 name: fb_email_to_dynamic
 caption: 'Dynamic recipient address'
 description: 'Place any snippet / FastField call here that outputs a single email address. WARNING: populating this field will override the default recipient address, so test thoroughly!'
-category: 'Settings - Advanced'
+category: '_Settings - Advanced'
 elements: ''
 rank: 10
 default_text: ''

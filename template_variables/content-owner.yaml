@@ -3,7 +3,7 @@ type: superboxselect
 name: content_owner
 caption: 'Content owner'
 description: 'Who is responsible for editing and maintaining this page?'
-category: Status
+category: _Status
 elements: ''
 rank: 10
 default_text: ''

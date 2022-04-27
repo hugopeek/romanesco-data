@@ -43,7 +43,9 @@ properties: "a:2:{s:13:\"elementStatus\";a:7:{s:4:\"name\";s:13:\"elementStatus\
             <aside id="sidebar" class="four wide computer column tablet or lower hidden">
                 [[$subNavVertical?
                     &sticky=`1`
+                    &currentContainer=``
                 ]]
+                [[$ctaSidebar]]
             </aside>
         </div>
     </main>

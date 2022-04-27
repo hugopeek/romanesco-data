@@ -3,7 +3,7 @@ type: superboxselect
 name: links_attachment
 caption: Attachments
 description: 'Connect any available static resource(s) to this page. Presently, this is not being shown in any template, so it''s up to you to implement it as you see fit.'
-category: Links
+category: _Links
 elements: ''
 rank: 20
 default_text: ''

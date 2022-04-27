@@ -4,7 +4,7 @@ type: imageplus
 name: overview_img_pano
 caption: 'Image (Panorama)'
 description: 'This is an image with 21:9 aspect ratio, for use in headers or layout backgrounds.'
-category: 'Overview - Image'
+category: '_Overview - Image'
 elements: ''
 rank: 6
 default_text: ''

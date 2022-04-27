@@ -3,7 +3,7 @@ type: number
 name: fb_redirect_id
 caption: 'Redirect page'
 description: 'Enter the ID of the page, or drag the page from the menu tree to this input field.'
-category: 'Settings - General'
+category: '_Settings - General'
 elements: ''
 rank: 92
 default_text: ''

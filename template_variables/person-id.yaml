@@ -3,7 +3,7 @@ type: listbox
 name: person_id
 caption: Person
 description: 'Connect a person to this item. This list is populated with all the persons that are listed on your Team page.'
-category: Connections
+category: _Connection
 elements: '@CHUNK tvSelectTeam'
 rank: 1
 default_text: ''

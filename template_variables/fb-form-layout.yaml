@@ -3,7 +3,7 @@ type: listbox
 name: fb_form_layout
 caption: 'Layout type'
 description: 'DEPRECATED. This setting has moved to the CB field that loads the form.'
-category: 'Settings - General'
+category: '_Settings - General'
 elements: Vertical==vertical||Horizontal==horizontal||Inline==inline
 rank: 5
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:10:"deprecated";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

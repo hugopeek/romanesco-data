@@ -3,7 +3,7 @@ type: email
 name: fb_email_bcc
 caption: 'Email BCC address'
 description: Optional.
-category: 'Settings - Email'
+category: '_Settings - Email'
 elements: ''
 rank: 3
 default_text: ''

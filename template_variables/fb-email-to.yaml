@@ -3,7 +3,7 @@ type: email
 name: fb_email_to
 caption: 'Email address recipient'
 description: 'Submitted forms will be sent to this address. If you leave this field empty, no emails will be sent. This may be what you want when using a custom hook for processing the form.'
-category: 'Settings - Email'
+category: '_Settings - Email'
 elements: ''
 rank: 1
 default_text: ''

@@ -3,7 +3,7 @@ type: listbox
 name: auto_references
 caption: 'Automatic reference links'
 description: 'Turn references to an external link (the ones you created under TVs > Links) into an actual link. Links are referenced by their number value and must be enclosed in square brackets: [12].'
-category: Navigation
+category: _Navigation
 elements: On==1||Off==0
 rank: 12
 properties: 'a:0:{}'

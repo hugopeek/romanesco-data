@@ -3,7 +3,7 @@ type: listbox-multiple
 name: contributors_id
 caption: Contributors
 description: 'Team members that worked on this item. You can only select persons listed on your Team page, so if you want to add external contributors: add them to the team page first (can be unpublished).'
-category: Connections
+category: _Connection
 elements: '@CHUNK tvSelectTeam'
 rank: 3
 default_text: ''

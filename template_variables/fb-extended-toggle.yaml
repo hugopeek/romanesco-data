@@ -3,7 +3,7 @@ type: option
 name: fb_extended_toggle
 caption: 'Extended user fields'
 description: 'If switched on, any extra fields in the form are added to the extended field in the user profile.'
-category: Registration
+category: _Registration
 elements: No==0||Yes==1
 rank: 30
 default_text: '0'

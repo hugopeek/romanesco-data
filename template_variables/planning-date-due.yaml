@@ -2,7 +2,7 @@ id: 123
 type: date
 name: planning_date_due
 caption: 'Due date'
-category: Status
+category: _Status
 elements: ''
 rank: 20
 default_text: ''

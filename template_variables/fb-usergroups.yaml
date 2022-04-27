@@ -3,7 +3,7 @@ type: text
 name: fb_usergroups
 caption: 'User groups'
 description: 'Optional. A comma-separated list of user group names or IDs to add the newly-registered user to.'
-category: Registration
+category: _Registration
 elements: ''
 rank: 20
 default_text: ''

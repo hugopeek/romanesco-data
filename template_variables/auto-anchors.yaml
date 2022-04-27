@@ -3,7 +3,7 @@ type: listbox
 name: auto_anchors
 caption: 'Automatic anchors'
 description: 'Give all headings on this page (H1-H6) an ID (if they don''t have one already). This allows you (or the ToC menu) to link directly to that heading. This setting is inherited on child pages.'
-category: Navigation
+category: _Navigation
 elements: On==1||Off==0
 rank: 10
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'

@@ -3,7 +3,7 @@ type: listbox-multiple
 name: content_purpose
 caption: 'Content purpose'
 description: 'Select the primary function(s) of this content. You can focus on just 1 topic, or create a chain of topics to use as blueprint for your storyline.'
-category: Purpose
+category: _Purpose
 elements: '@CHUNK tvSelectInputOption@ContentPurpose'
 rank: 1
 display: delim

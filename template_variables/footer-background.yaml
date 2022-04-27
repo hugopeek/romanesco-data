@@ -3,7 +3,7 @@ type: listbox
 name: footer_background
 caption: Background
 description: 'Select a background for this footer. You can define these backgrounds under Global Content > Backgrounds. Will also be inherited by default.'
-category: Footer
+category: _Footer
 elements: '@CHUNK tvSelectGlobalBackground@AvailableFooter'
 rank: 10
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
