@@ -430,7 +430,6 @@ packages:
             - collections
             - formit-4.2.7-pl
             - getcache
-            - getpage
             - getresources
             - hits-1.3.0-pl
             - if
@@ -446,7 +445,6 @@ packages:
             - svgsanitizer
             - switch
             - tagger
-            - twitterx
             - ultimateparent
             - xrouting
 
