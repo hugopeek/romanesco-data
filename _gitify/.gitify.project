@@ -385,26 +385,35 @@ data:
             - editedon
 
     # Romanesco
-    romanesco_timeline:
-        class: rmTimeline
+    romanesco_tasks:
+        class: rmTask
         primary:
             - id
             - title
         package: romanescobackyard
-    romanesco_notes:
-        class: rmNote
+    romanesco_task_comments:
+        class: rmTaskComment
         primary:
             - id
-            - title
     romanesco_crosslinks:
-        class: rmCrosslink
+        class: rmCrossLink
         primary:
-            - id
-            - title
+            - source
+            - destination
     romanesco_external_links:
         class: rmExternalLink
         primary:
             - id
+    romanesco_social_connections:
+        class: rmSocialConnect
+        primary:
+            - id
+            - name
+    romanesco_social_sharing:
+        class: rmSocialShare
+        primary:
+            - id
+            - name
     romanesco_options:
         class: rmOption
         primary:
@@ -415,41 +424,6 @@ data:
         primary:
             - id
             - name
-
-    romanesco_timeline_project:
-        class: rmTimelineProject
-        primary:
-            - id
-            - title
-    romanesco_notes_improvement:
-        class: rmNoteImprovement
-        primary:
-            - id
-            - title
-    romanesco_notes_issue:
-        class: rmNoteIssue
-        primary:
-            - id
-            - title
-    romanesco_crosslinks_repurpose:
-        class: rmCrosslinkRepurpose
-        primary:
-            - id
-            - title
-    romanesco_crosslinks_related:
-        class: rmCrosslinkRelated
-        primary:
-            - id
-            - title
-
-    # SetInputOptions
-    #setinputoptions_groups:
-    #    class: SetInputOptionsGroup
-    #    primary: name
-    #    package: setinputoptions
-    #setinputoptions_inputoptions:
-    #    class: SetInputOptionsInputOption
-    #    primary: id
 
 packages:
     modx.com:
