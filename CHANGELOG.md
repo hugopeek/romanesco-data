@@ -1,9 +1,31 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.14.1
-Released on ...
+## v1.15.0
+Released on May 24, 2022
+
+New features:
+
+- Add option to show sidebar on mobile
+- Add option to show CTA in sidebar
+- Add local submenu variant (only shows children of current page)
+- Add grid + reusable buttons for social connections and sharing
 
 Fixes and improvements:
+- Remove Content Repurpose feature [BC]
+- Use Tasks grid for project timeline entries [BC]
+- Combine Notes, Issues and Improvements into Tasks grid [BC]
+- Remove Twitter access tokens from system settings
+- Deprecate social media TVs
+- Add FormBlocks dropdown row for resources
+- Rename element categories for consistency and prefix TV categories
+- Minify custom CSS regardless of configuration setting
+- Invert secondary menu inside segments with inverted background
+- Load frontend lexicon OnHandleRequest
+- Load FormBlocks forms only in specific context if placed in subfolder
+- Collapse or expand target container when reloading Show/Hide option
+- Don't disable completed steps when backtracking in multi-step forms
+- Fix frontend validation not working in multi-step forms
+- Add option to hide advanced CB features in manager
 - Add missing setBackground modifier to rich text segment and several layouts
 - Hide obsolete CB templates for pattern library elements
 - Remove Manage tab with deprecated Global Backgrounds MIGX TV
