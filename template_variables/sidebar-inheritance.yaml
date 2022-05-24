@@ -1,0 +1,16 @@
+id: 149
+type: checkbox
+name: sidebar_inheritance
+caption: Inheritance
+description: 'Select which settings should apply on child pages of this resource too. NB: Turning inheritance OFF for an element returns it to its default value, but that is not reflected in the manager!'
+category: _Sidebar
+elements: 'Inherit sticky==inherit_sticky||Inherit CTA==inherit_cta'
+rank: 99
+display: delim
+properties: 'a:0:{}'
+input_properties: null
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+
+-----
+
+@INHERIT inherit_sticky||inherit_cta

@@ -1,0 +1,34 @@
+id: 626
+name: subNavVerticalWrapper
+description: ''
+category: m_nav_primary
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:45:"romanesco.subnavverticalwrapper.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:46:"romanesco.subnavverticalwrapper.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[++submenu_locality:eq=`current`:then=`
+<div id="submenu-header" class="ui equal width middle aligned grid">
+    <div class="column">
+        <div class="ui tiny header">
+            [[pdoField?
+                &id=`[[+back_button_id]]`
+                &field=`menutitle`
+                &default=`pagetitle`
+            ]]
+        </div>
+    </div>
+    [[*id:isnot=`[[UltimateParent]]`:then=`
+    <div class="compact column">
+        <a class="ui [[++submenu_type:containsnot=`regular`:and:containsnot=`tabular`:then=`very`]] basic icon button"
+           title="[[%romanesco.submenu.level_up]]"
+           href="[[~[[*parent]]]]">
+            <i class="up arrow icon"></i>
+        </a>
+    </div>
+    `]]
+</div>
+`]]
+
+<nav id="submenu" class="ui [[++navbar_size:default=`large`]] [[++submenu_type]] vertical fluid [[+sticky]] menu">
+    [[+wrapper]]
+</nav>

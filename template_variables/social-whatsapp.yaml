@@ -2,7 +2,7 @@ id: 132
 type: number
 name: social_whatsapp
 caption: 'WhatsApp number'
-description: 'A mobile phone number connected to an active WhatsApp account. If entered, visitors can start a chat directly from the website. Needs to be formatted as number, without any leading zeros.'
+description: 'DEPRECATED. A mobile phone number connected to an active WhatsApp account. If entered, visitors can start a chat directly from the website. Format as number, without any leading zeros.'
 category: _Social
 elements: ''
 rank: 11

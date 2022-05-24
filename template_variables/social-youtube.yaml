@@ -2,7 +2,7 @@ id: 50
 type: text
 name: social_youtube
 caption: 'Youtube channel'
-description: 'Please fill in the complete URL (including http(s)://).'
+description: 'DEPRECATED. Please fill in the complete URL (including http(s)://).'
 category: _Social
 elements: ''
 rank: 10

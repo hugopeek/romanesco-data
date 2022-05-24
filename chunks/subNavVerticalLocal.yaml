@@ -1,0 +1,32 @@
+id: 625
+name: subNavVerticalLocal
+description: ''
+category: m_nav_primary
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.subnavverticallocal.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.subnavverticallocal.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[pdoMenu?
+    &parents=`[[*id]]`
+    &level=`1`
+    &tplOuter=`@INLINE [[+wrapper]]`
+    &tpl=`@INLINE 1`
+    &hideSubMenus=`1`
+    &toPlaceholder=`has_children`
+]]
+[[+has_children:isnot=``:then=`[[*id]]`:else=`[[*parent]]`:toPlaceholder=`back_button_id`]]
+
+[[[[getResourceLevel:gte=`[[++navbar_level]]`:then=`
+    pdoMenu?
+        &parents=`[[+has_children:is=``:then=`[[*parent:empty=`-1`]]`:else=`[[*id]]`]]`
+        &resources=`[[+excluded_resources]]`
+        &level=`1`
+        &tplOuter=`subNavVerticalWrapper`
+        &tpl=`navItem`
+        &tplParentRowActive=`navItemInnerWrapper`
+        &tplInner=`navWrapper`
+        &tplInnerRow=`navItemInner`
+        &hideSubMenus=`1`
+        &countChildren=`[[++submenu_childcount]]`
+    `
+]]]]

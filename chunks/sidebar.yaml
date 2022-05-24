@@ -1,0 +1,43 @@
+id: 624
+name: sidebar
+description: ''
+category: o_global
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:31:"romanesco.sidebar.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:32:"romanesco.sidebar.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="ui container">
+    [[[[modifiedIf?
+        &subject=`[[getRawTVValue? &tv=`sidebar_sticky`]]`
+        &operator=`contains`
+        &operand=`@INHERIT`
+        &then=`#[[*parent]].sidebar_inheritance:contains=`inherit_sticky`:then=`[[*sidebar_sticky]]`:else=`[[++sidebar_sticky]]``
+        &else=`*sidebar_sticky`
+        &toPlaceholder=`sidebar_sticky_tv`
+    ]]]]
+    [[modifiedIf?
+        &subject=`[[*sidebar_sticky]]`
+        &operator=`is`
+        &operand=`default`
+        &then=`[[++sidebar_sticky]]`
+        &else=`[[+sidebar_sticky_tv]]`
+        &toPlaceholder=`sidebar_sticky`
+    ]]
+
+    [[[[If?
+        &subject=`[[++submenu_locality]]`
+        &operator=`is`
+        &operand=`current`
+        &then=`$subNavVerticalLocal`
+        &else=`$subNavVertical`
+    ]]?
+        &sticky=`[[*sidebar_cta:is=``:then=`[[+sidebar_sticky:eq=`1`:then=`sticky`]]`]]`
+    ]]
+    [[[[If?
+        &subject=`[[*sidebar_cta]]`
+        &operator=`notempty`
+        &then=`$ctaSidebar`
+    ]]?
+        &sticky=`[[+sidebar_sticky:eq=`1`:then=`sticky`]]`
+    ]]
+</div>

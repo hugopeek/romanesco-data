@@ -2,7 +2,7 @@ id: 47
 type: text
 name: social_facebook
 caption: 'Facebook page'
-description: 'Please fill in the complete URL (including http(s)://).'
+description: 'DEPRECATED. Please fill in the complete URL (including http(s)://).'
 category: _Social
 elements: ''
 rank: 3

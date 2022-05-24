@@ -1,0 +1,13 @@
+id: 150
+type: migxdb
+name: status_tasks
+caption: Tasks
+description: 'How can we make this page better? Or do you have technical issues?'
+category: _Status
+elements: ''
+rank: 3
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:7:"configs";s:23:"tasks:romanescobackyard";}'
+output_properties: null
+content: ''

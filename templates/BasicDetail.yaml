@@ -35,17 +35,13 @@ properties: "a:2:{s:13:\"elementStatus\";a:7:{s:4:\"name\";s:13:\"elementStatus\
     ]]]]
 
     <main id="main" role="main">
-        <div class="ui relaxed grid container">
+        <div class="ui relaxed [[++sidebar_position:is=`left`:then=`computer reversed`]] grid container">
             <article id="content" class="sixteen wide mobile twelve wide computer column">
                 [[$content]]
             </article>
 
-            <aside id="sidebar" class="four wide computer column tablet or lower hidden">
-                [[$subNavVertical?
-                    &sticky=`1`
-                    &currentContainer=``
-                ]]
-                [[$ctaSidebar]]
+            <aside id="sidebar" class="four wide computer column [[++sidebar_visibility:is=`desktop`:then=`tablet or lower hidden`]]">
+                [[$sidebar]]
             </aside>
         </div>
     </main>
