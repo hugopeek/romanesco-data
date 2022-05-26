@@ -1,0 +1,10 @@
+id: 775
+set: 3
+action: 'resource/*'
+name: tv150
+description: null
+container: modx-panel-resource
+rule: tvMove
+value: modx-status
+constraint_class: modResource
+rank: 50
