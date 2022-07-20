@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="content">
+<div class="[[+alignment]] content">
     [[[[If?
         &subject=`[[+show_subtitle]]`
         &operator=`EQ`

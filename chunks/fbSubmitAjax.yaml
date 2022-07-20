@@ -1,0 +1,71 @@
+id: 628
+name: fbSubmitAjax
+description: ''
+category: o_formblocks
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.fbsubmitajax.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:12:"experimental";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:37:"romanesco.fbsubmitajax.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        $('.ui.form#form-test-example').submit(function (event) {
+            event.preventDefault();
+            var formData = $(this).serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "https://global.romanesco-nursery.loc/forms/test-example?mode=ajax",
+                data: formData,
+                dataType: "json",
+                encode: true,
+            }).done(function (data) {
+                // If we receive a success message, show an alert.
+                if (data.success) {
+                    console.log(data.success);
+
+                    // $('body')
+                    //     .toast({
+                    //         message: data.message,
+                    //         class: 'success',
+                    //         showIcon: 'checkmark',
+                    //         //displayTime: 0,
+                    //         //closeIcon: true
+                    //     })
+                    // ;
+                    $('.ui.form#form-test-example .dimmer').addClass('active');
+
+                    setTimeout(function () {
+                        $('.ui.form#form-test-example > div')
+                            .replaceWith('<div class="ui success message">' + data.message + '<\/div>')
+                        ;
+                    }, 2000)
+
+                } else {
+                    console.log(data.errors);
+
+                    $.each(data.errors, function(key, item) {
+                        console.log(item);
+
+                        $('body')
+                            .toast({
+                                message: key + '<br>' + item,
+                                class: 'error',
+                                showIcon: 'exclamation circle',
+                                //displayTime: 0,
+                                closeIcon: true
+                            })
+                        ;
+
+                        //$("#" + key).parent('.field').addClass('error');
+                    });
+
+
+                }
+            });
+        });
+    });
+</script>
+
+[[loadAssets? &component=`toast`]]
+[[loadAssets? &component=`loader`]]
+[[loadAssets? &component=`dimmer`]]

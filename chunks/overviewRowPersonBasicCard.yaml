@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[$imgOverviewPersonLink? &uid=`[[+unique_idx]]`]]
 
-<div class="center aligned content">
+<div class="[[+alignment]] content">
     <a href="[[~[[+id]]]]" class="header">[[+person_firstname]]</a>
     [[If?
         &subject=`[[+show_subtitle]]`

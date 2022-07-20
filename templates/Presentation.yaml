@@ -24,7 +24,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <div class="pusher">
     <main id="main" role="main">
-        <article id="swiper-[[*id]]" class="swiper-container fullscreen">
+        <article id="swiper-[[*id]]" class="swiper fullscreen">
             <div id="content" class="swiper-wrapper">
                 [[*content]]
             </div>

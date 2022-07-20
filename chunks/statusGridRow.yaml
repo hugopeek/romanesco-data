@@ -8,8 +8,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[Switch:toPlaceholder=`status_priority_[[+idx]]`?
     &get=`[[+status_progress:eq=`done`:then=`[[+status_health]]`:else=`[[+status_progress]]`]]`
-    &c1=`to-do`         &do1=`4`
-    &c2=`in-progress`   &do2=`2`
+    &c1=`todo`          &do1=`4`
+    &c2=`doing`         &do2=`2`
     &c3=`review`        &do3=`1`
     &c4=`stable`        &do4=`5`
     &c5=`successful`    &do5=`6`
@@ -30,17 +30,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[migxLoopCollection?
     &packageName=`romanescobackyard`
-    &classname=`rmNoteImprovement`
+    &classname=`rmTask`
     &where=`{"resource_id":"[[+id]]"}`
     &tpl=`tagItemTooltip`
-    &toPlaceholder=`status_improvements_[[+idx]]`
-]]
-[[migxLoopCollection?
-    &packageName=`romanescobackyard`
-    &classname=`rmNoteIssue`
-    &where=`{"resource_id":"[[+id]]"}`
-    &tpl=`tagItemTooltip`
-    &toPlaceholder=`status_issues_[[+idx]]`
+    &toPlaceholder=`status_tasks_[[+idx]]`
 ]]
 
 <tr class="[[+status_class_[[+idx]]]][[+published:eq=`0`:then=` disabled`]]">
@@ -65,10 +58,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <a class="ui empty floating [[+longtitle:eq=``:then=`red`:else=`green`]] circular label with tooltip onclick" title="Longtitle" data-title="Longtitle" data-content="[[+longtitle:empty=`This field is still empty.`]]" data-variation="basic"></a>
     </td>
     <td class="ui blue labels">
-        [[+status_improvements_[[+idx]]]]
-    </td>
-    <td class="ui red labels [[+status_issues_[[+idx]]:notempty=`negative`]]">
-        [[+status_issues_[[+idx]]]]
+        [[+status_tasks_[[+idx]]]]
     </td>
     [[+status_indexation_[[+idx]]:notempty=`
     <td class="indexation">
@@ -77,11 +67,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </td>
     `]]
     <td class="owner">
-        [[!+modx.user.username:eq=`[[+content_owner:userinfo=`username`]]`:then=`
-        [[+content_owner:userinfo=`username`:before=`<strong>`:after=`</strong>`]]
-        `:else=`
         [[+content_owner:userinfo=`username`]]
-        `]]
     </td>
     <td class="due date">
         <span class="hidden sort">[[+planning_date_due]]</span>

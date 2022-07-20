@@ -1,7 +1,7 @@
 id: 19
 type: email
 name: fb_autoresponder_reply_to
-caption: '_Autoresponder REPLY TO address'
+caption: 'Autoresponder REPLY TO address'
 description: 'Optional. This address will be used when recipient replies to this message directly. Defaults to respectively the client_email and emailsender system setting.'
 category: _Autoresponder
 elements: ''

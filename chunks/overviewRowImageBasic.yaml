@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<a href="[[~[[+id]]]]" class="ui rounded image">
+<a class="ui rounded image" href="[[~[[+id]]]]">
     [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
         &tvname=`overview_img_[[+img_type:empty=`landscape`]]`
         &docid=`[[+id]]`

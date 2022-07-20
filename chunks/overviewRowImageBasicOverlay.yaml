@@ -1,0 +1,38 @@
+id: 632
+name: overviewRowImageBasicOverlay
+description: ''
+category: m_ov_image
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:52:"romanesco.overviewrowimagebasicoverlay.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:53:"romanesco.overviewrowimagebasicoverlay.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<figure class="ui rounded dimmable image">
+    <div class="ui dimmer">
+        <div class="content">
+            <div class="center">
+                [[[[If?
+                    &subject=`[[+show_subtitle]]`
+                    &operator=`EQ`
+                    &operand=`1`
+                    &then=`$headingOverviewSubtitle? &classes=`inverted` &uid=`[[+unique_idx]]``
+                    &else=`$headingOverview? &classes=`inverted` &uid=`[[+unique_idx]]``
+                ]]]]
+                [[[[If?
+                    &subject=`[[+link_text]]`
+                    &operator=`isnot`
+                    &operand=`0`
+                    &then=`$buttonHrefOverview? &uid=`[[+unique_idx]]``
+                ]]]]
+            </div>
+        </div>
+    </div>
+    [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
+        &tvname=`overview_img_[[+img_type:empty=`landscape`]]`
+        &docid=`[[+id]]`
+        &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`
+        &type=`tpl`
+        &tpl=`imgOverview`
+    ]]
+</figure>
+
+[[loadAssets? &component=`dimmer`]]

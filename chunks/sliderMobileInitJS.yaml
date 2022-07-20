@@ -1,7 +1,7 @@
 id: 472
 name: sliderMobileInitJS
 description: ''
-category: a_presentation
+category: m_pres_slider
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:42:"romanesco.slidermobileinitjs.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:43:"romanesco.slidermobileinitjs.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     window.addEventListener('DOMContentLoaded', function() {
         // Prepare container for Swiper usage
         function create[[+var]](container) {
-            container.addClass('swiper-container');
+            container.addClass('swiper');
             container
                 .find('.nested.overview')
                 .addClass('swiper-wrapper')
@@ -32,13 +32,18 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 .addClass('swiper-slide')
             ;
 
-            return new Swiper ('#[[+id]].swiper-container', {
+            return new Swiper ('#[[+id]].swiper', {
                 init: [[+init]],
-                slidesPerView: [[+cols]],
+                slidesPerView: 1,
                 slidesPerGroup: [[+slides_to_scroll]],
                 spaceBetween: [[+spacing]],
                 loop: [[+loop]],
-                freeMode: [[+free]],
+                freeMode: {
+                    enabled: [[+free]],
+                    minimumVelocity: 0.2,
+                    momentum: true,
+                    sticky: true
+                },
                 centeredSlides: [[+center]],
                 autoHeight: [[+auto_height]],
                 autoplay: [[+autoplay]],
@@ -52,6 +57,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     type: '[[+pagination]]',
                     clickable: [[+clickable]],
                 },
+                [[+breakpoints]]
                 [[+effects]]
             });
         }
@@ -71,7 +77,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     $('#[[+id]]-original').replaceWith(mobile[[+var]]);
 
                     // Initialize Swiper
-                    let [[+var]] = create[[+var]]($('#[[+id]].swiper-container-mobile'));
+                    let [[+var]] = create[[+var]]($('#[[+id]].swiper-mobile'));
 
                     // Update lazy load with each new slide
                     [[+var]].on('slideChange', function () {
@@ -81,7 +87,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 unmatch: function() {
 
                     // Revert to default layout with cloned container
-                    $('#[[+id]].swiper-container-mobile').replaceWith(desktop[[+var]]);
+                    $('#[[+id]].swiper-mobile').replaceWith(desktop[[+var]]);
                 }
             }
         );

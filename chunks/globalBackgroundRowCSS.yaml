@@ -1,7 +1,7 @@
 id: 448
 name: globalBackgroundRowCSS
 description: ''
-category: a_global
+category: a_glob_background
 properties: 'a:5:{s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:41:"romanesco.globalbackgroundrowcss.imgWidth";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:7:"imgType";a:7:{s:4:"name";s:7:"imgType";s:4:"desc";s:40:"romanesco.globalbackgroundrowcss.imgType";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:8:"imgScale";a:7:{s:4:"name";s:8:"imgScale";s:4:"desc";s:41:"romanesco.globalbackgroundrowcss.imgScale";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:46:"romanesco.globalbackgroundrowcss.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:47:"romanesco.globalbackgroundrowcss.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----

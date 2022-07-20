@@ -8,7 +8,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <div id="dropdown-toc" class="ui vertical stripe segment mobile only tablet only">
     <div class="ui container">
-        [[$tocNavDropdown? &size=`large`]]
+        [[$tocNavDropdown?
+            &toc_size=`[[++navbar_size]]`
+            &toc_options_dropdown=`fluid`
+        ]]
     </div>
 </div>
 

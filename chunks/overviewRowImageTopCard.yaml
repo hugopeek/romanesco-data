@@ -6,17 +6,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<figure class="ui rounded image">
-    [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
-        &tvname=`overview_img_[[+img_type:empty=`wide`]]`
-        &docid=`[[+id]]`
-        &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`
-        &type=`tpl`
-        &tpl=`imgOverview`
-    ]]
-</figure>
+[[$overviewRowImageBasic? &uid=`[[+unique_idx]]`]]
 
-<div class="content">
+<div class="[[+alignment]] content">
     [[[[If?
         &subject=`[[+show_subtitle]]`
         &operator=`EQ`

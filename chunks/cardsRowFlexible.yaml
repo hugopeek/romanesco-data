@@ -1,7 +1,7 @@
 id: 380
 name: cardsRowFlexible
 description: 'Template for Cards (Flexible) repeater. Instead of a predefined template based on the available input fields, the editor can use a nested layout to add any CB field as content for the card.'
-category: m_presentation
+category: m_pres_card
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.cardsrowflexible.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.cardsrowflexible.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
