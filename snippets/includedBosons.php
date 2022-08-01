@@ -20,6 +20,14 @@ content: "/**\n * includedBosons\n *\n * List all ContentBlocks fields being use
 $cbCorePath = $modx->getOption('contentblocks.core_path', null, $modx->getOption('core_path').'components/contentblocks/');
 $ContentBlocks = $modx->getService('contentblocks','ContentBlocks', $cbCorePath.'model/contentblocks/');
 
+$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
+$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
+
+if (!($romanesco instanceof Romanesco)) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
+    return;
+}
+
 $resourceID = $modx->getOption('resource', $scriptProperties, $modx->resource->get('id'));
 $layoutIdx = $modx->getOption('layout', $scriptProperties, '');
 $filterFields = $modx->getOption('filterFields', $scriptProperties, '');
@@ -60,24 +68,6 @@ if (!function_exists('createLink')) {
     }
 }
 
-// Function to look for a key in a multi level array
-if (!function_exists('recursive_array_search')) {
-    function recursive_array_search(array $array, $needle) {
-        $result = array();
-        $iterator  = new RecursiveArrayIterator($array);
-        $recursive = new RecursiveIteratorIterator(
-            $iterator,
-            RecursiveIteratorIterator::SELF_FIRST
-        );
-        foreach ($recursive as $key => $value) {
-            if ($key === $needle) {
-                $result[] = $value;
-            }
-        }
-        return $result;
-    }
-}
-
 // Get the properties of the current resource first
 $query = $modx->newQuery('modResource', array(
     'id' => $resourceID
@@ -98,7 +88,7 @@ if ($layoutIdx != '') {
 
 // Great! Now let's retrieve all field IDs from the array
 if (is_array($result)) {
-    $result = recursive_array_search($result, 'field');
+    $result = $romanesco->recursiveArraySearch($result, 'field');
     $result = array_unique($result);
 } else {
     $modx->log(modX::LOG_LEVEL_ERROR, '[includedBosons] Result is not a valid array. Is the layout idx correct?');

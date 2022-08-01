@@ -32,117 +32,115 @@ content: "/**\n * generateStaticCSS\n *\n * Creates static CSS files for each co
  * @package romanesco
  */
 
+$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
+$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
+
+if (!($romanesco instanceof Romanesco)) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco] Class not found!');
+    return;
+}
+
+// Css validator should be loaded through Romanesco
+if (!class_exists(CssLint\Linter::class)) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[CssLint] Class not found!');
+    return;
+}
+
+use CssLint\Linter;
+
 switch ($modx->event->name) {
-    case 'OnDocFormSave':
-        $exit = '';
+    case 'OnBeforeDocFormSave':
+        /**
+         * @var modResource $resource
+         * @var int $id
+         */
 
         // Exit if resource template is not GlobalBackground(s)
-        /** @var modResource $resource */
         $templateID = $resource->get('template');
         if ($templateID != 27 && $templateID != 8) {
-            $exit = 1;
+            break;
         }
 
-        // But continue if a header background is being set
+        // Clear event output to avoid rogue messages popping up again
+        $modx->event->_output = '';
+
+        // Init CSS linter
+        $cssLinter = new Linter();
+
+        // Validate the CSS gradient field
+        if ($templateID == 27)
+        {
+            // Prepare an array with submitted ContentBlocks data
+            $cbData = $resource->get('contentblocks');
+            $cbData = json_decode($cbData, true);
+
+            // It's probably just 1 background field, but let's not assume anything
+            $fields = $cbData[0]['content']['main'];
+            foreach ($fields as $field) {
+                if ($field['field'] != 109) continue;
+                $i = 0;
+
+                foreach ($field['rows'] as $row) {
+                    $i++;
+
+                    $image = 'url(' . $row['image']['url'] . ')';
+                    $position = $row['position']['value'] ? : 'center center';
+                    $size = $row['size']['value'] ? : 'cover';
+                    $repeat = $row['repeat']['value'] ? : 'no-repeat';
+                    $attachment = $row['attachment']['value'] ? : 'scroll';
+                    $gradient = $row['gradient']['value'];
+                    $background = $row['image']['url'] ? $image : $gradient;
+                    $css = "
+.background::before {
+    background:
+        $background
+        $position /
+        $size
+        $repeat
+        $attachment
+        !important
+    ;
+}";
+
+                    // Validate CSS
+                    if ($cssLinter->lintString($css) !== true) {
+                        $errors = implode("\n", $cssLinter->getErrors());
+                        $modx->log(modX::LOG_LEVEL_ERROR, "CSS for background $id is not valid:" . $css . "\n" . $errors);
+                        $modx->event->output("The CSS in layer $i is not valid! Please check the error log for details.<br>");
+                    }
+                }
+            }
+        }
+
+        break;
+
+    case 'OnDocFormSave':
+        /**
+         * @var modResource $resource
+         * @var int $id
+         */
+
+        $exit = false;
+
+        // Exit if resource template is not GlobalBackground(s)
+        $templateID = $resource->get('template');
+        if ($templateID != 27 && $templateID != 8) {
+            $exit = true;
+        }
+
+        // ...but continue if a header background is (being) set
         if ($resource->getTVValue('header_background_img')) {
-            $exit = 0;
+            $exit = false;
         }
 
         // Leave the EU?
-        if ($exit) return true;
+        if ($exit) break;
 
-        // Get all background containers
-        $bgContainers = $modx->getCollection('modResource', array(
-            'parent' => $modx->getOption('romanesco.global_backgrounds_id'),
-            'template' => 8
-        ));
-
-        // Get chunk with CSS template
-        if ($modx->getObject('modChunk', array('name' => 'cssTheme'))) {
-            $cssChunk = 'cssTheme';
-        } else {
-            $cssChunk = 'css';
-        }
-
-        // Get default CSS path
-        $cssPathSystem = $modx->getObject('modSystemSetting', array('key' => 'romanesco.custom_css_path'));
-        if ($cssPathSystem) {
-            $cssPathDefault = $modx->getOption('base_path') . $cssPathSystem->get('value');
-        } else {
-            $cssPathDefault = $modx->getOption('base_path') . 'assets/css';
-        }
-
-        // Generate default CSS file
-        $css = $modx->getChunk($cssChunk);
-        $staticFile = $cssPathDefault . '/site.css';
-
-        if (!$modx->cacheManager->writeFile($staticFile, $css)) {
-            $modx->log(modX::LOG_LEVEL_ERROR, "Error caching output from Resource {$modx->resource->get('id')} to static file {$staticFile}", '', __FUNCTION__, __FILE__, __LINE__);
-        }
-
-        // Start collecting CSS paths for minification down the road
-        $minifyCSS[] = $cssPathDefault;
-
-        // Each container represents a context
-        foreach ($bgContainers as $container) {
-            $context = $container->get('alias');
-
-            // Prepare CSS for this context
-            $css = $modx->getChunk($cssChunk, array(
-                'context' => $context,
-            ));
-
-            // Find correct file path for this context
-            $cssPathContext = $modx->getObject('modContextSetting', array(
-                'context_key' => $context,
-                'key' => 'romanesco.custom_css_path'
-            ));
-            if ($cssPathContext) {
-                $cssPath = $modx->getOption('base_path') . $cssPathContext->get('value');
-            } else {
-                $cssPath = $cssPathDefault . '/' . $context;
-            }
-
-            // Generate static file
-            if ($context) {
-                $staticFile = $cssPath . '/site.css';
-
-                if (!$modx->cacheManager->writeFile($staticFile, $css)) {
-                    $modx->log(modX::LOG_LEVEL_ERROR, "Error caching output from Resource {$modx->resource->get('id')} to static file {$staticFile}", '', __FUNCTION__, __FILE__, __LINE__);
-                }
-            }
-
-            // Sign up for minification
-            $minifyCSS[] = $cssPath;
-        }
-
-        // Minify CSS
-        foreach ($minifyCSS as $path) {
-            exec(
-                '"$HOME/.nvm/nvm-exec"' .
-                ' gulp minify-css --path ' . $path .
-                ' --gulpfile ' . escapeshellcmd($modx->getOption('assets_path')) . 'components/romanescobackyard/js/gulp/minify-css.js' .
-                ' > ' . escapeshellcmd($modx->getOption('core_path')) . 'cache/logs/minify.log' .
-                ' 2>' . escapeshellcmd($modx->getOption('core_path')) . 'cache/logs/minify-error.log &',
-                $output,
-                $return_css
-            );
-        }
+        // Generate CSS
+        $romanesco->generateBackgroundCSS();
 
         // Bump CSS version number to force refresh
-        $versionCSS = $modx->getObject('modSystemSetting', array('key' => 'romanesco.assets_version_css'));
-        if ($versionCSS)
-        {
-            // Only update minor version number (1.0.1<--)
-            $versionArray = explode('.', $versionCSS->get('value'));
-            $versionMinor = array_pop($versionArray);
-            $versionArray[] = $versionMinor + 1;
-
-            $versionCSS->set('value', implode('.', $versionArray));
-            $versionCSS->save();
-        } else {
-            $modx->log(modX::LOG_LEVEL_ERROR, 'Could not find romanesco.assets_version_css setting');
-        }
+        $romanesco->bumpVersionNumber();
 
         // Clear cache
         $modx->cacheManager->refresh();
