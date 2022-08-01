@@ -1,6 +1,7 @@
 id: 115
 parent: 109
 parent_properties: '{"key":"gradient","width":"70"}'
+input: textarea
 name: Gradient
 description: ''
 content_desc: 'Enter a valid CSS3 gradient value, for example: linear-gradient(to right, grey, purple).'
