@@ -1,0 +1,34 @@
+id: 635
+name: backstopScenarioRow
+description: ''
+category: m_hub_testing
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.backstopscenariorow.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.backstopscenariorow.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+{
+    "label": "[[+pagetitle]] ([[+id]])",
+    "url": "[[~[[+id]]? &scheme=`full`]]",
+    [[*reference_url:notempty=`
+    "referenceUrl": "[[*reference_url]][[+uri]]",
+    `]]
+    "delay": 2000,
+    "hideSelectors": [
+        ".publication .meta",
+        ".ui.active.embed"
+    ],
+    "removeSelectors": [
+        "#menu .item.highlight .basic.button",
+        "#author-about",
+        "#disqus_thread",
+        ".g-recaptcha"
+    ],
+    "hoverSelector": "",
+    "clickSelector": "",
+    "postInteractionWait": 1,
+    "selectors": [],
+    "selectorExpansion": true,
+    "expect": 0,
+    "misMatchThreshold" : 3,
+    "requireSameDimensions": true
+}

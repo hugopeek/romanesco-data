@@ -1,9 +1,8 @@
 id: 32
 templatename: RegressionTest
-description: ''
+description: 'Needs to output a comma-separated list of IDs.'
 category: t_hub
 icon: icon-undo
-content: "[[*alias:replace=`-==_`:toPlaceholder=`backstop_id`]]\n[[getSelections:toPlaceholder=`resources`?\n    &selections=`[[*id]]`\n    &tpl=`@INLINE [[+id]]`\n    &outputSeparator=`,`\n    &limit=`0`\n]]\n{\n    \"id\": \"[[+backstop_id]]\",\n    \"viewports\": [\n        {\n            \"label\": \"phone\",\n            \"width\": 320,\n            \"height\": 480\n        },{\n            \"label\": \"tablet\",\n            \"width\": 800,\n            \"height\": 600\n        },{\n            \"label\": \"desktop\",\n            \"width\": 1440,\n            \"height\": 960\n        }\n    ],\n    \"scenarios\": [\n        [[pdoResources?\n            &parents=`0`\n            &resources=`[[+resources]]`\n            &limit=`0`\n            &tpl=`@INLINE\n            {\n                \"label\": \"[[+pagetitle]] ([[+id]])\",\n                \"url\": \"[[~[[+id]]? &scheme=`full`]]\",\n                [[*reference_url:notempty=`\n                \"referenceUrl\": \"[[*reference_url]][[+uri]]\",\n                `]]\n                \"delay\": 2000,\n                \"hideSelectors\": [\n                    \".publication .meta\",\n                    \".ui.active.embed\"\n                ],\n                \"removeSelectors\": [\n                    \"#menu .item.highlight .basic.button\",\n                    \"#author-about\",\n                    \"#disqus_thread\",\n                    \".g-recaptcha\"\n                ],\n                \"hoverSelector\": \"\",\n                \"clickSelector\": \"\",\n                \"postInteractionWait\": 1,\n                \"selectors\": [],\n                \"selectorExpansion\": true,\n                \"expect\": 0,\n                \"misMatchThreshold\" : 3,\n                \"requireSameDimensions\": true\n            }`\n            &outputSeparator=`,`\n        ]]\n    ],\n    \"paths\": {\n        \"bitmaps_reference\": \"_backstop/[[+backstop_id]]/bitmaps_reference\",\n        \"bitmaps_test\": \"_backstop/[[+backstop_id]]/bitmaps_test\",\n        \"engine_scripts\": \"tests\",\n        \"html_report\": \"_backstop/[[+backstop_id]]/html_report\",\n        \"ci_report\": \"_backstop/[[+backstop_id]]/ci_report\"\n    },\n    \"onReadyScript\": \"backstop-ready.js\",\n    \"report\": [\"browser\"],\n    \"engine\": \"puppeteer\",\n    \"engineOptions\": {\n        \"args\": [\"--no-sandbox\"]\n    },\n    \"puppeteerOffscreenCaptureFix\": false,\n    \"asyncCaptureLimit\": 3,\n    \"asyncCompareLimit\": 30,\n    \"debug\": false,\n    \"debugWindow\": false\n}"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.regressiontest.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.regressiontest.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -31,33 +30,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &parents=`0`
             &resources=`[[*content]]`
             &limit=`0`
-            &tpl=`@INLINE
-            {
-                "label": "[[+pagetitle]] ([[+id]])",
-                "url": "[[~[[+id]]? &scheme=`full`]]",
-                [[*reference_url:notempty=`
-                "referenceUrl": "[[*reference_url]][[+uri]]",
-                `]]
-                "delay": 2000,
-                "hideSelectors": [
-                    ".publication .meta",
-                    ".ui.active.embed"
-                ],
-                "removeSelectors": [
-                    "#menu .item.highlight .basic.button",
-                    "#author-about",
-                    "#disqus_thread",
-                    ".g-recaptcha"
-                ],
-                "hoverSelector": "",
-                "clickSelector": "",
-                "postInteractionWait": 1,
-                "selectors": [],
-                "selectorExpansion": true,
-                "expect": 0,
-                "misMatchThreshold" : 3,
-                "requireSameDimensions": true
-            }`
+            &tpl=`backstopScenarioRow`
             &outputSeparator=`,`
         ]]
     ],
