@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[!+fb[[*id]].error.fb[[*id]]-math:toPlaceholder=`math_error`]]
 
-<div class="field [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[!+math_error:notempty=`error`]] required">
+<div class="field [[++formblocks.submit_ajax:eq=`1`:then=`hidden`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[!+math_error:notempty=`error`]] required">
     <label for="fb[[*id]]-math">
         <strong>[[!+fb[[*id]].fb[[*id]]-op1]]</strong>
         <i class="small fitted [[!+fb[[*id]].fb[[*id]]-operator:is=`-`:then=`minus`:else=`plus`]] icon"></i>

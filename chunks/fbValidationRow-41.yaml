@@ -6,4 +6,4 @@ properties: 'a:0:{}'
 
 -----
 
-[[!$fbValidationRowEmail]]
+[[$fbValidationRowEmail? &uid=`[[+uid]]`]]

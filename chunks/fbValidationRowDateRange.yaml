@@ -11,13 +11,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     identifier: '[[+name]]-start',
     rules: [{
         type   : 'empty',
-        prompt : '[[!$fbValidationPrompt:stripForJS? &type=`date_start`]]'
+        prompt : '[[$fbValidationPrompt:stripForJS? &type=`date_start`]]'
     }]
 },
 [[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:replace=`-==`]]end: {
     identifier: '[[+name]]-end',
     rules: [{
         type   : 'empty',
-        prompt : '[[!$fbValidationPrompt:stripForJS? &type=`date_end`]]'
+        prompt : '[[$fbValidationPrompt:stripForJS? &type=`date_end`]]'
     }]
 },
