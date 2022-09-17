@@ -36,7 +36,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                         and the code below will not be executed.
                     ]]
                     [[[[If?
-                        &subject=`[[++formblocks.submit_ajax]]`
+                        &subject=`[[++formblocks.ajax_mode]]`
                         &operator=`eq`
                         &operand=`1`
                         &then=`$fbSubmitAjaxJS`
