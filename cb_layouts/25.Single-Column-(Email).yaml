@@ -9,5 +9,4 @@ columns: '[{"reference":"main","width":"100"}]'
 template: '@CHUNK mbSectionSingleColumn'
 availability: '[{"field":"template","value":"29,30"}]'
 times_per_page: 0
-layout_only_nested: '0'
 settings: '[{"reference":"background","title":"Background","fieldtype":"select","default_value":"default","fieldoptions":"[[If?\n   &subject=`[[$cbLayoutBackgroundsTheme]]`\n   &operator=`isnull`\n   &then=`[[$cbLayoutBackgrounds]]`\n   &else=`[[$cbLayoutBackgroundsTheme]]`\n]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"container_type","title":"Width","fieldtype":"select","default_value":"","fieldoptions":"[[$cbSettingContainerType]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"alignment","title":"Content alignment","fieldtype":"select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1"}]'

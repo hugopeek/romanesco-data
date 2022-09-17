@@ -8,5 +8,5 @@ columns: '[{"reference":"main","width":60},{"reference":"right","width":"40"}]'
 template: '@CHUNK cbLayoutCard'
 availability: '[]'
 times_per_page: 0
-layout_only_nested: '1'
+layout_only_nested: 1
 settings: '[{"reference":"content_type","title":"Content type","fieldtype":"radio","default_value":"description","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbCardContentType]]","field_is_exposed":"modal","process_tags":"1"}]'

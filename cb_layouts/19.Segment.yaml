@@ -9,5 +9,5 @@ columns: '[{"reference":"main","width":"100"}]'
 template: '@CHUNK cbLayoutSegment'
 availability: '[]'
 times_per_page: 0
-layout_only_nested: '1'
+layout_only_nested: 1
 settings: '[{"reference":"segment_type","title":"Segment type","fieldtype":"select","default_value":"regular","fieldoptions":"[[$cbFieldSegmentType]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"background","title":"Background","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[If?\n   &subject=`[[$cbLayoutBackgroundsTheme]]`\n   &operator=`isnull`\n   &then=`[[$cbLayoutBackgrounds]]`\n   &else=`[[$cbLayoutBackgroundsTheme]]`\n]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"alignment","title":"Content alignment","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"padding","title":"Extra padding","fieldtype":"select","default_value":"","fieldoptions":"[[$cbFieldPadding]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""}]'
