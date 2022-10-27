@@ -1,5 +1,39 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.16.0
+Released on ...
+
+New features:
+- Add ability to submit forms via Ajax (Experimental)
+- Add template for generating BackstopJS regression test configuration
+
+Fixes and improvements:
+- Define variables that could potentially be empty (for PHP8 compatibility)
+- Disable Jquery fallback and only load from local source in dev mode
+- Cache form validation elements
+- Exclude empty templates when generating critical CSS
+- Remove parallel option from generate CSS commands
+- Execute Squoosh optimization via runCommand (Symfony Process)
+- Fix images being optimized with empty quality setting
+- Fix thumbnail errors when x/y value is negative
+- Prevent optimising of images without valid path
+- Minify CSS via task queue (if Scheduler is installed)
+- Validate CSS before saving Global Backgrounds
+- Fix open in new window option in Image with Link CB
+- Add option to show CB table rows as cards on mobile
+- Add chunks for Table CB templates
+- Change button to bottom attached in Card CB
+- Fix slider after updating Swiper to v8
+- Check for autoloaded HtmlPageDom class in plugins
+- Fix broken references in status grid and project timeline
+- Load overview images with chunk (resolves repeating image issue in fluid tpl)
+- Add overviewRowImageBasicOverlay chunk to config
+- Use navbar_size setting to define dropdown ToC size
+- Add cases for loading Toast and Flag assets
+- Use custom dist path to fetch Form and Calendar CSS
+- Hide local submenu level up link if parent is hidden in menu
+- Apply alignment to content element in card overviews
+
 ## v1.15.0
 Released on May 24, 2022
 
