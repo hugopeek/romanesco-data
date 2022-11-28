@@ -1,5 +1,5 @@
 id: 102
-type: option
+type: listbox
 name: footer_type
 caption: 'Footer type'
 description: 'Choose which content to display inside the footer. You can add different footers under Global Content > Footers. A default footer can be defined under Configuration, or as context setting.'
