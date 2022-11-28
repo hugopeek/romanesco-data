@@ -1,3 +1,4 @@
 id: 9
 name: StatusIssue
+category: 17
 properties: 'a:2:{s:11:"firstOption";a:7:{s:4:"name";s:11:"firstOption";s:4:"desc";s:41:"romanesco.tvselectinputoption.firstOption";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:30:"--- Select kind of problem ---";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"inputOptionKey";a:7:{s:4:"name";s:14:"inputOptionKey";s:4:"desc";s:44:"romanesco.tvselectinputoption.inputOptionKey";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:13:"status_issues";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

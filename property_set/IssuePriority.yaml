@@ -1,3 +1,4 @@
 id: 8
 name: IssuePriority
+category: 17
 properties: 'a:2:{s:14:"inputOptionKey";a:7:{s:4:"name";s:14:"inputOptionKey";s:4:"desc";s:44:"romanesco.tvselectinputoption.inputOptionKey";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:14:"issue_priority";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:8:"linkType";a:7:{s:4:"name";s:8:"linkType";s:4:"desc";s:38:"romanesco.tvselectinputoption.linkType";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"alias";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

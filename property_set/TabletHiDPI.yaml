@@ -1,3 +1,4 @@
 id: 13
 name: TabletHiDPI
+category: 17
 properties: 'a:3:{s:8:"imgScale";a:7:{s:4:"name";s:8:"imgScale";s:4:"desc";s:0:"";s:4:"type";s:11:"numberfield";s:7:"options";a:0:{}s:5:"value";i:2;s:7:"lexicon";N;s:4:"area";s:0:"";}s:7:"imgType";a:7:{s:4:"name";s:7:"imgType";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:6:"tablet";s:7:"lexicon";N;s:4:"area";s:0:"";}s:8:"imgWidth";a:7:{s:4:"name";s:8:"imgWidth";s:4:"desc";s:0:"";s:4:"type";s:11:"numberfield";s:7:"options";a:0:{}s:5:"value";i:1300;s:7:"lexicon";N;s:4:"area";s:0:"";}}'
