@@ -7,7 +7,7 @@ content_desc: ''
 sortorder: 57
 category: 7
 icon: checkbox
-template: "[[!$fbSelectOptionRow?\n    &idx=`[[+idx]]`\n    &unique_idx=`[[+unique_idx]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[fbStripNonAlpha? &input=`[[+field_name]]`]]`\n    &field_option=`[[fbStripNonAlpha? &input=`[[+field_option]]`]]`\n    &option_layout=`[[+option_layout]]`\n    &collapse_target=`[[+collapse_target]]`\n    &collapse_default=`[[+collapse_default]]`\n    &checkbox_type=`[[+checkbox_type]]`\n    &field_name_html=`[[+field_name_html]]`\n]]"
+template: "[[!$fbSelectOptionRow?\n    &idx=`[[+idx]]`\n    &unique_idx=`[[+unique_idx]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[fbStripNonAlpha? &input=`[[+field_name:empty=`0`]]`]]`\n    &field_option=`[[fbStripNonAlpha? &input=`[[+field_option]]`]]`\n    &option_layout=`[[+option_layout]]`\n    &collapse_target=`[[+collapse_target]]`\n    &collapse_default=`[[+collapse_default]]`\n    &checkbox_type=`[[+checkbox_type]]`\n    &field_name_html=`[[+field_name_html]]`\n]]"
 properties: '{"wrapper_template":"[[!$fbSelectOption?\n    &unique_idx=`[[+unique_idx]]`\n    &field_layout=`[[+field_layout]]`\n    &field_type=`[[+field_type]]`\n    &field_name=`[[+field_name]]`\n    &field_name_html=`[[+field_name_html]]`\n    &option_layout=`[[+option_layout]]`\n    &checkbox_type=`[[+checkbox_type]]`\n    &field_helptext=`[[+field_helptext]]`\n    &helptext_position=`[[+helptext_position]]`\n    &field_required=`[[+field_required]]`\n    &rows=`[[+rows]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
