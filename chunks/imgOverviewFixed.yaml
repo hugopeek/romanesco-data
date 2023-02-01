@@ -2,7 +2,7 @@ id: 566
 name: imgOverviewFixed
 description: 'Alternative ImagePlus tpl for overview images, with fixed height and width. Sometimes you don''t want to generate all the responsive variants, for example when it''s only a small avatar image.'
 category: a_img_overview
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.imgoverviewfixed.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.imgoverviewfixed.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:3:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.imgoverviewfixed.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.imgoverviewfixed.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:8:"altField";a:7:{s:4:"name";s:8:"altField";s:4:"desc";s:35:"romanesco.imgoverviewfixed.altField";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:9:"pagetitle";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
@@ -14,5 +14,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
      `]]
      [[+width:notempty=`width="[[+width]]"`]]
      [[+height:notempty=`height="[[+height]]"`]]
-     alt="[[+alt:empty=`[[+pagetitle]]`:htmlent]]"
+     alt="[[+alt:empty=`[[+[[+altField]]]]`:htmlent]]"
 />
