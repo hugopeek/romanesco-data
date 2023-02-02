@@ -1,5 +1,20 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.16.1
+Released on February 2, 2023
+
+Fixes and improvements:
+- Replace Squoosh command with libvips
+- Add property for changing alt field in imgOverview chunks
+- Fix Squoosh command failing with escaped path variable
+- Rename GenerateStaticCSS snippet to GenerateSiteCSS
+- Improve clearing of custom cache
+- Include layout ID in overview placeholder prefix
+- Rename Tool Shed to Project Data
+- Include modified Hits snippet, to prevent fatal errors in PHP 8
+- Turn footer type TV into selector, to accommodate larger lists
+- Only activate mousewheel scrolling on focus in rendered Leaflet map
+
 ## v1.16.0
 Released on October 28, 2022
 
@@ -9,7 +24,7 @@ New features:
 
 Fixes and improvements:
 - Load Leaflet assets directly (without CDN)
-- Define variables that could potentially be empty (for PHP8 compatibility)
+- Define variables that could potentially be empty (for PHP 8 compatibility)
 - Disable Jquery fallback and only load from local source in dev mode
 - Cache form validation elements
 - Exclude empty templates when generating critical CSS
