@@ -38,7 +38,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &else=`$toolbarBasic`
     ]]]]
 
-    <main id="main" role="main">
+    <main id="main">
         <div class="ui very relaxed grid container">
             <article id="content" class="sixteen wide mobile eleven wide computer publication column">
 

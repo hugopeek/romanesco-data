@@ -34,7 +34,7 @@ properties: "a:2:{s:13:\"elementStatus\";a:7:{s:4:\"name\";s:13:\"elementStatus\
         &else=`$toolbarBasic`
     ]]]]
 
-    <main id="main" role="main">
+    <main id="main">
         <div class="ui relaxed [[++sidebar_position:is=`left`:then=`computer reversed`]] grid container">
             <article id="content" class="sixteen wide mobile twelve wide computer column">
                 [[$content]]

@@ -1,0 +1,15 @@
+id: 637
+name: svg
+description: 'References the SVG file in an <img> tag, or parses it inline as <svg>. This behaviour can be changed under Configuration > Performance. Take note: lazy loaded SVGs are always parsed as <img>.'
+category: a_image
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:27:"romanesco.svg.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:28:"romanesco.svg.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[[[If?
+    &subject=`[[++svg_inline]]_[[+lazy_load]]`
+    &operator=`EQ`
+    &operand=`1_0`
+    &then=`svgSanitize? &class=`[[+classes]]` &file=`[[++base_path]][[+url]]` &title=`[[+alt]]``
+    &else=`$img? &class=`[[+classes]]` &lazy=`[[+lazy_load]]` &src=`[[+url]]` &width=`[[+width]]` &height=`[[+height]]` &alt=`[[+alt]]``
+]]]]

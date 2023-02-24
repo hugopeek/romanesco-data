@@ -35,7 +35,7 @@ properties: "a:2:{s:13:\"elementStatus\";a:7:{s:4:\"name\";s:13:\"elementStatus\
         &else=`$toolbarBasic`
     ]]]]
 
-    <main id="main" role="main">
+    <main id="main">
         <article id="content">
             [[$content]]
         </article>

@@ -7,13 +7,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <div class="column">
-    <figure class="ui rounded [[+classes]] [[+lightbox:eq=`1`:then=`lightbox`]] image" data-idx="[[+idx]]">
+    <figure class="ui rounded [[+classes]] [[+extension:lcase]] [[+lightbox:eq=`1`:then=`lightbox`]] image" data-idx="[[+idx]]">
         [[[[modifiedIf?
             &subject=`[[+extension:lcase]]`
             &operator=`EQ`
             &operand=`svg`
-            &then=`svgSanitize? &file=`[[+url]]` &title=`[[+alt]]``
-            &else=`$imgResponsiveGallery? &uid=`[[+unique_idx]]``
+            &then=`$svg? &classes=`regular` &url=`[[+url]]` &alt=`[[+title]]` &uid=`[[+unique_idx]]``
+            &else=`$imgResponsiveGallery? &alt=`[[+title]]` &uid=`[[+unique_idx]]``
         ]]]]
     </figure>
 </div>

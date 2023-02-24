@@ -7,7 +7,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <[[+level]] class="ui [[+alignment]] [[+icon_position]] header">
-    <img class="ui image" src="[[+url]]" alt="[[+alt:htmlent]]">
+    <span class="ui svg image">
+        [[$iconSVG? &classes=`regular` &lazy_load=`0` &uid=`[[+unique_idx]]`]]
+    </span>
     <span class="content">
         [[+value]]
         [[+subtitle:notempty=`<span class="sub header">[[+subtitle]]</span>`]]
