@@ -1,5 +1,20 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.16.2
+Released on ...
+
+Fixes and improvements:
+- Remove Google Gtag setting from Configuration
+- Remove role="main" from main tags
+- Fix various image alt tags
+- Improve controls for inlining SVGs
+- Prevent Organization logos becoming too big on smaller screens
+- Remove comma after last entry in responsive img sizes attribute
+- Improve primary / secondary button styling on colored backgrounds
+- Forward missing text_size and show_rating setting in Testimonial overviews
+- Add ability to change divider heading level
+- Allow title format override at template level
+
 ## v1.16.1
 Released on February 2, 2023
 
