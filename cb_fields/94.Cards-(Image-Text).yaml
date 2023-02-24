@@ -3,12 +3,12 @@ parent_properties: ''
 input: repeater
 name: 'Cards (Image + Text)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 24
 category: 4
 icon: th-large
 icon_type: custom
-template: "[[$cardsRowInnerWrapper?\n    &box_type=`[[+box_type]]`\n    &link=`[[+link]]`\n    &image=`[[+image]]`\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &subtitle=`[[+subtitle]]`\n    &content=`[[+content]]`\n    &button_text=`[[+button_text]]`\n    &emphasize=`[[+emphasize]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"
+template: "[[$cardsRowInnerWrapper?\n    &box_type=`[[+box_type]]`\n    &link=`[[+link]]`\n    &image=`[[+image]]`\n    &alt=`[[+heading]]`\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &subtitle=`[[+subtitle]]`\n    &content=`[[+content]]`\n    &button_text=`[[+button_text]]`\n    &emphasize=`[[+emphasize]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"
 properties: '{"wrapper_template":"[[$cardsOuter?\n    &rows=`[[+rows]]`\n    &cols=`[[+cols]]`\n    &level=`[[+heading_level]]`\n    &box_type=`[[+box_type]]`\n    &responsive=`[[+responsive]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"3","layout_style":"default"}'
 availability: '[]'
 layouts: ''
