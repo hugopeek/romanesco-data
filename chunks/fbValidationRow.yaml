@@ -13,30 +13,30 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[+field_type:is=`email`:then=`
         {
             type   : 'email',
-            prompt : '[[$fbValidationPrompt:stripForJS? &type=`email`]]'
+            prompt : '[[$fbValidationPrompt:stripForJS? &type=`email` &uid=`[[+uid]]`]]'
         },
         `]]
         [[+field_type:is=`url`:then=`
         {
             type   : 'url',
-            prompt : '[[$fbValidationPrompt:stripForJS? &type=`url`]]'
+            prompt : '[[$fbValidationPrompt:stripForJS? &type=`url` &uid=`[[+uid]]`]]'
         },
         `]]
         [[+field_type:is=`number`:then=`
         {
             type   : 'number',
-            prompt : '[[$fbValidationPrompt:stripForJS? &type=`number`]]'
+            prompt : '[[$fbValidationPrompt:stripForJS? &type=`number` &uid=`[[+uid]]`]]'
         },
         `]]
         [[+field_type:is=`password`:then=`
         {
             type   : 'minLength[8]',
-            prompt : '[[$fbValidationPrompt:stripForJS? &type=`password`]]'
+            prompt : '[[$fbValidationPrompt:stripForJS? &type=`password` &uid=`[[+uid]]`]]'
         },
         `]]
         {
             type   : 'empty',
-            prompt : '[[$fbValidationPrompt:stripForJS]]'
+            prompt : '[[$fbValidationPrompt:stripForJS? &uid=`[[+uid]]`]]'
         }
     ]
 },
