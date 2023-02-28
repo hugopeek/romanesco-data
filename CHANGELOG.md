@@ -8,6 +8,7 @@ New features:
 
 Fixes and improvements:
 - Fix non-alpha characters breaking titles in inline SVGs
+- Fix missing form names due to improper caching
 - Fix repeated values in form fieldset IDs
 - Fix repeated values in form validation prompts
 - Fix inverted headings and buttons inside forms with light background
