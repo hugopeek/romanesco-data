@@ -37,7 +37,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </div>
 
     <div id="[[+name]]-other" class="field [[+check_other:is=``:then=`hidden`]]">
-        <input type="text" name="[[+name]]-other" value="[[!+fb[[*id]].[[+name]]-other]]" placeholder="[[+option_placeholder]]">
+        <input type="text" name="[[+name]]-other" value="[[!+fb[[*id]].[[+name]]-other]]" placeholder="[[+option_placeholder:empty=`[[%formblocks.field.other_namely]]`]]">
     </div>
     `]]
 
