@@ -1,0 +1,23 @@
+id: 639
+name: cbSettingColumnsAll
+description: ''
+category: a_cb_setting
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.cbsettingcolumnsall.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.cbsettingcolumnsall.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+1 column=one
+2 columns=two
+3 columns=three
+4 columns=four
+5 columns=five
+6 columns=six
+7 columns=seven
+8 columns=eight
+9 columns=nine
+10 columns=ten
+11 columns=eleven
+12 columns=twelve
+13 columns=thirteen
+14 columns=fourteen
+15 columns=fifteen

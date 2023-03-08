@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[+field_helptext:notempty=`<span class="help">[[+field_helptext]]</span>`:toPlaceholder=`help`]]
 [[!+fb[[*id]].[[+name]]:contains=`[[+option_other_value]]`:then=`checked`:toPlaceholder=`check_other`]]
 
-<div id="[[+name]]" class="[[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[+option_layout:empty=`grouped`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[+field_type]] fields [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
+<div id="[[+name]]" class="[[+option_layout:empty=`grouped`]] [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[+field_type]] fields [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
     <label for="[[+name]]">
         [[+field_name]]
     </label>

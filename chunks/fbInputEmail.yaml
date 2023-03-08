@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="field [[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] [[!If? &subject=`[[+fb[[*id]].error.fb[[*id]]-email]]` &operator=`notempty` &then=`error`]] required">
+<div class="[[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[!If? &subject=`[[+fb[[*id]].error.fb[[*id]]-email]]` &operator=`notempty` &then=`error`]] required">
     <label for="fb[[*id]]-email">[[+field_name:stripWords=`[[$fbStripWordsLabel]]`]]</label>
     <input type="email" name="fb[[*id]]-email" id="fb[[*id]]-email" value="[[!+fb[[*id]].fb[[*id]]-email]]" placeholder="[[+field_placeholder]]">
     [[+fb[[*id]].error.fb[[*id]]-email]]
