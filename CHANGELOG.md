@@ -7,6 +7,9 @@ New features:
 - Add nested fieldset layout for form templates
 
 Fixes and improvements:
+- Use HTML value in email report if field label is empty
+- Add field width option for inline form fields
+- Fix nested fields not being processed in form report
 - Fix non-alpha characters breaking titles in inline SVGs
 - Fix missing form names due to improper caching
 - Fix repeated values in form fieldset IDs
