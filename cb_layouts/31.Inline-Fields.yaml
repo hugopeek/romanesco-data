@@ -1,0 +1,12 @@
+id: 31
+name: 'Inline Fields'
+description: 'A wrapper for displaying multiple form fields in a single row.'
+sortorder: 18
+category: 7
+icon: form
+columns: '[{"reference":"main","width":"100"}]'
+template: "[[modifiedIf?\n    &subject=`[[+layout_title]]`\n    &operator=`notempty`\n    &then=`id=\"fb[[*id]]-[[stripAsAlias? &input=`[[+layout_title]]`]]\"`\n    &toPlaceholder=`fieldset_id_[[+unique_idx]]`\n]]\n[[modifiedIf?\n    &subject=`[[+main]]`\n    &operator=`contains`\n    &operand=`required`\n    &then=`required`\n    &toPlaceholder=`required_[[+unique_idx]]`\n]]\n\n<div [[+fieldset_id_[[+unique_idx]]]] class=\"unstackable inline fields [[+required_[[+unique_idx]]]]\">\n    [[+label:notempty=`<label>[[+label]]</label>`]]\n    [[+main]]\n</div>"
+availability: '[{"field":"template","value":"10"},{"field":"context","value":"hub"}]'
+times_per_page: null
+layout_only_nested: 1
+settings: '[{"reference":"label","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asSetting"}]'
