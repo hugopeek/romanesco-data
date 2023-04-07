@@ -6,4 +6,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[$svg? &alt=`[[+alt:empty=`[[+pagetitle]]`]]` &uid=`[[+unique_idx]]`]]
+[[$svg?
+    &classes=`[[+icon_size]] [[+de_emphasize:eq=`1`:then=`disabled`]] [[+classes:empty=`ui image`]]`
+    &alt=`[[+alt:empty=`[[+pagetitle]]`]]`
+    &uid=`[[+unique_idx]]`
+]]
