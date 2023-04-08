@@ -3,12 +3,12 @@ parent_properties: null
 input: chunk
 name: 'Table of Contents'
 description: ''
-content_desc: ''
+content_desc: 'The ToC menu contains all headings on the page with an anchor (an ID in HTML). You can attach an anchor to all headings with the ''Automatic anchors'' TV, or per heading by manually activating the anchor in their settings menu.'
 sortorder: 66
 category: 1
 icon: tableofcontents
 template: '[[+value]]'
-properties: '{"chunk":"579","custom_preview":"<p><em>The ToC menu contains all headings on the page with an anchor (an ID in HTML). You can attach an anchor to all headings with the ''Automatic anchors'' TV, or per heading by manually activating the anchor in their settings menu.<\/em><\/p>"}'
+properties: '{"chunk":"579","custom_preview":"<div class=\"ui divider\"><\/div>"}'
 availability: '[]'
 layouts: ''
 times_per_page: 1

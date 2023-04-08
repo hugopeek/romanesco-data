@@ -2,8 +2,8 @@ id: 119
 parent_properties: null
 input: chunk
 name: Steps
-description: 'A menu to show the completion status of an activity in a series of activities. Useful in combination with multi-page forms.'
-content_desc: null
+description: ''
+content_desc: 'A menu to show the completion status of an activity in a series of activities. Useful in combination with multi-page forms.'
 sortorder: 32
 category: 3
 icon: tabs

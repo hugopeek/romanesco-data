@@ -2,8 +2,8 @@ id: 1
 parent_properties: ''
 input: heading
 name: Heading
-description: 'Insert a regular heading, with the ability to control the hierarchy level (h1,h2,h3..) and text alignment. You can also add an anchor to the HTML, for more precise linking from other pages.'
-content_desc: null
+description: ''
+content_desc: ''
 category: 1
 icon: heading
 icon_type: ''

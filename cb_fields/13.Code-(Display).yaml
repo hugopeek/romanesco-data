@@ -2,8 +2,8 @@ id: 13
 parent_properties: ''
 input: code
 name: 'Code (Display)'
-description: 'The code you paste here, will be shown exactly like that on the front-end.'
-content_desc: null
+description: ''
+content_desc: 'The code you paste here, will be shown exactly like that on the front-end.'
 sortorder: 38
 category: 6
 icon: code

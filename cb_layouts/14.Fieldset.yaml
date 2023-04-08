@@ -1,6 +1,6 @@
 id: 14
 name: Fieldset
-description: 'Only available in forms. With fieldsets, you can section your forms in different blocks, each with its own header.'
+description: 'Divide your forms into different sections, each with its own header.'
 sortorder: 18
 category: 7
 icon: form

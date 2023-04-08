@@ -3,12 +3,12 @@ parent_properties: null
 input: chunk
 name: 'Accept Terms and Conditions'
 description: ''
-content_desc: null
+content_desc: 'Add a checkbox that blocks form submission if left unchecked. You can link to your terms by entering the corresponding resource ID and using the [[+link]] placeholder in the field text.'
 sortorder: 64
 category: 7
 icon: checkbox
 template: '[[+tag]]'
-properties: '{"chunk":"44","custom_preview":"<p><em>You can link to your terms by entering the corresponding resource ID and using the [[+link]] placeholder in the field text.<\/em><\/p>"}'
+properties: '{"chunk":"44","custom_preview":"<div class=\"ui divider\"><\/div>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1

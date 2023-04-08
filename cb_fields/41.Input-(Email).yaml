@@ -3,13 +3,13 @@ parent_properties: null
 input: chunk
 name: 'Input (Email)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 54
 category: 7
 icon: email
 icon_type: custom
 template: '[[+tag]]'
-properties: '{"chunk":"37","custom_preview":"<p><em>You can add an optional placeholder in the Settings menu.<\/em><\/p>"}'
+properties: '{"chunk":"37","custom_preview":"<div class=\"ui divider\"><\/div>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1

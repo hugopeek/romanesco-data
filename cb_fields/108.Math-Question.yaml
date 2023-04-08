@@ -2,13 +2,13 @@ id: 108
 parent_properties: null
 input: chunk
 name: 'Math Question'
-description: 'Render a math-based question in your form to prevent spam. It needs to be answered correctly in order to proceed.'
-content_desc: null
+description: ''
+content_desc: 'Render a math-based question in your form to prevent spam. It needs to be answered correctly in order to proceed.'
 sortorder: 63
 category: 7
 icon: snippet_B
 template: '[[+tag]]'
-properties: '{"chunk":"443","custom_preview":"<p><em>This block will render a math-based question in your form to prevent spam. It needs to be answered correctly in order to proceed.<\/em><\/p>"}'
+properties: '{"chunk":"443","custom_preview":"<div class=\"ui divider\"><\/div>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1

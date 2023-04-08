@@ -3,13 +3,13 @@ parent_properties: null
 input: chunk
 name: 'Input (Date)'
 description: ''
-content_desc: ''
+content_desc: 'A standard date selector. You can predefine what kind of date or time can be selected.'
 sortorder: 60
 category: 7
 icon: calendar
 icon_type: custom
 template: '[[+tag]]'
-properties: '{"chunk":"451","custom_preview":"<p><em>A standard date selector. You can predefine what kind of date or time can be selected.<\/em><\/p>"}'
+properties: '{"chunk":"451","custom_preview":"<div class=\"ui divider\"><\/div>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"date_type","title":"Date type","fieldtype":"select","default_value":"date only","fieldoptions":"Date and time=date time\nDate only=date only\nTime only=time only\nMonth and year=month year","field_is_exposed":"asField","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"inherit","fieldoptions":"[[$cbFormLabelPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"helptext_position","title":"Help position","fieldtype":"select","default_value":"bottom","fieldoptions":"[[$cbFormHelpPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"field_placeholder","title":"Placeholder","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"required_text","title":"Validation text","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_name_html","title":"Name in HTML","description":"Optional override for the name attribute. Recommended when using this field in custom hooks / automations.","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'

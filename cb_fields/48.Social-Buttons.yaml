@@ -3,7 +3,7 @@ parent_properties: ''
 input: chunk_selector
 name: 'Social Buttons'
 description: 'DEPRECATED. Each option now has its own CB.'
-content_desc: null
+content_desc: 'THIS BLOCK IS DEPRECATED. Please replace it with a Social Buttons (Share), or Social Buttons (Connect) block.'
 sortorder: 33
 category: 3
 icon: share-alt
