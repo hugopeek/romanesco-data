@@ -12,20 +12,20 @@ publishedon: 1547636580
 publishedby: 1
 context_key: hub
 uri: backyard/
-properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":19,\"settings\":{\"cols\":\"three\",\"row_tpl\":\"overviewRowIconLeft\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"\",\"parent\":\"[[*id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h3\",\"depth\":\"0\",\"limit\":\"99\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"font\",\"padding\":\"regular\",\"de_emphasize\":\"0\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":19,"settings":{"cols":"three","row_tpl":"overviewRowIconLeft","show_subtitle":"1","show_introtext":"0","link_text":"","parent":"[[*id]]","title_field":"menutitle","title_hierarchy":"h3","depth":"0","limit":"99","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"font","padding":"regular","de_emphasize":"0"}}],"fieldcounts":{"19":1},"_isContentBlocks":true}}'
+properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":19,\"settings\":{\"cols\":\"three\",\"row_tpl\":\"overviewRowIconLeft\",\"show_subtitle\":\"1\",\"show_introtext\":\"0\",\"link_text\":\"\",\"parent\":\"[[*id]]\",\"title_field\":\"menutitle\",\"title_hierarchy\":\"h2\",\"depth\":\"0\",\"limit\":\"99\",\"show_hidden\":\"0\",\"sortby\":\"menuindex\",\"pagination\":\"0\",\"img_type\":\"landscape\",\"icon_type\":\"font\",\"padding\":\"regular\",\"de_emphasize\":\"0\"}}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":19,"settings":{"cols":"three","row_tpl":"overviewRowIconLeft","show_subtitle":"1","show_introtext":"0","link_text":"","parent":"[[*id]]","title_field":"menutitle","title_hierarchy":"h2","depth":"0","limit":"99","show_hidden":"0","sortby":"menuindex","pagination":"0","img_type":"landscape","icon_type":"font","padding":"regular","de_emphasize":"0"}}],"fieldcounts":{"19":1},"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '0'
+    auto_references: '0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
     content_owner: ''
     content_priority: ''
     content_purpose: ''
-    content_repurpose_dest: ''
-    content_repurpose_src: ''
     content_result: ''
     content_tone: ''
     critical_css_uri: assets/css/critical/backyard.css
+    external_links: ''
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
     footer_cta_background: '@INHERIT'
@@ -40,7 +40,6 @@ tvs:
     header_title: '@INHERIT'
     header_visibility: '@INHERIT default'
     links_attachment: ''
-    links_external: ''
     links_related: ''
     overview_icon_font: ''
     overview_icon_svg: ''
@@ -57,15 +56,15 @@ tvs:
     pagination_scroll_top: '@INHERIT 1'
     planning_date_due: ''
     status_health: stable
-    status_improvements: ''
-    status_issues: ''
-    status_progress: to-do
+    status_progress: todo
+    status_tasks: ''
+    toc_headings: '@INHERIT H1||H2||H3||H4'
     toolbar_visibility: '@INHERIT default'
 
 -----
 
 <div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`default`]]">
-    <div class="ui   container">
+    <div class="ui    main container">
         [[$overviewOuter? 
 	&elementStatus=`solid`
 	&elementPreview=``
@@ -86,7 +85,7 @@ tvs:
 	&sortdir=`0`
 	&pagination=`0`
 	&pagination_type=`default`
-	&title_hierarchy=`h3`
+	&title_hierarchy=`h2`
 	&show_subtitle=`1`
 	&show_introtext=`0`
 	&link_text=``

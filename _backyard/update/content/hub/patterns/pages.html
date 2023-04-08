@@ -16,17 +16,17 @@ uri: patterns/pages
 properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[],"fieldcounts":[],"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '0'
+    auto_references: '@INHERIT 0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
     content_owner: ''
     content_priority: ''
     content_purpose: ''
-    content_repurpose_dest: ''
-    content_repurpose_src: ''
     content_result: ''
     content_tone: ''
     critical_css_uri: assets/css/critical/patterns/pages.css
+    external_links: ''
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
     footer_cta_background: '@INHERIT'
@@ -41,7 +41,6 @@ tvs:
     header_title: '[[*pagetitle]]'
     header_visibility: '@INHERIT default'
     links_attachment: ''
-    links_external: ''
     links_related: ''
     overview_icon_font: ''
     overview_icon_svg: romanesco/pages.svg
@@ -58,15 +57,15 @@ tvs:
     pagination_scroll_top: '@INHERIT 1'
     planning_date_due: ''
     status_health: stable
-    status_improvements: ''
-    status_issues: ''
-    status_progress: to-do
+    status_progress: todo
+    status_tasks: ''
+    toc_headings: '@INHERIT H1||H2||H3||H4'
     toolbar_visibility: '@INHERIT default'
 
 -----
 
 <div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`default`]]">
-    <div class="ui   container">
+    <div class="ui    main container">
         
     </div>
 </div>

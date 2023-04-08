@@ -15,17 +15,17 @@ uri: login
 properties: '{"contentblocks":{"content":"[{\"layout\":3,\"content\":{\"sidebar\":[{\"value\":\"[[!Login?\\n    &tplType=`modChunk`\\n    &loginTpl=`loginForm`\\n    &logoutTpl=`logoutForm`\\n    &loginResourceId=`15`\\n]]\\n[[fbLoadAssets]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}],\"main\":[]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[!Login?\n    &tplType=`modChunk`\n    &loginTpl=`loginForm`\n    &logoutTpl=`logoutForm`\n    &loginResourceId=`15`\n]]\n[[fbLoadAssets]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"14":1},"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '0'
+    auto_references: '@INHERIT 0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
     content_owner: ''
     content_priority: ''
     content_purpose: ''
-    content_repurpose_dest: ''
-    content_repurpose_src: ''
     content_result: ''
     content_tone: ''
     critical_css_uri: assets/css/critical/login.css
+    external_links: ''
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
     footer_cta_background: '@INHERIT'
@@ -40,7 +40,6 @@ tvs:
     header_title: '@INHERIT'
     header_visibility: '@INHERIT default'
     links_attachment: ''
-    links_external: ''
     links_related: ''
     overview_icon_font: ''
     overview_icon_svg: ''
@@ -57,9 +56,9 @@ tvs:
     pagination_scroll_top: '@INHERIT 1'
     planning_date_due: ''
     status_health: stable
-    status_improvements: ''
-    status_issues: ''
-    status_progress: to-do
+    status_progress: todo
+    status_tasks: ''
+    toc_headings: '@INHERIT H1||H2||H3||H4'
     toolbar_visibility: '@INHERIT default'
 
 -----
@@ -68,14 +67,14 @@ tvs:
     <div class="ui  container">
         <div class="ui stackable doubling relaxed   equal width grid">
             <div class="row">
-                <div class="six wide column">[[!Login?
+                <div class="six wide sidebar column">[[!Login?
     &tplType=`modChunk`
     &loginTpl=`loginForm`
     &logoutTpl=`logoutForm`
     &loginResourceId=`15`
 ]]
 [[fbLoadAssets]]</div>
-                <div class="column"></div>
+                <div class=" main column"></div>
             </div>
         </div>
     </div>

@@ -16,17 +16,17 @@ uri: patterns/electrons/configuration
 properties: '{"contentblocks":{"content":"[{\"layout\":1,\"content\":{\"main\":[{\"value\":\"[[*pagetitle]]\",\"level\":\"h1\",\"field\":1,\"settings\":[]},{\"value\":1,\"field\":5,\"settings\":[]},{\"value\":\"<p>Configuration settings are available as placeholders throughout the project. You can change them (or add new settings) under <a href=\\\"[[++site_url:stripString=`hub.`]]manager\/?a=home&namespace=clientconfig\\\">Extras &gt; Configuration<\/a> if needed.\\n<\/p>\\n<p>If you''re worried about these settings affecting too much of your project: don''t! Many settings can be overruled on page level with a Template Variable and you can attach a setting to a context too with a different value.\\n<\/p>\",\"field\":79,\"settings\":{\"message_type\":\"info\",\"heading\":\"\"}},{\"value\":\"<p>Please note that for changes made under Presentation, it takes around 10-30 seconds to be reflected on the website. This is because a background process needs a little time to rebuild the styling assets.<br><\/p>\",\"field\":79,\"settings\":{\"message_type\":\"warning\"}},{\"value\":\"[[migxLoopCollection?\\n    &packageName=`clientconfig`\\n    &classname=`cgGroup`\\n    &sortConfig=`[{\\\"sortby\\\":\\\"sortorder\\\",\\\"sortdir\\\":\\\"ASC\\\"}]`\\n    &tpl=`configSettingsRow`\\n]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[*pagetitle]]","level":"h1","field":1,"settings":[]},{"value":1,"field":5,"settings":[]},{"value":"<p>Configuration settings are available as placeholders throughout the project. You can change them (or add new settings) under <a href=\"[[++site_url:stripString=`hub.`]]manager\/?a=home&namespace=clientconfig\">Extras &gt; Configuration<\/a> if needed.\n<\/p>\n<p>If you''re worried about these settings affecting too much of your project: don''t! Many settings can be overruled on page level with a Template Variable and you can attach a setting to a context too with a different value.\n<\/p>","field":79,"settings":{"message_type":"info","heading":""}},{"value":"<p>Please note that for changes made under Presentation, it takes around 10-30 seconds to be reflected on the website. This is because a background process needs a little time to rebuild the styling assets.<br><\/p>","field":79,"settings":{"message_type":"warning"}},{"value":"[[migxLoopCollection?\n    &packageName=`clientconfig`\n    &classname=`cgGroup`\n    &sortConfig=`[{\"sortby\":\"sortorder\",\"sortdir\":\"ASC\"}]`\n    &tpl=`configSettingsRow`\n]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"1":1,"5":1,"79":2,"14":1},"_isContentBlocks":true}}'
 tvs:
     auto_anchors: '@INHERIT 0'
+    auto_references: '@INHERIT 0'
     content_brief: ''
     content_cta: ''
     content_outline: ''
     content_owner: ''
     content_priority: ''
     content_purpose: ''
-    content_repurpose_dest: ''
-    content_repurpose_src: ''
     content_result: ''
     content_tone: ''
     critical_css_uri: assets/css/critical/how-it-works.css
+    external_links: ''
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
     footer_cta_background: '@INHERIT'
@@ -41,7 +41,6 @@ tvs:
     header_title: '@INHERIT'
     header_visibility: '@INHERIT default'
     links_attachment: ''
-    links_external: ''
     links_related: ''
     overview_icon_font: ''
     overview_icon_svg: ''
@@ -58,15 +57,15 @@ tvs:
     pagination_scroll_top: '@INHERIT 1'
     planning_date_due: ''
     status_health: stable
-    status_improvements: ''
-    status_issues: ''
-    status_progress: to-do
+    status_progress: todo
+    status_tasks: ''
+    toc_headings: '@INHERIT H1||H2||H3||H4'
     toolbar_visibility: '@INHERIT default'
 
 -----
 
 <div [[stripAsAlias:prepend=`id="`:append=`"`? &input=``]] class="ui vertical stripe segment [[setBackground? &background=`default`]]">
-    <div class="ui   container">
+    <div class="ui    main container">
         [[$headingBasic?
     &value=`[[*pagetitle]]`
     &level=`h1`
