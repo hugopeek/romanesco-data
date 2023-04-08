@@ -3,4 +3,4 @@ name: 'Fieldset (empty)'
 description: ''
 icon: checkbox
 content: '[{"layout":14,"content":{"main":[]},"settings":{"legend":""},"parent":0,"title":""}]'
-availability: '[{"field":"template","value":"10"}]'
+availability: '[{"field":"template","value":"10,19"}]'

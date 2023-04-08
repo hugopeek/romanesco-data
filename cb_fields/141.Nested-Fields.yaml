@@ -9,7 +9,7 @@ category: 7
 icon: form
 template: "[[+segment_type:isnot=`none`:then=`<div class=\"ui [[+segment_type]] [[+padding:contains=`fitted`:then=`basic`]] segments\">`]]\n[[+value]]\n[[+segment_type:isnot=`none`:then=`</div>`]]"
 properties: '{"available_layouts":"14,31","available_templates":""}'
-availability: '[{"field":"template","value":"10"}]'
+availability: '[{"field":"template","value":"10,19"}]'
 layouts: '14'
 times_per_layout: null
 times_per_page: null

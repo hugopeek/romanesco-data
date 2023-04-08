@@ -7,6 +7,7 @@ New features:
 - Add nested fieldset layout for form templates
 
 Fixes and improvements:
+- Make nested fields available in registration forms
 - Rearrange and tweak Backyard resources
 - Add Dashboard template to template list
 - Invert Table and Steps elements inside inverted segments
