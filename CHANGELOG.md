@@ -1,12 +1,17 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.16.2
-Released on ...
+Released on April 8, 2023
 
 New features:
 - Add nested fieldset layout for form templates
 
 Fixes and improvements:
+- Rearrange and tweak Backyard resources
+- Add Dashboard template to template list
+- Invert Table and Steps elements inside inverted segments
+- Add URL parameter to invert layouts in Backyard
+- Fix image quality overrides being ignored
 - Use HTML value in email report if field label is empty
 - Add field width option for inline form fields
 - Fix nested fields not being processed in form report
