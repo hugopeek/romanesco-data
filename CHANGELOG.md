@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.16.3
+Released on ...
+
+Fixes and improvements:
+- Fix Boson descriptions in Backyard pattern library
+
 ## v1.16.2
 Released on April 8, 2023
 
