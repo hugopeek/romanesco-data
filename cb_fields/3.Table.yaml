@@ -2,8 +2,8 @@ id: 3
 parent_properties: null
 input: table
 name: Table
-description: null
-content_desc: null
+description: ''
+content_desc: ''
 sortorder: 21
 category: 4
 icon: table
@@ -11,7 +11,5 @@ icon_type: ''
 template: '@CHUNK tableColumnBasic'
 properties: '{"row_template":"@CHUNK tableRowBasic","wrapper_template":"@CHUNK tableOuter"}'
 availability: '[]'
-layouts: null
-times_per_layout: null
-times_per_page: null
+layouts: ''
 settings: '[{"reference":"table_size","title":"Table size","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Small=small\nMedium=\nLarge=big","field_is_exposed":"modal","process_tags":"1"},{"reference":"table_type","title":"Display type","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Regular=\nTransparent=basic\nTransparent and borderless=very basic","field_is_exposed":"modal"},{"reference":"padding","title":"Padding","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"A lot less=very compact\nA little less=compact\nRegular=\nA little more=padded\nA lot more=very padded","field_is_exposed":"modal","process_tags":"1"},{"reference":"table_columns","title":"Column count","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"\n[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"table_sortable","title":"Sortable by column","fieldtype":"select","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"},{"reference":"table_head","title":"1st row is table head","fieldtype":"radio","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","field_is_exposed":"modal"},{"reference":"table_options","title":"Table options","fieldtype":"checkbox","default_value":"celled","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Divide each row into separate cells=celled\nStripe alternate rows=striped\nOnly take up as much space as needed=collapsing\nDon''t stack columns on mobile=unstackable\nDisplay rows as cards on mobile=overview","field_is_exposed":"modal","description":"","type_ahead":"No","separator":""}]'

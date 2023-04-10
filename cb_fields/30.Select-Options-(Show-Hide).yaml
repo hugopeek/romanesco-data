@@ -3,7 +3,7 @@ parent_properties: null
 input: repeater
 name: 'Select Options (Show/Hide)'
 description: ''
-content_desc: 'Similar to the regular Select Options, but with the ability to show/hide fieldsets on selection. For this to work, you need to give the fieldset an ID by changing its layout title. This will add an ID to the HTML. Set this ID (including the fb prefix!!) as the show/hide target, and the fieldset visibility should be toggled on select/unselect. Tip: if you don''t want to show/hide a fieldset on top level, you can add a Nested Field through CB. And keep in mind: fields inside the show/hide target should NOT be required, as there is no mechanism in place to skip validation if the fieldset is hidden. This can be added manually though.'
+content_desc: "Similar to the regular Select Options, but with the ability to show/hide fieldsets on selection. For this to work, you need to give the fieldset an ID by changing its layout title. This will add an ID to the HTML. Set this ID (including the fb prefix!!) as the show/hide target, and the fieldset visibility should be toggled on select/unselect.\n\nTip: if you don't want to show/hide a fieldset on top level, you can add a Nested Field through CB.\n\nAnd keep in mind: fields inside the show/hide target should NOT be required, as there is no mechanism in place to skip validation if the fieldset is hidden. This can be added manually though."
 sortorder: 58
 category: 7
 icon: checkbox
