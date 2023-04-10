@@ -21,7 +21,7 @@ cd "$installPath"
 # backup and extract current state of project
 printf "${BOLD}Extracting project data...${NORMAL}\n"
 $gitifyCmd backup "$(date +'%Y-%m-%dT%H%M%S')"_INSTALLER
-$gitifyCmd extract
+$gitifyCmd extract --no-packages
 
 # commit changes, if there are any
 if [[ -n $(cd ${installPath} && git status -s) ]]
