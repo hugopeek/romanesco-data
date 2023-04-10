@@ -4,12 +4,14 @@
 Released on April 8, 2023
 
 New features:
+- Add setting to hide ContentBlocks fields
 - Add nested fieldset layout for form templates
 
 Fixes and improvements:
-- Improve descriptions of ContentBlocks fields
-- Make nested fields available in registration forms
+- Modify hide advanced feature to accept list of CB settings
+- Rearrange and tweak ContentBlocks fields and categories
 - Rearrange and tweak Backyard resources
+- Make nested fields available in registration forms
 - Add Dashboard template to template list
 - Invert Table and Steps elements inside inverted segments
 - Add URL parameter to invert layouts in Backyard
