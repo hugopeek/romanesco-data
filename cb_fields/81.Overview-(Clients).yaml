@@ -4,7 +4,7 @@ input: chunk
 name: 'Overview (Clients)'
 description: ''
 content_desc: null
-sortorder: 49
+sortorder: 50
 category: 5
 icon: building-o
 icon_type: custom

@@ -4,7 +4,7 @@ input: chunk
 name: 'Overview (Testimonials)'
 description: ''
 content_desc: null
-sortorder: 50
+sortorder: 51
 category: 5
 icon: comments
 icon_type: custom

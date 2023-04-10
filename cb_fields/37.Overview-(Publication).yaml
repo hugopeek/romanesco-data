@@ -4,7 +4,7 @@ input: chunk
 name: 'Overview (Publication)'
 description: ''
 content_desc: null
-sortorder: 47
+sortorder: 48
 category: 5
 icon: newspaper-o
 icon_type: custom

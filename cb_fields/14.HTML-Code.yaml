@@ -4,7 +4,7 @@ input: code
 name: 'HTML Code'
 description: ''
 content_desc: null
-sortorder: 40
+sortorder: 41
 category: 6
 icon: code
 icon_type: ''

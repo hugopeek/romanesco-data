@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Email)'
 description: ''
 content_desc: ''
-sortorder: 54
+sortorder: 55
 category: 7
 icon: email
 icon_type: custom

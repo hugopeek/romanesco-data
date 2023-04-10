@@ -4,7 +4,7 @@ input: code
 name: 'Code (Execute)'
 description: ''
 content_desc: 'Anything entered inside this code block will run first, before being displayed on the frontend.'
-sortorder: 39
+sortorder: 40
 category: 6
 icon: code
 icon_type: ''

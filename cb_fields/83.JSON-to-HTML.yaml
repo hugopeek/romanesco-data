@@ -4,7 +4,7 @@ input: code
 name: 'JSON to HTML'
 description: ''
 content_desc: 'Render a JSON object as HTML table.'
-sortorder: 42
+sortorder: 43
 category: 6
 icon: code
 template: '[[jsonToHTML? &json=`[[+value]]`]]'

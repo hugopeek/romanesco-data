@@ -4,7 +4,7 @@ input: chunk
 name: 'Overview (Child Pages)'
 description: ''
 content_desc: null
-sortorder: 45
+sortorder: 46
 category: 5
 icon: child-multi
 icon_type: custom

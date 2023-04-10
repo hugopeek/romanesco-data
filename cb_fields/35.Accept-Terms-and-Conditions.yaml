@@ -4,7 +4,7 @@ input: chunk
 name: 'Accept Terms and Conditions'
 description: ''
 content_desc: 'Add a checkbox that blocks form submission if left unchecked. You can link to your terms by entering the corresponding resource ID and using the [[+link]] placeholder in the field text.'
-sortorder: 64
+sortorder: 65
 category: 7
 icon: checkbox
 template: '[[+tag]]'
