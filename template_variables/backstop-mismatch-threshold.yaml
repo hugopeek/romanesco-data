@@ -1,0 +1,15 @@
+id: 171
+type: number
+name: backstop_mismatch_threshold
+caption: 'Mismatch threshold'
+description: 'Percentage of diverging pixels allowed to pass test.'
+category: _Scenarios
+elements: ''
+rank: 52
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+3

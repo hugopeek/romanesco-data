@@ -1,0 +1,15 @@
+id: 168
+type: ace
+name: backstop_click_selectors
+caption: 'Click selectors'
+description: 'JSON array of CSS selectors. Simulates multiple sequential click interactions.'
+category: _Scenarios
+elements: ''
+rank: 36
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+[]

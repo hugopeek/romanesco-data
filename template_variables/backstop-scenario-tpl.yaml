@@ -1,0 +1,15 @@
+id: 159
+type: text
+name: backstop_scenario_tpl
+caption: 'Scenario template'
+description: 'Chunk containing the JSON config used for each scenario.'
+category: _Scenarios
+elements: ''
+rank: 1
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+backstopScenarioRow

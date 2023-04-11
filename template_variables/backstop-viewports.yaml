@@ -1,0 +1,13 @@
+id: 153
+type: ace
+name: backstop_viewports
+caption: Viewports
+description: 'JSON array of screen size objects to test against.'
+category: _Testing
+elements: ''
+rank: 1
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

@@ -1,0 +1,15 @@
+id: 154
+type: listbox
+name: backstop_engine
+caption: Engine
+description: 'Choose which rendering engine to use. Puppeteer renders pages in headless Chrome, whereas Playwright also has the option to use Firefox or Webkit. See setting below.'
+category: _Testing
+elements: Puppeteer==puppeteer||Playwright==playwright
+rank: 10
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+puppeteer

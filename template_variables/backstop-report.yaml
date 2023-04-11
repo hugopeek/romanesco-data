@@ -1,0 +1,15 @@
+id: 156
+type: checkbox
+name: backstop_report
+caption: Report
+description: 'Choose in what format to return the test results.'
+category: _Testing
+elements: 'HTML (opens in browser)=="browser"||JSON=="json"||JUnit (for CI)=="CI"'
+rank: 20
+properties: 'a:0:{}'
+input_properties: null
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+
+-----
+
+"browser"

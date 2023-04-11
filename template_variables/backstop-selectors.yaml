@@ -1,0 +1,15 @@
+id: 162
+type: ace
+name: backstop_selectors
+caption: Selectors
+description: 'JSON array of CSS specific selectors to capture. Defaults to the entire document if omitted. Use "viewport" to capture the viewport size.'
+category: _Scenarios
+elements: ''
+rank: 20
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+[]

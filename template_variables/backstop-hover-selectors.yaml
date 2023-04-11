@@ -1,0 +1,15 @@
+id: 167
+type: ace
+name: backstop_hover_selectors
+caption: 'Hover selectors'
+description: 'JSON array of CSS selectors. Simulates multiple sequential hover interactions.'
+category: _Scenarios
+elements: ''
+rank: 35
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+[]

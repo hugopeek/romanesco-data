@@ -10,46 +10,38 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[*alias:replace=`-==_`:toPlaceholder=`backstop_id`]]
 {
     "id": "[[+backstop_id]]",
-    "viewports": [
-        {
-            "label": "phone",
-            "width": 320,
-            "height": 480
-        },{
-            "label": "tablet",
-            "width": 800,
-            "height": 600
-        },{
-            "label": "desktop",
-            "width": 1440,
-            "height": 960
-        }
-    ],
+    "viewports": [[*backstop_viewports]],
     "scenarios": [
-        [[pdoResources?
+        [[!pdoResources?
             &parents=`0`
             &resources=`[[*content]]`
             &limit=`0`
-            &tpl=`backstopScenarioRow`
+            &showUnpublished=`0`
+            &tpl=`[[*backstop_scenario_tpl]]`
             &outputSeparator=`,`
         ]]
     ],
     "paths": {
         "bitmaps_reference": "_backstop/[[+backstop_id]]/bitmaps_reference",
         "bitmaps_test": "_backstop/[[+backstop_id]]/bitmaps_test",
-        "engine_scripts": "tests",
+        "engine_scripts": "_operations/test/engine_scripts",
         "html_report": "_backstop/[[+backstop_id]]/html_report",
+        "json_report": "_backstop/[[+backstop_id]]/json_report",
         "ci_report": "_backstop/[[+backstop_id]]/ci_report"
     },
-    "onReadyScript": "backstop-ready.js",
-    "report": ["browser"],
-    "engine": "puppeteer",
+    "onBeforeScript": "[[*backstop_engine]]/onBefore.js",
+    "onReadyScript": "[[*backstop_engine]]/onReady.js",
+    "report": [
+        [[*backstop_report]]
+    ],
+    "engine": "[[*backstop_engine]]",
     "engineOptions": {
+        "browser": "[[*backstop_engine_browser]]",
         "args": ["--no-sandbox"]
     },
     "puppeteerOffscreenCaptureFix": false,
-    "asyncCaptureLimit": 3,
-    "asyncCompareLimit": 30,
+    "asyncCaptureLimit": [[*backstop_async_capture_limit]],
+    "asyncCompareLimit": [[*backstop_async_compare_limit]],
     "debug": false,
     "debugWindow": false
 }

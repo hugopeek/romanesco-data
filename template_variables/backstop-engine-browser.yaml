@@ -1,0 +1,15 @@
+id: 155
+type: listbox
+name: backstop_engine_browser
+caption: Browser
+description: 'Changing this only applies if engine is Playwright.'
+category: _Testing
+elements: 'Chromium (Chrome, Edge, Brave)==chromium||Firefox||WebKit (Safari/iOS)'
+rank: 11
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+chromium

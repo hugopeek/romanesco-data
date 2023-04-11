@@ -1,0 +1,13 @@
+id: 164
+type: number
+name: backstop_selector_expect
+caption: 'Selector expect'
+description: 'Explicitly set the number of results that you expect to find with the selectors. If set to a value greater than 0, the test will fail if the number of results does not match this value.'
+category: _Scenarios
+elements: ''
+rank: 22
+default_text: '0'
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: '0'

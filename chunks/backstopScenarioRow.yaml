@@ -9,26 +9,19 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 {
     "label": "[[+pagetitle]] ([[+id]])",
     "url": "[[~[[+id]]? &scheme=`full`]]",
-    [[*reference_url:notempty=`
-    "referenceUrl": "[[*reference_url]][[+uri]]",
+    [[*backstop_reference_url:notempty=`
+    "referenceUrl": "[[*backstop_reference_url]][[+uri]]",
     `]]
-    "delay": 2000,
-    "hideSelectors": [
-        ".publication .meta",
-        ".ui.active.embed"
-    ],
-    "removeSelectors": [
-        "#menu .item.highlight .basic.button",
-        "#author-about",
-        "#disqus_thread",
-        ".g-recaptcha"
-    ],
-    "hoverSelector": "",
-    "clickSelector": "",
-    "postInteractionWait": 1,
-    "selectors": [],
-    "selectorExpansion": true,
-    "expect": 0,
-    "misMatchThreshold" : 3,
+    "delay": [[*backstop_delay]],
+    "hideSelectors": [[*backstop_hide_selectors:empty=`[]`]],
+    "removeSelectors": [[*backstop_remove_selectors:empty=`[]`]],
+    "hoverSelectors": [[*backstop_hover_selectors:empty=`[]`]],
+    "clickSelectors": [[*backstop_click_selectors:empty=`[]`]],
+    "keyPressSelectors": [[*backstop_keypress_selectors:empty=`[]`]],
+    "postInteractionWait": [[*backstop_post_interaction_wait]],
+    "selectors": [[*backstop_selectors:empty=`[]`]],
+    "selectorExpansion": [[*backstop_selector_expansion]],
+    "expect": [[*backstop_selector_expect]],
+    "misMatchThreshold": [[*backstop_mismatch_threshold]],
     "requireSameDimensions": true
 }

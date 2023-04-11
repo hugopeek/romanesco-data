@@ -1,0 +1,15 @@
+id: 170
+type: number
+name: backstop_post_interaction_wait
+caption: 'Post interaction wait'
+description: 'Wait for x milliseconds after interacting with hoverSelector or clickSelector. Ideal for use with a click or hover element transition.'
+category: _Scenarios
+elements: ''
+rank: 50
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+300

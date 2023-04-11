@@ -1,0 +1,15 @@
+id: 165
+type: ace
+name: backstop_hide_selectors
+caption: 'Hide selectors'
+description: 'JSON array of CSS selectors. These selectors are hidden from our analysis but retained in the original layout flow.'
+category: _Scenarios
+elements: ''
+rank: 30
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+[]
