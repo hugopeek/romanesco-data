@@ -4,6 +4,8 @@
 Released on ...
 
 Fixes and improvements:
+- Include Backstop engine scripts in operations folder
+- Add more TVs for relevant settings in Backstop template
 - Fix Boson descriptions in Backyard pattern library
 
 ## v1.16.2
