@@ -3,7 +3,7 @@ parent_properties: ''
 input: image
 name: 'Icon (SVG)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 12
 category: 2
 icon: pie-chart
@@ -12,4 +12,4 @@ template: "[[$iconSVG?\n    &url=`[[+url]]`\n    &size=`[[+size]]`\n    &width=`
 properties: '{"source":"5","directory":"\/","crop_directory":"crops\/","crops":"","open_crops_automatically":"false","file_types":"svg","thumbnail_size":"0","thumbnail_crop":""}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"alt","title":"ALT text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"icon_size","title":"Icon size","fieldtype":"select","default_value":"small","fieldoptions":"[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"de_emphasize","title":"Fade icon color","fieldtype":"radio","default_value":"1","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"modal"}]'
+settings: '[{"reference":"alt","title":"Alt text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"icon_size","title":"Icon size","fieldtype":"select","default_value":"small","fieldoptions":"[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"de_emphasize","title":"Fade icon color","fieldtype":"radio","default_value":"1","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"modal"}]'
