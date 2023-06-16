@@ -284,8 +284,7 @@ data:
         where:
             - 'key:NOT IN':
                 - 'google_analytics_ua'
-                - 'matomo_tracking_code'
-                - 'alternative_tracking_code'
+                - 'analytics_tracking_code'
                 - 'custom_cache'
                 - 'minify_css_js'
                 - 'cache_buster'
