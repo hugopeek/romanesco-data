@@ -11,6 +11,6 @@ properties: 'a:9:{s:14:"inputOptionKey";a:7:{s:4:"name";s:14:"inputOptionKey";s:
     &classname=`[[+className]]`
     &tpl=`[[+rowTpl]]`
     &outputSeparator=`||`
-    &where=`{"key":"[[+inputOptionKey]]"}`
+    &where=`[{"key":"[[+inputOptionKey]]"},{"deleted:=":0}]`
     &sortConfig=`[{"sortby":"[[+sortBy]]","sortdir":"[[+sortDir]]"}]`
 ]]

@@ -56,7 +56,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &hooks=`
         spam,
         [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
-        [[++formblocks.antispam_hooks:append=`,`]]
+        [[++romanesco.dev_mode:isnot=`1`:then=`[[++formblocks.antispam_hooks:append=`,`]]`]]
         [[+math_question:isnot=`0`:then=`math,`]]
         [[+save_form:eq=`1`:then=`FormItSaveForm,`]]
         [[*fb_hooks:append=`,`]]

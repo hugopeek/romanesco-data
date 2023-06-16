@@ -20,6 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <script>document.documentElement.className = 'js';</script>
 
+[[- SET PLACEHOLDERS FOR CONDITIONAL STATEMENTS FURTHER DOWN ]]
 [[++minify_css_js:eq=`1`:then=`.min`:toPlaceholder=`minify`]]
 [[modifiedIf?
     &subject=`[[++critical_css]]_[[*critical_css_uri:notempty=`1`]]`
@@ -40,6 +41,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &operand=`1`
     &then=`$cacheBusterPlaceholders`
 ]]]]
+[[beforeEach?
+    &input=`[[++nav_exclude_resources]]`
+    &before=`-`
+    &toPlaceholder=`excluded_resources`
+]]
+
+[[- PRELOAD ASSETS WITH HIGHEST PRIORITY ]]
 [[[[modifiedIf?
     &subject=`headPreloadLinksTheme`
     &operator=`iselement`
@@ -48,6 +56,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`$headPreloadLinks`
 ]]]]
 
+[[- LOAD CSS ASSETS, ASYNCHRONOUS IF CRITICAL CSS IS ENABLED ]]
 [[+load_critical_css:eq=`1`:then=`
 <link rel="stylesheet" href="[[*critical_css_uri:replace=`.css==[[+cache_buster_css]].css`]]">
 <link rel="stylesheet" href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" media="print" onload="this.media='all'">
@@ -73,7 +82,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <script defer src="[[++romanesco.semantic_vendor_path]]/scrolldir/scrolldir.auto.min[[+cache_buster_js]].js"></script>
 <script defer src="[[++romanesco.semantic_js_path]]/site[[+minify]][[+cache_buster_js]].js"></script>
 
-[[- LOAD ADDITIONAL ASSETS, BASED ON CERTAIN CONDITIONS ]]
+[[- CONDITIONALLY LOAD ASSETS FOR SPECIFIC COMPONENTS ]]
 [[[[If?
     &subject=`[[cbHasFields? &field=`[[++romanesco.cb_field_map_id]]` &then=`1`]]`
     &operator=`notempty`
@@ -91,6 +100,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`loadAssets? &component=`hub``
 ]]]]
 
+[[- PLACE ADDITIONAL HEAD ELEMENTS ]]
 [[[[modifiedIf?
     &subject=`headAdditional`
     &operator=`iselement`
@@ -99,27 +109,25 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 ]]]]
 [[++head_additional]]
 
-[[- SET PLACEHOLDER WITH GLOBALLY EXCLUDED RESOURCES ]]
-[[beforeEach?
-    &input=`[[++nav_exclude_resources]]`
-    &before=`-`
-    &toPlaceholder=`excluded_resources`
-]]
-
+[[- PLACE REFERENCES TO FAVICONS ]]
 [[[[++romanesco.favicon_version:notempty=`$favicons`]]]]
 
-[[[[If?
-    &subject=`[[getContextSetting:default=`[[++google_analytics_ua]]`? &context=`[[*context_key]]` &setting=`google_analytics_ua`]]`
-    &operator=`notempty`
-    &then=`$googleAnalytics`
-    &else=`++alternative_tracking_code`
+[[- PLACE ANALYTICS CODE SNIPPET, UNLESS CONSENTFRIEND IS INSTALLED ]]
+[[[[modifiedIf?
+    &subject=`ConsentFriend`
+    &operator=`iselement`
+    &operand=`plugin`
+    &then=``
+    &else=`++analytics_tracking_code`
 ]]]]
 
+[[- PLACE STRUCTURED DATA IN JSON-LD FORMAT ]]
+[[$structuredDataSite]]
+
+[[- DENY ACCESS TO HUB CONTEXT, IF MARKED AS PRIVATE ]]
 [[[[If?
     &subject=`[[++romanesco.private_backyard]]`
     &operator=`eq`
     &operand=`1`
     &then=`!checkPermissions? &context=`hub``
 ]]]]
-
-[[$structuredDataSite]]
