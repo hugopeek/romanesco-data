@@ -5,7 +5,7 @@ alias: backstop
 published: 1
 introtext: ''
 richtext: 0
-template: 100030
+template: 32
 menuindex: 1
 searchable: 0
 createdby: 1
@@ -17,7 +17,26 @@ class_key: SelectionContainer
 context_key: hub
 uri: status/backstop
 properties: '{"contentblocks":{"content":"[{\"layout\":2,\"content\":{\"main\":[{\"value\":\"[[$searchResultOuter]]\",\"lang\":\"html\",\"field\":14,\"settings\":[]}],\"sidebar\":[]},\"settings\":[],\"parent\":0,\"title\":\"\"}]","linear":[{"value":"[[$searchResultOuter]]","lang":"html","field":14,"settings":[]}],"fieldcounts":{"14":1},"_isContentBlocks":false}}'
-tvs: {  }
+tvs:
+    backstop_async_capture_limit: '5'
+    backstop_async_compare_limit: '50'
+    backstop_click_selectors: '[]'
+    backstop_delay: '2000'
+    backstop_engine: puppeteer
+    backstop_engine_browser: chromium
+    backstop_hide_selectors: "[\r\n    \".publication .meta\",\r\n    \".ui.active.embed\"\r\n]"
+    backstop_hover_selectors: '[]'
+    backstop_keypress_selectors: '[]'
+    backstop_mismatch_threshold: '3'
+    backstop_post_interaction_wait: '300'
+    backstop_reference_url: ''
+    backstop_remove_selectors: "[\r\n    \"#menu .item.highlight .basic.button\",\r\n    \"#author-about\",\r\n    \"#disqus_thread\",\r\n    \".g-recaptcha\"\r\n]"
+    backstop_report: '"browser"'
+    backstop_scenario_tpl: backstopScenarioRow
+    backstop_selector_expansion: 'false'
+    backstop_selector_expect: '0'
+    backstop_selectors: '[]'
+    backstop_viewports: "[{\r\n    \"label\":\"mobile\",\r\n    \"width\":320,\r\n    \"height\":480\r\n},{\r\n    \"label\":\"tablet\",\r\n    \"width\":800,\r\n    \"height\":600\r\n},{\r\n    \"label\":\"desktop\",\r\n    \"width\":1440,\r\n    \"height\":960\r\n}]"
 
 -----
 
