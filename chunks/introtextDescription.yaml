@@ -6,4 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="description">[[+introtext]]</div>
+<div class="description">
+    [[+introtext:replace=`<ul>==<ul class="ui list">`:replace=`<ol>==<ol class="ui list">`]]
+</div>

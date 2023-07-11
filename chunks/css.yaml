@@ -75,6 +75,6 @@ properties: 'a:3:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &subject=`globalBackgroundsTheme`
     &operator=`iselement`
     &operand=`chunk`
-    &then=`$globalBackgroundsTheme`
+    &then=`$globalBackgroundsTheme? &context=`[[+context:empty=`web`]]``
     &else=``
 ]]]]
