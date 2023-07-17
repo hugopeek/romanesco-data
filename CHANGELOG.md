@@ -4,6 +4,7 @@
 Released on ...
 
 Fixes and improvements:
+- Link to error page when terms_and_conditions setting is empty
 - Include Backstop engine scripts in operations folder
 - Add more TVs for relevant settings in Backstop template
 - Fix Boson descriptions in Backyard pattern library
