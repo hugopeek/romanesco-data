@@ -1,0 +1,8 @@
+id: 95
+template: 11
+label: 'Used on pages'
+name: referring_pages_background
+width: 50
+php_renderer: renderReferringPages
+position: 6
+sort_type: null

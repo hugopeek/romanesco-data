@@ -1,0 +1,8 @@
+id: 93
+template: 2
+label: 'Used on pages'
+name: referring_pages_form
+width: 50
+php_renderer: renderReferringPages
+position: 8
+sort_type: null
