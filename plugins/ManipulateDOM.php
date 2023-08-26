@@ -93,6 +93,7 @@ switch ($modx->event->name) {
                     '.text.menu',
                     '.secondary.menu',
                     '.basic.form',
+                    '.basic.segment',
                     '.table',
                     '.steps',
                 );
