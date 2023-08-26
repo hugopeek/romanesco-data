@@ -1,6 +1,6 @@
 id: 611
 name: imageOuterGallery
-description: ''
+description: 'Wrapper for a Gallery with captions image. It accepts regular images and SVGs.'
 category: m_cont_image
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:41:"romanesco.imageoutergallery.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:42:"romanesco.imageoutergallery.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
@@ -12,6 +12,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &operator=`EQ`
     &operand=`svg`
     &then=`$svg? &classes=`ui svg image` &url=`[[+url]]` &alt=`[[+alt]]` &uid=`[[+unique_idx]]_[[+idx]]``
-    &else=`$imgResponsiveGalleryCaption? &alt=`[[+alt]]` &uid=`[[+unique_idx]]_[[+idx]]``
+    &else=`$imgResponsiveGalleryCaption? &caption=`[[+caption]]` &alt=`[[+alt]]` &uid=`[[+unique_idx]]_[[+idx]]``
 ]]]]
 `]]

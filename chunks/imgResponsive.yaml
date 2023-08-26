@@ -34,5 +34,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
      `]]
      width="[[++max_thumb_width]]"
      height="[[+max_thumb_height]]"
-     alt="[[+alt:htmlent]]"
+     alt="[[+alt:empty=`[[%romanesco.img.alt_fallback]]`:htmlent]]"
 >

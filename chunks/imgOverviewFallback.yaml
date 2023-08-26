@@ -6,4 +6,4 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<img src="[[++overview_img_[[+img_type]]_fallback]]" alt="[[%romanesco.overview.img_fallback]]">
+<img src="[[++overview_img_[[+img_type]]_fallback]]" alt="[[%romanesco.img.not_available]]">
