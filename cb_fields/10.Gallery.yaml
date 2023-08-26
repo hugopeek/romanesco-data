@@ -3,12 +3,12 @@ parent_properties: ''
 input: gallery
 name: Gallery
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 15
 category: 2
 icon: gallery
 icon_type: ''
-template: "[[$galleryRowImage?\n    &url=`[[+url]]`\n    &title=`[[+title]]`\n    &size=`[[+size]]`\n    &width=`[[+width]]`\n    &height=`[[+height]]`\n    &extension=`[[+extension]]`\n    &alt=`[[+alt]]`\n    \n    &classes=``\n    &lightbox=`[[+lightbox]]`\n    &lazy_load=`[[+lazy_load]]`\n    &layout_id=`[[+layout_id]]`\n    &layout_column=`[[+layout_column]]`\n    &cols=`[[textToNumber? &input=`[[+cols]]`]]`\n    &sidebar_width=`[[+layout_settings.sidebar_width]]`\n    &responsive=`[[+layout_settings.responsive]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"
+template: "[[$galleryRowImage?\n    &url=`[[+url]]`\n    &title=`[[+title]]`\n    &size=`[[+size]]`\n    &width=`[[+width]]`\n    &height=`[[+height]]`\n    &extension=`[[+extension]]`\n\n    &classes=``\n    &lightbox=`[[+lightbox]]`\n    &lazy_load=`[[+lazy_load]]`\n    &layout_id=`[[+layout_id]]`\n    &layout_column=`[[+layout_column]]`\n    &cols=`[[textToNumber? &input=`[[+cols]]`]]`\n    &sidebar_width=`[[+layout_settings.sidebar_width]]`\n    &responsive=`[[+layout_settings.responsive]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"
 properties: '{"wrapper_template":"[[$galleryOuter?\n    &rows=`[[+images]]`\n    &cols=`[[+cols]]`\n    &padding=`[[+padding]]`\n    &lightbox=`[[+lightbox]]`\n    &responsive=`[[+responsive]]`\n    &lazy_load=`[[+lazy_load]]`\n    &unique_idx=`[[+unique_idx]]`\n    &layout_id=`[[+layout_id]]`\n]]","max_images":"20","thumb_size":"medium","thumbnail_size":"0","source":"8","show_description":"0","show_link_field":"0","limit_to_current_context":"1","directory":"\/[[+resource]]\/","file_types":"png,gif,jpg,jpeg,svg"}'
 availability: '[]'
 layouts: ''
