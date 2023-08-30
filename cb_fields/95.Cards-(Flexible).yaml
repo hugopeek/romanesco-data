@@ -4,7 +4,7 @@ input: repeater
 name: 'Cards (Flexible)'
 description: ''
 content_desc: null
-sortorder: 25
+sortorder: 26
 category: 4
 icon: th-large
 icon_type: custom

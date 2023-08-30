@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (File)'
 description: ''
 content_desc: "Let visitors upload files from their system. These files will be attached to the email you receive. You can limit upload to a single file, or allow multiple files to be added through drag&drop or the file explorer.\n\nIMPORTANT NOTES: if you set an upload limit higher than 1 file, you'll need to have the AjaxUpload extra installed. And because uploaded files are attached to the email, you need to make sure the total size of the files won't exceed your email limit. You can tweak the maximum file size setting if needed."
-sortorder: 60
+sortorder: 61
 category: 7
 icon: attachment
 template: '[[+tag]]'

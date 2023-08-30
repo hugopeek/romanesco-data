@@ -1,0 +1,16 @@
+id: 142
+parent_properties: null
+input: file
+name: 'Video (Local)'
+description: null
+content_desc: 'Play a local video file in the browser. You can provide multiple files, to maximize compatibility. The browser attempts to play the top one first and keeps trying until a compatible file is found. Recommended to stick to .webm or .mp4 format when possible.'
+sortorder: 15
+category: 2
+icon: video
+template: '@CHUNK videoLocalSource'
+properties: '{"wrapper_template":"@CHUNK videoLocal","max_files":"12","source":"17","directory":"","file_types":"3gp,mpg,mpeg,mp4,m4v,m4p,ogv,ogg,mov,webm"}'
+availability: '[]'
+layouts: null
+times_per_layout: null
+times_per_page: null
+settings: '[{"reference":"thumb","title":"Thumbnail","description":"","fieldtype":"image","default_value":"","image_source":"17","image_directory":"thumbs/","image_file_types":"jpg,jpeg,png,gif,webp","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"width","title":"Width","description":"","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"height","title":"Height","description":"","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"options","title":"Options","description":"","fieldtype":"checkbox","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Centered=centered\nRounded corners=rounded","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"lazy_load","title":"Lazy load","description":"","fieldtype":"radio","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"No=0\nYes=1","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"}]'

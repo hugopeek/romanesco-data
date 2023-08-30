@@ -4,7 +4,7 @@ input: repeater
 name: 'Accordion (Email)'
 description: ''
 content_desc: null
-sortorder: 75
+sortorder: 76
 category: 11
 icon: tabs
 template: '@CHUNK mbContentAccordionRow'

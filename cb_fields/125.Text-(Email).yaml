@@ -4,7 +4,7 @@ input: redactor
 name: 'Text (Email)'
 description: ''
 content_desc: null
-sortorder: 68
+sortorder: 69
 category: 11
 icon: richtext
 icon_type: ''

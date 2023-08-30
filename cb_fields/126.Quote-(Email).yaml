@@ -4,7 +4,7 @@ input: quote
 name: 'Quote (Email)'
 description: ''
 content_desc: null
-sortorder: 71
+sortorder: 72
 category: 11
 icon: quote
 icon_type: ''

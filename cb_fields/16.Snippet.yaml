@@ -4,7 +4,7 @@ input: snippet
 name: Snippet
 description: ''
 content_desc: null
-sortorder: 42
+sortorder: 43
 category: 6
 icon: snippet_A
 icon_type: ''

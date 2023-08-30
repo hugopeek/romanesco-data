@@ -4,7 +4,7 @@ input: chunk
 name: 'Call To Action (CTA)'
 description: ''
 content_desc: 'Add a CTA here. You can create and edit CTAs under Global Content > Call To Actions.'
-sortorder: 32
+sortorder: 33
 category: 3
 icon: snippet_C
 template: '[[+tag]]'

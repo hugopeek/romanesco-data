@@ -4,7 +4,7 @@ input: repeater
 name: 'Background Layers'
 description: ''
 content_desc: "Add images, SVGs and gradients here to be displayed as background in ContentBlocks layouts and fields. You can stack them on top of each other to create multi-layered backgrounds (for example, an image with an SVG or gradient overlay).\n\nYou can crop images for 3 display types: mobile, tablet and desktop, and even use different images for each breakpoint. And you can change the default CSS parameters."
-sortorder: 28
+sortorder: 29
 category: 4
 icon: image
 template: ''

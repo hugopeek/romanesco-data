@@ -4,7 +4,7 @@ input: repeater
 name: 'Cards (Image + Text)'
 description: ''
 content_desc: ''
-sortorder: 24
+sortorder: 25
 category: 4
 icon: th-large
 icon_type: custom

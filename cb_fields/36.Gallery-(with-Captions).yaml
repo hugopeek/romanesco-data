@@ -4,7 +4,7 @@ input: repeater
 name: 'Gallery (with Captions)'
 description: ''
 content_desc: ''
-sortorder: 16
+sortorder: 17
 category: 2
 icon: gallery
 template: "[[$galleryRowImageCaption?\n    &image=`[[+image]]`\n    &alt=`[[+alt]]`\n    &caption=`[[+caption]]`\n    &column_type=`[[+column_type]]`\n    &lightbox=`[[+lightbox]]`\n    &unique_idx=`[[+unique_idx]]_[[+idx]]`\n    &idx=`[[+idx]]`\n]]"

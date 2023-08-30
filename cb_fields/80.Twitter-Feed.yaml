@@ -4,7 +4,7 @@ input: chunk
 name: 'Twitter Feed'
 description: ''
 content_desc: 'Add a Twitter feed here. You need to install the TwitterX package first, before any output will appear.'
-sortorder: 37
+sortorder: 38
 category: 3
 icon: twitter
 icon_type: custom

@@ -4,7 +4,7 @@ input: chunk
 name: Steps
 description: ''
 content_desc: 'A menu to show the completion status of an activity in a series of activities. Useful in combination with multi-page forms.'
-sortorder: 31
+sortorder: 32
 category: 5
 icon: tabs
 template: '[[+value]]'

@@ -4,7 +4,7 @@ input: layout
 name: Slider
 description: ''
 content_desc: 'Turn each child element into a slide. Can also process Overview or Gallery items as slides.'
-sortorder: 27
+sortorder: 28
 category: 4
 icon: layout_img_right
 template: "<div class=\"nested slider\">\n    [[+value]]\n</div>"

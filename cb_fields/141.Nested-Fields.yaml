@@ -4,7 +4,7 @@ input: layout
 name: 'Nested Fields'
 description: ''
 content_desc: ''
-sortorder: 76
+sortorder: 77
 category: 7
 icon: form
 template: "[[+segment_type:isnot=`none`:then=`<div class=\"ui [[+segment_type]] [[+padding:contains=`fitted`:then=`basic`]] segments\">`]]\n[[+value]]\n[[+segment_type:isnot=`none`:then=`</div>`]]"

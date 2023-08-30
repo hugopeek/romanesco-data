@@ -4,7 +4,7 @@ input: layout
 name: 'Nested Layout'
 description: ''
 content_desc: ''
-sortorder: 17
+sortorder: 18
 category: 4
 icon: template_01
 template: "<div class=\"ui nested [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] equal width grid\">\n    [[+value]]\n</div>"

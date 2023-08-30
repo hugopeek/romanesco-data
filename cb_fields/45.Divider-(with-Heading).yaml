@@ -4,7 +4,7 @@ input: hr
 name: 'Divider (with Heading)'
 description: ''
 content_desc: ''
-sortorder: 20
+sortorder: 21
 category: 4
 icon: horizontalrule
 icon_type: ''

@@ -4,7 +4,7 @@ input: gallery
 name: Gallery
 description: ''
 content_desc: ''
-sortorder: 15
+sortorder: 16
 category: 2
 icon: gallery
 icon_type: ''

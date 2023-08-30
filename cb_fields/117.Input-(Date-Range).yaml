@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Date Range)'
 description: ''
 content_desc: 'Two date selectors, marking the start and end of a time period.'
-sortorder: 62
+sortorder: 63
 category: 7
 icon: calendar
 icon_type: custom

@@ -4,7 +4,7 @@ input: repeater
 name: 'Accordion / Tabs (Flexible)'
 description: ''
 content_desc: null
-sortorder: 23
+sortorder: 24
 category: 4
 icon: tabs
 template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &subtitle=`[[+heading_subtitle]]`\n    &icon=`[[+heading_icon]]`\n    &content=`\n    <div class=\"ui stackable doubling [[+alignment]] [[+divider]] equal width grid\">\n        [[+content]]\n    </div>`\n    &padding=`[[+padding]]`\n    &tab_type=`[[+tab_type]]`\n    &icon_position=`[[+icon_position]]`\n    &menu_position=`[[+menu_position]]`\n    &idx=`[[+idx]]`\n]]"
