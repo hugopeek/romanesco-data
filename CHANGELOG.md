@@ -1,9 +1,41 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.16.3
+## v1.17.0
 Released on ...
 
+New features:
+- Add CB for playing a local video file
+- Process Markdown content with Sprout
+- Add getConfigSetting snippet
+
 Fixes and improvements:
+- Add option to wrap horizontally grouped CB segments on mobile
+- Remove deprecated form_layout TV
+- Use separate chunk for form layout CB options
+- Add inline (equal width) form variant
+- Add column classes to nested grid containers
+- Add option to append anchor to CB button link
+- Add option to fade CB images
+- Invert basic segments inside inverted layouts
+- Provide fallback text for potentially empty alt tags
+- Fix empty alt tag breaking the gallery
+- Wrap descriptions in div inside combo box dropdowns
+- Show column with referring pages in Form, CTA and Background grids
+- Show page ID and edit button in lists of included pages
+- Add Semantic classnames to lists inside introtext
+- Display bullets above list items in centered lists
+- More fixes for undefined array key warnings in PHP 8
+- Sync resourceMediaPath snippet with latest MIGX version
+- Forward context placeholder to globalBackgroundsTheme chunk
+- Remove unused / unfinished snippets
+- Rewrite getContextSetting snippet to use function from base class
+- Rename alternative_tracking_code setting and use as primary
+- Add alt tag to video thumbnails
+- Disable FormBlocks antispam features in dev mode
+- Don't show soft deleted input options in select TV
+- Fix leaking table data when placing multiple tables in same layout
+- Avoid double image wrapper in Card CB
+- Reference template with @CHUNK in iconSVG CB
 - Link to error page when terms_and_conditions setting is empty
 - Include Backstop engine scripts in operations folder
 - Add more TVs for relevant settings in Backstop template
