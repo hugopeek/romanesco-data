@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &toPlaceholder=`button_tpl`
 ]]
 [[$[[+button_tpl]]?
-    &link=`[[+link]]`
+    &link=`[[+link]][[+link_anchor:prepend=`#`]]`
     &button_text=`[[+button_text]]`
     &classes=`[[+button_size]] [[+button_type]] [[+button_options:replace=`,== `]] [[+icon_options:replace=`,== `]] [[+icon_class:notempty=`icon`]]`
     &icon_class=`[[+icon_class]]`

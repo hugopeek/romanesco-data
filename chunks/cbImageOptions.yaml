@@ -8,4 +8,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 Circular image=circular
 Bordered image=bordered
+Faded image=disabled
 Stack image on mobile=stackable

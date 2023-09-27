@@ -6,7 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[*template:is=`10`:or:is=`19`:then=`Inherit (respect Form CB setting)=inherit`]]
-Vertical (above input field / options)=vertical
-Horizontal (left of input field / options)=horizontal
-[[*template:isnot=`10`:then=`Inline (all fields in 1 row)=inline`]]
+Inherit (respect CB setting)=inherit
+Above input field / options=vertical
+Left of input field / options=horizontal
