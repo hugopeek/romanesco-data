@@ -12,4 +12,4 @@ template: "[[If?\n    &subject=`[[+segment_group]]`\n    &operator=`notempty`\n 
 properties: '{"available_layouts":"19","available_templates":""}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"segment_group","title":"Segment grouping","fieldtype":"radio","default_value":"","fieldoptions":"Don''t group=\nGroup vertically=regular\nGroup horizontally=horizontal","field_is_exposed":"modal"},{"reference":"emphasize","title":"Emphasize","fieldtype":"radio","default_value":"","fieldoptions":"No=\nYes=raised","field_is_exposed":"modal"}]'
+settings: '[{"reference":"segment_group","title":"Segment grouping","fieldtype":"radio","default_value":"","fieldoptions":"Don''t group=\nGroup vertically=regular\nGroup horizontally=horizontal\nGroup horizontally, wrap on mobile=wrapping horizontal","field_is_exposed":"modal","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"","type_ahead":"No","separator":""},{"reference":"emphasize","title":"Emphasize","fieldtype":"radio","default_value":"","fieldoptions":"No=\nYes=raised","field_is_exposed":"modal"}]'

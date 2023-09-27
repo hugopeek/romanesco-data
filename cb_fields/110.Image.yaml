@@ -7,7 +7,7 @@ description: ''
 content_desc: 'Upload the image in the largest possible size. It will automatically be cropped and resized to an appropriate size for each display type. If you don''t need to crop the image, you can just close the cropper when it pops up to use the original dimensions.'
 icon: heading
 template: ''
-properties: '{"source":"13","directory":"\/","crop_directory":"crops\/","crops":"mobile|tablet|desktop","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"desktop"}'
+properties: '{"source":"13","directory":"\/","crop_directory":"crops\/","crops":"mobile|tablet|desktop","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg,webp","thumbnail_size":"0","thumbnail_crop":"desktop"}'
 availability: '[]'
 layouts: ''
 settings: '[]'

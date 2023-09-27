@@ -8,7 +8,7 @@ sortorder: 12
 category: 2
 icon: pie-chart
 icon_type: custom
-template: "[[$iconSVG?\n    &url=`[[+url]]`\n    &size=`[[+size]]`\n    &width=`[[+width]]`\n    &height=`[[+height]]`\n    &extension=`[[+extension]]`\n    &alt=`[[+alt]]`\n    &icon_size=`[[+icon_size]]`\n    &de_emphasize=`[[+de_emphasize]]`\n]]"
+template: '@CHUNK iconSVG'
 properties: '{"source":"5","directory":"\/","crop_directory":"crops\/","crops":"","open_crops_automatically":"false","file_types":"svg","thumbnail_size":"0","thumbnail_crop":""}'
 availability: '[]'
 layouts: ''
