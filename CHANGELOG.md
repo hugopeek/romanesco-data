@@ -10,6 +10,7 @@ New features:
 
 Fixes and improvements:
 - Add option to wrap horizontally grouped CB segments on mobile
+- Remove theme override for paginationFluid chunk
 - Remove deprecated form_layout TV
 - Use separate chunk for form layout CB options
 - Add inline (equal width) form variant
