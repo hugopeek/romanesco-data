@@ -1,6 +1,6 @@
 id: 20
-name: 'Card Blanche'
-description: 'An empty wrapper for card elements that prefer to be at root level, like images and buttons.'
+name: Wrapper
+description: 'An empty layout for content that prefers to be at root level.'
 sortorder: 13
 category: 9
 icon: layout_1

@@ -410,6 +410,8 @@ switch ($modx->event->name) {
                     ->removeClass('inline')
                 ;
                 $form
+                    ->filter('fieldset.submission')
+                    ->removeClass('submission')
                     ->filter('input[type="submit"].inline')
                     ->appendTo($form->filter('fieldset .fields')->last())
                     ->wrap('<div class="compact submission field">')

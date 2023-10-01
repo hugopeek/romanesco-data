@@ -9,6 +9,7 @@ New features:
 - Add getConfigSetting snippet
 
 Fixes and improvements:
+- Rename Card Blanche layout to Wrapper
 - Add option to wrap horizontally grouped CB segments on mobile
 - Remove theme override for paginationFluid chunk
 - Remove deprecated form_layout TV
