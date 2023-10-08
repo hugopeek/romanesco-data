@@ -21,7 +21,6 @@ data:
                 - 'footers/'
                 - 'forms/'
                 - 'forms/contact-example'
-                - 'forms/contact-example'
                 - 'forms/registration-example'
                 - 'forms/test-example'
                 - 'call-to-actions/'
