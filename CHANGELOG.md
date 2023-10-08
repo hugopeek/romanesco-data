@@ -1,20 +1,24 @@
 # Changelog for the Romanesco Soil data files
 
 ## v1.17.0
-Released on ...
+Released on October 8, 2023
 
 New features:
+- Add inline (equal width) form variant
 - Add CB for playing a local video file
 - Process Markdown content with Sprout
 - Add getConfigSetting snippet
 
 Fixes and improvements:
+- Add descriptions to media sources
+- Add media source for static Markdown notes
 - Rename Card Blanche layout to Wrapper
 - Add option to wrap horizontally grouped CB segments on mobile
+- Don't manipulate Markdown image paths and links anymore
+- Fix fatal error when attempting to read from empty form session data
 - Remove theme override for paginationFluid chunk
 - Remove deprecated form_layout TV
 - Use separate chunk for form layout CB options
-- Add inline (equal width) form variant
 - Add column classes to nested grid containers
 - Add option to append anchor to CB button link
 - Add option to fade CB images
