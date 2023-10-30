@@ -1,5 +1,23 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.17.1
+Released on ...
+
+Fixes and improvements:
+- Unset doubling as default value for responsive grid options
+- Forward title_hierarchy CB value to level placeholder [BREAKING CHANGE]
+- Add options to show/hide tags and metadata in basic article overviews
+- Add Card variants to article overview templates
+- Add message above filtered overviews
+- Turn Obsidian callouts into FUI messages (in Markdown content)
+- Improve ArticleReadability header styling
+- Only show tags from Topic group in basic article overview tpl
+- Make sure uid placeholder is always unique in filtered overviews
+- Trim closing period from heading anchors in ToC menu
+- Load assets when displaying Login form
+- Load assets when Markdown content contains a table
+- Only show 1 error message per field with form validation
+
 ## v1.17.0
 Released on October 8, 2023
 

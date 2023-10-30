@@ -3,12 +3,12 @@ parent_properties: ''
 input: layout
 name: 'Basic Layout (Nested)'
 description: 'Only available in Backyard and Slider layouts. Allows you to add basic (root level) layouts as nested layout.'
-content_desc: null
+content_desc: ''
 sortorder: 19
 category: 4
 icon: template_02
 template: '[[+value]]'
 properties: '{"available_layouts":"1,2,3,4,5,6,16","available_templates":"-1"}'
 availability: '[]'
-layouts: '100031,18'
+layouts: '18'
 settings: '[]'
