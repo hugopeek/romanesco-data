@@ -9,9 +9,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[setUserPlaceholders? &userId=`[[+author_id]]` &uid=`[[+unique_idx]]`]]
 
 <div class="ui padded down pointing segment secondary">
-    <[[+title_hierarchy]]>
+    <[[+level]]>
         <a href="[[~[[+id]]]]">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>
-    </[[+title_hierarchy]]>
+    </[[+level]]>
     <p class="quote">[[+introtext:stripString=`<p>`:stripString=`</p>`]]</p>
 </div>
 

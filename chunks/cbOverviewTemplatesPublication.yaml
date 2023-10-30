@@ -6,7 +6,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Article traditional=overviewRowArticleBasic
+Article regular=overviewRowArticleBasic
+Article regular (Card)=overviewRowArticleBasicCard
 Article image=overviewRowArticleImageBasic
+Article image (Card)=overviewRowArticleImageTopCard
 Article compact=overviewRowArticleCompact
 Article quote=overviewRowArticleQuote

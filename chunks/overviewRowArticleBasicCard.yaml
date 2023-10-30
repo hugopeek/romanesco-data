@@ -1,0 +1,44 @@
+id: 646
+name: overviewRowArticleBasicCard
+description: ''
+category: m_ov_article
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:51:"romanesco.overviewrowarticlebasiccard.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:52:"romanesco.overviewrowarticlebasiccard.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[setUserPlaceholders? &userId=`[[+author_id]]` &uid=`[[+unique_idx]]`]]
+
+<div class="[[+alignment]] content">
+    [[$headingOverviewLink? &uid=`[[+unique_idx]]`]]
+
+    [[[[If?
+        &subject=`[[+show_subtitle]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`$infoArticleMeta? &classes=`subtitle` &uid=`[[+unique_idx]]``
+    ]]]]
+    [[[[If?
+        &subject=`[[+show_tags]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`TaggerGetTags?
+            &resources=`[[+id]]`
+            &groups=`topic`
+            &rowTpl=`tagItemBasicLink`
+            &outTpl=`tagWrapper`
+        `
+    ]]]]
+    [[[[If?
+        &subject=`[[+show_introtext]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`$introtextDescription? &uid=`[[+unique_idx]]``
+    ]]]]
+</div>
+
+[[[[If?
+    &subject=`[[+link_text]]`
+    &operator=`isnot`
+    &operand=`0`
+    &then=`$buttonHrefOverview? &classes=`bottom attached` &uid=`[[+unique_idx]]``
+]]]]

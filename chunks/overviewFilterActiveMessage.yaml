@@ -1,0 +1,35 @@
+id: 648
+name: overviewFilterActiveMessage
+description: 'A segment that shows which filters are currently active, plus the option to reset the overview.'
+category: m_ov_filter
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:51:"romanesco.overviewfilteractivemessage.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:52:"romanesco.overviewfilteractivemessage.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[!TaggerGetCurrentTag:notempty=`
+<div id="filter-active" class="ui basic secondary-color segment">
+    <div class="ui compact middle aligned equal width grid">
+        <div class="compact column mobile hidden tablet hidden">
+            <i class="disabled secondary filter icon"></i>
+        </div>
+        <div class="column">
+            <div class="ui large secondary labels">
+                <span class="meta">[[%romanesco.filter.active]]</span>
+                [[!TaggerGetCurrentTag?
+                    &tagTpl=`tagItemBasic`
+                    &groupTpl=`@INLINE <span class="meta">[[+alias]]:</span> [[+tags]]`
+                    &outTpl=`@INLINE [[+groups]]`
+                    &tagSeparator=``
+                    &groupSeparator=`<span class="meta">[[%romanesco.filter.and]]</span> `
+                ]]
+            </div>
+        </div>
+        <div class="compact column">
+            <a href="[[~[[*id]]]]">
+                <span class="ui secondary text">[[%romanesco.filter.reset]]</span>
+                <i class="secondary undo alternate icon"></i>
+            </a>
+        </div>
+    </div>
+</div>
+`]]

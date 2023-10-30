@@ -36,7 +36,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &else=`$toolbarNote? &search_form_size=`large` &search_field_classes=`transparent``
         ]]]]
 
-        <div class="ui relaxed computer reversed grid container">
+        <div class="ui computer reversed grid container">
             <aside id="sidebar" class="sixteen wide mobile four wide computer column">
                 [[$tocNavVertical?
                     &sticky=`1`

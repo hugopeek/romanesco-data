@@ -46,7 +46,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &padding=`[[+padding]]`
 
     &title_field=`[[+title_field]]`
-    &title_hierarchy=`[[+title_hierarchy]]`
+    &level=`[[+title_hierarchy]]`
     &title_classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`
     &title_inflate=`[[+title_inflate]]`
     &show_subtitle=`[[+show_subtitle]]`

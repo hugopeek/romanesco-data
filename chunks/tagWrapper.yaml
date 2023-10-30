@@ -1,0 +1,11 @@
+id: 645
+name: tagWrapper
+description: ''
+category: a_tag
+properties: 'a:5:{s:4:"size";a:7:{s:4:"name";s:4:"size";s:4:"desc";s:25:"romanesco.tagwrapper.size";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:5:"color";a:7:{s:4:"name";s:5:"color";s:4:"desc";s:26:"romanesco.tagwrapper.color";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:4:"type";a:7:{s:4:"name";s:4:"type";s:4:"desc";s:25:"romanesco.tagwrapper.type";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:1:"p";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:34:"romanesco.tagwrapper.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:35:"romanesco.tagwrapper.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<[[+type]] class="ui [[+size]] [[+color]] labels">
+    [[+tags]]
+</[[+type]]>

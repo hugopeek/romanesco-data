@@ -10,6 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[setBoxType? &input=`[[+row_tpl]]` &prefix=`[[+ov_id]]_[[+layout_id]]_[[+unique_idx]]`]]
 
 [[$overviewSettingsPrepare? &uid=`[[+prefix]]`]]
+[[!$overviewFilterActiveMessage]]
 
 [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
     &element=`getResources`
@@ -29,6 +30,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &sortdir=`[[+[[+prefix]].sortdir]]`
     &where=`[[!TaggerGetResourcesWhere]]`
 
+    &show_tags=`[[+show_tags]]`
     [[$overviewSettings? &uid=`[[+prefix]]`]]
     [[[[+pagination:eq=`1`:then=`$overviewSettingsPagination? &uid=`[[+prefix]]``]]]]
 ]]

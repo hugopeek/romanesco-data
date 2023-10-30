@@ -16,9 +16,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 &alignment=`[[+alignment]]`
 &responsive=`[[+responsive]]`
 &prefix=`[[+prefix]]`
-&unique_idx=`[[+prefix]]`
+&unique_idx=`[[+uid]][[!#GET.q:stripString=`[[*uri]]`:clipString=`-1`:replace=`/==_`]]`
 &title_field=`[[+title_field]]`
-&title_hierarchy=`[[+title_hierarchy]]`
+&level=`[[+title_hierarchy]]`
 &title_classes=`[[+title_hierarchy:is=`span`:then=`tiny`]]`
 &show_subtitle=`[[+show_subtitle]]`
 &show_introtext=`[[+show_introtext]]`

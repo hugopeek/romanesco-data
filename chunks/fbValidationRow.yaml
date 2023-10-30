@@ -9,6 +9,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 [[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:replace=`-==`]]: {
     identifier: '[[+name]]',
+    errorLimit: 1,
     rules: [
         [[+field_type:is=`email`:then=`
         {

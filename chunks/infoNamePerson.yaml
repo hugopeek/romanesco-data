@@ -6,6 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="name" property="author" typeof="Person">
+<span class="name" property="author" typeof="Person">
     [[+person_firstname:empty=`[[+person_fullname]]`]] [[+person_lastname]]
-</div>
+</span>

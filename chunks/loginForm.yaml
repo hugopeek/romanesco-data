@@ -22,3 +22,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <input type="hidden" name="service" value="login">
     <button name="login" class="ui [[+form_size]] button" type="submit">[[+actionMsg]]</button>
 </form>
+
+[[!fbLoadAssets]]

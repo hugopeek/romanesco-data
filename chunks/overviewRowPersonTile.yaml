@@ -9,7 +9,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[-$imgOverviewPersonLink? &uid=`[[+unique_idx]]`]]
 
 <div class="ui overlay">
-    <[[+title_hierarchy]] class="ui [[+title_classes]] inverted header">
+    <[[+level]] class="ui [[+title_classes]] inverted header">
         [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
         [[If?
             &subject=`[[+show_subtitle]]`
@@ -17,7 +17,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &operand=`1`
             &then=`<span class="sub header">[[+person_jobtitle:empty=`[[+longtitle]]`]]</span>`
         ]]
-    </[[+title_hierarchy]]>
+    </[[+level]]>
 
     [[If?
         &subject=`[[+link_text]]`
