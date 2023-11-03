@@ -10,7 +10,7 @@ Fixes and improvements:
 - Forward title_hierarchy CB value to level placeholder [BREAKING CHANGE]
 - Add options to show/hide tags and metadata in basic article overviews
 - Add Card variants to article overview templates
-- Add message above filtered overviews
+- Allow article overviews to be filtered (optional)
 - Turn Obsidian callouts into FUI messages (in Markdown content)
 - Improve ArticleReadability header styling
 - Only show tags from Topic group in basic article overview tpl
