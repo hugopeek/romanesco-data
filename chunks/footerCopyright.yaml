@@ -28,22 +28,11 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
         [[++qredits_visibility:eq=`1`:then=`
         <div id="qredits" class="compact column">
-            <a class="ui mini image with tooltip onclick" data-position="top right">
-                [[svgSanitize?
-                    &file=`assets/semantic/dist/themes/romanesco/assets/icons/romanesco-badge.svg`
-                    &title=`[[%romanesco.footer.qredits_title]]`
-                ]]
+            <a href="[[++qredits_link:empty=`[[%romanesco.footer.qredits_link]]`]]"
+               title="[[++qredits_title:empty=`[[%romanesco.footer.qredits_title]]`]]"
+               class="ui mini image">
+                <img loading="lazy" src="[[++qredits_img:empty=`[[++romanesco.qredits_img]]`]]" alt="[[%romanesco.footer.qredits_img_alt]]">
             </a>
-            <div class="ui popup">
-                [[++qredits_text:empty=`[[%romanesco.footer.qredits_text]]`]]
-                <a href="https://romanesco.info/" class="ui tiny compact fluid primary button" target="_blank">
-                    [[%romanesco.footer.qredits_romanesco]]
-                </a>
-                <a href="https://modx.com/content-management-framework" class="ui tiny compact fluid basic icon button" target="_blank">
-                    <i class="modx icon"></i>
-                    [[%romanesco.footer.qredits_modx]]
-                </a>
-            </div>
         </div>
         `]]
     </div>

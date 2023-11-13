@@ -36,3 +36,16 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </div>
     </div>
 </nav>
+
+[[[[If?
+    &subject=`[[++navbar_level]]`
+    &operator=`eq`
+    &operand=`3`
+    &then=`loadAssets? &component=`popup``
+]]]]
+[[[[If?
+    &subject=`[[++navbar_level]]`
+    &operator=`eq`
+    &operand=`2`
+    &then=`loadAssets? &component=`dropdown-css``
+]]]]

@@ -21,3 +21,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
      data-alt="[[+img_alt:default=`Video thumbnail`]]"
      `]]>
 </div>
+
+[[loadAssets? &component=`embed`]]
