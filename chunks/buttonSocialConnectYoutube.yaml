@@ -11,5 +11,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
    target="_blank"
    href="[[+account:empty=`[[++social_youtube]]`]]"
    property="sameAs">
-    <i class="youtube play icon"></i>
+    <i class="youtube icon"></i>
 </a>

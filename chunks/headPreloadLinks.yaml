@@ -9,6 +9,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[++romanesco.dev_mode:ne=`1`:then=`
 <link rel="preconnect" href="https://ajax.googleapis.com">
 `]]
+[[++analytics_tracking_code:contains=`googletagmanager.com`:then=`
+<link rel="preconnect" href="https://googletagmanager.com">
+`]]
 [[+load_google_fonts:notempty=`
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

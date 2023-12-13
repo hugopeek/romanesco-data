@@ -33,3 +33,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[$overviewSettings? &uid=`[[+prefix]]`]]
     [[[[+pagination:eq=`1`:then=`$overviewSettingsPagination? &uid=`[[+prefix]]``]]]]
 ]]
+
+[[loadAssets? &component=`rating`]]

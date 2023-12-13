@@ -30,6 +30,11 @@ $.ajax({
         let message = '<strong>[[%formblocks.form.success_heading]]<\/strong><br>';
         message += data.message;
 
+        // Redirect if response contains a redirect URL
+        if (data.redirect) {
+            window.location.href = data.redirect;
+        }
+
         // Avoid stunning the visitor by delaying the success message and showing a dimmer
         $('.ui.form#form-[[*alias]] .dimmer').addClass('active');
 

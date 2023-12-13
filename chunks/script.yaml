@@ -7,11 +7,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[[[*comments_toggle:eq=`1`:then=`$commentScript[[++comment_platform]]`]]]]
-[[modifiedIf?
-    &subject=`[[++formblocks.antispam_hooks]]`
-    &operator=`contains`
-    &operand=`recaptchav3`
-    &then=`<script async defer src="https://www.google.com/recaptcha/api.js?render=[[++recaptchav3.site_key]]&hl=[[++cultureKey]]"></script>`
+[[loadAssets?
+    &component=`custom`
+    &inlineJS=`<script defer src="[[++romanesco.semantic_js_path]]/site[[+minify:empty=``]][[+cache_buster_js:empty=``]].js"></script>`
 ]]
 [[[[modifiedIf?
     &subject=`footerAdditional`
