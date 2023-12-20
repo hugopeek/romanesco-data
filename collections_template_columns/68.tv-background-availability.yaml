@@ -3,6 +3,7 @@ template: 11
 label: Availability
 name: tv_background_availability
 sortable: 1
-width: 50
+width: 30
+renderer: tvRendererList
 position: 3
 sort_type: null

@@ -3,7 +3,26 @@
 ## v1.17.1
 Released on ...
 
+New features:
+- Add logic to detect ConsentFriend presence
+
 Fixes and improvements:
+- Tweak sizing of global content grid columns
+- Add option to inflate titles in 2 column layouts
+- Fix registration forms not being shown in CB selector
+- Fix overview headings in traditional article sidebar
+- Load rating component in Review overviews
+- Move site.js script further down the chain
+- Allow AJAX forms to redirect after submission
+- Forward variables correctly to FormBlocks AJAX calls
+- Load Recaptcha v3 when form scrolls into view
+- Allow referring pages list to be limited by context
+- Also scan for TVs when rendering referring pages
+- Apply native lazy loading to Markdown images
+- Remove popup from footer qredits
+- Load additional FUI components conditionally
+- Set fallback font as header and page font (if those settings are empty)
+- Use separate setting for critical CSS path
 - Replace some ?? operators on array keys with isset
 - Remove redundant H1 in Markdown articles
 - Unset doubling as default value for responsive grid options

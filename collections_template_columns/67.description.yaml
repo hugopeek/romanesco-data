@@ -2,6 +2,6 @@ id: 67
 template: 11
 label: description
 name: description
-width: 130
+width: 80
 position: 2
 sort_type: null

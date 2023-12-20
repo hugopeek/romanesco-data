@@ -2,7 +2,7 @@ id: 11
 template: 2
 label: Form
 name: pagetitle
-width: 50
+width: 80
 editor: textfield
 renderer: collections.renderer.pagetitleWithButtons
 position: 1

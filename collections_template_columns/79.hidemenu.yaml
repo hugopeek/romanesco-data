@@ -3,7 +3,7 @@ template: 11
 label: Visibility
 name: hidemenu
 sortable: 1
-width: 30
+width: 20
 editor: rm-visibility-boolean
 renderer: booleanRendererVisibility
 position: 4
