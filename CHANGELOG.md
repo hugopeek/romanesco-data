@@ -7,6 +7,7 @@ New features:
 - Add logic to detect ConsentFriend presence
 
 Fixes and improvements:
+- Fix default and FormBlocks lexicons in multilingual setups
 - Tweak sizing of global content grid columns
 - Add option to inflate titles in 2 column layouts
 - Fix registration forms not being shown in CB selector
