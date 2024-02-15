@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <script>
     window.addEventListener('DOMContentLoaded', function() {
-        $('.ui.form').visibility({
+        $('.ui.form:not(.without.recaptcha)').visibility({
             once: true,
             onTopVisible: function () {
                 let script = document.createElement('script');

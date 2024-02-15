@@ -6,6 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div class="ui stackable doubling [[+alignment]] [[+divider]] equal width grid">
+<div class="ui stackable [[+alignment]] [[+divider]] equal width grid">
     [[+content]]
 </div>
