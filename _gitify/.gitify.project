@@ -455,7 +455,7 @@ packages:
         service_url: 'https://rest.modmore.com/'
         credential_file: '.modmore.com.key'
         packages:
-            - clientconfig-2.3.3-pl
-            - contentblocks-1.13.0-pl
+            - clientconfig-2.4.0-pl
+            - contentblocks-1.13.4-pl
             - quickstartbuttons-1.3.0-pl
-            - redactor-3.1.6-pl
+            - redactor-3.2.0-pl
