@@ -30,6 +30,7 @@ data:
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
             - 'AND:key:NOT LIKE': 'xrouting.%'
+            - 'AND:key:NOT LIKE': 'smartrouting.%'
             - 'AND:key:NOT LIKE': '%.assets_path'
             - 'AND:key:NOT LIKE': '%.assets_url'
             - 'AND:key:NOT LIKE': '%.core_path'
