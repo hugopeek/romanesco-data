@@ -161,6 +161,7 @@ data:
                 - 'formit.form_encryptkey'
                 - 'romanesco.assets_version_css'
                 - 'romanesco.assets_version_js'
+                - 'romanesco.favicon_version'
                 - 'romanesco.dev_mode'
                 - 'romanesco.env_path'
             - 'AND:key:NOT LIKE': 'mail_%'
