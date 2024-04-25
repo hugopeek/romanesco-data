@@ -1,7 +1,7 @@
 id: 136
 type: number
 name: fb_store_time
-caption: 'Store time'
+caption: 'Temporary storage timeout'
 description: 'If ''store data'' is switched on, this specifies the number of seconds to store the submitted form data. Defaults to five minutes.'
 category: '_Settings - Advanced'
 elements: ''

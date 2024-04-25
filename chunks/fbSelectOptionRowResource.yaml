@@ -1,7 +1,7 @@
 id: 354
 name: fbSelectOptionRowResource
 description: 'A row template for options that link to a resource. These options are almost always generated dynamically, instead of being added through the form builder by the editor.'
-category: a_fb_input
+category: a_fb_select
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:49:"romanesco.fbselectoptionrowresource.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:50:"romanesco.fbselectoptionrowresource.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----

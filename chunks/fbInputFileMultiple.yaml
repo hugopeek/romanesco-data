@@ -1,17 +1,22 @@
 id: 356
 name: fbInputFileMultiple
-description: 'Use this file input field if you want users to upload more than 1 file. The AjaxUpload extra takes care of frontend functionality and backend processing. Just make sure it''s installed!'
-category: a_fb_input
+description: 'Use this file input field if you want users to upload more than 1 file. The AjaxUpload extra takes care of frontend functionality and backend processing (so make sure it''s installed!).'
+category: m_fb_input
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.fbinputfilemultiple.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.fbinputfilemultiple.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
-[[!AjaxUpload?
-    &uid=`[[+name]]`
-    &maxFiles=`[[+upload_limit]]`
-    &maxFilesizeMb=`[[+max_file_size]]`
-    &allowedExtensions=`[[+allowed_file_types]]`
-    &thumbX=`150`
-    &thumbY=`150`
-    &addCss=`0`
-]]
+<div class="[[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] file-upload field [[!If? &subject=`[[+fb[[*id]].error.fb[[*id]]-uploads]]` &operator=`notempty` &then=`error`]] [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]]">
+    <label>[[+field_name:stripWords=`[[$fbStripWordsLabel]]`]]</label>
+    [[!AjaxUpload?
+        &uid=`fb[[*id]]-uploads`
+        &maxFiles=`[[+upload_limit]]`
+        &maxFilesizeMb=`[[+max_file_size]]`
+        &allowedExtensions=`[[+allowed_file_types]]`
+        &thumbX=`150`
+        &thumbY=`150`
+        &addCss=`0`
+    ]]
+    [[+fb[[*id]].error.fb[[*id]]-uploads]]
+    [[+field_helptext:notempty=`<span class="help">[[+field_helptext]]</span>`]]
+</div>

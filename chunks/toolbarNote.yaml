@@ -37,3 +37,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </div>
 </div>
 `]]
+[[[[If?
+    &subject=`[[+toolbar_visibility]]`
+    &operator=`eq`
+    &operand=`1`
+    &then=`loadAssets? &component=`dropdown-css``
+]]]]

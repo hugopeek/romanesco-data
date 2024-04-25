@@ -7,13 +7,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[cbGetFieldContent:notempty=`1`:default=`0`:toPlaceholder=`upload_multiple`?
-    &field=`[[++formblocks.cb_input_file_id:empty=`-1`]]`
-    &fieldSettingFilter=`upload_limit!=1`
-]][[cbGetFieldContent:notempty=`1`:default=`0`:toPlaceholder=`math_question`?
-    &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
-]][[!fbLoadAssets?
-    &uploadFile=`[[+upload_multiple]]`
+[[!fbLoadAssets?
+    &uploadFile=`[[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]`]]`
     &frontendValidation=`1`
 ]][[modifiedIf?
     &subject=`[[*fb_save_form]]`
@@ -36,7 +31,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &5=`[[++site_start:empty=``]]`
 ]][[!FormIt?
     &preHooks=`
-        [[+upload_multiple:eq=`1`:then=`Formit2AjaxUpload,`]]
+        [[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`Formit2AjaxUpload,`]]
         [[+multiple_steps:notempty=`fbSetStoredValues,`]]
         [[*fb_prehooks:append=`,`]]
         fbEmptyHook
@@ -44,12 +39,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &renderHooks=`[[*fb_renderhooks]]`
     &hooks=`
         spam,
-        [[+upload_multiple:eq=`1`:then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
-        [[++formblocks.antispam_hooks:append=`,`]]
-        [[-+math_question:isnot=`0`:then=`math,`]]
+        [[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
+        [[cbGetFieldContent:notempty=`AjaxUploadRequired,`? &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]` &fieldSettingFilter=`field_required==1`]]
+        [[cbHasField? &field=`[[++formblocks.cb_input_file_id]]` &then=`fbProcessUploads,`]]
+        [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`math,`]]
+        [[++romanesco.dev_mode:isnot=`1`:then=`[[++formblocks.antispam_hooks:append=`,`]]`]]
         [[+save_form:eq=`1`:then=`FormItSaveForm,`]]
         [[*fb_hooks:append=`,`]]
         [[If? &subject=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]` &operator=`notempty` &then=`email,`]]
+        [[*fb_store_attachments:replace=`default==[[++formblocks.store_attachments]]`:isnot=`1`:then=`AjaxUploadRemove,`]]
         [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
         [[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
         fbEmptyHook
@@ -65,11 +63,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`&emailReplyTo=`[[+fb[[*id]]-email]]``]]
 
     [[cbGetFieldContent?
-        &field=`[[++formblocks.cb_input_file_id:empty=`-1`]]`
-        &fieldSettingFilter=`upload_limit!=1`
+        &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]`
         &tpl=`fbFileUploadProperties`
     ]]
-    [[-cbGetFieldContent?
+    [[cbGetFieldContent?
         &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
         &tpl=`fbMathQuestionProperties`
     ]]
@@ -93,7 +90,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[!fbValidateProcessJSON? &formID=`[[*id]]`]]
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
-        [[-+math_question:isnot=`0`:then=`fb[[*id]]-math:required,`]]
+        [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`fb[[*id]]-math:required,`]]
         [[[[modifiedIf?
             &subject=`fbValidateCustomFields`
             &operator=`iselement`

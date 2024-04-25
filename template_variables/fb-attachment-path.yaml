@@ -1,0 +1,15 @@
+id: 173
+type: text
+name: fb_attachment_path
+caption: 'Attachment path'
+description: 'Stored uploads are saved in this folder. The path needs to be relative to the location of the assets_path setting. Please note that [[*id]] will be parsed, but other placeholders wont.'
+category: '_Settings - Advanced'
+elements: ''
+rank: 18
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+../uploads/_forms/[[*id]]
