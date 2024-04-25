@@ -1,12 +1,26 @@
 # Changelog for the Romanesco Soil data files
 
-## v1.17.1
-Released on ...
+## v1.18.0
+Released on April 25, 2024
 
 New features:
+- Add ability to store and sanitize form attachments
+- Add separate content block for multiple file attachments
 - Add logic to detect ConsentFriend presence
 
 Fixes and improvements:
+- Replace placeholder-based conditionals with cbHasField statements in fbForm
+- Verify file extension and maximum size of submitted form attachments
+- Remove unused fbInputFileSingle chunk
+- Separate single and multiple file upload fields
+- Don't load Recaptcha assets with dev mode enabled
+- Disable submit button while processing form (to prevent multiple submissions)
+- Replace Recaptcha terms and conditions text with icon
+- Don't get Scheduler service if package is not installed
+- Look for globalCustomCSS theme chunk when generating custom CSS
+- Place accordion icons right of title
+- Add ability to apply vertical spacing to nested grids
+- Add ability to apply additional padding to accordions
 - Fix default and FormBlocks lexicons in multilingual setups
 - Tweak sizing of global content grid columns
 - Add option to inflate titles in 2 column layouts
