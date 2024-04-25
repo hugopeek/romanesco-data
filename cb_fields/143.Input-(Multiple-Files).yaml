@@ -1,0 +1,17 @@
+id: 143
+parent_properties: null
+input: chunk
+name: 'Input (Multiple Files)'
+description: null
+content_desc: null
+sortorder: 61
+category: 7
+icon: folder-open
+icon_type: custom
+template: '[[+tag]]'
+properties: '{"chunk":"356","custom_preview":"<p>Let visitors upload multiple files from their system. These files will be attached to the email you receive. Files can be added with drag&drop or via the system file explorer.<\/p>\n<br>\n\n<p><strong>IMPORTANT NOTES:<\/strong><\/p>\n<ul class=\"ui bulleted list\">\n    <li>This block requires the <a href=\"https:\/\/jako.github.io\/AjaxUpload\/\" target=\"_blank\">AjaxUpload<\/a> extra to be installed.<\/li>\n    <li>Because uploaded files are attached to the email, you need to make sure the total size of the files (= max file size * upload limit) won''t exceed your email limit.<\/li>\n    <li>Frontend validation doesn''t work for required blocks (generates errors in console). But backend validation works.<\/li>\n    <li>Be careful using multiple forms with this block on the same page. There are known issues with that.<\/li>\n    <li>This block can only be used once per form.<\/li>\n<\/ul>\n\n<div class=\"ui divider\"><\/div>"}'
+availability: '[{"field":"template","value":"10,19"}]'
+layouts: null
+times_per_layout: null
+times_per_page: 1
+settings: '[{"reference":"field_name","title":"Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"field_layout","title":"Label position","fieldtype":"select","default_value":"inherit","fieldoptions":"[[$cbFormLabelPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"helptext_position","title":"Help position","fieldtype":"select","default_value":"bottom","fieldoptions":"[[$cbFormHelpPosition]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"allowed_file_types","title":"Allowed file types","fieldtype":"textfield","default_value":"jpg,jpeg,gif,png,pdf,odf,odt,doc,docx,txt,md","fieldoptions":"","field_is_exposed":"modal"},{"reference":"max_file_size","title":"Max file size (in MB)","fieldtype":"textfield","default_value":"2","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_helptext","title":"Help text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"required_text","title":"Validation text","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"field_name_html","title":"Name in HTML","description":"Optional override for the name attribute. Recommended when using this field in custom hooks / automations.","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"upload_limit","title":"Upload limit","fieldtype":"textfield","default_value":"5","fieldoptions":"No=0\nYes (requires AjaxUpload to be installed)=1","field_is_exposed":"asField"},{"reference":"field_required","title":"Required","fieldtype":"select","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"asField"}]'
