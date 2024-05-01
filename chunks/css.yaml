@@ -80,7 +80,7 @@ properties: 'a:3:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &operand=`chunk`
     &then=`$globalBackgroundsTheme? &context=`[[+context:empty=`web`]]``
     &else=``
-]]
+]]]]
 [[[[modifiedIf?
     &subject=`globalCustomCSS`
     &operator=`iselement`
