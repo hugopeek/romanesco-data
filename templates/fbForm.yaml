@@ -59,6 +59,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[*fb_store_attachments:replace=`default==[[++formblocks.store_attachments]]`:isnot=`1`:then=`AjaxUploadRemove,`]]
         [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
         [[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
+        [[*fb_posthooks:append=`,`]]
         redirect
     `
 

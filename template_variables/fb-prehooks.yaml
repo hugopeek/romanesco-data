@@ -1,8 +1,8 @@
 id: 88
 type: text
 name: fb_prehooks
-caption: 'Custom pre-hook(s)'
-description: 'A snippet name (or comma separated list of names), containing the hook(s). They are executed before the form is initialised. Useful for pre-loading values.'
+caption: Pre-hook(s)
+description: 'A snippet name (or comma separated list of names). They are run before the form is initialised. Useful for prefilling form fields with existing data.'
 category: '_Settings - Advanced'
 elements: ''
 rank: 1

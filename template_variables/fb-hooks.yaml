@@ -1,8 +1,8 @@
 id: 89
 type: text
 name: fb_hooks
-caption: 'Custom hook(s)'
-description: 'A snippet name (or comma separated list of names), containing the hook(s). They are executed after the form is submitted, but before any emails are sent. Useful for writing to the database.'
+caption: Hook(s)
+description: 'A snippet name (or comma separated list of names) to execute. They are run after the form is submitted, but before any emails are sent (or user is created). Useful for additional validation.'
 category: '_Settings - Advanced'
 elements: ''
 rank: 3

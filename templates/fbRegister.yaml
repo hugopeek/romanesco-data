@@ -32,6 +32,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[*fb_usergroups_field:isnot=``:then=`&usergroupsField=`fb[[*id]]-[[*fb_usergroups_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``]]
     [[*fb_password_field:isnot=``:then=`&passwordField=`fb[[*id]]-[[*fb_password_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``:else=`&generatePassword=`1``]]
     &useExtended=`[[*fb_extended_toggle:default=`0`]]`
+    &excludeExtended=`fb[[*id]]-email-alt,fb[[*id]]-accept-terms,fb[[*id]]-math,fb[[*id]]-op1,fb[[*id]]-op2,fb[[*id]]-operator`
 
     [[!cbGetFieldContent?
         &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
