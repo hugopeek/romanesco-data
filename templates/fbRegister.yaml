@@ -21,13 +21,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     &activation=`[[*fb_activation_toggle:default=`1`]]`
     &activationttl=`[[*fb_activation_ttl:default=`180`]]`
-    &activationEmailTpl=`[[*fb_activation_email:empty=`[[%formblocks.registration.email_content]]`]]`
-    &activationEmailTplType=`inline`
+    &activationEmailTpl=`[[*fb_activation_email[[*fb_activation_email_type:isnot=`inline`:then=`_tpl`]]:empty=`[[%formblocks.registration.email_content]]`]]`
+    &activationEmailTplType=`[[*fb_activation_email_type:default=`inline`]]`
     &activationEmailSubject=`[[*fb_email_subject:empty=`[[%formblocks.registration.email_subject]]`]]`
 
-    &emailField=`fb[[*id]]-email`
-    &usernameField=`fb[[*id]]-[[*fb_username_field:default=`username`:fbStripAsAlias:stripString=`fb[[*id]]-`]]`
-    &fullnameField=`fb[[*id]]-[[*fb_fullname_field:default=`your-name`:fbStripAsAlias:stripString=`fb[[*id]]-`]]`
+    &emailField=`fb[[*id]]-email` [[- Resist the temptation to make this dynamic. This value will be used to set the (mandatory) user email anyhow.]]
+    &usernameField=`[[*fb_username_field:default=`username`:fbStripAsAlias:stripString=`fb[[*id]]-`:prepend=`fb[[*id]]-`]]`
+    &fullnameField=`[[*fb_fullname_field:default=`fullname`:fbStripAsAlias:stripString=`fb[[*id]]-`:prepend=`fb[[*id]]-`]]`
     &usergroups=`[[*fb_usergroups]]`
     [[*fb_usergroups_field:isnot=``:then=`&usergroupsField=`fb[[*id]]-[[*fb_usergroups_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``]]
     [[*fb_password_field:isnot=``:then=`&passwordField=`fb[[*id]]-[[*fb_password_field:fbStripAsAlias:stripString=`fb[[*id]]-`]]``:else=`&generatePassword=`1``]]

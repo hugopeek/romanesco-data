@@ -2,7 +2,7 @@ id: 95
 type: richtext
 name: fb_activation_email
 caption: 'Activation email'
-description: 'The content of the activation email. Make sure it contains the [[+confirmUrl]] placeholder for the confirmation link!'
+description: 'The content of the activation email, if email type is Inline. Make sure it contains the [[+confirmUrl]] placeholder for the confirmation link!'
 category: '_Settings - Email'
 elements: ''
 rank: 20

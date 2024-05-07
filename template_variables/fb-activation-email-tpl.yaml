@@ -1,0 +1,13 @@
+id: 176
+type: text
+name: fb_activation_email_tpl
+caption: 'Activation email template'
+description: 'Enter chunk name here if email type is Chunk, or an absolute file path if email type is File (you can use {core_path}, {base_path} or {assets_path} as placeholders here).'
+category: '_Settings - Email'
+elements: ''
+rank: 11
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

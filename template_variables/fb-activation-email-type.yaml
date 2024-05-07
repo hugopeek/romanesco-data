@@ -1,0 +1,14 @@
+id: 175
+type: option
+name: fb_activation_email_type
+caption: 'Activation email type'
+category: '_Settings - Email'
+elements: 'Inline (edit content below)==inline||Chunk (specify chunk name below)==chunk||File (specify file path below)==file'
+rank: 10
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+
+-----
+
+inline
