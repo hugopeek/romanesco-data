@@ -16,7 +16,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &placeholderPrefix=`fb[[*id]].`
 ]]
 [[!Register?
-    &preHooks=`[[*fb_hooks:notempty=`[[*fb_hooks]],`]][[+math_question:isnot=`0`:then=`math,`]]fbEmptyHook`
+    &preHooks=`[[+math_question:isnot=`0`:then=`math,`]][[*fb_hooks:notempty=`[[*fb_hooks]],`]]fbEmptyHook`
     &postHooks=`[[*fb_posthooks:notempty=`[[*fb_posthooks]]`]]`
 
     &activation=`[[*fb_activation_toggle:default=`1`]]`
