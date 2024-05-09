@@ -457,6 +457,6 @@ packages:
         credential_file: '.modmore.com.key'
         packages:
             - clientconfig-2.4.0-pl
-            - contentblocks-1.13.4-pl
+            - contentblocks-1.13.5-pl
             - quickstartbuttons-1.3.0-pl
             - redactor-3.2.0-pl
