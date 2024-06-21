@@ -15,10 +15,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <strong>[[!+fb[[*id]].fb[[*id]]-op2]]</strong>
         <i class="small fitted equals icon"></i>
     </label>
-    <input type="text" name="fb[[*id]]-math" id="fb[[*id]]-math" value="[[!+fb[[*id]].fb[[*id]]-math]]" />
     <input type="hidden" name="fb[[*id]]-op1" value="[[!+fb[[*id]].fb[[*id]]-op1]]" />
     <input type="hidden" name="fb[[*id]]-op2" value="[[!+fb[[*id]].fb[[*id]]-op2]]" />
     <input type="hidden" name="fb[[*id]]-operator" value="[[!+fb[[*id]].fb[[*id]]-operator]]" />
-    [[!+math_error:notempty=`<span class="help error">[[!+math_error]] [[!+math_error:contains=`!`:then=`Grab a calculator and fix yourself.`]]</span>`]]
+    <input type="text" name="fb[[*id]]-math" id="fb[[*id]]-math" value="[[!+fb[[*id]].fb[[*id]]-math]]" />
+    [[!+math_error:notempty=`<span class="help error">[[!+math_error]]</span>`]]
     [[+field_helptext:notempty=`<span class="help">[[+field_helptext]]</span>`]]
 </div>

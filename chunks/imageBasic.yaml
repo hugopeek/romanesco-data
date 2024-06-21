@@ -2,15 +2,15 @@ id: 25
 name: imageBasic
 description: 'Responsive content image with an optional caption.'
 category: a_cont_image
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:34:"romanesco.imagebasic.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:35:"romanesco.imagebasic.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:3:{s:7:"classes";a:7:{s:4:"name";s:7:"classes";s:4:"desc";s:28:"romanesco.imagebasic.classes";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:34:"romanesco.imagebasic.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:35:"romanesco.imagebasic.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
-<figure class="ui [[+classes]] content image">
+<figure [[+id:prepend=`id="`:append=`"`]] class="ui [[+classes]] content image">
     [[$imgResponsive? &uid=`[[+url]]`]]
-    [[If?
+    [[[[If?
         &subject=`[[+credits]][[+caption]]`
         &operator=`notempty`
-        &then=`<figcaption>[[+caption]][[+credits:stripTags=`<a>,<em>,<strong>`:prepend=`<span class="credits meta">&copy; `:append=`</span>`]]</figcaption>`
-    ]]
+        &then=`$imageBasicCaption? &uid=`[[+uid]]``
+    ]]]]
 </figure>

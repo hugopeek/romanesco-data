@@ -1,0 +1,12 @@
+id: 659
+name: imageBasicCaption
+description: 'The figcaption element containing the caption and/or image credits.'
+category: a_cont_image
+properties: 'a:3:{s:7:"classes";a:7:{s:4:"name";s:7:"classes";s:4:"desc";s:35:"romanesco.imagebasiccaption.classes";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:41:"romanesco.imagebasiccaption.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:42:"romanesco.imagebasiccaption.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<figcaption class="ui equal width [[+classes]] grid">
+    [[+caption:stripTags=`<a>,<em>,<strong>,<br>`:prepend=`<span class="left aligned content column">`:append=`</span>`]]
+    [[+credits:notempty=`<span class="compact meta credits column" title="[[+credits:stripTags]]"><i class="copyright outline icon"></i></span>`]]
+</figcaption>
