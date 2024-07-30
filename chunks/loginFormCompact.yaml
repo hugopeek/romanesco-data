@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+errors:notempty=`<div class="ui tiny error message">[[+errors]]</div>`]]
 
-<form id="form-login" class="ui right simple dropdown item" action="[[~[[*id]]]]" method="post">
+<form id="form-login" class="ui right dropdown item" action="[[~[[*id]]]]" method="post">
     [[+actionMsg]]
     <i class="dropdown icon"></i>
 
@@ -27,8 +27,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <div class="divider"></div>
 
         <div class="submit item">
-            <i class="sign in icon"></i>
+            <i class="sign-in icon"></i>
             [[+actionMsg]]
         </div>
     </div>
 </form>
+
+[[!fbLoadAssets]]

@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+errors:notempty=`<div class="ui error message">[[+errors]]</div>`]]
 
-<div class="ui right simple dropdown item">
+<div class="ui right dropdown item">
     [[!+modx.user.id:userinfo=`username`]]
     <i class="dropdown icon"></i>
 
@@ -21,8 +21,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <div class="divider"></div>
 
         <a href="[[+logoutUrl]]" title="[[+actionMsg]]" class="item">
-            <i class="sign out icon"></i>
+            <i class="sign-out icon"></i>
             [[+actionMsg]]
         </a>
     </div>
 </div>
+
+[[!fbLoadAssets]]
