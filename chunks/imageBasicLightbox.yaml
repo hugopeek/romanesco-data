@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[$imageBasic?
     &id=`image-[[+uid]]`
-    &classes=`rounded lightbox`
+    &classes=`[[+classes]] lightbox`
     &uid=`[[+uid]]`
 ]]
 

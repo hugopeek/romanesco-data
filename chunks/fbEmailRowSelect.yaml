@@ -1,0 +1,13 @@
+id: 663
+name: fbEmailRowSelect
+description: 'Specific email row for checkbox, radio and dropdown fields. Comma-separated (multiselect) values will be parsed on separate lines, and ''Other'' values will be appended if present.'
+category: m_fb_email
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.fbemailrowselect.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.fbemailrowselect.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+field_name:empty=`[[+field_name_html]]`:stripString=`?`:stripWords=`[[$fbStripWordsLabel]]`:toPlaceholder=`label`]]
+[[+fb[[+id]]-[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias]]:nl2br:empty=``:toPlaceholder=`value`]]
+
+[[+label:before=`<strong>`:after=`:</strong><br/>`]]
+[[+value:replace=`,==<br/>`]][[+value:contains=`[[+option_other_value]]`:then=`, [[%formblocks.email.other_namely]] [[+fb[[+id]]-[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias]]-other]]`]]<br/><br/>

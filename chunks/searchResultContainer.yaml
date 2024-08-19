@@ -10,9 +10,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+results]]
 
-<div class="ui vertical stripe segment">
+<div class="ui basic padded horizontally fitted segment">
     <div class="ui pagination menu">
         [[+paging]]
     </div>
 </div>
-
