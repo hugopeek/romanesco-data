@@ -1,9 +1,9 @@
 id: 91
-parent_properties: ''
+parent_properties: null
 input: chunk
 name: 'Map (with Marker)'
-description: ''
-content_desc: "Add a map here, with a single marker on a location of choice. You can enter the lat/long coordinates of the location (separated by a ,) or write down the actual address. This address will then be geocoded to the correct coordinates for the marker.\n\nPlease note that you need a Mapbox API key for the map to be displayed, and the GeoCoder extra installed if you want to enter an address as location. This also requires an API key, for an external geocoding service of choice."
+description: null
+content_desc: "Add a map here, with a single marker. You can enter the lat/long coordinates of the location (comma-separated, no spaces) or write down the actual address. This address will then be geocoded to the correct coordinates for the marker.\n\nPlease note that you need a Mapbox API key for the map to be displayed, and the GeoCoder extra installed if you want to enter an address as location. This also requires an API key for an external geocoding service of choice."
 sortorder: 39
 category: 3
 icon: map-marker
@@ -11,5 +11,7 @@ icon_type: custom
 template: '[[+value]]'
 properties: '{"chunk":"364","custom_preview":"<span><\/span>"}'
 availability: '[]'
-layouts: ''
-settings: '[{"reference":"map_id","title":"Map ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"},{"reference":"marker_address","title":"Marker address","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"map_zoom_level","title":"Zoom level","fieldtype":"textfield","default_value":"11","fieldoptions":"Country\nProvince","field_is_exposed":"asField"},{"reference":"marker_popup","title":"Text in popup","fieldtype":"textarea","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
+layouts: null
+times_per_layout: null
+times_per_page: null
+settings: '[{"reference":"map_id","title":"Map ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal","description":"For if you want to refer to this map with JS or CSS.","type_ahead":"No","separator":""},{"reference":"marker_address","title":"Marker position","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"Enter the lat/long coordinates of the location (comma-separated, no spaces) or write down the actual address (needs GeoCoder installed).","type_ahead":"No","separator":""},{"reference":"zoom_level","title":"Zoom level","fieldtype":"textfield","default_value":"11","fieldoptions":"Country\nProvince","field_is_exposed":"asField","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"This decides how much of the area is visible around the marker.","type_ahead":"No","separator":""},{"reference":"zoom_level_max","title":"Max zoom level","description":"How deep the user is allowed to zoom in.","fieldtype":"textfield","default_value":"18","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"marker_popup","title":"Text in popup","fieldtype":"textarea","default_value":"","fieldoptions":"","field_is_exposed":"asField"}]'
