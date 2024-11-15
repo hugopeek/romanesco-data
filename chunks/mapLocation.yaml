@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<div id="map-[[+map_id:empty=`[[+unique_idx]]`]]" class="map"></div>
+<div id="[[+map_id:stripAsAlias:empty=`map-[[+unique_idx]]`]]" class="map"></div>
 
 [[modifiedIf?
     &subject=`[[+marker_address:stripString=`,`:stripString=`.`]]`
@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     window.addEventListener('DOMContentLoaded', function() {
         const attribution = 'Map data &copy; <a href="http://openstreetmap.org">OSM</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
 
-        const map = new L.Map('map-[[+map_id:empty=`[[+unique_idx]]`]]', {
+        const map = new L.Map('[[+map_id:stripAsAlias:empty=`map-[[+unique_idx]]`]]', {
             scrollWheelZoom: false
         });
 
@@ -34,7 +34,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             accessToken: '[[++romanesco.mapbox_access_token]]'
         }).addTo(map);
 
-        map.setView([ [[+marker_coordinates]] ], [[+zoom_level]]);
+        map.setView([ [[+marker_coordinates]] ], [[+zoom_level:default=`11`]]);
 
         L.marker([ [[+marker_coordinates]] ])
             .addTo(map)
