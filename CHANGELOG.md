@@ -1,5 +1,44 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.19.1
+Released on January 3, 2025
+
+Fixes and improvements:
+- Move JS for hiding CB features to separate chunk
+- Fix listing of deprecated icons in CB icon settings
+- Assign Overview Icon TVs to Publications template
+- Move Neighbors navigation to separate chunk
+- Make sure Input Option aliases are formatted as such
+- Replace stripAsAlias steps with filterPathSegment mechanism
+- Fix map not loading if default zoom level was not set
+- Don't replace commas with line breaks in regular form field email output
+- Fix option classes not being set in lightbox-enabled images
+- Add system setting for turning access level custom caching on/off
+- Improve layout of search result pagination container
+
+## v1.19.0
+Released on August 6, 2024
+
+New features:
+- Segment custom cache based on user access level
+- Add lightbox option to Image CB
+
+Fixes and improvements:
+- Properly load form assets in login forms
+- Add fitted option to segment types (without border or padding)
+- Add TV input options for selecting user group(s)
+- Improve image caption layout and positioning
+- Fix incorrect image tpl being set from placeholder
+- Fix math question frontend validation
+- Validate math question before running pre-hooks in Register template
+- Add option to use File or Chunk template for activation email
+- Add post-hook setting to form templates
+- Exclude antispam, math and accept-terms data from extended Registration fields
+- Fix faulty min range setting for math hook in form templates
+- Fix broken snippet call triggering custom CSS syntax errors
+- Add global background credits overlay
+- Rename expanded grid variant to spaced
+
 ## v1.18.0
 Released on April 25, 2024
 
