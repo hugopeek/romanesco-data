@@ -1,5 +1,11 @@
 # Changelog for the Romanesco Soil data files
 
+## v1.19.2
+Released on ...
+
+Fixes and improvements:
+- Exclude SmartRouting system settings from project .gitify
+
 ## v1.19.1
 Released on January 3, 2025
 
