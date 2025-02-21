@@ -291,7 +291,7 @@ do case $1 in
           shift
         done
       else
-        echo -e "${RED}Provide at least one context!${NC}"
+        echo -e "%sProvide at least one context!%s"
         exit 0
       fi
     done
@@ -310,11 +310,18 @@ do case $1 in
       case $2 in
       patterns)
         updateRomanesco=1
-        updateMODX=1
-        updatePackages=1
         ;;
       backyard)
         updateBackyard=1
+        ;;
+      theme)
+        updateTheme=1
+        ;;
+      modx)
+        updateMODX=1
+        ;;
+      packages)
+        updatePackages=1
         ;;
       -n | --npm)
         npmFlag=1
@@ -323,7 +330,7 @@ do case $1 in
         defaultsFlag=1
         ;;
       '' | *)
-        printf "${RED}Computer says no.${NC}\n"
+        printf "%sComputer says no.%s\n" "$RED" "$NORMAL"
         exit 0
         ;;
       esac
@@ -352,8 +359,6 @@ do case $1 in
   push)
     pushFlag=1
     pushProject=
-    pushEarthBrain=
-    pushForestBrain=
     pushTheme=
     pushAll=
     pushTags=
@@ -364,9 +369,6 @@ do case $1 in
       case $2 in
         project)
           pushProject=1
-          ;;
-        earthbrain)
-          pushEarthBrain=1
           ;;
         theme)
           pushTheme=1
@@ -421,8 +423,8 @@ gpmPackages=()
 # double check if installation path is defined
 if ! [ "$installPath" ]
 then
-  printf "${BOLD}Please define an installation path.${NORMAL}\n"
-  printf "${RED}Abort.${NC}\n"
+  printf "%sPlease define an installation path.%s\n" "$BOLD" "$NORMAL"
+  printf "%sAbort.%s\n" "$RED" "$NORMAL"
   exit 0
 fi
 
@@ -458,7 +460,7 @@ if [ "$updateFlag" ]
 then
   echo "Updating Romanesco..."
   source "$basePath/_operations/run/50-update.sh"
-  printf "${GREEN}Romanesco successfully updated!${NORMAL}\n"
+  printf "%sRomanesco successfully updated!%s\n" "$GREEN" "$NORMAL"
 fi
 
 if [ "$commitFlag" ]

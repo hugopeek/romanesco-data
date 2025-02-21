@@ -62,7 +62,6 @@ ${BOLD}Tasks and options:${NORMAL}
 
   ${BOLD}commit${NORMAL}
     project                       Main repository
-    theme                         Romanesco styling theme
     all                           Everything
 
   ${BOLD}push${NORMAL}
