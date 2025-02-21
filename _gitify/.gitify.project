@@ -448,7 +448,7 @@ packages:
             - simplesearch-2.1.2-pl
             - smartrouting-1.0.1-pl
             - superboxselect-3.0.7-pl
-            - svgsanitizer-1.1.0-pl
+            - svgsanitizer-1.2.0-pl
             - switch-1.1.0-pl
             - tagger-1.12.0-pl
             - ultimateparent-2.0-pl
@@ -457,6 +457,6 @@ packages:
         credential_file: '.modmore.com.key'
         packages:
             - clientconfig-2.5.0-pl
-            - contentblocks-1.14.0-rc2
+            - contentblocks-1.14.0-pl
             - quickstartbuttons-1.4.0-pl
             - redactor-3.2.1-pl
