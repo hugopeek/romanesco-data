@@ -58,7 +58,7 @@ ${BOLD}Tasks and options:${NORMAL}
     packages                      Update all packages listed in .gitify
     all                           Update all of the above
     -n|--npm                      + run npm update ${YELLOW}(One does not simply...)${NORMAL}
-    -d|--defaults                 + import Romanesco Soil updates ${RED}(RISKY!!)${NORMAL}
+    -d|--defaults                 + import Romanesco Soil updates ${RED}(RISKY!)${NORMAL}
 
   ${BOLD}commit${NORMAL}
     project                       Main repository

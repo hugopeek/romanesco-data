@@ -20,8 +20,8 @@ cd "$installPath"
 
 # backup and extract current state of project
 printf "%sExtracting project data...%s\n" "$BOLD" "$NORMAL"
-$gitifyCmd backup "$(date +'%Y-%m-%dT%H%M%S')"_ROMANESCO
-$gitifyCmd extract --no-packages
+${gitifyCmd} backup "$(date +'%Y-%m-%dT%H%M%S')"_ROMANESCO
+${gitifyCmd} extract --no-packages
 
 # commit changes, if there are any
 if [[ -n $(cd "${installPath}" && git status -s) ]]
@@ -35,14 +35,14 @@ fi
 if [ "$updateMODX" ]
 then
   printf "%sUpdating MODX...%s\n" "$BOLD" "$NORMAL"
-  $gitifyCmd modx:upgrade ${modxVersion}
+  ${gitifyCmd} modx:upgrade ${modxVersion}
 fi
 
 # update packages
 if [ "$updatePackages" ]
 then
   printf "%sUpdating installed extras...%s\n" "$BOLD" "$NORMAL"
-  $gitifyCmd package:install --all
+  ${gitifyCmd} package:install --all
 fi
 
 # update Backyard
@@ -63,7 +63,7 @@ then
   php "$operationsPath/tools/preserve_ids.php" apply _data/content ${tmpFile}
 
   # build with --no-cleanup flag, to ensure no data gets erased
-  $gitifyCmd build --no-cleanup content
+  ${gitifyCmd} build --no-cleanup content
 fi
 
 # update Romanesco
@@ -98,12 +98,12 @@ then
 
   printf "%sUpdating dependencies...%s\n" "$BOLD" "$NORMAL"
   cd "$installPath"
-  $gitifyCmd package:install --local
+  ${gitifyCmd} package:install --local
 
   # build
   printf "%sUpdating Romanesco elements...%s\n" "$BOLD" "$NORMAL"
   cd "$installPathData/_gitify/build/romanesco"
-  $gitifyCmd build
+  ${gitifyCmd} build
 fi
 
 # update default settings
@@ -160,7 +160,7 @@ then
 
   # build & commit
   cd "$installPathData/_gitify/build/defaults"
-  $gitifyCmd build
+  ${gitifyCmd} build
   cd "$installPath"
   git add -A
   git commit -m "ROMANESCO: Update default settings"
