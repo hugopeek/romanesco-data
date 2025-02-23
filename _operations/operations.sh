@@ -4,7 +4,7 @@
 # ==============================================================================
 #
 # A collection of commands for updating and maintaining a Romanesco project.
-
+# @todo: Use _contexts folder for extracting / building various parts separately.
 
 # FUNCTIONS
 # ==============================================================================
