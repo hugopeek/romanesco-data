@@ -104,66 +104,66 @@ then
   printf "%sUpdating Romanesco elements...%s\n" "$BOLD" "$NORMAL"
   cd "$installPathData/_gitify/build/romanesco"
   ${gitifyCmd} build
-fi
 
-# update default settings
-if [ "$defaultsFlag" ] && [ "$defaultsPath" ]
-then
-  printf "%sUpdating default settings...%s\n" "$BOLD" "$NORMAL"
+  # update default settings
+  if [ "$defaultsFlag" ] && [ "$defaultsPath" ]
+  then
+    printf "%sUpdating default settings...%s\n" "$BOLD" "$NORMAL"
 
-  # import updated defaults
-  rm -rf "$installPath/_defaults"
-  rsync -av "$defaultsPath"/ "$installPath/_defaults"
+    # import updated defaults
+    rm -rf "$installPath/_defaults"
+    rsync -av "$defaultsPath"/ "$installPath/_defaults"
 
-  # check for changes and commit
-  if [ -n "$(cd "${installPath}" && git diff --exit-code)" ] ; then
+    # check for changes and commit
+    if [ -n "$(cd "${installPath}" && git diff --exit-code)" ] ; then
+      cd "$installPath"
+      git add -A
+      git commit -m "ROMANESCO: Import latest default settings"
+    fi
+
+    # check if any of the default settings were changed inside the project
+    # to do this, copy the defaults to the _data folder first and list the differences with git
+    rsync -a "$installPath/_defaults/" "$installPath/_data"
+
+    gitDiff="$(cd "${installPath}" && git diff --no-ext-diff | grep --count -e 'value:')"
+    gitDiffList="$(cd "${installPath}" && git diff --no-ext-diff --name-only -i -G 'value:' | while read line ; do echo $line ; done)"
+
+    # we have a list of changes now, but we'll reset them again to preserve project values
+    # this will leave new settings alone, as they are untracked files
+    cd "$installPath"
+    git reset --hard HEAD
+
+    # prevent project values from being overwritten
+    if [[ "$gitDiff" -ne 0 ]]
+    then
+      printf "%sPreventing project values from being overridden...%s\n" "$BOLD$YELLOW" "$NORMAL"
+      echo "Protecting values in:"
+
+      # insert project values into _defaults files
+      for line in $gitDiffList
+      do
+        cd "$installPath"
+        sed -i '/value/d' "${line//_data/_defaults}" #delete existing
+        sed -n '/value/p' "$line" >> "${line//_data/_defaults}" #write new
+        echo "$line"
+      done
+
+      echo "Project values secured."
+    fi
+
+    # mix unique project settings with updated defaults
+    rsync -aP --ignore-existing "$installPath/_data/cg_groups/" "$installPath/_defaults/cg_groups"
+    rsync -aP --ignore-existing "$installPath/_data/cg_settings/" "$installPath/_defaults/cg_settings"
+    rsync -aP --ignore-existing "$installPath/_data/content_type/" "$installPath/_defaults/content_type"
+    rsync -aP --ignore-existing "$installPath/_data/system_settings/" "$installPath/_defaults/system_settings"
+
+    # build & commit
+    cd "$installPathData/_gitify/build/defaults"
+    ${gitifyCmd} build
     cd "$installPath"
     git add -A
-    git commit -m "ROMANESCO: Import latest default settings"
+    git commit -m "ROMANESCO: Update default settings"
   fi
-
-  # check if any of the default settings were changed inside the project
-  # to do this, copy the defaults to the _data folder first and list the differences with git
-  rsync -a "$installPath/_defaults/" "$installPath/_data"
-
-  gitDiff="$(cd "${installPath}" && git diff --no-ext-diff | grep --count -e 'value:')"
-  gitDiffList="$(cd "${installPath}" && git diff --no-ext-diff --name-only -i -G 'value:' | while read line ; do echo $line ; done)"
-
-  # we have a list of changes now, but we'll reset them again to preserve project values
-  # this will leave new settings alone, as they are untracked files
-  cd "$installPath"
-  git reset --hard HEAD
-
-  # prevent project values from being overwritten
-  if [[ "$gitDiff" -ne 0 ]]
-  then
-    printf "%sPreventing project values from being overridden...%s\n" "$BOLD$YELLOW" "$NORMAL"
-    echo "Protecting values in:"
-
-    # insert project values into _defaults files
-    for line in $gitDiffList
-    do
-      cd "$installPath"
-      sed -i '/value/d' "${line//_data/_defaults}" #delete existing
-      sed -n '/value/p' "$line" >> "${line//_data/_defaults}" #write new
-      echo "$line"
-    done
-
-    echo "Project values secured."
-  fi
-
-  # mix unique project settings with updated defaults
-  rsync -aP --ignore-existing "$installPath/_data/cg_groups/" "$installPath/_defaults/cg_groups"
-  rsync -aP --ignore-existing "$installPath/_data/cg_settings/" "$installPath/_defaults/cg_settings"
-  rsync -aP --ignore-existing "$installPath/_data/content_type/" "$installPath/_defaults/content_type"
-  rsync -aP --ignore-existing "$installPath/_data/system_settings/" "$installPath/_defaults/system_settings"
-
-  # build & commit
-  cd "$installPathData/_gitify/build/defaults"
-  ${gitifyCmd} build
-  cd "$installPath"
-  git add -A
-  git commit -m "ROMANESCO: Update default settings"
 fi
 
 # run NPM updates

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Remove unused themes
+# Each Fomantic UI update will add a number of unused themes to the Semantic
+# themes folder. Run this script to get rid of them.
 
 source "config.sh"
 
