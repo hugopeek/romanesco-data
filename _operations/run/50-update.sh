@@ -167,18 +167,22 @@ then
 fi
 
 # run NPM updates
-if [ "$npmFlag" ]
+if [ "$updateTheme" ]
 then
   printf "%sUpdating Romanesco styling theme...%s\n" "$BOLD" "$NORMAL"
 
-  rsync -a "${gitPathSoil//.git/}semantic.json" "$installPath"
-  cd "$installPath"
-  npm update
-  echo "NPM dependencies successfully updated."
+  if [ "$npmFlag" ]
+  then
+    printf "%sRunning NPM update...%s\n" "$BOLD$YELLOW" "$NORMAL"
+    rsync -a "${gitPathSoil//.git/}semantic.json" "$installPath"
+    cd "$installPath"
+    npm update
+    echo "NPM dependencies successfully updated."
+  fi
 
   gulp build
   gulp minify
   git add -A
-  git commit -m "ROMANESCO: Update Romanesco styling theme"
+  git commit -m "ROMANESCO: Update styling theme"
   echo "Theme files successfully updated."
 fi
