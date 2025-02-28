@@ -1,11 +1,11 @@
-id: 79
-parent_properties: ''
+id: 144
+parent_properties: null
 input: richtext
 name: Message
 description: ''
 content_desc: ''
 sortorder: 6
-category: 1
+category: 6
 icon: richtext
 icon_type: ''
 template: "[[$richTextMessage?\n    &heading=`[[+heading]]`\n    &content=`[[+value]]`\n    &message_type=`[[+message_type]]`\n\t&size=`[[+size]]`\n\t&close=`[[+close]]`\n]]"
