@@ -6,4 +6,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[[[+modx.user.id:isloggedin:is=`1`:then=`$richTextMessage`]]]]
+[[[[If?
+    &subject=`[[!isEditor]]`
+    &operator=`notempty`
+    &then=`$richTextMessage?
+        &heading=`[[+heading]]`
+        &content=`[[+value]]`
+        &message_type=`[[+message_type]]`
+        &size=`[[+size]]`
+        &close=`[[+close]]`
+    `
+]]]]
