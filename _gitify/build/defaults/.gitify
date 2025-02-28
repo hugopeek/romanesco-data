@@ -72,6 +72,14 @@ data:
             - 'id:<': '100000'
         package: collections
 
+    # Additional top menu items with Romanesco shortcuts
+    menus:
+        class: modMenu
+        primary: text
+        where:
+            - 'text:LIKE': 'romanesco.menu.global%'
+            - 'OR:text:LIKE': 'clientconfig%'
+
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:
         class: modNamespace
