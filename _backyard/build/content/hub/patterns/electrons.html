@@ -25,7 +25,7 @@ tvs:
     content_purpose: ''
     content_result: ''
     content_tone: ''
-    critical_css_uri: assets/css/critical/patterns/electrons.css
+    critical_css_uri: assets/css/critical/hub/patterns/electrons.css
     external_links: ''
     footer_background: '@INHERIT'
     footer_cta: '@INHERIT'
@@ -74,12 +74,23 @@ tvs:
 ]]
 
 [[$dividerBasic?
-    &divider_text=``
-    &divider_section=`1`
-    &divider_hidden=`0`
-]]
+ &value=`1`
+ &field=`5`
+ &idx=`2`
+ &unique_idx=`2`
+ &layout_id=`1`
+ &layout_column=`main`
+ &layout_idx=`0`
+ &layout_settings.background=`default`
+ &layout_settings.container_type=``
+ &layout_settings.alignment=``
+ &layout_settings.title_inflate=``
+ &layout_title=``
+ &divider_text=``
+ &divider_section=`1`
+ &divider_hidden=`0`]]
 
-<div class="ui nested stackable doubling relaxed   equal width grid">
+<div class="ui nested stackable relaxed    equal width grid">
     <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Below you'll find a list of all Template&nbsp;Variables&nbsp;(TVs) in the library. TVs define things on template level. If you're looking for a way to control things globally, check out the adjacent Configuration Settings.</p>`
@@ -98,6 +109,7 @@ tvs:
     &icon_class=`wrench icon`
     &icon_options=`right,labeled`
     &link_rel=``
+    &link_anchor=``
     &new_window=`0`
     &unique_idx=`5`
 ]]</div>
@@ -119,6 +131,7 @@ tvs:
     &type=`ElectronTV`
 ]]
     </div>
+    [[+bgdefault.credits]]
 </div>
 
 
@@ -131,7 +144,7 @@ tvs:
     &unique_idx=`9`
 ]]
 
-<div class="ui nested stackable doubling relaxed   equal width grid">
+<div class="ui nested stackable relaxed    equal width grid">
     <div class=" row">
     <div class="column">[[$richTextSegment?
     &content=`<p>Electrons, according to Wikipedia, are generally thought to be
@@ -151,4 +164,5 @@ tvs:
 </div>
 </div>
     </div>
+    [[+bgsecondary.credits]]
 </div>

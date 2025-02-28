@@ -17,6 +17,7 @@ uri: forms/contact-example
 show_in_tree: 0
 properties: '{"contentblocks":{"content":"[{\"layout\":14,\"content\":{\"main\":[{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":27,\"settings\":{\"field_name\":\"Your question\",\"field_required\":\"1\",\"field_layout\":\"inherit\",\"helptext_position\":\"bottom\",\"field_rows\":\"7\",\"field_placeholder\":\"\",\"field_helptext\":\"\"}},{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":26,\"settings\":{\"field_name\":\"Your name\",\"field_required\":\"1\"}},{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":41,\"settings\":{\"field_name\":\"Email address\"}},{\"chunk_properties\":{\"elementStatus\":\"solid\",\"elementPreview\":\"\"},\"field\":26,\"settings\":{\"field_name\":\"Phone number\"}}]},\"settings\":{\"legend\":\"Contact\"},\"parent\":0,\"title\":\"\"}]","linear":[{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":27,"settings":{"field_name":"Your question","field_required":"1","field_layout":"inherit","helptext_position":"bottom","field_rows":"7","field_placeholder":"","field_helptext":""}},{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":26,"settings":{"field_name":"Your name","field_required":"1"}},{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":41,"settings":{"field_name":"Email address"}},{"chunk_properties":{"elementStatus":"solid","elementPreview":""},"field":26,"settings":{"field_name":"Phone number"}}],"fieldcounts":{"27":1,"26":2,"41":1},"_isContentBlocks":true}}'
 tvs:
+    fb_attachment_path: '../uploads/_forms/[[*id]]'
     fb_autoresponder_from: ''
     fb_autoresponder_from_name: ''
     fb_autoresponder_message: ''
@@ -33,17 +34,25 @@ tvs:
     fb_email_to_dynamic: ''
     fb_email_tpl_prefix: fbEmailRow_
     fb_hooks: ''
+    fb_posthooks: ''
     fb_prehooks: ''
     fb_redirect_dynamic: ''
     fb_redirect_id: ''
     fb_renderhooks: ''
     fb_save_form: default
+    fb_store_attachments: default
     fb_store_data: '0'
     fb_store_time: '300'
     fb_submit_button: ''
 
 -----
 
+[[modifiedIf?
+    &subject=``
+    &operator=`notempty`
+    &then=`id="fb[[*id]]-[[stripAsAlias? &input=``]]"`
+    &toPlaceholder=`fieldset_id_5`
+]]
 [[modifiedIf?
     &subject=`[[+segment_type]]`
     &operator=`isnot`
@@ -54,7 +63,7 @@ tvs:
 ]]
 
 
-<fieldset  class="ui [[+padding]] [[+segment_parent]] transparent">
+<fieldset [[+fieldset_id_5]] class="ui [[+padding]] [[+segment_parent]] transparent">
     <legend class="ui [[+form_size]] header">Contact</legend>
     
     [[$fbInputTextarea? 
@@ -89,6 +98,7 @@ tvs:
 	&field_layout=`inherit`
 	&helptext_position=`bottom`
 	&field_type=`text`
+	&field_width=``
 	&field_placeholder=``
 	&field_helptext=``
 	&required_text=``
@@ -126,6 +136,7 @@ tvs:
 	&field_layout=`inherit`
 	&helptext_position=`bottom`
 	&field_type=`text`
+	&field_width=``
 	&field_placeholder=``
 	&field_helptext=``
 	&required_text=``
