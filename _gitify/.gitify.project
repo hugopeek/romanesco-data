@@ -127,12 +127,12 @@ data:
             - object
             - object_class
             - context_key
-    menus:
-        class: modMenu
-        primary: text
-        where:
-            - 'namespace:IN':
-                - 'clientconfig'
+    #menus:
+    #    class: modMenu
+    #    primary: text
+    #    where:
+    #        - 'namespace:IN':
+    #            - 'clientconfig'
     #namespaces:
     #    class: modNamespace
     #    primary: name

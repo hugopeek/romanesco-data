@@ -124,6 +124,14 @@ data:
             'name:IN':
                 - 'romanesco'
 
+    # Additional top menu items with Romanesco shortcuts
+    menus:
+        class: modMenu
+        primary: text
+        where:
+            - 'text:LIKE': 'romanesco.menu.global%'
+            - 'OR:text:LIKE': 'clientconfig%'
+
     # Include Lexicons, so default keys can be adjusted and centrally managed
     lexicon_entries:
         class: modLexiconEntry

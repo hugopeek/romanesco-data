@@ -4,6 +4,7 @@
 Released on ...
 
 Fixes and improvements:
+- Add global menu items as defaults
 - Add separate CB field for displaying internal messages
 - Remove obsolete CB templates for old pattern library
 - Allow Tasks to be attached to objects other than resource
