@@ -1,0 +1,15 @@
+id: 144
+parent_properties: null
+input: richtext
+name: Feedback
+description: ''
+content_desc: 'Additional comments or feedback. Only logged in users can see this content.'
+sortorder: 40
+category: 6
+icon: richtext
+icon_type: ''
+template: '@CHUNK feedbackMessage'
+properties: '[]'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"heading","title":"Heading","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"message_type","title":"Message type","fieldtype":"select","default_value":"","fieldoptions":"[[$cbFieldMessageType]]","field_is_exposed":"asField","process_tags":"1"},{"reference":"size","title":"Size","fieldtype":"select","default_value":"medium","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"","type_ahead":"No","separator":""},{"reference":"close","title":"Close button","fieldtype":"radio","default_value":"0","fieldoptions":"Yes=1\nNo=0","field_is_exposed":"modal"}]'
