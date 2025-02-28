@@ -298,10 +298,11 @@ do case $1 in
     ;;
   update)
     updateFlag=1
-    updateRomanesco=
+    updatePatterns=
+    updateBackyard=
+    updateTheme=
     updateMODX=
     updatePackages=
-    updateBackyard=
     npmFlag=
     defaultsFlag=
     while [[ "$2" ]]; do
@@ -309,7 +310,7 @@ do case $1 in
       if [[ "$2" == "AND" ]]; then break; fi
       case $2 in
       patterns)
-        updateRomanesco=1
+        updatePatterns=1
         ;;
       backyard)
         updateBackyard=1

@@ -66,8 +66,8 @@ then
   ${gitifyCmd} build --no-cleanup content
 fi
 
-# update Romanesco
-if [ "$updateRomanesco" ]
+# update pattern library
+if [ "$updatePatterns" ]
 then
   # check if local Romanesco dependencies were updated
   if [ "$gpmPath" ]
