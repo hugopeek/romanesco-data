@@ -4,7 +4,7 @@ input: chunk
 name: 'Included Patterns'
 description: ''
 content_desc: 'List the smaller atomic particles included in this pattern.'
-sortorder: 45
+sortorder: 46
 category: 6
 icon: chunk_C
 template: '[[+value]]'

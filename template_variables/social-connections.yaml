@@ -1,12 +1,12 @@
 id: 145
 type: migxdb
 name: social_connections
-caption: 'Social channels'
-description: 'Maintain a list of social media channels, through which visitors can connect with you.'
+caption: 'Social platforms'
+description: 'Maintain a list of social media platforms through which visitors can connect with you.'
 category: _Social
 elements: ''
 default_text: ''
 properties: 'a:0:{}'
-input_properties: 'a:1:{s:7:"configs";s:36:"social_connections:romanescobackyard";}'
+input_properties: 'a:1:{s:7:"configs";s:41:"social_connect_resource:romanescobackyard";}'
 output_properties: null
 content: ''

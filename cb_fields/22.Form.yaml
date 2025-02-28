@@ -2,15 +2,13 @@ id: 22
 parent_properties: null
 input: chunk
 name: Form
-description: null
-content_desc: 'Add a form here. You can build your own web forms with FormBlocks, under Global Content in the menu tree.'
+description: ''
+content_desc: 'Add a web form here. You can build your own forms with FormBlocks, accessible via Content > Global in the top menu.'
 sortorder: 34
 category: 3
 icon: form
 template: '[[+value]]'
 properties: '{"chunk":"32","custom_preview":"<span><\/span>"}'
 availability: '[]'
-layouts: null
-times_per_layout: null
-times_per_page: null
+layouts: ''
 settings: '[{"reference":"form_id","title":"Form","fieldtype":"select","default_value":"","fieldoptions":"--- Select a form ---=\n[[fbGetForms]]","field_is_exposed":"asField","process_tags":"1"},{"reference":"form_size","title":"Field size","fieldtype":"select","default_value":"large","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFieldSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"form_layout","title":"Field layout","fieldtype":"select","default_value":"horizontal","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbFormLayout]]","field_is_exposed":"modal","process_tags":"1","description":"","type_ahead":"No","separator":""},{"reference":"segment_type","title":"Segment type","fieldtype":"select","default_value":"segments","fieldoptions":"[[$cbFormSegmentType]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"padding","title":"Extra padding","fieldtype":"select","default_value":"padded","fieldoptions":"[[$cbFieldPadding]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"button_type","title":"Button type","fieldtype":"select","default_value":"primary","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingButtonType]]","field_is_exposed":"modal","process_tags":"1","description":"Preferred styling for the submit button.","type_ahead":"No","separator":""},{"reference":"button_size","title":"Button size","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Same as field size=\n[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1","description":"","type_ahead":"No","separator":""},{"reference":"button_alignment","title":"Button alignment","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"\nLeft=left floated\nCenter=center aligned\nRight=right floated\nInline=inline","field_is_exposed":"modal","description":"","type_ahead":"No","separator":""},{"reference":"multiple_steps","title":"Multiple steps","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal","description":"Comma-separated sequence of page IDs. Each page needs a form with the same steps listed here.","type_ahead":"No","separator":""},{"reference":"redirect_id","title":"Redirect to","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal","description":"Single page ID. Overrides the redirect ID inside the form settings.","type_ahead":"No","separator":""}]'

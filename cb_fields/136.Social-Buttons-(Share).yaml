@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Social Buttons (Share)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 36
 category: 3
 icon: share-alt

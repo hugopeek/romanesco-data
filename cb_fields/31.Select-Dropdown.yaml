@@ -4,7 +4,7 @@ input: repeater
 name: 'Select Dropdown'
 description: 'Deprecated. Do not use!'
 content_desc: 'THIS BLOCK IS DEPRECATED. Please replace it with a Select Options field (which can be displayed as dropdown also).'
-sortorder: 57
+sortorder: 58
 category: 7
 icon: checkbox
 template: "[[$fbSelectDropdownRow?\n    &field_name=`[[+field_name]]`\n    &field_option=`[[+field_option]]`\n    &unique_idx=`[[+unique_idx]]`\n]]"

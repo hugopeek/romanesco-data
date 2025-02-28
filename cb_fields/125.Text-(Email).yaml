@@ -3,8 +3,8 @@ parent_properties: null
 input: redactor
 name: 'Text (Email)'
 description: ''
-content_desc: null
-sortorder: 69
+content_desc: ''
+sortorder: 71
 category: 11
 icon: richtext
 icon_type: ''

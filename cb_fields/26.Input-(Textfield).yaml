@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Textfield)'
 description: ''
 content_desc: ''
-sortorder: 54
+sortorder: 55
 category: 7
 icon: paragraph
 template: '[[+tag]]'

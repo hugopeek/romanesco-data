@@ -8,6 +8,6 @@ elements: ''
 rank: 3
 default_text: ''
 properties: 'a:0:{}'
-input_properties: 'a:1:{s:7:"configs";s:23:"tasks:romanescobackyard";}'
+input_properties: 'a:1:{s:7:"configs";s:32:"tasks_resource:romanescobackyard";}'
 output_properties: null
 content: ''

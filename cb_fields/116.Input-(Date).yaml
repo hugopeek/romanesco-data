@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Date)'
 description: ''
 content_desc: 'A standard date selector. You can predefine what kind of date or time can be selected.'
-sortorder: 62
+sortorder: 64
 category: 7
 icon: calendar
 icon_type: custom

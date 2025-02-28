@@ -1,5 +1,5 @@
 id: 2
-parent_properties: ''
+parent_properties: null
 input: video
 name: 'Video (YouTube)'
 description: ''
@@ -8,8 +8,8 @@ sortorder: 13
 category: 2
 icon: video
 icon_type: ''
-template: "[[$videoYoutube?\n    &video=`[[+value]]`\n    &img_type=`[[+img_type]]`\n    &aspect_ratio=`[[+aspect_ratio]]`\n    &button_size=`[[+button_size]]`\n    &embed_on_click=`[[+embed_on_click]]`\n]]"
+template: "[[$videoYoutube?\n    &video=`[[+value]]`\n    &img_type=`[[+img_type]]`\n    &img_alt=`[[+img_alt]]`\n    &aspect_ratio=`[[+aspect_ratio]]`\n    &button_size=`[[+button_size]]`\n    &embed_on_click=`[[+embed_on_click]]`\n]]"
 properties: '{}'
 availability: '[]'
 layouts: ''
-settings: '[{"reference":"aspect_ratio","title":"Aspect ratio","fieldtype":"radio","default_value":"16:9","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingAspectRatio]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"img_type","title":"Image type","fieldtype":"radio","default_value":"webp","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"WebP=webp\nJPG=jpg","field_is_exposed":"modal"},{"reference":"image_alt","title":"Image alt text","description":"","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"button_size","title":"Play button size","fieldtype":"select","default_value":"medium","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"embed_on_click","title":"Load player","fieldtype":"select","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"After clicking the play button=1\nDirectly (increases page load time)=0","field_is_exposed":"modal"}]'
+settings: '[{"reference":"aspect_ratio","title":"Aspect ratio","fieldtype":"radio","default_value":"16:9","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingAspectRatio]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"img_type","title":"Image type","fieldtype":"radio","default_value":"webp","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"WebP=webp\nJPG=jpg","field_is_exposed":"modal"},{"reference":"img_alt","title":"Image alt text","description":"","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"button_size","title":"Play button size","fieldtype":"select","default_value":"medium","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"[[$cbSettingButtonSize]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"embed_on_click","title":"Load player","fieldtype":"select","default_value":"1","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"After clicking the play button=1\nDirectly (increases page load time)=0","field_is_exposed":"modal"}]'

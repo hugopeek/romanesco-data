@@ -4,7 +4,7 @@ input: chunk
 name: 'Overview (Team)'
 description: ''
 content_desc: ''
-sortorder: 50
+sortorder: 51
 category: 5
 icon: group
 icon_type: custom

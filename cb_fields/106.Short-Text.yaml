@@ -2,7 +2,7 @@ id: 106
 parent_properties: ''
 name: 'Short Text'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 4
 category: 1
 icon: paragraph

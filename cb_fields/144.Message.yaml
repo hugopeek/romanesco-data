@@ -4,11 +4,11 @@ input: richtext
 name: Message
 description: ''
 content_desc: ''
-sortorder: 6
+sortorder: 40
 category: 6
 icon: richtext
 icon_type: ''
-template: "[[$richTextMessage?\n    &heading=`[[+heading]]`\n    &content=`[[+value]]`\n    &message_type=`[[+message_type]]`\n\t&size=`[[+size]]`\n\t&close=`[[+close]]`\n]]"
+template: "[[$feedbackMessage?\n    &heading=`[[+heading]]`\n    &content=`[[+value]]`\n    &message_type=`[[+message_type]]`\n\t&size=`[[+size]]`\n\t&close=`[[+close]]`\n]]"
 properties: '[]'
 availability: '[]'
 layouts: ''

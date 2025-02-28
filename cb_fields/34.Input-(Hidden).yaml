@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Hidden)'
 description: ''
 content_desc: ''
-sortorder: 64
+sortorder: 66
 category: 7
 icon: eye-slash
 icon_type: custom

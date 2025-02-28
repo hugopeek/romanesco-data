@@ -3,8 +3,8 @@ parent_properties: null
 input: quote
 name: 'Quote (Email)'
 description: ''
-content_desc: null
-sortorder: 72
+content_desc: ''
+sortorder: 74
 category: 11
 icon: quote
 icon_type: ''

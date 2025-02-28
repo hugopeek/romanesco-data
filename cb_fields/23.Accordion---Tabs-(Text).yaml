@@ -3,7 +3,7 @@ parent_properties: ''
 input: repeater
 name: 'Accordion / Tabs (Text)'
 description: ''
-content_desc: null
+content_desc: ''
 sortorder: 23
 category: 4
 icon: tabs

@@ -4,6 +4,11 @@
 Released on ...
 
 Fixes and improvements:
+- Add separate CB field for displaying internal messages
+- Remove obsolete CB templates for old pattern library
+- Allow Tasks to be attached to objects other than resource
+- Allow social connections to be attached to objects other than resource
+- Add tightened container type with large text
 - Exclude SmartRouting system settings from project .gitify
 
 ## v1.19.1

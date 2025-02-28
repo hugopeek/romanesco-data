@@ -4,7 +4,7 @@ input: repeater
 name: FAQ
 description: ''
 content_desc: 'Create a Q&A section. Can be displayed as plain text, or in an accordion. And behind the scenes, structured markup is added to inform search engines that they can also use these questions in their Q&A views.'
-sortorder: 67
+sortorder: 69
 category: 1
 icon: question-circle-o
 icon_type: custom
