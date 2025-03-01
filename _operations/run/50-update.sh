@@ -28,7 +28,7 @@ if [[ -n $(cd "${installPath}" && git status -s) ]]
 then
   printf "%sCommitting latest project edits...%s\n" "$BOLD" "$NORMAL"
   git add -A
-  git commit -m "ROMANESCO: Extract project edits"
+  git commit -m "ROMANESCO: Extract project edits" 2>&1 || true
 fi
 
 # update MODX
@@ -118,7 +118,7 @@ then
     if [[ -n "$(cd "${installPath}" && git diff --exit-code)" ]] ; then
       cd "$installPath"
       git add -A
-      git commit -m "ROMANESCO: Import latest default settings"
+      git commit -m "ROMANESCO: Import latest default settings" 2>&1 || true
     fi
 
     # check if any of the default settings were changed inside the project
@@ -162,7 +162,7 @@ then
     ${gitifyCmd} build
     cd "$installPath"
     git add -A
-    git commit -m "ROMANESCO: Update default settings"
+    git commit -m "ROMANESCO: Update default settings" 2>&1 || true
   fi
 fi
 
@@ -183,6 +183,6 @@ then
   gulp build
   gulp minify
   git add -A
-  git commit -m "ROMANESCO: Update styling theme"
+  git commit -m "ROMANESCO: Update styling theme" 2>&1 || true
   echo "Theme files successfully updated."
 fi
