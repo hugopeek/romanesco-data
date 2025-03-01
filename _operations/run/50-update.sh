@@ -32,21 +32,21 @@ then
 fi
 
 # update MODX
-if [ "$updateMODX" ]
+if [[ "$updateMODX" ]] || [[ "$updateAll" ]]
 then
   printf "%sUpdating MODX...%s\n" "$BOLD" "$NORMAL"
   ${gitifyCmd} modx:upgrade ${modxVersion}
 fi
 
 # update packages
-if [ "$updatePackages" ]
+if [[ "$updatePackages" ]] || [[ "$updateAll" ]]
 then
   printf "%sUpdating installed extras...%s\n" "$BOLD" "$NORMAL"
   ${gitifyCmd} package:install --all
 fi
 
 # update Backyard
-if [ "$updateBackyard" ]
+if [[ "$updateBackyard" ]] || [[ "$updateAll" ]]
 then
   printf "%sUpdating Backyard resources...%s\n" "$BOLD" "$NORMAL"
 
@@ -67,10 +67,10 @@ then
 fi
 
 # update pattern library
-if [ "$updatePatterns" ]
+if [[ "$updatePatterns" ]] || [[ "$updateAll" ]]
 then
   # check if local Romanesco dependencies were updated
-  if [ "$gpmPath" ]
+  if [[ "$gpmPath" ]]
   then
     echo "Checking dependencies..."
 
@@ -106,7 +106,7 @@ then
   ${gitifyCmd} build
 
   # update default settings
-  if [ "$defaultsFlag" ] && [ "$defaultsPath" ]
+  if [[ "$defaultsFlag" && "$defaultsPath" ]]
   then
     printf "%sUpdating default settings...%s\n" "$BOLD" "$NORMAL"
 
@@ -115,7 +115,7 @@ then
     rsync -av "$defaultsPath"/ "$installPath/_defaults"
 
     # check for changes and commit
-    if [ -n "$(cd "${installPath}" && git diff --exit-code)" ] ; then
+    if [[ -n "$(cd "${installPath}" && git diff --exit-code)" ]] ; then
       cd "$installPath"
       git add -A
       git commit -m "ROMANESCO: Import latest default settings"
@@ -167,11 +167,11 @@ then
 fi
 
 # run NPM updates
-if [ "$updateTheme" ]
+if [[ "$updateTheme" ]] || [[ "$updateAll" ]]
 then
   printf "%sUpdating Romanesco styling theme...%s\n" "$BOLD" "$NORMAL"
 
-  if [ "$npmFlag" ]
+  if [[ "$npmFlag" ]]
   then
     printf "%sRunning NPM update...%s\n" "$BOLD$YELLOW" "$NORMAL"
     rsync -a "${gitPathSoil//.git/}semantic.json" "$installPath"

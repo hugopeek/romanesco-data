@@ -303,6 +303,7 @@ do case $1 in
     updateTheme=
     updateMODX=
     updatePackages=
+    updateAll=
     npmFlag=
     defaultsFlag=
     while [[ "$2" ]]; do
@@ -323,6 +324,9 @@ do case $1 in
         ;;
       packages)
         updatePackages=1
+        ;;
+      all)
+        updateAll=1
         ;;
       -n | --npm)
         npmFlag=1
