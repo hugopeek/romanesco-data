@@ -119,6 +119,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &false=`++analytics_tracking_code`
 ]]]]
 
+[[- PLACE SCHEMA.ORG STRUCTURED DATA ]]
+[[[[If?
+    &subject=`[[++romanesco.structured_data]]`
+    &operator=`eq`
+    &operand=`1`
+    &then=`$structuredDataSite`
+]]]]
+
 [[- DENY ACCESS TO HUB CONTEXT, IF MARKED AS PRIVATE ]]
 [[[[If?
     &subject=`[[++romanesco.private_backyard]]`
