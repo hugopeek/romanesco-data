@@ -2,35 +2,6 @@ id: 389
 name: commentForm
 description: 'DEPRECATED. Part of Tickets commenting extra.'
 category: m_feedback
+snippet: ''
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:35:"romanesco.commentform.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:10:"deprecated";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:36:"romanesco.commentform.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-
------
-
-<div id="comment-form-placeholder">
-    <form id="comment-form" class="ui [[+form_size]] reply form" action="" method="post">
-        <ol id="comment-preview-placeholder" class="ui threaded comments"></ol>
-        <input type="hidden" name="thread" value="[[+thread]]"/>
-        <input type="hidden" name="parent" value="0"/>
-        <input type="hidden" name="id" value="0"/>
-
-        <div class="field">
-            <label for="comment-editor"></label>
-            <textarea name="text" id="comment-editor" cols="30" rows="10"></textarea>
-        </div>
-
-        <div class="field">
-            [[+comments_subscribe]]
-        </div>
-
-        <div class="field">
-            <button type="submit" class="ui [[+form_size]] primary labeled icon submit button" title="Ctrl + Shift + Enter">
-                <i class="icon edit"></i>
-                [[%ticket_comment_save]]
-            </button>
-            <button type="button" class="ui [[+form_size]] preview button" title="Ctrl + Enter">
-                [[%ticket_comment_preview]]
-            </button>
-            <span class="time"></span>
-        </div>
-    </form>
-</div>
+content: ''

@@ -2,23 +2,6 @@ id: 391
 name: kbArticleFormFiles
 description: ''
 category: m_information
+snippet: ''
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:42:"romanesco.kbarticleformfiles.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:43:"romanesco.kbarticleformfiles.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-
------
-
-<div id="ticket-files-list" class="ui basic segment white">
-    <div class="ui four stackable left aligned cards">
-        [[+files]]
-    </div>
-    <div class="ui basic center aligned segment">
-        <a id="ticket-files-select" class="ui tiny compact basic icon button" href="javascript:;">Select images <i class="plus icon"></i></a>
-    </div>
-</div>
-
-<div id="ticket-files-container" data-action="ticket/file/upload">
-    <div id="ticket-files-progress">
-        <span id="ticket-files-progress-count">0/0</span>
-        <span id="ticket-files-progress-percent">0%</span>
-        <div id="ticket-files-progress-bar"></div>
-    </div>
-</div>
+content: ''
