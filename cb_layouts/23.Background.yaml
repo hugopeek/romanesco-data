@@ -8,4 +8,5 @@ columns: '[{"reference":"main","width":"100"}]'
 template: '@CHUNK cbLayoutBackground'
 availability: '[{"field":"template","value":"27"}]'
 times_per_page: 1
+layout_only_nested: null
 settings: '[]'

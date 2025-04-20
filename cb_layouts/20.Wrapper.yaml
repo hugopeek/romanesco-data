@@ -7,6 +7,6 @@ icon: layout_1
 columns: '[{"reference":"main","width":"100"}]'
 template: '[[+main]]'
 availability: '[]'
-times_per_page: 0
+times_per_page: null
 layout_only_nested: 1
 settings: '[]'
