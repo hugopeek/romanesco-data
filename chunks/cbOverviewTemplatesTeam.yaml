@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Team member regular=overviewRowPersonBasic
-Team member regular (Card)=overviewRowPersonBasicCard
-Team member tile=overviewRowPersonTile
-Team member compact=overviewRowPersonCompact
+Team regular=overviewRowPersonBasic
+Team regular (Card)=overviewRowPersonBasicCard
+Team tile=overviewRowPersonTile
+Team compact=overviewRowPersonCompact

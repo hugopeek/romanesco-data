@@ -2,10 +2,10 @@ id: 127
 type: text
 name: overview_icon_svg_credit
 caption: 'Icon credit (SVG)'
-description: 'Mention the designer of this icon here, so they are credited appropriately on the site. You need to do this if you''re using icons published under a CC license, for example from Noun Project.'
+description: 'Mention the designer of this icon here, so they can be credited appropriately. You need to do this if you''re using icons published under a CC license, for example from Noun Project.'
 category: '_Overview - Icon'
 elements: ''
-rank: 21
+rank: 1
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
 input_properties: null

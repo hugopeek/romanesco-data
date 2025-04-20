@@ -7,13 +7,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <[[+level]] class="ui [[+title_classes]] icon header">
-    [[[[If?
-        &subject=`[[+icon_type]]`
-        &operator=`EQ`
-        &operand=`svg`
-        &then=`$iconSVG? &classes=`ui svg image` &url=`[[+overview_icon_svg:empty=`[[++overview_icon_fallback]]`]]``
-        &else=`$iconFont? &classes=`circular` &icon_class=`[[+overview_icon_font]]``
-    ]]]]
+    <a class="[[+icon_classes]]" href="[[~[[+id]]]]">
+        [[$overviewRowIconBasic? &uid=`[[+unique_idx]]`]]
+    </a>
     <span class="content">
         <a href="[[~[[+id]]]]">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>
         [[If?

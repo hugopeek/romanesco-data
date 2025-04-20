@@ -2,7 +2,7 @@ id: 33
 type: listbox
 name: overview_icon_font
 caption: 'Icon (Font)'
-description: 'Select an icon of the icon font that''s being used in this project. Check the style guide for available classes, or use the autocomplete search as you type.'
+description: 'Select an icon from the projects'' icon font list. Check the style guide for available icons, or use the autocomplete search as you type.'
 category: '_Overview - Icon'
 elements: '@CHUNK iconTVInputOptions'
 rank: 10

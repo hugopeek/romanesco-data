@@ -1,0 +1,13 @@
+id: 177
+type: imageplus
+name: overview_icon_img
+caption: 'Icon (Image)'
+description: 'If an SVG icon is not available, you can also use an image file (preferably in PNG format). This image needs to be square.'
+category: '_Overview - Icon'
+elements: ''
+rank: 5
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:4:{s:11:"targetWidth";s:3:"300";s:12:"targetHeight";s:3:"300";s:11:"allowAltTag";s:4:"true";s:12:"allowCredits";s:4:"true";}'
+output_properties: 'a:2:{s:14:"phpThumbParams";s:0:"";s:11:"outputChunk";s:0:"";}'
+content: ''

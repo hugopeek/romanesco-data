@@ -1,0 +1,13 @@
+id: 178
+type: image
+name: overview_img_svg
+caption: 'Image (SVG)'
+description: 'This SVG graphic can be used as alternative to regular (pixel based) images. For layout consistency, make sure all SVGs in this Overview share the same aspect ratio.'
+category: '_Overview - Image'
+elements: ''
+rank: 20
+default_text: ''
+properties: 'a:0:{}'
+input_properties: null
+output_properties: null
+content: ''

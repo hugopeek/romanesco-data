@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &subject=`[[+segment_type]]`
     &operator=`notempty`
     &then=`
-    <div class="ui [[+padding]] [[+alignment]] [[+segment_type]] [[+background:setBackground]] segment">
+    <div class="ui [[+padding]] [[+spacing]] [[+alignment]] [[+segment_type]] [[+background:setBackground:empty=``]] segment">
         [[+main]]
     </div>
     `

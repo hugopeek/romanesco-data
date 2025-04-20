@@ -20,4 +20,23 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     &default=`DESC`
 ]]
-[[[[modifiedIf? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`$overviewSettingsPrepareMgr`]]]]
+[[[[modifiedIf?
+    &subject=`[[+img_type]]`
+    &operator=`is`
+    &operand=`svg`
+    &then=`imgOverviewSVGLink`
+    &else=`imgOverviewBasicLink`
+    &toPlaceholder=`[[+prefix]].img_tpl`
+]]]]
+[[Switch:toPlaceholder=`[[+prefix]].icon_classes`?
+    &get=`[[+icon_type]]`
+    &c1=`svg`   &do1=`ui svg image`
+    &c2=`font`  &do2=`ui icon image`
+    &c3=`img`   &do3=`ui image`
+]]
+[[[[modifiedIf?
+    &subject=`[[+prefix]]`
+    &operator=`contains`
+    &operand=`__`
+    &then=`$overviewSettingsPrepareMgr`
+]]]]

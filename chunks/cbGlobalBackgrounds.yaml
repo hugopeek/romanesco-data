@@ -6,7 +6,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[getResources?
+[[getResources:prepend=`---=
+`?
     &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
     &limit=`0`
     &tpl=`@INLINE [[+pagetitle]]=[[+id]]`
@@ -19,7 +20,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &sortBy=`menuindex`
     &sortDir=`ASC`
 ]]
-[[getResources?
+[[getResources:prepend=`---=
+`?
     &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
     &limit=`0`
     &depth=`0`

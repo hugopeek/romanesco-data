@@ -26,13 +26,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             </div>
         </div>
     </div>
-    [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
-        &tvname=`overview_img_[[+img_type:empty=`landscape`]]`
-        &docid=`[[+id]]`
-        &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`
-        &type=`tpl`
-        &tpl=`imgOverview`
-    ]]
+    [[$overviewRowImageBasic:stripTags=`<img>`? &uid=`[[+unique_idx]]`]]
 </figure>
 
 [[loadAssets? &component=`dimmer`]]
