@@ -10,4 +10,4 @@ template: "<div class=\"[[+alignment]] row\">\n    <div class=\"column\">[[+main
 availability: '[]'
 times_per_page: null
 layout_only_nested: 1
-settings: '[{"reference":"sidebar_width","title":"Sidebar width","fieldtype":"select","default_value":"six","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"alignment","title":"Content alignment","fieldtype":"select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1"}]'
+settings: '[{"reference":"sidebar_width","title":"Sidebar width","fieldtype":"select","default_value":"six","fieldoptions":"[[$cbSettingColumns]]","field_is_exposed":"modal","process_tags":"1"},{"reference":"alignment","title":"Content alignment","fieldtype":"multi_select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","template":"[[+value]]","description":"","type_ahead":"No","separator":" "}]'

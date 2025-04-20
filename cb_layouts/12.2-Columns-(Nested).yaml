@@ -10,4 +10,4 @@ template: "<div class=\"[[+alignment]] row\">\n    <div class=\"column\">[[+col_
 availability: '[]'
 times_per_page: null
 layout_only_nested: 1
-settings: '[{"reference":"alignment","title":"Content alignment","fieldtype":"select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1"}]'
+settings: '[{"reference":"alignment","title":"Content alignment","fieldtype":"multi_select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","template":"[[+value]]","description":"","type_ahead":"No","separator":" "}]'
