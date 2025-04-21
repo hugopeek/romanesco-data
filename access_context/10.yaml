@@ -1,4 +1,4 @@
 id: 10
 target: hub
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 policy: 3

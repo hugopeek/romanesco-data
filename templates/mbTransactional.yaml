@@ -1,6 +1,5 @@
 id: 30
 templatename: mbTransactional
-description: ''
 category: MailBlocks
 icon: icon-send
 properties: 'a:0:{}'

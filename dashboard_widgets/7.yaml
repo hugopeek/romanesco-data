@@ -1,0 +1,10 @@
+id: 7
+name: w_buttons
+description: w_buttons_desc
+type: file
+content: '[[++manager_path]]controllers/default/dashboard/widget.buttons.php'
+properties: '{"create-resource":{"link":"[[++manager_url]]?a=resource\/create","icon":"file-o","title":"[[%action_new_resource]]","description":"[[%action_new_resource_desc]]"},"view-site":{"link":"[[++site_url]]","icon":"eye","title":"[[%action_view_website]]","description":"[[%action_view_website_desc]]","target":"_blank"},"advanced-search":{"link":"[[++manager_url]]?a=search","icon":"search","title":"[[%action_advanced_search]]","description":"[[%action_advanced_search_desc]]"},"manage-users":{"link":"[[++manager_url]]?a=security\/user","icon":"user","title":"[[%action_manage_users]]","description":"[[%action_manage_users_desc]]"}}'
+namespace: core
+size: full
+name_trans: w_buttons
+description_trans: w_buttons_desc

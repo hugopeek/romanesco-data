@@ -1,5 +1,5 @@
 id: 12
 name: 'Hidden Namespace'
-description: 'Hidden Namespace policy, will not show Namespace in lists.'
+description: policy_hidden_namespace_desc
 template: 7
-data: '{"load":false,"list":false,"view":true}'
+data: '{"load":false,"list":false,"view":true,"formit":true,"formit_encryptions":false}'

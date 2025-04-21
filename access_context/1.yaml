@@ -1,4 +1,4 @@
 id: 1
 target: web
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 policy: 3

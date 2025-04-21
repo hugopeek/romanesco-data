@@ -1,0 +1,11 @@
+id: 8
+name: w_updates
+description: w_updates_desc
+type: file
+content: '[[++manager_path]]controllers/default/dashboard/widget.updates.php'
+properties: null
+namespace: core
+size: one-third
+permission: workspaces
+name_trans: w_updates
+description_trans: w_updates_desc

@@ -3,6 +3,7 @@ name: w_configcheck
 description: w_configcheck_desc
 type: file
 content: '[[++manager_path]]controllers/default/dashboard/widget.configcheck.php'
+properties: null
 namespace: core
 size: full
 name_trans: w_configcheck

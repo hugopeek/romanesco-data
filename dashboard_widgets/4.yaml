@@ -3,6 +3,8 @@ name: w_recentlyeditedresources
 description: w_recentlyeditedresources_desc
 type: file
 content: '[[++manager_path]]controllers/default/dashboard/widget.grid-rer.php'
+properties: null
 namespace: core
+permission: view_document
 name_trans: w_recentlyeditedresources
 description_trans: w_recentlyeditedresources_desc

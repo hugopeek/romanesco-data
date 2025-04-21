@@ -1,5 +1,5 @@
 id: 4
 name: 'Load, List and View'
-description: 'Provides load, list and view permissions only.'
+description: policy_load_list_and_view_desc
 template: 3
-data: '{"load":true,"list":true,"view":true}'
+data: '{"load":true,"list":true,"view":true,"formit":true,"formit_encryptions":false}'

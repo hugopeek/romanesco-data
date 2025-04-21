@@ -3,6 +3,7 @@ name: quickstartbuttons.widget
 description: quickstartbuttons.widget_desc
 type: file
 content: '[[++core_path]]components/quickstartbuttons/model/quickstartbuttons/dashboardwidget.class.php'
+properties: null
 namespace: quickstartbuttons
 lexicon: 'quickstartbuttons:dashboards'
 size: full
