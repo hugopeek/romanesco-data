@@ -16,7 +16,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     [[$dividerBasic]]
 
-    [[+description:prepend=`<p class="meta">`:append=`</p>`]]
+    [[+description:htmlent:prepend=`<p class="meta">`:append=`</p>`]]
 
     <div class="ui stackable equal width grid">
         [[+elementType:isnot=`ElectronTV`:and:isnot=`Computation`:then=`
@@ -30,21 +30,19 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         `]]
 
         <div id="code-[[+pl[[+id]].pattern_name]]" class="column hidden code element">
-            [[+elementType:is=`Template`:then=`
-            <pre class="language-html"><code>[[$displayRawTemplate? &uid=`[[+templatename]]`]]</code></pre>
-            `]]
-            [[+elementType:is=`Computation`:then=`
-            <pre class="language-php"><code>[[$displayRawPlugin? &uid=`[[+name]]`]]</code></pre>
-            `]]
-            [[+elementType:is=`Formula`:then=`
-            <pre class="language-php"><code>[[$displayRawElement? &uid=`[[+name]]`]]</code></pre>
-            `]]
-            [[+elementType:in=`Atom,Molecule,Organism`:then=`
-            <pre class="language-html"><code>[[$displayRawElement? &uid=`[[+name]]`]]</code></pre>
-            `]]
             [[+elementType:is=`ElectronTV`:then=`
             [[jsonToHTML? &json=`[[tvToJSON? &tv=`[[+name]]` &showName=`1` &showSource=`0` &optionsDelimiter=`0`]]`]]
-            `]]
+            <div class="hidden element">
+            `:else=`
+            <div class="template">`]]
+            <pre class="language-[[+elementType:in=`Computation,Formula`:then=`php`:else=`html`]]"><code>[[[[Switch?
+                &get=`[[+elementType]]`
+                &c1=`Template`      &do1=`$displayRawTemplate? &uid=`[[+templatename]]``
+                &c2=`Computation`   &do2=`$displayRawPlugin? &uid=`[[+name]]``
+                &c3=`Formula`       &do3=`$displayRawElement? &uid=`[[+name]]``
+                &default=`$displayRawElement? &uid=`[[+name]]``
+            ]]]]</code></pre>
+            </div>
         </div>
     </div>
 

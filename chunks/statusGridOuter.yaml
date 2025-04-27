@@ -67,7 +67,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &processTVs=`1`
         &tplOuter=`@INLINE [[+wrapper]]`
         &tpl=`statusGridRow`
-        &where=`{"contentType:=":"text/html"}`
     ]]
     </tbody>
 </table>
