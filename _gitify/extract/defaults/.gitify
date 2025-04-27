@@ -30,6 +30,7 @@ data:
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
+            - 'AND:key:NOT LIKE': 'gpm.%'
             - 'AND:key:NOT LIKE': 'xrouting.%'
             - 'AND:key:NOT LIKE': 'smartrouting.%'
             - 'AND:key:NOT LIKE': '%.assets_path'
@@ -53,12 +54,12 @@ data:
                 - 'romanesco.env_path'
 
     media_sources:
-        class: modMediaSource
+        class: MODX\Revolution\Sources\modMediaSource
         primary: name
         where:
             - 'id:<': '100000'
     media_sources_elements:
-        class: sources.modMediaSourceElement
+        class: MODX\Revolution\Sources\modMediaSourceElement
         primary:
             - source
             - object
