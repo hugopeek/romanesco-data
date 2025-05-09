@@ -62,10 +62,12 @@ data:
         #    - static_file
 
         # Exclude default template when extracting a fresh MODX installation
-        # Exclude everything above the 100K autoincrement threshold
+        # Exclude everything above the 100K autoincrement threshold (henceforth)
+        # Exclude core elements marked as static (to allow overwriting them)
         where:
             - 'templatename:NOT IN': [BaseTemplate]
             - 'id:<': '100000'
+            - 'static:=': '0'
     template_variables:
         class: modTemplateVar
         primary: name
@@ -87,6 +89,7 @@ data:
         #    - static_file
         where:
             - 'id:<': '100000'
+            - 'static:=': '0'
     snippets:
         class: modSnippet
         primary: name
@@ -96,6 +99,7 @@ data:
         #    - static_file
         where:
             - 'id:<': '100000'
+            - 'static:=': '0'
     plugins:
         class: modPlugin
         primary: name
@@ -105,6 +109,7 @@ data:
         #    - static_file
         where:
             - 'id:<': '100000'
+            - 'static:=': '0'
     plugin_events:
         class: modPluginEvent
         primary:
@@ -166,6 +171,8 @@ data:
     menus:
         class: modMenu
         primary: text
+        exclude_keys:
+            - menuindex
         where:
             - 'namespace:IN':
                 - 'clientconfig'
