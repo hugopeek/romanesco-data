@@ -3,9 +3,9 @@ type: migxdb
 name: external_links
 caption: 'External links'
 description: 'Point to external sources, to add some scientific credibility to your content. You can automatically attach these links to content references by activating the setting under Navigation.'
-category: _Links
+category: _Connection
 elements: ''
-rank: 10
+rank: 20
 default_text: ''
 properties: 'a:0:{}'
 input_properties: 'a:1:{s:7:"configs";s:32:"external_links:romanescobackyard";}'

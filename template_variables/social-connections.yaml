@@ -3,7 +3,7 @@ type: migxdb
 name: social_connections
 caption: 'Social platforms'
 description: 'Maintain a list of social media platforms through which visitors can connect with you.'
-category: _Social
+category: _Connection
 elements: ''
 default_text: ''
 properties: 'a:0:{}'

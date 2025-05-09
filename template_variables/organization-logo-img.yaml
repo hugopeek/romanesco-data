@@ -2,7 +2,7 @@ id: 71
 source: 9
 type: imageplus
 name: organization_logo_img
-caption: 'Organization logo (Image)'
+caption: 'Logo (Image)'
 description: 'If you can''t supply an SVG, don''t worry. You can upload an image here instead. The minimum width of their logo is 600px, but to keep your website pretty, aim for at least 900px.'
 category: 'Org. - Presentation'
 elements: ''
