@@ -90,6 +90,7 @@ data:
         where:
             'name:IN':
                 - 'romanesco'
+                - 'formblocks'
 
     # Include Lexicons, so default keys can be adjusted and centrally managed
     lexicon_entries:

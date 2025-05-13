@@ -124,6 +124,7 @@ data:
         where:
             'name:IN':
                 - 'romanesco'
+                - 'formblocks'
 
     # Additional top menu items with Romanesco shortcuts
     menus:
