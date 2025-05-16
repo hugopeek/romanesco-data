@@ -11,7 +11,7 @@ data_directory: ../../../../_data/
 data:
 
     template_variables_access:
-        class: modTemplateVarTemplate
+        class: MODX\Revolution\modTemplateVarTemplate
         primary:
             - tmplvarid
             - templateid
