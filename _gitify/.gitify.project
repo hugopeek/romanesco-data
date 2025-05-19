@@ -389,41 +389,41 @@ data:
 
     # Romanesco
     romanesco_tasks:
-        class: FractalFarming\Romanesco\Model\rmTask
+        class: FractalFarming\Romanesco\Model\Task
         primary:
             - id
             - title
         #package: romanescobackyard
     romanesco_task_comments:
-        class: FractalFarming\Romanesco\Model\rmTaskComment
+        class: FractalFarming\Romanesco\Model\TaskComment
         primary:
             - id
-    romanesco_crosslinks:
-        class: FractalFarming\Romanesco\Model\rmCrossLink
+    romanesco_links_related:
+        class: FractalFarming\Romanesco\Model\LinkRelated
         primary:
             - source
             - destination
-    romanesco_external_links:
-        class: FractalFarming\Romanesco\Model\rmExternalLink
+    romanesco_links_external:
+        class: FractalFarming\Romanesco\Model\LinkExternal
         primary:
             - id
     romanesco_social_connections:
-        class: FractalFarming\Romanesco\Model\rmSocialConnect
+        class: FractalFarming\Romanesco\Model\SocialConnect
         primary:
             - id
             - name
     romanesco_social_sharing:
-        class: FractalFarming\Romanesco\Model\rmSocialShare
+        class: FractalFarming\Romanesco\Model\SocialShare
         primary:
             - id
             - name
     romanesco_options:
-        class: FractalFarming\Romanesco\Model\rmOption
+        class: FractalFarming\Romanesco\Model\Option
         primary:
             - id
             - alias
     romanesco_option_groups:
-        class: FractalFarming\Romanesco\Model\rmOptionGroup
+        class: FractalFarming\Romanesco\Model\OptionGroup
         primary:
             - id
             - name
