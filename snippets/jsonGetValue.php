@@ -2,8 +2,8 @@ id: 72
 name: jsonGetValue
 description: 'Get the value of a specific key from a JSON string.'
 category: f_json
-snippet: "/**\n * jsonGetValue\n *\n * Get the value of a specific key from a JSON string.\n *\n * @var modX $modx\n * @var array $scriptProperties\n * @var string $input\n * @var string $options\n */\n\n$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');\n$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));\n\nif (!($romanesco instanceof Romanesco)) return;\n\n$input = $modx->getOption('json', $scriptProperties, $input);\n$key = $modx->getOption('key', $scriptProperties, $options);\n$tpl = $modx->getOption('tpl', $scriptProperties, '');\n$outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, ',');\n$toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);\n\n// @todo: test if input is valid JSON, otherwise NULL is returned\n$input = utf8_encode($input);\n$array = json_decode($input, true);\n$output = '';\n\n// Flatten first level, since that's always the full JSON object itself\n$array = $array[0];\n\n// Single result from flat array\nif ($array[$key]) {\n    $output = $array[$key];\n\n    if ($tpl) {\n        $output = $modx->getChunk($tpl, array(\n            'content' => $output\n        ));\n    }\n};\n\n// Single key from multidimensional array\nif (is_array($array)) {\n    $output = $romanesco->recursiveArraySearch($array, $key);\n    \n    if ($tpl) {\n        $output = $modx->getChunk($tpl, array(\n            'content' => $output\n        ));\n    }\n\n    $output = implode($output);\n}\n\n// Output either to placeholder, or directly\nif ($toPlaceholder) {\n    $modx->setPlaceholder($toPlaceholder, $output);\n    return '';\n}\n\nreturn $output;"
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.jsongetvalue.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementExample";a:7:{s:4:"name";s:14:"elementExample";s:4:"desc";s:37:"romanesco.jsongetvalue.elementExample";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+snippet: "/**\n * jsonGetValue\n *\n * Get the value of a specific key from a JSON string.\n *\n * @var modX $modx\n * @var array $scriptProperties\n * @var string $input\n * @var string $options\n */\nuse FractalFarming\\Romanesco\\Romanesco;\n\n/** @var Romanesco $romanesco */\ntry {\n    $romanesco = $modx->services->get('romanesco');\n} catch (\\Psr\\Container\\NotFoundExceptionInterface $e) {\n    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco3x] ' . $e->getMessage());\n}\n\n$input = $modx->getOption('json', $scriptProperties, $input);\n$key = $modx->getOption('key', $scriptProperties, $options);\n$tpl = $modx->getOption('tpl', $scriptProperties, '');\n$outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, ',');\n$toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);\n\n// @todo: test if input is valid JSON, otherwise NULL is returned\n$input = utf8_encode($input);\n$array = json_decode($input, true);\n$output = '';\n\n// Flatten first level, since that's always the full JSON object itself\n$array = $array[0];\n\n// Single result from flat array\nif ($array[$key]) {\n    $output = $array[$key];\n\n    if ($tpl) {\n        $output = $modx->getChunk($tpl, array(\n            'content' => $output\n        ));\n    }\n};\n\n// Single key from multidimensional array\nif (is_array($array)) {\n    $output = $romanesco->recursiveArraySearch($array, $key);\n    \n    if ($tpl) {\n        $output = $modx->getChunk($tpl, array(\n            'content' => $output\n        ));\n    }\n\n    $output = implode($output);\n}\n\n// Output either to placeholder, or directly\nif ($toPlaceholder) {\n    $modx->setPlaceholder($toPlaceholder, $output);\n    return '';\n}\n\nreturn $output;"
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementExample";a:7:{s:4:"name";s:14:"elementExample";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
@@ -18,11 +18,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
  * @var string $input
  * @var string $options
  */
+use FractalFarming\Romanesco\Romanesco;
 
-$corePath = $modx->getOption('romanescobackyard.core_path', null, $modx->getOption('core_path') . 'components/romanescobackyard/');
-$romanesco = $modx->getService('romanesco','Romanesco',$corePath . 'model/romanescobackyard/',array('core_path' => $corePath));
-
-if (!($romanesco instanceof Romanesco)) return;
+/** @var Romanesco $romanesco */
+try {
+    $romanesco = $modx->services->get('romanesco');
+} catch (\Psr\Container\NotFoundExceptionInterface $e) {
+    $modx->log(modX::LOG_LEVEL_ERROR, '[Romanesco3x] ' . $e->getMessage());
+}
 
 $input = $modx->getOption('json', $scriptProperties, $input);
 $key = $modx->getOption('key', $scriptProperties, $options);

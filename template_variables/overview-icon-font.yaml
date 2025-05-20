@@ -6,8 +6,9 @@ description: 'Select an icon from the projects'' icon font list. Check the style
 category: '_Overview - Icon'
 elements: '@CHUNK iconTVInputOptions'
 rank: 10
+display: default
 default_text: ''
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:2:{s:9:"typeAhead";s:4:"true";s:14:"typeAheadDelay";s:3:"400";}'
-output_properties: null
+output_properties: 'a:0:{}'
 content: ''

@@ -5,6 +5,7 @@ sort_field: publishedon
 sort_dir: desc
 sort_type: null
 child_template: 26
+child_resource_type: modDocument
 tab_label: collections.notes.children
 button_label: collections.notes.children.create
 context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'

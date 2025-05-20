@@ -3,6 +3,7 @@ name: 'Pattern Library'
 sort_field: menuindex
 sort_type: null
 child_template: null
+child_resource_type: modDocument
 tab_label: collections.library.children
 button_label: collections.library.children.create
 context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'

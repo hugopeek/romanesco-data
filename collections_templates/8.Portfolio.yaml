@@ -5,6 +5,7 @@ sort_field: publishedon
 sort_dir: desc
 sort_type: null
 child_template: 15
+child_resource_type: modDocument
 resource_type_selection: 0
 tab_label: collections.portfolio.children
 button_label: collections.portfolio.children.create

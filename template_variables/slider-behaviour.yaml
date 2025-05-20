@@ -6,8 +6,8 @@ category: '_Slider - Settings'
 elements: 'Infinite loop==loop||Show previous / next arrows==arrows||Keyboard control==keyboard||Free scrolling==free||Autoplay==autoplay'
 rank: 30
 display: delim
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
-input_properties: null
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+input_properties: 'a:0:{}'
 output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
 
 -----
