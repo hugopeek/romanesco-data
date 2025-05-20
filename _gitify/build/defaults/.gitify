@@ -20,10 +20,17 @@ data:
                 - 'email_sender'
                 - 'error_page'
                 - 'session_cookie_domain'
+                - 'formblocks.formsource'
                 - 'formit.form_encryptkey'
+                - 'romanesco.assets_version_css'
+                - 'romanesco.assets_version_js'
+                - 'romanesco.favicon_version'
+                - 'romanesco.dev_mode'
+                - 'romanesco.env_path'
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
+            - 'AND:key:NOT LIKE': 'gpm.%'
             - 'AND:key:NOT LIKE': 'xrouting.%'
             - 'AND:key:NOT LIKE': 'smartrouting.%'
             - 'AND:key:NOT LIKE': '%.assets_path'
@@ -31,12 +38,12 @@ data:
             - 'AND:key:NOT LIKE': '%.core_path'
 
     media_sources:
-        class: MODX\Revolution\modMediaSource
+        class: MODX\Revolution\Sources\modMediaSource
         primary: name
         where:
             - 'id:<': '100000'
     media_sources_elements:
-        class: sources.modMediaSourceElement
+        class: MODX\Revolution\Sources\modMediaSourceElement
         primary:
             - source
             - object

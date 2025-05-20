@@ -54,12 +54,12 @@ data:
                 - 'romanesco.env_path'
 
     media_sources:
-        class: MODX\Revolution\modX\Revolution\Sources\modMediaSource
+        class: MODX\Revolution\Sources\modMediaSource
         primary: name
         where:
             - 'id:<': '100000'
     media_sources_elements:
-        class: MODX\Revolution\modX\Revolution\Sources\modMediaSourceElement
+        class: MODX\Revolution\Sources\modMediaSourceElement
         primary:
             - source
             - object

@@ -118,10 +118,10 @@ data:
         exclude_keys:
             - editedon
     media_sources:
-        class: MODX\Revolution\modX\Revolution\Sources\modMediaSource
+        class: MODX\Revolution\Sources\modMediaSource
         primary: name
     media_sources_elements:
-        class: MODX\Revolution\modX\Revolution\Sources\modMediaSourceElement
+        class: MODX\Revolution\Sources\modMediaSourceElement
         primary:
             - source
             - object
@@ -182,7 +182,7 @@ data:
         class: MODX\Revolution\modAccessCategory
         primary: id
     access_media_source:
-        class: sources.modAccessMediaSource
+        class: MODX\Revolution\Sources\modAccessMediaSource
         primary: id
     access_policies:
         class: MODX\Revolution\modAccessPolicy
