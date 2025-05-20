@@ -344,13 +344,15 @@ data:
     # Collections
     # The collections_settings table moved to defaults
     collections_templates:
+        package: collections
+        namespace: Collections
+        model: Collections\Model
         class: Collections\Model\CollectionTemplate
         primary:
             - id
             - name
         where:
             - 'id:<': '100000'
-        package: collections
     collections_template_columns:
         class: Collections\Model\CollectionTemplateColumn
         primary:
