@@ -86,8 +86,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     `]]
 
     [[*fb_autoresponder_toggle:eq=`1`:then=`
-    &fiarTpl=`fbAutoresponder`
+    &fiarTpl=`[[*fb_autoresponder_template:empty=`fbAutoresponder`]]`
     &fiarToField=`fb[[*id]]-email`
+    &fiarSender=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
     &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
     &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
     &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
@@ -176,6 +177,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[fbLoadAssets?
     &uploadFile=`[[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]`]]`
-    &frontendValidation=`[[++formblocks.frontend_validation]]`
+    &frontendValidation=`[[*fb_frontend_validation:replace=`default==[[++formblocks.frontend_validation]]`]]`
     &ajaxMode=`[[++formblocks.ajax_mode]]`
 ]]

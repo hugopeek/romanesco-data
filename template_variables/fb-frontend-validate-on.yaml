@@ -1,11 +1,11 @@
-id: 172
+id: 182
 type: option
-name: fb_store_attachments
-caption: 'Store submitted attachments'
-description: 'Store uploads in designated folder (defined under Advanced). You may need to monitor and periodically clean up this folder in order to comply with GDPR retention policies.'
+name: fb_frontend_validate_on
+caption: 'Frontend validate on'
+description: 'Validate fields just before the form is submitted, or when the visitor leaves the form field again (on blur).'
 category: '_Settings - General'
-elements: 'On==1||Off==0||System default==default'
-rank: 31
+elements: 'Submit==submit||Blur==blur||System default==default'
+rank: 41
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:0:{}'
 output_properties: 'a:0:{}'

@@ -5,7 +5,7 @@ caption: 'Dynamic redirect page'
 description: 'Place any element here that is able to decide where to redirect the user after form submission. If the result is empty, it falls back on the ID provided under general settings.'
 category: '_Settings - Advanced'
 elements: ''
-rank: 11
+rank: 21
 display: default
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

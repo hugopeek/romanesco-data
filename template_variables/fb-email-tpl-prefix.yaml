@@ -5,7 +5,7 @@ caption: 'Email template row prefix'
 description: 'Prefix used by the chunks containing the HTML for the template rows. After this prefix follows an ID (i.e. fbEmailRow_28), connecting that chunk to the correct ContentBlocks field.'
 category: '_Settings - Advanced'
 elements: ''
-rank: 21
+rank: 11
 display: default
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:0:{}'

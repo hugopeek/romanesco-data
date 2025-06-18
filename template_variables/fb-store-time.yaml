@@ -5,7 +5,7 @@ caption: 'Temporary storage timeout'
 description: 'If ''store data'' is switched on, this specifies the number of seconds to store the submitted form data. Defaults to five minutes.'
 category: '_Settings - Advanced'
 elements: ''
-rank: 16
+rank: 31
 display: default
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:0:{}'

@@ -10,7 +10,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     window.addEventListener('DOMContentLoaded', function() {
         $('.ui.form#form-[[*alias]]')
             .form({
-                on: 'submit',
+                on: '[[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:default=`submit`]]',
+                [[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:is=`blur`:then=`inline: true,`]]
                 fields: {
                     [[fbFormReport:strip?
                         &formID=`[[*id]]`

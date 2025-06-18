@@ -2,7 +2,7 @@ id: 21
 type: richtext
 name: fb_autoresponder_message
 caption: 'Autoresponse message'
-description: 'The content of the email that will be sent. You can use placeholders here from the form fields with the following syntax: [[+fb123-field-name]]. So with ID prefix and hyphenated field name.'
+description: 'The content of the email that will be sent. You can use placeholders here with the following syntax: [[+fb123-field-name]]. If you want to use your own HTML, see the template option below.'
 category: _Autoresponder
 elements: ''
 rank: 11
