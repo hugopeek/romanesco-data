@@ -1,9 +1,11 @@
-id: 68
+id: 145
 parent: 30
-parent_properties: '{"key":"field_option","width":"50"}'
-name: Option
+parent_properties: '{"key":"field_value","width":"20"}'
+name: 'Value in HTML (optional)'
 description: ''
 content_desc: ''
+sortorder: 2
+icon: paragraph
 template: '[[+value:fbStripNonAlpha]]'
 properties: '{"use_tinyrte":"0"}'
 availability: '[]'

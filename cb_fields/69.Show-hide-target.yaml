@@ -1,10 +1,10 @@
 id: 69
 parent: 30
-parent_properties: '{"key":"collapse_target","width":"50"}'
+parent_properties: '{"key":"collapse_target","width":"20"}'
 name: 'Show/hide target'
-description: null
-content_desc: null
-sortorder: 2
+description: ''
+content_desc: ''
+sortorder: 1
 template: '[[+value:default=`no-target`]]'
 properties: '{"use_tinyrte":"0"}'
 availability: '[]'
