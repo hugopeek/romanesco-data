@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <figure>
     <a class="ui rounded image" href="[[~[[+id]]]]">
-        [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
+        [[ImagePlus:empty=`[[$imgOverviewFallback? &uid=`[[+uid]]`]]`?
             &tvname=`overview_img_wide`
             &docid=`[[+id]]`
             &options=`w=[[++max_thumb_width]]&q=[[++romanesco.img_quality]]&zc=1`

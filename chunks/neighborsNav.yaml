@@ -11,6 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &loop=`0`
         &tplPrev=`neighborNavItemPrev`
         &tplNext=`neighborNavItemNext`
+        &tplUp=`@INLINE <a href="[[~[[*parent]]]]" class="large circular ui button">All articles</a> `
         &tplWrapper=`@INLINE [[+prev]][[+next]]`
         &sortby=`publishedon`
         &sortdir=`asc`

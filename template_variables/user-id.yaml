@@ -1,14 +1,14 @@
 id: 87
-type: listbox
+type: superboxselect
 name: user_id
 caption: 'MODX user'
 description: 'Connect a MODX user to this item. Only active users will be shown.'
 category: _Connection
-elements: '@SELECT '''' AS username, '''' AS id UNION ALL ( SELECT username, id FROM `modx_users` WHERE `active` = 1 ORDER BY username )'
+elements: ''
 rank: 5
 display: default
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-input_properties: 'a:0:{}'
+input_properties: 'a:5:{s:10:"selectType";s:5:"users";s:11:"maxElements";s:1:"1";s:10:"allowBlank";s:4:"true";s:5:"depth";s:2:"10";s:8:"pageSize";s:2:"10";}'
 output_properties: 'a:0:{}'
 content: ''

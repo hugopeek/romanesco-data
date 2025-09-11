@@ -6,13 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[setUserPlaceholders? &userId=`[[+author_id]]` &uid=`[[+unique_idx]]`]]
-
-[[[[If?
-    &subject=`[[+team_member_id]]`
-    &operator=`notempty`
-    &then=`$imgOverviewPersonAvatarLink? &id=`[[+team_member_id]]``
-]]]]
+[[$imgOverviewPersonAvatarLink? &id=`[[+author_id]]`]]
 
 <div class="content">
     <a href="[[~[[+id]]]]" class="header">

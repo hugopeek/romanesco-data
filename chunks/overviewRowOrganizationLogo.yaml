@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <figure class="ui small image">
-    [[ImagePlus:empty=`[[$imgOverviewFallback]]`?
+    [[ImagePlus:empty=`[[$imgOverviewFallback? &uid=`[[+uid]]`]]`?
         &tvname=`organization_logo_img`
         &docid=`[[+id]]`
         &options=`w=600&q=[[++romanesco.img_quality]]&zc=1`

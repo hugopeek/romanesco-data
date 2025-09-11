@@ -1,14 +1,14 @@
 id: 56
-type: listbox-multiple
+type: superboxselect
 name: contributors_id
 caption: Contributors
 description: 'Team members that worked on this item. You can only select persons listed on your Team page, so if you want to add external contributors: add them to the team page first (can be unpublished).'
 category: _Connection
-elements: '@CHUNK tvSelectTeam'
+elements: ''
 rank: 3
 display: default
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
-input_properties: 'a:0:{}'
+input_properties: 'a:8:{s:10:"selectType";s:9:"resources";s:11:"maxElements";s:1:"0";s:10:"stackItems";s:4:"true";s:10:"allowBlank";s:4:"true";s:7:"parents";s:27:"romanesco.team_container_id";s:5:"depth";s:2:"10";s:19:"limitRelatedContext";s:5:"false";s:8:"pageSize";s:2:"10";}'
 output_properties: 'a:0:{}'
 content: ''

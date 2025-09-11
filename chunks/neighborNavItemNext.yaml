@@ -7,6 +7,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <a class="right item" href="[[+uri]]" title="[[%romanesco.article.next]]">
-    [[+menutitle]]
+    [[+pagetitle]]
     <i class="muted right arrow icon"></i>
 </a>

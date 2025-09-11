@@ -6,7 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+url:notempty=`
 [[[[modifiedIf?
     &subject=`[[+extension:lcase]]`
     &operator=`EQ`
@@ -14,4 +13,3 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`$svg? &classes=`ui svg image` &url=`[[+url]]` &alt=`[[+alt]]` &uid=`[[+unique_idx]]_[[+idx]]``
     &else=`$imgResponsiveGalleryCaption? &caption=`[[+caption]]` &alt=`[[+alt]]` &uid=`[[+unique_idx]]_[[+idx]]``
 ]]]]
-`]]

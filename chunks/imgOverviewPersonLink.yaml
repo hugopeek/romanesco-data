@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <a class="ui [[+classes]] image" href="[[~[[+id]]]]">
-    [[ImagePlus:empty=`[[$imgOverviewFallback? &mpy=`1`]]`?
+    [[ImagePlus:empty=`[[$imgOverviewFallback? &mpy=`1` &uid=`[[+uid]]`]]`?
         &tvname=`person_image`
         &docid=`[[+id]]`
         &options=`w=800&h=800&q=[[++romanesco.img_quality]]&zc=1`
