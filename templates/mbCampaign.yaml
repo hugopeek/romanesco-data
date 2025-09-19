@@ -6,14 +6,25 @@ properties: 'a:0:{}'
 
 -----
 
+[[splitString?
+    &input=`[[+theme_font_header:empty=`Noto Sans`]]`
+    &delimiter=`:`
+    &prefix=`font_header`
+]]
+[[splitString?
+    &input=`[[+theme_font_page]]`
+    &delimiter=`:`
+    &prefix=`font_page`
+]]
+
 <mjml>
     <mj-head>
         <mj-title>[[*pagetitle]]</mj-title>
         <mj-preview>[[*longtitle]]</mj-preview>
-        <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500"></mj-font>
+        <mj-font name="[[+font_header.1:replace=`+== `]]" href="https://fonts.googleapis.com/css?family=[[+font_header.1:replace=`+== `]]:[[+font_header.2]]"></mj-font>
         <mj-attributes>
-            <mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
-            <mj-text font-family="Montserrat, Helvetica, Arial, sans-serif" font-weight="400" font-size="16px" color="#000000" line-height="24px"></mj-text>
+            <mj-all font-family="[[+font_header.1:replace=`+== `]][[++theme_font_fallback:prepend=`, `]]"></mj-all>
+            <mj-text font-family="[[+font_header.1:replace=`+== `]][[++theme_font_fallback:prepend=`, `]]" font-weight="400" font-size="20px" color="#000000" line-height="24px"></mj-text>
         </mj-attributes>
         <mj-style>
             @media all and (max-width: 480px) {
@@ -40,7 +51,9 @@ properties: 'a:0:{}'
                 </mj-social>
             </mj-column>
         </mj-section>
+        <!-- CONTENT START -->
         [[*content]]
+        <!-- CONTENT END -->
         <mj-section background-color="#333" padding-bottom="50px">
             <mj-column vertical-align="middle" width="40%">
                 <mj-image width="200px" src="[[++site_url]][[++logo_path]]" align="left"></mj-image>
