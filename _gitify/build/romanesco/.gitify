@@ -55,19 +55,18 @@ data:
         class: MODX\Revolution\modTemplate
         primary: templatename
 
-        # Uncomment the exclude_keys below if you are loading packages with GPM
-        # This ensures local paths of static files will not be copied to remote
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        # Exclude core elements marked as static
+        # By skipping the static keys, Romanesco will not overwrite these
+        #  elements on updates, because they are no longer sourced from the db.
+        exclude_keys:
+            - static
+            - static_file
 
         # Exclude default template when extracting a fresh MODX installation
         # Exclude everything above the 100K autoincrement threshold (henceforth)
-        # Exclude core elements marked as static (to allow overwriting them)
         where:
             - 'templatename:NOT IN': [BaseTemplate]
             - 'id:<': '100000'
-            - 'static:=': '0'
     template_variables:
         class: MODX\Revolution\modTemplateVar
         primary: name
@@ -84,32 +83,29 @@ data:
     chunks:
         class: MODX\Revolution\modChunk
         primary: name
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
         where:
             - 'id:<': '100000'
-            - 'static:=': '0'
     snippets:
         class: MODX\Revolution\modSnippet
         primary: name
         extension: .php
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
         where:
             - 'id:<': '100000'
-            - 'static:=': '0'
     plugins:
         class: MODX\Revolution\modPlugin
         primary: name
         extension: .php
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
         where:
             - 'id:<': '100000'
-            - 'static:=': '0'
     plugin_events:
         class: MODX\Revolution\modPluginEvent
         primary:
