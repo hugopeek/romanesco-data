@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data extract
 
 ## v1.20.0
-Released on ...
+Released on September 20, 2025
 
 Includes:
 - [Romanesco Patterns v1.0.0-rc2]()
