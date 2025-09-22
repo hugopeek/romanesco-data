@@ -2,12 +2,13 @@ id: 21
 type: richtext
 name: fb_autoresponder_message
 caption: 'Autoresponse message'
-description: 'The content of the email that will be sent. You can use placeholders here from the form fields with the following syntax: [[+fb123-field-name]]. So with ID prefix and hyphenated field name.'
+description: 'The content of the email that will be sent. You can use placeholders here with the following syntax: [[+fb123-field-name]]. If you want to use your own HTML, see the template option below.'
 category: _Autoresponder
 elements: ''
 rank: 11
+display: default
 default_text: ''
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
-input_properties: null
-output_properties: null
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
 content: ''

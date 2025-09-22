@@ -1,6 +1,6 @@
 id: 11
 target: global
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 principal: 2
 authority: 10
 policy: 13

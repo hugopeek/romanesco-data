@@ -5,9 +5,10 @@ caption: 'Store submitted data temporarily'
 description: 'Store data in session before redirecting the user to a confirmation / thank you page, or to another form (as part of a multi-page form). Use FormItRetriever to access the data again.'
 category: '_Settings - Advanced'
 elements: No==0||Yes==1
-rank: 15
+rank: 30
+display: default
 default_text: '0'
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
-input_properties: null
-output_properties: null
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
 content: '0'

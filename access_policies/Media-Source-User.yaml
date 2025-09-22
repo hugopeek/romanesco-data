@@ -1,5 +1,5 @@
 id: 9
 name: 'Media Source User'
-description: 'Media Source user policy, with basic viewing and using - but no editing - of Media Sources.'
+description: policy_media_source_user_desc
 template: 5
-data: '{"load":true,"list":true,"view":true}'
+data: '{"load":true,"list":true,"view":true,"formit":true,"formit_encryptions":false}'

@@ -3,6 +3,7 @@ name: 'Call To Actions'
 sort_field: menuindex
 sort_type: 'SIGNED INTEGER'
 child_template: 9
+child_resource_type: modDocument
 resource_type_selection: 0
 tab_label: collections.cta.children
 button_label: collections.cta.children.create

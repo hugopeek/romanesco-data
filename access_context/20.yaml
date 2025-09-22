@@ -1,6 +1,6 @@
 id: 20
 target: mgr
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 principal: 3
 authority: 0
 policy: 15

@@ -4,7 +4,7 @@ data_directory: ../../../../_defaults/
 
 data:
     system_settings:
-        class: modSystemSetting
+        class: MODX\Revolution\modSystemSetting
         primary: key
         exclude_keys:
             - editedon
@@ -30,6 +30,7 @@ data:
             - 'AND:key:NOT LIKE': 'mail_%'
             - 'AND:key:NOT LIKE': 'recaptcha.%'
             - 'AND:key:NOT LIKE': 'gitpackagemanagement.%'
+            - 'AND:key:NOT LIKE': 'gpm.%'
             - 'AND:key:NOT LIKE': 'xrouting.%'
             - 'AND:key:NOT LIKE': 'smartrouting.%'
             - 'AND:key:NOT LIKE': '%.assets_path'
@@ -38,7 +39,7 @@ data:
 
     # Some settings shouldn't have a value, to prevent accidental overrides
     system_settings_empty:
-        class: modSystemSetting
+        class: MODX\Revolution\modSystemSetting
         primary: key
         exclude_keys:
             - editedon
@@ -53,12 +54,12 @@ data:
                 - 'romanesco.env_path'
 
     media_sources:
-        class: modMediaSource
+        class: MODX\Revolution\Sources\modMediaSource
         primary: name
         where:
             - 'id:<': '100000'
     media_sources_elements:
-        class: sources.modMediaSourceElement
+        class: MODX\Revolution\Sources\modMediaSourceElement
         primary:
             - source
             - object
@@ -105,7 +106,7 @@ data:
 
     # Collections
     collections_settings:
-        class: CollectionSetting
+        class: Collections\Model\CollectionSetting
         primary:
             - id
             - collection
@@ -115,7 +116,7 @@ data:
 
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:
-        class: modNamespace
+        class: MODX\Revolution\modNamespace
         primary: name
         exclude_keys:
             - path
@@ -123,10 +124,11 @@ data:
         where:
             'name:IN':
                 - 'romanesco'
+                - 'formblocks'
 
     # Additional top menu items with Romanesco shortcuts
     menus:
-        class: modMenu
+        class: MODX\Revolution\modMenu
         primary: text
         where:
             - 'text:LIKE': 'romanesco.menu.global%'
@@ -134,7 +136,7 @@ data:
 
     # Include Lexicons, so default keys can be adjusted and centrally managed
     lexicon_entries:
-        class: modLexiconEntry
+        class: MODX\Revolution\modLexiconEntry
         primary:
             - id
             - name
@@ -145,7 +147,7 @@ data:
 
     # Adjust content types, such as removing .html extensions of all pages
     content_type:
-        class: modContentType
+        class: MODX\Revolution\modContentType
         primary: name
         where:
             - 'id:<': '100000'

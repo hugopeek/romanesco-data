@@ -1,16 +1,14 @@
 id: 6
 templatename: ArticleModern
-description: ''
 category: t_publication
 icon: icon-pencil
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:37:"romanesco.articlemodern.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:38:"romanesco.articlemodern.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
 <!DOCTYPE html>
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
-[[setUserPlaceholders? &userId=`[[*author_id]]`]]
 [[!Hits? &punch=`[[*id]]`]]
 
 <head>
@@ -23,7 +21,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     ]]]]
 </head>
 
-<body id="[[*alias]]" class="publication readability">
+<body id="[[*alias]]" class="publication modern">
 
 [[$offCanvasNav]]
 
@@ -44,53 +42,78 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             <header class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]] introduction">
                 <div class="ui main text container">
                     <h1 class="ui header">[[*pagetitle]]</h1>
-                    <p class="subtitle meta date"><em>[[*publishedon:strtotime:date=`%e %B %Y`]]</em></p>
+                    <p class="subtitle muted">
+                        [[%romanesco.article.written_by]]
+                        <a href="[[~[[*author_id:empty=`[[++error_page]]`]]]]" rel="author">[[#[[*author_id]].pagetitle:empty=`[[++site_name]]`]]</a>
+                        [[%romanesco.article.written_on]]
+                        [[*publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]
+                    </p>
                 </div>
             </header>
 
             [[$content? &container_type=`text`]]
 
-            <footer class="ui vertical stripe segment grey inverted">
-                <div class="ui tightened container">
-                    <div class="ui bottom aligned equal width grid">
-                        <div class="compact column">
-                            <a href="[[~[[*parent]]]]" class="big basic ui back button" title="[[%romanesco.article.back_to_overview_title]]">
-                                <i class="left arrow icon"></i>
-                                <span class="mobile hidden">[[%romanesco.article.back_to_overview]]</span>
-                            </a>
+            <footer class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
+                <div class="ui text container">
+                    <div class="ui divider"></div>
+                    <div class="ui equal width middle aligned grid">
+                        <div class="column">
+                            <div class="ui big labels">
+                                [[TaggerGetTags?
+                                    &groups=`[[*tag_groups]]`
+                                    &resources=`[[*id]]`
+                                    &target=`[[*parent]]`
+                                    &rowTpl=`tagItemBasicLink`
+                                ]]
+                            </div>
                         </div>
-                        <div class="right aligned column">
-                            [[$socialShareButtons? &button_type=`big basic`]]
+                        <div class="compact column">
+                            [[$socialShareButtonsDropdown]]
                         </div>
                     </div>
                 </div>
-            </footer>
 
-            [[*comments_toggle:eq=`1`:then=`
-            <section id="comments" class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
-                <div class="ui text container">
+                [[*author_id:notempty=`
+                <section id="author-bio" class="ui tightened container">
+                    <div class="ui padded segment">
+                        [[[[If?
+                            &subject=`[[*author_id:empty=`0`]]`
+                            &operator=`notempty`
+                            &then=`getResources?
+                                &resources=`[[*author_id:empty=`0`]]`
+                                &tpl=`articleAuthorBio[[modifiedIf? &subject=`articleAuthorBioTheme` &operator=`iselement` &operand=`chunk` &then=`Theme` &else=``]]`
+                                &includeTVs=`1`
+                                &tvPrefix=``
+                            `
+                        ]]]]
+                    </div>
+                </section>
+                `]]
+
+                [[*comments_toggle:eq=`1`:then=`
+                <section id="comments" class="ui text container">
                     <h2 class="ui header">[[%romanesco.article.comments]]</h2>
                     <div id="[[++romanesco.[[++comment_platform:lcase]]_div_id]]"></div>
-                </div>
-            </section>
-            `]]
+                </section>
+                `]]
+            </footer>
+
         </article>
 
         [[[[If?
             &subject=`[[*neighbors_visibility]]`
             &operator=`eq`
             &operand=`1`
-            &then=`$neighborsNav`
+            &then=`$neighborsNav? &classes=`stackable``
         ]]]]
 
-        [[-
-        <aside id="further-reading" class="ui vertical stripe segment grey inverted">
+        <aside id="further-reading" class="ui vertical stripe segment secondary">
             <div class="ui tightened container">
                 <div class="ui stackable very relaxed two column grid">
                     <div class="eight wide column">
                         <div class="ui disabled mini header">[[%romanesco.article.latest]]</div>
                         <div class="ui divided items">
-                            [[-getResources?
+                            [[getResources?
                                 &parents=`[[++romanesco.publication_container_id]]`
                                 &resources=`[[+excluded_resources]]`
                                 &tpl=`overviewRowArticleItemBasic`
@@ -103,18 +126,20 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
                                 &column_type=`item`
                                 &title_field=`pagetitle`
-                                &title_hierarchy=`h4`
-                                &meta_elements=`date`
+                                &level=`h4`
+                                &meta_elements=`date,reading-time`
                                 &show_introtext=`0`
+
+                                &unique_idx=`latest_[[*id]]`
                             ]]
                         </div>
                     </div>
                     <div class="eight wide column">
                         <div class="ui disabled mini header">[[%romanesco.article.most_viewed]]</div>
                         <div class="ui divided items">
-                            [[-getResources?
+                            [[getResources?
                                 &parents=`-1`
-                                &resources=`[[-Hits? &parents=`[[++romanesco.publication_container_id]]` &limit=`5` &outputSeparator=`,`]]`
+                                &resources=`[[Hits? &parents=`[[++romanesco.publication_container_id]]` &limit=`5` &outputSeparator=`,`]]`
                                 &tpl=`overviewRowArticleItemBasic`
                                 &limit=`3`
                                 &includeTVs=`1`
@@ -125,16 +150,17 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
                                 &column_type=`item`
                                 &title_field=`pagetitle`
-                                &title_hierarchy=`h4`
-                                &meta_elements=`views`
+                                &level=`h4`
+                                &meta_elements=`date,reading-time`
                                 &show_introtext=`0`
+
+                                &unique_idx=`views_[[*id]]`
                             ]]
                         </div>
                     </div>
                 </div>
             </div>
         </aside>
-        ]]
     </main>
 
     [[[[modifiedIf?

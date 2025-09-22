@@ -5,9 +5,10 @@ caption: 'Activation email type'
 category: '_Settings - Email'
 elements: 'Inline (edit content below)==inline||Chunk (specify chunk name below)==modChunk||File (specify file path below)==file'
 rank: 10
-properties: 'a:0:{}'
-input_properties: null
-output_properties: null
+display: default
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
 
 -----
 

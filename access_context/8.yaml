@@ -1,4 +1,4 @@
 id: 8
 target: global
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 policy: 3

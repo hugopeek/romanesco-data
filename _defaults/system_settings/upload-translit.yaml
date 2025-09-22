@@ -1,0 +1,4 @@
+key: upload_translit
+value: '1'
+xtype: combo-boolean
+area: file

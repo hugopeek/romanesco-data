@@ -3,6 +3,7 @@ name: Clients
 sort_field: menuindex
 sort_type: null
 child_template: 12
+child_resource_type: modDocument
 resource_type_selection: 0
 tab_label: collections.testimonials.children
 button_label: collections.testimonials.children.create

@@ -1,6 +1,6 @@
 id: 17
 target: '16'
-principal_class: modUserGroup
+principal_class: MODX\Revolution\modUserGroup
 principal: 3
 authority: 0
 policy: 8

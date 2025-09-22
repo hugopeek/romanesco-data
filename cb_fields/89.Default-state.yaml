@@ -1,14 +1,14 @@
 id: 89
 parent: 30
-parent_properties: '{"key":"collapse_default","width":"20"}'
+parent_properties: '{"key":"collapse_default","width":"10"}'
 input: dropdown
 name: 'Default state'
-description: null
-content_desc: null
+description: ''
+content_desc: ''
 sortorder: 3
 icon: paragraph
 template: '[[+value]]'
-properties: '{"options":"Hidden=collapsed\nVisible=expanded","default_value":"collapsed"}'
+properties: '{"options":"Hidden=collapsed\nVisible=expanded","default_value":"collapsed","type_ahead":"No"}'
 availability: '[]'
 layouts: null
 settings: '[]'

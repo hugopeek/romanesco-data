@@ -1,19 +1,35 @@
-# Changelog for the Romanesco Soil data files
+# Changelog for the Romanesco Soil data extract
 
-## v1.19.2
+## v1.20.0
 Released on ...
 
-Fixes and improvements:
-- Cache DOM output in plugins (to avoid repeated DOM manipulations)
-- Update links to generated favicons
-- Insert critical CSS inline in head
+Includes:
+- [Romanesco Patterns v1.0.0-rc2]()
+- [Romanesco Patterns v1.0.0-rc1]()
+
+Defaults:
+- Assign icons for custom content types
 - Add global menu items as defaults
-- Add separate CB field for displaying internal messages
-- Remove obsolete CB templates for old pattern library
-- Allow Tasks to be attached to objects other than resource
-- Allow social connections to be attached to objects other than resource
-- Add tightened container type with large text
-- Exclude SmartRouting system settings from project .gitify
+- Deprecate configuration settings for social channels
+- Disable Gravatar by default
+
+Operations:
+- Avoid errors when there's nothing to commit during update
+- Fix updateAll flag
+- Use NPM flag for updating NPM assets only
+- Add operations script for cleaning up unused FUI themes
+- Add operations script for batch renaming notes
+- Improve operations scripts and add several tasks
+
+Gitify:
+- Exclude core elements marked as static on build
+- Add empty formblocks namespace
+- Update default menus on build
+- Exclude SmartRouting system settings from project config
+- Remove SeoPro package
+- Upgrade to MODX 3
+
+From now on, changes in the pattern repository will no longer be mentioned here.
 
 ## v1.19.1
 Released on January 3, 2025

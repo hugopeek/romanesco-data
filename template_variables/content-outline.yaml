@@ -6,8 +6,9 @@ description: 'Give an overview of the main page structure. Like a table of conte
 category: _Purpose
 elements: ''
 rank: 6
+display: default
 default_text: ''
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 input_properties: 'a:4:{s:9:"advAttrib";s:1:"1";s:16:"buttonFullScreen";s:1:"1";s:7:"buttons";s:101:"formatting,|,bold,italic,deleted,|,unorderedlist,orderedlist,|,link,image,file,|,table,horizontalrule";s:9:"minHeight";i:210;}'
-output_properties: null
+output_properties: 'a:0:{}'
 content: ''

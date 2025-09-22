@@ -1,16 +1,14 @@
 id: 5
 templatename: ArticleTraditional
-description: ''
 category: t_publication
 icon: icon-pencil
-properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:42:"romanesco.articletraditional.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:43:"romanesco.articletraditional.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
 <!DOCTYPE html>
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
-[[setUserPlaceholders? &userId=`[[*author_id]]`]]
 [[!Hits? &punch=`[[*id]]`]]
 
 <head>
@@ -49,32 +47,25 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
                         <p class="meta">
                             <span class="author">
-                                [[[[If?
-                                    &subject=`[[+team_member_id]]`
-                                    &operator=`notempty`
-                                    &then=`$imgOverviewPersonAvatarLink? &id=`[[+team_member_id]]``
-                                ]]]]
-                                [[If?
-                                    &subject=`[[*author_id]]`
-                                    &operator=`notempty`
-                                    &then=`[[*author_id:userinfo=`fullname`]]`
-                                    &else=`<i class="user icon"></i> [[*createdby:userinfo=`fullname`:empty=`[[++site_name]]`]]`
-                                ]]
+                                [[$imgOverviewPersonAvatarLink? &id=`[[*author_id]]`]]
+                                [[#[[*author_id]].pagetitle:empty=`[[++site_name]]`]]
                             </span>
                             <span class="date">
-                                <i class="calendar icon"></i>
-                                [[*publishedon:strtotime:date=`%e %B %Y`]]
+                                <i class="alternate outline calendar icon"></i>
+                                [[*publishedon:strtotime:date=`[[++romanesco.date_format_long]]`]]
                             </span>
-                            <span class="views">
-                                <i class="eye icon"></i>
-                                [[!Rowboat?
-                                    &table=`modx_hits`
-                                    &tpl=`hitCount`
-                                    &limit=`1`
-                                    &columns=`hit_count`
-                                    &where=`{"hit_key":"[[*id]]"}`
-                                    &cacheResults=`0`
-                                ]]
+                            <span class="reading-time">
+                                <i class="outline time icon"></i>
+                                <span class="value">[[*reading_time]]</span>
+                                <span class="label">
+                                    [[[[If?
+                                        &subject=`[[*reading_time]]`
+                                        &operator=`lte`
+                                        &operand=`1`
+                                        &then=`%romanesco.article.reading_time_1`
+                                        &else=`%romanesco.article.reading_time`
+                                    ]]]]
+                                </span>
                             </span>
                         </p>
                     </div>
@@ -82,16 +73,24 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
                 [[$content]]
 
-                [[[[If?
-                    &subject=`[[+team_member_id:empty=`0`]]`
-                    &operator=`notempty`
-                    &then=`getResources?
-                        &resources=`[[+team_member_id:empty=`0`]]`
-                        &tpl=`[[modifiedIf? &subject=`articleAuthorBioTheme` &operator=`iselement` &operand=`chunk` &then=`articleAuthorBioTheme` &else=`articleAuthorBio`]]`
-                        &includeTVs=`1`
-                        &tvPrefix=``
-                    `
-                ]]]]
+                [[*author_id:notempty=`
+                <section id="author-bio" class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
+                    <div class="ui main container">
+                        <div class="ui padded segment">
+                            [[[[If?
+                                &subject=`[[*author_id:empty=`0`]]`
+                                &operator=`notempty`
+                                &then=`getResources?
+                                    &resources=`[[*author_id:empty=`0`]]`
+                                    &tpl=`articleAuthorBio[[modifiedIf? &subject=`articleAuthorBioTheme` &operator=`iselement` &operand=`chunk` &then=`Theme` &else=``]]`
+                                    &includeTVs=`1`
+                                    &tvPrefix=``
+                                `
+                            ]]]]
+                        </div>
+                    </div>
+                </section>
+                `]]
 
                 [[*comments_toggle:eq=`1`:then=`
                 <section id="comments" class="ui vertical stripe segment [[setBackground? &background=`[[++layout_background_default]]`]]">
@@ -120,13 +119,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             </article>
 
             <aside id="sidebar" class="sixteen wide mobile five wide computer column">
-                <section class="ui vertical stripe segment [[++layout_background_default]] tablet or lower hidden">
+                <section class="ui vertical stripe segment transparent tablet or lower hidden">
                     <div class="ui container">
-                        <div class="ui equal width middle aligned grid">
+                        <div class="ui equal width middle aligned very compact grid">
                             <div class="compact column">
                                 <h4 class="ui disabled mini header">
-                                    <span class="large screen and widescreen only">[[%romanesco.article.share_this]]</span>
-                                    <span class="computer only">[[%romanesco.article.share_this_short]]</span>
+                                    [[%romanesco.article.share_this]]
                                 </h4>
                             </div>
                             <div class="right aligned column">
@@ -136,28 +134,21 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     </div>
                 </section>
 
-                [[-
-                <section class="ui vertical stripe segment [[++layout_background_default]]">
+                <section class="ui vertical stripe segment transparent">
                     <div class="ui container">
-                        [[-$dividerHeading?
-                            &divider_section=`section`
-                            &divider_icon_class=`tags icon`
-                            &divider_icon_circular=`1`
-                        ]]
-                        <div class="ui labels">
-                            [[-!TaggerGetTags?
-                                &groups=`2`
+                        <div class="ui fluffy cloudy labels">
+                            [[TaggerGetTags?
+                                &groups=`[[*tag_groups]]`
                                 &target=`[[*parent]]`
-                                &rowTpl=`tagItemCountLinkHighlight`
+                                &rowTpl=`tagItemCountLinkWeight`
                             ]]
                         </div>
                     </div>
                 </section>
-                ]]
 
-                <section class="ui vertical stripe segment [[++layout_background_default]]">
+                <section class="ui vertical stripe segment transparent">
                     <div class="ui container">
-                        <h4>[[%romanesco.article.read_another]]</h4>
+                        <h4 class="ui disabled header">[[%romanesco.article.read_another]]</h4>
 
                         <div class="ui two item top attached tabular menu">
                             <a class="item active"
@@ -218,7 +209,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                                     &column_type=`item`
                                     &title_field=`pagetitle`
                                     &level=`h5`
-                                    &meta_elements=`views`
+                                    &meta_elements=`date`
                                     &show_introtext=`0`
 
                                     &unique_idx=`most_viewed`

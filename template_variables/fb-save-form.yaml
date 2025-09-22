@@ -5,10 +5,10 @@ caption: 'Save form data'
 description: 'Save submitted data in the database. You can view this data under Top menu > Extras > FormIt.'
 category: '_Settings - General'
 elements: 'System default==default||Yes==1||No==0'
-rank: 91
-properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
-input_properties: null
-output_properties: null
+rank: 30
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
 
 -----
 

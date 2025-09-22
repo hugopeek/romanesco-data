@@ -3,6 +3,7 @@ name: Backgrounds
 sort_field: menuindex
 sort_type: 'SIGNED INTEGER'
 child_template: 27
+child_resource_type: modDocument
 resource_type_selection: 0
 tab_label: collections.background.children
 button_label: collections.background.children.create

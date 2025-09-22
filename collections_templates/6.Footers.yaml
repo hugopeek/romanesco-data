@@ -3,6 +3,7 @@ name: Footers
 sort_field: menuindex
 sort_type: 'SIGNED INTEGER'
 child_template: 0
+child_resource_type: modDocument
 resource_type_selection: 0
 tab_label: collections.footers.children
 button_label: collections.footers.children.create

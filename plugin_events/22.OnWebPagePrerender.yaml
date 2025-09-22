@@ -1,3 +1,3 @@
 pluginid: 22
 event: OnWebPagePrerender
-priority: -100
+priority: -101

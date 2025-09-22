@@ -3,6 +3,7 @@ name: w_securityfeed
 description: w_securityfeed_desc
 type: file
 content: '[[++manager_path]]controllers/default/dashboard/widget.modx-security.php'
+properties: null
 namespace: core
 name_trans: w_securityfeed
 description_trans: w_securityfeed_desc
