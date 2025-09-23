@@ -4,8 +4,8 @@
 Released on September 23, 2025
 
 Includes:
-- [Romanesco Patterns v1.0.0-rc2]()
-- [Romanesco Patterns v1.0.0-rc1]()
+- [Romanesco Patterns 1.0.0-rc2](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc2)
+- [Romanesco Patterns 1.0.0-rc1](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc1)
 
 Defaults:
 - Assign icons for custom content types
