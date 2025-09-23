@@ -1,6 +1,6 @@
 id: 69
 parent: 30
-parent_properties: '{"key":"collapse_target","width":"20"}'
+parent_properties: '{"key":"collapse_target","width":"25"}'
 name: 'Show/hide target'
 description: ''
 content_desc: ''

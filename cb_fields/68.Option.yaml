@@ -1,6 +1,6 @@
 id: 68
 parent: 30
-parent_properties: '{"key":"field_option","width":"50"}'
+parent_properties: '{"key":"field_option","width":"40"}'
 name: Option
 description: ''
 content_desc: ''

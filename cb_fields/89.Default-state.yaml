@@ -1,6 +1,6 @@
 id: 89
 parent: 30
-parent_properties: '{"key":"collapse_default","width":"10"}'
+parent_properties: '{"key":"collapse_default","width":"15"}'
 input: dropdown
 name: 'Default state'
 description: ''
