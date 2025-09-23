@@ -8,11 +8,24 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+field_name_html:empty=`[[+field_name]]`:fbResetNonAlpha:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 [[+field_option:fbResetNonAlpha:toPlaceholder=`option`]]
+[[!If:toPlaceholder=`checkbox_array`?
+    &subject=`[[+field_type]]`
+    &operator=`EQ`
+    &operand=`checkbox`
+    &then=`[]`
+    &else=``
+]]
+[[!If:toPlaceholder=`checkbox_variant`?
+    &subject=`[[+checkbox_type]]`
+    &operator=`notempty`
+    &then=`[[+checkbox_type]]`
+    &else=`[[+field_type]]`
+]]
 
 <div class="field">
-    <div class="ui [[+collapse_target:isnot=``:then=`collapsible`]] [[+checkbox_type:empty=`[[+field_type]]`]] checkbox">
+    <div class="ui [[+collapse_target:isnot=``:then=`collapsible`]] [[+checkbox_variant]] checkbox">
         <input type="[[+field_type]]"
-               name="[[+name]][[+field_type:is=`checkbox`:then=`[]`]]"
+               name="[[+name]][[+checkbox_array]]"
                id="[[+name]]-[[+idx]]"
                value="[[+field_value:empty=`[[+option]]`]]"
                tabindex="[[+idx]]"
