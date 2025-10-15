@@ -5,7 +5,7 @@ caption: Attachments
 description: 'Connect any available static resource(s) to this page. Presently, this is not being shown in any template, so it''s up to you to implement it as you see fit.'
 category: _Connection
 elements: ''
-rank: 30
+rank: 60
 display: default
 default_text: ''
 properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'

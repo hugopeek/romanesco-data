@@ -24,7 +24,11 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &then=`$introtextDescription? &uid=`[[+unique_idx]]``
     ]]]]
 
-    [[$socialConnectButtonsPerson? &button_type=`basic` &uid=`[[+unique_idx]]`]]
+    [[$socialConnectButtons?
+        &parent_id=`[[+id]]`
+        &button_type=`basic`
+        &uid=`[[+unique_idx]]`
+    ]]
 </div>
 
 [[[[If?

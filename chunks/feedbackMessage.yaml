@@ -6,14 +6,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[[[If?
+[[!If?
     &subject=`[[!isEditor]]`
     &operator=`notempty`
-    &then=`$richTextMessage?
+    &then=`[[$richTextMessage?
         &heading=`[[+heading]]`
         &content=`[[+value]]`
         &message_type=`[[+message_type]]`
         &size=`[[+size]]`
         &close=`[[+close]]`
-    `
-]]]]
+    ]]`
+]]

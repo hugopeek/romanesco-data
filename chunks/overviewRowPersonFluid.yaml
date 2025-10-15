@@ -16,7 +16,11 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <span class="sub header">[[+person_jobtitle]]</span>
     </[[+level]]>
     <p>
-        [[$socialConnectButtonsPerson? &uid=`[[+unique_idx]]`]]
+        [[$socialConnectButtons?
+            &parent_id=`[[+id]]`
+            &button_type=`basic`
+            &uid=`[[+unique_idx]]`
+        ]]
     </p>
     [[[[If?
         &subject=`[[+show_introtext]]`
