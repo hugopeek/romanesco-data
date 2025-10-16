@@ -3,7 +3,7 @@
 # Each Fomantic UI update will add a number of unused themes to the Semantic
 # themes folder. Run this script to get rid of them.
 
-source "config.sh"
+source "../config.sh"
 
 rm -rf "${installPath}/assets/semantic/src/themes/amazon"
 rm -rf "${installPath}/assets/semantic/src/themes/bookish"
