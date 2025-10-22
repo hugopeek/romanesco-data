@@ -20,6 +20,22 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &tpl=`statusIndicatorSVGSymbol`
     ]]
 </svg>
+<style>
+    @font-face {
+        font-family: "brand-icons";
+        src: url("[[++romanesco.semantic_dist_path]]/themes/default/assets/fonts/brand-icons.woff2") format("woff2") ;
+        font-style: normal;
+        font-weight: normal;
+        font-display: block;
+        font-variant: normal;
+        text-decoration: inherit;
+        text-transform: none;
+    }
+    i.icon.trello::before {
+        font-family: "brand-icons";
+        content: "\f181";
+    }
+</style>
 
 <div class="ui grid">
     <div class="nine wide column">
@@ -46,15 +62,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <table class="ui very compact sortable celled status table">
     <thead>
     <tr>
-        <th>[[%romanesco.status.table_indicator]]</th>
-        <th>[[%romanesco.status.table_id]]</th>
+        <th class="collapsing">[[%romanesco.status.table_indicator]]</th>
+        <th class="collapsing">[[%romanesco.status.table_id]]</th>
         <th>[[%romanesco.status.table_resource]]</th>
         <th>[[%romanesco.status.table_tasks]]</th>
         [[*id:SeoTabIndexation:isnot=`[[*id]]`:then=`
         <th>[[%romanesco.status.table_indexation]]</th>
         `]]
-        <th>[[%romanesco.status.table_owner]]</th>
-        <th>[[%romanesco.status.table_date_due]]</th>
+        <th class="collapsing">[[%romanesco.status.table_owner]]</th>
+        <th class="collapsing">[[%romanesco.status.table_date_due]]</th>
     </tr>
     </thead>
     <tbody>
@@ -77,10 +93,45 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </div>
 
     <div class="content">
+        <p>[[%romanesco.status.legend_description]]</p>
+        <table class="ui small compact celled status table">
+            <tr class="olive">
+                <td class="collapsing indicator">
+                    <svg class="icon " viewBox="0 0 100 100">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="[[~[[*id]]? &scheme=`full`]]#status-done"></use>
+                    </svg>
+                </td>
+                <td class="collapsing selectable">
+                    <a class="edit" href="https://romanesco-nursery.loc/manager/?a=resource/update&id=1" target="_blank">1</a>
+                </td>
+                <td class="selectable metadata">
+                    <a class="level-1 hidemenu" href="https://romanesco-nursery.loc/" target="_blank">This page is hidden in menus</a>
+                    <a class="ui empty floating red circular label with tooltip onclick" title="Description" data-title="Description" data-content="Red indicates the field is still empty." data-variation=""></a>
+                    <a class="ui empty floating green circular label with tooltip onclick" title="Longtitle" data-title="Longtitle" data-content="Green indicates the field is filled in." data-variation=""></a>
+                </td>
+                <td class="tasks">
+                    <span class="ui mini list">
+                        <a class="item with tooltip onclick" data-content="Walk through some basic usage scenarios in a short video, to get a sense of what Romanesco is." data-variation="">
+                            This page has a task attached to it
+                        </a>
+                        <a class="item with tooltip onclick" data-content="Walk through some basic usage scenarios in a short video, to get a sense of what Romanesco is." data-variation="">
+                            Click on the task to see more details
+                        </a>
+                    </span>
+                </td>
+                <td class="collapsing owner">
+                    Hugo
+                </td>
+                <td class="collapsing due date">
+                    [[Time:date=`[[++romanesco.date_format_short]]`]]
+                </td>
+            </tr>
+        </table>
+        <p>[[%romanesco.status.legend_published]]</p>
         <div class="ui two column grid">
             <div class="ui column">
                 <div class="ui small header">[[%romanesco.status.legend_progress]]</div>
-                <table class="ui small very compact basic table">
+                <table class="ui small compact celled table">
                     <tbody>
                     [[migxLoopCollection?
                         &packageName=`romanescobackyard`
@@ -94,7 +145,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             </div>
             <div class="ui column">
                 <div class="ui small header">[[%romanesco.status.legend_health]]</div>
-                <table class="ui small very compact basic table">
+                <table class="ui small compact celled table">
                     <tbody>
                     [[migxLoopCollection?
                         &packageName=`romanescobackyard`

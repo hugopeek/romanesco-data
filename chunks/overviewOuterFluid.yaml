@@ -41,8 +41,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &link_text=`[[If? &subject=`[[+link_text]]` &operator=`isnull` &then=`0` &else=`[[+link_text]]`]]`
     &img_tpl=`[[+[[+unique_idx]].img_tpl]]`
     &img_type=`[[+img_type]]`
-    &img_snap=`[[+img_snap]]`
-    &img_inflate=`[[+img_inflate]]`
+    &img_options=`[[+img_options]]`
     &lazy_load=`[[+lazy_load]]`
 
     [[[[+pagination:eq=`1`:then=`$overviewSettingsPagination? &uid=`[[+prefix]]``]]]]

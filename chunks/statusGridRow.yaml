@@ -6,39 +6,44 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[Switch:toPlaceholder=`status_priority_[[+idx]]`?
+[[Switch:toPlaceholder=`status_priority_[[+id]]`?
     &get=`[[+status_progress:eq=`done`:then=`[[+status_health]]`:else=`[[+status_progress]]`]]`
-    &c1=`todo`          &do1=`4`
-    &c2=`doing`         &do2=`2`
+    &c1=`todo`          &do1=`3`
+    &c2=`doing`         &do2=`4`
     &c3=`review`        &do3=`1`
     &c4=`stable`        &do4=`5`
     &c5=`successful`    &do5=`6`
-    &c6=`problematic`   &do6=`3`
+    &c6=`problematic`   &do6=`2`
     &c7=`expired`       &do7=`7`
     &default=`0`
 ]]
-[[Switch:toPlaceholder=`status_class_[[+idx]]`?
+[[Switch:toPlaceholder=`status_class_[[+id]]`?
     &get=`[[+status_progress:eq=`done`:then=`[[+status_health]]`:else=`[[+status_progress]]`]]`
-    &c1=`stable`        &do1=`positive`
-    &c2=`successful`    &do2=`positive`
-    &c3=`problematic`   &do3=`negative`
-    &c4=`expired`       &do4=`warning`
+    &c1=`todo`          &do1=`orange`
+    &c2=`doing`         &do2=`yellow`
+    &c3=`review`        &do3=`purple`
+    &c4=`stable`        &do4=`olive`
+    &c5=`successful`    &do5=`green`
+    &c6=`problematic`   &do6=`red`
+    &c7=`expired`       &do7=`brown`
     &default=``
 ]]
 
-[[SeoTabIndexation:toPlaceholder=`status_indexation_[[+idx]]`? &resource=`[[+id]]`]]
+[[SeoTabIndexation? &resource=`[[+id]]` &toPlaceholder=`status_indexation_[[+id]]`]]
 
 [[migxLoopCollection?
     &packageName=`romanescobackyard`
-    &classname=`FractalFarming\Romanesco\Model\Task`
-    &where=`{"resource_id":"[[+id]]"}`
-    &tpl=`tagItemTooltip`
-    &toPlaceholder=`status_tasks_[[+idx]]`
+    &classname=`FractalFarming\Romanesco\Model\TaskResource`
+    &where=`[
+        {"parent_id":"[[+id]]"}
+    ]`
+    &tpl=`taskItemTooltip`
+    &toPlaceholder=`status_tasks_[[+id]]`
 ]]
 
-<tr class="[[+status_class_[[+idx]]]][[+published:eq=`0`:then=` disabled`]]">
+<tr class="[[+status_class_[[+id]]]]">
     <td class="indicator">
-        <svg class="icon" viewBox="0 0 100 100">
+        <svg class="icon [[+published:eq=`0`:then=`unpublished`]]" viewBox="0 0 100 100">
             [[+status_progress:eq=`done`:then=`
             <use xlink:href="[[~[[*id]]? &scheme=`full`]]#status-[[+status_health:replace=`stable==done`]]"></use>
             `:else=`
@@ -46,24 +51,26 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             `]]
         </svg>
         <span class="hidden priority">
-            [[+status_priority_[[+idx]]]]
+            [[+status_priority_[[+id]]]]
         </span>
     </td>
     <td class="selectable">
-        <a class="edit" href="[[getContextSetting? &context=`web` &setting=`site_url`]]manager/?a=resource/update&id=[[+id]]" target="_blank">[[+id]]</a>
+        <a class="edit [[+published:eq=`0`:then=`unpublished`]]" href="[[getContextSetting? &context=`web` &setting=`site_url`]]manager/?a=resource/update&id=[[+id]]" target="_blank">[[+id]]</a>
     </td>
     <td class="selectable metadata">
-        <a class="level-[[+level]]" href="[[~[[+id]]]]" target="_blank">[[+pagetitle]]</a>
-        <a class="ui empty floating [[+description:eq=``:then=`red`:else=`green`]] circular label with tooltip onclick" title="Description" data-title="Description" data-content="[[+description:empty=`This field is still empty.`]]" data-variation="basic"></a>
-        <a class="ui empty floating [[+longtitle:eq=``:then=`red`:else=`green`]] circular label with tooltip onclick" title="Longtitle" data-title="Longtitle" data-content="[[+longtitle:empty=`This field is still empty.`]]" data-variation="basic"></a>
+        <a class="level-[[+level]] [[+published:eq=`0`:then=`unpublished`]] [[+hidemenu:eq=`1`:then=`hidemenu`]]" href="[[~[[+id]]]]" target="_blank">[[+pagetitle]]</a>
+        <a class="ui empty floating [[+description:eq=``:then=`red`:else=`green`]] circular label with tooltip onclick" title="Description" data-title="Description" data-content="[[+description:empty=`This field is still empty.`]]" data-variation=""></a>
+        <a class="ui empty floating [[+longtitle:eq=``:then=`red`:else=`green`]] circular label with tooltip onclick" title="Longtitle" data-title="Longtitle" data-content="[[+longtitle:empty=`This field is still empty.`]]" data-variation=""></a>
     </td>
-    <td class="ui blue labels">
-        [[+status_tasks_[[+idx]]]]
+    <td class="tasks">
+        <span class="ui mini list">
+            [[+status_tasks_[[+id]]]]
+        </span>
     </td>
-    [[+status_indexation_[[+idx]]:notempty=`
+    [[+status_indexation_[[+id]]:notempty=`
     <td class="indexation">
-        [[+status_indexation_[[+idx]]:contains=`noindex`:or:contains=`nofollow`:then=`<i class="attention icon"></i>`]]
-        [[+status_indexation_[[+idx]]]]
+        [[+status_indexation_[[+id]]:contains=`noindex`:or:contains=`nofollow`:then=`<i class="attention icon"></i>`]]
+        [[+status_indexation_[[+id]]]]
     </td>
     `]]
     <td class="owner">
@@ -71,7 +78,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </td>
     <td class="due date">
         <span class="hidden sort">[[+planning_date_due]]</span>
-        [[+planning_date_due:strtotime:date=`[[++romanesco.date_format_long]]`]]
+        [[+planning_date_due:strtotime:date=`[[++romanesco.date_format_short]]`]]
     </td>
 </tr>
 [[+wrapper]]
