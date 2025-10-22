@@ -1,3 +1,4 @@
 pluginid: 42
 event: OnDocFormSave
 priority: 20
+propertyset: 25
