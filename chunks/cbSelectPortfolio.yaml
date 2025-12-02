@@ -7,8 +7,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[getResources?
-    &parents=`[[getContextSetting:empty=`[[++romanesco.portfolio_container_id]]`? &context=`[[*context_key]]` &setting=`romanesco.portfolio_container_id`]]`
-    &tpl=`@INLINE [[+pagetitle]]=[[+id]]`
+    &parents=`[[getContextSetting? &context=`[[*context_key]]` &setting=`romanesco.portfolio_container_id`]]`
+    &tpl=`@INLINE [[+pagetitle]] ([[+id]])=[[+id]]`
     &limit=`0`
     &showHidden=`1`
     &showUnpublished=`1`

@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <script>document.documentElement.className = 'js';</script>
 
-[[- SET PLACEHOLDERS FOR CONDITIONAL STATEMENTS FURTHER DOWN ]]
+[[- SET PLACEHOLDERS FOR CONDITIONAL STATEMENTS FURTHER DOWN THE RESOURCE ]]
 [[++minify_css_js:eq=`1`:then=`.min`:toPlaceholder=`minify`]]
 [[modifiedIf?
     &subject=`[[++critical_css]]_[[*critical_css_uri:notempty=`1`]]`

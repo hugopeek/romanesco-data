@@ -15,9 +15,9 @@ properties: 'a:3:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &src=`[[+source.src]]`
     &crop=`[[+crop.options]]`
     &width=`[[+width]]`
-    &toPlaceholder=`[[+prefix]].srcset`
+    &toPlaceholder=`[[+unique_idx]].srcset`
 ]]
-<img [[+lazy]]srcset="[[+[[+prefix]].srcset]]"
+<img [[+lazy]]srcset="[[+[[+unique_idx]].srcset]]"
      [[+lazy]]sizes="(min-width: 1300px) calc([[+scale]]vw / [[+cols]]),
                      (min-width: 992px) calc([[+scale]]vw / [[+cols]]),
                      (min-width: 768px) [[+cols:gt=`2`:then=`calc(([[+scale]]vw - 2em) / 2)`:else=`[[+scale]]vw`]],

@@ -18,7 +18,7 @@ Secondary color (Dark)==inverted secondary-color||
 Transparent==transparent||
 -----==0||
 [[getResources:append=`||`?
-    &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
+    &parents=`[[getContextSetting? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
     &limit=`0`
     &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
     &outputSeparator=`||`
@@ -30,7 +30,7 @@ Transparent==transparent||
     &sortDir=`ASC`
 ]]
 [[getResources?
-    &parents=`[[getContextSetting:empty=`[[++romanesco.global_backgrounds_id]]`? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
+    &parents=`[[getContextSetting? &context=`[[*context_key]]` &setting=`romanesco.global_backgrounds_id`]]`
     &limit=`0`
     &depth=`0`
     &tpl=`@INLINE [[+pagetitle]]==[[+id]]`
