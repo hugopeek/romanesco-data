@@ -445,7 +445,7 @@ packages:
             - getresources-1.7.1-pl
             - if-1.1.1-pl
             - imageplus-2.9.4-pl
-            - migx-3.0.5-beta
+            - migx-3.0.2-beta1
             - pdotools-3.0.2-pl
             - pthumb-2.3.3-pl
             - renderresources-1.0.2-pl
