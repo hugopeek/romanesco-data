@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
     &element=`getResources`
-    [[++custom_cache:eq=`1`:then=`&cacheKey=`custom/overviews/publication/[[+user_access_level]]``:else=``]]
+    &cacheKey=`[[++custom_cache:eq=`1`:then=`custom/overviews/publication/[[+user_access_level]]`:else=``]]`
 
     &parents=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`-1` &else=`[[++romanesco.publication_container_id]]`]]`
     &resources=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`[[+resources]]` &else=`[[+excluded_resources:empty=`null`]]`]]`

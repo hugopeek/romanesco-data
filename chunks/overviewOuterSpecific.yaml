@@ -13,7 +13,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[!getCache?
     &element=`getResources`
-    [[++custom_cache:eq=`1`:then=`&cacheKey=`custom/overviews/[[+user_access_level]]``:else=``]]
+    &cacheKey=`[[++custom_cache:eq=`1`:then=`custom/overviews/[[+user_access_level]]`:else=``]]`
 
     &parents=`-1`
     &resources=`[[+resources]]`
