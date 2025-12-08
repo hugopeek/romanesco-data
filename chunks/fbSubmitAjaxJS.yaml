@@ -17,16 +17,9 @@ $.ajax({
     encode: true,
 })
 .done(function(data) {
-    // If we receive a success message, show an alert.
+    // If we receive a success message, show a toast message.
     if (data.success) {
         // Forge success message
-        //let message = '[[$richTextMessage:stripForJS?
-        //    &size=`[[+form_size]]`
-        //    &message_type=`visible success`
-        //    &heading=`[[%formblocks.form.success_heading]]`
-        //    &content=`[[%formblocks.form.success_message]]`
-        //]]';
-
         let message = '<strong>[[%formblocks.form.success_heading]]<\/strong><br>';
         message += data.message;
 

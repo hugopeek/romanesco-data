@@ -145,11 +145,16 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
         [[*content]]
 
-        [[- DIM FORM DURING AJAX SUBMISSION ]]
+        [[- AJAX MODE
+            Dim and delay form submission, to avoid startling the user.
+            Add hidden fields with CB setting values, as relation will be
+            severed after rendering this form.
+        ]]
         [[++formblocks.ajax_mode:eq=`1`:then=`
         <div class="ui inverted dimmer">
             <div class="ui text loader">[[%formblocks.form.submit_loading]]</div>
         </div>
+        <input type="hidden" name="fb[[*id]]-redirect-to" value="[[+redirect_id]]">
         `]]
 
         [[- CUSTOM SUBMIT BUTTON
