@@ -9,7 +9,7 @@ category: 7
 icon: email
 icon_type: custom
 template: '[[+tag]]'
-properties: '{"chunk":"37","custom_preview":"<div class=\"ui divider\"><\/div>"}'
+properties: '{"chunk":"37","custom_preview":""}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1

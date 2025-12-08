@@ -3,13 +3,13 @@ parent_properties: null
 input: chunk
 name: 'Input (Multiple Files)'
 description: ''
-content_desc: ''
+content_desc: 'Let visitors upload multiple files from their system. These files will be attached to the email you receive. Files can be added with drag&drop or via the system file explorer.'
 sortorder: 63
 category: 7
 icon: folder-open
 icon_type: custom
 template: '[[+tag]]'
-properties: '{"chunk":"356","custom_preview":"<p>Let visitors upload multiple files from their system. These files will be attached to the email you receive. Files can be added with drag&drop or via the system file explorer.<\/p>\n<br>\n\n<p><strong>IMPORTANT NOTES:<\/strong><\/p>\n<ul class=\"ui bulleted list\">\n    <li>This block requires the <a href=\"https:\/\/jako.github.io\/AjaxUpload\/\" target=\"_blank\">AjaxUpload<\/a> extra to be installed.<\/li>\n    <li>Because uploaded files are attached to the email, you need to make sure the total size of the files (= max file size * upload limit) won''t exceed your email limit.<\/li>\n    <li>Frontend validation doesn''t work for required blocks (generates errors in console). But backend validation works.<\/li>\n    <li>Be careful using multiple forms with this block on the same page. There are known issues with that.<\/li>\n    <li>This block can only be used once per form.<\/li>\n<\/ul>\n\n<div class=\"ui divider\"><\/div>"}'
+properties: '{"chunk":"356","custom_preview":"<div class=\"ui warning message\">\n    <p><strong>IMPORTANT NOTES:<\/strong><\/p>\n    <ul class=\"ui bulleted list\">\n        <li>This block requires the <a href=\"https:\/\/jako.github.io\/AjaxUpload\/\" target=\"_blank\">AjaxUpload<\/a> extra to be installed.<\/li>\n        <li>Because uploaded files are attached to the email, you need to make sure the total size of the files (= max file size * upload limit) won''t exceed your email limit.<\/li>\n        <li>Frontend validation doesn''t work for required blocks (generates errors in console). But backend validation works.<\/li>\n        <li>Be careful using multiple forms with this block on the same page. There are known issues with that.<\/li>\n        <li>This block can only be used once per form.<\/li>\n    <\/ul>\n<\/div>"}'
 availability: '[{"field":"template","value":"10,19"}]'
 layouts: ''
 times_per_page: 1
