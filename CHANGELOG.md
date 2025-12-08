@@ -1,11 +1,27 @@
 # Changelog for the Romanesco Soil data extract
 
+## v1.20.1
+Released on ...
+
+Includes:
+- [Romanesco Patterns 1.0.0-rc3](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc3)
+- [Romanesco Backyard 1.0.0-rc3](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc3)
+
+ContentBlocks:
+- Enable previews of form elements
+
+Operations:
+- Fix path to config.sh file
+
+Gitify:
+- Revert MIGX to version 3.0.2-beta1
+
 ## v1.20.0
 Released on September 23, 2025
 
 Includes:
 - [Romanesco Patterns 1.0.0-rc2](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc2)
-- [Romanesco Patterns 1.0.0-rc1](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc1)
+- [Romanesco Backyard 1.0.0-rc1](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc1)
 
 Defaults:
 - Assign icons for custom content types
