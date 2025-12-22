@@ -11,15 +11,14 @@ set -e
 # EXECUTE
 # ==============================================================================
 
-# pull latest changes from repositories
+# pull latest changes from data repository
 cd "$installPathData" && git pull origin master
-cd "$installPathTheme" && git pull origin master
 
 # go to project root
 cd "$installPath"
 
 # backup and extract current state of project
-printf "%Backing up database...%s\n" "$BOLD" "$NORMAL"
+printf "%sBacking up database...%s\n" "$BOLD" "$NORMAL"
 ${gitifyCmd} backup "$(date +'%Y-%m-%dT%H%M%S')"_ROMANESCO
 if ! [[ "$noExtract" ]] ; then
   printf "%sExtracting project data...%s\n" "$BOLD" "$NORMAL"
@@ -169,10 +168,11 @@ then
   fi
 fi
 
-# run NPM updates
+# update Romanesco FUI theme
 if [[ "$updateTheme" ]] || [[ "$updateAll" ]]
 then
   printf "%sUpdating Romanesco styling theme...%s\n" "$BOLD" "$NORMAL"
+  cd "$installPathTheme" && git pull origin master
 
   if [[ "$npmFlag" ]]
   then

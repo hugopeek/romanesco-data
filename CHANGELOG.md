@@ -11,6 +11,7 @@ ContentBlocks:
 - Enable previews of form elements
 
 Operations:
+- Only pull from theme repository if flag is set
 - Add --no-extract flag to update task
 - Fix deprecated use of waitForTimeout function in Backstop engine scripts
 - Fix path to config.sh file
