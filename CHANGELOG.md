@@ -11,6 +11,8 @@ ContentBlocks:
 - Enable previews of form elements
 
 Operations:
+- Add --no-extract flag to update task
+- Fix deprecated use of waitForTimeout function in Backstop engine scripts
 - Fix path to config.sh file
 
 Gitify:

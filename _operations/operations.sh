@@ -327,7 +327,7 @@ do case $1 in
       -d | --defaults)
         defaultsFlag=1
         ;;
-      -x | --no-extract )
+      -x | --no-extract)
         noExtract=1
         ;;
       '' | *)
