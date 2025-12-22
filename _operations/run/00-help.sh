@@ -57,8 +57,9 @@ ${BOLD}Tasks and options:${NORMAL}
     modx                          Upgrade MODX to version ${BLUE}${modxVersion}${NORMAL}
     packages                      Update all packages listed in .gitify
     all                           Update all of the above
-    -n|--npm                      + run npm update ${YELLOW}(One does not simply...)${NORMAL}
+    -n|--npm                      + run npm update ${YELLOW}(one does not simply...)${NORMAL}
     -d|--defaults                 + import Romanesco Soil updates ${RED}(RISKY!)${NORMAL}
+    -x|--no-extract               - Gitify extract
 
   ${BOLD}commit${NORMAL}
     project                       Main repository

@@ -224,20 +224,12 @@ do case $1 in
     ;;
   package)
     packageFlag=1
-    packageEarthBrain=
-    packageForestBrain=
     packageAll=
     while [[ "$2" ]]
     do
       # move to next task
       if [[ "$2" == "AND" ]] ; then break ; fi
       case $2 in
-        earthbrain)
-          packageEarthBrain=1
-          ;;
-        forestbrain)
-          packageForestBrain=1
-          ;;
         all)
           packageAll=1
           ;;
@@ -306,6 +298,7 @@ do case $1 in
     updateAll=
     npmFlag=
     defaultsFlag=
+    noExtract=
     while [[ "$2" ]]; do
       # move to next task
       if [[ "$2" == "AND" ]]; then break; fi
@@ -333,6 +326,9 @@ do case $1 in
         ;;
       -d | --defaults)
         defaultsFlag=1
+        ;;
+      -x | --no-extract )
+        noExtract=1
         ;;
       '' | *)
         printf "%sComputer says no.%s\n" "$RED" "$NORMAL"

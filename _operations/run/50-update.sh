@@ -19,9 +19,12 @@ cd "$installPathTheme" && git pull origin master
 cd "$installPath"
 
 # backup and extract current state of project
-printf "%sExtracting project data...%s\n" "$BOLD" "$NORMAL"
+printf "%Backing up database...%s\n" "$BOLD" "$NORMAL"
 ${gitifyCmd} backup "$(date +'%Y-%m-%dT%H%M%S')"_ROMANESCO
-${gitifyCmd} extract --no-packages
+if ! [[ "$noExtract" ]] ; then
+  printf "%sExtracting project data...%s\n" "$BOLD" "$NORMAL"
+  ${gitifyCmd} extract --no-packages
+fi
 
 # commit changes, if there are any
 if [[ -n $(cd "${installPath}" && git status -s) ]]
