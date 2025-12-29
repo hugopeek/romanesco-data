@@ -17,6 +17,8 @@ Operations:
 - Fix path to config.sh file
 
 Gitify:
+- Remove If, Switch and UltimateParent from package list (absorbed by Romanesco)
+- Bring back Hits package (still needed for db tables)
 - Revert MIGX to version 3.0.2-beta1
 
 ## v1.20.0
