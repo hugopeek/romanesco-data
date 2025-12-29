@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`header_title`]]`
     &operator=`EQ`
     &operand=`@INHERIT`
@@ -14,7 +14,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*header_title]]`
     &toPlaceholder=`header_title`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`header_subtitle`]]`
     &operator=`EQ`
     &operand=`@INHERIT`
@@ -22,21 +22,22 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*header_subtitle]]`
     &toPlaceholder=`header_subtitle`
 ]]
-[[If:toPlaceholder=`header_background`?
+[[If?
     &subject=`[[getRawTVValue? &tv=`header_background`]]`
     &operator=`EQ`
     &operand=`@INHERIT`
     &then=`[[[[#[[*parent]].header_inheritance:contains=`inherit_background`:then=`*header_background`:else=``]]]]`
     &else=`[[*header_background]]`
+    &toPlaceholder=`header_background`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[*header_background_img]]`
     &operator=`notempty`
     &then=`[[*alias]] background`
     &else=`[[+header_background:empty=`[[++header_background_default]]`]]`
     &toPlaceholder=`header_background_class`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`heroTitlesTheme`
     &operator=`iselement`
     &operand=`chunk`

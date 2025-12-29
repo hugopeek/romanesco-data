@@ -7,14 +7,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <header id="header" class="[[++navbar_sticky:eq=`1`:then=`ui sticky`]] inverted primary-color">
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`masthead`
         &operator=`iselement`
         &operand=`chunk`
         &then=`$masthead`
     ]]]]
 
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`mainNavVerticalTheme`
         &operator=`iselement`
         &operand=`chunk`

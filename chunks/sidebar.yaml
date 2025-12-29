@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <div class="ui container">
-    [[modifiedIf?
+    [[If?
         &subject=`[[getRawTVValue? &tv=`sidebar_sticky`]]`
         &operator=`contains`
         &operand=`@INHERIT`
@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &else=`[[*sidebar_sticky]]`
         &toPlaceholder=`sidebar_sticky_tv`
     ]]
-    [[modifiedIf?
+    [[If?
         &subject=`[[*sidebar_sticky]]`
         &operator=`is`
         &operand=`default`

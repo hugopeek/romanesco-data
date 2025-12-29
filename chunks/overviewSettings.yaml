@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-&row_tpl=`[[modifiedIf? &subject=`[[+row_tpl]]Theme` &operator=`iselement` &operand=`chunk` &then=`[[+row_tpl]]Theme` &else=`[[+row_tpl]]`]]`
+&row_tpl=`[[If? &subject=`[[+row_tpl]]Theme` &operator=`iselement` &operand=`chunk` &then=`[[+row_tpl]]Theme` &else=`[[+row_tpl]]`]]`
 &box_type=`[[+[[+prefix]].box_type]]`
 &row_type=`[[+[[+prefix]].row_type]]`
 &column_type=`[[+[[+prefix]].column_type]]`
@@ -29,4 +29,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 &img_options=`[[+img_options]]`
 &icon_type=`[[+icon_type]]`
 &icon_classes=`[[+[[+prefix]].icon_classes]]`
+&button_classes=`[[+[[+prefix]].button_classes]]`
 &lazy_load=`[[+lazy_load]]`

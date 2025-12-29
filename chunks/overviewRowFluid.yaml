@@ -6,18 +6,20 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[If:toPlaceholder=`background.[[+idx]]`?
+[[If?
     &subject=`[[+idx:mod]]`
     &operator=`EQ`
     &operand=`0`
     &then=`[[+background_even]]`
     &else=`[[+background_odd]]`
+    &toPlaceholder=`background.[[+idx]]`
 ]]
-[[If:toPlaceholder=`interchange.[[+idx]]`?
+[[If?
     &subject=`[[+cols_interchange]]`
     &operator=`EQ`
     &operand=`1`
     &then=`[[+idx:mod:eq=`0`:then=`computer reversed tablet reversed`]]`
+    &toPlaceholder=`interchange.[[+idx]]`
 ]]
 
 <section class="ui vertical [[+background.[[+idx]]]] stripe segment">

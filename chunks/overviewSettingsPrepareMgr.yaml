@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf? &subject=`[[+user_access_level]]` &operator=`empty` &then=`` &toPlaceholder=`user_access_level`]]
+[[If? &subject=`[[+user_access_level]]` &operator=`empty` &then=`` &toPlaceholder=`user_access_level`]]
 
 <div class="ui message">[[%romanesco.cb.overview_preview_note? &topic=`manager` &namespace=`romanescobackyard`]]</div>
 <div class="ui hidden divider"></div>

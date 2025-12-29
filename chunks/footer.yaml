@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`footer_visibility`]]`
     &operator=`EQ`
     &operand=`@INHERIT default`
@@ -14,7 +14,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*footer_visibility]]`
     &toPlaceholder=`footer_visibility`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`footer_type`]]`
     &operator=`EQ`
     &operand=`@INHERIT default`
@@ -22,7 +22,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*footer_type]]`
     &toPlaceholder=`footer_type`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`footer_background`]]`
     &operator=`EQ`
     &operand=`@INHERIT`
@@ -55,7 +55,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &field=`content`
         `
     ]]]]
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`footerCopyrightTheme`
         &operator=`iselement`
         &operand=`chunk`

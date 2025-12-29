@@ -23,6 +23,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &subject=`[[+link_text]]`
         &operator=`isnot`
         &operand=`0`
-        &then=`<p>[[$buttonHrefOverview? &classes=`basic` &uid=`[[+unique_idx]]`]]</p>`
+        &then=`<p>[[$buttonHrefOverview? &button_classes=`basic [[+button_classes]]` &uid=`[[+unique_idx]]`]]</p>`
     ]]
 </div>

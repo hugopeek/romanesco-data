@@ -33,7 +33,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &unique_idx=`[[+unique_idx]]`
         ]]
 
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`[[+pattern_template]]`
             &operator=`contains`
             &operand=`Electron`
@@ -52,7 +52,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 `
         ]]]]
 
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`[[+pattern_template]]`
             &operator=`containsnot`
             &operand=`Electron`

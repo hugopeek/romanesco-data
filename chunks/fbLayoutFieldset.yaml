@@ -6,13 +6,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf?
+[[If?
     &subject=`[[+layout_title]]`
     &operator=`notempty`
     &then=`id="fb[[*id]]-[[stripAsAlias? &input=`[[+layout_title]]`]]"`
     &toPlaceholder=`fieldset_id_[[+unique_idx]]`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[+segment_type]]`
     &operator=`isnot`
     &operand=`none`

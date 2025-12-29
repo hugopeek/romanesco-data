@@ -8,7 +8,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <div class="[[+alignment]] content icon">
     <[[+level]] class="ui [[+title_classes]] centered icon header">
-        [[$overviewRowIconBasic? &uid=`[[+unique_idx]]`]]
+        <span class="[[+icon_classes]]">
+            [[$overviewRowIconBasic? &uid=`[[+unique_idx]]`]]
+        </span>
         <span class="content">
             [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
             [[If?

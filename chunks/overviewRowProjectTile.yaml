@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                 &subject=`[[+link_text]]`
                 &operator=`isnot`
                 &operand=`0`
-                &then=`[[$buttonHrefOverview? &classes=`basic inverted` &uid=`[[+unique_idx]]`]]`
+                &then=`[[$buttonHrefOverview? &button_classes=`basic [[+button_classes]]` &uid=`[[+unique_idx]]`]]`
             ]]
         </div>
     </div>

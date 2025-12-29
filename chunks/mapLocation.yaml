@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <div id="[[+map_id:stripAsAlias:empty=`map-[[+unique_idx]]`]]" class="map"></div>
 
-[[modifiedIf?
+[[If?
     &subject=`[[+marker_address:stripString=`,`:stripString=`.`]]`
     &operator=`numeric`
     &then=`[[+marker_address]]`

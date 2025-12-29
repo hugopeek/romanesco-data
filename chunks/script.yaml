@@ -11,7 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &component=`custom`
     &inlineJS=`<script defer src="[[++romanesco.semantic_js_path]]/site[[+minify:empty=``]][[+cache_buster_js:empty=``]].js"></script>`
 ]]
-[[[[modifiedIf?
+[[[[If?
     &subject=`footerAdditional`
     &operator=`iselement`
     &operand=`chunk`

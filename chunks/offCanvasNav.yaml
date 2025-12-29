@@ -16,7 +16,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </button>
     </div>
 
-    [[[[++navbar_level:lte=`1`:then=`$mainNavItemsAccordion? &level=`3``]]]]
+    [[[[If?
+        &subject=`[[++navbar_level]]`
+        &operator=`lte`
+        &operand=`1`
+        &then=`$mainNavItemsAccordion? &level=`3``
+    ]]]]
 
     [[$offCanvasNavItemsTheme]]
 </nav>

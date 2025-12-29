@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[Switch:toPlaceholder=`indicator_class_[[+idx]]`?
+[[Switch?
     &get=`[[+alias]]`
     &c1=`todo`          &do1=`orange`
     &c2=`doing`         &do2=`yellow`
@@ -16,6 +16,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &c6=`problematic`   &do6=`red`
     &c7=`expired`       &do7=`brown`
     &default=`olive`
+    &toPlaceholder=`indicator_class_[[+idx]]`
 ]]
 <tr class="[[+indicator_class_[[+idx]]]]">
     <td>

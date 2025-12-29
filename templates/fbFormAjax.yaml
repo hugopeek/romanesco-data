@@ -9,7 +9,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[!fbLoadAssets?
     &uploadFile=`[[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]`]]`
     &frontendValidation=`1`
-]][[modifiedIf?
+]][[If?
     &subject=`[[*fb_save_form]]`
     &operator=`EQ`
     &operand=`default`
@@ -89,7 +89,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`fb[[*id]]-math:required,`]]
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`fbValidateCustomFields`
             &operator=`iselement`
             &operand=`chunk`

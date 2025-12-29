@@ -9,7 +9,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <nav id="menu" class="ui [[++navbar_size:default=`large`]] secondary [[++navbar_sticky:is=`1`:then=`sticky`]] menu">
     <div class="ui container">
         <div class="item branding">
-            [[[[modifiedIf?
+            [[[[If?
                 &subject=`logoTheme`
                 &operator=`iselement`
                 &operand=`chunk`

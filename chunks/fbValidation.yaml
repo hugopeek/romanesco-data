@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
                     ]]
                 },
                 onSuccess: function(e) {
-                    [[[[modifiedIf?
+                    [[[[If?
                         &subject=`[[++formblocks.antispam_hooks]]`
                         &operator=`contains`
                         &operand=`recaptchav3`

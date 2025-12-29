@@ -10,7 +10,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <html id="[[*context_key]]" lang="[[++cultureKey]]">
 
 <head>
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`headTheme`
         &operator=`iselement`
         &operand=`chunk`
@@ -27,7 +27,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[$headerVertical]]
 
     <main id="main">
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`toolbarNoteTheme`
             &operator=`iselement`
             &operand=`chunk`
@@ -58,7 +58,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </section>
         `]]
 
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`footerTheme`
             &operator=`iselement`
             &operand=`chunk`

@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf?
+[[If?
     &subject=`[[*header_visibility]]`
     &operator=`EQ`
     &operand=`default`
@@ -14,7 +14,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*header_visibility]]`
     &toPlaceholder=`header_visibility`
 ]]
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`header_visibility`]]`
     &operator=`contains`
     &operand=`@INHERIT`
@@ -24,14 +24,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 ]]
 
 <header id="header" class="[[+hero:eq=`0`:then=`without hero`]] [[++navbar_sticky:eq=`0`:then=`non-stick`]]">
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`masthead`
         &operator=`iselement`
         &operand=`chunk`
         &then=`$masthead`
     ]]]]
 
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`mainNavTheme`
         &operator=`iselement`
         &operand=`chunk`

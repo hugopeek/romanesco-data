@@ -38,5 +38,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &subject=`[[+link_text]]`
     &operator=`isnot`
     &operand=`0`
-    &then=`$buttonHrefOverview? &classes=`bottom attached` &uid=`[[+unique_idx]]``
+    &then=`$buttonHrefOverview? &uid=`[[+unique_idx]]``
 ]]]]

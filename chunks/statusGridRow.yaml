@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[Switch:toPlaceholder=`status_priority_[[+id]]`?
+[[Switch?
     &get=`[[+status_progress:eq=`done`:then=`[[+status_health]]`:else=`[[+status_progress]]`]]`
     &c1=`todo`          &do1=`3`
     &c2=`doing`         &do2=`4`
@@ -16,8 +16,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &c6=`problematic`   &do6=`2`
     &c7=`expired`       &do7=`7`
     &default=`0`
+    &toPlaceholder=`status_priority_[[+id]]`
 ]]
-[[Switch:toPlaceholder=`status_class_[[+id]]`?
+[[Switch?
     &get=`[[+status_progress:eq=`done`:then=`[[+status_health]]`:else=`[[+status_progress]]`]]`
     &c1=`todo`          &do1=`orange`
     &c2=`doing`         &do2=`yellow`
@@ -27,6 +28,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &c6=`problematic`   &do6=`red`
     &c7=`expired`       &do7=`brown`
     &default=``
+    &toPlaceholder=`status_class_[[+id]]`
 ]]
 
 [[SeoTabIndexation? &resource=`[[+id]]` &toPlaceholder=`status_indexation_[[+id]]`]]

@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         &then=`[[+main]]`
         &else=`<div class="swiper-wrapper[[+mobile_only:eq=`1`:then=`-mobile`]]">[[+main]]</div>`
     ]]
-    [[[[modifiedIf?
+    [[[[If?
         &subject=`[[+behaviour]]`
         &operator=`containsnot`
         &operand=`navOutside`
@@ -33,7 +33,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     ]]]]
 </div>
 
-[[[[modifiedIf?
+[[[[If?
     &subject=`[[+behaviour]]`
     &operator=`contains`
     &operand=`navOutside`

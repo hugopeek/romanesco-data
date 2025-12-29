@@ -48,7 +48,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
         [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
         [[+math_question:isnot=`0`:then=`fb[[*id]]-math:math,`]]
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`fbValidateCustomFields`
             &operator=`iselement`
             &operand=`chunk`
@@ -84,7 +84,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
         [[*content:containsnot=`type="submit"`:then=`
         <div class="ui [[+padding]] [[+segment_type:ne=`none`:then=`segment`]]">
-            [[[[modifiedIf?
+            [[[[If?
                 &subject=`fbAntiSpamTheme`
                 &operator=`iselement`
                 &operand=`chunk`

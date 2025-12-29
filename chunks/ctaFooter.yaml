@@ -6,7 +6,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[modifiedIf?
+[[If?
     &subject=`[[getRawTVValue? &tv=`footer_cta_background`]]`
     &operator=`EQ`
     &operand=`@INHERIT`
@@ -17,6 +17,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <aside id="final-call" class="ui vertical stripe segment [[setBackground? &background=`[[+footer_cta_background]]`]] cta">
     <div class="ui center aligned main container">
-        [[#[[*footer_cta:empty=`0`]].content]]
+        [[renderResources?
+            &parents=`-1`
+            &resources=`[[*footer_cta]]`
+        ]]
     </div>
 </aside>

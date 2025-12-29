@@ -19,7 +19,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     &parents=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`-1` &else=`[[++romanesco.publication_container_id]]`]]`
     &resources=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`[[+resources]]` &else=`[[+excluded_resources:empty=`null`]]`]]`
-    &limit=`[[modifiedIf? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`[[+cols:textToNumber:mpy=`2`]]` &else=`[[+limit:default=`0`]]`]]`
+    &limit=`[[If? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`[[+cols:textToNumber:mpy=`2`]]` &else=`[[+limit:default=`0`]]`]]`
     &offset=`[[+offset:default=`0`]]`
     &tpl=`overviewRowArticle[[+[[+prefix]].row_type]]`
     &tplWrapper=`overviewWrapper[[+pagination:eq=`1`:then=`Pagination`]]`
@@ -33,5 +33,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
     &show_tags=`[[+show_tags]]`
     [[$overviewSettings? &uid=`[[+prefix]]`]]
-    [[[[+pagination:eq=`1`:then=`$overviewSettingsPagination? &uid=`[[+prefix]]``]]]]
+    [[[[If?
+        &subject=`[[+pagination]]`
+        &operator=`eq`
+        &operand=`1`
+        &then=`$overviewSettingsPagination? &uid=`[[+prefix]]``
+    ]]]]
 ]]

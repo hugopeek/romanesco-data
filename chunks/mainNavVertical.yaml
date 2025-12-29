@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <nav id="menu-vertical" class="ui [[++navbar_size:default=`large`]] secondary vertical [[++navbar_level:lte=`1`:then=`inverted`:else=`accordion`]] menu" role="navigation">
     <div class="item branding">
-        [[[[modifiedIf?
+        [[[[If?
             &subject=`logoTheme`
             &operator=`iselement`
             &operand=`chunk`

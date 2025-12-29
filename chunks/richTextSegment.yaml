@@ -6,12 +6,20 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[+segment_type:notempty=`
-<div class="ui [[+padding]] [[+alignment]] [[+segment_type]] [[+background:setBackground]] text segment">
-    [[+content]]
-</div>
-`:empty=`
-    [[+content]]
-`]]
+[[If?
+    &subject=`[[+segment_type]]`
+    &operator=`notempty`
+    &then=`
+    <div class="ui [[+padding]] [[+alignment]] [[+segment_type]] [[+background:setBackground]] text segment">
+        [[+content]]
+    </div>
+    `
+    &else=`[[+content]]`
+]]
 
-[[[[+content:contains=`</table>`:then=`loadAssets? &component=`table``]]]]
+[[[[If?
+    &subject=`[[+content]]`
+    &operator=`contains`
+    &operand=`</table>`
+    &then=`loadAssets? &component=`table``
+]]]]

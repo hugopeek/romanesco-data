@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 [[+field_type:contains=`multiple`:then=`multiple`:toPlaceholder=`multiple`]]
-[[modifiedIf?
+[[If?
     &subject=`[[+multiple]][[+option_other]]`
     &operator=`eq`
     &operand=`1`
