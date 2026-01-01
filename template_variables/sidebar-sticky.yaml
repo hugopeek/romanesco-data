@@ -2,7 +2,7 @@ id: 147
 type: listbox
 name: sidebar_sticky
 caption: 'Sticky sidebar'
-description: 'To avoid a sticky mess, this behaviour will only be applied to the last element inside the sidebar. In most cases, that''s the submenu. But if you select a CTA, then that will stick instead.'
+description: "To avoid a sticky mess, this behaviour will only be applied to the last element inside the sidebar. In most cases, that's the submenu. But if you select a CTA, then that will stick instead."
 category: _Sidebar
 elements: 'Yes==1||No==0||System default==default'
 rank: 1

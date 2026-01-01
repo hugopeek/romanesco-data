@@ -2,7 +2,7 @@ id: 140
 type: listbox
 name: pagination_scroll_top
 caption: 'Scroll back to top after using pagination'
-description: 'This is enabled by default, to prevent ending up in empty space if the content of the next page is shorter. Disable this if you''re using multiple paginated overviews on the same page.'
+description: "This is enabled by default, to prevent ending up in empty space if the content of the next page is shorter. Disable this if you're using multiple paginated overviews on the same page."
 category: _Navigation
 elements: On==1||Off==0
 rank: 15

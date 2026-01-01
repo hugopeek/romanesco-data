@@ -2,7 +2,7 @@ id: 184
 type: hidden
 name: reading_time
 caption: 'Reading time'
-description: 'Indication of the time needed to read through the full article. This value is set automatically by the ReadingTime plugin. Please don''t change it manually!'
+description: "Indication of the time needed to read through the full article. This value is set automatically by the ReadingTime plugin. Please don't change it manually!"
 category: _About
 elements: ''
 rank: 99

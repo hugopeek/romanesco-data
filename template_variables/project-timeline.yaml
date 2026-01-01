@@ -2,7 +2,7 @@ id: 151
 type: migxdb
 name: project_timeline
 caption: 'Project timeline'
-description: 'Keep track of the project''s progress and see what''s coming up next. You can also link to related project files and resources from here, so you can find them back more easily.'
+description: "Keep track of the project's progress and see what's coming up next. You can also link to related project files and resources from here, so you can find them back more easily."
 category: _Timeline
 elements: ''
 rank: 1

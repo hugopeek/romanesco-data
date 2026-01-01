@@ -2,7 +2,7 @@ id: 127
 type: text
 name: overview_icon_svg_credit
 caption: 'Icon credit (SVG)'
-description: 'Mention the designer of this icon here, so they can be credited appropriately. You need to do this if you''re using icons published under a CC license, for example from Noun Project.'
+description: "Mention the designer of this icon here, so they can be credited appropriately. You need to do this if you're using icons published under a CC license, for example from Noun Project."
 category: '_Overview - Icon'
 elements: ''
 rank: 1

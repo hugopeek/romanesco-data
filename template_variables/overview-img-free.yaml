@@ -3,7 +3,7 @@ source: 7
 type: imageplus
 name: overview_img_free
 caption: 'Image (Free)'
-description: 'This image doesn''t have a fixed aspect ratio or any minimum dimensions. Use it as you see fit. Cropping is optional. Be aware that mixing aspect ratios will result in different image sizes!'
+description: "This image doesn't have a fixed aspect ratio or any minimum dimensions. Use it as you see fit. Cropping is optional. Be aware that mixing aspect ratios will result in different image sizes!"
 category: '_Overview - Image'
 elements: ''
 rank: 10

@@ -2,7 +2,7 @@ id: 183
 type: superboxselect
 name: tag_groups
 caption: 'Tag cloud'
-description: 'Choose from which groups you''d like the tags to be displayed in a tag cloud. This value is inherited on child pages.'
+description: "Choose from which groups you'd like the tags to be displayed in a tag cloud. This value is inherited on child pages."
 category: _About
 elements: ''
 rank: 10
