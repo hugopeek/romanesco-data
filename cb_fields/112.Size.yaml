@@ -3,7 +3,7 @@ parent: 109
 parent_properties: '{"key":"size","width":"30"}'
 name: Size
 description: ''
-content_desc: 'CSS background-size value, for example: 50rem. The default is ''cover''.'
+content_desc: "CSS background-size value, for example: 50rem. The default is 'cover'."
 sortorder: 2
 icon: paragraph
 template: '[[+value]]'

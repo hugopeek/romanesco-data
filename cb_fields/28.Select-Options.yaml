@@ -3,7 +3,7 @@ parent_properties: null
 input: repeater
 name: 'Select Options'
 description: ''
-content_desc: 'The options can be rendered as single select (radio buttons), multi select (checkboxes) or dropdown. You can submit a value that is different from the label, with the Value in HTML option. Good practice if you''re planning to use the value in an automated process.'
+content_desc: "The options can be rendered as single select (radio buttons), multi select (checkboxes) or dropdown. You can submit a value that is different from the label, with the Value in HTML option. Good practice if you're planning to use the value in an automated process."
 sortorder: 59
 category: 7
 icon: checkbox

@@ -3,7 +3,7 @@ parent_properties: null
 input: chunk
 name: 'Table of Contents'
 description: ''
-content_desc: 'The ToC menu contains all headings on the page with an anchor (an ID in HTML). You can attach an anchor to all headings with the ''Automatic anchors'' TV, or per heading by manually activating the anchor in their settings menu.'
+content_desc: "The ToC menu contains all headings on the page with an anchor (an ID in HTML). You can attach an anchor to all headings with the 'Automatic anchors' TV, or per heading by manually activating the anchor in their settings menu."
 sortorder: 31
 category: 5
 icon: tableofcontents
