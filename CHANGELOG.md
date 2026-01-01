@@ -8,6 +8,7 @@ Includes:
 - [Romanesco Backyard 1.0.0-rc3](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc3)
 
 ContentBlocks:
+- Fix issues with gallery images not rendering properly
 - Enable previews of form elements
 
 Operations:

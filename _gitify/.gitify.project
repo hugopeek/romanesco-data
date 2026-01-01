@@ -299,13 +299,13 @@ data:
 
     # Collections
     collections_settings:
-        package: collections
         namespace: Collections
         model: Collections\Model
         class: Collections\Model\CollectionSetting
         primary:
             - id
             - collection
+        package: collections
     collections_templates:
         class: Collections\Model\CollectionTemplate
         primary:
@@ -346,13 +346,13 @@ data:
 
     # Tagger
     tagger_groups:
-        package: tagger
         namespace: Tagger
         model: Tagger\Model
         class: Tagger\Model\TaggerGroup
         primary:
             - id
             - name
+        package: tagger
     tagger_tags:
         class: Tagger\Model\TaggerTag
         primary:
@@ -393,13 +393,13 @@ data:
 
     # Romanesco
     romanesco_tasks:
-        package: romanescobackyard
         namespace: FractalFarming\Romanesco
         model: FractalFarming\Romanesco\Model
         class: FractalFarming\Romanesco\Model\Task
         primary:
             - id
             - title
+        package: romanescobackyard
     romanesco_task_comments:
         class: FractalFarming\Romanesco\Model\TaskComment
         primary:
