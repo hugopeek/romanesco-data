@@ -20,8 +20,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &else=`[[*fb_form_layout:isnot=`inline`:then=`fieldset`]]`
     &toPlaceholder=`segment_parent`
 ]]
-[[+force_segment:eq=`1`:then=`segment`:else=`[[+segment_parent]]`:toPlaceholder=`segment`]]
-
+[[If?
+    &subject=`[[+force_segment]]`
+    &operator=`eq`
+    &operand=`1`
+    &then=`segment`
+    &else=`[[+segment_parent]]`
+    &toPlaceholder=`segment_parent`
+]]
 <fieldset [[+fieldset_id_[[+unique_idx]]]] class="ui [[+padding]] [[+segment]] [[+background:setBackground]]">
     [[+legend:notempty=`<legend class="ui [[+form_size]] header">[[+legend]]</legend>`]]
     [[*fb_form_layout:is=`inline`:then=`<span class="equal width fields">`]]
