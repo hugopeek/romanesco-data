@@ -1,0 +1,11 @@
+id: 685
+name: headLoadCriticalCSS
+description: 'Fetches the generated critical CSS from the file defined in critical_css_uri TV, and parses it inline.'
+category: a_glob_head
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<style>[[*critical_css_uri:getFileContent]]</style>
+<link rel="stylesheet" href="[[++romanesco.semantic_dist_path]]/semantic[[+minify]][[+cache_buster_css]].css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="[[++romanesco.custom_css_path]]/site[[+minify]][[+cache_buster_css]].css" media="print" onload="this.media='all'">
