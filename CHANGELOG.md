@@ -5,7 +5,7 @@ Released on ...
 
 Includes:
 - [Romanesco Patterns 1.0.0-rc3](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc3)
-- [Romanesco Backyard 1.0.0-rc3](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc3)
+- [Romanesco Backyard 1.0.0-rc4](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc4)
 
 ContentBlocks:
 - Replace modifiedIf references with If in CB templates
