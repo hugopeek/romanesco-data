@@ -33,5 +33,13 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             &action_key=`fb[[*id]]`
         `
 ]]]]
+[[[[If?
+    &subject=`[[++romanesco.dev_mode:empty=`[[++formblocks.antispam_hooks]]`]]`
+    &operator=`contains`
+    &operand=`fbValidateTurnstile`
+    &then=`$turnstileOnSubmit`
+]]]]
+
 [[!+fb[[*id]].error.recaptchav2_error:replace=`span==div`]]
 [[!+fb[[*id]].error.recaptchav3_error:replace=`span==div`]]
+[[!+fb[[*id]].error.turnstile:prepend=`<div class="ui visible error message">`:append=`</div>`]]

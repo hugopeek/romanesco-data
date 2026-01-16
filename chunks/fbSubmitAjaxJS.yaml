@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 e.preventDefault();
-var formData = $(this).serialize();
+const formData = $(this).serialize();
 
 $.ajax({
     type: 'POST',
@@ -32,21 +32,28 @@ $.ajax({
         $('.ui.form#form-[[*alias]] .dimmer').addClass('active');
 
         setTimeout(function() {
-            //$('.ui.form#form-[[*alias]] > div').replaceWith(message);
-
             $('.ui.form#form-[[*alias]] .dimmer').removeClass('active');
             $('.ui.form#form-[[*alias]]').form('clear');
+
+            if (window.turnstile) {
+                turnstile.reset();
+            }
 
             $('body')
                 .toast({
                     message: message,
                     class: 'success',
-                    //showIcon: 'exclamation circle',
-                    //displayTime: 0,
-                    closeIcon: true
+                    showIcon: 'checkmark',
+                    displayTime: 'auto',
+                    minDisplayTime: 3000,
+                    wordsPerMinute: 80,
+                    closeIcon: true,
+                    className: {
+                        icon: 'icon'
+                    }
                 })
             ;
-        }, 2000)
+        }, 1500)
     }
     else {
         console.log(data.errors);
@@ -70,9 +77,12 @@ $.ajax({
             .toast({
                 message: message,
                 class: 'error',
-                //showIcon: 'exclamation circle',
-                //displayTime: 0,
-                closeIcon: true
+                showIcon: 'exclamation circle',
+                displayTime: 0,
+                closeIcon: true,
+                className: {
+                    icon: 'icon'
+                }
             })
         ;
     }
