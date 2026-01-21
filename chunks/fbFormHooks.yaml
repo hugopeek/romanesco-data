@@ -1,0 +1,20 @@
+id: 696
+name: fbFormHooks
+description: 'A dynamic list of hooks, to be executed after the form passes validation. Part of the FormIt calls in fbForm and fbFormAjax.'
+category: a_fb_form
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
+[[cbGetFieldContent:notempty=`AjaxUploadRequired,`? &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]` &fieldSettingFilter=`field_required==1`]]
+[[cbHasField? &field=`[[++formblocks.cb_input_file_id]]` &then=`fbProcessUploads,`]]
+[[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`math,`]]
+[[++romanesco.dev_mode:isnot=`1`:then=`[[++formblocks.antispam_hooks:append=`,`]]`]]
+[[+save_form:eq=`1`:then=`FormItSaveForm,`]]
+[[*fb_hooks:append=`,`]]
+[[If? &subject=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]` &operator=`notempty` &then=`email,`]]
+[[*fb_store_attachments:replace=`default==[[++formblocks.store_attachments]]`:isnot=`1`:then=`AjaxUploadRemove,`]] [[- BUG: gives warning if setting is off and AjaxUpload is not installed.]]
+[[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
+[[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
+[[*fb_posthooks:append=`,`]]

@@ -1,0 +1,19 @@
+id: 697
+name: fbFormValidate
+description: 'A dynamic list of field names marked for backend validation. Part of the FormIt calls in fbForm and fbFormAjax.'
+category: a_fb_form
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[fbValidateProcessJSON? &formID=`[[*id]]`]]
+[[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
+[[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
+[[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`fb[[*id]]-math:required,`]]
+[[[[If?
+    &subject=`fbValidateCustomFields`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`$fbValidateCustomFields`
+]]]][[++formblocks.honeypot_field:notempty=`,
+fb[[*id]]-[[++formblocks.honeypot_field]]:blank`]]

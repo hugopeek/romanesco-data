@@ -1,14 +1,11 @@
-id: 441
-name: fbMathQuestionProperties
-description: 'These properties are added to the FormIt call if a Math Question CB is present in the form.'
-category: a_fb_properties
+id: 695
+name: fbFormPreHooks
+description: 'A dynamic list of pre-hooks, to be executed on page load. Part of the FormIt calls in fbForm and fbFormAjax.'
+category: a_fb_form
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
 
-&mathField=`fb[[*id]]-math`
-&mathMinRange=`[[+math_min_range]]`
-&mathMaxRange=`[[+math_max_range]]`
-&mathOp1Field=`fb[[*id]]-op1`
-&mathOp2Field=`fb[[*id]]-op2`
-&mathOperatorField=`fb[[*id]]-operator`
+[[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`Formit2AjaxUpload,`]]
+[[+multiple_steps:notempty=`fbSetStoredValues,`]]
+[[*fb_prehooks:append=`,`]]

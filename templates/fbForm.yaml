@@ -39,76 +39,20 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[++formblocks.ajax_mode:eq=`1`:then=`-`:else=`!`]]FormIt?
     &preHooks=`
-        [[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`Formit2AjaxUpload,`]]
-        [[+multiple_steps:notempty=`fbSetStoredValues,`]]
-        [[*fb_prehooks:append=`,`]]
+        [[$fbFormPreHooks]]
         fbEmptyHook
     `
     &renderHooks=`[[*fb_renderhooks]]`
     &hooks=`
-        spam,
-        [[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
-        [[cbGetFieldContent:notempty=`AjaxUploadRequired,`? &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]` &fieldSettingFilter=`field_required==1`]]
-        [[cbHasField? &field=`[[++formblocks.cb_input_file_id]]` &then=`fbProcessUploads,`]]
-        [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`math,`]]
-        [[++romanesco.dev_mode:isnot=`1`:then=`[[++formblocks.antispam_hooks:append=`,`]]`]]
-        [[+save_form:eq=`1`:then=`FormItSaveForm,`]]
-        [[*fb_hooks:append=`,`]]
-        [[If? &subject=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]` &operator=`notempty` &then=`email,`]]
-        [[*fb_store_attachments:replace=`default==[[++formblocks.store_attachments]]`:isnot=`1`:then=`AjaxUploadRemove,`]]
-        [[*fb_autoresponder_toggle:eq=`1`:then=`FormItAutoResponder,`]]
-        [[++formblocks.formsource:eq=`1`:then=`formsource_reset,`]]
-        [[*fb_posthooks:append=`,`]]
+        [[$fbFormHooks]]
         redirect
     `
 
-    &emailTpl=`[[*fb_email_template:empty=`fbEmail`]]`
-    &emailTo=`[[*fb_email_to_dynamic:empty=`[[*fb_email_to]]`]]`
-    &emailCC=`[[*fb_email_cc]]`
-    &emailBCC=`[[*fb_email_bcc]]`
-    &emailFrom=`[[*fb_email_from:empty=`[[++emailsender]]`]]`
-    &emailFromName=`[[*fb_email_from_name:empty=`[[++site_name]]`]]`
-    &emailSubject=`[[*fb_email_subject:empty=`[[%formblocks.email.subject]]`]]`
-    [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`&emailReplyTo=`[[+fb[[*id]]-email]]``]]
-
-    [[cbGetFieldContent?
-        &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]`
-        &tpl=`fbFileUploadProperties`
-    ]]
-    [[cbGetFieldContent?
-        &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
-        &tpl=`fbMathQuestionProperties`
-    ]]
-
-    [[++formblocks.antispam_hooks:contains=`recaptchav3`:then=`
-    &recaptchav3.action_key=`fb[[*id]]`
-    &recaptchav3.token_key=`token-[[*id]]`
-    `]]
-
-    [[*fb_autoresponder_toggle:eq=`1`:then=`
-    &fiarTpl=`[[*fb_autoresponder_template:empty=`fbAutoresponder`]]`
-    &fiarToField=`fb[[*id]]-email`
-    &fiarSender=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
-    &fiarFrom=`[[*fb_autoresponder_from:empty=`[[++emailsender]]`]]`
-    &fiarFromName=`[[*fb_autoresponder_from_name:empty=`[[++site_name]]`]]`
-    &fiarReplyTo=`[[*fb_autoresponder_reply_to:empty=`[[++client_email:empty=`[[++emailsender]]`]]`]]`
-    &fiarSubject=`[[*fb_autoresponder_subject:empty=`[[%formblocks.autoresponder.subject]]`]]`
-    `]]
+    [[$fbEmailProperties]]
 
     &customValidators=`[[$fbCustomValidators]]`
-    &validate=`
-        [[!fbValidateProcessJSON? &formID=`[[*id]]`]]
-        [[cbHasField? &field=`[[++formblocks.cb_input_email_id]]` &then=`fb[[*id]]-email:email:required,`]]
-        [[cbHasField? &field=`[[++formblocks.cb_accept_terms_id]]` &then=`fb[[*id]]-accept-terms:required,`]]
-        [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`fb[[*id]]-math:required,`]]
-        [[[[If?
-            &subject=`fbValidateCustomFields`
-            &operator=`iselement`
-            &operand=`chunk`
-            &then=`$fbValidateCustomFields`
-        ]]]][[++formblocks.honeypot_field:notempty=`,
-        fb[[*id]]-[[++formblocks.honeypot_field]]:blank`]]`
-    &errTpl=`<span class="help error">[[+error]]</span>`
+    &validate=`[[$fbFormValidate]]`
+    &errTpl=`[[$fbFormErrorTpl]]`
     &placeholderPrefix=`fb[[*id]].`
     &submitVar=`fb[[*id]]-submit`
     &redirectTo=`[[+redirect_to]]`
