@@ -7,6 +7,9 @@ Includes:
 - [Romanesco Patterns 1.0.0-rc3](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc3)
 - [Romanesco Backyard 1.0.0-rc4](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc4)
 
+Defaults:
+- Add settings for Cloudflare Turnstile form protection
+
 ContentBlocks:
 - Replace modifiedIf references with If in CB templates
 - Fix issues with gallery images not rendering properly
