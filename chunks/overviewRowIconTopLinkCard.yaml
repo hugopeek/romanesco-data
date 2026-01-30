@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
             [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
             [[If?
                 &subject=`[[+show_subtitle]]`
-                &operator=`EQ`
+                &operator=`eq`
                 &operand=`1`
                 &then=`<span class="sub header">[[+overview_subtitle:empty=`[[+longtitle:empty=`[[+pagetitle]]`]]`]]</span>`
             ]]
@@ -25,7 +25,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[If?
     &subject=`[[+show_introtext]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`1`
     &then=`<div class="[[+alignment]] content">[[$introtextDescription:stripTags=`<p><div>`? &uid=`[[+unique_idx]]`]]</div>`
 ]]

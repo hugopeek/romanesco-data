@@ -28,7 +28,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         </div>
         [[If?
             &subject=`[[+show_introtext]]`
-            &operator=`EQ`
+            &operator=`eq`
             &operand=`1`
             &then=`<div class="description">[[$introtextSingleParagraph:ellipsis=`140`? &uid=`[[+unique_idx]]_[[+idx]]`]]</div>`
         ]]

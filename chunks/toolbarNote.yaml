@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[If?
     &subject=`[[*toolbar_visibility]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`default`
     &then=`[[++toolbar_visibility_default]]`
     &else=`[[*toolbar_visibility]]`

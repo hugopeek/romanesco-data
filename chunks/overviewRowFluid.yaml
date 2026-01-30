@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[If?
     &subject=`[[+idx:mod]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`0`
     &then=`[[+background_even]]`
     &else=`[[+background_odd]]`
@@ -16,7 +16,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 ]]
 [[If?
     &subject=`[[+cols_interchange]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`1`
     &then=`[[+idx:mod:eq=`0`:then=`computer reversed tablet reversed`]]`
     &toPlaceholder=`interchange.[[+idx]]`

@@ -21,7 +21,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+pattern_template]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`patternLayoutTemplate`
     &then=`
         Rowboat?
@@ -34,7 +34,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+pattern_template]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`patternLayoutFormula`
     &then=`
         Rowboat?
@@ -47,7 +47,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+pattern_template]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`patternLayoutComputation`
     &then=`
         Rowboat?
@@ -60,7 +60,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+pattern_template]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`patternLayoutBosonField`
     &then=`
         Rowboat?
@@ -73,7 +73,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+pattern_template]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`patternLayoutBosonLayout`
     &then=`
         Rowboat?

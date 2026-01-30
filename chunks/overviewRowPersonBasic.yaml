@@ -12,7 +12,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     <a href="[[~[[+id]]]]">[[+[[+title_field]]:empty=`[[+pagetitle]]`]]</a>
     [[If?
         &subject=`[[+show_subtitle]]`
-        &operator=`EQ`
+        &operator=`eq`
         &operand=`1`
         &then=`<span class="sub header">[[+person_jobtitle:empty=`[[+longtitle]]`]]</span>`
     ]]
@@ -20,7 +20,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[[[If?
     &subject=`[[+show_introtext]]`
-    &operator=`EQ`
+    &operator=`eq`
     &operand=`1`
     &then=`$introtextDescription? &uid=`[[+unique_idx]]``
 ]]]]

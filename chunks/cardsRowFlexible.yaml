@@ -8,7 +8,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[If?
     &subject=`[[+box_type]][[+link:eq=``:then=`break`]]`
-    &operator=`eq`
+    &operator=`is`
     &operand=`link`
     &then=`
     <a href="[[+link]]" class="[[+emphasize:eq=`1`:then=`ui raised`]] [[+box_type]] card">

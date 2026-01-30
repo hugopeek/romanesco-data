@@ -17,7 +17,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &toPlaceholder=`show_other`
 ]]
 
-<div class="[[+field_width:after=` wide `]][[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
+<div class="[[+field_width:after=` wide `]][[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[If? &subject=`[[+field_required]]` &operator=`eq` &operand=`1` &then=`required`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
     <label for="[[+name]]">[[+field_name]]</label>
     <select name="[[+name]][[+multiple:notempty=`[]`]]" id="[[+name]]" class="ui [[+field_type:empty=`dropdown`]] [[+option_other:is=`1`:then=`with other`]]" [[+multiple]]>
         <option value="">[[+option_placeholder]]</option>

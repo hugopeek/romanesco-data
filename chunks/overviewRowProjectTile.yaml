@@ -11,7 +11,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         <div class="center">
             [[If?
                 &subject=`[[+show_subtitle]]`
-                &operator=`EQ`
+                &operator=`eq`
                 &operand=`1`
                 &then=`[[$headingOverviewSubtitle? &classes=`inverted` &uid=`[[+unique_idx]]`]]`
                 &else=`[[$headingOverview? &classes=`inverted` &uid=`[[+unique_idx]]`]]`

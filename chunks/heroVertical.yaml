@@ -9,9 +9,16 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <div id="hero" class="ui link items">
     [[[[[[If?
         &subject=`[[getRawTVValue? &tv=`header_cta`]]`
-        &operator=`EQ`
+        &operator=`is`
         &operand=`@INHERIT`
-        &then=`#[[*parent]].header_inheritance:contains=`inherit_cta`:then=`$ctaHeaderVertical`:else=```
+        &then=`
+            If?
+                &subject=`[[#[[*parent]].header_inheritance]]`
+                &operator=`contains`
+                &operand=`inherit_cta`
+                &then=`$ctaHeaderVertical`
+                &else=``
+            `
         &else=`
             If?
                 &subject=`[[getRawTVValue? &tv=`header_cta`]]`

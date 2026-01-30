@@ -13,7 +13,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
         [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
         [[If?
             &subject=`[[+show_subtitle]]`
-            &operator=`EQ`
+            &operator=`eq`
             &operand=`1`
             &then=`<span class="sub header">[[+person_jobtitle:empty=`[[+longtitle]]`]]</span>`
         ]]

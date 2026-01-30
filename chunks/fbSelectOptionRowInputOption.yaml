@@ -10,7 +10,7 @@ properties: 'a:3:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[!fbStripNonAlpha:toPlaceholder=`value_[[+idx]]`? &input=`[[+[[+valueType:empty=`name`]]]]`]]
 [[!If:toPlaceholder=`checkbox_array`?
     &subject=`[[+field_type]]`
-    &operator=`EQ`
+    &operator=`is`
     &operand=`checkbox`
     &then=`[]`
     &else=``

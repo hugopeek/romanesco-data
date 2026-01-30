@@ -12,7 +12,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     </p>
     [[[[If?
         &subject=`[[+show_rating]]`
-        &operator=`EQ`
+        &operator=`eq`
         &operand=`1`
         &then=`$infoRatingStars? &uid=`[[+unique_idx]]``
     ]]]]
@@ -23,7 +23,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[$infoNamePerson]]
     [[[[If?
         &subject=`[[+show_subtitle]]`
-        &operator=`EQ`
+        &operator=`eq`
         &operand=`1`
         &then=`<span class="meta"><em>[[+organization_name]]</em></span>`
     ]]]]

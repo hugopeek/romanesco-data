@@ -17,4 +17,4 @@ properties: 'a:3:{s:12:"availability";a:7:{s:4:"name";s:12:"availability";s:4:"d
     &sortBy=`menuindex`
     &sortDir=`ASC`
     &tvFilters=`cta_availability==%[[+availability]]%`
-]]
+]]||Disable CTA==0
