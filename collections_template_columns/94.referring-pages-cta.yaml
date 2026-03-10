@@ -3,6 +3,7 @@ template: 3
 label: 'Used on pages'
 name: referring_pages_cta
 width: 80
+renderer: renderHTML
 php_renderer: renderReferringPages
 position: 5
 sort_type: null

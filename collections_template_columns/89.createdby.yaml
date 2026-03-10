@@ -1,7 +1,7 @@
 id: 89
 template: 14
 label: Author
-name: tv_author_id
+name: createdby
 width: 50
 php_renderer: renderUserName
 position: 4

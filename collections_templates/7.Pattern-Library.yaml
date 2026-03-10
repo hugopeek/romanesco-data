@@ -7,7 +7,7 @@ child_resource_type: modDocument
 tab_label: collections.library.children
 button_label: collections.library.children.create
 context_menu: 'view,edit,quickupdate,duplicate,publish,unpublish,-,delete,undelete,remove,-,unlink'
-buttons: 'view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink,changeparent'
+buttons: 'view,edit,duplicate,publish:orange,unpublish,delete,undelete,remove,unlink'
 back_to_collection_label: collections.library.children.back_to_collection_label
 child_hide_from_menu: null
 child_published: null
