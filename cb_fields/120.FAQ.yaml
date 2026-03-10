@@ -8,7 +8,7 @@ sortorder: 69
 category: 1
 icon: question-circle-o
 icon_type: custom
-template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &content=`[[+content]]`\n    &padding=`[[+padding]]`\n    &idx=`[[+idx]]`\n]]"
+template: "[[$[[+layout_type]]RowBasic?\n    &heading=`[[+heading]]`\n    &level=`[[+heading_level]]`\n    &content=`[[+content]]`\n    &padding=`[[+padding]]`\n    &alignment=``\n    &idx=`[[+idx]]`\n]]"
 properties: '{"wrapper_template":"[[$[[+layout_type]]Outer?\n    &rows=`[[+rows]]`\n    &total=`[[+total]]`\n    &accordion_type=`[[+accordion_type]]`\n    &padding=`[[+padding]]`\n    &unique_idx=`[[+unique_idx]]`\n    &layout_idx=`[[+layout_idx]]`\n]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
 availability: '[]'
 layouts: ''
