@@ -12,14 +12,14 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`$fbPrepareSteps`
 ]]]]
 
-[[[[++formblocks.ajax_mode:eq=`1`:then=`renderResources`:else=`!$fbRenderFormWrapper`]]?
+[[[[++formblocks.ajax_mode:eq=`1`:then=``:else=`!`]]renderResources?
     &parents=`-1`
     &resources=`[[+form_id]]`
 
     &form_id=`[[+form_id]]`
-    &current_id=`[[*id]]`
-    &current_pagetitle=`[[*pagetitle]]`
-    &current_menutitle=`[[*menutitle]]`
+    &host_id=`[[*id]]`
+    &host_pagetitle=`[[*pagetitle]]`
+    &host_menutitle=`[[*menutitle]]`
     &form_size=`[[+form_size]]`
     &form_layout=`[[+form_layout]]`
     &segment_type=`[[+segment_type]]`

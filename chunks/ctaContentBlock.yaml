@@ -10,6 +10,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     [[renderResources?
         &parents=`-1`
         &resources=`[[+cta_id]]`
-        &unique_idx=`[[+unique_idx]]`
+        &cta_uid=`[[+unique_idx]]`
+
+        &host_id=`[[*id]]`
+        &host_pagetitle=`[[*pagetitle]]`
+        &host_menutitle=`[[*menutitle]]`
     ]]
 </div>
