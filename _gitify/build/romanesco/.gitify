@@ -441,7 +441,6 @@ packages:
             #- migx-3.0.5-beta
             - pdotools-3.0.2-pl
             - pthumb-2.3.3-pl
-            - renderresources-1.0.2-pl
             - rowboat-1.1.0-pl
             - simplesearch-3.1.0-pl
             - smartrouting-1.0.5-pl
@@ -453,6 +452,6 @@ packages:
         credential_file: '.modmore.com.key'
         packages:
             - clientconfig-2.5.0-pl
-            - contentblocks-1.14.2-pl
+            - contentblocks-1.15.0-rc2
             - quickstartbuttons-1.4.0-pl
-            - redactor-3.3.0-pl
+            - redactor-3.4.2-pl
