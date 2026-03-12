@@ -1,7 +1,7 @@
 # Changelog for the Romanesco Soil data extract
 
 ## v1.21.0
-Released on March 10, 2026
+Released on March 12, 2026
 
 Includes:
 - [Romanesco Patterns 1.0.0-rc3](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc3)
@@ -9,6 +9,9 @@ Includes:
 
 Defaults:
 - Add settings for Cloudflare Turnstile form protection
+
+Collections:
+- Add preview to global backgrounds Collections grid
 
 ContentBlocks:
 - Remove alignment option from FAQ template

@@ -1,0 +1,8 @@
+id: 96
+template: 11
+label: Preview
+name: alias
+width: 80
+renderer: globalBackgroundPreview
+position: 2
+sort_type: null

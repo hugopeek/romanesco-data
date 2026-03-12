@@ -2,6 +2,7 @@ id: 67
 template: 11
 label: description
 name: description
+hidden: 1
 width: 80
-position: 2
+position: 3
 sort_type: null

@@ -6,5 +6,5 @@ sortable: 1
 width: 20
 editor: rm-visibility-boolean
 renderer: booleanRendererVisibility
-position: 4
+position: 5
 sort_type: 'SIGNED INTEGER'
