@@ -7,4 +7,4 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 <strong>[[+field_name]]:</strong><br>
-[[+fb[[+id]]-uploads:replace=`,==<br>`:empty=``]]<br><br>
+[[+[[+id:md5]][[+field_type_idx]]:replace=`,==<br>`:empty=``]]<br><br>
