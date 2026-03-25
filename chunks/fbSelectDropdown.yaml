@@ -7,9 +7,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
-[[+field_type:contains=`multiple`:then=`multiple`:toPlaceholder=`multiple`]]
+[[+field_type:contains=`multiple`:then=`multiple`:toPlaceholder=`[[+name]]-multiple`]]
 [[If?
-    &subject=`[[+multiple]][[+option_other]]`
+    &subject=`[[+[[+name]]-multiple]][[+option_other]]`
     &operator=`eq`
     &operand=`1`
     &then=`1`
@@ -19,7 +19,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <div class="[[+field_width:after=` wide `]][[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[If? &subject=`[[+field_required]]` &operator=`eq` &operand=`1` &then=`required`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
     <label for="[[+name]]">[[+field_name]]</label>
-    <select name="[[+name]][[+multiple:notempty=`[]`]]" id="[[+name]]" class="ui [[+field_type:empty=`dropdown`]] [[+option_other:is=`1`:then=`with other`]]" [[+multiple]]>
+    <select name="[[+name]][[+[[+name]]-multiple:notempty=`[]`]]" id="[[+name]]" class="ui [[+field_type:empty=`dropdown`]] [[+option_other:is=`1`:then=`with other`]]" [[+[[+name]]-multiple]]>
         <option value="">[[+option_placeholder]]</option>
         [[+rows]]
         [[+show_other:is=`1`:then=`

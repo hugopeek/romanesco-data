@@ -7,7 +7,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 -----
 
 [[cbHasField? &field=`[[++formblocks.cb_input_file_multiple_id]]` &then=`AjaxUpload2Formit,AjaxUploadAttachments,`]]
-[[cbGetFieldContent:notempty=`AjaxUploadRequired,`? &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]` &fieldSettingFilter=`field_required==1`]]
+[[cbGetFieldContent:notempty=`AjaxUploadRequired,`? &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]` &fieldSettingFilter=`field_required==1` &limit=`1`]]
 [[cbHasField? &field=`[[++formblocks.cb_input_file_id]]` &then=`fbProcessUploads,`]]
 [[cbHasField? &field=`[[++formblocks.cb_math_question_id]]` &then=`math,`]]
 [[++romanesco.dev_mode:isnot=`1`:then=`[[++formblocks.antispam_hooks:append=`,`]]`]]

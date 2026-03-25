@@ -24,10 +24,10 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
     &then=`&spamEmailFields=`[[+fb[[*id]]-email]]``
 ]]
 
-[[cbGetFieldContent?
+[[[[cbHasField?
     &field=`[[++formblocks.cb_input_file_multiple_id:empty=`-1`]]`
-    &tpl=`fbFileUploadProperties`
-]]
+    &then=`$fbFileUploadProperties`
+]]]]
 [[cbGetFieldContent?
     &field=`[[++formblocks.cb_math_question_id:empty=`-1`]]`
     &tpl=`fbMathQuestionProperties`

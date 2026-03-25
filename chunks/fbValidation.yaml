@@ -8,42 +8,68 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <script>
     window.addEventListener('DOMContentLoaded', function() {
-        $('.ui.form#form-[[*alias]]')
-            .form({
-                on: '[[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:default=`submit`]]',
-                [[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:is=`blur`:then=`inline: true,`]]
-                fields: {
-                    [[fbFormReport:strip?
-                        &formID=`[[*id]]`
-                        &tplPrefix=`fbValidationRow_`
-                        &requiredOnly=`1`
-                    ]]
-                },
-                onSuccess: function(e) {
-                    [[[[If?
-                        &subject=`[[++formblocks.antispam_hooks]]`
-                        &operator=`contains`
-                        &operand=`recaptchav3`
-                        &then=`
-                            recaptchav3_render?
-                                &tpl=`recaptchaOnSuccessV3`
-                                &token_key=`token-[[*id]]`
-                                &action_key=`fb[[*id]]`
-                            `
-                    ]]]]
+        const $form = $('.ui.form#form-[[*alias]]');
 
-                    [[- RECAPTCHA IS CURRENTLY INCOMPATIBLE WITH AJAX MODE
-                        So if ReCaptcha is enabled, the above snippet is run
-                        and the code below will not be executed.
-                    ]]
-                    [[[[If?
-                        &subject=`[[++formblocks.ajax_mode]]`
-                        &operator=`eq`
-                        &operand=`1`
-                        &then=`$fbSubmitAjaxJS`
-                    ]]]]
-                }
-            })
-        ;
+        const formConfig = {
+            on: '[[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:default=`submit`]]',
+            [[*fb_frontend_validate_on:replace=`default==[[++formblocks.frontend_validate_on]]`:is=`blur`:then=`inline: true,`]]
+            fields: {
+                [[fbFormReport:strip?
+                    &formID=`[[*id]]`
+                    &tplPrefix=`fbValidationRow_`
+                    &requiredOnly=`1`
+                ]]
+            },
+            onSuccess: function(e) {
+                [[[[If?
+                    &subject=`[[++formblocks.antispam_hooks]]`
+                    &operator=`contains`
+                    &operand=`recaptchav3`
+                    &then=`
+                        recaptchav3_render?
+                            &tpl=`recaptchaOnSuccessV3`
+                            &token_key=`token-[[*id]]`
+                            &action_key=`fb[[*id]]`
+                        `
+                ]]]]
+
+                [[- RECAPTCHA IS CURRENTLY INCOMPATIBLE WITH AJAX MODE
+                    So if ReCaptcha is enabled, the above snippet is run
+                    and the code below will not be executed.
+                ]]
+                [[[[If?
+                    &subject=`[[++formblocks.ajax_mode]]`
+                    &operator=`eq`
+                    &operand=`1`
+                    &then=`$fbSubmitAjaxJS`
+                ]]]]
+            }
+        };
+
+        // Check if a required file upload field exists
+        const hasUploadField = $form.find('.file-upload.required').length > 0;
+
+        // Use Arrive to detect if file upload fields were added to DOM and add
+        //  custom validation rule for each field.
+        if (hasUploadField) {
+            $form.arrive('.file-upload.required input[type="file"]', function() {
+                const fieldID = $(this).closest('.file-upload.field').attr('id');
+                const ruleName = fieldID.replace('fb[[*id]]-', '').replace(/-/g, '');
+                $(this).attr('data-validate',fieldID);
+
+                $.fn.form.settings.rules[ruleName] = function(value, element) {
+                    const $wrapper = $('.filepond--root').has(`input[data-validate="${fieldID}"]`);
+                    if ($wrapper.length === 0) {
+                        return false;
+                    }
+                    const pond = window.FilePond.find($wrapper[0]);
+                    return pond ? pond.getFiles().length > 0 : false;
+                };
+
+                $form.form(formConfig);
+            });
+        } else {
+            $form.form(formConfig);
+        }
     });
 </script>
