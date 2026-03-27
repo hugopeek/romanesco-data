@@ -13,9 +13,12 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-[[$openGraphMeta]]
-
+[[[[If?
+    &subject=`[[++opengraph_data]]`
+    &operator=`eq`
+    &operand=`1`
+    &then=`$openGraphMeta`
+]]]]
 <base href="[[!++site_url]]">
 
 <script>document.documentElement.className = 'js';</script>
@@ -125,7 +128,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[- SCHEMA.ORG STRUCTURED DATA ]]
 [[[[If?
-    &subject=`[[++romanesco.structured_data]]`
+    &subject=`[[++structured_data]]`
     &operator=`eq`
     &operand=`1`
     &then=`$structuredDataSite`
