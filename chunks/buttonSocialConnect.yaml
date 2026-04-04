@@ -11,7 +11,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 <a class="ui [[+classes]] icon button [[+channel]]"
    title="[[+title:empty=`[[%romanesco.social.connect_[[+channel]]_[[+entity]]]]`]]"
    target="_blank"
-   href="[[+url:empty=`[[++social_[[+channel]]]]`]]"
-   property="sameAs">
+   href="[[+url:empty=`[[++social_[[+channel]]]]`]]">
     <i class="[[+icon:empty=`[[+channel]]`]] icon"></i>
 </a>
