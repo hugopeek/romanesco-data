@@ -6,6 +6,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-<a href="[[~[[+host_id:empty=`[[*id]]`]]]]#[[+name]]">
+<a href="[[~[[+form_host.id:empty=`[[*id]]`]]]]#[[+name]]">
     [[+required_text:empty=`[[%formblocks.validation.required_text_[[+type:default=`empty`]]]]`]]
 </a>
