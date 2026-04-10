@@ -2,7 +2,7 @@ id: 74
 name: iconInputOptions
 description: 'Generate input options with all Semantic UI icon classes.'
 category: f_presentation
-snippet: "/**\n * iconInputOptions\n *\n * Based on fontAwesomeInputOptions, but modified to be used with Semantic UI.\n *\n * @author YJ Tso @sepiariver\n * GPL, no warranties, etc.\n *\n * Usage: execute in TV input options, preferably with @CHUNK binding.\n * Alternatively install as Content Blocks input (link to repo coming soon).\n *\n * @var modX $modx\n * @var array $scriptProperties\n * @var string $input\n * @var string $options\n */\n\n// source file\n$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');\n// scan options\n$regexPrefix = $modx->getOption('regexPrefix', $scriptProperties, 'fa-');\n// label text output options\n$mode = $modx->getOption('mode', $scriptProperties, 'tv'); // can be 'tv' or 'cb'\n$titleCaseLabels = $modx->getOption('titleCaseLabels', $scriptProperties, 1);\n$operator = $modx->getOption('operator', $scriptProperties, '');\nif (empty($operator)) {\n    $operator = ($mode === 'cb') ? '=' : '==';\n}\n// value text output options\n$outputPrefix = $modx->getOption('classPrefix', $scriptProperties, 'fa-');\n// list output options\n$separator = $modx->getOption('separator', $scriptProperties, '');\nif (empty($separator)) {\n    $separator = ($mode === 'cb') ? \"\\n\" : '||';\n}\n$excludeClasses = array_filter(array_map('trim', explode(',', $modx->getOption('excludeClasses', $scriptProperties, 'ul,li'))));\n// check cache\n$cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'fontawesomecsssource');\n$provider = $modx->cacheManager->getCacheProvider('default');\n$css = $provider->get($cacheKey);\nif (!$css) {\n    // get source file\n    $css = file_get_contents($cssUrl);\n    if ($css) {\n        $provider->set($cacheKey, $css, 0);\n    } else {\n        $modx->log(modX::LOG_LEVEL_ERROR, '[iconInputOptions] could not get css source!');\n        return '';\n    }\n}\n// output\n$output = array();\n$regex = \"/\" . $regexPrefix . \"([\\w.-]*)/\";\nif (preg_match_all($regex, $css, $matches)) {\n    $icons = array_diff($matches[1], $excludeClasses);\n    $icons = array_unique($icons);\n    sort($icons);\n    foreach($icons as $icon) {\n        $label = ($titleCaseLabels) ? ucwords(str_replace('.', ' ', $icon)) : $icon;\n        $icon = str_replace('.', ' ', $icon);\n        $output[] = $label . $operator . $icon . $outputPrefix;\n    }\n}\nreturn implode($separator, $output);"
+snippet: "/**\n * iconInputOptions\n *\n * Based on fontAwesomeInputOptions, but modified to be used with Semantic UI.\n *\n * @author YJ Tso @sepiariver\n * GPL, no warranties, etc.\n *\n * Usage: execute in TV input options, preferably with @CHUNK binding.\n * Alternatively install as Content Blocks input (link to repo coming soon).\n *\n * @var modX $modx\n * @var array $scriptProperties\n * @var string $input\n * @var string $options\n */\n\n// source file\nuse FractalFarming\\Romanesco\\Romanesco;\n\n$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css');\n// scan options\n$regexPrefix = $modx->getOption('regexPrefix', $scriptProperties, 'fa-');\n// label text output options\n$mode = $modx->getOption('mode', $scriptProperties, 'tv'); // can be 'tv' or 'cb'\n$titleCaseLabels = $modx->getOption('titleCaseLabels', $scriptProperties, 1);\n$operator = $modx->getOption('operator', $scriptProperties, '');\nif (empty($operator)) {\n    $operator = ($mode === 'cb') ? '=' : '==';\n}\n// value text output options\n$outputPrefix = $modx->getOption('classPrefix', $scriptProperties, 'fa-');\n// list output options\n$separator = $modx->getOption('separator', $scriptProperties, '');\nif (empty($separator)) {\n    $separator = ($mode === 'cb') ? \"\\n\" : '||';\n}\n$excludeClasses = array_filter(array_map('trim', explode(',', $modx->getOption('excludeClasses', $scriptProperties, 'ul,li'))));\n// check cache\n$cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'icons_css');\n$provider = $modx->cacheManager->getCacheProvider('default');\n$css = $provider->get($cacheKey);\nif (!$css) {\n    // get source file\n    $css = file_get_contents($cssUrl);\n    if ($css) {\n        $provider->set($cacheKey, $css, 0);\n    } else {\n        $modx->log(modX::LOG_LEVEL_ERROR, '[iconInputOptions] could not get css source!');\n        return '';\n    }\n}\n// output\n$output = array();\n$regex = \"/\" . $regexPrefix . \"([\\w.-]*)/\";\nif (preg_match_all($regex, $css, $matches)) {\n    $icons = array_diff($matches[1], $excludeClasses);\n    $icons = array_unique($icons);\n    sort($icons);\n    foreach($icons as $icon) {\n        $label = ($titleCaseLabels) ? ucwords(str_replace('.', ' ', $icon)) : $icon;\n        $icon = str_replace('.', ' ', $icon);\n        $output[] = $label . $operator . $icon . $outputPrefix;\n    }\n}\n// custom social media classes\nif ($modx->romanesco instanceof Romanesco) {\n    // check cache\n    $cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'icons_social');\n    $provider = $modx->cacheManager->getCacheProvider('default');\n    $socialIcons = $provider->get($cacheKey);\n    if (!$socialIcons) {\n        $socialShare = $modx->getCollection('FractalFarming\\Romanesco\\Model\\SocialShare', ['deleted' => 0]);\n        $socialConnect = $modx->getCollection('FractalFarming\\Romanesco\\Model\\SocialConnect', ['deleted' => 0]);\n        $socialIcons = [];\n        foreach ($socialShare as $channel) {\n            $name = $channel->get('name');\n            $icon = $channel->get('icon');\n            $alias = $modx->filterPathSegment($name);\n            $class = $icon ?: $alias;\n            $socialIcons[$modx->filterPathSegment($class)] = [\n                'label' => $name,\n                'class' => $class,\n            ];\n        }\n        foreach ($socialConnect as $channel) {\n            $name = $channel->get('name');\n            $icon = $channel->get('icon');\n            $alias = $modx->filterPathSegment($name);\n            $class = $icon ?: $alias;\n            $socialIcons[$modx->filterPathSegment($class)] = [\n                'label' => $name,\n                'class' => $class,\n            ];\n        }\n        $provider->set($cacheKey, $socialIcons, 0);\n    }\n    foreach($socialIcons as $icon) {\n        $output[] = $icon['label'] . $operator . $icon['class'] . $outputPrefix;\n    }\n}\n\nreturn implode($separator, $output);"
 properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementExample";a:7:{s:4:"name";s:14:"elementExample";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
 
 -----
@@ -26,7 +26,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
  */
 
 // source file
-$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+use FractalFarming\Romanesco\Romanesco;
+
+$cssUrl = $modx->getOption('cssUrl', $scriptProperties, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css');
 // scan options
 $regexPrefix = $modx->getOption('regexPrefix', $scriptProperties, 'fa-');
 // label text output options
@@ -45,7 +47,7 @@ if (empty($separator)) {
 }
 $excludeClasses = array_filter(array_map('trim', explode(',', $modx->getOption('excludeClasses', $scriptProperties, 'ul,li'))));
 // check cache
-$cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'fontawesomecsssource');
+$cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'icons_css');
 $provider = $modx->cacheManager->getCacheProvider('default');
 $css = $provider->get($cacheKey);
 if (!$css) {
@@ -71,4 +73,41 @@ if (preg_match_all($regex, $css, $matches)) {
         $output[] = $label . $operator . $icon . $outputPrefix;
     }
 }
+// custom social media classes
+if ($modx->romanesco instanceof Romanesco) {
+    // check cache
+    $cacheKey = $modx->getOption('cacheKey', $scriptProperties, 'icons_social');
+    $provider = $modx->cacheManager->getCacheProvider('default');
+    $socialIcons = $provider->get($cacheKey);
+    if (!$socialIcons) {
+        $socialShare = $modx->getCollection('FractalFarming\Romanesco\Model\SocialShare', ['deleted' => 0]);
+        $socialConnect = $modx->getCollection('FractalFarming\Romanesco\Model\SocialConnect', ['deleted' => 0]);
+        $socialIcons = [];
+        foreach ($socialShare as $channel) {
+            $name = $channel->get('name');
+            $icon = $channel->get('icon');
+            $alias = $modx->filterPathSegment($name);
+            $class = $icon ?: $alias;
+            $socialIcons[$modx->filterPathSegment($class)] = [
+                'label' => $name,
+                'class' => $class,
+            ];
+        }
+        foreach ($socialConnect as $channel) {
+            $name = $channel->get('name');
+            $icon = $channel->get('icon');
+            $alias = $modx->filterPathSegment($name);
+            $class = $icon ?: $alias;
+            $socialIcons[$modx->filterPathSegment($class)] = [
+                'label' => $name,
+                'class' => $class,
+            ];
+        }
+        $provider->set($cacheKey, $socialIcons, 0);
+    }
+    foreach($socialIcons as $icon) {
+        $output[] = $icon['label'] . $operator . $icon['class'] . $outputPrefix;
+    }
+}
+
 return implode($separator, $output);
