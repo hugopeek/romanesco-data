@@ -1,11 +1,11 @@
 # Changelog for the Romanesco Soil data extract
 
 ## v1.21.1
-Released on ...
+Released on April 16, 2026
 
 Includes:
-- [Romanesco Patterns 1.0.0-rc3](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc3)
-- [Romanesco Backyard 1.0.0-rc4](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc4)
+- [Romanesco Patterns 1.0.0-rc4](https://github.com/hugopeek/romanesco-patterns/releases/tag/1.0.0-rc4)
+- [Romanesco Backyard 1.0.0-rc6](https://github.com/hugopeek/romanesco-backyard/releases/tag/1.0.0-rc6)
 
 Defaults:
 - Add specific address fields to Configuration settings

@@ -6,9 +6,9 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-[[Rowboat?
-    &table=`modx_site_templates`
+[[migxLoopCollection?
+    &classname=`MODX\Revolution\modTemplate`
     &tpl=`includedTemplatesRow`
-    &where=`{ "id":"[[+templateid]]" }`
+    &where=`{"id":"[[+templateid]]"}`
     &uid=`[[+id]]_[[+idx]]`
 ]]
