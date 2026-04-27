@@ -128,9 +128,12 @@ data:
         where:
             - 'element:<': '100000'
             - 'property_set:<': '100000'
-    #events:
-    #    class: MODX\Revolution\modEvent
-    #    primary: name
+    events:
+        class: MODX\Revolution\modEvent
+        primary: name
+        where:
+            - 'name:IN':
+                  - 'ClientConfig_BeforeCacheUpdate'
     #extension_packages:
     #    class: MODX\Revolution\modExtensionPackage
     #    primary: namespace

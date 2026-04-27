@@ -117,9 +117,12 @@ data:
             - element
             - element_class
             - property_set
-    #events:
-    #    class: MODX\Revolution\modEvent
-    #    primary: name
+    events:
+        class: MODX\Revolution\modEvent
+        primary: name
+        where:
+            - 'name:IN':
+                  - 'ClientConfig_BeforeCacheUpdate'
     extension_packages:
         class: MODX\Revolution\modExtensionPackage
         primary: namespace
