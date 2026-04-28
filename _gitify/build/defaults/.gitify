@@ -84,8 +84,13 @@ data:
         class: MODX\Revolution\modMenu
         primary: text
         where:
-            - 'text:LIKE': 'romanesco.menu.global%'
-            - 'OR:text:LIKE': 'clientconfig%'
+            - 'text:LIKE': 'romanesco.menu.%'
+            - 'OR:text:IN':
+                - 'clientconfig'
+                - 'quickstartbuttons'
+                - 'scheduler'
+        exclude_keys:
+            - menuindex
 
     # Create Romanesco namespace, so System Settings and Lexicons become visible
     namespaces:

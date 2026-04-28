@@ -101,9 +101,12 @@ data:
             - element
             - element_class
             - property_set
-    #events:
-    #    class: MODX\Revolution\modEvent
-    #    primary: name
+    events:
+        class: MODX\Revolution\modEvent
+        primary: name
+        where:
+            - 'name:IN':
+                  - 'ClientConfig_BeforeCacheUpdate'
     extension_packages:
         class: MODX\Revolution\modExtensionPackage
         primary: namespace
@@ -127,18 +130,27 @@ data:
             - object
             - object_class
             - context_key
-    #menus:
-    #    class: MODX\Revolution\modMenu
-    #    primary: text
-    #    where:
-    #        - 'namespace:IN':
-    #            - 'clientconfig'
-    #namespaces:
-    #    class: MODX\Revolution\modNamespace
-    #    primary: name
-    #    where:
-    #        'name:NOT IN':
-    #            - 'gitpackagemanagement'
+    menus:
+        class: MODX\Revolution\modMenu
+        primary: text
+        where:
+            - 'text:LIKE': 'romanesco.menu.%'
+            - 'OR:text:IN':
+                - 'clientconfig'
+                - 'quickstartbuttons'
+                - 'scheduler'
+        exclude_keys:
+            - menuindex
+    namespaces:
+        class: MODX\Revolution\modNamespace
+        primary: name
+        exclude_keys:
+            - path
+            - assets_path
+        where:
+            'name:IN':
+                - 'romanesco'
+                - 'formblocks'
     property_set:
         class: MODX\Revolution\modPropertySet
         primary: name

@@ -131,8 +131,13 @@ data:
         class: MODX\Revolution\modMenu
         primary: text
         where:
-            - 'text:LIKE': 'romanesco.menu.global%'
-            - 'OR:text:LIKE': 'clientconfig%'
+            - 'text:LIKE': 'romanesco.menu.%'
+            - 'OR:text:IN':
+                - 'clientconfig'
+                - 'quickstartbuttons'
+                - 'scheduler'
+        exclude_keys:
+            - menuindex
 
     # Include Lexicons, so default keys can be adjusted and centrally managed
     lexicon_entries:
