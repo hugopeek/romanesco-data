@@ -8,7 +8,6 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 Infinite loop=loop
 Show previous / next arrows=arrows
-Place navigation outside of container=navOutside
 Keyboard control=keyboard
 Free scrolling=free
 Center mode=center
