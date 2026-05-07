@@ -4,7 +4,7 @@ input: layout
 name: Segments
 description: ''
 content_desc: ''
-sortorder: 27
+sortorder: 28
 category: 4
 icon: segments
 icon_type: custom

@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Multiple Files)'
 description: ''
 content_desc: 'Let visitors upload multiple files from their system. These files will be attached to the email you receive. Files can be added with drag&drop or via the system file explorer.'
-sortorder: 63
+sortorder: 64
 category: 7
 icon: folder-open
 icon_type: custom

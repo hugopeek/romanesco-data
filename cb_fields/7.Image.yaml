@@ -4,7 +4,7 @@ input: image
 name: Image
 description: null
 content_desc: null
-sortorder: 10
+sortorder: 11
 category: 2
 icon: image
 icon_type: ''

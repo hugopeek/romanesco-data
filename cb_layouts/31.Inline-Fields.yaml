@@ -1,7 +1,7 @@
 id: 31
 name: 'Inline Fields'
 description: 'A wrapper for displaying multiple form fields in a single row.'
-sortorder: 18
+sortorder: 21
 category: 7
 icon: form
 columns: '[{"reference":"main","width":"100"}]'

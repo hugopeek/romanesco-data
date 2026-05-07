@@ -4,7 +4,7 @@ input: chunk
 name: 'Video (Vimeo)'
 description: ''
 content_desc: ''
-sortorder: 14
+sortorder: 15
 category: 2
 icon: video
 icon_type: ''

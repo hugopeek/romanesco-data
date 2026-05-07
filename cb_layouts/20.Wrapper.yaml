@@ -1,7 +1,7 @@
 id: 20
 name: Wrapper
 description: 'An empty layout for content that prefers to be at root level.'
-sortorder: 13
+sortorder: 15
 category: 9
 icon: layout_1
 columns: '[{"reference":"main","width":"100"}]'

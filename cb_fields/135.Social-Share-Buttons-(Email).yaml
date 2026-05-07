@@ -4,7 +4,7 @@ input: chunk
 name: 'Social Share Buttons (Email)'
 description: ''
 content_desc: ''
-sortorder: 75
+sortorder: 76
 category: 11
 icon: share-alt
 icon_type: custom

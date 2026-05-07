@@ -4,7 +4,7 @@ input: image
 name: 'Image (Email)'
 description: ''
 content_desc: ''
-sortorder: 73
+sortorder: 74
 category: 11
 icon: image
 icon_type: ''

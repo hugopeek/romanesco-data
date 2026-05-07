@@ -1,7 +1,7 @@
 id: 19
 name: Segment
 description: 'A wrapper for displaying content inside a Semantic UI segment.'
-sortorder: 12
+sortorder: 14
 category: 9
 icon: segments
 icon_type: custom

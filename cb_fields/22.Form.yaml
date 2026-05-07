@@ -4,7 +4,7 @@ input: chunk
 name: Form
 description: ''
 content_desc: 'Add a web form here. You can build your own forms with FormBlocks, accessible via Content > Global in the top menu.'
-sortorder: 34
+sortorder: 36
 category: 3
 icon: form
 template: '[[+value]]'

@@ -4,7 +4,7 @@ input: chunk
 name: 'Input (Single File)'
 description: ''
 content_desc: 'Let visitors upload a file from their system. This file will be attached to the email you receive.'
-sortorder: 62
+sortorder: 63
 category: 7
 icon: attachment
 template: '[[+tag]]'

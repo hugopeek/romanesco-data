@@ -4,7 +4,7 @@ input: code
 name: 'Code (Display)'
 description: ''
 content_desc: 'The code you paste here, will be shown exactly like that on the front-end.'
-sortorder: 41
+sortorder: 43
 category: 6
 icon: code
 icon_type: ''

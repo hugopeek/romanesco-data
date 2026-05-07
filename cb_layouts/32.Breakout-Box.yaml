@@ -1,0 +1,13 @@
+id: 32
+name: 'Breakout Box'
+description: 'Break free from the Container Type shackles of the parent layout.'
+sortorder: 7
+category: 8
+icon: breakout-box
+icon_type: custom
+columns: '[{"reference":"main","width":"100"}]'
+template: "</div>\n<div class=\"ui [[+container_type]] [[+alignment]] [[+title_inflate]] main container\">\n    [[+main]]\n</div>\n<div class=\"ui [[+layout_settings.container_type]] [[+layout_settings.alignment]] [[+layout_settings.title_inflate]] main container\">"
+availability: '[]'
+times_per_page: 0
+layout_only_nested: 1
+settings: '[{"reference":"container_type","title":"Container type","fieldtype":"select","default_value":"","fieldoptions":"[[$cbSettingContainerType]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"The narrower options also have a variant with larger font size, for a more comfortable reading experience on desktop screens.","type_ahead":"No","separator":""},{"reference":"alignment","title":"Content alignment","fieldtype":"multi_select","default_value":"","fieldoptions":"[[$cbLayoutAlignment]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","description":"Choose which alignment options to apply. Please keep in mind that these settings are usually applied to nested elements also. If this is not desired for a specific element, then just check the alignment settings of that block (or its container) and realign things there again. Also note: not all options may apply to this element, and not all options are compatible with each other. So just try it out!","type_ahead":"No","separator":" ","template":"[[+value]]"},{"reference":"title_inflate","title":"Inflate main title","description":"Make the first H1, H2 or H3 in the content area bigger.","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Yes=\nNo=conventional","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"}]'

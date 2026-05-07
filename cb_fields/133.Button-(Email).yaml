@@ -4,7 +4,7 @@ input: link
 name: 'Button (Email)'
 description: ''
 content_desc: ''
-sortorder: 72
+sortorder: 73
 category: 11
 icon: link
 template: '@CHUNK mbContentButton'

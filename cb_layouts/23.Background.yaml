@@ -1,7 +1,7 @@
 id: 23
 name: Background
 description: 'A wrapper for the Global Background field. This layout enables you to preview the background in the browser.'
-sortorder: 20
+sortorder: 23
 category: 10
 icon: image
 columns: '[{"reference":"main","width":"100"}]'

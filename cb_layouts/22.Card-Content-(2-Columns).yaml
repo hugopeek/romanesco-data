@@ -1,7 +1,7 @@
 id: 22
 name: 'Card Content (2 Columns)'
 description: 'An wrapper for card content, with a right floated column.'
-sortorder: 15
+sortorder: 17
 category: 9
 icon: layout_2-1
 columns: '[{"reference":"main","width":60},{"reference":"right","width":"40"}]'

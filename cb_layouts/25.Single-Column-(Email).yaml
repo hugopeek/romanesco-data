@@ -1,7 +1,7 @@
 id: 25
 name: 'Single Column (Email)'
 description: 'A single column, with a defined max width.'
-sortorder: 24
+sortorder: 26
 category: 11
 icon: layout_1
 icon_type: ''

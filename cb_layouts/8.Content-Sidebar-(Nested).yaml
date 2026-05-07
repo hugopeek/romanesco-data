@@ -1,7 +1,7 @@
 id: 8
 name: 'Content + Sidebar (Nested)'
 description: 'Nested combination of a main content area (65%) and a sidebar on the right (35%).'
-sortorder: 7
+sortorder: 9
 category: 9
 icon: layout_2-1
 icon_type: ''

@@ -4,7 +4,7 @@ input: richtext
 name: Feedback
 description: ''
 content_desc: 'Additional comments or feedback. Only logged in users can see this content.'
-sortorder: 40
+sortorder: 42
 category: 6
 icon: richtext
 icon_type: ''

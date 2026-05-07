@@ -1,0 +1,14 @@
+id: 146
+parent_properties: null
+input: layout
+name: 'Container Variation'
+description: ''
+content_desc: ''
+sortorder: 31
+category: 4
+icon: layout_1
+template: '[[+value]]'
+properties: '{"available_layouts":"32","available_templates":"-1"}'
+availability: '[]'
+layouts: '1'
+settings: '[]'

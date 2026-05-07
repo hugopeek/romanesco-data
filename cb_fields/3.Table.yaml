@@ -4,7 +4,7 @@ input: table
 name: Table
 description: ''
 content_desc: ''
-sortorder: 22
+sortorder: 23
 category: 4
 icon: table
 icon_type: ''

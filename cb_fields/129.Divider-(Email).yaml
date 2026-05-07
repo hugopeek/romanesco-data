@@ -4,7 +4,7 @@ input: hr
 name: 'Divider (Email)'
 description: ''
 content_desc: ''
-sortorder: 77
+sortorder: 78
 category: 11
 icon: horizontalrule
 icon_type: ''

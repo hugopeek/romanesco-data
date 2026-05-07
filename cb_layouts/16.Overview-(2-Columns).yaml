@@ -1,7 +1,7 @@
 id: 16
 name: 'Overview (2 Columns)'
 description: 'Displays child pages just like the regular Overview blocks, but in full-width layout sections.'
-sortorder: 22
+sortorder: 25
 category: 10
 icon: chunk_A
 columns: '[]'

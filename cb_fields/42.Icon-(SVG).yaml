@@ -4,7 +4,7 @@ input: image
 name: 'Icon (SVG)'
 description: ''
 content_desc: ''
-sortorder: 12
+sortorder: 13
 category: 2
 icon: pie-chart
 icon_type: custom

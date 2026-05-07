@@ -4,7 +4,7 @@ input: file
 name: 'Video (Local)'
 description: ''
 content_desc: 'Play a local video file in the browser. You can provide multiple files, to maximize compatibility. The browser attempts to play the top one first and keeps trying until a compatible file is found. Recommended to stick to .webm or .mp4 format when possible.'
-sortorder: 15
+sortorder: 16
 category: 2
 icon: video
 template: '@CHUNK videoLocalSource'

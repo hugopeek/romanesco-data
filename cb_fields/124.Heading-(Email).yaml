@@ -4,7 +4,7 @@ input: heading
 name: 'Heading (Email)'
 description: ''
 content_desc: ''
-sortorder: 70
+sortorder: 71
 category: 11
 icon: heading
 icon_type: ''

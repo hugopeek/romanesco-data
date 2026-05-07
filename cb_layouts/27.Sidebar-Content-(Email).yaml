@@ -1,7 +1,7 @@
 id: 27
 name: 'Sidebar + Content (Email)'
 description: 'Combination of a left sidebar and a main content area.'
-sortorder: 26
+sortorder: 28
 category: 11
 icon: layout_1-2
 icon_type: ''

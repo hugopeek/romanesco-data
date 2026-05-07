@@ -4,7 +4,7 @@ input: video
 name: 'Video (YouTube)'
 description: ''
 content_desc: ''
-sortorder: 13
+sortorder: 14
 category: 2
 icon: video
 icon_type: ''
