@@ -6,22 +6,22 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Title only=overviewRowBasic
-Title only (Card)=overviewRowBasicCard
-Title only (Link card)=overviewRowBasicLinkCard
-Title compact=overviewRowBasicCompact
+Text only=overviewRowBasic
+Text only - Card=overviewRowBasicCard
+Text only - Link card=overviewRowBasicLinkCard
+Text compact=overviewRowBasicCompact
 ---=
 Image only=overviewRowImageBasic
-Image only (Overlay)=overviewRowImageBasicOverlay
+Image only - Overlay=overviewRowImageBasicOverlay
 Image top=overviewRowImageTop
-Image top (Card)=overviewRowImageTopCard
-Image top (Link card)=overviewRowImageTopLinkCard
+Image top - Card=overviewRowImageTopCard
+Image top - Link card=overviewRowImageTopLinkCard
 Image left=overviewRowImageLeft
-Image left (Card)=overviewRowImageLeftCard
+Image left - Card=overviewRowImageLeftCard
 Image compact=overviewRowImageCompact
 ---=
 Icon top=overviewRowIconTop
-Icon top (Card)=overviewRowIconTopCard
-Icon top (Link card)=overviewRowIconTopLinkCard
+Icon top - Card=overviewRowIconTopCard
+Icon top - Link card=overviewRowIconTopLinkCard
 Icon left=overviewRowIconLeft
 Icon compact=overviewRowIconCompact

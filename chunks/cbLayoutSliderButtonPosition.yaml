@@ -6,8 +6,8 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Inside slider, normal=inside
-Inside slider, stretched=inside stretched
-Outside, close to slider=outside compact
-Outside, near edge of parent container=outside
-Outside, near edge of parent, stretched=outside stretched
+Inside slider - Regular=inside
+Inside slider - Stretched=inside stretched
+Outside - Close to slider=outside compact
+Outside - Near edge of parent container=outside
+Outside - Near edge of parent - Stretched=outside stretched

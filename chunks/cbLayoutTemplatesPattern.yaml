@@ -6,15 +6,15 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
-Electron (TV)=patternLayoutElectronTV
-Electron (System Setting)=patternLayoutElectronSystemSetting
-Electron (Configuration)=patternLayoutElectronConfiguration
+Electron - TV=patternLayoutElectronTV
+Electron - System Setting=patternLayoutElectronSystemSetting
+Electron - Configuration=patternLayoutElectronConfiguration
 Atom=patternLayoutAtom
 Molecule=patternLayoutMolecule
 Organism=patternLayoutOrganism
 Template=patternLayoutTemplate
 Formula=patternLayoutFormula
 Computation=patternLayoutComputation
-Boson (Field)=patternLayoutBosonField
-Boson (Layout)=patternLayoutBosonLayout
-Boson (Template)=patternLayoutBosonTemplate
+Boson - Field=patternLayoutBosonField
+Boson - Layout=patternLayoutBosonLayout
+Boson - Template=patternLayoutBosonTemplate

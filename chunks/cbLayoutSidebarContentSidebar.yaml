@@ -1,0 +1,20 @@
+id: 707
+name: cbLayoutSidebarContentSidebar
+description: 'NB: not referenced directly! This variant enables you to align centered content with adjacent Content + Sidebar layouts.'
+category: o_layout
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div [[stripAsAlias:prepend=`id="`:append=`"`? &input=`[[+title]]`]] class="ui vertical stripe segment [[setBackground? &background=`[[+background]]`]]">
+    <div class="ui [[+container_type]] container">
+        <div class="ui [[+responsive:replace=`,== `]] [[+padding]] [[+alignment]] [[+divider]] equal width grid">
+            <div class="row">
+                <div class="[[+sidebar_width]] wide sidebar column">[[+sidebar_left]]</div>
+                <div class="[[+title_inflate]] main column">[[+main]]</div>
+                <div class="[[+sidebar_width]] wide sidebar column">[[+sidebar_right]]</div>
+            </div>
+        </div>
+    </div>
+    [[+bg[[+background]].credits]]
+</div>
