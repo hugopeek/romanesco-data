@@ -6,7 +6,7 @@ category: 8
 icon: breakout-box
 icon_type: custom
 columns: '[{"reference":"main","width":"100"}]'
-template: "</div>\n<div class=\"ui [[+container_type]] [[+alignment]] [[+title_inflate]] main container\">\n    [[+main]]\n</div>\n<div class=\"ui [[+layout_settings.container_type]] [[+layout_settings.alignment]] [[+layout_settings.title_inflate]] main container\">"
+template: "</div>\n<div class=\"ui [[+container_type]] [[+alignment]] [[+title_inflate]] main breakout container\">\n    [[+main]]\n</div>\n<div class=\"ui [[+layout_settings.container_type]] [[+layout_settings.alignment]] [[+layout_settings.title_inflate]] main container\">"
 availability: '[]'
 times_per_page: 0
 layout_only_nested: 1
