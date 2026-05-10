@@ -6,4 +6,5 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 -----
 
+<link rel="preconnect" href="https://challenges.cloudflare.com" />
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
