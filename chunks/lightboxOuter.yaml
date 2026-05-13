@@ -15,7 +15,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
         <div class="swiper-pagination swiper-[[+uid]]"></div>
 
-        <button class="swiper-button-next swiper-[[+uid]]"></button>
-        <button class="swiper-button-prev swiper-[[+uid]]"></button>
+        <button class="swiper-button-next stretched swiper-[[+uid]]"></button>
+        <button class="swiper-button-prev stretched swiper-[[+uid]]"></button>
     </div>
 </div>
