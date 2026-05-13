@@ -1,7 +1,7 @@
 id: 14
 name: Fieldset
 description: 'Divide your forms into different sections, each with its own header.'
-sortorder: 20
+sortorder: 21
 category: 7
 icon: form
 columns: '[{"reference":"main","width":"100"}]'

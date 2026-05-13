@@ -1,7 +1,7 @@
 id: 24
 name: Slider
 description: 'This layout creates a slider with child elements. Can also process Overview items as slides.'
-sortorder: 24
+sortorder: 25
 category: 10
 icon: layout_img_left
 columns: '[{"reference":"main","width":"100"}]'

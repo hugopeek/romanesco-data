@@ -1,7 +1,7 @@
 id: 21
 name: 'Card Content'
 description: 'An wrapper for card content, like text and quotes.'
-sortorder: 16
+sortorder: 17
 category: 9
 icon: layout_1
 columns: '[{"reference":"main","width":"100"}]'

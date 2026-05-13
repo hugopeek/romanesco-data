@@ -1,7 +1,7 @@
 id: 15
 name: 'Call To Action'
 description: 'This layout is a wrapper to help you create a small, reusable CTA pattern with ContentBlocks. CTAs can be referenced throughout your project with CB or with TVs.'
-sortorder: 22
+sortorder: 23
 category: 10
 icon: snippet_C
 columns: '[{"reference":"main","width":"100"}]'
