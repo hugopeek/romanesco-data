@@ -42,7 +42,7 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 [[If?
     &subject=`[[++theme_font_page]][[++theme_font_header]]`
     &operator=`notempty`
-    &then=`[[++theme_font_header]][[++theme_font_page:prepend=`[[++theme_font_header:notempty=`&family=`]]`]]`
+    &then=`[[++theme_font_header]][[++theme_font_page:prepend=`[[++theme_font_header:notempty=`&family&#61;`]]`]]`
     &toPlaceholder=`load_google_fonts`
 ]]
 [[[[If?

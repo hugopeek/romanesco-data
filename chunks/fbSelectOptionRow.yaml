@@ -8,18 +8,20 @@ properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:
 
 [[+field_name_html:empty=`[[+field_name]]`:fbResetNonAlpha:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
 [[+field_option:fbResetNonAlpha:toPlaceholder=`option`]]
-[[!If:toPlaceholder=`checkbox_array`?
+[[!If?
     &subject=`[[+field_type]]`
     &operator=`is`
     &operand=`checkbox`
     &then=`[]`
     &else=``
+    &toPlaceholder=`checkbox_array`
 ]]
-[[!If:toPlaceholder=`checkbox_variant`?
+[[!If?
     &subject=`[[+checkbox_type]]`
     &operator=`notempty`
     &then=`[[+checkbox_type]]`
     &else=`[[+field_type]]`
+    &toPlaceholder=`checkbox_variant`
 ]]
 
 <div class="field">
